@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/sec/android/app/camera/plugin/ExternalFilterLoader;Landroid/os/Handler;)V
     .locals 0
-    .param p2, "x0"    # Landroid/os/Handler;
 
-    .prologue
-    .line 124
     iput-object p1, p0, Lcom/sec/android/app/camera/plugin/ExternalFilterLoader$1;->this$0:Lcom/sec/android/app/camera/plugin/ExternalFilterLoader;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -36,12 +33,9 @@
 # virtual methods
 .method public onChange(Z)V
     .locals 9
-    .param p1, "selfChange"    # Z
 
-    .prologue
     const/4 v8, 0x0
 
-    .line 127
     const-string v0, "ExternalFilterLoader"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -64,25 +58,19 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 128
     const/4 v6, 0x0
 
-    .line 130
-    .local v6, "cursor":Landroid/database/Cursor;
     invoke-static {}, Lcom/sec/android/app/camera/plugin/ExternalFilterLoader;->isEffectCategorySupported()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 131
     # getter for: Lcom/sec/android/app/camera/plugin/ExternalFilterLoader;->FILTER_PROJECTION_WITH_CATEGORY:[Ljava/lang/String;
     invoke-static {}, Lcom/sec/android/app/camera/plugin/ExternalFilterLoader;->access$000()[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 136
-    .local v2, "projection":[Ljava/lang/String;
     :goto_0
     :try_start_0
     invoke-static {}, Lcom/sec/android/app/camera/plugin/ExternalFilterLoader;->isEffectCategorySupported()Z
@@ -91,7 +79,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 137
     iget-object v0, p0, Lcom/sec/android/app/camera/plugin/ExternalFilterLoader$1;->this$0:Lcom/sec/android/app/camera/plugin/ExternalFilterLoader;
 
     # getter for: Lcom/sec/android/app/camera/plugin/ExternalFilterLoader;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -142,7 +129,6 @@
 
     if-nez v0, :cond_3
 
-    .line 138
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/plugin/ExternalFilterLoader$1;->this$0:Lcom/sec/android/app/camera/plugin/ExternalFilterLoader;
 
@@ -174,7 +160,6 @@
 
     move-result-object v6
 
-    .line 144
     :goto_1
     # getter for: Lcom/sec/android/app/camera/plugin/ExternalFilterLoader;->mLock:Ljava/lang/Object;
     invoke-static {}, Lcom/sec/android/app/camera/plugin/ExternalFilterLoader;->access$700()Ljava/lang/Object;
@@ -186,7 +171,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 145
     :try_start_1
     # getter for: Lcom/sec/android/app/camera/plugin/ExternalFilterLoader;->mIsSupportBeautyCategory:Z
     invoke-static {}, Lcom/sec/android/app/camera/plugin/ExternalFilterLoader;->access$300()Z
@@ -223,34 +207,26 @@
 
     if-ne v0, v3, :cond_5
 
-    .line 146
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 154
     if-eqz v6, :cond_1
 
-    .line 155
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 160
     :cond_1
     :goto_2
     return-void
 
-    .line 133
-    .end local v2    # "projection":[Ljava/lang/String;
     :cond_2
     # getter for: Lcom/sec/android/app/camera/plugin/ExternalFilterLoader;->FILTER_PROJECTION:[Ljava/lang/String;
     invoke-static {}, Lcom/sec/android/app/camera/plugin/ExternalFilterLoader;->access$100()[Ljava/lang/String;
 
     move-result-object v2
 
-    .restart local v2    # "projection":[Ljava/lang/String;
     goto :goto_0
 
-    .line 140
     :cond_3
     :try_start_2
     iget-object v0, p0, Lcom/sec/android/app/camera/plugin/ExternalFilterLoader$1;->this$0:Lcom/sec/android/app/camera/plugin/ExternalFilterLoader;
@@ -285,7 +261,6 @@
 
     goto :goto_1
 
-    .line 142
     :cond_4
     iget-object v0, p0, Lcom/sec/android/app/camera/plugin/ExternalFilterLoader$1;->this$0:Lcom/sec/android/app/camera/plugin/ExternalFilterLoader;
 
@@ -322,7 +297,6 @@
 
     goto :goto_1
 
-    .line 147
     :cond_5
     if-eqz v6, :cond_6
 
@@ -342,45 +316,36 @@
 
     if-ne v0, v3, :cond_6
 
-    .line 148
     monitor-exit v1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 154
     if-eqz v6, :cond_1
 
-    .line 155
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     goto :goto_2
 
-    .line 150
     :cond_6
     :try_start_4
     monitor-exit v1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 154
     if-eqz v6, :cond_7
 
-    .line 155
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 158
     :cond_7
     :goto_3
     # setter for: Lcom/sec/android/app/camera/plugin/ExternalFilterLoader;->mFilterLoaded:Z
     invoke-static {v8}, Lcom/sec/android/app/camera/plugin/ExternalFilterLoader;->access$1102(Z)Z
 
-    .line 159
     # setter for: Lcom/sec/android/app/camera/plugin/ExternalFilterLoader;->mBeautyFilterLoaded:Z
     invoke-static {v8}, Lcom/sec/android/app/camera/plugin/ExternalFilterLoader;->access$1202(Z)Z
 
     goto :goto_2
 
-    .line 150
     :catchall_0
     move-exception v0
 
@@ -395,12 +360,9 @@
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 151
     :catch_0
     move-exception v7
 
-    .line 152
-    .local v7, "e":Ljava/lang/Exception;
     :try_start_7
     const-string v0, "ExternalFilterLoader"
 
@@ -430,22 +392,17 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 154
     if-eqz v6, :cond_7
 
-    .line 155
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     goto :goto_3
 
-    .line 154
-    .end local v7    # "e":Ljava/lang/Exception;
     :catchall_1
     move-exception v0
 
     if-eqz v6, :cond_8
 
-    .line 155
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     :cond_8

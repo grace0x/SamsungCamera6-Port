@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/ModeInfoListMenu$MenuAdapter;)V
     .locals 0
 
-    .prologue
-    .line 510
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ModeInfoListMenu$MenuAdapter$1;->this$1:Lcom/sec/android/app/camera/menu/ModeInfoListMenu$MenuAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +36,7 @@
 # virtual methods
 .method public onSelect(Lcom/samsung/android/glview/GLView;)V
     .locals 4
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
 
-    .prologue
-    .line 513
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ModeInfoListMenu$MenuAdapter$1;->this$1:Lcom/sec/android/app/camera/menu/ModeInfoListMenu$MenuAdapter;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/menu/ModeInfoListMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/ModeInfoListMenu;
@@ -51,7 +46,6 @@
     # setter for: Lcom/sec/android/app/camera/menu/ModeInfoListMenu;->mNeedShowBaseMenu:Z
     invoke-static {v1, v2}, Lcom/sec/android/app/camera/menu/ModeInfoListMenu;->access$602(Lcom/sec/android/app/camera/menu/ModeInfoListMenu;Z)Z
 
-    .line 514
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ModeInfoListMenu$MenuAdapter$1;->this$1:Lcom/sec/android/app/camera/menu/ModeInfoListMenu$MenuAdapter;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/menu/ModeInfoListMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/ModeInfoListMenu;
@@ -62,7 +56,6 @@
 
     invoke-virtual {v1, v2}, Lcom/sec/android/app/camera/menu/ModeInfoListMenu;->setHideAnimation(Landroid/view/animation/Animation;)V
 
-    .line 515
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
     const/high16 v1, 0x3f000000    # 0.5f
@@ -71,8 +64,6 @@
 
     invoke-direct {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 516
-    .local v0, "backgroundAnimation":Landroid/view/animation/Animation;
     const v1, 0x7f0a0007
 
     invoke-static {v1}, Lcom/samsung/android/glview/GLContext;->getInteger(I)I
@@ -83,7 +74,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 517
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ModeInfoListMenu$MenuAdapter$1;->this$1:Lcom/sec/android/app/camera/menu/ModeInfoListMenu$MenuAdapter;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/menu/ModeInfoListMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/ModeInfoListMenu;
@@ -96,13 +86,11 @@
 
     invoke-interface {v1, v0}, Lcom/sec/android/app/camera/interfaces/VisualInteractionProvider;->hideBlackOverlayWithAnimation(Landroid/view/animation/Animation;)V
 
-    .line 518
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ModeInfoListMenu$MenuAdapter$1;->this$1:Lcom/sec/android/app/camera/menu/ModeInfoListMenu$MenuAdapter;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/menu/ModeInfoListMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/ModeInfoListMenu;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/menu/ModeInfoListMenu;->hideMenu()V
 
-    .line 519
     return-void
 .end method

@@ -29,8 +29,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/Camera;ILjava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 3866
     iput-object p1, p0, Lcom/sec/android/app/camera/Camera$16;->this$0:Lcom/sec/android/app/camera/Camera;
 
     iput p2, p0, Lcom/sec/android/app/camera/Camera$16;->val$menuCommandId:I
@@ -47,8 +45,6 @@
 .method public run()V
     .locals 5
 
-    .prologue
-    .line 3869
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$16;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
@@ -73,16 +69,12 @@
 
     move-result-object v1
 
-    .line 3870
-    .local v1, "featureID":Ljava/lang/String;
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$16;->val$value:Ljava/lang/String;
 
     invoke-static {v1, v2}, Lcom/sec/android/app/camera/util/ContextProviderUtils;->getSettingsSet(Ljava/lang/String;Ljava/lang/String;)Landroid/content/ContentValues;
 
     move-result-object v0
 
-    .line 3871
-    .local v0, "cv":Landroid/content/ContentValues;
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$16;->this$0:Lcom/sec/android/app/camera/Camera;
 
     invoke-virtual {v2}, Lcom/sec/android/app/camera/Camera;->getApplicationContext()Landroid/content/Context;
@@ -91,6 +83,5 @@
 
     invoke-static {v2, v0}, Lcom/sec/android/app/camera/util/Util;->broadcastGeneralEventForLogging(Landroid/content/Context;Landroid/content/ContentValues;)V
 
-    .line 3872
     return-void
 .end method

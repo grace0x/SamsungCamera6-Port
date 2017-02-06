@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/EffectListMenu;)V
     .locals 0
 
-    .prologue
-    .line 119
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/EffectListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/EffectListMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,15 +37,12 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 122
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/EffectListMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/EffectListMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     if-eqz v0, :cond_0
 
-    .line 123
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/EffectListMenu;
 
     new-instance v1, Landroid/view/GestureDetector;
@@ -68,7 +63,6 @@
 
     iput-object v1, v0, Lcom/sec/android/app/camera/menu/EffectListMenu;->mFlingGestureDetector:Landroid/view/GestureDetector;
 
-    .line 125
     :cond_0
     return-void
 .end method

@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/widget/gl/AfButton;)V
     .locals 0
 
-    .prologue
-    .line 130
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/AfButton$1;->this$0:Lcom/sec/android/app/camera/widget/gl/AfButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,28 +36,19 @@
 # virtual methods
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 0
-    .param p1, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 134
     return-void
 .end method
 
 .method public onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 0
-    .param p1, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 139
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 8
-    .param p1, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 145
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/AfButton$1;->this$0:Lcom/sec/android/app/camera/widget/gl/AfButton;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/AfButton;->PAF_CONTROL_DURATION:I
@@ -92,10 +81,8 @@
     # invokes: Lcom/sec/android/app/camera/widget/gl/AfButton;->startPhaseInfoAnimation(JFFLandroid/view/animation/Interpolator;Z)V
     invoke-static/range {v1 .. v7}, Lcom/sec/android/app/camera/widget/gl/AfButton;->access$300(Lcom/sec/android/app/camera/widget/gl/AfButton;JFFLandroid/view/animation/Interpolator;Z)V
 
-    .line 146
     return-void
 
-    .line 145
     :cond_0
     const/4 v7, 0x0
 

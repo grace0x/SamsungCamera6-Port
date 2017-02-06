@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,10 +14,7 @@
 
 .method static isFrameworkOperationCanceledException(Ljava/lang/Exception;)Z
     .locals 1
-    .param p0, "e"    # Ljava/lang/Exception;
 
-    .prologue
-    .line 34
     instance-of v0, p0, Landroid/os/OperationCanceledException;
 
     return v0
@@ -27,16 +22,7 @@
 
 .method public static query(Landroid/content/ContentResolver;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)Landroid/database/Cursor;
     .locals 7
-    .param p0, "resolver"    # Landroid/content/ContentResolver;
-    .param p1, "uri"    # Landroid/net/Uri;
-    .param p2, "projection"    # [Ljava/lang/String;
-    .param p3, "selection"    # Ljava/lang/String;
-    .param p4, "selectionArgs"    # [Ljava/lang/String;
-    .param p5, "sortOrder"    # Ljava/lang/String;
-    .param p6, "cancellationSignalObj"    # Ljava/lang/Object;
 
-    .prologue
-    .line 29
     move-object v6, p6
 
     check-cast v6, Landroid/os/CancellationSignal;

@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/shootingmode/Food;)V
     .locals 0
 
-    .prologue
-    .line 366
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/Food$2;->this$0:Lcom/sec/android/app/camera/shootingmode/Food;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,12 +36,9 @@
 # virtual methods
 .method public onClick(Lcom/samsung/android/glview/GLView;)Z
     .locals 3
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 369
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/Food$2;->this$0:Lcom/sec/android/app/camera/shootingmode/Food;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/Food;->mBaseMenuController:Lcom/sec/android/app/camera/interfaces/BaseMenuController;
@@ -57,7 +52,6 @@
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/OverlayLayoutController;->hideShootingModeText()V
 
-    .line 370
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/Food$2;->this$0:Lcom/sec/android/app/camera/shootingmode/Food;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/Food;->mMenuManager:Lcom/sec/android/app/camera/interfaces/MenuManager;
@@ -69,6 +63,5 @@
 
     invoke-interface {v0, v1, v2}, Lcom/sec/android/app/camera/interfaces/MenuManager;->showMenu(IZ)Lcom/sec/android/app/camera/interfaces/MenuBase;
 
-    .line 371
     return v2
 .end method

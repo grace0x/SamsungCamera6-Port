@@ -29,8 +29,6 @@
 .method constructor <init>(Landroid/support/v4/media/MediaBrowserServiceCompat;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 0
 
-    .prologue
-    .line 784
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$2;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     iput-object p2, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$2;->val$parentId:Ljava/lang/String;
@@ -47,8 +45,6 @@
 .method public run()V
     .locals 8
 
-    .prologue
-    .line 787
     iget-object v6, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$2;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     # getter for: Landroid/support/v4/media/MediaBrowserServiceCompat;->mConnections:Landroid/support/v4/util/ArrayMap;
@@ -78,8 +74,6 @@
 
     check-cast v0, Landroid/os/IBinder;
 
-    .line 788
-    .local v0, "binder":Landroid/os/IBinder;
     iget-object v6, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$2;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     # getter for: Landroid/support/v4/media/MediaBrowserServiceCompat;->mConnections:Landroid/support/v4/util/ArrayMap;
@@ -93,8 +87,6 @@
 
     check-cast v2, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;
 
-    .line 789
-    .local v2, "connection":Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;
     iget-object v6, v2, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;->subscriptions:Ljava/util/HashMap;
 
     iget-object v7, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$2;->val$parentId:Ljava/lang/String;
@@ -105,16 +97,12 @@
 
     check-cast v5, Ljava/util/List;
 
-    .line 790
-    .local v5, "optionsList":Ljava/util/List;, "Ljava/util/List<Landroid/os/Bundle;>;"
     if-eqz v5, :cond_0
 
-    .line 791
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
 
-    .local v4, "i$":Ljava/util/Iterator;
     :cond_1
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
@@ -128,8 +116,6 @@
 
     check-cast v1, Landroid/os/Bundle;
 
-    .line 792
-    .local v1, "bundle":Landroid/os/Bundle;
     iget-object v6, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$2;->val$options:Landroid/os/Bundle;
 
     invoke-static {v6, v1}, Landroid/support/v4/media/MediaBrowserCompatUtils;->hasDuplicatedItems(Landroid/os/Bundle;Landroid/os/Bundle;)Z
@@ -138,7 +124,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 793
     iget-object v6, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$2;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     iget-object v7, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$2;->val$parentId:Ljava/lang/String;
@@ -148,12 +133,6 @@
 
     goto :goto_0
 
-    .line 799
-    .end local v0    # "binder":Landroid/os/IBinder;
-    .end local v1    # "bundle":Landroid/os/Bundle;
-    .end local v2    # "connection":Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;
-    .end local v4    # "i$":Ljava/util/Iterator;
-    .end local v5    # "optionsList":Ljava/util/List;, "Ljava/util/List<Landroid/os/Bundle;>;"
     :cond_2
     return-void
 .end method

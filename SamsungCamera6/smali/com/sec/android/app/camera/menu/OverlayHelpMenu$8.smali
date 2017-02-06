@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/OverlayHelpMenu;)V
     .locals 0
 
-    .prologue
-    .line 400
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/OverlayHelpMenu$8;->this$0:Lcom/sec/android/app/camera/menu/OverlayHelpMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +37,8 @@
 .method public run()V
     .locals 4
 
-    .prologue
     const/4 v3, -0x1
 
-    .line 403
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/OverlayHelpMenu$8;->this$0:Lcom/sec/android/app/camera/menu/OverlayHelpMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/OverlayHelpMenu;->mInteractionGuideView:Landroid/view/View;
@@ -52,7 +48,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 404
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/OverlayHelpMenu$8;->this$0:Lcom/sec/android/app/camera/menu/OverlayHelpMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/OverlayHelpMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -77,7 +72,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 405
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/OverlayHelpMenu$8;->this$0:Lcom/sec/android/app/camera/menu/OverlayHelpMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/OverlayHelpMenu;->mInteractionGuideView:Landroid/view/View;
@@ -89,7 +83,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 407
     :cond_0
     return-void
 .end method

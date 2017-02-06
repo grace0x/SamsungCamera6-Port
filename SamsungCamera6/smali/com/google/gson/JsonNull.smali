@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 32
     new-instance v0, Lcom/google/gson/JsonNull;
 
     invoke-direct {v0}, Lcom/google/gson/JsonNull;-><init>()V
@@ -27,11 +25,8 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 39
     invoke-direct {p0}, Lcom/google/gson/JsonElement;-><init>()V
 
-    .line 41
     return-void
 .end method
 
@@ -40,8 +35,6 @@
 .method bridge synthetic deepCopy()Lcom/google/gson/JsonElement;
     .locals 1
 
-    .prologue
-    .line 26
     invoke-virtual {p0}, Lcom/google/gson/JsonNull;->deepCopy()Lcom/google/gson/JsonNull;
 
     move-result-object v0
@@ -52,8 +45,6 @@
 .method deepCopy()Lcom/google/gson/JsonNull;
     .locals 1
 
-    .prologue
-    .line 45
     sget-object v0, Lcom/google/gson/JsonNull;->INSTANCE:Lcom/google/gson/JsonNull;
 
     return-object v0
@@ -61,10 +52,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
-    .param p1, "other"    # Ljava/lang/Object;
 
-    .prologue
-    .line 61
     if-eq p0, p1, :cond_0
 
     instance-of v0, p1, Lcom/google/gson/JsonNull;
@@ -86,8 +74,6 @@
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 53
     const-class v0, Lcom/google/gson/JsonNull;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I

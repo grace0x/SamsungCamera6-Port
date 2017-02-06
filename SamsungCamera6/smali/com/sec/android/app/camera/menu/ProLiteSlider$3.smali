@@ -31,8 +31,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/ProLiteSlider;[II[I)V
     .locals 0
 
-    .prologue
-    .line 395
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$3;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
     iput-object p2, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$3;->val$indicatorExposureValue:[I
@@ -50,27 +48,21 @@
 # virtual methods
 .method public onTouch(Lcom/samsung/android/glview/GLView;Landroid/view/MotionEvent;)Z
     .locals 5
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "event"    # Landroid/view/MotionEvent;
 
-    .prologue
     const/4 v4, 0x1
 
     const v3, 0x3dcccccd    # 0.1f
 
-    .line 398
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     if-ne v0, v4, :cond_3
 
-    .line 399
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$3;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/ProLiteSlider;->restartSliderMenuTimer()V
 
-    .line 400
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$3;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
     # getter for: Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -95,14 +87,12 @@
     :goto_0
     invoke-virtual {v1, v0}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 401
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$3;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderValueSelectListener:Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderValueSelectListener;
 
     if-eqz v0, :cond_0
 
-    .line 402
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$3;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
     sget v0, Lcom/sec/android/app/camera/feature/Feature;->EXPOSURE_COMPENSATION_STEP:F
@@ -142,7 +132,6 @@
     # setter for: Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValue:I
     invoke-static {v1, v0}, Lcom/sec/android/app/camera/menu/ProLiteSlider;->access$102(Lcom/sec/android/app/camera/menu/ProLiteSlider;I)I
 
-    .line 404
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$3;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderValueSelectListener:Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderValueSelectListener;
@@ -156,12 +145,10 @@
 
     invoke-interface {v0, v1}, Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderValueSelectListener;->onExposureValueMenuSelect(I)V
 
-    .line 409
     :cond_0
     :goto_2
     return v4
 
-    .line 400
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$3;->val$indicatorExposureLiteValue:[I
 
@@ -171,7 +158,6 @@
 
     goto :goto_0
 
-    .line 402
     :cond_2
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$3;->val$indicatorExposureLiteValue:[I
 
@@ -181,7 +167,6 @@
 
     goto :goto_1
 
-    .line 407
     :cond_3
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$3;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 

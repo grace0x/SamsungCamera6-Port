@@ -29,8 +29,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/ProSlider;[II)V
     .locals 0
 
-    .prologue
-    .line 568
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ProSlider$3;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     iput-object p2, p0, Lcom/sec/android/app/camera/menu/ProSlider$3;->val$indicatorExposureValue:[I
@@ -46,25 +44,19 @@
 # virtual methods
 .method public onTouch(Lcom/samsung/android/glview/GLView;Landroid/view/MotionEvent;)Z
     .locals 4
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "event"    # Landroid/view/MotionEvent;
 
-    .prologue
     const/4 v3, 0x1
 
-    .line 571
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     if-ne v0, v3, :cond_1
 
-    .line 572
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$3;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/ProSlider;->restartSliderMenuTimer()V
 
-    .line 573
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$3;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     # getter for: Lcom/sec/android/app/camera/menu/ProSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -80,14 +72,12 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 574
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$3;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/ProSlider;->mProSliderValueSelectListener:Lcom/sec/android/app/camera/menu/ProSlider$ProSliderValueSelectListener;
 
     if-eqz v0, :cond_0
 
-    .line 575
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$3;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/ProSlider;->mProSliderValueSelectListener:Lcom/sec/android/app/camera/menu/ProSlider$ProSliderValueSelectListener;
@@ -109,12 +99,10 @@
 
     invoke-interface {v0, v1}, Lcom/sec/android/app/camera/menu/ProSlider$ProSliderValueSelectListener;->onExposureValueMenuSelect(I)V
 
-    .line 580
     :cond_0
     :goto_0
     return v3
 
-    .line 578
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$3;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 

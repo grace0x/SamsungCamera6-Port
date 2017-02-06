@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;)V
     .locals 0
 
-    .prologue
-    .line 888
     iput-object p1, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$8;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,12 +36,9 @@
 # virtual methods
 .method public onPreferenceClick(Landroid/preference/Preference;)Z
     .locals 2
-    .param p1, "arg0"    # Landroid/preference/Preference;
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 891
     iget-object v0, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$8;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->getActivity()Landroid/app/Activity;
@@ -54,6 +49,5 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/setting/CameraSettingActivity;->onLaunchListFragment(I)V
 
-    .line 892
     return v1
 .end method

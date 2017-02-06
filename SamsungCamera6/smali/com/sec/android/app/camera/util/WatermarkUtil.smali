@@ -162,7 +162,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x3
 
     const/4 v3, 0x0
@@ -173,7 +172,6 @@
 
     const/4 v4, 0x1
 
-    .line 66
     const/16 v0, 0xc
 
     new-array v0, v0, [Ljava/lang/String;
@@ -244,7 +242,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->CHINESE_NUMBER:[Ljava/lang/String;
 
-    .line 68
     const/16 v0, 0xc
 
     new-array v0, v0, [Ljava/lang/String;
@@ -315,7 +312,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->CHINESE_MONTH_NUMBER:[Ljava/lang/String;
 
-    .line 70
     const/16 v0, 0x96
 
     new-array v0, v0, [J
@@ -324,7 +320,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->LUNAR_INFO:[J
 
-    .line 95
     const-string v0, "content://com.sec.android.daemonapp.ap.accuweather.provider/weatherinfo"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -333,28 +328,24 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->MY_WEATHER_INFO_URI:Landroid/net/Uri;
 
-    .line 97
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->INCREASE_OFFSETMAP:Ljava/util/Map;
 
-    .line 98
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->DECREASE_OFFSETMAP:Ljava/util/Map;
 
-    .line 99
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
-    .line 107
     const-string v0, "COL_WEATHER_KEY=\"%s\""
 
     new-array v1, v4, [Ljava/lang/Object;
@@ -369,7 +360,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->CITYID_CURRENT_LOCATION_SEC:Ljava/lang/String;
 
-    .line 108
     new-array v0, v6, [[D
 
     const/16 v1, 0x18
@@ -390,124 +380,98 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->CENTURY_ARRAY:[[D
 
-    .line 118
     sput-object v3, Lcom/sec/android/app/camera/util/WatermarkUtil;->mWeatherInfo:Lcom/sec/android/app/camera/util/WatermarkUtil$WeatherInfo;
 
-    .line 119
     const-string v0, "16"
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mTemperature:Ljava/lang/String;
 
-    .line 120
     const-string v0, "\u6674"
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mWeatherString:Ljava/lang/String;
 
-    .line 121
     const-string v0, "\u5317\u4eac"
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mCity:Ljava/lang/String;
 
-    .line 122
     const-string v0, "\u4e2d\u56fd"
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mCountry:Ljava/lang/String;
 
-    .line 123
     const-string v0, "\u671d\u9633\u533a"
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mDist:Ljava/lang/String;
 
-    .line 124
     const-string v0, ""
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mProvince:Ljava/lang/String;
 
-    .line 125
     const-string v0, "230"
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mPM25:Ljava/lang/String;
 
-    .line 126
     const-string v0, "31"
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mAltitude:Ljava/lang/String;
 
-    .line 127
     const-string v0, "45"
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mLatitude:Ljava/lang/String;
 
-    .line 128
     const-string v0, "180"
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mLongitude:Ljava/lang/String;
 
-    .line 129
     const/16 v0, 0x7e1
 
     sput v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mCurrentYear:I
 
-    .line 130
     const-string v0, "18:00"
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mCurrentTime:Ljava/lang/String;
 
-    .line 131
     const-string v0, "4 - 20"
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mCurrentDate:Ljava/lang/String;
 
-    .line 132
     const-string v0, "\u661f\u671f\u4e00"
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mWeekday:Ljava/lang/String;
 
-    .line 133
     sput-object v3, Lcom/sec/android/app/camera/util/WatermarkUtil;->mLunarDate:Ljava/lang/String;
 
-    .line 134
     const-string v0, "\u5e73\u65e5"
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mSolarTerm:Ljava/lang/String;
 
-    .line 135
     const-string v0, "unknown"
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mHoliday:Ljava/lang/String;
 
-    .line 136
     const-string v0, "2016.4.20 23:20"
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mDateAndTime:Ljava/lang/String;
 
-    .line 137
     const-string v0, "\u4e19\u7533"
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mLunarYear:Ljava/lang/String;
 
-    .line 138
     const/16 v0, 0x7e0
 
     sput v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mYear:I
 
-    .line 139
     sput v4, Lcom/sec/android/app/camera/util/WatermarkUtil;->mMonth:I
 
-    .line 140
     sput v4, Lcom/sec/android/app/camera/util/WatermarkUtil;->mDay:I
 
-    .line 143
     sput-object v3, Lcom/sec/android/app/camera/util/WatermarkUtil;->mQueue:Lcom/android/volley/RequestQueue;
 
-    .line 144
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$1;
 
     invoke-direct {v0}, Lcom/sec/android/app/camera/util/WatermarkUtil$1;-><init>()V
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 161
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->DECREASE_OFFSETMAP:Ljava/util/Map;
 
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->YUSHUI:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
@@ -528,7 +492,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 162
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->INCREASE_OFFSETMAP:Ljava/util/Map;
 
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->CHUNFEN:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
@@ -549,7 +512,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 163
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->INCREASE_OFFSETMAP:Ljava/util/Map;
 
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->XIAOMAN:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
@@ -570,7 +532,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 164
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->INCREASE_OFFSETMAP:Ljava/util/Map;
 
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->MANGZHONG:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
@@ -591,7 +552,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 165
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->INCREASE_OFFSETMAP:Ljava/util/Map;
 
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->XIAZHI:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
@@ -612,7 +572,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 166
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->INCREASE_OFFSETMAP:Ljava/util/Map;
 
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->XIAOSHU:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
@@ -641,7 +600,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 167
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->INCREASE_OFFSETMAP:Ljava/util/Map;
 
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->DASHU:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
@@ -662,7 +620,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 168
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->INCREASE_OFFSETMAP:Ljava/util/Map;
 
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->LIQIU:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
@@ -683,7 +640,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 169
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->INCREASE_OFFSETMAP:Ljava/util/Map;
 
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->BAILU:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
@@ -704,7 +660,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 170
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->INCREASE_OFFSETMAP:Ljava/util/Map;
 
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->QIUFEN:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
@@ -725,7 +680,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 171
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->INCREASE_OFFSETMAP:Ljava/util/Map;
 
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->SHUANGJIANG:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
@@ -746,7 +700,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 172
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->INCREASE_OFFSETMAP:Ljava/util/Map;
 
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->LIDONG:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
@@ -767,7 +720,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 173
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->INCREASE_OFFSETMAP:Ljava/util/Map;
 
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->XIAOXUE:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
@@ -788,7 +740,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 174
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->INCREASE_OFFSETMAP:Ljava/util/Map;
 
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->DAXUE:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
@@ -809,7 +760,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 175
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->DECREASE_OFFSETMAP:Ljava/util/Map;
 
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->DONGZHI:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
@@ -838,7 +788,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 176
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->INCREASE_OFFSETMAP:Ljava/util/Map;
 
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->XIAOHAN:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
@@ -859,7 +808,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 177
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->DECREASE_OFFSETMAP:Ljava/util/Map;
 
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->XIAOHAN:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
@@ -880,7 +828,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 178
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->INCREASE_OFFSETMAP:Ljava/util/Map;
 
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->DAHAN:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
@@ -901,10 +848,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 179
     return-void
 
-    .line 70
     nop
 
     :array_0
@@ -1061,7 +1006,6 @@
         0xada0
     .end array-data
 
-    .line 108
     :array_1
     .array-data 8
         0x4012849ba5e353f8L    # 4.6295
@@ -1122,21 +1066,14 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 184
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 185
     return-void
 .end method
 
 .method static synthetic access$000(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
-    .param p0, "x0"    # Landroid/content/Context;
-    .param p1, "x1"    # Landroid/content/Intent;
 
-    .prologue
-    .line 63
     invoke-static {p0, p1}, Lcom/sec/android/app/camera/util/WatermarkUtil;->handleUpdateWeather(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
@@ -1145,8 +1082,6 @@
 .method static synthetic access$100()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 63
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mDist:Ljava/lang/String;
 
     return-object v0
@@ -1154,10 +1089,7 @@
 
 .method static synthetic access$102(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .param p0, "x0"    # Ljava/lang/String;
 
-    .prologue
-    .line 63
     sput-object p0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mDist:Ljava/lang/String;
 
     return-object p0
@@ -1166,8 +1098,6 @@
 .method static synthetic access$200()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 63
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mCity:Ljava/lang/String;
 
     return-object v0
@@ -1175,10 +1105,7 @@
 
 .method static synthetic access$202(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .param p0, "x0"    # Ljava/lang/String;
 
-    .prologue
-    .line 63
     sput-object p0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mCity:Ljava/lang/String;
 
     return-object p0
@@ -1187,8 +1114,6 @@
 .method static synthetic access$300()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 63
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mCountry:Ljava/lang/String;
 
     return-object v0
@@ -1196,10 +1121,7 @@
 
 .method static synthetic access$302(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .param p0, "x0"    # Ljava/lang/String;
 
-    .prologue
-    .line 63
     sput-object p0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mCountry:Ljava/lang/String;
 
     return-object p0
@@ -1208,8 +1130,6 @@
 .method static synthetic access$400()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 63
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mProvince:Ljava/lang/String;
 
     return-object v0
@@ -1217,10 +1137,7 @@
 
 .method static synthetic access$402(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .param p0, "x0"    # Ljava/lang/String;
 
-    .prologue
-    .line 63
     sput-object p0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mProvince:Ljava/lang/String;
 
     return-object p0
@@ -1228,22 +1145,17 @@
 
 .method private static convertLunar(Ljava/util/Calendar;)V
     .locals 14
-    .param p0, "cal"    # Ljava/util/Calendar;
 
-    .prologue
     const/4 v13, 0x1
 
     const/4 v12, 0x0
 
-    .line 490
     new-instance v0, Ljava/util/Date;
 
     const-wide v8, -0x201b9524740L
 
     invoke-direct {v0, v8, v9}, Ljava/util/Date;-><init>(J)V
 
-    .line 491
-    .local v0, "baseDate":Ljava/util/Date;
     invoke-virtual {p0}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
 
     move-result-object v7
@@ -1264,15 +1176,10 @@
 
     long-to-int v6, v8
 
-    .line 492
-    .local v6, "offset":I
     const/4 v2, 0x0
 
-    .line 493
-    .local v2, "daysOfYear":I
     const/16 v4, 0x76c
 
-    .local v4, "iYear":I
     :goto_0
     const/16 v7, 0x802
 
@@ -1280,50 +1187,36 @@
 
     if-lez v6, :cond_0
 
-    .line 494
     invoke-static {v4}, Lcom/sec/android/app/camera/util/WatermarkUtil;->yearDays(I)I
 
     move-result v2
 
-    .line 495
     sub-int/2addr v6, v2
 
-    .line 493
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 497
     :cond_0
     if-gez v6, :cond_1
 
-    .line 498
     add-int/2addr v6, v2
 
-    .line 499
     add-int/lit8 v4, v4, -0x1
 
-    .line 502
     :cond_1
     sput v4, Lcom/sec/android/app/camera/util/WatermarkUtil;->mYear:I
 
-    .line 503
     invoke-static {v4}, Lcom/sec/android/app/camera/util/WatermarkUtil;->leapMonth(I)I
 
     move-result v5
 
-    .line 504
-    .local v5, "leapMonth":I
     sput-boolean v12, Lcom/sec/android/app/camera/util/WatermarkUtil;->mLeap:Z
 
-    .line 505
     const/4 v1, 0x0
 
-    .line 506
-    .local v1, "daysOfMonth":I
     const/4 v3, 0x1
 
-    .local v3, "iMonth":I
     :goto_1
     const/16 v7, 0xd
 
@@ -1331,7 +1224,6 @@
 
     if-lez v6, :cond_4
 
-    .line 507
     if-lez v5, :cond_3
 
     add-int/lit8 v7, v5, 0x1
@@ -1342,24 +1234,19 @@
 
     if-nez v7, :cond_3
 
-    .line 508
     add-int/lit8 v3, v3, -0x1
 
-    .line 509
     sput-boolean v13, Lcom/sec/android/app/camera/util/WatermarkUtil;->mLeap:Z
 
-    .line 510
     sget v7, Lcom/sec/android/app/camera/util/WatermarkUtil;->mYear:I
 
     invoke-static {v7}, Lcom/sec/android/app/camera/util/WatermarkUtil;->leapDays(I)I
 
     move-result v1
 
-    .line 513
     :goto_2
     sub-int/2addr v6, v1
 
-    .line 514
     sget-boolean v7, Lcom/sec/android/app/camera/util/WatermarkUtil;->mLeap:Z
 
     if-eqz v7, :cond_2
@@ -1368,16 +1255,13 @@
 
     if-ne v3, v7, :cond_2
 
-    .line 515
     sput-boolean v12, Lcom/sec/android/app/camera/util/WatermarkUtil;->mLeap:Z
 
-    .line 506
     :cond_2
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 512
     :cond_3
     sget v7, Lcom/sec/android/app/camera/util/WatermarkUtil;->mYear:I
 
@@ -1387,7 +1271,6 @@
 
     goto :goto_2
 
-    .line 517
     :cond_4
     if-nez v6, :cond_5
 
@@ -1397,42 +1280,32 @@
 
     if-ne v3, v7, :cond_5
 
-    .line 518
     sget-boolean v7, Lcom/sec/android/app/camera/util/WatermarkUtil;->mLeap:Z
 
     if-eqz v7, :cond_7
 
-    .line 519
     sput-boolean v12, Lcom/sec/android/app/camera/util/WatermarkUtil;->mLeap:Z
 
-    .line 526
     :cond_5
     :goto_3
     if-gez v6, :cond_6
 
-    .line 527
     add-int/2addr v6, v1
 
-    .line 528
     add-int/lit8 v3, v3, -0x1
 
-    .line 530
     :cond_6
     sput v3, Lcom/sec/android/app/camera/util/WatermarkUtil;->mMonth:I
 
-    .line 531
     add-int/lit8 v7, v6, 0x1
 
     sput v7, Lcom/sec/android/app/camera/util/WatermarkUtil;->mDay:I
 
-    .line 532
     return-void
 
-    .line 521
     :cond_7
     sput-boolean v13, Lcom/sec/android/app/camera/util/WatermarkUtil;->mLeap:Z
 
-    .line 522
     add-int/lit8 v3, v3, -0x1
 
     goto :goto_3
@@ -1441,16 +1314,12 @@
 .method private static final cyclical()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 535
     sget v1, Lcom/sec/android/app/camera/util/WatermarkUtil;->mYear:I
 
     add-int/lit16 v1, v1, -0x76c
 
     add-int/lit8 v0, v1, 0x24
 
-    .line 536
-    .local v0, "num":I
     invoke-static {v0}, Lcom/sec/android/app/camera/util/WatermarkUtil;->cyclicalm(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1460,9 +1329,7 @@
 
 .method private static final cyclicalm(I)Ljava/lang/String;
     .locals 9
-    .param p0, "num"    # I
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -1473,7 +1340,6 @@
 
     const/4 v4, 0x0
 
-    .line 540
     const/16 v2, 0xa
 
     new-array v0, v2, [Ljava/lang/String;
@@ -1528,8 +1394,6 @@
 
     aput-object v3, v0, v2
 
-    .line 542
-    .local v0, "Gan":[Ljava/lang/String;
     const/16 v2, 0xc
 
     new-array v1, v2, [Ljava/lang/String;
@@ -1596,8 +1460,6 @@
 
     aput-object v3, v1, v2
 
-    .line 544
-    .local v1, "Zhi":[Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1627,10 +1489,7 @@
 
 .method private static getChinaDayString(I)Ljava/lang/String;
     .locals 4
-    .param p0, "day"    # I
 
-    .prologue
-    .line 548
     const/4 v2, 0x4
 
     new-array v0, v2, [Ljava/lang/String;
@@ -1659,30 +1518,22 @@
 
     aput-object v3, v0, v2
 
-    .line 549
-    .local v0, "chineseTen":[Ljava/lang/String;
     rem-int/lit8 v2, p0, 0xa
 
     if-nez v2, :cond_0
 
     const/16 v1, 0x9
 
-    .line 550
-    .local v1, "n":I
     :goto_0
     const/16 v2, 0x1e
 
     if-le p0, v2, :cond_1
 
-    .line 551
     const-string v2, ""
 
-    .line 555
     :goto_1
     return-object v2
 
-    .line 549
-    .end local v1    # "n":I
     :cond_0
     rem-int/lit8 v2, p0, 0xa
 
@@ -1690,19 +1541,15 @@
 
     goto :goto_0
 
-    .line 552
-    .restart local v1    # "n":I
     :cond_1
     const/16 v2, 0xa
 
     if-ne p0, v2, :cond_2
 
-    .line 553
     const-string v2, "\u521d\u5341"
 
     goto :goto_1
 
-    .line 555
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1733,9 +1580,7 @@
 
 .method private static getChinaNumString(Ljava/lang/String;)Ljava/lang/String;
     .locals 11
-    .param p0, "str"    # Ljava/lang/String;
 
-    .prologue
     const/4 v10, 0x4
 
     const/4 v9, 0x3
@@ -1746,7 +1591,6 @@
 
     const/4 v6, 0x0
 
-    .line 559
     const/16 v4, 0xa
 
     new-array v1, v4, [Ljava/lang/String;
@@ -1801,8 +1645,6 @@
 
     aput-object v5, v1, v4
 
-    .line 560
-    .local v1, "nums":[Ljava/lang/String;
     const/16 v4, 0xa
 
     new-array v3, v4, [Ljava/lang/String;
@@ -1857,35 +1699,25 @@
 
     aput-object v5, v3, v4
 
-    .line 561
-    .local v3, "tens":[Ljava/lang/String;
     const-string v2, ""
 
-    .line 562
-    .local v2, "res":Ljava/lang/String;
     invoke-static {p0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
     move-result-wide v4
 
     double-to-int v0, v4
 
-    .line 563
-    .local v0, "num":I
     if-gez v0, :cond_0
 
-    .line 564
     const-string v2, "\u8d1f"
 
-    .line 565
     neg-int v0, v0
 
-    .line 567
     :cond_0
     const/16 v4, 0x14
 
     if-ne v0, v4, :cond_1
 
-    .line 568
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1904,20 +1736,16 @@
 
     move-result-object v2
 
-    .line 570
     :cond_1
     const/16 v4, 0x63
 
     if-le v0, v4, :cond_2
 
-    .line 571
     const-string v4, "\u5341\u516d"
 
-    .line 574
     :goto_0
     return-object v4
 
-    .line 573
     :cond_2
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1949,16 +1777,12 @@
 
     move-object v4, v2
 
-    .line 574
     goto :goto_0
 .end method
 
 .method private static getChineseEveDate(I)Ljava/lang/String;
     .locals 4
-    .param p0, "year"    # I
 
-    .prologue
-    .line 578
     add-int/lit8 v2, p0, -0x1
 
     const/16 v3, 0xc
@@ -1967,21 +1791,15 @@
 
     move-result v0
 
-    .line 579
-    .local v0, "days":I
     const/16 v2, 0x1e
 
     if-ne v0, v2, :cond_0
 
     const-string v1, "\u5341\u4e8c\u6708\u4e09\u5341"
 
-    .line 580
-    .local v1, "eve":Ljava/lang/String;
     :goto_0
     return-object v1
 
-    .line 579
-    .end local v1    # "eve":Ljava/lang/String;
     :cond_0
     const-string v1, "\u5341\u4e8c\u6708\u5eff\u4e5d"
 
@@ -1991,8 +1809,6 @@
 .method public static getChnDate()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 188
     const-string v0, "%s\u6708%s\u65e5"
 
     const/4 v1, 0x2
@@ -2037,8 +1853,6 @@
 .method public static getChnTemperature()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 192
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2069,8 +1883,6 @@
 .method public static getCity()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 197
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mCity:Ljava/lang/String;
 
     return-object v0
@@ -2079,8 +1891,6 @@
 .method public static getCurrentDate()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 201
     const-string v0, "%s\u6708%s\u65e5"
 
     const/4 v1, 0x2
@@ -2113,7 +1923,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mCurrentDate:Ljava/lang/String;
 
-    .line 202
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mCurrentDate:Ljava/lang/String;
 
     return-object v0
@@ -2122,22 +1931,16 @@
 .method public static getCurrentDayOfWeek()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 206
     new-instance v1, Ljava/text/DateFormatSymbols;
 
     sget-object v2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     invoke-direct {v1, v2}, Ljava/text/DateFormatSymbols;-><init>(Ljava/util/Locale;)V
 
-    .line 207
-    .local v1, "dfs":Ljava/text/DateFormatSymbols;
     invoke-virtual {v1}, Ljava/text/DateFormatSymbols;->getWeekdays()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 208
-    .local v0, "dayList":[Ljava/lang/String;
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v2
@@ -2160,8 +1963,6 @@
 .method public static getCurrentTime()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 212
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mCurrentTime:Ljava/lang/String;
 
     return-object v0
@@ -2170,8 +1971,6 @@
 .method public static getCurrentYear()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 217
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2198,8 +1997,6 @@
 .method public static getDateFormat01()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 222
     const-string v0, "%s  \u661f \u671f %c"
 
     const/4 v1, 0x2
@@ -2242,7 +2039,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mDateAndTime:Ljava/lang/String;
 
-    .line 223
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mDateAndTime:Ljava/lang/String;
 
     return-object v0
@@ -2251,8 +2047,6 @@
 .method public static getDateFormat02()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 228
     const-string v0, "%s - %s ,  %s\u2103"
 
     const/4 v1, 0x3
@@ -2291,7 +2085,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mDateAndTime:Ljava/lang/String;
 
-    .line 229
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mDateAndTime:Ljava/lang/String;
 
     return-object v0
@@ -2300,8 +2093,6 @@
 .method public static getDateFormat03()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 234
     const-string v0, "%s %s"
 
     const/4 v1, 0x2
@@ -2330,7 +2121,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mDateAndTime:Ljava/lang/String;
 
-    .line 235
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mDateAndTime:Ljava/lang/String;
 
     return-object v0
@@ -2338,22 +2128,15 @@
 
 .method public static getDateTime(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .param p0, "format"    # Ljava/lang/String;
 
-    .prologue
-    .line 239
     new-instance v1, Ljava/util/Date;
 
     invoke-direct {v1}, Ljava/util/Date;-><init>()V
 
-    .line 240
-    .local v1, "now":Ljava/util/Date;
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     invoke-direct {v0, p0}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 241
-    .local v0, "dateFormat":Ljava/text/SimpleDateFormat;
     invoke-virtual {v0, v1}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v2
@@ -2364,18 +2147,14 @@
 .method public static getDateforFestival()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 245
     sget-boolean v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mIsLunarFestival:Z
 
     if-eqz v0, :cond_0
 
-    .line 246
     invoke-static {}, Lcom/sec/android/app/camera/util/WatermarkUtil;->getLunarDate()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 248
     :goto_0
     return-object v0
 
@@ -2415,10 +2194,7 @@
 
 .method private static getFestival(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .param p0, "date"    # Ljava/lang/String;
 
-    .prologue
-    .line 584
     const/4 v0, -0x1
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -2431,7 +2207,6 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 610
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mSolarTerm:Ljava/lang/String;
 
     const-string v1, "\u6e05\u660e"
@@ -2442,14 +2217,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 611
     const-string v0, "\u6e05\u660e\u8282"
 
-    .line 612
     :goto_1
     return-object v0
 
-    .line 584
     :sswitch_0
     const-string v1, "01.01"
 
@@ -2606,85 +2378,71 @@
 
     goto/16 :goto_0
 
-    .line 586
     :pswitch_0
     const-string v0, "\u5143\u65e6"
 
     goto :goto_1
 
-    .line 588
     :pswitch_1
     const-string v0, "\u60c5\u4eba\u8282"
 
     goto/16 :goto_1
 
-    .line 590
     :pswitch_2
     const-string v0, "\u5987\u5973\u8282"
 
     goto/16 :goto_1
 
-    .line 592
     :pswitch_3
     const-string v0, "\u690d\u6811\u8282"
 
     goto/16 :goto_1
 
-    .line 594
     :pswitch_4
     const-string v0, "\u52b3\u52a8\u8282"
 
     goto/16 :goto_1
 
-    .line 596
     :pswitch_5
     const-string v0, "\u9752\u5e74\u8282"
 
     goto/16 :goto_1
 
-    .line 598
     :pswitch_6
     const-string v0, "\u513f\u7ae5\u8282"
 
     goto/16 :goto_1
 
-    .line 600
     :pswitch_7
     const-string v0, "\u5efa\u515a\u8282"
 
     goto/16 :goto_1
 
-    .line 602
     :pswitch_8
     const-string v0, "\u5efa\u519b\u8282"
 
     goto/16 :goto_1
 
-    .line 604
     :pswitch_9
     const-string v0, "\u6559\u5e08\u8282"
 
     goto/16 :goto_1
 
-    .line 606
     :pswitch_a
     const-string v0, "\u56fd\u5e86\u8282"
 
     goto/16 :goto_1
 
-    .line 608
     :pswitch_b
     const-string v0, "\u5723\u8bde\u8282"
 
     goto/16 :goto_1
 
-    .line 612
     :cond_1
     const-string v0, "unknown"
 
     goto/16 :goto_1
 
-    .line 584
     :sswitch_data_0
     .sparse-switch
         0x2bb610e -> :sswitch_0
@@ -2721,8 +2479,6 @@
 .method public static getGpsInfo()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 253
     const-string v0, "%s  %s"
 
     const/4 v1, 0x2
@@ -2755,8 +2511,6 @@
 .method public static getHoliday()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 257
     invoke-static {}, Lcom/sec/android/app/camera/util/WatermarkUtil;->getLunarDate()Ljava/lang/String;
 
     move-result-object v0
@@ -2767,7 +2521,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mHoliday:Ljava/lang/String;
 
-    .line 258
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mHoliday:Ljava/lang/String;
 
     const-string v1, "unknown"
@@ -2778,7 +2531,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 259
     const-string v0, "MM.dd"
 
     invoke-static {v0}, Lcom/sec/android/app/camera/util/WatermarkUtil;->getDateTime(Ljava/lang/String;)Ljava/lang/String;
@@ -2791,7 +2543,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mHoliday:Ljava/lang/String;
 
-    .line 260
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mHoliday:Ljava/lang/String;
 
     const-string v1, "unknown"
@@ -2807,13 +2558,11 @@
     :goto_0
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mHoliday:Ljava/lang/String;
 
-    .line 262
     :cond_0
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mHoliday:Ljava/lang/String;
 
     return-object v0
 
-    .line 260
     :cond_1
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mHoliday:Ljava/lang/String;
 
@@ -2822,15 +2571,11 @@
 
 .method public static getKaitiTypeface(Landroid/content/Context;)Landroid/graphics/Typeface;
     .locals 4
-    .param p0, "context"    # Landroid/content/Context;
 
-    .prologue
-    .line 266
     sget-object v2, Lcom/sec/android/app/camera/util/WatermarkUtil;->mKaitiTypeface:Landroid/graphics/Typeface;
 
     if-nez v2, :cond_0
 
-    .line 268
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -2846,8 +2591,6 @@
 
     move-result-object v0
 
-    .line 269
-    .local v0, "am":Landroid/content/res/AssetManager;
     const-string v2, "fonts/Kaiti.ttf"
 
     invoke-static {v0, v2}, Landroid/graphics/Typeface;->createFromAsset(Landroid/content/res/AssetManager;Ljava/lang/String;)Landroid/graphics/Typeface;
@@ -2858,20 +2601,15 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 274
-    .end local v0    # "am":Landroid/content/res/AssetManager;
     :cond_0
     :goto_0
     sget-object v2, Lcom/sec/android/app/camera/util/WatermarkUtil;->mKaitiTypeface:Landroid/graphics/Typeface;
 
     return-object v2
 
-    .line 270
     :catch_0
     move-exception v1
 
-    .line 271
-    .local v1, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-static {}, Lcom/sec/android/app/camera/util/Util;->getRobotoLightFont()Landroid/graphics/Typeface;
 
     move-result-object v2
@@ -2884,8 +2622,6 @@
 .method public static getLatitude()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 278
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil;->mLatitude:Ljava/lang/String;
 
     invoke-static {v1}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
@@ -2894,11 +2630,8 @@
 
     double-to-int v0, v2
 
-    .line 279
-    .local v0, "lat":I
     if-lez v0, :cond_0
 
-    .line 280
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2917,15 +2650,12 @@
 
     move-result-object v1
 
-    .line 283
     :goto_0
     return-object v1
 
-    .line 281
     :cond_0
     if-gez v0, :cond_1
 
-    .line 282
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2948,7 +2678,6 @@
 
     goto :goto_0
 
-    .line 283
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2973,17 +2702,13 @@
 
 .method private static getLocationInfo(Ljava/lang/String;)V
     .locals 4
-    .param p0, "url"    # Ljava/lang/String;
 
-    .prologue
-    .line 617
     const-string v1, "WatermarkUtil"
 
     const-string v2, "getLocationInfo"
 
     invoke-static {v1, v2}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 618
     new-instance v0, Lcom/android/volley/toolbox/JsonObjectRequest;
 
     const/4 v1, 0x0
@@ -2998,21 +2723,16 @@
 
     invoke-direct {v0, p0, v1, v2, v3}, Lcom/android/volley/toolbox/JsonObjectRequest;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Lcom/android/volley/Response$Listener;Lcom/android/volley/Response$ErrorListener;)V
 
-    .line 694
-    .local v0, "jsonObjectRequest":Lcom/android/volley/toolbox/JsonObjectRequest;
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil;->mQueue:Lcom/android/volley/RequestQueue;
 
     invoke-virtual {v1, v0}, Lcom/android/volley/RequestQueue;->add(Lcom/android/volley/Request;)Lcom/android/volley/Request;
 
-    .line 695
     return-void
 .end method
 
 .method public static getLocationString()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 287
     const-string v1, "%s,  %s,  %s"
 
     const/4 v2, 0x3
@@ -3041,16 +2761,12 @@
 
     move-result-object v0
 
-    .line 288
-    .local v0, "mLoc":Ljava/lang/String;
     return-object v0
 .end method
 
 .method public static getLocationString01()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 293
     const-string v1, "%s\u5e02,  %s"
 
     const/4 v2, 0x2
@@ -3073,16 +2789,12 @@
 
     move-result-object v0
 
-    .line 294
-    .local v0, "mLoc":Ljava/lang/String;
     return-object v0
 .end method
 
 .method public static getLocationString02()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 299
     const-string v1, "%s  /  %s"
 
     const/4 v2, 0x2
@@ -3105,16 +2817,12 @@
 
     move-result-object v0
 
-    .line 300
-    .local v0, "mLoc":Ljava/lang/String;
     return-object v0
 .end method
 
 .method public static getLongitude()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 304
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil;->mLongitude:Ljava/lang/String;
 
     invoke-static {v1}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
@@ -3123,11 +2831,8 @@
 
     double-to-int v0, v2
 
-    .line 305
-    .local v0, "mLong":I
     if-lez v0, :cond_0
 
-    .line 306
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3146,15 +2851,12 @@
 
     move-result-object v1
 
-    .line 309
     :goto_0
     return-object v1
 
-    .line 307
     :cond_0
     if-gez v0, :cond_1
 
-    .line 308
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3177,7 +2879,6 @@
 
     goto :goto_0
 
-    .line 309
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3203,8 +2904,6 @@
 .method public static getLunarDate()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 313
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3246,17 +2945,13 @@
 
 .method public static getLunarFestival(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
-    .param p0, "lunarDate"    # Ljava/lang/String;
 
-    .prologue
     const/4 v2, 0x1
 
     const/4 v1, 0x0
 
-    .line 317
     sput-boolean v2, Lcom/sec/android/app/camera/util/WatermarkUtil;->mIsLunarFestival:Z
 
-    .line 318
     const/4 v0, -0x1
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -3269,7 +2964,6 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 338
     sget v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mCurrentYear:I
 
     invoke-static {v0}, Lcom/sec/android/app/camera/util/WatermarkUtil;->getChineseEveDate(I)Ljava/lang/String;
@@ -3282,14 +2976,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 339
     const-string v0, "\u9664\u5915"
 
-    .line 342
     :goto_1
     return-object v0
 
-    .line 318
     :sswitch_0
     const-string v2, "\u6b63\u6708 \u521d\u4e00"
 
@@ -3420,64 +3111,53 @@
 
     goto :goto_0
 
-    .line 322
     :pswitch_0
     const-string v0, "\u6625\u8282"
 
     goto :goto_1
 
-    .line 324
     :pswitch_1
     const-string v0, "\u5143\u5bb5\u8282"
 
     goto :goto_1
 
-    .line 326
     :pswitch_2
     const-string v0, "\u7aef\u5348\u8282"
 
     goto :goto_1
 
-    .line 328
     :pswitch_3
     const-string v0, "\u4e2d\u79cb\u8282"
 
     goto :goto_1
 
-    .line 330
     :pswitch_4
     const-string v0, "\u91cd\u9633\u8282"
 
     goto :goto_1
 
-    .line 332
     :pswitch_5
     const-string v0, "\u4e03\u5915\u8282"
 
     goto :goto_1
 
-    .line 334
     :pswitch_6
     const-string v0, "\u4e2d\u5143\u8282"
 
     goto :goto_1
 
-    .line 336
     :pswitch_7
     const-string v0, "\u814a\u516b\u8282"
 
     goto :goto_1
 
-    .line 341
     :cond_1
     sput-boolean v1, Lcom/sec/android/app/camera/util/WatermarkUtil;->mIsLunarFestival:Z
 
-    .line 342
     const-string v0, "unknown"
 
     goto/16 :goto_1
 
-    .line 318
     :sswitch_data_0
     .sparse-switch
         -0x7dd0873d -> :sswitch_4
@@ -3510,8 +3190,6 @@
 .method public static getLunarYear()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 347
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3537,15 +3215,11 @@
 
 .method public static getMiaoTypeface(Landroid/content/Context;)Landroid/graphics/Typeface;
     .locals 4
-    .param p0, "context"    # Landroid/content/Context;
 
-    .prologue
-    .line 351
     sget-object v2, Lcom/sec/android/app/camera/util/WatermarkUtil;->mMiaoTypeface:Landroid/graphics/Typeface;
 
     if-nez v2, :cond_0
 
-    .line 353
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -3561,8 +3235,6 @@
 
     move-result-object v0
 
-    .line 354
-    .local v0, "am":Landroid/content/res/AssetManager;
     const-string v2, "fonts/Miao.ttf"
 
     invoke-static {v0, v2}, Landroid/graphics/Typeface;->createFromAsset(Landroid/content/res/AssetManager;Ljava/lang/String;)Landroid/graphics/Typeface;
@@ -3573,20 +3245,15 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 359
-    .end local v0    # "am":Landroid/content/res/AssetManager;
     :cond_0
     :goto_0
     sget-object v2, Lcom/sec/android/app/camera/util/WatermarkUtil;->mMiaoTypeface:Landroid/graphics/Typeface;
 
     return-object v2
 
-    .line 355
     :catch_0
     move-exception v1
 
-    .line 356
-    .local v1, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-static {}, Lcom/sec/android/app/camera/util/Util;->getRobotoLightFont()Landroid/graphics/Typeface;
 
     move-result-object v2
@@ -3598,9 +3265,6 @@
 
 .method public static getOffset(Ljava/util/Map;ILjava/lang/String;I)I
     .locals 7
-    .param p1, "year"    # I
-    .param p2, "name"    # Ljava/lang/String;
-    .param p3, "offset"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3615,33 +3279,22 @@
         }
     .end annotation
 
-    .prologue
-    .line 363
-    .local p0, "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;[Ljava/lang/Integer;>;"
     const/4 v4, 0x0
 
-    .line 364
-    .local v4, "off":I
     invoke-interface {p0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, [Ljava/lang/Integer;
 
-    .line 365
-    .local v5, "years":[Ljava/lang/Integer;
     if-eqz v5, :cond_0
 
-    .line 366
     move-object v0, v5
 
-    .local v0, "arr$":[Ljava/lang/Integer;
     array-length v3, v0
 
-    .local v3, "len$":I
     const/4 v2, 0x0
 
-    .local v2, "i$":I
     :goto_0
     if-ge v2, v3, :cond_0
 
@@ -3651,26 +3304,13 @@
 
     move-result v1
 
-    .line 367
-    .local v1, "i":I
     if-ne v1, p1, :cond_1
 
-    .line 368
     move v4, p3
 
-    .line 373
-    .end local v0    # "arr$":[Ljava/lang/Integer;
-    .end local v1    # "i":I
-    .end local v2    # "i$":I
-    .end local v3    # "len$":I
     :cond_0
     return v4
 
-    .line 366
-    .restart local v0    # "arr$":[Ljava/lang/Integer;
-    .restart local v1    # "i":I
-    .restart local v2    # "i$":I
-    .restart local v3    # "len$":I
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
@@ -3680,8 +3320,6 @@
 .method public static getPM25()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 378
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3707,15 +3345,11 @@
 
 .method public static getShaonvTypeface(Landroid/content/Context;)Landroid/graphics/Typeface;
     .locals 4
-    .param p0, "context"    # Landroid/content/Context;
 
-    .prologue
-    .line 382
     sget-object v2, Lcom/sec/android/app/camera/util/WatermarkUtil;->mShaonvTypeface:Landroid/graphics/Typeface;
 
     if-nez v2, :cond_0
 
-    .line 384
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -3731,8 +3365,6 @@
 
     move-result-object v0
 
-    .line 385
-    .local v0, "am":Landroid/content/res/AssetManager;
     const-string v2, "fonts/Shaonv.ttf"
 
     invoke-static {v0, v2}, Landroid/graphics/Typeface;->createFromAsset(Landroid/content/res/AssetManager;Ljava/lang/String;)Landroid/graphics/Typeface;
@@ -3743,20 +3375,15 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 390
-    .end local v0    # "am":Landroid/content/res/AssetManager;
     :cond_0
     :goto_0
     sget-object v2, Lcom/sec/android/app/camera/util/WatermarkUtil;->mShaonvTypeface:Landroid/graphics/Typeface;
 
     return-object v2
 
-    .line 386
     :catch_0
     move-exception v1
 
-    .line 387
-    .local v1, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-static {}, Lcom/sec/android/app/camera/util/Util;->getRobotoLightFont()Landroid/graphics/Typeface;
 
     move-result-object v2
@@ -3769,8 +3396,6 @@
 .method public static getSolarTerm()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 394
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mSolarTerm:Ljava/lang/String;
 
     return-object v0
@@ -3778,15 +3403,9 @@
 
 .method private static getSolarTermNum(ILjava/lang/String;)Ljava/lang/String;
     .locals 12
-    .param p0, "year"    # I
-    .param p1, "name"    # Ljava/lang/String;
 
-    .prologue
-    .line 698
     const-wide/16 v2, 0x0
 
-    .line 699
-    .local v2, "centuryValue":D
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v7
@@ -3795,7 +3414,6 @@
 
     move-result-object p1
 
-    .line 700
     invoke-static {p1}, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->valueOf(Ljava/lang/String;)Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     move-result-object v7
@@ -3804,12 +3422,8 @@
 
     move-result v5
 
-    .line 702
-    .local v5, "ordinal":I
     const/4 v0, -0x1
 
-    .line 703
-    .local v0, "centuryIndex":I
     const/16 v7, 0x76d
 
     if-lt p0, v7, :cond_4
@@ -3818,10 +3432,8 @@
 
     if-gt p0, v7, :cond_4
 
-    .line 704
     const/4 v0, 0x0
 
-    .line 710
     :goto_0
     sget-object v7, Lcom/sec/android/app/camera/util/WatermarkUtil;->CENTURY_ARRAY:[[D
 
@@ -3829,15 +3441,10 @@
 
     aget-wide v2, v7, v5
 
-    .line 711
     const/4 v1, 0x0
 
-    .line 712
-    .local v1, "dateNum":I
     rem-int/lit8 v6, p0, 0x64
 
-    .line 713
-    .local v6, "y":I
     rem-int/lit8 v7, p0, 0x4
 
     if-nez v7, :cond_0
@@ -3851,7 +3458,6 @@
 
     if-nez v7, :cond_3
 
-    .line 714
     :cond_1
     sget-object v7, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->XIAOHAN:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
@@ -3885,11 +3491,9 @@
 
     if-ne v5, v7, :cond_3
 
-    .line 716
     :cond_2
     add-int/lit8 v6, v6, -0x1
 
-    .line 719
     :cond_3
     int-to-double v8, v6
 
@@ -3905,19 +3509,16 @@
 
     sub-int v1, v7, v8
 
-    .line 720
     invoke-static {p0, p1}, Lcom/sec/android/app/camera/util/WatermarkUtil;->getSpecialYearOffset(ILjava/lang/String;)I
 
     move-result v7
 
     add-int/2addr v1, v7
 
-    .line 722
     const/16 v7, 0xa
 
     if-ge v1, v7, :cond_6
 
-    .line 723
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -3936,15 +3537,9 @@
 
     move-result-object v4
 
-    .line 727
-    .local v4, "mDay":Ljava/lang/String;
     :goto_1
     return-object v4
 
-    .line 705
-    .end local v1    # "dateNum":I
-    .end local v4    # "mDay":Ljava/lang/String;
-    .end local v6    # "y":I
     :cond_4
     const/16 v7, 0x7d1
 
@@ -3954,12 +3549,10 @@
 
     if-gt p0, v7, :cond_5
 
-    .line 706
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 708
     :cond_5
     new-instance v7, Ljava/lang/RuntimeException;
 
@@ -3991,9 +3584,6 @@
 
     throw v7
 
-    .line 725
-    .restart local v1    # "dateNum":I
-    .restart local v6    # "y":I
     :cond_6
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -4013,21 +3603,14 @@
 
     move-result-object v4
 
-    .restart local v4    # "mDay":Ljava/lang/String;
     goto :goto_1
 .end method
 
 .method private static getSpecialYearOffset(ILjava/lang/String;)I
     .locals 3
-    .param p0, "year"    # I
-    .param p1, "name"    # Ljava/lang/String;
 
-    .prologue
-    .line 731
     const/4 v0, 0x0
 
-    .line 732
-    .local v0, "offset":I
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil;->DECREASE_OFFSETMAP:Ljava/util/Map;
 
     const/4 v2, -0x1
@@ -4038,7 +3621,6 @@
 
     add-int/2addr v0, v1
 
-    .line 733
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil;->INCREASE_OFFSETMAP:Ljava/util/Map;
 
     const/4 v2, 0x1
@@ -4049,15 +3631,12 @@
 
     add-int/2addr v0, v1
 
-    .line 734
     return v0
 .end method
 
 .method private static getString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 738
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4130,8 +3709,6 @@
 .method private static getTemperature()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 742
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4157,10 +3734,7 @@
 
 .method private static getTerms(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
-    .param p0, "date"    # Ljava/lang/String;
 
-    .prologue
-    .line 746
     const-string v1, "WatermarkUtil"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -4183,7 +3757,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 747
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     invoke-interface {v1, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -4192,8 +3765,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 748
-    .local v0, "currentTerm":Ljava/lang/String;
     const-string v1, "WatermarkUtil"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -4216,7 +3787,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 749
     const-string v1, "WatermarkUtil"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -4241,24 +3811,17 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 750
     if-nez v0, :cond_0
 
-    .line 751
     const-string v0, "\u5e73\u65e5"
 
-    .line 753
-    .end local v0    # "currentTerm":Ljava/lang/String;
     :cond_0
     return-object v0
 .end method
 
 .method private static getTermsMap(I)V
     .locals 3
-    .param p0, "year"    # I
 
-    .prologue
-    .line 758
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4293,7 +3856,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 759
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4328,7 +3890,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 760
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4363,7 +3924,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 761
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4398,7 +3958,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 762
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4433,7 +3992,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 763
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4468,7 +4026,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 764
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4503,7 +4060,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 765
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4538,7 +4094,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 766
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4573,7 +4128,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 767
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4608,7 +4162,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 768
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4643,7 +4196,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 769
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4678,7 +4230,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 770
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4713,7 +4264,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 771
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4748,7 +4298,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 772
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4783,7 +4332,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 773
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4818,7 +4366,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 774
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4853,7 +4400,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 775
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4888,7 +4434,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 776
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4923,7 +4468,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 777
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4958,7 +4502,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 778
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4993,7 +4536,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 779
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -5028,7 +4570,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 780
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -5063,7 +4604,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 781
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->TERMS_MAP:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -5098,15 +4638,12 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 782
     return-void
 .end method
 
 .method public static getWeather()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 399
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mWeatherString:Ljava/lang/String;
 
     return-object v0
@@ -5114,20 +4651,15 @@
 
 .method public static getWeek(Ljava/lang/String;)Ljava/lang/String;
     .locals 8
-    .param p0, "sdate"    # Ljava/lang/String;
 
-    .prologue
     const/4 v7, 0x7
 
     const/4 v6, 0x6
 
-    .line 403
     invoke-static {p0}, Lcom/sec/android/app/camera/util/WatermarkUtil;->strToDate(Ljava/lang/String;)Ljava/util/Date;
 
     move-result-object v1
 
-    .line 404
-    .local v1, "date":Ljava/util/Date;
     new-array v3, v7, [Ljava/lang/String;
 
     const/4 v4, 0x0
@@ -5170,34 +4702,25 @@
 
     aput-object v4, v3, v6
 
-    .line 405
-    .local v3, "weeks":[Ljava/lang/String;
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 406
-    .local v0, "cal":Ljava/util/Calendar;
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->setTime(Ljava/util/Date;)V
 
-    .line 407
     invoke-virtual {v0, v7}, Ljava/util/Calendar;->get(I)I
 
     move-result v4
 
     add-int/lit8 v2, v4, -0x1
 
-    .line 408
-    .local v2, "week_index":I
     if-ltz v2, :cond_0
 
     if-le v2, v6, :cond_1
 
-    .line 409
     :cond_0
     const/4 v2, 0x0
 
-    .line 411
     :cond_1
     aget-object v4, v3, v2
 
@@ -5207,8 +4730,6 @@
 .method public static getWeekday()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 415
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mWeekday:Ljava/lang/String;
 
     return-object v0
@@ -5216,15 +4737,11 @@
 
 .method private static handleUpdateWeather(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
-    .param p0, "context"    # Landroid/content/Context;
-    .param p1, "intent"    # Landroid/content/Intent;
 
-    .prologue
     const/4 v4, 0x0
 
     const/4 v3, 0x0
 
-    .line 785
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mWeatherInfo:Lcom/sec/android/app/camera/util/WatermarkUtil$WeatherInfo;
 
     const-string v1, "aw_daemon_service_key_weather_icon_num"
@@ -5235,7 +4752,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/util/WatermarkUtil$WeatherInfo;->setIconNumber(I)V
 
-    .line 786
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mWeatherInfo:Lcom/sec/android/app/camera/util/WatermarkUtil$WeatherInfo;
 
     const-string v1, "aw_daemon_service_key_current_temp"
@@ -5246,7 +4762,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/util/WatermarkUtil$WeatherInfo;->setCurrentTemperature(F)V
 
-    .line 787
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mWeatherInfo:Lcom/sec/android/app/camera/util/WatermarkUtil$WeatherInfo;
 
     const-string v1, "aw_daemon_service_key_temp_scale"
@@ -5259,7 +4774,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/util/WatermarkUtil$WeatherInfo;->setTempScale(I)V
 
-    .line 788
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mWeatherInfo:Lcom/sec/android/app/camera/util/WatermarkUtil$WeatherInfo;
 
     const-string v1, "aw_daemon_service_key_loc_code"
@@ -5270,7 +4784,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/util/WatermarkUtil$WeatherInfo;->setCurrentCityId(Ljava/lang/String;)V
 
-    .line 789
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mWeatherInfo:Lcom/sec/android/app/camera/util/WatermarkUtil$WeatherInfo;
 
     const-string v1, "aw_daemon_service_key_high_temp"
@@ -5281,7 +4794,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/util/WatermarkUtil$WeatherInfo;->setHighTemperature(F)V
 
-    .line 790
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mWeatherInfo:Lcom/sec/android/app/camera/util/WatermarkUtil$WeatherInfo;
 
     const-string v1, "aw_daemon_service_key_low_temp"
@@ -5292,7 +4804,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/util/WatermarkUtil$WeatherInfo;->setLowTemperature(F)V
 
-    .line 791
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mWeatherInfo:Lcom/sec/android/app/camera/util/WatermarkUtil$WeatherInfo;
 
     const-string v1, "Error_Code"
@@ -5303,31 +4814,24 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/util/WatermarkUtil$WeatherInfo;->setTrusted(I)V
 
-    .line 792
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mWeatherInfo:Lcom/sec/android/app/camera/util/WatermarkUtil$WeatherInfo;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/util/WatermarkUtil$WeatherInfo;->dump()V
 
-    .line 793
     return-void
 .end method
 
 .method public static initLocation(Landroid/location/Location;)V
     .locals 5
-    .param p0, "loc"    # Landroid/location/Location;
 
-    .prologue
-    .line 419
     const-string v1, "WatermarkUtil"
 
     const-string v2, "initLocation "
 
     invoke-static {v1, v2}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 420
     if-eqz p0, :cond_0
 
-    .line 421
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -5352,7 +4856,6 @@
 
     sput-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil;->mLatitude:Ljava/lang/String;
 
-    .line 422
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -5377,7 +4880,6 @@
 
     sput-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil;->mLongitude:Ljava/lang/String;
 
-    .line 423
     const-string v1, "WatermarkUtil"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -5414,7 +4916,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 424
     const-string v1, "http://api.accuweather.com/locations/v1/cities/geoposition/search.json?q=%s,%s&apikey=0460650BB2524F84BAECAA9381D79EFC&language=zh"
 
     const/4 v2, 0x2
@@ -5437,12 +4938,8 @@
 
     move-result-object v0
 
-    .line 425
-    .local v0, "url":Ljava/lang/String;
     invoke-static {v0}, Lcom/sec/android/app/camera/util/WatermarkUtil;->getLocationInfo(Ljava/lang/String;)V
 
-    .line 427
-    .end local v0    # "url":Ljava/lang/String;
     :cond_0
     return-void
 .end method
@@ -5450,16 +4947,12 @@
 .method public static initTime()V
     .locals 5
 
-    .prologue
-    .line 430
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v4, "yyyy-MM-dd"
 
     invoke-direct {v0, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 431
-    .local v0, "chineseDateFormat":Ljava/text/SimpleDateFormat;
     const-string v4, "HH:mm"
 
     invoke-static {v4}, Lcom/sec/android/app/camera/util/WatermarkUtil;->getDateTime(Ljava/lang/String;)Ljava/lang/String;
@@ -5468,7 +4961,6 @@
 
     sput-object v4, Lcom/sec/android/app/camera/util/WatermarkUtil;->mCurrentTime:Ljava/lang/String;
 
-    .line 432
     const-string v4, "yyyy-MM-dd"
 
     invoke-static {v4}, Lcom/sec/android/app/camera/util/WatermarkUtil;->getDateTime(Ljava/lang/String;)Ljava/lang/String;
@@ -5477,7 +4969,6 @@
 
     sput-object v4, Lcom/sec/android/app/camera/util/WatermarkUtil;->mCurrentDate:Ljava/lang/String;
 
-    .line 433
     const-string v4, "yyyy"
 
     invoke-static {v4}, Lcom/sec/android/app/camera/util/WatermarkUtil;->getDateTime(Ljava/lang/String;)Ljava/lang/String;
@@ -5490,15 +4981,12 @@
 
     sput v4, Lcom/sec/android/app/camera/util/WatermarkUtil;->mCurrentYear:I
 
-    .line 434
     const-string v4, "MM-dd"
 
     invoke-static {v4}, Lcom/sec/android/app/camera/util/WatermarkUtil;->getDateTime(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 435
-    .local v2, "mCurrentDay":Ljava/lang/String;
     sget-object v4, Lcom/sec/android/app/camera/util/WatermarkUtil;->mCurrentDate:Ljava/lang/String;
 
     invoke-static {v4}, Lcom/sec/android/app/camera/util/WatermarkUtil;->getWeek(Ljava/lang/String;)Ljava/lang/String;
@@ -5507,25 +4995,20 @@
 
     sput-object v4, Lcom/sec/android/app/camera/util/WatermarkUtil;->mWeekday:Ljava/lang/String;
 
-    .line 436
     sget v4, Lcom/sec/android/app/camera/util/WatermarkUtil;->mCurrentYear:I
 
     invoke-static {v4}, Lcom/sec/android/app/camera/util/WatermarkUtil;->getTermsMap(I)V
 
-    .line 437
     invoke-static {v2}, Lcom/sec/android/app/camera/util/WatermarkUtil;->getTerms(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     sput-object v4, Lcom/sec/android/app/camera/util/WatermarkUtil;->mSolarTerm:Ljava/lang/String;
 
-    .line 438
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v3
 
-    .line 440
-    .local v3, "today":Ljava/util/Calendar;
     :try_start_0
     sget-object v4, Lcom/sec/android/app/camera/util/WatermarkUtil;->mCurrentDate:Ljava/lang/String;
 
@@ -5537,33 +5020,26 @@
     :try_end_0
     .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 444
     :goto_0
     invoke-static {v3}, Lcom/sec/android/app/camera/util/WatermarkUtil;->convertLunar(Ljava/util/Calendar;)V
 
-    .line 445
     invoke-static {}, Lcom/sec/android/app/camera/util/WatermarkUtil;->getString()Ljava/lang/String;
 
     move-result-object v4
 
     sput-object v4, Lcom/sec/android/app/camera/util/WatermarkUtil;->mLunarDate:Ljava/lang/String;
 
-    .line 446
     invoke-static {}, Lcom/sec/android/app/camera/util/WatermarkUtil;->cyclical()Ljava/lang/String;
 
     move-result-object v4
 
     sput-object v4, Lcom/sec/android/app/camera/util/WatermarkUtil;->mLunarYear:Ljava/lang/String;
 
-    .line 447
     return-void
 
-    .line 441
     :catch_0
     move-exception v1
 
-    .line 442
-    .local v1, "e":Ljava/text/ParseException;
     invoke-virtual {v1}, Ljava/text/ParseException;->printStackTrace()V
 
     goto :goto_0
@@ -5571,45 +5047,34 @@
 
 .method public static initWeather(Landroid/content/Context;)V
     .locals 1
-    .param p0, "context"    # Landroid/content/Context;
 
-    .prologue
-    .line 450
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mWeatherInfo:Lcom/sec/android/app/camera/util/WatermarkUtil$WeatherInfo;
 
     if-nez v0, :cond_0
 
-    .line 451
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$WeatherInfo;
 
     invoke-direct {v0}, Lcom/sec/android/app/camera/util/WatermarkUtil$WeatherInfo;-><init>()V
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mWeatherInfo:Lcom/sec/android/app/camera/util/WatermarkUtil$WeatherInfo;
 
-    .line 453
     :cond_0
     invoke-static {p0}, Lcom/sec/android/app/camera/util/WatermarkUtil;->registerWeatherInfoReceiver(Landroid/content/Context;)V
 
-    .line 454
     invoke-static {p0}, Lcom/sec/android/app/camera/util/WatermarkUtil;->updateWeatherInfo(Landroid/content/Context;)V
 
-    .line 455
     return-void
 .end method
 
 .method private static final leapDays(I)I
     .locals 4
-    .param p0, "y"    # I
 
-    .prologue
-    .line 796
     invoke-static {p0}, Lcom/sec/android/app/camera/util/WatermarkUtil;->leapMonth(I)I
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 797
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->LUNAR_INFO:[J
 
     add-int/lit16 v1, p0, -0x76c
@@ -5626,20 +5091,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 798
     const/16 v0, 0x1e
 
-    .line 802
     :goto_0
     return v0
 
-    .line 800
     :cond_0
     const/16 v0, 0x1d
 
     goto :goto_0
 
-    .line 802
     :cond_1
     const/4 v0, 0x0
 
@@ -5648,10 +5109,7 @@
 
 .method private static final leapMonth(I)I
     .locals 4
-    .param p0, "y"    # I
 
-    .prologue
-    .line 806
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->LUNAR_INFO:[J
 
     add-int/lit16 v1, p0, -0x76c
@@ -5669,11 +5127,7 @@
 
 .method private static final monthDays(II)I
     .locals 4
-    .param p0, "y"    # I
-    .param p1, "m"    # I
 
-    .prologue
-    .line 810
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->LUNAR_INFO:[J
 
     add-int/lit16 v1, p0, -0x76c
@@ -5694,10 +5148,8 @@
 
     if-nez v0, :cond_0
 
-    .line 811
     const/16 v0, 0x1d
 
-    .line 813
     :goto_0
     return v0
 
@@ -5709,137 +5161,104 @@
 
 .method private static registerWeatherInfoReceiver(Landroid/content/Context;)V
     .locals 3
-    .param p0, "context"    # Landroid/content/Context;
 
-    .prologue
-    .line 817
     const-string v1, "WatermarkUtil"
 
     const-string v2, "registerWeatherInfoReceiver"
 
     invoke-static {v1, v2}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 818
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 819
-    .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "com.sec.android.widgetapp.ap.accuweatherdaemon.action.CHANE_SETTING"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 820
     const-string v1, "com.sec.android.widgetapp.ap.accuweatherdaemon.action.AUTO_REFRESH"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 821
     const-string v1, "com.sec.android.widgetapp.ap.accuweatherdaemon.action.CHANGE_WEATHER_DATA"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 822
     const-string v1, "com.sec.android.widgetapp.ap.accuweatherdaemon.action.WEATHER_DATE_SYNC"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 823
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 824
     invoke-static {p0}, Lcom/sec/android/app/camera/util/WatermarkUtil;->requestWeatherDataSync(Landroid/content/Context;)V
 
-    .line 825
     return-void
 .end method
 
 .method private static requestWeatherDataSync(Landroid/content/Context;)V
     .locals 3
-    .param p0, "context"    # Landroid/content/Context;
 
-    .prologue
-    .line 828
     const-string v1, "WatermarkUtil"
 
     const-string v2, "requestWeatherDataSync"
 
     invoke-static {v1, v2}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 829
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.sec.android.widgetapp.ap.accuweatherdaemon.action.CURRENT_LOCATION_WEATHER_DATA"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 830
-    .local v0, "weatherTrigger":Landroid/content/Intent;
     const-string v1, "START"
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 831
     const-string v1, "PACKAGE"
 
     const-string v2, "com.sec.android.app.camera"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 832
     const-string v1, "CP"
 
     const-string v2, "Accuweather"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 833
     invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 834
     return-void
 .end method
 
 .method public static saveBitmapFile(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Bitmap;)Z
     .locals 10
-    .param p0, "directory"    # Ljava/lang/String;
-    .param p1, "fileName"    # Ljava/lang/String;
-    .param p2, "source"    # Landroid/graphics/Bitmap;
 
-    .prologue
     const/4 v6, 0x0
 
-    .line 458
     const/4 v4, 0x0
 
-    .line 460
-    .local v4, "outputStream":Ljava/io/OutputStream;
     :try_start_0
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 461
-    .local v0, "cameraDir":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v7
 
     if-nez v7, :cond_1
 
-    .line 462
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     move-result v7
 
     if-nez v7, :cond_1
 
-    .line 463
     const-string v7, "WatermarkUtil"
 
     const-string v8, "make directory is failed"
@@ -5849,28 +5268,20 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 475
     if-eqz v4, :cond_0
 
-    .line 476
     :try_start_1
     invoke-virtual {v4}, Ljava/io/OutputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 481
-    .end local v0    # "cameraDir":Ljava/io/File;
     :cond_0
     :goto_0
     return v6
 
-    .line 477
-    .restart local v0    # "cameraDir":Ljava/io/File;
     :catch_0
     move-exception v1
 
-    .line 478
-    .local v1, "e":Ljava/io/IOException;
     const-string v7, "WatermarkUtil"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -5899,16 +5310,12 @@
 
     goto :goto_0
 
-    .line 467
-    .end local v1    # "e":Ljava/io/IOException;
     :cond_1
     :try_start_2
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, p0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 468
-    .local v3, "file":Ljava/io/File;
     new-instance v5, Ljava/io/FileOutputStream;
 
     invoke-direct {v5, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
@@ -5916,9 +5323,6 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 469
-    .end local v4    # "outputStream":Ljava/io/OutputStream;
-    .local v5, "outputStream":Ljava/io/OutputStream;
     :try_start_3
     sget-object v7, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -5929,34 +5333,24 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_3 .. :try_end_3} :catch_5
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 475
     if-eqz v5, :cond_2
 
-    .line 476
     :try_start_4
     invoke-virtual {v5}, Ljava/io/OutputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 481
     :cond_2
     :goto_1
     const/4 v6, 0x1
 
     move-object v4, v5
 
-    .end local v5    # "outputStream":Ljava/io/OutputStream;
-    .restart local v4    # "outputStream":Ljava/io/OutputStream;
     goto :goto_0
 
-    .line 477
-    .end local v4    # "outputStream":Ljava/io/OutputStream;
-    .restart local v5    # "outputStream":Ljava/io/OutputStream;
     :catch_1
     move-exception v1
 
-    .line 478
-    .restart local v1    # "e":Ljava/io/IOException;
     const-string v6, "WatermarkUtil"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -5985,17 +5379,9 @@
 
     goto :goto_1
 
-    .line 470
-    .end local v0    # "cameraDir":Ljava/io/File;
-    .end local v1    # "e":Ljava/io/IOException;
-    .end local v3    # "file":Ljava/io/File;
-    .end local v5    # "outputStream":Ljava/io/OutputStream;
-    .restart local v4    # "outputStream":Ljava/io/OutputStream;
     :catch_2
     move-exception v2
 
-    .line 471
-    .local v2, "ex":Ljava/io/FileNotFoundException;
     :goto_2
     :try_start_5
     const-string v7, "WatermarkUtil"
@@ -6004,10 +5390,8 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 475
     if-eqz v4, :cond_0
 
-    .line 476
     :try_start_6
     invoke-virtual {v4}, Ljava/io/OutputStream;->close()V
     :try_end_6
@@ -6015,12 +5399,9 @@
 
     goto :goto_0
 
-    .line 477
     :catch_3
     move-exception v1
 
-    .line 478
-    .restart local v1    # "e":Ljava/io/IOException;
     const-string v7, "WatermarkUtil"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -6049,33 +5430,24 @@
 
     goto :goto_0
 
-    .line 474
-    .end local v1    # "e":Ljava/io/IOException;
-    .end local v2    # "ex":Ljava/io/FileNotFoundException;
     :catchall_0
     move-exception v6
 
-    .line 475
     :goto_3
     if-eqz v4, :cond_3
 
-    .line 476
     :try_start_7
     invoke-virtual {v4}, Ljava/io/OutputStream;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_4
 
-    .line 479
     :cond_3
     :goto_4
     throw v6
 
-    .line 477
     :catch_4
     move-exception v1
 
-    .line 478
-    .restart local v1    # "e":Ljava/io/IOException;
     const-string v7, "WatermarkUtil"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -6104,56 +5476,36 @@
 
     goto :goto_4
 
-    .line 474
-    .end local v1    # "e":Ljava/io/IOException;
-    .end local v4    # "outputStream":Ljava/io/OutputStream;
-    .restart local v0    # "cameraDir":Ljava/io/File;
-    .restart local v3    # "file":Ljava/io/File;
-    .restart local v5    # "outputStream":Ljava/io/OutputStream;
     :catchall_1
     move-exception v6
 
     move-object v4, v5
 
-    .end local v5    # "outputStream":Ljava/io/OutputStream;
-    .restart local v4    # "outputStream":Ljava/io/OutputStream;
     goto :goto_3
 
-    .line 470
-    .end local v4    # "outputStream":Ljava/io/OutputStream;
-    .restart local v5    # "outputStream":Ljava/io/OutputStream;
     :catch_5
     move-exception v2
 
     move-object v4, v5
 
-    .end local v5    # "outputStream":Ljava/io/OutputStream;
-    .restart local v4    # "outputStream":Ljava/io/OutputStream;
     goto :goto_2
 .end method
 
 .method private static strToDate(Ljava/lang/String;)Ljava/util/Date;
     .locals 3
-    .param p0, "strDate"    # Ljava/lang/String;
 
-    .prologue
-    .line 837
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v2, "yyyy-MM-dd"
 
     invoke-direct {v0, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 838
-    .local v0, "formatter":Ljava/text/SimpleDateFormat;
     new-instance v1, Ljava/text/ParsePosition;
 
     const/4 v2, 0x0
 
     invoke-direct {v1, v2}, Ljava/text/ParsePosition;-><init>(I)V
 
-    .line 839
-    .local v1, "pos":Ljava/text/ParsePosition;
     invoke-virtual {v0, p0, v1}, Ljava/text/SimpleDateFormat;->parse(Ljava/lang/String;Ljava/text/ParsePosition;)Ljava/util/Date;
 
     move-result-object v2
@@ -6163,48 +5515,33 @@
 
 .method public static unregisterWeatherInfoReceiver(Landroid/content/Context;)V
     .locals 1
-    .param p0, "context"    # Landroid/content/Context;
 
-    .prologue
-    .line 485
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 486
     return-void
 .end method
 
 .method private static updateWeatherInfo(Landroid/content/Context;)V
     .locals 9
-    .param p0, "context"    # Landroid/content/Context;
 
-    .prologue
-    .line 843
     const-string v1, "WatermarkUtil"
 
     const-string v2, "updateWeatherInfo"
 
     invoke-static {v1, v2}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 844
     const/16 v8, 0x63
 
-    .line 846
-    .local v8, "weatherIconNum":I
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 848
-    .local v0, "cr":Landroid/content/ContentResolver;
     if-eqz v0, :cond_1
 
-    .line 849
     const/4 v6, 0x0
 
-    .line 851
-    .local v6, "cursor":Landroid/database/Cursor;
     :try_start_0
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil;->MY_WEATHER_INFO_URI:Landroid/net/Uri;
 
@@ -6220,17 +5557,14 @@
 
     move-result-object v6
 
-    .line 852
     if-eqz v6, :cond_0
 
-    .line 853
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 854
     const-string v1, "COL_WEATHER_CONVERTED_ICON_NUM"
 
     invoke-interface {v6, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -6241,7 +5575,6 @@
 
     move-result v8
 
-    .line 855
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -6259,7 +5592,6 @@
 
     sput-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil;->mWeatherString:Ljava/lang/String;
 
-    .line 856
     const-string v1, "COL_WEATHER_AQI_INDEX"
 
     invoke-interface {v6, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -6272,7 +5604,6 @@
 
     sput-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil;->mPM25:Ljava/lang/String;
 
-    .line 857
     const-string v1, "COL_WEATHER_CURRENT_TEMP"
 
     invoke-interface {v6, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -6289,39 +5620,29 @@
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 867
     :cond_0
     if-eqz v6, :cond_1
 
-    .line 868
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 872
-    .end local v6    # "cursor":Landroid/database/Cursor;
     :cond_1
     :goto_0
     sget-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil;->mQueue:Lcom/android/volley/RequestQueue;
 
     if-nez v1, :cond_2
 
-    .line 873
     invoke-static {p0}, Lcom/android/volley/toolbox/Volley;->newRequestQueue(Landroid/content/Context;)Lcom/android/volley/RequestQueue;
 
     move-result-object v1
 
     sput-object v1, Lcom/sec/android/app/camera/util/WatermarkUtil;->mQueue:Lcom/android/volley/RequestQueue;
 
-    .line 875
     :cond_2
     return-void
 
-    .line 860
-    .restart local v6    # "cursor":Landroid/database/Cursor;
     :catch_0
     move-exception v7
 
-    .line 861
-    .local v7, "e":Ljava/lang/IllegalArgumentException;
     :try_start_1
     const-string v1, "WatermarkUtil"
 
@@ -6349,26 +5670,19 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->secE(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 862
     invoke-virtual {v7}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 867
     if-eqz v6, :cond_1
 
-    .line 868
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    .line 863
-    .end local v7    # "e":Ljava/lang/IllegalArgumentException;
     :catch_1
     move-exception v7
 
-    .line 864
-    .local v7, "e":Landroid/database/sqlite/SQLiteException;
     :try_start_2
     const-string v1, "WatermarkUtil"
 
@@ -6396,27 +5710,21 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->secE(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 865
     invoke-virtual {v7}, Landroid/database/sqlite/SQLiteException;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 867
     if-eqz v6, :cond_1
 
-    .line 868
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    .line 867
-    .end local v7    # "e":Landroid/database/sqlite/SQLiteException;
     :catchall_0
     move-exception v1
 
     if-eqz v6, :cond_3
 
-    .line 868
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     :cond_3
@@ -6425,23 +5733,16 @@
 
 .method private static final yearDays(I)I
     .locals 6
-    .param p0, "y"    # I
 
-    .prologue
-    .line 878
     const/16 v1, 0x15c
 
-    .line 879
-    .local v1, "sum":I
     const v0, 0x8000
 
-    .local v0, "i":I
     :goto_0
     const/16 v2, 0x8
 
     if-le v0, v2, :cond_1
 
-    .line 880
     sget-object v2, Lcom/sec/android/app/camera/util/WatermarkUtil;->LUNAR_INFO:[J
 
     add-int/lit16 v3, p0, -0x76c
@@ -6458,16 +5759,13 @@
 
     if-eqz v2, :cond_0
 
-    .line 881
     add-int/lit8 v1, v1, 0x1
 
-    .line 879
     :cond_0
     shr-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 883
     :cond_1
     invoke-static {p0}, Lcom/sec/android/app/camera/util/WatermarkUtil;->leapDays(I)I
 

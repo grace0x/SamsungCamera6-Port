@@ -24,13 +24,10 @@
 .method constructor <init>(Lcom/samsung/android/glview/GLContext;)V
     .locals 1
 
-    .prologue
-    .line 330
     iput-object p1, p0, Lcom/samsung/android/glview/GLContext$6;->this$0:Lcom/samsung/android/glview/GLContext;
 
     invoke-direct {p0}, Landroid/view/View$AccessibilityDelegate;-><init>()V
 
-    .line 331
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/glview/GLContext$6;->mNodeProvider:Landroid/view/accessibility/AccessibilityNodeProvider;
@@ -42,15 +39,11 @@
 # virtual methods
 .method public getAccessibilityNodeProvider(Landroid/view/View;)Landroid/view/accessibility/AccessibilityNodeProvider;
     .locals 3
-    .param p1, "host"    # Landroid/view/View;
 
-    .prologue
-    .line 335
     iget-object v0, p0, Lcom/samsung/android/glview/GLContext$6;->mNodeProvider:Landroid/view/accessibility/AccessibilityNodeProvider;
 
     if-nez v0, :cond_0
 
-    .line 336
     new-instance v0, Lcom/samsung/android/glview/GLAccessibilityNodeProvider;
 
     iget-object v1, p0, Lcom/samsung/android/glview/GLContext$6;->this$0:Lcom/samsung/android/glview/GLContext;
@@ -66,7 +59,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/glview/GLContext$6;->mNodeProvider:Landroid/view/accessibility/AccessibilityNodeProvider;
 
-    .line 338
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/glview/GLContext$6;->mNodeProvider:Landroid/view/accessibility/AccessibilityNodeProvider;
 

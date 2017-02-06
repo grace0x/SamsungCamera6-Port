@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/shootingmode/Beauty;)V
     .locals 0
 
-    .prologue
-    .line 204
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/Beauty$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Beauty;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,12 +36,9 @@
 # virtual methods
 .method public onClick(Lcom/samsung/android/glview/GLView;)Z
     .locals 3
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 207
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/Beauty$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Beauty;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/Beauty;->mMenuManager:Lcom/sec/android/app/camera/interfaces/MenuManager;
@@ -55,7 +50,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/sec/android/app/camera/interfaces/MenuManager;->showMenu(IZ)Lcom/sec/android/app/camera/interfaces/MenuBase;
 
-    .line 208
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/Beauty$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Beauty;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/Beauty;->mBeautyLiteMenuButton:Lcom/samsung/android/glview/GLButton;
@@ -67,6 +61,5 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLButton;->setVisibility(I)V
 
-    .line 209
     return v2
 .end method

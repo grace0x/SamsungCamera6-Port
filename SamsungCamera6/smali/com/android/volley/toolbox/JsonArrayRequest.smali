@@ -17,8 +17,6 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Lcom/android/volley/Response$Listener;Lcom/android/volley/Response$ErrorListener;)V
     .locals 6
-    .param p1, "url"    # Ljava/lang/String;
-    .param p3, "errorListener"    # Lcom/android/volley/Response$ErrorListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -32,9 +30,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 42
-    .local p2, "listener":Lcom/android/volley/Response$Listener;, "Lcom/android/volley/Response$Listener<Lorg/json/JSONArray;>;"
     const/4 v1, 0x0
 
     const/4 v3, 0x0
@@ -49,7 +44,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/volley/toolbox/JsonRequest;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/android/volley/Response$Listener;Lcom/android/volley/Response$ErrorListener;)V
 
-    .line 43
     return-void
 .end method
 
@@ -57,7 +51,6 @@
 # virtual methods
 .method protected parseNetworkResponse(Lcom/android/volley/NetworkResponse;)Lcom/android/volley/Response;
     .locals 5
-    .param p1, "response"    # Lcom/android/volley/NetworkResponse;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -70,8 +63,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 48
     :try_start_0
     new-instance v2, Ljava/lang/String;
 
@@ -85,8 +76,6 @@
 
     invoke-direct {v2, v3, v4}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
 
-    .line 50
-    .local v2, "jsonString":Ljava/lang/String;
     new-instance v3, Lorg/json/JSONArray;
 
     invoke-direct {v3, v2}, Lorg/json/JSONArray;-><init>(Ljava/lang/String;)V
@@ -102,17 +91,12 @@
 
     move-result-object v3
 
-    .line 55
-    .end local v2    # "jsonString":Ljava/lang/String;
     :goto_0
     return-object v3
 
-    .line 52
     :catch_0
     move-exception v0
 
-    .line 53
-    .local v0, "e":Ljava/io/UnsupportedEncodingException;
     new-instance v3, Lcom/android/volley/ParseError;
 
     invoke-direct {v3, v0}, Lcom/android/volley/ParseError;-><init>(Ljava/lang/Throwable;)V
@@ -123,13 +107,9 @@
 
     goto :goto_0
 
-    .line 54
-    .end local v0    # "e":Ljava/io/UnsupportedEncodingException;
     :catch_1
     move-exception v1
 
-    .line 55
-    .local v1, "je":Lorg/json/JSONException;
     new-instance v3, Lcom/android/volley/ParseError;
 
     invoke-direct {v3, v1}, Lcom/android/volley/ParseError;-><init>(Ljava/lang/Throwable;)V

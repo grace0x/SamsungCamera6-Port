@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/ProSlider;)V
     .locals 0
 
-    .prologue
-    .line 1022
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ProSlider$19;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,16 +36,12 @@
 # virtual methods
 .method public onStepChanged(I)V
     .locals 3
-    .param p1, "step"    # I
 
-    .prologue
-    .line 1025
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$19;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     # setter for: Lcom/sec/android/app/camera/menu/ProSlider;->mValue:I
     invoke-static {v0, p1}, Lcom/sec/android/app/camera/menu/ProSlider;->access$102(Lcom/sec/android/app/camera/menu/ProSlider;I)I
 
-    .line 1026
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$19;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/ProSlider;->mProSliderValueSelectListener:Lcom/sec/android/app/camera/menu/ProSlider$ProSliderValueSelectListener;
@@ -56,12 +50,10 @@
 
     invoke-interface {v0, v1}, Lcom/sec/android/app/camera/menu/ProSlider$ProSliderValueSelectListener;->onManualFocusValueMenuSelect(I)V
 
-    .line 1027
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$19;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/ProSlider;->restartSliderMenuTimer()V
 
-    .line 1028
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$19;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     # invokes: Lcom/sec/android/app/camera/menu/ProSlider;->isTtsEnabled()Z
@@ -71,7 +63,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1029
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$19;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -115,7 +106,6 @@
     # invokes: Lcom/sec/android/app/camera/menu/ProSlider;->speakTtsString(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/menu/ProSlider;->access$600(Lcom/sec/android/app/camera/menu/ProSlider;Ljava/lang/String;)V
 
-    .line 1031
     :cond_0
     return-void
 .end method

@@ -21,16 +21,11 @@
 # direct methods
 .method public constructor <init>(Lcom/sec/android/app/camera/engine/CommonEngine;Landroid/os/Looper;)V
     .locals 0
-    .param p2, "looper"    # Landroid/os/Looper;
 
-    .prologue
-    .line 10222
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/CommonEngine$StateMessageHandler;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
-    .line 10223
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 10224
     return-void
 .end method
 
@@ -38,10 +33,7 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
-    .param p1, "msg"    # Landroid/os/Message;
 
-    .prologue
-    .line 10228
     const-string v0, "CommonEngine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -64,18 +56,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10229
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine$StateMessageHandler;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/engine/CommonEngine;->mCurrentState:Lcom/sec/android/app/camera/engine/AbstractCeState;
 
     if-nez v0, :cond_0
 
-    .line 10236
     :goto_0
     return-void
 
-    .line 10232
     :cond_0
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -83,14 +72,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 10233
     const-string v0, "Recording..."
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/sec/android/app/TraceWrapper;->asyncTraceBegin(Ljava/lang/String;I)V
 
-    .line 10235
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine$StateMessageHandler;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 

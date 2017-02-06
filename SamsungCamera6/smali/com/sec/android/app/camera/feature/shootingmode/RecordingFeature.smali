@@ -17,32 +17,24 @@
 # direct methods
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/ShootingModeFeature;)V
     .locals 2
-    .param p1, "previousShootingModeFeature"    # Lcom/sec/android/app/camera/interfaces/ShootingModeFeature;
 
-    .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/feature/shootingmode/RecordingFeature;->mPreviousShootingModeFeature:Lcom/sec/android/app/camera/interfaces/ShootingModeFeature;
 
-    .line 37
     if-nez p1, :cond_0
 
-    .line 38
     const-string v0, "RecordingFeature"
 
     const-string v1, "Error - previousShootingModeFeature is null"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 40
     :cond_0
     iput-object p1, p0, Lcom/sec/android/app/camera/feature/shootingmode/RecordingFeature;->mPreviousShootingModeFeature:Lcom/sec/android/app/camera/interfaces/ShootingModeFeature;
 
-    .line 41
     return-void
 .end method
 
@@ -51,8 +43,6 @@
 .method public getFixedBackCameraResolution()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 45
     const/4 v0, 0x0
 
     return-object v0
@@ -61,8 +51,6 @@
 .method public getFixedFrontCameraResolution()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 50
     const/4 v0, 0x0
 
     return-object v0
@@ -71,8 +59,6 @@
 .method public isContinuousAFSupported()Z
     .locals 1
 
-    .prologue
-    .line 60
     const/4 v0, 0x1
 
     return v0
@@ -81,8 +67,6 @@
 .method public isDivideAFAESupported()Z
     .locals 1
 
-    .prologue
-    .line 65
     const/4 v0, 0x0
 
     return v0
@@ -91,8 +75,6 @@
 .method public isEffectSupported()Z
     .locals 1
 
-    .prologue
-    .line 76
     iget-object v0, p0, Lcom/sec/android/app/camera/feature/shootingmode/RecordingFeature;->mPreviousShootingModeFeature:Lcom/sec/android/app/camera/interfaces/ShootingModeFeature;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/ShootingModeFeature;->isEffectSupported()Z
@@ -105,8 +87,6 @@
 .method public isExternalMemorySupported()Z
     .locals 1
 
-    .prologue
-    .line 87
     iget-object v0, p0, Lcom/sec/android/app/camera/feature/shootingmode/RecordingFeature;->mPreviousShootingModeFeature:Lcom/sec/android/app/camera/interfaces/ShootingModeFeature;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/ShootingModeFeature;->isExternalMemorySupported()Z
@@ -119,8 +99,6 @@
 .method public isFaceDetectionSupported()Z
     .locals 1
 
-    .prologue
-    .line 92
     const/4 v0, 0x1
 
     return v0
@@ -129,8 +107,6 @@
 .method public isFloatingCameraButtonSupported()Z
     .locals 1
 
-    .prologue
-    .line 55
     const/4 v0, 0x0
 
     return v0
@@ -139,8 +115,6 @@
 .method public isGestureControlSupported()Z
     .locals 1
 
-    .prologue
-    .line 97
     const/4 v0, 0x0
 
     return v0
@@ -149,8 +123,6 @@
 .method public isHandlingAudioFocus()Z
     .locals 1
 
-    .prologue
-    .line 102
     const/4 v0, 0x0
 
     return v0
@@ -159,8 +131,6 @@
 .method public isLowLightDetectionSupported()Z
     .locals 1
 
-    .prologue
-    .line 107
     const/4 v0, 0x0
 
     return v0
@@ -169,8 +139,6 @@
 .method public isMultiInstanceCameraSupported()Z
     .locals 1
 
-    .prologue
-    .line 118
     iget-object v0, p0, Lcom/sec/android/app/camera/feature/shootingmode/RecordingFeature;->mPreviousShootingModeFeature:Lcom/sec/android/app/camera/interfaces/ShootingModeFeature;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/ShootingModeFeature;->isMultiInstanceCameraSupported()Z
@@ -183,8 +151,6 @@
 .method public isNeedToLockAEAWB()Z
     .locals 1
 
-    .prologue
-    .line 123
     const/4 v0, 0x0
 
     return v0
@@ -193,8 +159,6 @@
 .method public isNeedToLockAWB()Z
     .locals 1
 
-    .prologue
-    .line 128
     const/4 v0, 0x0
 
     return v0
@@ -203,8 +167,6 @@
 .method public isObjectTrackingSupported()Z
     .locals 1
 
-    .prologue
-    .line 139
     iget-object v0, p0, Lcom/sec/android/app/camera/feature/shootingmode/RecordingFeature;->mPreviousShootingModeFeature:Lcom/sec/android/app/camera/interfaces/ShootingModeFeature;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/ShootingModeFeature;->isObjectTrackingSupported()Z
@@ -217,8 +179,6 @@
 .method public isSuperResolutionZoomSupported()Z
     .locals 1
 
-    .prologue
-    .line 144
     const/4 v0, 0x0
 
     return v0
@@ -227,8 +187,6 @@
 .method public isTouchAESupported()Z
     .locals 1
 
-    .prologue
-    .line 149
     const/4 v0, 0x1
 
     return v0
@@ -237,8 +195,6 @@
 .method public isTouchAFSupported()Z
     .locals 1
 
-    .prologue
-    .line 154
     const/4 v0, 0x1
 
     return v0
@@ -247,8 +203,6 @@
 .method public isTouchEVSupported()Z
     .locals 1
 
-    .prologue
-    .line 159
     const/4 v0, 0x1
 
     return v0
@@ -257,8 +211,6 @@
 .method public isUsingCamcorderPreviewOnly()Z
     .locals 1
 
-    .prologue
-    .line 170
     iget-object v0, p0, Lcom/sec/android/app/camera/feature/shootingmode/RecordingFeature;->mPreviousShootingModeFeature:Lcom/sec/android/app/camera/interfaces/ShootingModeFeature;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/ShootingModeFeature;->isUsingCamcorderPreviewOnly()Z
@@ -271,8 +223,6 @@
 .method public isUsingThumbnailPictureCallback()Z
     .locals 1
 
-    .prologue
-    .line 175
     const/4 v0, 0x0
 
     return v0
@@ -281,8 +231,6 @@
 .method public isWatermarkSupported()Z
     .locals 1
 
-    .prologue
-    .line 180
     const/4 v0, 0x0
 
     return v0
@@ -291,8 +239,6 @@
 .method public isZoomSupported()Z
     .locals 1
 
-    .prologue
-    .line 185
     const/4 v0, 0x1
 
     return v0

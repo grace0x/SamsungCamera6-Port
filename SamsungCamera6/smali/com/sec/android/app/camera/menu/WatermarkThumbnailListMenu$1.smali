@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;)V
     .locals 0
 
-    .prologue
-    .line 566
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +36,7 @@
 # virtual methods
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 2
-    .param p1, "arg0"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 569
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;->mNextList:Lcom/samsung/android/glview/GLGridList;
@@ -53,7 +48,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLGridList;->setVisibility(I)V
 
-    .line 570
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;->mList:Lcom/samsung/android/glview/GLGridList;
@@ -65,24 +59,17 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLGridList;->setVisibility(I)V
 
-    .line 571
     return-void
 .end method
 
 .method public onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 0
-    .param p1, "arg0"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 575
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 0
-    .param p1, "arg0"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 579
     return-void
 .end method

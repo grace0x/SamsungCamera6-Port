@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/widget/gl/ItemEmptyThumbnailButton;)V
     .locals 0
 
-    .prologue
-    .line 244
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/ItemEmptyThumbnailButton$2;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemEmptyThumbnailButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,11 +36,7 @@
 # virtual methods
 .method public onTouch(Lcom/samsung/android/glview/GLView;Landroid/view/MotionEvent;)Z
     .locals 2
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "event"    # Landroid/view/MotionEvent;
 
-    .prologue
-    .line 247
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ItemEmptyThumbnailButton$2;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemEmptyThumbnailButton;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/ItemEmptyThumbnailButton;->mTouchListener:Lcom/samsung/android/glview/GLView$TouchListener;
@@ -52,7 +46,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 248
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ItemEmptyThumbnailButton$2;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemEmptyThumbnailButton;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/ItemEmptyThumbnailButton;->mTouchListener:Lcom/samsung/android/glview/GLView$TouchListener;
@@ -66,7 +59,6 @@
 
     move-result v0
 
-    .line 250
     :goto_0
     return v0
 

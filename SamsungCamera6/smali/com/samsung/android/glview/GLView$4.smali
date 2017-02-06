@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/samsung/android/glview/GLView;)V
     .locals 0
 
-    .prologue
-    .line 1019
     iput-object p1, p0, Lcom/samsung/android/glview/GLView$4;->this$0:Lcom/samsung/android/glview/GLView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,8 +37,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 1022
     iget-object v0, p0, Lcom/samsung/android/glview/GLView$4;->this$0:Lcom/samsung/android/glview/GLView;
 
     iget-object v0, v0, Lcom/samsung/android/glview/GLView;->mAnimationEventListener:Lcom/samsung/android/glview/GLView$AnimationEventListener;
@@ -56,6 +52,5 @@
 
     invoke-interface {v0, v1, v2}, Lcom/samsung/android/glview/GLView$AnimationEventListener;->onAnimationEnd(Lcom/samsung/android/glview/GLView;Landroid/view/animation/Animation;)V
 
-    .line 1023
     return-void
 .end method

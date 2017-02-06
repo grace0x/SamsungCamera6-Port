@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/CameraDialog;)V
     .locals 0
 
-    .prologue
-    .line 634
     iput-object p1, p0, Lcom/sec/android/app/camera/CameraDialog$7;->this$0:Lcom/sec/android/app/camera/CameraDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 2
-    .param p1, "arg0"    # Landroid/view/View;
 
-    .prologue
-    .line 637
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraDialog$7;->this$0:Lcom/sec/android/app/camera/CameraDialog;
 
     const/16 v1, 0x1a0
@@ -49,6 +44,5 @@
     # invokes: Lcom/sec/android/app/camera/CameraDialog;->showCameraDialog(I)V
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/CameraDialog;->access$300(Lcom/sec/android/app/camera/CameraDialog;I)V
 
-    .line 638
     return-void
 .end method

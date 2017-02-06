@@ -165,17 +165,7 @@
 # direct methods
 .method protected constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/menu/MenuManagerImpl;ILcom/samsung/android/glview/GLViewGroup;Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;Lcom/sec/android/app/camera/menu/MenuResourceDepot;I)V
     .locals 27
-    .param p1, "cameraContext"    # Lcom/sec/android/app/camera/interfaces/CameraContext;
-    .param p2, "engine"    # Lcom/sec/android/app/camera/interfaces/Engine;
-    .param p3, "menuManager"    # Lcom/sec/android/app/camera/menu/MenuManagerImpl;
-    .param p4, "viewId"    # I
-    .param p5, "glParentView"    # Lcom/samsung/android/glview/GLViewGroup;
-    .param p6, "resourceData"    # Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;
-    .param p7, "menuResourceDepot"    # Lcom/sec/android/app/camera/menu/MenuResourceDepot;
-    .param p8, "zOrder"    # I
 
-    .prologue
-    .line 124
     const/4 v8, 0x0
 
     const/4 v9, 0x0
@@ -212,7 +202,6 @@
 
     invoke-direct/range {v2 .. v14}, Lcom/sec/android/app/camera/menu/AbstractMenu;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/menu/MenuManagerImpl;ILcom/samsung/android/glview/GLViewGroup;FFFFLcom/sec/android/app/camera/menu/MenuResourceDepot;IZ)V
 
-    .line 58
     invoke-static {}, Lcom/samsung/android/glview/GLContext;->getScreenWidthPixels()I
 
     move-result v2
@@ -221,7 +210,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SCREEN_WIDTH:I
 
-    .line 59
     invoke-static {}, Lcom/samsung/android/glview/GLContext;->getScreenHeightPixels()I
 
     move-result v2
@@ -230,7 +218,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SCREEN_HEIGHT:I
 
-    .line 60
     const v2, 0x7f090080
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -243,7 +230,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->LIST_ITEM_WIDTH:I
 
-    .line 61
     const v2, 0x7f090081
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -256,7 +242,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->LIST_MENU_EDIT_TYPE_BOTTOM_MARGIN:I
 
-    .line 62
     const v2, 0x7f090322
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -269,7 +254,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->MENU_BAR_LANDSCAPE_HEIGHT:I
 
-    .line 63
     const v2, 0x7f090325
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -282,7 +266,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->MENU_BAR_PORTRAIT_HEIGHT:I
 
-    .line 64
     const v2, 0x7f090324
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -295,7 +278,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->MENU_BAR_LANDSCAPE_RIGHT_MARGIN:I
 
-    .line 65
     const v2, 0x7f090323
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -308,7 +290,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->MENU_BAR_LANDSCAPE_LEFT_MARGIN:I
 
-    .line 66
     const v2, 0x7f090319
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -321,7 +302,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->BACK_BUTTON_POS_X:I
 
-    .line 67
     const v2, 0x7f09031a
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -334,7 +314,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->BACK_BUTTON_WIDTH:I
 
-    .line 68
     const v2, 0x7f090327
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -347,7 +326,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SAVE_BUTTON_LANDSCAPE_MARGIN:I
 
-    .line 69
     const v2, 0x7f090328
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -360,7 +338,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SAVE_BUTTON_PORTRAIT_MARGIN:I
 
-    .line 70
     const v2, 0x7f090326
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -373,7 +350,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->RESET_BUTTON_OFFSET:I
 
-    .line 71
     const v2, 0x7f09031b
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -386,7 +362,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->BUTTON_TEXT_FONT_SIZE:I
 
-    .line 72
     const v2, 0x7f0a0017
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getInteger(I)I
@@ -397,7 +372,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->BUTTON_TEXT_STROKE_WIDTH:I
 
-    .line 73
     const v2, 0x7f0c0028
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getColor(I)I
@@ -408,7 +382,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->BUTTON_TEXT_STROKE_COLOR:I
 
-    .line 74
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->MENU_BAR_PORTRAIT_HEIGHT:I
@@ -425,7 +398,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->BUTTON_TEXT_POSITION:I
 
-    .line 75
     const v2, 0x7f090087
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -438,7 +410,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SLIDE_WIDTH:I
 
-    .line 76
     const v2, 0x7f090084
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -451,7 +422,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SLIDE_HEIGHT:I
 
-    .line 77
     const v2, 0x7f09032a
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -464,7 +434,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SLIDE_POS_X:I
 
-    .line 78
     const v2, 0x7f090329
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -477,7 +446,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SLIDE_GROUP_WIDTH:I
 
-    .line 79
     const v2, 0x7f090086
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -490,7 +458,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SLIDE_GROUP_POS_X:I
 
-    .line 80
     const v2, 0x7f09032f
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -503,7 +470,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SLIDE_TOP_PADDING:I
 
-    .line 81
     const v2, 0x7f09032b
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -516,7 +482,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SLIDE_RIGHT_PADDING:I
 
-    .line 82
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SCREEN_HEIGHT:I
@@ -539,7 +504,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SLIDE_GROUP_POS_Y:I
 
-    .line 83
     const v2, 0x7f090085
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -552,7 +516,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SLIDE_WIDTH_INTERVAL:I
 
-    .line 84
     const v2, 0x7f090331
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -565,7 +528,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SLIDE_TOUCH_AREA_WIDTH:I
 
-    .line 85
     const v2, 0x7f090330
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -578,7 +540,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SLIDE_TOUCH_AREA_HEIGHT:I
 
-    .line 86
     const v2, 0x7f090083
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -591,7 +552,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SLIDE_CENTER_DIVIDER_WIDTH:I
 
-    .line 87
     const v2, 0x7f090082
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -604,7 +564,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SLIDE_CENTER_DIVIDER_HEIGHT:I
 
-    .line 88
     const v2, 0x7f09032d
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -617,7 +576,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SLIDE_TEXT_HEIGHT:I
 
-    .line 89
     const v2, 0x7f09032e
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -630,7 +588,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SLIDE_TEXT_TOP_MARGIN:I
 
-    .line 90
     const v2, 0x7f0a0017
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getInteger(I)I
@@ -641,7 +598,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SLIDE_TEXT_STROKE_WIDTH:I
 
-    .line 91
     const v2, 0x7f0c0028
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getColor(I)I
@@ -652,7 +608,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SLIDE_TEXT_STROKE_COLOR:I
 
-    .line 92
     const v2, 0x7f09032c
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -665,7 +620,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->SLIDE_FONT_SIZE:I
 
-    .line 93
     const v2, 0x7f0a0013
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getInteger(I)I
@@ -676,7 +630,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->PRESET_SLIDE_NUM_OF_STEP:I
 
-    .line 94
     const v2, 0x7f0a0014
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getInteger(I)I
@@ -687,7 +640,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->PRESET_SLIDE_VALUE_OFFSET:I
 
-    .line 95
     const v2, 0x7f0a0015
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getInteger(I)I
@@ -698,7 +650,6 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->TONE_SLIDE_NUM_OF_STEP:I
 
-    .line 96
     const v2, 0x7f0a0016
 
     invoke-static {v2}, Lcom/samsung/android/glview/GLContext;->getInteger(I)I
@@ -709,14 +660,12 @@
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->TONE_SLIDE_VALUE_OFFSET:I
 
-    .line 97
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mColorTuneSlideType:I
 
-    .line 126
     new-instance v2, Lcom/sec/android/app/camera/menu/ProColorTuneList;
 
     move-object/from16 v0, p0
@@ -761,7 +710,6 @@
 
     iput-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mList:Lcom/sec/android/app/camera/menu/ProColorTuneList;
 
-    .line 127
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mList:Lcom/sec/android/app/camera/menu/ProColorTuneList;
@@ -770,7 +718,6 @@
 
     invoke-virtual {v2, v0}, Lcom/sec/android/app/camera/menu/ProColorTuneList;->setOnProColorTuneListSelectListener(Lcom/sec/android/app/camera/menu/ProColorTuneList$ProColorTuneListSelectListener;)V
 
-    .line 128
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mList:Lcom/sec/android/app/camera/menu/ProColorTuneList;
@@ -779,7 +726,6 @@
 
     invoke-virtual {v2, v3}, Lcom/sec/android/app/camera/menu/ProColorTuneList;->setVisibility(I)V
 
-    .line 129
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mList:Lcom/sec/android/app/camera/menu/ProColorTuneList;
@@ -788,7 +734,6 @@
 
     invoke-virtual {v0, v2}, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 131
     new-instance v2, Lcom/samsung/android/glview/GLViewGroup;
 
     move-object/from16 v0, p0
@@ -821,7 +766,6 @@
 
     iput-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mMenuBarGroup:Lcom/samsung/android/glview/GLViewGroup;
 
-    .line 132
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mMenuBarGroup:Lcom/samsung/android/glview/GLViewGroup;
@@ -848,7 +792,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLViewGroup;->setAnimation(Landroid/view/animation/Animation;)V
 
-    .line 135
     new-instance v2, Lcom/samsung/android/glview/GLButton;
 
     move-object/from16 v0, p0
@@ -907,7 +850,6 @@
 
     iput-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mBackButton:Lcom/samsung/android/glview/GLButton;
 
-    .line 136
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mBackButton:Lcom/samsung/android/glview/GLButton;
@@ -928,7 +870,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLButton;->setTitle(Ljava/lang/String;)V
 
-    .line 137
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mBackButton:Lcom/samsung/android/glview/GLButton;
@@ -937,7 +878,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLButton;->setRotatable(Z)V
 
-    .line 138
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mBackButton:Lcom/samsung/android/glview/GLButton;
@@ -946,7 +886,6 @@
 
     invoke-virtual {v2, v0}, Lcom/samsung/android/glview/GLButton;->setClickListener(Lcom/samsung/android/glview/GLView$ClickListener;)V
 
-    .line 140
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -965,8 +904,6 @@
 
     move-result-object v24
 
-    .line 141
-    .local v24, "resetText":Ljava/lang/String;
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -985,8 +922,6 @@
 
     move-result-object v26
 
-    .line 142
-    .local v26, "saveText":Ljava/lang/String;
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->BUTTON_TEXT_FONT_SIZE:I
@@ -1017,8 +952,6 @@
 
     move-result v25
 
-    .line 143
-    .local v25, "resetTextWidth":F
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->BUTTON_TEXT_FONT_SIZE:I
@@ -1049,8 +982,6 @@
 
     move-result v6
 
-    .line 145
-    .local v6, "saveTextWidth":F
     new-instance v2, Lcom/samsung/android/glview/GLButton;
 
     move-object/from16 v0, p0
@@ -1097,7 +1028,6 @@
 
     iput-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSaveButton:Lcom/samsung/android/glview/GLButton;
 
-    .line 146
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSaveButton:Lcom/samsung/android/glview/GLButton;
@@ -1134,7 +1064,6 @@
 
     invoke-virtual {v2, v0, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setText(Ljava/lang/String;FIZ)V
 
-    .line 147
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSaveButton:Lcom/samsung/android/glview/GLButton;
@@ -1145,7 +1074,6 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/samsung/android/glview/GLButton;->setTextAlign(II)V
 
-    .line 148
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSaveButton:Lcom/samsung/android/glview/GLButton;
@@ -1164,7 +1092,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setStroke(ZFI)V
 
-    .line 149
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSaveButton:Lcom/samsung/android/glview/GLButton;
@@ -1173,7 +1100,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLButton;->setRotatable(Z)V
 
-    .line 150
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSaveButton:Lcom/samsung/android/glview/GLButton;
@@ -1182,7 +1108,6 @@
 
     invoke-virtual {v2, v0}, Lcom/samsung/android/glview/GLButton;->setClickListener(Lcom/samsung/android/glview/GLView$ClickListener;)V
 
-    .line 151
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSaveButton:Lcom/samsung/android/glview/GLButton;
@@ -1191,7 +1116,6 @@
 
     invoke-virtual {v2, v0}, Lcom/samsung/android/glview/GLButton;->setOrientationChangeListener(Lcom/samsung/android/glview/GLView$OrientationChangeListener;)V
 
-    .line 153
     new-instance v7, Lcom/samsung/android/glview/GLButton;
 
     move-object/from16 v0, p0
@@ -1244,7 +1168,6 @@
 
     iput-object v7, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
 
-    .line 155
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
@@ -1281,7 +1204,6 @@
 
     invoke-virtual {v2, v0, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setText(Ljava/lang/String;FIZ)V
 
-    .line 156
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
@@ -1292,7 +1214,6 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/samsung/android/glview/GLButton;->setTextAlign(II)V
 
-    .line 157
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
@@ -1311,7 +1232,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setStroke(ZFI)V
 
-    .line 158
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
@@ -1320,7 +1240,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLButton;->setRotatable(Z)V
 
-    .line 159
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
@@ -1329,7 +1248,6 @@
 
     invoke-virtual {v2, v0}, Lcom/samsung/android/glview/GLButton;->setClickListener(Lcom/samsung/android/glview/GLView$ClickListener;)V
 
-    .line 160
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
@@ -1338,14 +1256,12 @@
 
     invoke-virtual {v2, v0}, Lcom/samsung/android/glview/GLButton;->setOrientationChangeListener(Lcom/samsung/android/glview/GLView$OrientationChangeListener;)V
 
-    .line 162
     invoke-static {}, Lcom/sec/android/app/camera/util/Util;->isLocaleRTL()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 163
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mBackButton:Lcom/samsung/android/glview/GLButton;
@@ -1360,7 +1276,6 @@
 
     invoke-virtual {v2, v3, v4, v5, v7}, Lcom/samsung/android/glview/GLButton;->setButtonResources(IIII)V
 
-    .line 164
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSaveButton:Lcom/samsung/android/glview/GLButton;
@@ -1371,7 +1286,6 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/samsung/android/glview/GLButton;->setTextAlign(II)V
 
-    .line 165
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
@@ -1382,7 +1296,6 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/samsung/android/glview/GLButton;->setTextAlign(II)V
 
-    .line 167
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mBackButton:Lcom/samsung/android/glview/GLButton;
@@ -1431,7 +1344,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 168
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mBackButton:Lcom/samsung/android/glview/GLButton;
@@ -1474,7 +1386,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 169
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mBackButton:Lcom/samsung/android/glview/GLButton;
@@ -1517,7 +1428,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 170
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mBackButton:Lcom/samsung/android/glview/GLButton;
@@ -1554,7 +1464,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 172
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
@@ -1581,7 +1490,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 173
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
@@ -1612,7 +1520,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 174
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
@@ -1649,7 +1556,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 175
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
@@ -1682,7 +1588,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 177
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSaveButton:Lcom/samsung/android/glview/GLButton;
@@ -1699,7 +1604,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 178
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSaveButton:Lcom/samsung/android/glview/GLButton;
@@ -1720,7 +1624,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 179
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSaveButton:Lcom/samsung/android/glview/GLButton;
@@ -1747,7 +1650,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 180
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSaveButton:Lcom/samsung/android/glview/GLButton;
@@ -1770,7 +1672,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 201
     :goto_0
     move-object/from16 v0, p0
 
@@ -1782,7 +1683,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLViewGroup;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 202
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mMenuBarGroup:Lcom/samsung/android/glview/GLViewGroup;
@@ -1793,7 +1693,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLViewGroup;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 203
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mMenuBarGroup:Lcom/samsung/android/glview/GLViewGroup;
@@ -1804,7 +1703,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLViewGroup;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 205
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mMenuBarGroup:Lcom/samsung/android/glview/GLViewGroup;
@@ -1813,7 +1711,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLViewGroup;->setVisibility(I)V
 
-    .line 206
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mMenuBarGroup:Lcom/samsung/android/glview/GLViewGroup;
@@ -1822,7 +1719,6 @@
 
     invoke-virtual {v0, v2}, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 208
     const/4 v2, 0x6
 
     new-array v2, v2, [Lcom/samsung/android/glview/GLViewGroup;
@@ -1831,7 +1727,6 @@
 
     iput-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSliderGroup:[Lcom/samsung/android/glview/GLViewGroup;
 
-    .line 209
     const/4 v2, 0x6
 
     new-array v2, v2, [Lcom/samsung/android/glview/GLSlider;
@@ -1840,7 +1735,6 @@
 
     iput-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSlider:[Lcom/samsung/android/glview/GLSlider;
 
-    .line 210
     const/4 v2, 0x6
 
     new-array v2, v2, [Lcom/samsung/android/glview/GLViewGroup;
@@ -1849,7 +1743,6 @@
 
     iput-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSliderGroup:[Lcom/samsung/android/glview/GLViewGroup;
 
-    .line 211
     const/4 v2, 0x6
 
     new-array v2, v2, [Lcom/samsung/android/glview/GLSlider;
@@ -1858,7 +1751,6 @@
 
     iput-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSlider:[Lcom/samsung/android/glview/GLSlider;
 
-    .line 212
     const/4 v2, 0x6
 
     new-array v2, v2, [Lcom/samsung/android/glview/GLText;
@@ -1867,7 +1759,6 @@
 
     iput-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSliderText:[Lcom/samsung/android/glview/GLText;
 
-    .line 213
     const/4 v2, 0x6
 
     new-array v2, v2, [Ljava/lang/String;
@@ -1876,7 +1767,6 @@
 
     iput-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mText:[Ljava/lang/String;
 
-    .line 215
     const/4 v2, 0x6
 
     new-array v0, v2, [Ljava/lang/String;
@@ -1991,8 +1881,6 @@
 
     aput-object v3, v23, v2
 
-    .line 216
-    .local v23, "mText":[Ljava/lang/String;
     const/4 v2, 0x6
 
     new-array v0, v2, [Ljava/lang/String;
@@ -2107,8 +1995,6 @@
 
     aput-object v3, v22, v2
 
-    .line 218
-    .local v22, "mContentDescription":[Ljava/lang/String;
     new-instance v7, Lcom/samsung/android/glview/GLViewGroup;
 
     move-object/from16 v0, p0
@@ -2153,7 +2039,6 @@
 
     iput-object v7, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSliderViewGroup:Lcom/samsung/android/glview/GLViewGroup;
 
-    .line 219
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSliderViewGroup:Lcom/samsung/android/glview/GLViewGroup;
@@ -2162,7 +2047,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLViewGroup;->setVisibility(I)V
 
-    .line 221
     new-instance v7, Lcom/samsung/android/glview/GLViewGroup;
 
     move-object/from16 v0, p0
@@ -2207,7 +2091,6 @@
 
     iput-object v7, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSliderViewGroup:Lcom/samsung/android/glview/GLViewGroup;
 
-    .line 222
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSliderViewGroup:Lcom/samsung/android/glview/GLViewGroup;
@@ -2216,10 +2099,8 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLViewGroup;->setVisibility(I)V
 
-    .line 224
     const/16 v21, 0x0
 
-    .local v21, "i":I
     :goto_1
     const/4 v2, 0x6
 
@@ -2227,7 +2108,6 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 226
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSliderGroup:[Lcom/samsung/android/glview/GLViewGroup;
@@ -2298,7 +2178,6 @@
 
     aput-object v7, v2, v21
 
-    .line 227
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSlider:[Lcom/samsung/android/glview/GLSlider;
@@ -2349,7 +2228,6 @@
 
     aput-object v7, v2, v21
 
-    .line 228
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSlider:[Lcom/samsung/android/glview/GLSlider;
@@ -2396,7 +2274,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLSlider;->setTitle(Ljava/lang/String;)V
 
-    .line 229
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSlider:[Lcom/samsung/android/glview/GLSlider;
@@ -2409,7 +2286,6 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/samsung/android/glview/GLSlider;->setGaugeMarker(II)V
 
-    .line 230
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSlider:[Lcom/samsung/android/glview/GLSlider;
@@ -2422,7 +2298,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLSlider;->setGaugeZeroStep(I)V
 
-    .line 231
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSlider:[Lcom/samsung/android/glview/GLSlider;
@@ -2435,7 +2310,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 232
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSlider:[Lcom/samsung/android/glview/GLSlider;
@@ -2456,7 +2330,6 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/samsung/android/glview/GLSlider;->expandTouchAreaFromCenter(FF)V
 
-    .line 233
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSlider:[Lcom/samsung/android/glview/GLSlider;
@@ -2467,14 +2340,12 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLSlider;->setClickable(Z)V
 
-    .line 234
     move-object/from16 v0, p0
 
     move/from16 v1, v21
 
     invoke-direct {v0, v1}, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->setPresetSliderListener(I)V
 
-    .line 236
     new-instance v7, Lcom/samsung/android/glview/GLNinePatch;
 
     move-object/from16 v0, p0
@@ -2547,7 +2418,6 @@
 
     iput-object v7, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSliderCenter:Lcom/samsung/android/glview/GLView;
 
-    .line 239
     aget-object v2, v23, v21
 
     move-object/from16 v0, p0
@@ -2564,8 +2434,6 @@
 
     move-result v11
 
-    .line 240
-    .local v11, "sliderTextWidth":F
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSliderText:[Lcom/samsung/android/glview/GLText;
@@ -2610,7 +2478,6 @@
 
     aput-object v7, v2, v21
 
-    .line 241
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSliderText:[Lcom/samsung/android/glview/GLText;
@@ -2669,7 +2536,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLText;->setLeftTop(IFF)V
 
-    .line 242
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSliderText:[Lcom/samsung/android/glview/GLText;
@@ -2718,7 +2584,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLText;->setLeftTop(IFF)V
 
-    .line 243
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSliderText:[Lcom/samsung/android/glview/GLText;
@@ -2771,14 +2636,12 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLText;->setLeftTop(IFF)V
 
-    .line 244
     invoke-static {}, Lcom/sec/android/app/camera/util/Util;->isLocaleRTL()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 245
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSliderText:[Lcom/samsung/android/glview/GLText;
@@ -2813,7 +2676,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLText;->setLeftTop(IFF)V
 
-    .line 249
     :goto_2
     move-object/from16 v0, p0
 
@@ -2825,7 +2687,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLText;->setRotatable(Z)V
 
-    .line 250
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSliderText:[Lcom/samsung/android/glview/GLText;
@@ -2838,7 +2699,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLText;->setTextFont(Landroid/graphics/Typeface;)V
 
-    .line 251
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSliderText:[Lcom/samsung/android/glview/GLText;
@@ -2859,7 +2719,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLText;->setStroke(ZFI)V
 
-    .line 252
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSliderText:[Lcom/samsung/android/glview/GLText;
@@ -2870,7 +2729,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLText;->setBypassTouch(Z)V
 
-    .line 254
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSliderGroup:[Lcom/samsung/android/glview/GLViewGroup;
@@ -2883,7 +2741,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLViewGroup;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 255
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSliderGroup:[Lcom/samsung/android/glview/GLViewGroup;
@@ -2898,7 +2755,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLViewGroup;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 256
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSliderViewGroup:Lcom/samsung/android/glview/GLViewGroup;
@@ -2911,7 +2767,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLViewGroup;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 257
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSliderViewGroup:Lcom/samsung/android/glview/GLViewGroup;
@@ -2924,7 +2779,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLViewGroup;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 260
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSliderGroup:[Lcom/samsung/android/glview/GLViewGroup;
@@ -2999,7 +2853,6 @@
 
     aput-object v12, v2, v21
 
-    .line 261
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSlider:[Lcom/samsung/android/glview/GLSlider;
@@ -3056,7 +2909,6 @@
 
     aput-object v12, v2, v21
 
-    .line 262
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSlider:[Lcom/samsung/android/glview/GLSlider;
@@ -3103,7 +2955,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLSlider;->setTitle(Ljava/lang/String;)V
 
-    .line 263
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSlider:[Lcom/samsung/android/glview/GLSlider;
@@ -3116,7 +2967,6 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/samsung/android/glview/GLSlider;->setGaugeMarker(II)V
 
-    .line 264
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSlider:[Lcom/samsung/android/glview/GLSlider;
@@ -3129,7 +2979,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLSlider;->setGaugeZeroStep(I)V
 
-    .line 265
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSlider:[Lcom/samsung/android/glview/GLSlider;
@@ -3142,7 +2991,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 266
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSlider:[Lcom/samsung/android/glview/GLSlider;
@@ -3163,7 +3011,6 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/samsung/android/glview/GLSlider;->expandTouchAreaFromCenter(FF)V
 
-    .line 267
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSlider:[Lcom/samsung/android/glview/GLSlider;
@@ -3174,14 +3021,12 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLSlider;->setClickable(Z)V
 
-    .line 268
     move-object/from16 v0, p0
 
     move/from16 v1, v21
 
     invoke-direct {v0, v1}, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->setToneSliderListener(I)V
 
-    .line 270
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSliderGroup:[Lcom/samsung/android/glview/GLViewGroup;
@@ -3194,7 +3039,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLViewGroup;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 271
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSliderGroup:[Lcom/samsung/android/glview/GLViewGroup;
@@ -3209,7 +3053,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLViewGroup;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 272
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSliderViewGroup:Lcom/samsung/android/glview/GLViewGroup;
@@ -3222,7 +3065,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLViewGroup;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 273
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSliderViewGroup:Lcom/samsung/android/glview/GLViewGroup;
@@ -3235,16 +3077,10 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLViewGroup;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 224
     add-int/lit8 v21, v21, 0x1
 
     goto/16 :goto_1
 
-    .line 182
-    .end local v11    # "sliderTextWidth":F
-    .end local v21    # "i":I
-    .end local v22    # "mContentDescription":[Ljava/lang/String;
-    .end local v23    # "mText":[Ljava/lang/String;
     :cond_0
     move-object/from16 v0, p0
 
@@ -3256,7 +3092,6 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/samsung/android/glview/GLButton;->setTextAlign(II)V
 
-    .line 183
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
@@ -3267,7 +3102,6 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/samsung/android/glview/GLButton;->setTextAlign(II)V
 
-    .line 185
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mBackButton:Lcom/samsung/android/glview/GLButton;
@@ -3298,7 +3132,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 186
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mBackButton:Lcom/samsung/android/glview/GLButton;
@@ -3329,7 +3162,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 187
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mBackButton:Lcom/samsung/android/glview/GLButton;
@@ -3378,7 +3210,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 188
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mBackButton:Lcom/samsung/android/glview/GLButton;
@@ -3415,7 +3246,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 190
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSaveButton:Lcom/samsung/android/glview/GLButton;
@@ -3440,7 +3270,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 191
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSaveButton:Lcom/samsung/android/glview/GLButton;
@@ -3469,7 +3298,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 192
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSaveButton:Lcom/samsung/android/glview/GLButton;
@@ -3492,7 +3320,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 193
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSaveButton:Lcom/samsung/android/glview/GLButton;
@@ -3511,7 +3338,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 195
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
@@ -3540,7 +3366,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 196
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
@@ -3579,7 +3404,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 197
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
@@ -3612,7 +3436,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setLeftTop(IFF)V
 
-    .line 198
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
@@ -3643,11 +3466,6 @@
 
     goto/16 :goto_0
 
-    .line 247
-    .restart local v11    # "sliderTextWidth":F
-    .restart local v21    # "i":I
-    .restart local v22    # "mContentDescription":[Ljava/lang/String;
-    .restart local v23    # "mText":[Ljava/lang/String;
     :cond_1
     move-object/from16 v0, p0
 
@@ -3689,8 +3507,6 @@
 
     goto/16 :goto_2
 
-    .line 275
-    .end local v11    # "sliderTextWidth":F
     :cond_2
     invoke-virtual/range {p0 .. p0}, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->getMenuViewGroup()Lcom/samsung/android/glview/GLViewGroup;
 
@@ -3700,7 +3516,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLViewGroup;->setVisibility(I)V
 
-    .line 277
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSliderViewGroup:Lcom/samsung/android/glview/GLViewGroup;
@@ -3709,7 +3524,6 @@
 
     invoke-virtual {v0, v2}, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 278
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSliderViewGroup:Lcom/samsung/android/glview/GLViewGroup;
@@ -3718,7 +3532,6 @@
 
     invoke-virtual {v0, v2}, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 280
     invoke-static {}, Lcom/sec/android/app/camera/util/AnimationUtil;->getAlphaOnAnimation()Landroid/view/animation/Animation;
 
     move-result-object v2
@@ -3727,7 +3540,6 @@
 
     iput-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mShowAnimation:Landroid/view/animation/Animation;
 
-    .line 281
     invoke-static {}, Lcom/sec/android/app/camera/util/AnimationUtil;->getAlphaOffAnimation()Landroid/view/animation/Animation;
 
     move-result-object v2
@@ -3736,7 +3548,6 @@
 
     iput-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mHideAnimation:Landroid/view/animation/Animation;
 
-    .line 282
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mShowAnimation:Landroid/view/animation/Animation;
@@ -3745,7 +3556,6 @@
 
     invoke-virtual {v0, v2}, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->setShowAnimation(Landroid/view/animation/Animation;)V
 
-    .line 283
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mHideAnimation:Landroid/view/animation/Animation;
@@ -3754,16 +3564,12 @@
 
     invoke-virtual {v0, v2}, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->setHideAnimation(Landroid/view/animation/Animation;)V
 
-    .line 284
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;)I
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;
 
-    .prologue
-    .line 46
     iget v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->PRESET_SLIDE_VALUE_OFFSET:I
 
     return v0
@@ -3771,10 +3577,7 @@
 
 .method static synthetic access$100(Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;)Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu$ColorTuneSettingSliderBarListener;
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;
 
-    .prologue
-    .line 46
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mColorTuneSettingSliderBarListener:Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu$ColorTuneSettingSliderBarListener;
 
     return-object v0
@@ -3782,10 +3585,7 @@
 
 .method static synthetic access$200(Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;
 
-    .prologue
-    .line 46
     invoke-direct {p0}, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->isTtsEnabled()Z
 
     move-result v0
@@ -3795,10 +3595,7 @@
 
 .method static synthetic access$300(Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;)[Lcom/samsung/android/glview/GLSlider;
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;
 
-    .prologue
-    .line 46
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSlider:[Lcom/samsung/android/glview/GLSlider;
 
     return-object v0
@@ -3806,11 +3603,7 @@
 
 .method static synthetic access$400(Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;Ljava/lang/String;)V
     .locals 0
-    .param p0, "x0"    # Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;
-    .param p1, "x1"    # Ljava/lang/String;
 
-    .prologue
-    .line 46
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->speakTtsString(Ljava/lang/String;)V
 
     return-void
@@ -3818,10 +3611,7 @@
 
 .method static synthetic access$500(Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;)I
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;
 
-    .prologue
-    .line 46
     iget v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->TONE_SLIDE_VALUE_OFFSET:I
 
     return v0
@@ -3829,10 +3619,7 @@
 
 .method static synthetic access$600(Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;)[Lcom/samsung/android/glview/GLSlider;
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;
 
-    .prologue
-    .line 46
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSlider:[Lcom/samsung/android/glview/GLSlider;
 
     return-object v0
@@ -3841,8 +3628,6 @@
 .method private isTtsEnabled()Z
     .locals 1
 
-    .prologue
-    .line 498
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getGLContext()Lcom/samsung/android/glview/GLContext;
@@ -3896,10 +3681,7 @@
 
 .method private setPresetSliderListener(I)V
     .locals 2
-    .param p1, "position"    # I
 
-    .prologue
-    .line 503
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSlider:[Lcom/samsung/android/glview/GLSlider;
 
     aget-object v0, v0, p1
@@ -3910,16 +3692,12 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLSlider;->setSliderChangeListener(Lcom/samsung/android/glview/GLSlider$SliderChangeListener;)V
 
-    .line 542
     return-void
 .end method
 
 .method private setToneSliderListener(I)V
     .locals 2
-    .param p1, "position"    # I
 
-    .prologue
-    .line 545
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSlider:[Lcom/samsung/android/glview/GLSlider;
 
     aget-object v0, v0, p1
@@ -3930,16 +3708,12 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLSlider;->setSliderChangeListener(Lcom/samsung/android/glview/GLSlider$SliderChangeListener;)V
 
-    .line 584
     return-void
 .end method
 
 .method private speakTtsString(Ljava/lang/String;)V
     .locals 3
-    .param p1, "ttsString"    # Ljava/lang/String;
 
-    .prologue
-    .line 587
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getGLContext()Lcom/samsung/android/glview/GLContext;
@@ -3956,7 +3730,6 @@
 
     invoke-virtual {v0, p1, v1, v2}, Landroid/speech/tts/TextToSpeech;->speak(Ljava/lang/String;ILjava/util/HashMap;)I
 
-    .line 588
     return-void
 .end method
 
@@ -3965,20 +3738,14 @@
 .method public clear()V
     .locals 0
 
-    .prologue
-    .line 288
     invoke-super {p0}, Lcom/sec/android/app/camera/menu/AbstractMenu;->clear()V
 
-    .line 289
     return-void
 .end method
 
 .method protected onActivityTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
-    .param p1, "event"    # Landroid/view/MotionEvent;
 
-    .prologue
-    .line 405
     const/4 v0, 0x0
 
     return v0
@@ -3986,9 +3753,7 @@
 
 .method public onClick(Lcom/samsung/android/glview/GLView;)Z
     .locals 6
-    .param p1, "v"    # Lcom/samsung/android/glview/GLView;
 
-    .prologue
     const/4 v5, 0x4
 
     const/4 v4, 0x3
@@ -3999,7 +3764,6 @@
 
     const/4 v0, 0x1
 
-    .line 293
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mBackButton:Lcom/samsung/android/glview/GLButton;
 
     if-eqz v2, :cond_0
@@ -4012,19 +3776,15 @@
 
     if-eqz v2, :cond_0
 
-    .line 294
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mColorTuneSettingMenuBarListener:Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu$ColorTuneSettingMenuBarListener;
 
     invoke-interface {v1}, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu$ColorTuneSettingMenuBarListener;->onColorTuneSettingCancel()V
 
-    .line 295
     invoke-virtual {p0}, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->hideMenu()V
 
-    .line 320
     :goto_0
     return v0
 
-    .line 297
     :cond_0
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
 
@@ -4038,12 +3798,10 @@
 
     if-eqz v2, :cond_3
 
-    .line 298
     iget v2, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mColorTuneSlideType:I
 
     if-nez v2, :cond_2
 
-    .line 299
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSlider:[Lcom/samsung/android/glview/GLSlider;
 
     aget-object v1, v2, v1
@@ -4052,7 +3810,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 300
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSlider:[Lcom/samsung/android/glview/GLSlider;
 
     aget-object v1, v1, v0
@@ -4061,7 +3818,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 301
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSlider:[Lcom/samsung/android/glview/GLSlider;
 
     aget-object v1, v1, v3
@@ -4070,7 +3826,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 302
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSlider:[Lcom/samsung/android/glview/GLSlider;
 
     aget-object v1, v1, v4
@@ -4079,7 +3834,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 303
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSlider:[Lcom/samsung/android/glview/GLSlider;
 
     aget-object v1, v1, v5
@@ -4088,7 +3842,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 304
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSlider:[Lcom/samsung/android/glview/GLSlider;
 
     const/4 v2, 0x5
@@ -4099,7 +3852,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 313
     :cond_1
     :goto_1
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mColorTuneSettingMenuBarListener:Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu$ColorTuneSettingMenuBarListener;
@@ -4108,13 +3860,11 @@
 
     goto :goto_0
 
-    .line 305
     :cond_2
     iget v2, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mColorTuneSlideType:I
 
     if-ne v2, v0, :cond_1
 
-    .line 306
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSlider:[Lcom/samsung/android/glview/GLSlider;
 
     aget-object v1, v2, v1
@@ -4123,7 +3873,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 307
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSlider:[Lcom/samsung/android/glview/GLSlider;
 
     aget-object v1, v1, v0
@@ -4132,7 +3881,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 308
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSlider:[Lcom/samsung/android/glview/GLSlider;
 
     aget-object v1, v1, v3
@@ -4141,7 +3889,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 309
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSlider:[Lcom/samsung/android/glview/GLSlider;
 
     aget-object v1, v1, v4
@@ -4150,7 +3897,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 310
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSlider:[Lcom/samsung/android/glview/GLSlider;
 
     aget-object v1, v1, v5
@@ -4159,7 +3905,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 311
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSlider:[Lcom/samsung/android/glview/GLSlider;
 
     const/4 v2, 0x5
@@ -4172,7 +3917,6 @@
 
     goto :goto_1
 
-    .line 315
     :cond_3
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSaveButton:Lcom/samsung/android/glview/GLButton;
 
@@ -4186,12 +3930,10 @@
 
     if-eqz v2, :cond_4
 
-    .line 316
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mColorTuneSettingMenuBarListener:Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu$ColorTuneSettingMenuBarListener;
 
     invoke-interface {v1}, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu$ColorTuneSettingMenuBarListener;->onColorTuneSettingSave()V
 
-    .line 317
     invoke-virtual {p0}, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->hideMenu()V
 
     goto/16 :goto_0
@@ -4199,41 +3941,32 @@
     :cond_4
     move v0, v1
 
-    .line 320
     goto/16 :goto_0
 .end method
 
 .method protected onHide()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x4
 
-    .line 410
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSliderViewGroup:Lcom/samsung/android/glview/GLViewGroup;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLViewGroup;->setVisibility(I)V
 
-    .line 411
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSliderViewGroup:Lcom/samsung/android/glview/GLViewGroup;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLViewGroup;->setVisibility(I)V
 
-    .line 413
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->setPreviewTouchEnabled(Z)V
 
-    .line 414
     return-void
 .end method
 
 .method protected onHideAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 2
-    .param p1, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 418
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mMenuManager:Lcom/sec/android/app/camera/menu/MenuManagerImpl;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/MenuManagerImpl;->getBaseMenuController()Lcom/sec/android/app/camera/interfaces/BaseMenuController;
@@ -4244,7 +3977,6 @@
 
     invoke-interface {v0, v1}, Lcom/sec/android/app/camera/interfaces/BaseMenuController;->enableView(I)V
 
-    .line 419
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mMenuManager:Lcom/sec/android/app/camera/menu/MenuManagerImpl;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/MenuManagerImpl;->getBaseMenuController()Lcom/sec/android/app/camera/interfaces/BaseMenuController;
@@ -4255,29 +3987,20 @@
 
     invoke-interface {v0, v1}, Lcom/sec/android/app/camera/interfaces/BaseMenuController;->showView(I)V
 
-    .line 420
     return-void
 .end method
 
 .method protected onHideAnimationStart(Landroid/view/animation/Animation;)V
     .locals 0
-    .param p1, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 425
     return-void
 .end method
 
 .method protected onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 1
-    .param p1, "keyCode"    # I
-    .param p2, "event"    # Landroid/view/KeyEvent;
 
-    .prologue
-    .line 429
     sparse-switch p1, :sswitch_data_0
 
-    .line 439
     invoke-super {p0, p1, p2}, Lcom/sec/android/app/camera/menu/AbstractMenu;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v0
@@ -4285,13 +4008,11 @@
     :goto_0
     return v0
 
-    .line 435
     :sswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 429
     :sswitch_data_0
     .sparse-switch
         0x18 -> :sswitch_0
@@ -4303,16 +4024,11 @@
 
 .method protected onKeyUp(ILandroid/view/KeyEvent;)Z
     .locals 2
-    .param p1, "keyCode"    # I
-    .param p2, "event"    # Landroid/view/KeyEvent;
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 444
     sparse-switch p1, :sswitch_data_0
 
-    .line 459
     invoke-super {p0, p1, p2}, Lcom/sec/android/app/camera/menu/AbstractMenu;->onKeyUp(ILandroid/view/KeyEvent;)Z
 
     move-result v0
@@ -4321,18 +4037,15 @@
     :sswitch_0
     return v0
 
-    .line 446
     :sswitch_1
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mColorTuneSettingMenuBarListener:Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu$ColorTuneSettingMenuBarListener;
 
     invoke-interface {v1}, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu$ColorTuneSettingMenuBarListener;->onColorTuneSettingCancel()V
 
-    .line 447
     invoke-virtual {p0}, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->hideMenu()V
 
     goto :goto_0
 
-    .line 444
     :sswitch_data_0
     .sparse-switch
         0x4 -> :sswitch_1
@@ -4345,19 +4058,14 @@
 
 .method public onOrientationChanged(I)V
     .locals 3
-    .param p1, "orientation"    # I
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 325
     packed-switch p1, :pswitch_data_0
 
-    .line 343
     :goto_0
     return-void
 
-    .line 328
     :pswitch_0
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSaveButton:Lcom/samsung/android/glview/GLButton;
 
@@ -4367,7 +4075,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLButton;->setHeight(F)V
 
-    .line 329
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
 
     iget v1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->MENU_BAR_LANDSCAPE_HEIGHT:I
@@ -4376,19 +4083,16 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLButton;->setHeight(F)V
 
-    .line 330
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSaveButton:Lcom/samsung/android/glview/GLButton;
 
     invoke-virtual {v0, v2, v2}, Lcom/samsung/android/glview/GLButton;->setTextPosition(FF)V
 
-    .line 331
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
 
     invoke-virtual {v0, v2, v2}, Lcom/samsung/android/glview/GLButton;->setTextPosition(FF)V
 
     goto :goto_0
 
-    .line 335
     :pswitch_1
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSaveButton:Lcom/samsung/android/glview/GLButton;
 
@@ -4398,7 +4102,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLButton;->setHeight(F)V
 
-    .line 336
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
 
     iget v1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->MENU_BAR_PORTRAIT_HEIGHT:I
@@ -4407,7 +4110,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLButton;->setHeight(F)V
 
-    .line 337
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSaveButton:Lcom/samsung/android/glview/GLButton;
 
     iget v1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->BUTTON_TEXT_POSITION:I
@@ -4416,7 +4118,6 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/samsung/android/glview/GLButton;->setTextPosition(FF)V
 
-    .line 338
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
 
     iget v1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->BUTTON_TEXT_POSITION:I
@@ -4427,7 +4128,6 @@
 
     goto :goto_0
 
-    .line 325
     nop
 
     :pswitch_data_0
@@ -4441,20 +4141,15 @@
 
 .method public onProColorTuneListSelect(I)V
     .locals 1
-    .param p1, "selectId"    # I
 
-    .prologue
-    .line 347
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mColorTuneSettingListSelectListener:Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu$ColorTuneSettingListSelectListener;
 
     if-eqz v0, :cond_0
 
-    .line 348
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mColorTuneSettingListSelectListener:Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu$ColorTuneSettingListSelectListener;
 
     invoke-interface {v0, p1}, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu$ColorTuneSettingListSelectListener;->onColorTuneSettingListSelect(I)V
 
-    .line 350
     :cond_0
     return-void
 .end method
@@ -4462,12 +4157,10 @@
 .method protected onShow()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x4
 
     const/4 v2, 0x0
 
-    .line 465
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mList:Lcom/sec/android/app/camera/menu/ProColorTuneList;
 
     const/16 v1, 0xfa0
@@ -4478,54 +4171,44 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mColorTuneItem:Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;
 
-    .line 466
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mColorTuneItem:Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;
 
     if-eqz v0, :cond_0
 
-    .line 467
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mColorTuneItem:Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->setDim(Z)V
 
-    .line 470
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mList:Lcom/sec/android/app/camera/menu/ProColorTuneList;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/ProColorTuneList;->refreshColorTuneItems()V
 
-    .line 471
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mList:Lcom/sec/android/app/camera/menu/ProColorTuneList;
 
     invoke-virtual {v0, v2}, Lcom/sec/android/app/camera/menu/ProColorTuneList;->setVisibility(I)V
 
-    .line 473
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mMenuBarGroup:Lcom/samsung/android/glview/GLViewGroup;
 
     invoke-virtual {v0, v2}, Lcom/samsung/android/glview/GLViewGroup;->setVisibility(I)V
 
-    .line 474
     iget v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mColorTuneSlideType:I
 
     if-nez v0, :cond_1
 
-    .line 475
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSliderViewGroup:Lcom/samsung/android/glview/GLViewGroup;
 
     invoke-virtual {v0, v2}, Lcom/samsung/android/glview/GLViewGroup;->setVisibility(I)V
 
-    .line 476
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSliderViewGroup:Lcom/samsung/android/glview/GLViewGroup;
 
     invoke-virtual {v0, v3}, Lcom/samsung/android/glview/GLViewGroup;->setVisibility(I)V
 
-    .line 481
     :goto_0
     invoke-virtual {p0, v2}, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->setPreviewTouchEnabled(Z)V
 
-    .line 483
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mMenuManager:Lcom/sec/android/app/camera/menu/MenuManagerImpl;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/MenuManagerImpl;->getBaseMenuController()Lcom/sec/android/app/camera/interfaces/BaseMenuController;
@@ -4536,7 +4219,6 @@
 
     invoke-interface {v0, v1}, Lcom/sec/android/app/camera/interfaces/BaseMenuController;->disableView(I)V
 
-    .line 484
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mMenuManager:Lcom/sec/android/app/camera/menu/MenuManagerImpl;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/MenuManagerImpl;->getBaseMenuController()Lcom/sec/android/app/camera/interfaces/BaseMenuController;
@@ -4547,16 +4229,13 @@
 
     invoke-interface {v0, v1}, Lcom/sec/android/app/camera/interfaces/BaseMenuController;->hideView(I)V
 
-    .line 485
     return-void
 
-    .line 478
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSliderViewGroup:Lcom/samsung/android/glview/GLViewGroup;
 
     invoke-virtual {v0, v3}, Lcom/samsung/android/glview/GLViewGroup;->setVisibility(I)V
 
-    .line 479
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSliderViewGroup:Lcom/samsung/android/glview/GLViewGroup;
 
     invoke-virtual {v0, v2}, Lcom/samsung/android/glview/GLViewGroup;->setVisibility(I)V
@@ -4566,82 +4245,59 @@
 
 .method protected onShowAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 0
-    .param p1, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 490
     return-void
 .end method
 
 .method protected onShowAnimationStart(Landroid/view/animation/Animation;)V
     .locals 0
-    .param p1, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 495
     return-void
 .end method
 
 .method public setColorTuneSettingListSelectListener(Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu$ColorTuneSettingListSelectListener;)V
     .locals 0
-    .param p1, "listener"    # Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu$ColorTuneSettingListSelectListener;
 
-    .prologue
-    .line 353
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mColorTuneSettingListSelectListener:Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu$ColorTuneSettingListSelectListener;
 
-    .line 354
     return-void
 .end method
 
 .method public setColorTuneSettingMenuBarListener(Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu$ColorTuneSettingMenuBarListener;)V
     .locals 0
-    .param p1, "listener"    # Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu$ColorTuneSettingMenuBarListener;
 
-    .prologue
-    .line 357
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mColorTuneSettingMenuBarListener:Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu$ColorTuneSettingMenuBarListener;
 
-    .line 358
     return-void
 .end method
 
 .method public setColorTuneSettingSlideType(I)V
     .locals 3
-    .param p1, "type"    # I
 
-    .prologue
     const/4 v2, 0x4
 
     const/4 v1, 0x0
 
-    .line 361
     iput p1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mColorTuneSlideType:I
 
-    .line 363
     if-nez p1, :cond_0
 
-    .line 364
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSliderViewGroup:Lcom/samsung/android/glview/GLViewGroup;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLViewGroup;->setVisibility(I)V
 
-    .line 365
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSliderViewGroup:Lcom/samsung/android/glview/GLViewGroup;
 
     invoke-virtual {v0, v2}, Lcom/samsung/android/glview/GLViewGroup;->setVisibility(I)V
 
-    .line 371
     :goto_0
     return-void
 
-    .line 367
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSliderViewGroup:Lcom/samsung/android/glview/GLViewGroup;
 
     invoke-virtual {v0, v2}, Lcom/samsung/android/glview/GLViewGroup;->setVisibility(I)V
 
-    .line 368
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSliderViewGroup:Lcom/samsung/android/glview/GLViewGroup;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLViewGroup;->setVisibility(I)V
@@ -4651,49 +4307,35 @@
 
 .method public setColorTuneSettingSliderBarListener(Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu$ColorTuneSettingSliderBarListener;)V
     .locals 0
-    .param p1, "l"    # Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu$ColorTuneSettingSliderBarListener;
 
-    .prologue
-    .line 374
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mColorTuneSettingSliderBarListener:Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu$ColorTuneSettingSliderBarListener;
 
-    .line 375
     return-void
 .end method
 
 .method public setResetButtonDim(Z)V
     .locals 1
-    .param p1, "isDim"    # Z
 
-    .prologue
-    .line 378
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mResetButton:Lcom/samsung/android/glview/GLButton;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/glview/GLButton;->setDim(Z)V
 
-    .line 379
     return-void
 .end method
 
 .method public setSaveButtonDim(Z)V
     .locals 1
-    .param p1, "isDim"    # Z
 
-    .prologue
-    .line 382
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mSaveButton:Lcom/samsung/android/glview/GLButton;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/glview/GLButton;->setDim(Z)V
 
-    .line 383
     return-void
 .end method
 
 .method public updateColorTuneSlider([I)V
     .locals 7
-    .param p1, "values"    # [I
 
-    .prologue
     const/4 v6, 0x4
 
     const/4 v5, 0x3
@@ -4704,12 +4346,10 @@
 
     const/4 v3, 0x1
 
-    .line 386
     iget v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mColorTuneSlideType:I
 
     if-nez v0, :cond_1
 
-    .line 387
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSlider:[Lcom/samsung/android/glview/GLSlider;
 
     aget-object v0, v0, v1
@@ -4722,7 +4362,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 388
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSlider:[Lcom/samsung/android/glview/GLSlider;
 
     aget-object v0, v0, v3
@@ -4735,7 +4374,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 389
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSlider:[Lcom/samsung/android/glview/GLSlider;
 
     aget-object v0, v0, v4
@@ -4748,7 +4386,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 390
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSlider:[Lcom/samsung/android/glview/GLSlider;
 
     aget-object v0, v0, v5
@@ -4761,7 +4398,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 391
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSlider:[Lcom/samsung/android/glview/GLSlider;
 
     aget-object v0, v0, v6
@@ -4774,7 +4410,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 392
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mPresetSlider:[Lcom/samsung/android/glview/GLSlider;
 
     const/4 v1, 0x5
@@ -4791,18 +4426,15 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 401
     :cond_0
     :goto_0
     return-void
 
-    .line 393
     :cond_1
     iget v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mColorTuneSlideType:I
 
     if-ne v0, v3, :cond_0
 
-    .line 394
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSlider:[Lcom/samsung/android/glview/GLSlider;
 
     aget-object v0, v0, v1
@@ -4815,7 +4447,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 395
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSlider:[Lcom/samsung/android/glview/GLSlider;
 
     aget-object v0, v0, v3
@@ -4828,7 +4459,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 396
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSlider:[Lcom/samsung/android/glview/GLSlider;
 
     aget-object v0, v0, v4
@@ -4841,7 +4471,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 397
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSlider:[Lcom/samsung/android/glview/GLSlider;
 
     aget-object v0, v0, v5
@@ -4854,7 +4483,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 398
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSlider:[Lcom/samsung/android/glview/GLSlider;
 
     aget-object v0, v0, v6
@@ -4867,7 +4495,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 399
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneSettingMenu;->mToneSlider:[Lcom/samsung/android/glview/GLSlider;
 
     const/4 v1, 0x5

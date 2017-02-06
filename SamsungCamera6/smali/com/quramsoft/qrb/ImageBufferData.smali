@@ -33,8 +33,6 @@
 .method static synthetic $SWITCH_TABLE$com$quramsoft$qrb$ImageBufferData$Type()[I
     .locals 3
 
-    .prologue
-    .line 8
     sget-object v0, Lcom/quramsoft/qrb/ImageBufferData;->$SWITCH_TABLE$com$quramsoft$qrb$ImageBufferData$Type:[I
 
     if-eqz v0, :cond_0
@@ -116,167 +114,120 @@
 .method public constructor <init>()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
     const/4 v1, 0x0
 
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 23
     sget-object v0, Lcom/quramsoft/qrb/ImageBufferData$Type;->BITMAP:Lcom/quramsoft/qrb/ImageBufferData$Type;
 
     iput-object v0, p0, Lcom/quramsoft/qrb/ImageBufferData;->type:Lcom/quramsoft/qrb/ImageBufferData$Type;
 
-    .line 24
     iput v1, p0, Lcom/quramsoft/qrb/ImageBufferData;->width:I
 
-    .line 25
     iput v1, p0, Lcom/quramsoft/qrb/ImageBufferData;->height:I
 
-    .line 26
     iput-object v2, p0, Lcom/quramsoft/qrb/ImageBufferData;->bitmap:Landroid/graphics/Bitmap;
 
-    .line 27
     iput-object v2, p0, Lcom/quramsoft/qrb/ImageBufferData;->buffer:Ljava/nio/ByteBuffer;
 
-    .line 28
     iput v1, p0, Lcom/quramsoft/qrb/ImageBufferData;->handle:I
 
-    .line 29
     return-void
 .end method
 
 .method public constructor <init>(III)V
     .locals 2
-    .param p1, "width"    # I
-    .param p2, "height"    # I
-    .param p3, "handle"    # I
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     sget-object v0, Lcom/quramsoft/qrb/ImageBufferData$Type;->HANDLE:Lcom/quramsoft/qrb/ImageBufferData$Type;
 
     iput-object v0, p0, Lcom/quramsoft/qrb/ImageBufferData;->type:Lcom/quramsoft/qrb/ImageBufferData$Type;
 
-    .line 57
     iput p1, p0, Lcom/quramsoft/qrb/ImageBufferData;->width:I
 
-    .line 58
     iput p2, p0, Lcom/quramsoft/qrb/ImageBufferData;->height:I
 
-    .line 59
     iput-object v1, p0, Lcom/quramsoft/qrb/ImageBufferData;->bitmap:Landroid/graphics/Bitmap;
 
-    .line 60
     iput-object v1, p0, Lcom/quramsoft/qrb/ImageBufferData;->buffer:Ljava/nio/ByteBuffer;
 
-    .line 61
     iput p3, p0, Lcom/quramsoft/qrb/ImageBufferData;->handle:I
 
-    .line 62
     return-void
 .end method
 
 .method public constructor <init>(IILjava/nio/ByteBuffer;)V
     .locals 1
-    .param p1, "width"    # I
-    .param p2, "height"    # I
-    .param p3, "buffer"    # Ljava/nio/ByteBuffer;
 
-    .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     sget-object v0, Lcom/quramsoft/qrb/ImageBufferData$Type;->BUFFER:Lcom/quramsoft/qrb/ImageBufferData$Type;
 
     iput-object v0, p0, Lcom/quramsoft/qrb/ImageBufferData;->type:Lcom/quramsoft/qrb/ImageBufferData$Type;
 
-    .line 48
     iput p1, p0, Lcom/quramsoft/qrb/ImageBufferData;->width:I
 
-    .line 49
     iput p2, p0, Lcom/quramsoft/qrb/ImageBufferData;->height:I
 
-    .line 50
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/quramsoft/qrb/ImageBufferData;->bitmap:Landroid/graphics/Bitmap;
 
-    .line 51
     iput-object p3, p0, Lcom/quramsoft/qrb/ImageBufferData;->buffer:Ljava/nio/ByteBuffer;
 
-    .line 52
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/quramsoft/qrb/ImageBufferData;->handle:I
 
-    .line 53
     return-void
 .end method
 
 .method public constructor <init>(Landroid/graphics/Bitmap;)V
     .locals 3
-    .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
-    .prologue
     const/4 v2, 0x0
 
     const/4 v1, 0x0
 
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     sget-object v0, Lcom/quramsoft/qrb/ImageBufferData$Type;->BITMAP:Lcom/quramsoft/qrb/ImageBufferData$Type;
 
     iput-object v0, p0, Lcom/quramsoft/qrb/ImageBufferData;->type:Lcom/quramsoft/qrb/ImageBufferData$Type;
 
-    .line 33
     if-eqz p1, :cond_0
 
-    .line 34
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
     iput v0, p0, Lcom/quramsoft/qrb/ImageBufferData;->width:I
 
-    .line 35
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
 
     iput v0, p0, Lcom/quramsoft/qrb/ImageBufferData;->height:I
 
-    .line 36
     iput-object p1, p0, Lcom/quramsoft/qrb/ImageBufferData;->bitmap:Landroid/graphics/Bitmap;
 
-    .line 42
     :goto_0
     iput-object v2, p0, Lcom/quramsoft/qrb/ImageBufferData;->buffer:Ljava/nio/ByteBuffer;
 
-    .line 43
     iput v1, p0, Lcom/quramsoft/qrb/ImageBufferData;->handle:I
 
-    .line 44
     return-void
 
-    .line 38
     :cond_0
     iput v1, p0, Lcom/quramsoft/qrb/ImageBufferData;->width:I
 
-    .line 39
     iput v1, p0, Lcom/quramsoft/qrb/ImageBufferData;->height:I
 
-    .line 40
     iput-object v2, p0, Lcom/quramsoft/qrb/ImageBufferData;->bitmap:Landroid/graphics/Bitmap;
 
     goto :goto_0
@@ -287,8 +238,6 @@
 .method public getBitmap()Landroid/graphics/Bitmap;
     .locals 1
 
-    .prologue
-    .line 104
     iget-object v0, p0, Lcom/quramsoft/qrb/ImageBufferData;->bitmap:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -297,8 +246,6 @@
 .method public getHandle()I
     .locals 1
 
-    .prologue
-    .line 108
     iget v0, p0, Lcom/quramsoft/qrb/ImageBufferData;->handle:I
 
     return v0
@@ -307,8 +254,6 @@
 .method public getHeight()I
     .locals 1
 
-    .prologue
-    .line 100
     iget v0, p0, Lcom/quramsoft/qrb/ImageBufferData;->height:I
 
     return v0
@@ -317,8 +262,6 @@
 .method public getWidth()I
     .locals 1
 
-    .prologue
-    .line 96
     iget v0, p0, Lcom/quramsoft/qrb/ImageBufferData;->width:I
 
     return v0
@@ -327,10 +270,8 @@
 .method public isEmpty()Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 65
     invoke-static {}, Lcom/quramsoft/qrb/ImageBufferData;->$SWITCH_TABLE$com$quramsoft$qrb$ImageBufferData$Type()[I
 
     move-result-object v1
@@ -345,14 +286,12 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 77
     :cond_0
     const/4 v0, 0x1
 
     :goto_0
     return v0
 
-    .line 67
     :pswitch_0
     iget-object v1, p0, Lcom/quramsoft/qrb/ImageBufferData;->bitmap:Landroid/graphics/Bitmap;
 
@@ -360,7 +299,6 @@
 
     goto :goto_0
 
-    .line 70
     :pswitch_1
     iget-object v1, p0, Lcom/quramsoft/qrb/ImageBufferData;->buffer:Ljava/nio/ByteBuffer;
 
@@ -368,7 +306,6 @@
 
     goto :goto_0
 
-    .line 73
     :pswitch_2
     iget v1, p0, Lcom/quramsoft/qrb/ImageBufferData;->handle:I
 
@@ -376,7 +313,6 @@
 
     goto :goto_0
 
-    .line 65
     nop
 
     :pswitch_data_0
@@ -390,8 +326,6 @@
 .method public isUseBitmap()Z
     .locals 2
 
-    .prologue
-    .line 81
     iget-object v0, p0, Lcom/quramsoft/qrb/ImageBufferData;->type:Lcom/quramsoft/qrb/ImageBufferData$Type;
 
     sget-object v1, Lcom/quramsoft/qrb/ImageBufferData$Type;->BITMAP:Lcom/quramsoft/qrb/ImageBufferData$Type;
@@ -404,7 +338,6 @@
 
     const/4 v0, 0x1
 
-    .line 82
     :goto_0
     return v0
 
@@ -417,8 +350,6 @@
 .method public isUseBuffer()Z
     .locals 2
 
-    .prologue
-    .line 86
     iget-object v0, p0, Lcom/quramsoft/qrb/ImageBufferData;->type:Lcom/quramsoft/qrb/ImageBufferData$Type;
 
     sget-object v1, Lcom/quramsoft/qrb/ImageBufferData$Type;->BUFFER:Lcom/quramsoft/qrb/ImageBufferData$Type;
@@ -431,7 +362,6 @@
 
     const/4 v0, 0x1
 
-    .line 87
     :goto_0
     return v0
 
@@ -444,8 +374,6 @@
 .method public isUseHandle()Z
     .locals 2
 
-    .prologue
-    .line 91
     iget-object v0, p0, Lcom/quramsoft/qrb/ImageBufferData;->type:Lcom/quramsoft/qrb/ImageBufferData$Type;
 
     sget-object v1, Lcom/quramsoft/qrb/ImageBufferData$Type;->HANDLE:Lcom/quramsoft/qrb/ImageBufferData$Type;
@@ -458,7 +386,6 @@
 
     const/4 v0, 0x1
 
-    .line 92
     :goto_0
     return v0
 
@@ -471,8 +398,6 @@
 .method public recycle()V
     .locals 2
 
-    .prologue
-    .line 112
     invoke-static {}, Lcom/quramsoft/qrb/ImageBufferData;->$SWITCH_TABLE$com$quramsoft$qrb$ImageBufferData$Type()[I
 
     move-result-object v0
@@ -487,49 +412,41 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 128
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 114
     :pswitch_1
     iget-object v0, p0, Lcom/quramsoft/qrb/ImageBufferData;->bitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    .line 115
     iget-object v0, p0, Lcom/quramsoft/qrb/ImageBufferData;->bitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 116
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/quramsoft/qrb/ImageBufferData;->bitmap:Landroid/graphics/Bitmap;
 
     goto :goto_0
 
-    .line 122
     :pswitch_2
     iget v0, p0, Lcom/quramsoft/qrb/ImageBufferData;->handle:I
 
     if-eqz v0, :cond_0
 
-    .line 123
     iget v0, p0, Lcom/quramsoft/qrb/ImageBufferData;->handle:I
 
     invoke-static {v0}, Lcom/quramsoft/qrb/QuramBitmapFactory;->recycleNativeBuffer(I)V
 
-    .line 124
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/quramsoft/qrb/ImageBufferData;->handle:I
 
     goto :goto_0
 
-    .line 112
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

@@ -25,8 +25,6 @@
 .method private constructor <init>(Landroid/support/v4/media/session/MediaSessionCompat$Callback;)V
     .locals 1
 
-    .prologue
-    .line 750
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi23;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     const/4 v0, 0x0
@@ -38,11 +36,7 @@
 
 .method synthetic constructor <init>(Landroid/support/v4/media/session/MediaSessionCompat$Callback;Landroid/support/v4/media/session/MediaSessionCompat$1;)V
     .locals 0
-    .param p1, "x0"    # Landroid/support/v4/media/session/MediaSessionCompat$Callback;
-    .param p2, "x1"    # Landroid/support/v4/media/session/MediaSessionCompat$1;
 
-    .prologue
-    .line 750
     invoke-direct {p0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi23;-><init>(Landroid/support/v4/media/session/MediaSessionCompat$Callback;)V
 
     return-void
@@ -52,15 +46,10 @@
 # virtual methods
 .method public onPlayFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V
     .locals 1
-    .param p1, "uri"    # Landroid/net/Uri;
-    .param p2, "extras"    # Landroid/os/Bundle;
 
-    .prologue
-    .line 754
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi23;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-virtual {v0, p1, p2}, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onPlayFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V
 
-    .line 755
     return-void
 .end method

@@ -28,24 +28,17 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 613
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 614
     iput v0, p0, Lcom/sec/android/app/camera/FaceAreaManager$FaceAreaAdviceLine;->left:I
 
-    .line 615
     iput v0, p0, Lcom/sec/android/app/camera/FaceAreaManager$FaceAreaAdviceLine;->right:I
 
-    .line 616
     iput v0, p0, Lcom/sec/android/app/camera/FaceAreaManager$FaceAreaAdviceLine;->top:I
 
-    .line 617
     iput v0, p0, Lcom/sec/android/app/camera/FaceAreaManager$FaceAreaAdviceLine;->bottom:I
 
-    .line 618
     return-void
 .end method

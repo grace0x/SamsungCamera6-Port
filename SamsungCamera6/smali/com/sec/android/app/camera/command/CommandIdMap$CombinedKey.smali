@@ -28,8 +28,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1585
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,11 +35,7 @@
 
 .method public static getKey(II)I
     .locals 2
-    .param p0, "menuId"    # I
-    .param p1, "modeId"    # I
 
-    .prologue
-    .line 1605
     and-int/lit16 v0, p0, 0x7fff
 
     shl-int/lit8 v0, v0, 0x10
@@ -57,10 +51,7 @@
 
 .method public static getMenuId(I)I
     .locals 1
-    .param p0, "combinedKey"    # I
 
-    .prologue
-    .line 1609
     shr-int/lit8 v0, p0, 0x10
 
     return v0
@@ -68,10 +59,7 @@
 
 .method public static getModeId(I)I
     .locals 1
-    .param p0, "combinedKey"    # I
 
-    .prologue
-    .line 1613
     const v0, 0xffff
 
     and-int/2addr v0, p0

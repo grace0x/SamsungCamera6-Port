@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/shootingmode/BurstPanorama;)V
     .locals 0
 
-    .prologue
-    .line 882
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/BurstPanorama$1;->this$0:Lcom/sec/android/app/camera/shootingmode/BurstPanorama;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,19 +36,15 @@
 # virtual methods
 .method public onClick(Lcom/samsung/android/glview/GLView;)Z
     .locals 3
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 885
     const-string v0, "BurstPanorama"
 
     const-string v1, "onClick - CaptureStopButton"
 
     invoke-static {v0, v1}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 886
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/BurstPanorama$1;->this$0:Lcom/sec/android/app/camera/shootingmode/BurstPanorama;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/BurstPanorama;->mIsPanoramaCapturing:Z
@@ -71,18 +65,15 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 887
     const-string v0, "BurstPanorama"
 
     const-string v1, "panorama can be saved at least two shot"
 
     invoke-static {v0, v1}, Landroid/util/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 893
     :goto_0
     return v2
 
-    .line 890
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/BurstPanorama$1;->this$0:Lcom/sec/android/app/camera/shootingmode/BurstPanorama;
 
@@ -93,7 +84,6 @@
 
     invoke-virtual {v0, v2}, Lcom/samsung/android/glview/GLButton;->setDim(Z)V
 
-    .line 892
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/BurstPanorama$1;->this$0:Lcom/sec/android/app/camera/shootingmode/BurstPanorama;
 
     # invokes: Lcom/sec/android/app/camera/shootingmode/BurstPanorama;->stopPanoramaCapturing()V

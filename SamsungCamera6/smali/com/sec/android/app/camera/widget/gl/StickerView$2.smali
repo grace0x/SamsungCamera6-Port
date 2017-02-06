@@ -24,8 +24,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 642
     invoke-static {}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;->values()[Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;
 
     move-result-object v0
@@ -147,7 +145,6 @@
     :try_end_6
     .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    .line 581
     :goto_6
     invoke-static {}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$DefaultPosition;->values()[Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$DefaultPosition;
 
@@ -287,7 +284,6 @@
 
     goto :goto_7
 
-    .line 642
     :catch_6
     move-exception v0
 

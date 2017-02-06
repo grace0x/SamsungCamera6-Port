@@ -1322,12 +1322,10 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 516
     sget-boolean v0, Lcom/sec/android/app/camera/feature/Feature;->CAMERA_PREVIEW_FIT_TO_FULL_SCREEN:Z
 
     if-eqz v0, :cond_0
@@ -1337,7 +1335,6 @@
     :goto_0
     sput v0, Lcom/sec/android/app/camera/interfaces/CameraSettings;->DEFAULT_VIEW_MODE:I
 
-    .line 871
     sget-boolean v0, Lcom/sec/android/app/camera/feature/Feature;->FRONT_CAMERA_SHOOTINGMODE_SELFIE:Z
 
     if-eqz v0, :cond_1
@@ -1347,7 +1344,6 @@
     :goto_1
     sput v0, Lcom/sec/android/app/camera/interfaces/CameraSettings;->DEFAULT_FRONT_SHOOTINGMODE:I
 
-    .line 895
     sget-boolean v0, Lcom/sec/android/app/camera/feature/Feature;->SUPPORT_COMPANION_CHIP:Z
 
     if-eqz v0, :cond_3
@@ -1357,7 +1353,6 @@
     :goto_2
     sput v0, Lcom/sec/android/app/camera/interfaces/CameraSettings;->DEFAULT_CAMERA_HDR:I
 
-    .line 896
     sget-boolean v0, Lcom/sec/android/app/camera/feature/Feature;->FRONT_SUPPORT_COMPANION_CHIP:Z
 
     if-eqz v0, :cond_4
@@ -1367,7 +1362,6 @@
     :goto_3
     sput v0, Lcom/sec/android/app/camera/interfaces/CameraSettings;->DEFAULT_FRONT_CAMERA_HDR:I
 
-    .line 902
     sget-boolean v0, Lcom/sec/android/app/camera/feature/Feature;->CAMCORDER_ANTISHAKE_DEFAULT_ON:Z
 
     if-eqz v0, :cond_5
@@ -1377,7 +1371,6 @@
     :goto_4
     sput v0, Lcom/sec/android/app/camera/interfaces/CameraSettings;->DEFAULT_BACK_CAMCORDER_ANTISHAKE:I
 
-    .line 903
     sget-boolean v0, Lcom/sec/android/app/camera/feature/Feature;->CAMCORDER_FRONT_ANTISHAKE:Z
 
     if-eqz v0, :cond_6
@@ -1387,7 +1380,6 @@
     :goto_5
     sput v0, Lcom/sec/android/app/camera/interfaces/CameraSettings;->DEFAULT_FRONT_CAMCORDER_ANTISHAKE:I
 
-    .line 904
     sget-boolean v0, Lcom/sec/android/app/camera/feature/Feature;->ACTIVE_KEY:Z
 
     if-eqz v0, :cond_7
@@ -1397,7 +1389,6 @@
     :goto_6
     sput v0, Lcom/sec/android/app/camera/interfaces/CameraSettings;->DEFAULT_VOLUME_KEY_AS:I
 
-    .line 926
     sget-boolean v0, Lcom/sec/android/app/camera/feature/Feature;->CAMERA_SUPPORT_WATERMARK:Z
 
     if-eqz v0, :cond_8
@@ -1410,10 +1401,8 @@
     :cond_0
     move v0, v2
 
-    .line 516
     goto :goto_0
 
-    .line 871
     :cond_1
     sget-boolean v0, Lcom/sec/android/app/camera/feature/Feature;->FRONT_CAMERA_SHOOTINGMODE_BEAUTY_SHOT:Z
 
@@ -1431,37 +1420,31 @@
     :cond_3
     move v0, v2
 
-    .line 895
     goto :goto_2
 
     :cond_4
     move v0, v2
 
-    .line 896
     goto :goto_3
 
     :cond_5
     move v0, v2
 
-    .line 902
     goto :goto_4
 
     :cond_6
     move v0, v2
 
-    .line 903
     goto :goto_5
 
     :cond_7
     move v0, v1
 
-    .line 904
     goto :goto_6
 
     :cond_8
     move v1, v2
 
-    .line 926
     goto :goto_7
 .end method
 

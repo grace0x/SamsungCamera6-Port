@@ -7,45 +7,33 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     return-void
 .end method
 
 .method public static buildCommand(ILcom/sec/android/app/camera/interfaces/CommandInterface;)Lcom/sec/android/app/camera/command/MenuCommand;
     .locals 2
-    .param p0, "id"    # I
-    .param p1, "receiver"    # Lcom/sec/android/app/camera/interfaces/CommandInterface;
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 31
     const/16 v1, 0x63
 
     if-ne p0, v1, :cond_1
 
-    .line 32
     new-instance v0, Lcom/sec/android/app/camera/command/EmptyCommand;
 
     invoke-direct {v0}, Lcom/sec/android/app/camera/command/EmptyCommand;-><init>()V
 
-    .line 227
     :cond_0
     :goto_0
     return-object v0
 
-    .line 35
     :cond_1
     if-eqz p1, :cond_0
 
-    .line 39
     sparse-switch p0, :sswitch_data_0
 
-    .line 222
     const/16 v1, 0x1f40
 
     if-lt p0, v1, :cond_2
@@ -54,14 +42,12 @@
 
     if-ge p0, v1, :cond_2
 
-    .line 223
     new-instance v0, Lcom/sec/android/app/camera/command/SingleEffectMenuSelectCommand;
 
     invoke-direct {v0, p1, p0}, Lcom/sec/android/app/camera/command/SingleEffectMenuSelectCommand;-><init>(Lcom/sec/android/app/camera/interfaces/CommandInterface;I)V
 
     goto :goto_0
 
-    .line 54
     :sswitch_0
     new-instance v0, Lcom/sec/android/app/camera/command/ToggleSelectCommand;
 
@@ -69,7 +55,6 @@
 
     goto :goto_0
 
-    .line 70
     :sswitch_1
     new-instance v0, Lcom/sec/android/app/camera/command/LaunchMenuCommand;
 
@@ -77,7 +62,6 @@
 
     goto :goto_0
 
-    .line 86
     :sswitch_2
     new-instance v0, Lcom/sec/android/app/camera/command/ISOSelectCommand;
 
@@ -85,7 +69,6 @@
 
     goto :goto_0
 
-    .line 95
     :sswitch_3
     new-instance v0, Lcom/sec/android/app/camera/command/WhiteBalanceSelectCommand;
 
@@ -93,7 +76,6 @@
 
     goto :goto_0
 
-    .line 98
     :sswitch_4
     new-instance v0, Lcom/sec/android/app/camera/command/MoreSettingsCommand;
 
@@ -101,7 +83,6 @@
 
     goto :goto_0
 
-    .line 101
     :sswitch_5
     new-instance v0, Lcom/sec/android/app/camera/command/SwitchCameraCommand;
 
@@ -109,7 +90,6 @@
 
     goto :goto_0
 
-    .line 115
     :sswitch_6
     new-instance v0, Lcom/sec/android/app/camera/command/DualEffectMenuSelectCommand;
 
@@ -117,7 +97,6 @@
 
     goto :goto_0
 
-    .line 132
     :sswitch_7
     new-instance v0, Lcom/sec/android/app/camera/command/SingleEffectMenuSelectCommand;
 
@@ -125,7 +104,6 @@
 
     goto :goto_0
 
-    .line 167
     :sswitch_8
     new-instance v0, Lcom/sec/android/app/camera/command/ShootingModeSelectCommand;
 
@@ -133,7 +111,6 @@
 
     goto :goto_0
 
-    .line 171
     :sswitch_9
     new-instance v0, Lcom/sec/android/app/camera/command/ShootingModeDownloadCommand;
 
@@ -141,7 +118,6 @@
 
     goto :goto_0
 
-    .line 187
     :sswitch_a
     new-instance v0, Lcom/sec/android/app/camera/command/VideoCollageTypeMenuSelectCommand;
 
@@ -149,7 +125,6 @@
 
     goto :goto_0
 
-    .line 194
     :sswitch_b
     new-instance v0, Lcom/sec/android/app/camera/command/VideoCollageRecTimeMenuSelectCommand;
 
@@ -157,7 +132,6 @@
 
     goto :goto_0
 
-    .line 198
     :sswitch_c
     new-instance v0, Lcom/sec/android/app/camera/command/HelpHubCommand;
 
@@ -165,7 +139,6 @@
 
     goto :goto_0
 
-    .line 206
     :sswitch_d
     new-instance v0, Lcom/sec/android/app/camera/command/BeautyMenuCommand;
 
@@ -173,7 +146,6 @@
 
     goto :goto_0
 
-    .line 211
     :sswitch_e
     new-instance v0, Lcom/sec/android/app/camera/command/FoodBlurTypeMenuSelectCommand;
 
@@ -181,7 +153,6 @@
 
     goto :goto_0
 
-    .line 219
     :sswitch_f
     new-instance v0, Lcom/sec/android/app/camera/command/RecordingMotionSpeedMenuSelectCommand;
 
@@ -189,7 +160,6 @@
 
     goto :goto_0
 
-    .line 224
     :cond_2
     const/16 v1, 0x238c
 
@@ -199,14 +169,12 @@
 
     if-ge p0, v1, :cond_0
 
-    .line 225
     new-instance v0, Lcom/sec/android/app/camera/command/WatermarkMenuSelectCommand;
 
     invoke-direct {v0, p1, p0}, Lcom/sec/android/app/camera/command/WatermarkMenuSelectCommand;-><init>(Lcom/sec/android/app/camera/interfaces/CommandInterface;I)V
 
     goto/16 :goto_0
 
-    .line 39
     nop
 
     :sswitch_data_0
@@ -354,12 +322,7 @@
 
 .method public static buildCommandWithSub(Ljava/lang/String;ILcom/sec/android/app/camera/interfaces/CommandInterface;)Lcom/sec/android/app/camera/command/MenuCommand;
     .locals 1
-    .param p0, "subCommandName"    # Ljava/lang/String;
-    .param p1, "commandId"    # I
-    .param p2, "receiver"    # Lcom/sec/android/app/camera/interfaces/CommandInterface;
 
-    .prologue
-    .line 241
     new-instance v0, Lcom/sec/android/app/camera/command/ShootingModeSelectCommand;
 
     invoke-direct {v0, p2, p1, p0}, Lcom/sec/android/app/camera/command/ShootingModeSelectCommand;-><init>(Lcom/sec/android/app/camera/interfaces/CommandInterface;ILjava/lang/String;)V

@@ -25,8 +25,6 @@
 .method private constructor <init>(Lcom/sec/android/app/camera/CameraDialog;)V
     .locals 0
 
-    .prologue
-    .line 931
     iput-object p1, p0, Lcom/sec/android/app/camera/CameraDialog$OnNegativeButtonClickListener;->this$0:Lcom/sec/android/app/camera/CameraDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,11 +34,7 @@
 
 .method synthetic constructor <init>(Lcom/sec/android/app/camera/CameraDialog;Lcom/sec/android/app/camera/CameraDialog$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/sec/android/app/camera/CameraDialog;
-    .param p2, "x1"    # Lcom/sec/android/app/camera/CameraDialog$1;
 
-    .prologue
-    .line 931
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/CameraDialog$OnNegativeButtonClickListener;-><init>(Lcom/sec/android/app/camera/CameraDialog;)V
 
     return-void
@@ -50,13 +44,9 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 4
-    .param p1, "dialog"    # Landroid/content/DialogInterface;
-    .param p2, "which"    # I
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 934
     iget-object v1, p0, Lcom/sec/android/app/camera/CameraDialog$OnNegativeButtonClickListener;->this$0:Lcom/sec/android/app/camera/CameraDialog;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/CameraDialog;->getArguments()Landroid/os/Bundle;
@@ -69,20 +59,15 @@
 
     move-result v0
 
-    .line 935
-    .local v0, "id":I
     sparse-switch v0, :sswitch_data_0
 
-    .line 960
     :goto_0
     iget-object v1, p0, Lcom/sec/android/app/camera/CameraDialog$OnNegativeButtonClickListener;->this$0:Lcom/sec/android/app/camera/CameraDialog;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/CameraDialog;->dismissAllowingStateLoss()V
 
-    .line 961
     return-void
 
-    .line 937
     :sswitch_0
     iget-object v1, p0, Lcom/sec/android/app/camera/CameraDialog$OnNegativeButtonClickListener;->this$0:Lcom/sec/android/app/camera/CameraDialog;
 
@@ -94,7 +79,6 @@
 
     goto :goto_0
 
-    .line 940
     :sswitch_1
     iget-object v1, p0, Lcom/sec/android/app/camera/CameraDialog$OnNegativeButtonClickListener;->this$0:Lcom/sec/android/app/camera/CameraDialog;
 
@@ -112,7 +96,6 @@
 
     goto :goto_0
 
-    .line 943
     :sswitch_2
     iget-object v1, p0, Lcom/sec/android/app/camera/CameraDialog$OnNegativeButtonClickListener;->this$0:Lcom/sec/android/app/camera/CameraDialog;
 
@@ -121,7 +104,6 @@
 
     goto :goto_0
 
-    .line 946
     :sswitch_3
     iget-object v1, p0, Lcom/sec/android/app/camera/CameraDialog$OnNegativeButtonClickListener;->this$0:Lcom/sec/android/app/camera/CameraDialog;
 
@@ -139,7 +121,6 @@
 
     goto :goto_0
 
-    .line 949
     :sswitch_4
     iget-object v1, p0, Lcom/sec/android/app/camera/CameraDialog$OnNegativeButtonClickListener;->this$0:Lcom/sec/android/app/camera/CameraDialog;
 
@@ -151,7 +132,6 @@
 
     goto :goto_0
 
-    .line 952
     :sswitch_5
     iget-object v1, p0, Lcom/sec/android/app/camera/CameraDialog$OnNegativeButtonClickListener;->this$0:Lcom/sec/android/app/camera/CameraDialog;
 
@@ -163,7 +143,6 @@
 
     goto :goto_0
 
-    .line 955
     :sswitch_6
     iget-object v1, p0, Lcom/sec/android/app/camera/CameraDialog$OnNegativeButtonClickListener;->this$0:Lcom/sec/android/app/camera/CameraDialog;
 
@@ -187,7 +166,6 @@
 
     goto :goto_0
 
-    .line 935
     nop
 
     :sswitch_data_0

@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/Camera;)V
     .locals 0
 
-    .prologue
-    .line 2499
     iput-object p1, p0, Lcom/sec/android/app/camera/Camera$12;->this$0:Lcom/sec/android/app/camera/Camera;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,8 +37,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 2502
     iget-object v0, p0, Lcom/sec/android/app/camera/Camera$12;->this$0:Lcom/sec/android/app/camera/Camera;
 
     const v1, 0x7f080201
@@ -53,6 +49,5 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 2503
     return-void
 .end method

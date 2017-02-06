@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;)V
     .locals 0
 
-    .prologue
-    .line 1293
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$4;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,8 +37,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 1296
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$4;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$4;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
@@ -58,7 +54,6 @@
     # setter for: Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->mDragHelpToast:Landroid/widget/Toast;
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->access$1102(Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;Landroid/widget/Toast;)Landroid/widget/Toast;
 
-    .line 1297
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$4;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->mDragHelpToast:Landroid/widget/Toast;
@@ -68,7 +63,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1298
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$4;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->mDragHelpToast:Landroid/widget/Toast;
@@ -78,7 +72,6 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 1300
     :cond_0
     return-void
 .end method

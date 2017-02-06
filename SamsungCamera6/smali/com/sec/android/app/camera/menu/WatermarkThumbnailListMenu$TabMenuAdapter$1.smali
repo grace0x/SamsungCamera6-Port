@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;)V
     .locals 0
 
-    .prologue
-    .line 712
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter$1;->this$1:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +36,7 @@
 # virtual methods
 .method public onTabItemSelected(Lcom/samsung/android/glview/GLView;I)V
     .locals 8
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "modeId"    # I
 
-    .prologue
     const/4 v7, 0x3
 
     const/4 v6, 0x1
@@ -50,7 +45,6 @@
 
     const/4 v4, 0x2
 
-    .line 715
     const-string v1, "WatermarkThumbnailListMenu"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -73,7 +67,6 @@
 
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 716
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter$1;->this$1:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;
@@ -87,8 +80,6 @@
 
     move-result v0
 
-    .line 717
-    .local v0, "lastSelectedCategory":I
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter$1;->this$1:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;
@@ -100,7 +91,6 @@
 
     invoke-interface {v1, p2}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->setWatermarkCategory(I)V
 
-    .line 718
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter$1;->this$1:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;
@@ -130,10 +120,8 @@
     # invokes: Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;->setResourceData(Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;)V
     invoke-static {v1, v2}, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;->access$2100(Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;)V
 
-    .line 719
     if-le v0, p2, :cond_2
 
-    .line 720
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter$1;->this$1:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;
@@ -156,7 +144,6 @@
 
     if-ne v1, v4, :cond_1
 
-    .line 721
     :cond_0
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter$1;->this$1:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;
 
@@ -165,7 +152,6 @@
     # invokes: Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;->startAnimationForChangingCategory(II)V
     invoke-static {v1, v7, v4}, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;->access$2200(Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;II)V
 
-    .line 732
     :goto_0
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter$1;->this$1:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;
 
@@ -178,10 +164,8 @@
 
     invoke-virtual {v1, p1}, Lcom/samsung/android/glview/GLList;->scrollToVisible(Lcom/samsung/android/glview/GLView;)V
 
-    .line 733
     return-void
 
-    .line 723
     :cond_1
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter$1;->this$1:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;
 
@@ -192,7 +176,6 @@
 
     goto :goto_0
 
-    .line 726
     :cond_2
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter$1;->this$1:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;
 
@@ -216,7 +199,6 @@
 
     if-ne v1, v4, :cond_4
 
-    .line 727
     :cond_3
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter$1;->this$1:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;
 
@@ -227,7 +209,6 @@
 
     goto :goto_0
 
-    .line 729
     :cond_4
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter$1;->this$1:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;
 

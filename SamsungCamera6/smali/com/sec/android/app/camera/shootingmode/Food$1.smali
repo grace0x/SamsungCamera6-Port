@@ -22,8 +22,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/shootingmode/Food;)V
     .locals 0
 
-    .prologue
-    .line 150
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/Food$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Food;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,17 +33,11 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
-    .param p1, "context"    # Landroid/content/Context;
-    .param p2, "intent"    # Landroid/content/Intent;
 
-    .prologue
-    .line 153
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 154
-    .local v0, "action":Ljava/lang/String;
     const-string v1, "Food"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -68,7 +60,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 155
     const/4 v1, -0x1
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -81,11 +72,9 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 166
     :goto_1
     return-void
 
-    .line 155
     :sswitch_0
     const-string v2, "camera.action.ACTION_ERROR_CAMERA_BUSY"
 
@@ -112,7 +101,6 @@
 
     goto :goto_0
 
-    .line 158
     :pswitch_0
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/Food$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Food;
 
@@ -123,7 +111,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 159
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/Food$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Food;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/Food;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -144,7 +131,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/android/app/camera/util/CameraLocalBroadcastManager;->unregister(Landroid/content/Context;Landroid/content/BroadcastReceiver;)V
 
-    .line 161
     :cond_1
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/Food$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Food;
 
@@ -153,7 +139,6 @@
 
     goto :goto_1
 
-    .line 155
     nop
 
     :sswitch_data_0

@@ -18,8 +18,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 169
     invoke-direct {p0}, Landroid/support/v4/graphics/drawable/DrawableCompat$HoneycombDrawableImpl;-><init>()V
 
     return-void
@@ -29,23 +27,16 @@
 # virtual methods
 .method public getLayoutDirection(Landroid/graphics/drawable/Drawable;)I
     .locals 1
-    .param p1, "drawable"    # Landroid/graphics/drawable/Drawable;
 
-    .prologue
-    .line 177
     invoke-static {p1}, Landroid/support/v4/graphics/drawable/DrawableCompatJellybeanMr1;->getLayoutDirection(Landroid/graphics/drawable/Drawable;)I
 
     move-result v0
 
-    .line 178
-    .local v0, "dir":I
     if-ltz v0, :cond_0
 
-    .end local v0    # "dir":I
     :goto_0
     return v0
 
-    .restart local v0    # "dir":I
     :cond_0
     const/4 v0, 0x0
 
@@ -54,13 +45,8 @@
 
 .method public setLayoutDirection(Landroid/graphics/drawable/Drawable;I)V
     .locals 0
-    .param p1, "drawable"    # Landroid/graphics/drawable/Drawable;
-    .param p2, "layoutDirection"    # I
 
-    .prologue
-    .line 172
     invoke-static {p1, p2}, Landroid/support/v4/graphics/drawable/DrawableCompatJellybeanMr1;->setLayoutDirection(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 173
     return-void
 .end method

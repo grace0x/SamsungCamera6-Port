@@ -73,7 +73,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -84,7 +83,6 @@
 
     const/4 v3, 0x0
 
-    .line 217
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     const-string v1, "NONE"
@@ -93,7 +91,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->NONE:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
-    .line 218
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     const-string v1, "CURRENT_YEAR"
@@ -102,7 +99,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->CURRENT_YEAR:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
-    .line 219
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     const-string v1, "CURRENT_DAY"
@@ -111,7 +107,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->CURRENT_DAY:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
-    .line 220
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     const-string v1, "CURRENT_DAY_AND_TIME"
@@ -120,7 +115,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->CURRENT_DAY_AND_TIME:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
-    .line 221
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     const-string v1, "CURRENT_DATE"
@@ -129,7 +123,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->CURRENT_DATE:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
-    .line 222
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     const-string v1, "DATE_FORMAT_01"
@@ -140,7 +133,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->DATE_FORMAT_01:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
-    .line 223
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     const-string v1, "DATE_FORMAT_02"
@@ -151,7 +143,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->DATE_FORMAT_02:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
-    .line 224
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     const-string v1, "DATE_FORMAT_03"
@@ -162,7 +153,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->DATE_FORMAT_03:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
-    .line 225
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     const-string v1, "HOLIDAY"
@@ -173,7 +163,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->HOLIDAY:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
-    .line 226
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     const-string v1, "SOLAR_TERM"
@@ -184,7 +173,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->SOLAR_TERM:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
-    .line 227
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     const-string v1, "LUNAR_YEAR"
@@ -195,7 +183,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->LUNAR_YEAR:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
-    .line 228
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     const-string v1, "DAY_OF_WEEK"
@@ -206,7 +193,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->DAY_OF_WEEK:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
-    .line 229
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     const-string v1, "LOCATION_STRING"
@@ -217,7 +203,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->LOCATION_STRING:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
-    .line 230
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     const-string v1, "LOCATION_STRING_01"
@@ -228,7 +213,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->LOCATION_STRING_01:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
-    .line 231
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     const-string v1, "LOCATION_STRING_02"
@@ -239,7 +223,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->LOCATION_STRING_02:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
-    .line 232
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     const-string v1, "GPS_INFO"
@@ -250,7 +233,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->GPS_INFO:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
-    .line 233
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     const-string v1, "PM25"
@@ -261,7 +243,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->PM25:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
-    .line 234
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     const-string v1, "CHN_DATE"
@@ -272,7 +253,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->CHN_DATE:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
-    .line 235
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     const-string v1, "DATE_FOR_FESTIVAL"
@@ -283,7 +263,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->DATE_FOR_FESTIVAL:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
-    .line 236
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     const-string v1, "CHN_TEMPERATURE"
@@ -294,7 +273,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->CHN_TEMPERATURE:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
-    .line 237
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     const-string v1, "CITY_NAME"
@@ -305,7 +283,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->CITY_NAME:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
-    .line 216
     const/16 v0, 0x15
 
     new-array v0, v0, [Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
@@ -439,8 +416,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 216
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -448,10 +423,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
     .locals 1
-    .param p0, "name"    # Ljava/lang/String;
 
-    .prologue
-    .line 216
     const-class v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -466,8 +438,6 @@
 .method public static values()[Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
     .locals 1
 
-    .prologue
-    .line 216
     sget-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->$VALUES:[Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     invoke-virtual {v0}, [Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->clone()Ljava/lang/Object;

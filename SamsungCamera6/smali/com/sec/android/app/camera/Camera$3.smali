@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/Camera;)V
     .locals 0
 
-    .prologue
-    .line 525
     iput-object p1, p0, Lcom/sec/android/app/camera/Camera$3;->this$0:Lcom/sec/android/app/camera/Camera;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,22 +36,15 @@
 # virtual methods
 .method public onAccuracyChanged(Landroid/hardware/Sensor;I)V
     .locals 0
-    .param p1, "sensor"    # Landroid/hardware/Sensor;
-    .param p2, "accuracy"    # I
 
-    .prologue
-    .line 528
     return-void
 .end method
 
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 6
-    .param p1, "event"    # Landroid/hardware/SensorEvent;
 
-    .prologue
     const/4 v5, 0x0
 
-    .line 532
     iget-object v0, p0, Lcom/sec/android/app/camera/Camera$3;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mMainHandler:Lcom/sec/android/app/camera/Camera$MainHandler;
@@ -63,7 +54,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 533
     iget-object v0, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
     invoke-virtual {v0}, Landroid/hardware/Sensor;->getType()I
@@ -84,7 +74,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 534
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/Camera$3;->this$0:Lcom/sec/android/app/camera/Camera;
 
@@ -97,7 +86,6 @@
     # setter for: Lcom/sec/android/app/camera/Camera;->mHRMIR:I
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/Camera;->access$102(Lcom/sec/android/app/camera/Camera;I)I
 
-    .line 536
     const-string v0, "Camera6"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -142,7 +130,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 537
     iget-object v0, p0, Lcom/sec/android/app/camera/Camera$3;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mMainHandler:Lcom/sec/android/app/camera/Camera$MainHandler;
@@ -154,7 +141,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/Camera$MainHandler;->sendEmptyMessage(I)Z
 
-    .line 540
     :cond_1
     return-void
 .end method

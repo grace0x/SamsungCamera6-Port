@@ -30,20 +30,15 @@
 # direct methods
 .method public constructor <init>(Lcom/sec/android/app/camera/Camera;)V
     .locals 1
-    .param p1, "activity"    # Lcom/sec/android/app/camera/Camera;
 
-    .prologue
-    .line 8568
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 8569
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/Camera$MainHandler;->mActivity:Ljava/lang/ref/WeakReference;
 
-    .line 8570
     return-void
 .end method
 
@@ -51,10 +46,7 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 4
-    .param p1, "msg"    # Landroid/os/Message;
 
-    .prologue
-    .line 8574
     const-string v1, "Camera6"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -79,7 +71,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8575
     iget-object v1, p0, Lcom/sec/android/app/camera/Camera$MainHandler;->mActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -88,8 +79,6 @@
 
     check-cast v0, Lcom/sec/android/app/camera/Camera;
 
-    .line 8576
-    .local v0, "activity":Lcom/sec/android/app/camera/Camera;
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/Camera;->isPausing()Z
@@ -98,7 +87,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 8577
     :cond_0
     const-string v1, "Camera6"
 
@@ -106,11 +94,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->secE(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8584
     :goto_0
     return-void
 
-    .line 8580
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -140,14 +126,11 @@
 
     invoke-static {v1}, Lcom/sec/android/app/TraceWrapper;->traceBegin(Ljava/lang/String;)V
 
-    .line 8581
     # invokes: Lcom/sec/android/app/camera/Camera;->handleMessage(Landroid/os/Message;)V
     invoke-static {v0, p1}, Lcom/sec/android/app/camera/Camera;->access$4400(Lcom/sec/android/app/camera/Camera;Landroid/os/Message;)V
 
-    .line 8582
     invoke-static {}, Lcom/sec/android/app/TraceWrapper;->traceEnd()V
 
-    .line 8583
     const-string v1, "Camera6"
 
     new-instance v2, Ljava/lang/StringBuilder;

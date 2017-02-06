@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/VisualInteraction;)V
     .locals 0
 
-    .prologue
-    .line 170
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$1;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,19 +36,15 @@
 # virtual methods
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 3
-    .param p1, "arg0"    # Landroid/view/animation/Animation;
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 173
     const-string v0, "Camera6VI"
 
     const-string v1, "mBlackOverlay onAnimationEnd"
 
     invoke-static {v0, v1}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 174
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$1;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     # getter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mBlackOverlay:Lcom/samsung/android/glview/GLRectangle;
@@ -62,7 +56,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLRectangle;->setVisibility(I)V
 
-    .line 175
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$1;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     # getter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mBlackOverlay:Lcom/samsung/android/glview/GLRectangle;
@@ -72,7 +65,6 @@
 
     invoke-virtual {v0, v2}, Lcom/samsung/android/glview/GLRectangle;->setAnimation(Landroid/view/animation/Animation;)V
 
-    .line 176
     # getter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mBlackOverlayGroupLock:Ljava/lang/Object;
     invoke-static {}, Lcom/sec/android/app/camera/menu/VisualInteraction;->access$100()Ljava/lang/Object;
 
@@ -80,7 +72,6 @@
 
     monitor-enter v1
 
-    .line 177
     :try_start_0
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$1;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
@@ -91,7 +82,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 178
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$1;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     # getter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mBlackOverlayParentViewGroup:Lcom/samsung/android/glview/GLViewGroup;
@@ -108,7 +98,6 @@
 
     invoke-virtual {v0, v2}, Lcom/samsung/android/glview/GLViewGroup;->removeView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 179
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$1;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     const/4 v2, 0x0
@@ -116,14 +105,11 @@
     # setter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mBlackOverlayParentViewGroup:Lcom/samsung/android/glview/GLViewGroup;
     invoke-static {v0, v2}, Lcom/sec/android/app/camera/menu/VisualInteraction;->access$202(Lcom/sec/android/app/camera/menu/VisualInteraction;Lcom/samsung/android/glview/GLViewGroup;)Lcom/samsung/android/glview/GLViewGroup;
 
-    .line 181
     :cond_0
     monitor-exit v1
 
-    .line 182
     return-void
 
-    .line 181
     :catchall_0
     move-exception v0
 
@@ -136,18 +122,12 @@
 
 .method public onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 0
-    .param p1, "arg0"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 186
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 0
-    .param p1, "arg0"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 190
     return-void
 .end method

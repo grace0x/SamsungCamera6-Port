@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/QuickView;)V
     .locals 0
 
-    .prologue
-    .line 104
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/QuickView$2;->this$0:Lcom/sec/android/app/camera/menu/QuickView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,8 +37,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 107
     const-string v0, "QuickView"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -70,7 +66,6 @@
 
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/QuickView$2;->this$0:Lcom/sec/android/app/camera/menu/QuickView;
 
     # getter for: Lcom/sec/android/app/camera/menu/QuickView;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -93,12 +88,10 @@
 
     if-nez v0, :cond_1
 
-    .line 117
     :cond_0
     :goto_0
     return-void
 
-    .line 111
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/QuickView$2;->this$0:Lcom/sec/android/app/camera/menu/QuickView;
 
@@ -120,14 +113,12 @@
 
     if-nez v0, :cond_2
 
-    .line 112
     const-string v0, "QuickView"
 
     const-string v1, "mLaunchGalleryRunnable : fail to launch Gallery"
 
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 114
     :cond_2
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/QuickView$2;->this$0:Lcom/sec/android/app/camera/menu/QuickView;
 
@@ -136,7 +127,6 @@
     # setter for: Lcom/sec/android/app/camera/menu/QuickView;->mLaunchGalleryType:Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/menu/QuickView;->access$102(Lcom/sec/android/app/camera/menu/QuickView;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 116
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/QuickView$2;->this$0:Lcom/sec/android/app/camera/menu/QuickView;
 
     # getter for: Lcom/sec/android/app/camera/menu/QuickView;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;

@@ -86,11 +86,7 @@
 # direct methods
 .method public constructor <init>(ILcom/sec/android/app/camera/interfaces/CameraSettings$RequestedMediaRecorderProfileInfo;Z)V
     .locals 11
-    .param p1, "resolutionId"    # I
-    .param p2, "requestedMediaRecorderProfileInfo"    # Lcom/sec/android/app/camera/interfaces/CameraSettings$RequestedMediaRecorderProfileInfo;
-    .param p3, "isUsingGPU"    # Z
 
-    .prologue
     const/4 v10, 0x7
 
     const/4 v9, 0x6
@@ -101,10 +97,8 @@
 
     const/16 v6, 0xa
 
-    .line 137
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 73
     const/16 v3, 0x10
 
     new-array v3, v3, [[I
@@ -229,32 +223,21 @@
 
     iput-object v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mProfileTable:[[I
 
-    .line 138
     const/4 v2, 0x4
 
-    .line 139
-    .local v2, "propertyIndex":I
     const/4 v0, 0x1
 
-    .line 140
-    .local v0, "bitrateIndex":I
     const/4 v1, 0x3
 
-    .line 142
-    .local v1, "fpsIndex":I
     sparse-switch p1, :sswitch_data_0
 
-    .line 193
     :goto_0
     if-eqz p3, :cond_0
 
-    .line 194
     const/4 v0, 0x2
 
-    .line 195
     const/4 v1, 0x4
 
-    .line 199
     :cond_0
     iget-object v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mProfileTable:[[I
 
@@ -264,7 +247,6 @@
 
     iput v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mVideoEncoder:I
 
-    .line 200
     iget-object v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mProfileTable:[[I
 
     aget-object v3, v3, v2
@@ -273,7 +255,6 @@
 
     iput v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mVideoBitrate:I
 
-    .line 201
     iget-object v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mProfileTable:[[I
 
     aget-object v3, v3, v2
@@ -282,7 +263,6 @@
 
     iput v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mVideoFps:I
 
-    .line 202
     iget-object v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mProfileTable:[[I
 
     aget-object v3, v3, v2
@@ -291,21 +271,18 @@
 
     iput v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mOutputFormat:I
 
-    .line 203
     invoke-static {p1}, Lcom/sec/android/app/camera/util/CameraResolution;->getIntWidth(I)I
 
     move-result v3
 
     iput v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mVideoWidth:I
 
-    .line 204
     invoke-static {p1}, Lcom/sec/android/app/camera/util/CameraResolution;->getIntHeight(I)I
 
     move-result v3
 
     iput v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mVideoHeight:I
 
-    .line 205
     iget-object v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mProfileTable:[[I
 
     aget-object v3, v3, v2
@@ -314,7 +291,6 @@
 
     iput v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mAudioEncoder:I
 
-    .line 206
     iget-object v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mProfileTable:[[I
 
     aget-object v3, v3, v2
@@ -323,7 +299,6 @@
 
     iput v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mAudioBitrate:I
 
-    .line 207
     iget-object v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mProfileTable:[[I
 
     aget-object v3, v3, v2
@@ -334,7 +309,6 @@
 
     iput v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mAudioChannels:I
 
-    .line 208
     iget-object v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mProfileTable:[[I
 
     aget-object v3, v3, v2
@@ -345,212 +319,162 @@
 
     iput v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mAudioSamplingRate:I
 
-    .line 210
     if-eqz p2, :cond_8
 
-    .line 211
     iget v3, p2, Lcom/sec/android/app/camera/interfaces/CameraSettings$RequestedMediaRecorderProfileInfo;->videoEncoder:I
 
     if-lez v3, :cond_1
 
-    .line 212
     iget v3, p2, Lcom/sec/android/app/camera/interfaces/CameraSettings$RequestedMediaRecorderProfileInfo;->videoEncoder:I
 
     iput v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mVideoEncoder:I
 
-    .line 215
     :cond_1
     iget v3, p2, Lcom/sec/android/app/camera/interfaces/CameraSettings$RequestedMediaRecorderProfileInfo;->videoBitrate:I
 
     if-lez v3, :cond_2
 
-    .line 216
     iget v3, p2, Lcom/sec/android/app/camera/interfaces/CameraSettings$RequestedMediaRecorderProfileInfo;->videoBitrate:I
 
     iput v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mVideoBitrate:I
 
-    .line 219
     :cond_2
     iget v3, p2, Lcom/sec/android/app/camera/interfaces/CameraSettings$RequestedMediaRecorderProfileInfo;->videoFps:I
 
     if-lez v3, :cond_3
 
-    .line 220
     iget v3, p2, Lcom/sec/android/app/camera/interfaces/CameraSettings$RequestedMediaRecorderProfileInfo;->videoFps:I
 
     iput v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mVideoFps:I
 
-    .line 223
     :cond_3
     iget v3, p2, Lcom/sec/android/app/camera/interfaces/CameraSettings$RequestedMediaRecorderProfileInfo;->outputFormat:I
 
     if-lez v3, :cond_4
 
-    .line 224
     iget v3, p2, Lcom/sec/android/app/camera/interfaces/CameraSettings$RequestedMediaRecorderProfileInfo;->outputFormat:I
 
     iput v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mOutputFormat:I
 
-    .line 227
     :cond_4
     iget v3, p2, Lcom/sec/android/app/camera/interfaces/CameraSettings$RequestedMediaRecorderProfileInfo;->audioEncoder:I
 
     if-lez v3, :cond_5
 
-    .line 228
     iget v3, p2, Lcom/sec/android/app/camera/interfaces/CameraSettings$RequestedMediaRecorderProfileInfo;->audioEncoder:I
 
     iput v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mAudioEncoder:I
 
-    .line 231
     :cond_5
     iget v3, p2, Lcom/sec/android/app/camera/interfaces/CameraSettings$RequestedMediaRecorderProfileInfo;->audioBitrate:I
 
     if-lez v3, :cond_6
 
-    .line 232
     iget v3, p2, Lcom/sec/android/app/camera/interfaces/CameraSettings$RequestedMediaRecorderProfileInfo;->audioBitrate:I
 
     iput v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mAudioBitrate:I
 
-    .line 235
     :cond_6
     iget v3, p2, Lcom/sec/android/app/camera/interfaces/CameraSettings$RequestedMediaRecorderProfileInfo;->audioChannels:I
 
     if-lez v3, :cond_7
 
-    .line 236
     iget v3, p2, Lcom/sec/android/app/camera/interfaces/CameraSettings$RequestedMediaRecorderProfileInfo;->audioChannels:I
 
     iput v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mAudioChannels:I
 
-    .line 239
     :cond_7
     iget v3, p2, Lcom/sec/android/app/camera/interfaces/CameraSettings$RequestedMediaRecorderProfileInfo;->audioSamplingRate:I
 
     if-lez v3, :cond_8
 
-    .line 240
     iget v3, p2, Lcom/sec/android/app/camera/interfaces/CameraSettings$RequestedMediaRecorderProfileInfo;->audioSamplingRate:I
 
     iput v3, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mAudioSamplingRate:I
 
-    .line 243
     :cond_8
     return-void
 
-    .line 144
     :sswitch_0
     const/16 v2, 0xb
 
-    .line 145
     goto/16 :goto_0
 
-    .line 147
     :sswitch_1
     const/4 v2, 0x0
 
-    .line 148
     goto/16 :goto_0
 
-    .line 150
     :sswitch_2
     const/4 v2, 0x1
 
-    .line 151
     goto/16 :goto_0
 
-    .line 153
     :sswitch_3
     const/4 v2, 0x2
 
-    .line 154
     goto/16 :goto_0
 
-    .line 156
     :sswitch_4
     const/4 v2, 0x3
 
-    .line 157
     goto/16 :goto_0
 
-    .line 159
     :sswitch_5
     const/16 v2, 0xf
 
-    .line 160
     goto/16 :goto_0
 
-    .line 162
     :sswitch_6
     const/4 v2, 0x4
 
-    .line 163
     goto/16 :goto_0
 
-    .line 165
     :sswitch_7
     const/4 v2, 0x5
 
-    .line 166
     goto/16 :goto_0
 
-    .line 168
     :sswitch_8
     const/16 v2, 0xa
 
-    .line 169
     goto/16 :goto_0
 
-    .line 171
     :sswitch_9
     const/4 v2, 0x6
 
-    .line 172
     goto/16 :goto_0
 
-    .line 174
     :sswitch_a
     const/4 v2, 0x7
 
-    .line 175
     goto/16 :goto_0
 
-    .line 177
     :sswitch_b
     const/16 v2, 0x9
 
-    .line 178
     goto/16 :goto_0
 
-    .line 180
     :sswitch_c
     const/16 v2, 0xc
 
-    .line 181
     goto/16 :goto_0
 
-    .line 183
     :sswitch_d
     const/16 v2, 0xd
 
-    .line 184
     goto/16 :goto_0
 
-    .line 186
     :sswitch_e
     const/16 v2, 0xe
 
-    .line 187
     goto/16 :goto_0
 
-    .line 189
     :sswitch_f
     const/16 v2, 0x8
 
     goto/16 :goto_0
 
-    .line 73
     :array_0
     .array-data 4
         0x2
@@ -775,7 +699,6 @@
         0xbb80
     .end array-data
 
-    .line 142
     :sswitch_data_0
     .sparse-switch
         0xb -> :sswitch_7
@@ -802,15 +725,12 @@
 .method public dumpProfile()V
     .locals 3
 
-    .prologue
-    .line 246
     const-string v0, "MediaRecorderProfile"
 
     const-string v1, "[Dump] camcorder inner profile"
 
     invoke-static {v0, v1}, Landroid/util/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 248
     const-string v0, "MediaRecorderProfile"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -835,7 +755,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 249
     const-string v0, "MediaRecorderProfile"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -860,7 +779,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 250
     const-string v0, "MediaRecorderProfile"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -885,7 +803,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 251
     const-string v0, "MediaRecorderProfile"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -910,7 +827,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 252
     const-string v0, "MediaRecorderProfile"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -935,7 +851,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 253
     const-string v0, "MediaRecorderProfile"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -960,7 +875,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 254
     const-string v0, "MediaRecorderProfile"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -985,7 +899,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 255
     const-string v0, "MediaRecorderProfile"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1010,7 +923,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 256
     const-string v0, "MediaRecorderProfile"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1035,7 +947,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 257
     const-string v0, "MediaRecorderProfile"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1060,15 +971,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 258
     return-void
 .end method
 
 .method public getAudioBitrate()I
     .locals 1
 
-    .prologue
-    .line 261
     iget v0, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mAudioBitrate:I
 
     return v0
@@ -1077,8 +985,6 @@
 .method public getAudioChannels()I
     .locals 1
 
-    .prologue
-    .line 265
     iget v0, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mAudioChannels:I
 
     return v0
@@ -1087,8 +993,6 @@
 .method public getAudioEncoder()I
     .locals 1
 
-    .prologue
-    .line 269
     iget v0, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mAudioEncoder:I
 
     return v0
@@ -1097,8 +1001,6 @@
 .method public getAudioSamplingRate()I
     .locals 1
 
-    .prologue
-    .line 273
     iget v0, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mAudioSamplingRate:I
 
     return v0
@@ -1107,8 +1009,6 @@
 .method public getOutputFormat()I
     .locals 1
 
-    .prologue
-    .line 277
     iget v0, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mOutputFormat:I
 
     return v0
@@ -1117,8 +1017,6 @@
 .method public getVideoBitrate()I
     .locals 1
 
-    .prologue
-    .line 281
     iget v0, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mVideoBitrate:I
 
     return v0
@@ -1127,8 +1025,6 @@
 .method public getVideoEncoder()I
     .locals 1
 
-    .prologue
-    .line 285
     iget v0, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mVideoEncoder:I
 
     return v0
@@ -1137,8 +1033,6 @@
 .method public getVideoFps()I
     .locals 1
 
-    .prologue
-    .line 289
     iget v0, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mVideoFps:I
 
     return v0
@@ -1147,8 +1041,6 @@
 .method public getVideoHeight()I
     .locals 1
 
-    .prologue
-    .line 293
     iget v0, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mVideoHeight:I
 
     return v0
@@ -1157,8 +1049,6 @@
 .method public getVideoWidth()I
     .locals 1
 
-    .prologue
-    .line 297
     iget v0, p0, Lcom/sec/android/app/camera/engine/MediaRecorderProfile;->mVideoWidth:I
 
     return v0

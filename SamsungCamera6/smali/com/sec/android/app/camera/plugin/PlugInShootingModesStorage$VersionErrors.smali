@@ -39,7 +39,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x3
 
     const/4 v4, 0x2
@@ -48,7 +47,6 @@
 
     const/4 v2, 0x0
 
-    .line 429
     new-instance v0, Lcom/sec/android/app/camera/plugin/PlugInShootingModesStorage$VersionErrors;
 
     const-string v1, "NO_ERROR"
@@ -81,7 +79,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/PlugInShootingModesStorage$VersionErrors;->DEVICE_UPDATE_NEEDED:Lcom/sec/android/app/camera/plugin/PlugInShootingModesStorage$VersionErrors;
 
-    .line 428
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/sec/android/app/camera/plugin/PlugInShootingModesStorage$VersionErrors;
@@ -115,8 +112,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 428
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -124,10 +119,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/sec/android/app/camera/plugin/PlugInShootingModesStorage$VersionErrors;
     .locals 1
-    .param p0, "name"    # Ljava/lang/String;
 
-    .prologue
-    .line 428
     const-class v0, Lcom/sec/android/app/camera/plugin/PlugInShootingModesStorage$VersionErrors;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -142,8 +134,6 @@
 .method public static values()[Lcom/sec/android/app/camera/plugin/PlugInShootingModesStorage$VersionErrors;
     .locals 1
 
-    .prologue
-    .line 428
     sget-object v0, Lcom/sec/android/app/camera/plugin/PlugInShootingModesStorage$VersionErrors;->$VALUES:[Lcom/sec/android/app/camera/plugin/PlugInShootingModesStorage$VersionErrors;
 
     invoke-virtual {v0}, [Lcom/sec/android/app/camera/plugin/PlugInShootingModesStorage$VersionErrors;->clone()Ljava/lang/Object;

@@ -76,15 +76,7 @@
 # direct methods
 .method protected constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;FFFFLcom/sec/android/app/camera/menu/MenuResourceDepot;)V
     .locals 6
-    .param p1, "cameraContext"    # Lcom/sec/android/app/camera/interfaces/CameraContext;
-    .param p2, "left"    # F
-    .param p3, "top"    # F
-    .param p4, "width"    # F
-    .param p5, "height"    # F
-    .param p6, "menuResourceDepot"    # Lcom/sec/android/app/camera/menu/MenuResourceDepot;
 
-    .prologue
-    .line 69
     invoke-interface {p1}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getGLContext()Lcom/samsung/android/glview/GLContext;
 
     move-result-object v1
@@ -101,7 +93,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/samsung/android/glview/GLViewGroup;-><init>(Lcom/samsung/android/glview/GLContext;FFFF)V
 
-    .line 44
     const v0, 0x7f0901fe
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -112,7 +103,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->SIDE_QUICK_SETTING_HEIGHT:I
 
-    .line 45
     const v0, 0x7f090202
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -123,7 +113,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->SIDE_QUICK_SETTING_POS_Y:I
 
-    .line 46
     const v0, 0x7f090200
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -134,7 +123,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->SIDE_QUICK_SETTING_ITEM_WIDTH:I
 
-    .line 47
     const v0, 0x7f0901ff
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -145,7 +133,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->SIDE_QUICK_SETTING_ITEM_HEIGHT:I
 
-    .line 48
     const v0, 0x7f09010c
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -156,7 +143,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->ANCHOR_WIDTH:I
 
-    .line 49
     const v0, 0x7f090108
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -167,7 +153,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->ANCHOR_HEIGHT:I
 
-    .line 50
     const v0, 0x7f090109
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -178,7 +163,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->ANCHOR_LEFT_PADDING:I
 
-    .line 51
     iget v0, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->SIDE_QUICK_SETTING_ITEM_WIDTH:I
 
     iget v1, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->ANCHOR_LEFT_PADDING:I
@@ -187,7 +171,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->ANCHOR_POS_X:I
 
-    .line 52
     iget v0, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->SIDE_QUICK_SETTING_ITEM_HEIGHT:I
 
     iget v1, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->ANCHOR_HEIGHT:I
@@ -202,7 +185,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->ANCHOR_POS_Y_OFFSET:I
 
-    .line 54
     const v0, 0x7f0a0042
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getInteger(I)I
@@ -211,48 +193,38 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->SIDE_QUICK_SETTING_ITEM_MAX_COUNT:I
 
-    .line 57
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mAnchors:Landroid/util/SparseArray;
 
-    .line 65
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mCurrentAddItemList:Ljava/util/ArrayList;
 
-    .line 66
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mQuickMenuItemList:Landroid/util/SparseArray;
 
-    .line 71
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
-    .line 72
     iput-object p6, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mMenuResourceDepot:Lcom/sec/android/app/camera/menu/MenuResourceDepot;
 
-    .line 74
     invoke-direct {p0}, Lcom/sec/android/app/camera/menu/SideQuickSetting;->initQuickMenuItem()V
 
-    .line 75
     invoke-direct {p0}, Lcom/sec/android/app/camera/menu/SideQuickSetting;->showQuickMenuItems()V
 
-    .line 76
     return-void
 .end method
 
 .method private initQuickMenuItem()V
     .locals 31
 
-    .prologue
-    .line 172
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mMenuResourceDepot:Lcom/sec/android/app/camera/menu/MenuResourceDepot;
@@ -263,11 +235,8 @@
 
     move-result-object v28
 
-    .line 174
-    .local v28, "mResourceBase":Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;
     const/16 v27, 0x0
 
-    .local v27, "i":I
     :goto_0
     invoke-virtual/range {v28 .. v28}, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;->getNumberOfItems()I
 
@@ -277,7 +246,6 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 175
     move-object/from16 v0, v28
 
     move/from16 v1, v27
@@ -286,8 +254,6 @@
 
     move-result-object v8
 
-    .line 176
-    .local v8, "bundle":Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
     invoke-virtual {v8}, Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;->getCommandId()I
 
     move-result v3
@@ -304,8 +270,6 @@
 
     move-result-object v9
 
-    .line 177
-    .local v9, "command":Lcom/sec/android/app/camera/command/MenuCommand;
     new-instance v2, Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;
 
     move-object/from16 v0, p0
@@ -330,18 +294,14 @@
 
     invoke-direct/range {v2 .. v9}, Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;FFFFLcom/sec/android/app/camera/resourcedata/MenuResourceBundle;Lcom/sec/android/app/camera/command/MenuCommand;)V
 
-    .line 178
-    .local v2, "item":Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;
     const/4 v3, 0x4
 
     invoke-virtual {v2, v3}, Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;->setVisibility(I)V
 
-    .line 179
     move-object/from16 v0, p0
 
     invoke-virtual {v2, v0}, Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;->setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V
 
-    .line 180
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mQuickMenuItemList:Landroid/util/SparseArray;
@@ -352,7 +312,6 @@
 
     invoke-virtual {v3, v4, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 182
     new-instance v10, Lcom/samsung/android/glview/GLImage;
 
     move-object/from16 v0, p0
@@ -389,13 +348,10 @@
 
     invoke-direct/range {v10 .. v17}, Lcom/samsung/android/glview/GLImage;-><init>(Lcom/samsung/android/glview/GLContext;FFFFZI)V
 
-    .line 184
-    .local v10, "anchor":Lcom/samsung/android/glview/GLImage;
     const/4 v3, 0x4
 
     invoke-virtual {v10, v3}, Lcom/samsung/android/glview/GLImage;->setVisibility(I)V
 
-    .line 185
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mAnchors:Landroid/util/SparseArray;
@@ -406,16 +362,10 @@
 
     invoke-virtual {v3, v4, v10}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 174
     add-int/lit8 v27, v27, 0x1
 
     goto :goto_0
 
-    .line 188
-    .end local v2    # "item":Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;
-    .end local v8    # "bundle":Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
-    .end local v9    # "command":Lcom/sec/android/app/camera/command/MenuCommand;
-    .end local v10    # "anchor":Lcom/samsung/android/glview/GLImage;
     :cond_0
     const/16 v3, 0x24
 
@@ -423,8 +373,6 @@
 
     move-result-object v30
 
-    .line 189
-    .local v30, "resSwitchCameraIDs":Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
     new-instance v17, Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
 
     const/4 v3, 0x6
@@ -479,8 +427,6 @@
 
     invoke-direct {v0, v3}, Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;-><init>([I)V
 
-    .line 191
-    .local v17, "switchCameraBundle":Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
     const/16 v3, 0x24
 
     move-object/from16 v0, p0
@@ -495,8 +441,6 @@
 
     move-result-object v18
 
-    .line 192
-    .local v18, "cmdSwitchCamera":Lcom/sec/android/app/camera/command/MenuCommand;
     new-instance v11, Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;
 
     move-object/from16 v0, p0
@@ -537,7 +481,6 @@
 
     iput-object v11, v0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mSwitchCameraButton:Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;
 
-    .line 194
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mSwitchCameraButton:Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;
@@ -546,15 +489,12 @@
 
     invoke-virtual {v3, v4}, Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;->setVisibility(I)V
 
-    .line 196
     const/16 v3, 0x78
 
     invoke-static {v3}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->get(I)Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
     move-result-object v29
 
-    .line 197
-    .local v29, "resSettingsIDs":Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
     new-instance v25, Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
 
     const/4 v3, 0x6
@@ -609,8 +549,6 @@
 
     invoke-direct {v0, v3}, Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;-><init>([I)V
 
-    .line 199
-    .local v25, "settingBundle":Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
     const/16 v3, 0x78
 
     move-object/from16 v0, p0
@@ -625,8 +563,6 @@
 
     move-result-object v26
 
-    .line 200
-    .local v26, "cmdSettings":Lcom/sec/android/app/camera/command/MenuCommand;
     new-instance v19, Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;
 
     move-object/from16 v0, p0
@@ -663,7 +599,6 @@
 
     iput-object v0, v1, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mSettingButton:Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;
 
-    .line 201
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mSettingButton:Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;
@@ -672,18 +607,14 @@
 
     invoke-virtual {v3, v4}, Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;->setVisibility(I)V
 
-    .line 202
     return-void
 .end method
 
 .method private showQuickMenuItems()V
     .locals 3
 
-    .prologue
-    .line 205
     const/4 v0, 0x0
 
-    .local v0, "i":I
     :goto_0
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mCurrentAddItemList:Ljava/util/ArrayList;
 
@@ -693,7 +624,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 206
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mCurrentAddItemList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -706,7 +636,6 @@
 
     invoke-virtual {v1, v2}, Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;->setAlpha(F)V
 
-    .line 207
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mCurrentAddItemList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -719,12 +648,10 @@
 
     invoke-virtual {v1, v2}, Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;->setVisibility(I)V
 
-    .line 205
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 209
     :cond_0
     return-void
 .end method
@@ -734,8 +661,6 @@
 .method public clearSideQuickSetting()V
     .locals 4
 
-    .prologue
-    .line 79
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mCurrentAddItemList:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
@@ -744,10 +669,8 @@
 
     if-nez v2, :cond_1
 
-    .line 80
     const/4 v0, 0x0
 
-    .local v0, "i":I
     :goto_0
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mCurrentAddItemList:Ljava/util/ArrayList;
 
@@ -757,7 +680,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 81
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mCurrentAddItemList:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -766,11 +688,8 @@
 
     check-cast v1, Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;
 
-    .line 82
-    .local v1, "previousItem":Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;
     invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/menu/SideQuickSetting;->removeView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 83
     iget-object v3, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mAnchors:Landroid/util/SparseArray;
 
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mCurrentAddItemList:Ljava/util/ArrayList;
@@ -793,30 +712,22 @@
 
     invoke-virtual {p0, v2}, Lcom/sec/android/app/camera/menu/SideQuickSetting;->removeView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 80
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 85
-    .end local v1    # "previousItem":Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;
     :cond_0
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mCurrentAddItemList:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 87
-    .end local v0    # "i":I
     :cond_1
     return-void
 .end method
 
 .method public final getAnchor(I)Lcom/samsung/android/glview/GLImage;
     .locals 1
-    .param p1, "commandId"    # I
 
-    .prologue
-    .line 95
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mAnchors:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -830,11 +741,7 @@
 
 .method public onTouch(Lcom/samsung/android/glview/GLView;Landroid/view/MotionEvent;)Z
     .locals 1
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "event"    # Landroid/view/MotionEvent;
 
-    .prologue
-    .line 100
     const/4 v0, 0x0
 
     return v0
@@ -843,11 +750,8 @@
 .method protected refreshItem()V
     .locals 2
 
-    .prologue
-    .line 163
     const/4 v0, 0x0
 
-    .local v0, "i":I
     :goto_0
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mCurrentAddItemList:Ljava/util/ArrayList;
 
@@ -857,7 +761,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 164
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mCurrentAddItemList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -868,54 +771,38 @@
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;->refreshItem()V
 
-    .line 163
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 166
     :cond_0
     return-void
 .end method
 
 .method public varargs updateSideQuickSetting([I)V
     .locals 11
-    .param p1, "ids"    # [I
 
-    .prologue
-    .line 111
     iget v8, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->SIDE_QUICK_SETTING_ITEM_MAX_COUNT:I
 
     new-array v6, v8, [I
 
-    .line 112
-    .local v6, "updateCommandIDs":[I
     const/4 v7, 0x0
 
-    .line 113
-    .local v7, "updateIDsCount":I
     const/4 v3, 0x0
 
-    .line 114
-    .local v3, "interval":I
     const/4 v5, 0x0
 
-    .line 116
-    .local v5, "nextItemPosY":I
     array-length v8, p1
 
     if-eqz v8, :cond_2
 
-    .line 117
     const/4 v2, 0x0
 
-    .local v2, "i":I
     :goto_0
     array-length v8, p1
 
     if-ge v2, v8, :cond_1
 
-    .line 118
     iget-object v8, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mQuickMenuItemList:Landroid/util/SparseArray;
 
     aget v9, p1, v2
@@ -926,21 +813,17 @@
 
     if-eqz v8, :cond_0
 
-    .line 119
     aget v8, p1, v2
 
     aput v8, v6, v7
 
-    .line 120
     add-int/lit8 v7, v7, 0x1
 
-    .line 117
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 123
     :cond_1
     iget v8, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->SIDE_QUICK_SETTING_HEIGHT:I
 
@@ -956,21 +839,16 @@
 
     div-int v3, v8, v9
 
-    .line 124
     iget v8, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->SIDE_QUICK_SETTING_ITEM_HEIGHT:I
 
     add-int v5, v8, v3
 
-    .line 127
-    .end local v2    # "i":I
     :cond_2
     const/4 v2, 0x0
 
-    .restart local v2    # "i":I
     :goto_1
     if-ge v2, v7, :cond_5
 
-    .line 129
     :try_start_0
     iget-object v8, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mQuickMenuItemList:Landroid/util/SparseArray;
 
@@ -982,33 +860,26 @@
 
     check-cast v4, Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;
 
-    .line 131
-    .local v4, "item":Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;
     if-eqz v4, :cond_4
 
-    .line 132
     const/4 v8, 0x0
 
     invoke-virtual {v4, v8}, Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;->setDim(Z)V
 
-    .line 133
     invoke-virtual {v4}, Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;->refreshItem()V
 
-    .line 134
     const/4 v8, 0x0
 
     int-to-float v9, v5
 
     invoke-virtual {v4, v8, v9}, Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;->moveLayoutAbsolute(FF)V
 
-    .line 135
     invoke-static {}, Lcom/samsung/android/glview/GLContext;->getLastOrientation()I
 
     move-result v8
 
     invoke-virtual {v4, v8}, Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;->setOrientation(I)V
 
-    .line 137
     iget-object v8, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mAnchors:Landroid/util/SparseArray;
 
     aget v9, v6, v2
@@ -1019,11 +890,8 @@
 
     check-cast v0, Lcom/samsung/android/glview/GLImage;
 
-    .line 138
-    .local v0, "anchor":Lcom/samsung/android/glview/GLImage;
     if-eqz v0, :cond_3
 
-    .line 139
     const/4 v8, 0x0
 
     iget v9, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->ANCHOR_POS_Y_OFFSET:I
@@ -1034,7 +902,6 @@
 
     invoke-virtual {v0, v8, v9}, Lcom/samsung/android/glview/GLImage;->moveLayoutAbsolute(FF)V
 
-    .line 142
     :cond_3
     iget v8, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->SIDE_QUICK_SETTING_ITEM_HEIGHT:I
 
@@ -1042,24 +909,17 @@
 
     add-int/2addr v5, v8
 
-    .line 143
     iget-object v8, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mCurrentAddItemList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 144
     invoke-virtual {p0, v4}, Lcom/sec/android/app/camera/menu/SideQuickSetting;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 127
-    .end local v0    # "anchor":Lcom/samsung/android/glview/GLImage;
-    .end local v4    # "item":Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;
     :goto_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 146
-    .restart local v4    # "item":Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;
     :cond_4
     const-string v8, "SideQuickSetting"
 
@@ -1071,13 +931,9 @@
 
     goto :goto_2
 
-    .line 148
-    .end local v4    # "item":Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;
     :catch_0
     move-exception v1
 
-    .line 149
-    .local v1, "ex":Ljava/lang/IndexOutOfBoundsException;
     const-string v8, "SideQuickSetting"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -1102,8 +958,6 @@
 
     goto :goto_2
 
-    .line 153
-    .end local v1    # "ex":Ljava/lang/IndexOutOfBoundsException;
     :cond_5
     iget-object v8, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mCurrentAddItemList:Ljava/util/ArrayList;
 
@@ -1111,26 +965,21 @@
 
     invoke-virtual {v8, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 154
     iget-object v8, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mSwitchCameraButton:Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;
 
     invoke-virtual {p0, v8}, Lcom/sec/android/app/camera/menu/SideQuickSetting;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 156
     iget-object v8, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mCurrentAddItemList:Ljava/util/ArrayList;
 
     iget-object v9, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mSettingButton:Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;
 
     invoke-virtual {v8, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 157
     iget-object v8, p0, Lcom/sec/android/app/camera/menu/SideQuickSetting;->mSettingButton:Lcom/sec/android/app/camera/widget/gl/SideQuickSettingItem;
 
     invoke-virtual {p0, v8}, Lcom/sec/android/app/camera/menu/SideQuickSetting;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 159
     invoke-direct {p0}, Lcom/sec/android/app/camera/menu/SideQuickSetting;->showQuickMenuItems()V
 
-    .line 160
     return-void
 .end method

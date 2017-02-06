@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/CameraDialog$CustomDialog;)V
     .locals 0
 
-    .prologue
-    .line 824
     iput-object p1, p0, Lcom/sec/android/app/camera/CameraDialog$CustomDialog$1;->this$1:Lcom/sec/android/app/camera/CameraDialog$CustomDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,11 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .param p1, "dialog"    # Landroid/content/DialogInterface;
-    .param p2, "which"    # I
 
-    .prologue
-    .line 827
     # getter for: Lcom/sec/android/app/camera/CameraDialog;->mCameraDialogListener:Lcom/sec/android/app/camera/interfaces/CameraContext$CameraDialogListener;
     invoke-static {}, Lcom/sec/android/app/camera/CameraDialog;->access$400()Lcom/sec/android/app/camera/interfaces/CameraContext$CameraDialogListener;
 
@@ -50,7 +44,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 828
     # getter for: Lcom/sec/android/app/camera/CameraDialog;->mCameraDialogListener:Lcom/sec/android/app/camera/interfaces/CameraContext$CameraDialogListener;
     invoke-static {}, Lcom/sec/android/app/camera/CameraDialog;->access$400()Lcom/sec/android/app/camera/interfaces/CameraContext$CameraDialogListener;
 
@@ -65,7 +58,6 @@
 
     invoke-interface {v0, v1}, Lcom/sec/android/app/camera/interfaces/CameraContext$CameraDialogListener;->onNegativeButtonClicked(I)V
 
-    .line 830
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraDialog$CustomDialog$1;->this$1:Lcom/sec/android/app/camera/CameraDialog$CustomDialog;
 
@@ -76,7 +68,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 831
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraDialog$CustomDialog$1;->this$1:Lcom/sec/android/app/camera/CameraDialog$CustomDialog;
 
     # getter for: Lcom/sec/android/app/camera/CameraDialog$CustomDialog;->mNegativeButtonListener:Landroid/content/DialogInterface$OnClickListener;
@@ -86,7 +77,6 @@
 
     invoke-interface {v0, p1, p2}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
-    .line 833
     :cond_1
     return-void
 .end method

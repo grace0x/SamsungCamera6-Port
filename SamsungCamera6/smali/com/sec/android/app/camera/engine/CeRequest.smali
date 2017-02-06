@@ -211,8 +211,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 148
     const/16 v0, 0xa
 
     new-array v0, v0, [Lcom/sec/android/app/camera/engine/CeRequest;
@@ -224,110 +222,79 @@
 
 .method public constructor <init>(ILjava/lang/Object;)V
     .locals 1
-    .param p1, "request"    # I
-    .param p2, "param"    # Ljava/lang/Object;
 
-    .prologue
-    .line 153
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 149
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/android/app/camera/engine/CeRequest;->mReserved:Z
 
-    .line 151
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/engine/CeRequest;->mParam:Ljava/lang/Object;
 
-    .line 154
     iput p1, p0, Lcom/sec/android/app/camera/engine/CeRequest;->mRequest:I
 
-    .line 155
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CeRequest;->mParam:Ljava/lang/Object;
 
-    .line 156
     return-void
 .end method
 
 .method public static obtainCeRequest(ILjava/lang/Object;)Lcom/sec/android/app/camera/engine/CeRequest;
     .locals 4
-    .param p0, "request"    # I
-    .param p1, "param"    # Ljava/lang/Object;
 
-    .prologue
     const/4 v3, 0x1
 
-    .line 159
     const/4 v1, 0x0
 
-    .line 160
-    .local v1, "req":Lcom/sec/android/app/camera/engine/CeRequest;
     const/4 v0, 0x0
 
-    .local v0, "i":I
     :goto_0
     const/16 v2, 0xa
 
     if-ge v0, v2, :cond_2
 
-    .line 161
     sget-object v2, Lcom/sec/android/app/camera/engine/CeRequest;->mPool:[Lcom/sec/android/app/camera/engine/CeRequest;
 
     aget-object v1, v2, v0
 
-    .line 162
     if-nez v1, :cond_0
 
-    .line 163
     new-instance v1, Lcom/sec/android/app/camera/engine/CeRequest;
 
-    .end local v1    # "req":Lcom/sec/android/app/camera/engine/CeRequest;
     invoke-direct {v1, p0, p1}, Lcom/sec/android/app/camera/engine/CeRequest;-><init>(ILjava/lang/Object;)V
 
-    .line 164
-    .restart local v1    # "req":Lcom/sec/android/app/camera/engine/CeRequest;
     iput-boolean v3, v1, Lcom/sec/android/app/camera/engine/CeRequest;->mReserved:Z
 
-    .line 165
     sget-object v2, Lcom/sec/android/app/camera/engine/CeRequest;->mPool:[Lcom/sec/android/app/camera/engine/CeRequest;
 
     aput-object v1, v2, v0
 
     move-object v2, v1
 
-    .line 175
     :goto_1
     return-object v2
 
-    .line 168
     :cond_0
     iget-boolean v2, v1, Lcom/sec/android/app/camera/engine/CeRequest;->mReserved:Z
 
     if-nez v2, :cond_1
 
-    .line 169
     iput p0, v1, Lcom/sec/android/app/camera/engine/CeRequest;->mRequest:I
 
-    .line 170
     iput-object p1, v1, Lcom/sec/android/app/camera/engine/CeRequest;->mParam:Ljava/lang/Object;
 
-    .line 171
     iput-boolean v3, v1, Lcom/sec/android/app/camera/engine/CeRequest;->mReserved:Z
 
     move-object v2, v1
 
-    .line 172
     goto :goto_1
 
-    .line 160
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 175
     :cond_2
     new-instance v2, Lcom/sec/android/app/camera/engine/CeRequest;
 
@@ -340,22 +307,15 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
-    .param p1, "o"    # Ljava/lang/Object;
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 180
     if-nez p1, :cond_1
 
-    .line 190
-    .end local p1    # "o":Ljava/lang/Object;
     :cond_0
     :goto_0
     return v0
 
-    .line 183
-    .restart local p1    # "o":Ljava/lang/Object;
     :cond_1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -367,17 +327,14 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 187
     check-cast p1, Lcom/sec/android/app/camera/engine/CeRequest;
 
-    .end local p1    # "o":Ljava/lang/Object;
     iget v1, p1, Lcom/sec/android/app/camera/engine/CeRequest;->mRequest:I
 
     iget v2, p0, Lcom/sec/android/app/camera/engine/CeRequest;->mRequest:I
 
     if-ne v1, v2, :cond_0
 
-    .line 188
     const/4 v0, 0x1
 
     goto :goto_0
@@ -386,8 +343,6 @@
 .method public getParam()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 194
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/CeRequest;->mParam:Ljava/lang/Object;
 
     return-object v0
@@ -396,8 +351,6 @@
 .method public getRequest()I
     .locals 1
 
-    .prologue
-    .line 198
     iget v0, p0, Lcom/sec/android/app/camera/engine/CeRequest;->mRequest:I
 
     return v0
@@ -406,8 +359,6 @@
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 207
     iget v0, p0, Lcom/sec/android/app/camera/engine/CeRequest;->mRequest:I
 
     return v0
@@ -415,12 +366,8 @@
 
 .method public setRequest(I)V
     .locals 0
-    .param p1, "request"    # I
 
-    .prologue
-    .line 202
     iput p1, p0, Lcom/sec/android/app/camera/engine/CeRequest;->mRequest:I
 
-    .line 203
     return-void
 .end method

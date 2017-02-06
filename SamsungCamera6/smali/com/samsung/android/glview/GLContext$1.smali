@@ -22,8 +22,6 @@
 .method constructor <init>(Lcom/samsung/android/glview/GLContext;)V
     .locals 0
 
-    .prologue
-    .line 226
     iput-object p1, p0, Lcom/samsung/android/glview/GLContext$1;->this$0:Lcom/samsung/android/glview/GLContext;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,11 +33,7 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
-    .param p1, "context"    # Landroid/content/Context;
-    .param p2, "intent"    # Landroid/content/Intent;
 
-    .prologue
-    .line 229
     iget-object v1, p0, Lcom/samsung/android/glview/GLContext$1;->this$0:Lcom/samsung/android/glview/GLContext;
 
     invoke-virtual {v1}, Lcom/samsung/android/glview/GLContext;->isFocusNavigationEnabled()Z
@@ -54,12 +48,10 @@
 
     if-nez v1, :cond_1
 
-    .line 250
     :cond_0
     :goto_0
     return-void
 
-    .line 232
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -71,13 +63,10 @@
 
     move-result v0
 
-    .line 234
-    .local v0, "gestureId":I
     packed-switch v0, :pswitch_data_0
 
     goto :goto_0
 
-    .line 242
     :pswitch_0
     iget-object v1, p0, Lcom/samsung/android/glview/GLContext$1;->this$0:Lcom/samsung/android/glview/GLContext;
 
@@ -87,7 +76,6 @@
 
     goto :goto_0
 
-    .line 236
     :pswitch_1
     iget-object v1, p0, Lcom/samsung/android/glview/GLContext$1;->this$0:Lcom/samsung/android/glview/GLContext;
 
@@ -97,7 +85,6 @@
 
     goto :goto_0
 
-    .line 239
     :pswitch_2
     iget-object v1, p0, Lcom/samsung/android/glview/GLContext$1;->this$0:Lcom/samsung/android/glview/GLContext;
 
@@ -107,7 +94,6 @@
 
     goto :goto_0
 
-    .line 245
     :pswitch_3
     iget-object v1, p0, Lcom/samsung/android/glview/GLContext$1;->this$0:Lcom/samsung/android/glview/GLContext;
 
@@ -117,7 +103,6 @@
 
     goto :goto_0
 
-    .line 234
     nop
 
     :pswitch_data_0

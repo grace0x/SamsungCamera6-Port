@@ -22,8 +22,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie;)V
     .locals 0
 
-    .prologue
-    .line 269
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie$1;->this$0:Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,21 +33,15 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 7
-    .param p1, "context"    # Landroid/content/Context;
-    .param p2, "intent"    # Landroid/content/Intent;
 
-    .prologue
     const/4 v2, 0x0
 
     const/4 v3, 0x1
 
-    .line 272
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 273
-    .local v0, "action":Ljava/lang/String;
     const-string v1, "MotionWideSelfie"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -72,7 +64,6 @@
 
     invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 275
     const/4 v1, -0x1
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -85,11 +76,9 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 298
     :goto_1
     return-void
 
-    .line 275
     :sswitch_0
     const-string v4, "camera.action.COVER_DETACHED"
 
@@ -142,7 +131,6 @@
 
     goto :goto_0
 
-    .line 277
     :pswitch_0
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie$1;->this$0:Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie;
 
@@ -151,7 +139,6 @@
 
     goto :goto_1
 
-    .line 280
     :pswitch_1
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie$1;->this$0:Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie;
 
@@ -172,7 +159,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 281
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie$1;->this$0:Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -218,7 +204,6 @@
 
     invoke-interface {v1, v3, v4, v5}, Lcom/sec/android/app/camera/interfaces/CameraContext;->showCameraDialog(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 285
     :cond_1
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie$1;->this$0:Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie;
 
@@ -227,7 +212,6 @@
 
     goto :goto_1
 
-    .line 289
     :pswitch_2
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie$1;->this$0:Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie;
 
@@ -238,7 +222,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 290
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie$1;->this$0:Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -259,14 +242,12 @@
 
     invoke-static {v1, v2}, Lcom/sec/android/app/camera/util/CameraLocalBroadcastManager;->unregister(Landroid/content/Context;Landroid/content/BroadcastReceiver;)V
 
-    .line 292
     :cond_2
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie$1;->this$0:Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie;
 
     # invokes: Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie;->clearMessageHandler()V
     invoke-static {v1}, Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie;->access$300(Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie;)V
 
-    .line 293
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie$1;->this$0:Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/MotionWideSelfie;->mEngine:Lcom/sec/android/app/camera/interfaces/Engine;
@@ -280,7 +261,6 @@
 
     goto/16 :goto_1
 
-    .line 275
     nop
 
     :sswitch_data_0

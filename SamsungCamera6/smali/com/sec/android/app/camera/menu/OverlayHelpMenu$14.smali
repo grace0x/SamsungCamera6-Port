@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/OverlayHelpMenu;)V
     .locals 0
 
-    .prologue
-    .line 655
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/OverlayHelpMenu$14;->this$0:Lcom/sec/android/app/camera/menu/OverlayHelpMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,8 +37,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 658
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/OverlayHelpMenu$14;->this$0:Lcom/sec/android/app/camera/menu/OverlayHelpMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/OverlayHelpMenu;->mPalmCaptureGuideView:Landroid/view/View;
@@ -50,7 +46,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 659
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/OverlayHelpMenu$14;->this$0:Lcom/sec/android/app/camera/menu/OverlayHelpMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/OverlayHelpMenu;->mPalmCaptureGuideView:Landroid/view/View;
@@ -62,7 +57,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 660
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/OverlayHelpMenu$14;->this$0:Lcom/sec/android/app/camera/menu/OverlayHelpMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/OverlayHelpMenu;->mPalmCaptureGuideView:Landroid/view/View;
@@ -76,7 +70,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 661
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/OverlayHelpMenu$14;->this$0:Lcom/sec/android/app/camera/menu/OverlayHelpMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/OverlayHelpMenu;->mPalmCaptureGuideView:Landroid/view/View;
@@ -99,7 +92,6 @@
 
     invoke-interface {v0, v1}, Landroid/view/ViewManager;->removeView(Landroid/view/View;)V
 
-    .line 663
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/OverlayHelpMenu$14;->this$0:Lcom/sec/android/app/camera/menu/OverlayHelpMenu;
 
@@ -108,7 +100,6 @@
     # setter for: Lcom/sec/android/app/camera/menu/OverlayHelpMenu;->mPalmCaptureGuideView:Landroid/view/View;
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/menu/OverlayHelpMenu;->access$1802(Lcom/sec/android/app/camera/menu/OverlayHelpMenu;Landroid/view/View;)Landroid/view/View;
 
-    .line 665
     :cond_1
     return-void
 .end method

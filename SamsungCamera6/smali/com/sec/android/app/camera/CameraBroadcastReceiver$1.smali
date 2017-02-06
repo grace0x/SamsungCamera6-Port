@@ -22,8 +22,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/CameraBroadcastReceiver;)V
     .locals 0
 
-    .prologue
-    .line 69
     iput-object p1, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,21 +33,15 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 9
-    .param p1, "context"    # Landroid/content/Context;
-    .param p2, "intent"    # Landroid/content/Intent;
 
-    .prologue
     const/4 v4, 0x0
 
     const/4 v5, 0x1
 
-    .line 73
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 74
-    .local v0, "action":Ljava/lang/String;
     const-string v6, "CameraBroadcastReceiver"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -78,7 +70,6 @@
 
     invoke-static {v6, v7}, Landroid/util/secutil/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 75
     iget-object v6, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
     iget-object v6, v6, Lcom/sec/android/app/camera/CameraBroadcastReceiver;->mCameraContext:Lcom/sec/android/app/camera/Camera;
@@ -99,7 +90,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 76
     :cond_0
     const-string v6, "CameraBroadcastReceiver"
 
@@ -107,7 +97,6 @@
 
     invoke-static {v6, v7}, Landroid/util/secutil/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
     :cond_1
     const-string v6, "POWER_OFF_ANIMATION_START"
 
@@ -125,7 +114,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 80
     :cond_2
     iget-object v4, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
@@ -141,7 +129,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 81
     iget-object v4, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
     iget-object v4, v4, Lcom/sec/android/app/camera/CameraBroadcastReceiver;->mCameraContext:Lcom/sec/android/app/camera/Camera;
@@ -152,7 +139,6 @@
 
     invoke-interface {v4}, Lcom/sec/android/app/camera/interfaces/Engine;->cancelShutterTimer()V
 
-    .line 84
     :cond_3
     new-instance v4, Landroid/content/Intent;
 
@@ -162,13 +148,11 @@
 
     invoke-static {p1, v4}, Lcom/sec/android/app/camera/util/CameraLocalBroadcastManager;->send(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 151
     :cond_4
     :goto_0
     :pswitch_0
     return-void
 
-    .line 85
     :cond_5
     const-string v6, "android.intent.action.BATTERY_CHANGED"
 
@@ -178,7 +162,6 @@
 
     if-eqz v6, :cond_6
 
-    .line 86
     iget-object v4, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
     iget-object v4, v4, Lcom/sec/android/app/camera/CameraBroadcastReceiver;->mCameraContext:Lcom/sec/android/app/camera/Camera;
@@ -187,7 +170,6 @@
 
     goto :goto_0
 
-    .line 87
     :cond_6
     const-string v6, "android.intent.action.BATTERY_LOW"
 
@@ -197,7 +179,6 @@
 
     if-eqz v6, :cond_7
 
-    .line 88
     iget-object v4, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
     iget-object v4, v4, Lcom/sec/android/app/camera/CameraBroadcastReceiver;->mCameraContext:Lcom/sec/android/app/camera/Camera;
@@ -206,7 +187,6 @@
 
     goto :goto_0
 
-    .line 89
     :cond_7
     const-string v6, "android.intent.action.ACTION_POWER_CONNECTED"
 
@@ -216,7 +196,6 @@
 
     if-eqz v6, :cond_8
 
-    .line 90
     iget-object v4, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
     iget-object v4, v4, Lcom/sec/android/app/camera/CameraBroadcastReceiver;->mCameraContext:Lcom/sec/android/app/camera/Camera;
@@ -225,7 +204,6 @@
 
     goto :goto_0
 
-    .line 91
     :cond_8
     const-string v6, "android.intent.action.MEDIA_SCANNER_FINISHED"
 
@@ -235,14 +213,12 @@
 
     if-eqz v6, :cond_9
 
-    .line 92
     iget-object v4, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
     iget-object v4, v4, Lcom/sec/android/app/camera/CameraBroadcastReceiver;->mCameraContext:Lcom/sec/android/app/camera/Camera;
 
     invoke-virtual {v4}, Lcom/sec/android/app/camera/Camera;->updateLatestMedia()V
 
-    .line 93
     iget-object v4, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
     iget-object v4, v4, Lcom/sec/android/app/camera/CameraBroadcastReceiver;->mCameraContext:Lcom/sec/android/app/camera/Camera;
@@ -251,7 +227,6 @@
 
     goto :goto_0
 
-    .line 94
     :cond_9
     const-string v6, "android.intent.action.ACTION_ASSISTIVE_ON_WIDGETUPDATE"
 
@@ -261,7 +236,6 @@
 
     if-eqz v6, :cond_a
 
-    .line 95
     iget-object v4, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
     iget-object v4, v4, Lcom/sec/android/app/camera/CameraBroadcastReceiver;->mCameraContext:Lcom/sec/android/app/camera/Camera;
@@ -274,7 +248,6 @@
 
     goto :goto_0
 
-    .line 96
     :cond_a
     const-string v6, "android.intent.action.ACTION_ASSISTIVE_OFF_WIDGETUPDATE"
 
@@ -284,7 +257,6 @@
 
     if-eqz v6, :cond_b
 
-    .line 97
     iget-object v5, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
     iget-object v5, v5, Lcom/sec/android/app/camera/CameraBroadcastReceiver;->mCameraContext:Lcom/sec/android/app/camera/Camera;
@@ -297,7 +269,6 @@
 
     goto :goto_0
 
-    .line 98
     :cond_b
     const-string v6, "com.samsung.android.action.SHOOTING_MODES_CHANGED"
 
@@ -307,7 +278,6 @@
 
     if-eqz v6, :cond_c
 
-    .line 99
     iget-object v4, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
     iget-object v4, v4, Lcom/sec/android/app/camera/CameraBroadcastReceiver;->mCameraContext:Lcom/sec/android/app/camera/Camera;
@@ -316,7 +286,6 @@
 
     goto :goto_0
 
-    .line 100
     :cond_c
     const-string v6, "android.intent.action.HEADSET_PLUG"
 
@@ -326,15 +295,12 @@
 
     if-eqz v6, :cond_f
 
-    .line 101
     const-string v6, "microphone"
 
     invoke-virtual {p2, v6, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 103
-    .local v1, "microphone":I
     const-string v6, "state"
 
     invoke-virtual {p2, v6, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
@@ -343,7 +309,6 @@
 
     if-ne v6, v5, :cond_e
 
-    .line 104
     iget-object v6, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
     iget-object v6, v6, Lcom/sec/android/app/camera/CameraBroadcastReceiver;->mCameraContext:Lcom/sec/android/app/camera/Camera;
@@ -355,17 +320,14 @@
     :cond_d
     invoke-virtual {v6, v4}, Lcom/sec/android/app/camera/Camera;->setMicrophonePlugged(Z)V
 
-    .line 105
     if-ne v1, v5, :cond_4
 
-    .line 106
     const-string v4, "CameraBroadcastReceiver"
 
     const-string v5, "Headset with microphone is plugged"
 
     invoke-static {v4, v5}, Landroid/util/secutil/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 107
     new-instance v4, Landroid/content/Intent;
 
     const-string v5, "camera.action.HEADSET_PLUG"
@@ -376,7 +338,6 @@
 
     goto/16 :goto_0
 
-    .line 110
     :cond_e
     iget-object v5, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
@@ -386,8 +347,6 @@
 
     goto/16 :goto_0
 
-    .line 112
-    .end local v1    # "microphone":I
     :cond_f
     const-string v6, "android.intent.action.VIDEOCAPABILITY"
 
@@ -397,7 +356,6 @@
 
     if-eqz v6, :cond_10
 
-    .line 113
     new-instance v4, Landroid/content/Intent;
 
     const-string v5, "camera.action.ACTION_VIDEO_CAPABILITY"
@@ -408,7 +366,6 @@
 
     goto/16 :goto_0
 
-    .line 114
     :cond_10
     const-string v6, "com.samsung.action.SHOWING_GLOBAL_ACTIONS"
 
@@ -418,7 +375,6 @@
 
     if-eqz v6, :cond_11
 
-    .line 115
     iget-object v4, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
     iget-object v4, v4, Lcom/sec/android/app/camera/CameraBroadcastReceiver;->mCameraContext:Lcom/sec/android/app/camera/Camera;
@@ -433,7 +389,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 116
     iget-object v4, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
     iget-object v4, v4, Lcom/sec/android/app/camera/CameraBroadcastReceiver;->mCameraContext:Lcom/sec/android/app/camera/Camera;
@@ -442,7 +397,6 @@
 
     goto/16 :goto_0
 
-    .line 118
     :cond_11
     const-string v6, "com.sec.android.app.camera.MAKE_CAMERA_FEATURE_XML"
 
@@ -452,24 +406,18 @@
 
     if-eqz v6, :cond_12
 
-    .line 119
     new-instance v3, Lcom/sec/android/app/camera/feature/ReflectionFeature;
 
     invoke-direct {v3}, Lcom/sec/android/app/camera/feature/ReflectionFeature;-><init>()V
 
-    .line 120
-    .local v3, "reflectionFeature":Lcom/sec/android/app/camera/feature/ReflectionFeature;
     invoke-virtual {v3}, Lcom/sec/android/app/camera/feature/ReflectionFeature;->makeReflectionFields()V
 
-    .line 121
     const/4 v4, 0x0
 
     invoke-virtual {v3, v4}, Lcom/sec/android/app/camera/feature/ReflectionFeature;->saveReflectionFields(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 122
-    .end local v3    # "reflectionFeature":Lcom/sec/android/app/camera/feature/ReflectionFeature;
     :cond_12
     const-string v6, "com.sktelecom.dmc.intent.action.DCMO_SET"
 
@@ -487,7 +435,6 @@
 
     if-nez v6, :cond_13
 
-    .line 123
     iget-object v4, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
     iget-object v4, v4, Lcom/sec/android/app/camera/CameraBroadcastReceiver;->mCameraContext:Lcom/sec/android/app/camera/Camera;
@@ -496,7 +443,6 @@
 
     goto/16 :goto_0
 
-    .line 124
     :cond_13
     const-string v6, "android.location.MODE_CHANGED"
 
@@ -506,7 +452,6 @@
 
     if-eqz v6, :cond_14
 
-    .line 125
     iget-object v6, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
     iget-object v6, v6, Lcom/sec/android/app/camera/CameraBroadcastReceiver;->mCameraContext:Lcom/sec/android/app/camera/Camera;
@@ -521,13 +466,10 @@
 
     move-result v2
 
-    .line 127
-    .local v2, "mode":I
     packed-switch v2, :pswitch_data_0
 
     goto/16 :goto_0
 
-    .line 137
     :pswitch_1
     iget-object v4, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
@@ -537,7 +479,6 @@
 
     goto/16 :goto_0
 
-    .line 130
     :pswitch_2
     iget-object v4, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
@@ -553,7 +494,6 @@
 
     if-ne v4, v5, :cond_4
 
-    .line 131
     iget-object v4, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
     iget-object v4, v4, Lcom/sec/android/app/camera/CameraBroadcastReceiver;->mCameraContext:Lcom/sec/android/app/camera/Camera;
@@ -562,8 +502,6 @@
 
     goto/16 :goto_0
 
-    .line 142
-    .end local v2    # "mode":I
     :cond_14
     const-string v6, "com.samsung.telecom.IncomingCallAnsweredDuringRecord"
 
@@ -573,7 +511,6 @@
 
     if-eqz v6, :cond_16
 
-    .line 143
     iget-object v6, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
     iget-object v6, v6, Lcom/sec/android/app/camera/CameraBroadcastReceiver;->mCameraContext:Lcom/sec/android/app/camera/Camera;
@@ -584,7 +521,6 @@
 
     if-eqz v6, :cond_15
 
-    .line 144
     iget-object v6, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
     iget-object v6, v6, Lcom/sec/android/app/camera/CameraBroadcastReceiver;->mCameraContext:Lcom/sec/android/app/camera/Camera;
@@ -595,7 +531,6 @@
 
     invoke-interface {v6, v5, v4}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->setCallStatus(IZ)V
 
-    .line 146
     :cond_15
     new-instance v4, Landroid/content/Intent;
 
@@ -607,7 +542,6 @@
 
     goto/16 :goto_0
 
-    .line 147
     :cond_16
     const-string v4, "com.samsung.android.action.HOME_DOUBLE_CLICK"
 
@@ -617,7 +551,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 148
     iget-object v4, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
     iget-object v4, v4, Lcom/sec/android/app/camera/CameraBroadcastReceiver;->mCameraContext:Lcom/sec/android/app/camera/Camera;
@@ -628,7 +561,6 @@
 
     invoke-interface {v4}, Lcom/sec/android/app/camera/interfaces/CommandInterface;->onSwitchCameraSelect()Z
 
-    .line 149
     iget-object v4, p0, Lcom/sec/android/app/camera/CameraBroadcastReceiver$1;->this$0:Lcom/sec/android/app/camera/CameraBroadcastReceiver;
 
     iget-object v4, v4, Lcom/sec/android/app/camera/CameraBroadcastReceiver;->mCameraContext:Lcom/sec/android/app/camera/Camera;
@@ -641,7 +573,6 @@
 
     goto/16 :goto_0
 
-    .line 127
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

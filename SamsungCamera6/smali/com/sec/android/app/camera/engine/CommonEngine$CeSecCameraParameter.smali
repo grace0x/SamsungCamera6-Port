@@ -23,20 +23,13 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .param p1, "key"    # Ljava/lang/String;
-    .param p2, "value"    # Ljava/lang/String;
 
-    .prologue
-    .line 9742
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 9743
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/CommonEngine$CeSecCameraParameter;->mKey:Ljava/lang/String;
 
-    .line 9744
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine$CeSecCameraParameter;->mValue:Ljava/lang/String;
 
-    .line 9745
     return-void
 .end method
 
@@ -45,8 +38,6 @@
 .method public getKey()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 9748
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine$CeSecCameraParameter;->mKey:Ljava/lang/String;
 
     return-object v0
@@ -55,8 +46,6 @@
 .method public getValue()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 9752
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine$CeSecCameraParameter;->mValue:Ljava/lang/String;
 
     return-object v0

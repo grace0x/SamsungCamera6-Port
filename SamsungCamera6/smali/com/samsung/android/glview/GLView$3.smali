@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/samsung/android/glview/GLView;)V
     .locals 0
 
-    .prologue
-    .line 656
     iput-object p1, p0, Lcom/samsung/android/glview/GLView$3;->this$0:Lcom/samsung/android/glview/GLView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,8 +42,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 660
     iget-object v0, p0, Lcom/samsung/android/glview/GLView$3;->this$0:Lcom/samsung/android/glview/GLView;
 
     iget-object v0, v0, Lcom/samsung/android/glview/GLView;->mGLContext:Lcom/samsung/android/glview/GLContext;
@@ -58,12 +54,10 @@
 
     if-nez v0, :cond_1
 
-    .line 670
     :cond_0
     :goto_0
     return-void
 
-    .line 662
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/glview/GLView$3;->this$0:Lcom/samsung/android/glview/GLView;
 
@@ -74,14 +68,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 663
     iget-object v0, p0, Lcom/samsung/android/glview/GLView$3;->this$0:Lcom/samsung/android/glview/GLView;
 
     iget-object v0, v0, Lcom/samsung/android/glview/GLView;->mLongClickListener:Lcom/samsung/android/glview/GLView$LongClickListener;
 
     if-eqz v0, :cond_2
 
-    .line 664
     iget-object v0, p0, Lcom/samsung/android/glview/GLView$3;->this$0:Lcom/samsung/android/glview/GLView;
 
     iget-object v0, v0, Lcom/samsung/android/glview/GLView;->mLongClickListener:Lcom/samsung/android/glview/GLView$LongClickListener;
@@ -92,7 +84,6 @@
 
     invoke-interface {v0, v1}, Lcom/samsung/android/glview/GLView$LongClickListener;->onLongClick(Lcom/samsung/android/glview/GLView;)Z
 
-    .line 666
     :cond_2
     iget-object v0, p0, Lcom/samsung/android/glview/GLView$3;->this$0:Lcom/samsung/android/glview/GLView;
 
@@ -103,7 +94,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 667
     iget-object v0, p0, Lcom/samsung/android/glview/GLView$3;->this$0:Lcom/samsung/android/glview/GLView;
 
     iget-object v0, v0, Lcom/samsung/android/glview/GLView;->mGLContext:Lcom/samsung/android/glview/GLContext;

@@ -24,13 +24,10 @@
 .method constructor <init>(Lcom/sec/android/app/camera/help/HelpHubImageViewer;)V
     .locals 1
 
-    .prologue
-    .line 292
     iput-object p1, p0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;->this$0:Lcom/sec/android/app/camera/help/HelpHubImageViewer;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
 
-    .line 293
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;->mStopAnimation:Z
@@ -43,8 +40,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 297
     iget-object v0, p0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;->this$0:Lcom/sec/android/app/camera/help/HelpHubImageViewer;
 
     # getter for: Lcom/sec/android/app/camera/help/HelpHubImageViewer;->mViewAttached:Z
@@ -54,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 298
     iget-object v0, p0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;->this$0:Lcom/sec/android/app/camera/help/HelpHubImageViewer;
 
     # getter for: Lcom/sec/android/app/camera/help/HelpHubImageViewer;->mActContext:Landroid/app/Activity;
@@ -68,7 +62,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 319
     :cond_0
     return-void
 .end method

@@ -10,19 +10,13 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/reflect/Field;)V
     .locals 0
-    .param p1, "f"    # Ljava/lang/reflect/Field;
 
-    .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     invoke-static {p1}, Lcom/google/gson/internal/$Gson$Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 46
     iput-object p1, p0, Lcom/google/gson/FieldAttributes;->field:Ljava/lang/reflect/Field;
 
-    .line 47
     return-void
 .end method
 
@@ -30,15 +24,12 @@
 # virtual methods
 .method get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .param p1, "instance"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalAccessException;
         }
     .end annotation
 
-    .prologue
-    .line 146
     iget-object v0, p0, Lcom/google/gson/FieldAttributes;->field:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -60,9 +51,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 111
-    .local p1, "annotation":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     iget-object v0, p0, Lcom/google/gson/FieldAttributes;->field:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0, p1}, Ljava/lang/reflect/Field;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
@@ -84,8 +72,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 121
     iget-object v0, p0, Lcom/google/gson/FieldAttributes;->field:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0}, Ljava/lang/reflect/Field;->getAnnotations()[Ljava/lang/annotation/Annotation;
@@ -109,8 +95,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 100
     iget-object v0, p0, Lcom/google/gson/FieldAttributes;->field:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0}, Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;
@@ -123,8 +107,6 @@
 .method public getDeclaredType()Ljava/lang/reflect/Type;
     .locals 1
 
-    .prologue
-    .line 80
     iget-object v0, p0, Lcom/google/gson/FieldAttributes;->field:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0}, Ljava/lang/reflect/Field;->getGenericType()Ljava/lang/reflect/Type;
@@ -144,8 +126,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 53
     iget-object v0, p0, Lcom/google/gson/FieldAttributes;->field:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0}, Ljava/lang/reflect/Field;->getDeclaringClass()Ljava/lang/Class;
@@ -158,8 +138,6 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 60
     iget-object v0, p0, Lcom/google/gson/FieldAttributes;->field:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
@@ -171,10 +149,7 @@
 
 .method public hasModifier(I)Z
     .locals 1
-    .param p1, "modifier"    # I
 
-    .prologue
-    .line 135
     iget-object v0, p0, Lcom/google/gson/FieldAttributes;->field:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0}, Ljava/lang/reflect/Field;->getModifiers()I
@@ -199,8 +174,6 @@
 .method isSynthetic()Z
     .locals 1
 
-    .prologue
-    .line 155
     iget-object v0, p0, Lcom/google/gson/FieldAttributes;->field:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0}, Ljava/lang/reflect/Field;->isSynthetic()Z

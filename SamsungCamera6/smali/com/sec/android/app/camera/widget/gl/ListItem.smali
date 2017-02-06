@@ -45,21 +45,11 @@
 # direct methods
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;FFFFLcom/sec/android/app/camera/resourcedata/MenuResourceBundle;Lcom/sec/android/app/camera/command/MenuCommand;)V
     .locals 2
-    .param p1, "cameraContext"    # Lcom/sec/android/app/camera/interfaces/CameraContext;
-    .param p2, "left"    # F
-    .param p3, "top"    # F
-    .param p4, "width"    # F
-    .param p5, "height"    # F
-    .param p6, "data"    # Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
-    .param p7, "command"    # Lcom/sec/android/app/camera/command/MenuCommand;
 
-    .prologue
     const v1, 0x7f0900fb
 
-    .line 57
     invoke-direct/range {p0 .. p7}, Lcom/sec/android/app/camera/widget/gl/Item;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;FFFFLcom/sec/android/app/camera/resourcedata/MenuResourceBundle;Lcom/sec/android/app/camera/command/MenuCommand;)V
 
-    .line 38
     invoke-static {v1}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
 
     move-result v0
@@ -68,7 +58,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->LIST_TYPE_BUTTON_IMAGE_SIDE_MARGIN:I
 
-    .line 39
     const v0, 0x7f0900fc
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -79,7 +68,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->LIST_TYPE_BUTTON_TEXT_SIDE_MARGIN:I
 
-    .line 40
     const v0, 0x7f0900f9
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -90,7 +78,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->LIST_TYPE_BUTTON_IMAGE_WIDTH:I
 
-    .line 41
     const v0, 0x7f0900fa
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -101,7 +88,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->LIST_TYPE_BUTTON_POS_X:I
 
-    .line 42
     invoke-static {v1}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
 
     move-result v0
@@ -110,7 +96,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->LIST_TYPE_BUTTON_LEFT_PADDING:I
 
-    .line 43
     const v0, 0x7f0900fd
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -121,7 +106,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->LIST_TYPE_TEXT_POS_X:I
 
-    .line 44
     const v0, 0x7f0900fe
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -132,7 +116,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->LIST_TYPE_TEXT_POS_Y:I
 
-    .line 45
     const v0, 0x7f0900ff
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -141,7 +124,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->LIST_TYPE_TEXT_FONT_SIZE:F
 
-    .line 46
     const v0, 0x7f0c000c
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getColor(I)I
@@ -150,7 +132,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->LIST_TYPE_TEXT_FONT_COLOR:I
 
-    .line 47
     const v0, 0x7f0900ed
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -161,13 +142,10 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->CHECK_RADIO_IMAGE_LEFT_MARGIN_FOR_LOCALE_RTL:I
 
-    .line 59
     iput p4, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mWidth:F
 
-    .line 60
     iput p5, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mHeight:F
 
-    .line 62
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getContext()Landroid/content/Context;
@@ -186,10 +164,8 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mTitle:Ljava/lang/String;
 
-    .line 63
     invoke-virtual {p0}, Lcom/sec/android/app/camera/widget/gl/ListItem;->init()V
 
-    .line 64
     return-void
 .end method
 
@@ -198,66 +174,52 @@
 .method protected clearContent()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 162
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
 
     if-eqz v0, :cond_0
 
-    .line 163
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/widget/gl/ListItem;->removeView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 164
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
 
     invoke-virtual {v0}, Lcom/samsung/android/glview/GLButton;->clear()V
 
-    .line 165
     iput-object v1, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
 
-    .line 167
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mText:Lcom/samsung/android/glview/GLText;
 
     if-eqz v0, :cond_1
 
-    .line 168
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mText:Lcom/samsung/android/glview/GLText;
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/widget/gl/ListItem;->removeView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 169
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mText:Lcom/samsung/android/glview/GLText;
 
     invoke-virtual {v0}, Lcom/samsung/android/glview/GLText;->clear()V
 
-    .line 170
     iput-object v1, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mText:Lcom/samsung/android/glview/GLText;
 
-    .line 172
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mDataRadioButton:Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;
 
     if-eqz v0, :cond_2
 
-    .line 173
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mDataRadioButton:Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/widget/gl/ListItem;->removeView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 174
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mDataRadioButton:Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;->clear()V
 
-    .line 175
     iput-object v1, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mDataRadioButton:Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;
 
-    .line 177
     :cond_2
     return-void
 .end method
@@ -265,8 +227,6 @@
 .method public getSelected()Z
     .locals 1
 
-    .prologue
-    .line 68
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mDataRadioButton:Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;->getSelected()Z
@@ -279,8 +239,6 @@
 .method protected init()V
     .locals 20
 
-    .prologue
-    .line 181
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mWidth:F
@@ -315,14 +273,10 @@
 
     sub-float v5, v1, v2
 
-    .line 182
-    .local v5, "textWidth":F
     move-object/from16 v0, p0
 
     iget v6, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mHeight:F
 
-    .line 183
-    .local v6, "textHeight":F
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mWidth:F
@@ -345,8 +299,6 @@
 
     sub-float v18, v1, v2
 
-    .line 184
-    .local v18, "imagePosX":F
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mHeight:F
@@ -363,8 +315,6 @@
 
     div-float v19, v1, v2
 
-    .line 186
-    .local v19, "imagePosY":F
     new-instance v1, Lcom/samsung/android/glview/GLText;
 
     move-object/from16 v0, p0
@@ -421,7 +371,6 @@
 
     iput-object v1, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mText:Lcom/samsung/android/glview/GLText;
 
-    .line 187
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mText:Lcom/samsung/android/glview/GLText;
@@ -432,7 +381,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLText;->setTextFont(Landroid/graphics/Typeface;)V
 
-    .line 188
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mText:Lcom/samsung/android/glview/GLText;
@@ -450,7 +398,6 @@
 
     invoke-virtual {v2, v1, v3}, Lcom/samsung/android/glview/GLText;->setAlign(II)V
 
-    .line 190
     new-instance v7, Lcom/samsung/android/glview/GLButton;
 
     move-object/from16 v0, p0
@@ -531,7 +478,6 @@
 
     iput-object v7, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
 
-    .line 192
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
@@ -542,7 +488,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLButton;->setTitle(Ljava/lang/String;)V
 
-    .line 193
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
@@ -557,7 +502,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLButton;->setObjectTag(Ljava/lang/String;)V
 
-    .line 194
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
@@ -575,7 +519,6 @@
 
     invoke-virtual {v2, v1, v0}, Lcom/samsung/android/glview/GLButton;->setResourceOffset(FF)Z
 
-    .line 197
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
@@ -584,7 +527,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLButton;->enableRippleEffect(Z)V
 
-    .line 198
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
@@ -593,7 +535,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLButton;->setTextVisibility(Z)V
 
-    .line 199
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
@@ -602,7 +543,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLButton;->setHighlightVisibility(Z)V
 
-    .line 200
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
@@ -611,7 +551,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLButton;->setButtonShapeVisibility(Z)V
 
-    .line 201
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
@@ -620,7 +559,6 @@
 
     invoke-virtual {v1, v0}, Lcom/samsung/android/glview/GLButton;->setFocusListener(Lcom/samsung/android/glview/GLView$FocusListener;)V
 
-    .line 202
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
@@ -629,7 +567,6 @@
 
     invoke-virtual {v1, v0}, Lcom/samsung/android/glview/GLButton;->setClickListener(Lcom/samsung/android/glview/GLView$ClickListener;)V
 
-    .line 203
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mData:Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
@@ -640,7 +577,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 204
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
@@ -667,7 +603,6 @@
 
     iput-object v2, v1, Lcom/samsung/android/glview/GLButton;->mContentDescription:Ljava/lang/String;
 
-    .line 206
     :cond_0
     move-object/from16 v0, p0
 
@@ -679,7 +614,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLButton;->setText(Lcom/samsung/android/glview/GLText;)V
 
-    .line 208
     new-instance v2, Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;
 
     move-object/from16 v0, p0
@@ -725,7 +659,6 @@
 
     iput-object v2, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mDataRadioButton:Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;
 
-    .line 210
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mDataRadioButton:Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;
@@ -734,7 +667,6 @@
 
     invoke-virtual {v1, v2}, Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;->setBypassTouch(Z)V
 
-    .line 211
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mDataRadioButton:Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;
@@ -743,7 +675,6 @@
 
     invoke-virtual {v1, v0}, Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;->setOnSelectedChangeListener(Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton$OnSelectedChangeListener;)V
 
-    .line 213
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
@@ -752,7 +683,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/widget/gl/ListItem;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 214
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mDataRadioButton:Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;
@@ -761,10 +691,8 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/widget/gl/ListItem;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 215
     return-void
 
-    .line 188
     :cond_1
     const/4 v1, 0x1
 
@@ -773,10 +701,8 @@
     :cond_2
     move/from16 v1, v18
 
-    .line 194
     goto/16 :goto_1
 
-    .line 208
     :cond_3
     const/4 v1, 0x0
 
@@ -785,14 +711,9 @@
 
 .method public onSelectedChanged(Lcom/samsung/android/glview/GLView;Z)V
     .locals 3
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "Selected"    # Z
 
-    .prologue
-    .line 73
     if-eqz p2, :cond_0
 
-    .line 74
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -809,11 +730,9 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLButton;->setSubTitle(Ljava/lang/String;)V
 
-    .line 78
     :goto_0
     return-void
 
-    .line 76
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
 
@@ -836,119 +755,94 @@
 
 .method public setAlpha(F)V
     .locals 1
-    .param p1, "alpha"    # F
 
-    .prologue
-    .line 82
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mDataRadioButton:Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;
 
     if-eqz v0, :cond_0
 
-    .line 83
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mDataRadioButton:Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;
 
     invoke-virtual {v0, p1}, Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;->setAlpha(F)V
 
-    .line 85
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
 
     if-eqz v0, :cond_1
 
-    .line 86
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/glview/GLButton;->setAlpha(F)V
 
-    .line 88
     :cond_1
     return-void
 .end method
 
 .method public setKeyListener(Lcom/samsung/android/glview/GLView$KeyListener;)V
     .locals 2
-    .param p1, "l"    # Lcom/samsung/android/glview/GLView$KeyListener;
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 92
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mKeyListener:Lcom/samsung/android/glview/GLView$KeyListener;
 
-    .line 93
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mKeyListener:Lcom/samsung/android/glview/GLView$KeyListener;
 
     if-nez v0, :cond_3
 
-    .line 94
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
 
     if-eqz v0, :cond_0
 
-    .line 95
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLButton;->setKeyListener(Lcom/samsung/android/glview/GLView$KeyListener;)V
 
-    .line 97
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mText:Lcom/samsung/android/glview/GLText;
 
     if-eqz v0, :cond_1
 
-    .line 98
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mText:Lcom/samsung/android/glview/GLText;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLText;->setKeyListener(Lcom/samsung/android/glview/GLView$KeyListener;)V
 
-    .line 100
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mDataRadioButton:Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;
 
     if-eqz v0, :cond_2
 
-    .line 101
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mDataRadioButton:Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;->setKeyListener(Lcom/samsung/android/glview/GLView$KeyListener;)V
 
-    .line 114
     :cond_2
     :goto_0
     invoke-super {p0, p1}, Lcom/sec/android/app/camera/widget/gl/Item;->setKeyListener(Lcom/samsung/android/glview/GLView$KeyListener;)V
 
-    .line 115
     return-void
 
-    .line 104
     :cond_3
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
 
     if-eqz v0, :cond_4
 
-    .line 105
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
 
     invoke-virtual {v0, p0}, Lcom/samsung/android/glview/GLButton;->setKeyListener(Lcom/samsung/android/glview/GLView$KeyListener;)V
 
-    .line 107
     :cond_4
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mText:Lcom/samsung/android/glview/GLText;
 
     if-eqz v0, :cond_5
 
-    .line 108
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mText:Lcom/samsung/android/glview/GLText;
 
     invoke-virtual {v0, p0}, Lcom/samsung/android/glview/GLText;->setKeyListener(Lcom/samsung/android/glview/GLView$KeyListener;)V
 
-    .line 110
     :cond_5
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mDataRadioButton:Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;
 
     if-eqz v0, :cond_2
 
-    .line 111
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mDataRadioButton:Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;
 
     invoke-virtual {v0, p0}, Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;->setKeyListener(Lcom/samsung/android/glview/GLView$KeyListener;)V
@@ -958,35 +852,26 @@
 
 .method public setMute(Z)V
     .locals 1
-    .param p1, "mute"    # Z
 
-    .prologue
-    .line 119
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
 
     if-eqz v0, :cond_0
 
-    .line 120
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/glview/GLButton;->setMute(Z)V
 
-    .line 122
     :cond_0
     return-void
 .end method
 
 .method public setNextFocusUpView(Lcom/samsung/android/glview/GLView;)Z
     .locals 2
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
 
-    .prologue
-    .line 126
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
 
     if-eqz v0, :cond_0
 
-    .line 127
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
 
     invoke-virtual {p1}, Lcom/samsung/android/glview/GLView;->getId()I
@@ -995,10 +880,8 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLButton;->setNextFocusUpId(I)V
 
-    .line 128
     const/4 v0, 0x1
 
-    .line 130
     :goto_0
     return v0
 
@@ -1010,88 +893,70 @@
 
 .method public setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V
     .locals 2
-    .param p1, "l"    # Lcom/samsung/android/glview/GLView$TouchListener;
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 135
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mTouchListener:Lcom/samsung/android/glview/GLView$TouchListener;
 
-    .line 136
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mTouchListener:Lcom/samsung/android/glview/GLView$TouchListener;
 
     if-nez v0, :cond_3
 
-    .line 137
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
 
     if-eqz v0, :cond_0
 
-    .line 138
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLButton;->setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V
 
-    .line 140
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mText:Lcom/samsung/android/glview/GLText;
 
     if-eqz v0, :cond_1
 
-    .line 141
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mText:Lcom/samsung/android/glview/GLText;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLText;->setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V
 
-    .line 143
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mDataRadioButton:Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;
 
     if-eqz v0, :cond_2
 
-    .line 144
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mDataRadioButton:Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;->setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V
 
-    .line 157
     :cond_2
     :goto_0
     invoke-super {p0, p1}, Lcom/sec/android/app/camera/widget/gl/Item;->setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V
 
-    .line 158
     return-void
 
-    .line 147
     :cond_3
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
 
     if-eqz v0, :cond_4
 
-    .line 148
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mButton:Lcom/samsung/android/glview/GLButton;
 
     invoke-virtual {v0, p0}, Lcom/samsung/android/glview/GLButton;->setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V
 
-    .line 150
     :cond_4
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mText:Lcom/samsung/android/glview/GLText;
 
     if-eqz v0, :cond_5
 
-    .line 151
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mText:Lcom/samsung/android/glview/GLText;
 
     invoke-virtual {v0, p0}, Lcom/samsung/android/glview/GLText;->setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V
 
-    .line 153
     :cond_5
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mDataRadioButton:Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;
 
     if-eqz v0, :cond_2
 
-    .line 154
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ListItem;->mDataRadioButton:Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;
 
     invoke-virtual {v0, p0}, Lcom/sec/android/app/camera/widget/gl/ItemDataRadioButton;->setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V

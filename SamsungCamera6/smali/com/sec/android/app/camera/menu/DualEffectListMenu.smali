@@ -59,18 +59,7 @@
 # direct methods
 .method protected constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/menu/MenuManagerImpl;ILcom/samsung/android/glview/GLViewGroup;Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;Lcom/sec/android/app/camera/menu/MenuResourceDepot;II)V
     .locals 11
-    .param p1, "cameraContext"    # Lcom/sec/android/app/camera/interfaces/CameraContext;
-    .param p2, "engine"    # Lcom/sec/android/app/camera/interfaces/Engine;
-    .param p3, "menuManager"    # Lcom/sec/android/app/camera/menu/MenuManagerImpl;
-    .param p4, "viewId"    # I
-    .param p5, "glParentView"    # Lcom/samsung/android/glview/GLViewGroup;
-    .param p6, "resourceData"    # Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;
-    .param p7, "menuResourceDepot"    # Lcom/sec/android/app/camera/menu/MenuResourceDepot;
-    .param p8, "zOrder"    # I
-    .param p9, "slideDirection"    # I
 
-    .prologue
-    .line 66
     const/4 v10, 0x0
 
     move-object v0, p0
@@ -95,25 +84,12 @@
 
     invoke-direct/range {v0 .. v10}, Lcom/sec/android/app/camera/menu/DualEffectListMenu;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/menu/MenuManagerImpl;ILcom/samsung/android/glview/GLViewGroup;Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;Lcom/sec/android/app/camera/menu/MenuResourceDepot;IIZ)V
 
-    .line 67
     return-void
 .end method
 
 .method protected constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/menu/MenuManagerImpl;ILcom/samsung/android/glview/GLViewGroup;Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;Lcom/sec/android/app/camera/menu/MenuResourceDepot;IIZ)V
     .locals 11
-    .param p1, "cameraContext"    # Lcom/sec/android/app/camera/interfaces/CameraContext;
-    .param p2, "engine"    # Lcom/sec/android/app/camera/interfaces/Engine;
-    .param p3, "menuManager"    # Lcom/sec/android/app/camera/menu/MenuManagerImpl;
-    .param p4, "viewId"    # I
-    .param p5, "glParentView"    # Lcom/samsung/android/glview/GLViewGroup;
-    .param p6, "resourceData"    # Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;
-    .param p7, "menuResourceDepot"    # Lcom/sec/android/app/camera/menu/MenuResourceDepot;
-    .param p8, "zOrder"    # I
-    .param p9, "slideDirection"    # I
-    .param p10, "isMuted"    # Z
 
-    .prologue
-    .line 71
     const/4 v9, 0x1
 
     move-object v1, p0
@@ -134,7 +110,6 @@
 
     invoke-direct/range {v1 .. v9}, Lcom/sec/android/app/camera/menu/AbstractMenu;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/interfaces/Engine;Lcom/sec/android/app/camera/menu/MenuManagerImpl;ILcom/samsung/android/glview/GLViewGroup;Lcom/sec/android/app/camera/menu/MenuResourceDepot;IZ)V
 
-    .line 51
     const v1, 0x7f09009e
 
     invoke-static {v1}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -145,7 +120,6 @@
 
     iput v1, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->EFFECT_MENU_POS_X:I
 
-    .line 52
     const v1, 0x7f09009f
 
     invoke-static {v1}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -156,7 +130,6 @@
 
     iput v1, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->EFFECT_MENU_WIDTH:I
 
-    .line 53
     const v1, 0x7f090099
 
     invoke-static {v1}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -167,7 +140,6 @@
 
     iput v1, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->EFFECT_MENU_HEIGHT:I
 
-    .line 54
     const v1, 0x7f09009d
 
     invoke-static {v1}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -178,7 +150,6 @@
 
     iput v1, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->EFFECT_ITEM_WIDTH:I
 
-    .line 55
     const v1, 0x7f09009a
 
     invoke-static {v1}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -189,7 +160,6 @@
 
     iput v1, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->EFFECT_ITEM_HEIGHT:I
 
-    .line 56
     const v1, 0x7f09009c
 
     invoke-static {v1}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -200,7 +170,6 @@
 
     iput v1, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->EFFECT_MENU_VSPACING:I
 
-    .line 57
     const v1, 0x7f09009b
 
     invoke-static {v1}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -211,7 +180,6 @@
 
     iput v1, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->EFFECT_MENU_HSPACING:I
 
-    .line 60
     new-instance v1, Lcom/sec/android/app/camera/menu/DualEffectListMenu$MenuAdapter;
 
     const/4 v2, 0x0
@@ -220,24 +188,20 @@
 
     iput-object v1, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mAdapter:Lcom/samsung/android/glview/GLAbsList$Adapter;
 
-    .line 61
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v1, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mItemList:Landroid/util/SparseArray;
 
-    .line 73
     move-object/from16 v0, p6
 
     iput-object v0, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mResource:Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;
 
-    .line 74
     move/from16 v0, p10
 
     iput-boolean v0, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mMute:Z
 
-    .line 76
     new-instance v1, Lcom/samsung/android/glview/GLGridList;
 
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -278,14 +242,12 @@
 
     iput-object v1, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mList:Lcom/samsung/android/glview/GLGridList;
 
-    .line 78
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mList:Lcom/samsung/android/glview/GLGridList;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLGridList;->setOverScrollEffect(Z)V
 
-    .line 79
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mList:Lcom/samsung/android/glview/GLGridList;
 
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mAdapter:Lcom/samsung/android/glview/GLAbsList$Adapter;
@@ -294,7 +256,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/samsung/android/glview/GLGridList;->setAdapter(Lcom/samsung/android/glview/GLAbsList$Adapter;I)V
 
-    .line 80
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mList:Lcom/samsung/android/glview/GLGridList;
 
     iget v2, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->EFFECT_MENU_WIDTH:I
@@ -307,7 +268,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/samsung/android/glview/GLGridList;->setSize(FF)V
 
-    .line 82
     invoke-virtual {p0}, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->getMenuViewGroup()Lcom/samsung/android/glview/GLViewGroup;
 
     move-result-object v1
@@ -316,12 +276,10 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLViewGroup;->setVisibility(I)V
 
-    .line 83
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mList:Lcom/samsung/android/glview/GLGridList;
 
     invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 85
     invoke-virtual {p0}, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->getMenuViewGroup()Lcom/samsung/android/glview/GLViewGroup;
 
     move-result-object v1
@@ -340,7 +298,6 @@
 
     invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->setShowAnimation(Landroid/view/animation/Animation;)V
 
-    .line 86
     invoke-virtual {p0}, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->getMenuViewGroup()Lcom/samsung/android/glview/GLViewGroup;
 
     move-result-object v1
@@ -355,16 +312,12 @@
 
     invoke-virtual {p0, v1}, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->setHideAnimation(Landroid/view/animation/Animation;)V
 
-    .line 87
     return-void
 .end method
 
 .method static synthetic access$100(Lcom/sec/android/app/camera/menu/DualEffectListMenu;)Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/menu/DualEffectListMenu;
 
-    .prologue
-    .line 47
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mResource:Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;
 
     return-object v0
@@ -372,10 +325,7 @@
 
 .method static synthetic access$200(Lcom/sec/android/app/camera/menu/DualEffectListMenu;)I
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/menu/DualEffectListMenu;
 
-    .prologue
-    .line 47
     iget v0, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->EFFECT_ITEM_WIDTH:I
 
     return v0
@@ -383,10 +333,7 @@
 
 .method static synthetic access$300(Lcom/sec/android/app/camera/menu/DualEffectListMenu;)I
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/menu/DualEffectListMenu;
 
-    .prologue
-    .line 47
     iget v0, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->EFFECT_ITEM_HEIGHT:I
 
     return v0
@@ -394,10 +341,7 @@
 
 .method static synthetic access$400(Lcom/sec/android/app/camera/menu/DualEffectListMenu;)Landroid/util/SparseArray;
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/menu/DualEffectListMenu;
 
-    .prologue
-    .line 47
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mItemList:Landroid/util/SparseArray;
 
     return-object v0
@@ -405,10 +349,7 @@
 
 .method static synthetic access$500(Lcom/sec/android/app/camera/menu/DualEffectListMenu;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/menu/DualEffectListMenu;
 
-    .prologue
-    .line 47
     iget-boolean v0, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mMute:Z
 
     return v0
@@ -416,10 +357,7 @@
 
 .method static synthetic access$600(Lcom/sec/android/app/camera/menu/DualEffectListMenu;)Lcom/samsung/android/glview/GLGridList;
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/menu/DualEffectListMenu;
 
-    .prologue
-    .line 47
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mList:Lcom/samsung/android/glview/GLGridList;
 
     return-object v0
@@ -428,11 +366,8 @@
 .method private getCurrentSelectedIndex()I
     .locals 4
 
-    .prologue
-    .line 198
     const/4 v0, 0x0
 
-    .local v0, "i":I
     :goto_0
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mAdapter:Lcom/samsung/android/glview/GLAbsList$Adapter;
 
@@ -442,7 +377,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 199
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mAdapter:Lcom/samsung/android/glview/GLAbsList$Adapter;
 
     const/4 v3, 0x0
@@ -453,8 +387,6 @@
 
     check-cast v1, Lcom/sec/android/app/camera/widget/gl/Item;
 
-    .line 200
-    .local v1, "view":Lcom/sec/android/app/camera/widget/gl/Item;
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/widget/gl/Item;->getSelected()Z
@@ -463,22 +395,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 204
-    .end local v0    # "i":I
-    .end local v1    # "view":Lcom/sec/android/app/camera/widget/gl/Item;
     :goto_1
     return v0
 
-    .line 198
-    .restart local v0    # "i":I
-    .restart local v1    # "view":Lcom/sec/android/app/camera/widget/gl/Item;
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 204
-    .end local v1    # "view":Lcom/sec/android/app/camera/widget/gl/Item;
     :cond_1
     const/4 v0, 0x0
 
@@ -488,15 +412,12 @@
 .method private refreshMenuPosition()V
     .locals 1
 
-    .prologue
-    .line 208
     invoke-virtual {p0}, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->getMenuViewGroup()Lcom/samsung/android/glview/GLViewGroup;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 211
     :cond_0
     return-void
 .end method
@@ -506,31 +427,23 @@
 .method public clear()V
     .locals 1
 
-    .prologue
-    .line 91
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mItemList:Landroid/util/SparseArray;
 
     if-eqz v0, :cond_0
 
-    .line 92
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mItemList:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 94
     :cond_0
     invoke-super {p0}, Lcom/sec/android/app/camera/menu/AbstractMenu;->clear()V
 
-    .line 96
     return-void
 .end method
 
 .method protected onActivityTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
-    .param p1, "event"    # Landroid/view/MotionEvent;
 
-    .prologue
-    .line 149
     const/4 v0, 0x0
 
     return v0
@@ -538,13 +451,9 @@
 
 .method public onClick(Lcom/samsung/android/glview/GLView;)Z
     .locals 1
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
 
-    .prologue
-    .line 100
     invoke-virtual {p0}, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->hideMenu()V
 
-    .line 101
     const/4 v0, 0x0
 
     return v0
@@ -553,17 +462,12 @@
 .method protected onHide()V
     .locals 0
 
-    .prologue
-    .line 154
     return-void
 .end method
 
 .method protected onHideAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 2
-    .param p1, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 158
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mMenuManager:Lcom/sec/android/app/camera/menu/MenuManagerImpl;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/MenuManagerImpl;->getBaseMenuController()Lcom/sec/android/app/camera/interfaces/BaseMenuController;
@@ -574,7 +478,6 @@
 
     invoke-interface {v0, v1}, Lcom/sec/android/app/camera/interfaces/BaseMenuController;->showView(I)V
 
-    .line 161
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mMenuManager:Lcom/sec/android/app/camera/menu/MenuManagerImpl;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/MenuManagerImpl;->getVisualInteractionProvider()Lcom/sec/android/app/camera/interfaces/VisualInteractionProvider;
@@ -583,31 +486,22 @@
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/VisualInteractionProvider;->hideBlackOverlay()V
 
-    .line 162
     return-void
 .end method
 
 .method protected onHideAnimationStart(Landroid/view/animation/Animation;)V
     .locals 0
-    .param p1, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 166
     return-void
 .end method
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 3
-    .param p1, "keyCode"    # I
-    .param p2, "event"    # Landroid/view/KeyEvent;
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 106
     sparse-switch p1, :sswitch_data_0
 
-    .line 120
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/sec/android/app/camera/menu/AbstractMenu;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
@@ -616,7 +510,6 @@
     :goto_0
     return v0
 
-    .line 108
     :sswitch_0
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
@@ -632,7 +525,6 @@
 
     goto :goto_0
 
-    .line 113
     :sswitch_1
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
@@ -650,7 +542,6 @@
 
     goto :goto_0
 
-    .line 106
     :sswitch_data_0
     .sparse-switch
         0x1b -> :sswitch_0
@@ -660,16 +551,11 @@
 
 .method public onKeyUp(ILandroid/view/KeyEvent;)Z
     .locals 3
-    .param p1, "keyCode"    # I
-    .param p2, "event"    # Landroid/view/KeyEvent;
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 125
     sparse-switch p1, :sswitch_data_0
 
-    .line 144
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/sec/android/app/camera/menu/AbstractMenu;->onKeyUp(ILandroid/view/KeyEvent;)Z
 
@@ -678,13 +564,11 @@
     :goto_0
     return v0
 
-    .line 127
     :sswitch_0
     invoke-virtual {p0}, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->hideMenu()V
 
     goto :goto_0
 
-    .line 130
     :sswitch_1
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
@@ -698,12 +582,10 @@
 
     if-ne v1, v0, :cond_0
 
-    .line 131
     invoke-virtual {p0}, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->hideMenu()V
 
     goto :goto_0
 
-    .line 136
     :sswitch_2
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
@@ -719,12 +601,10 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 137
     invoke-virtual {p0}, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->hideMenu()V
 
     goto :goto_0
 
-    .line 125
     :sswitch_data_0
     .sparse-switch
         0x4 -> :sswitch_0
@@ -736,8 +616,6 @@
 .method protected onShow()V
     .locals 3
 
-    .prologue
-    .line 170
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getCameraSettings()Lcom/sec/android/app/camera/interfaces/CameraSettings;
@@ -750,12 +628,10 @@
 
     if-nez v0, :cond_0
 
-    .line 171
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mList:Lcom/samsung/android/glview/GLGridList;
 
     invoke-virtual {v0}, Lcom/samsung/android/glview/GLGridList;->refreshList()V
 
-    .line 173
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mMenuManager:Lcom/sec/android/app/camera/menu/MenuManagerImpl;
 
@@ -767,7 +643,6 @@
 
     invoke-interface {v0, v1}, Lcom/sec/android/app/camera/interfaces/BaseMenuController;->hideView(I)V
 
-    .line 176
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mMenuManager:Lcom/sec/android/app/camera/menu/MenuManagerImpl;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/MenuManagerImpl;->getVisualInteractionProvider()Lcom/sec/android/app/camera/interfaces/VisualInteractionProvider;
@@ -780,26 +655,20 @@
 
     invoke-interface {v0, v1, v2}, Lcom/sec/android/app/camera/interfaces/VisualInteractionProvider;->showBlackOverlay(FLcom/samsung/android/glview/GLViewGroup;)V
 
-    .line 177
     return-void
 .end method
 
 .method protected onShowAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 2
-    .param p1, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 181
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mList:Lcom/samsung/android/glview/GLGridList;
 
     invoke-virtual {v0}, Lcom/samsung/android/glview/GLGridList;->showScrollBar()V
 
-    .line 182
     sget-boolean v0, Lcom/sec/android/app/camera/feature/Feature;->KEYPAD:Z
 
     if-eqz v0, :cond_0
 
-    .line 183
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mList:Lcom/samsung/android/glview/GLGridList;
 
     invoke-direct {p0}, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->getCurrentSelectedIndex()I
@@ -812,20 +681,17 @@
 
     invoke-virtual {v0}, Lcom/samsung/android/glview/GLView;->requestFocus()Z
 
-    .line 187
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mAnchor:Lcom/samsung/android/glview/GLImage;
 
     if-eqz v0, :cond_1
 
-    .line 188
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mAnchor:Lcom/samsung/android/glview/GLImage;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLImage;->setVisibility(I)V
 
-    .line 189
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/DualEffectListMenu;->mAnchor:Lcom/samsung/android/glview/GLImage;
 
     invoke-static {}, Lcom/sec/android/app/camera/util/AnimationUtil;->getAlphaOnAnimation()Landroid/view/animation/Animation;
@@ -834,16 +700,12 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLImage;->setAnimation(Landroid/view/animation/Animation;)V
 
-    .line 191
     :cond_1
     return-void
 .end method
 
 .method protected onShowAnimationStart(Landroid/view/animation/Animation;)V
     .locals 0
-    .param p1, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 195
     return-void
 .end method

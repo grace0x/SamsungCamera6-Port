@@ -22,8 +22,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/AbstractBaseMenu;)V
     .locals 0
 
-    .prologue
-    .line 77
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu$1;->this$0:Lcom/sec/android/app/camera/menu/AbstractBaseMenu;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,11 +33,7 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
-    .param p1, "context"    # Landroid/content/Context;
-    .param p2, "intent"    # Landroid/content/Intent;
 
-    .prologue
-    .line 80
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu$1;->this$0:Lcom/sec/android/app/camera/menu/AbstractBaseMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -56,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 81
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu$1;->this$0:Lcom/sec/android/app/camera/menu/AbstractBaseMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -67,7 +60,6 @@
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CommandInterface;->onSwitchCameraSelect()Z
 
-    .line 83
     :cond_0
     return-void
 .end method

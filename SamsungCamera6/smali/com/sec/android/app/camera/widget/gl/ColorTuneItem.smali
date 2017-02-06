@@ -59,18 +59,9 @@
 # direct methods
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;FFFFLcom/sec/android/app/camera/resourcedata/MenuResourceBundle;I)V
     .locals 7
-    .param p1, "cameraContext"    # Lcom/sec/android/app/camera/interfaces/CameraContext;
-    .param p2, "left"    # F
-    .param p3, "top"    # F
-    .param p4, "width"    # F
-    .param p5, "height"    # F
-    .param p6, "data"    # Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
-    .param p7, "commandId"    # I
 
-    .prologue
     const v6, 0x7f09031f
 
-    .line 59
     invoke-interface {p1}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getGLContext()Lcom/samsung/android/glview/GLContext;
 
     move-result-object v1
@@ -87,7 +78,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/samsung/android/glview/GLViewGroup;-><init>(Lcom/samsung/android/glview/GLContext;FFFF)V
 
-    .line 39
     const v0, 0x7f090080
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -98,7 +88,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->ITEM_WIDTH:I
 
-    .line 40
     const v0, 0x7f090320
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -109,7 +98,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->CENTER_ITEM_HEIGHT:I
 
-    .line 41
     invoke-static {v6}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
 
     move-result v0
@@ -118,7 +106,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->BUTTON_WIDTH:I
 
-    .line 42
     invoke-static {v6}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
 
     move-result v0
@@ -127,7 +114,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->BUTTON_HEIGHT:I
 
-    .line 43
     const v0, 0x7f09007e
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -138,7 +124,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->TEXT_HEIGHT:I
 
-    .line 44
     const v0, 0x7f09007f
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -149,7 +134,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->TEXT_TOP_MARGIN:I
 
-    .line 45
     const v0, 0x7f09007c
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -160,7 +144,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->FONT_SIZE:I
 
-    .line 46
     const v0, 0x7f09007d
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -171,7 +154,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->LINE_WIDTH:I
 
-    .line 47
     const v0, 0x7f090321
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -182,25 +164,20 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->LIST_TOP_MARGIN:I
 
-    .line 48
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mColorTuneItemSelectListener:Lcom/sec/android/app/camera/widget/gl/ColorTuneItem$ColorTuneItemSelectListener;
 
-    .line 61
     iput p7, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCommandId:I
 
-    .line 62
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
-    .line 63
     invoke-interface {p1}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getCameraSettings()Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
-    .line 64
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     iget v1, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCommandId:I
@@ -211,13 +188,10 @@
 
     invoke-interface {v0, v1, p0}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->registerCameraSettingChangedListener(ILcom/sec/android/app/camera/interfaces/CameraSettings$CameraSettingChangedListener;)V
 
-    .line 66
     iput-object p6, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mData:Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
 
-    .line 68
     invoke-virtual {p0}, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->initContent()V
 
-    .line 69
     return-void
 .end method
 
@@ -226,13 +200,10 @@
 .method public clear()V
     .locals 2
 
-    .prologue
-    .line 73
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     if-eqz v0, :cond_0
 
-    .line 74
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     iget v1, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCommandId:I
@@ -243,24 +214,19 @@
 
     invoke-interface {v0, v1, p0}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->unregisterCameraSettingChangedListener(ILcom/sec/android/app/camera/interfaces/CameraSettings$CameraSettingChangedListener;)V
 
-    .line 75
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
-    .line 78
     :cond_0
     invoke-super {p0}, Lcom/samsung/android/glview/GLViewGroup;->clear()V
 
-    .line 79
     return-void
 .end method
 
 .method public getButton()Lcom/samsung/android/glview/GLSelectButton;
     .locals 1
 
-    .prologue
-    .line 82
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButton:Lcom/samsung/android/glview/GLSelectButton;
 
     return-object v0
@@ -269,8 +235,6 @@
 .method public getSelected()Z
     .locals 1
 
-    .prologue
-    .line 86
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButton:Lcom/samsung/android/glview/GLSelectButton;
 
     invoke-virtual {v0}, Lcom/samsung/android/glview/GLSelectButton;->getSelected()Z
@@ -283,12 +247,8 @@
 .method protected initContent()V
     .locals 12
 
-    .prologue
-    .line 209
     const-string v11, ""
 
-    .line 210
-    .local v11, "title":Ljava/lang/String;
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mData:Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;->getTitleId()I
@@ -297,14 +257,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 211
     iget v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCommandId:I
 
     const/16 v1, 0xfa6
 
     if-ne v0, v1, :cond_2
 
-    .line 212
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getContext()Landroid/content/Context;
@@ -335,13 +293,10 @@
 
     move-result-object v11
 
-    .line 220
     :cond_0
     :goto_0
     const-string v10, ""
 
-    .line 221
-    .local v10, "contentDescription":Ljava/lang/String;
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mData:Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;->getContentDescriptionId()I
@@ -350,14 +305,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 222
     iget v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCommandId:I
 
     const/16 v1, 0xfa6
 
     if-ne v0, v1, :cond_4
 
-    .line 223
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getContext()Landroid/content/Context;
@@ -388,7 +341,6 @@
 
     move-result-object v10
 
-    .line 231
     :cond_1
     :goto_1
     iget v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCommandId:I
@@ -397,7 +349,6 @@
 
     if-ne v0, v1, :cond_6
 
-    .line 232
     new-instance v0, Lcom/samsung/android/glview/GLSelectButton;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -448,57 +399,47 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButton:Lcom/samsung/android/glview/GLSelectButton;
 
-    .line 236
     :goto_2
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButton:Lcom/samsung/android/glview/GLSelectButton;
 
     invoke-virtual {v0, v11}, Lcom/samsung/android/glview/GLSelectButton;->setTitle(Ljava/lang/String;)V
 
-    .line 237
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButton:Lcom/samsung/android/glview/GLSelectButton;
 
     invoke-virtual {v0, v10}, Lcom/samsung/android/glview/GLSelectButton;->setContentDescription(Ljava/lang/String;)V
 
-    .line 238
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButton:Lcom/samsung/android/glview/GLSelectButton;
 
     invoke-virtual {v0, p0}, Lcom/samsung/android/glview/GLSelectButton;->setClickListener(Lcom/samsung/android/glview/GLView$ClickListener;)V
 
-    .line 239
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButton:Lcom/samsung/android/glview/GLSelectButton;
 
     invoke-virtual {v0, p0}, Lcom/samsung/android/glview/GLSelectButton;->setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V
 
-    .line 240
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButton:Lcom/samsung/android/glview/GLSelectButton;
 
     invoke-virtual {v0, p0}, Lcom/samsung/android/glview/GLSelectButton;->setFocusListener(Lcom/samsung/android/glview/GLView$FocusListener;)V
 
-    .line 241
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButton:Lcom/samsung/android/glview/GLSelectButton;
 
     invoke-virtual {v0, p0}, Lcom/samsung/android/glview/GLSelectButton;->setKeyListener(Lcom/samsung/android/glview/GLView$KeyListener;)V
 
-    .line 242
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButton:Lcom/samsung/android/glview/GLSelectButton;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLSelectButton;->setRotatable(Z)V
 
-    .line 243
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButton:Lcom/samsung/android/glview/GLSelectButton;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLSelectButton;->setCenterPivot(Z)V
 
-    .line 244
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButton:Lcom/samsung/android/glview/GLSelectButton;
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 246
     new-instance v0, Lcom/samsung/android/glview/GLText;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -545,7 +486,6 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mTitle:Lcom/samsung/android/glview/GLText;
 
-    .line 248
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mTitle:Lcom/samsung/android/glview/GLText;
 
     const/4 v1, 0x2
@@ -554,35 +494,30 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/glview/GLText;->setAlign(II)V
 
-    .line 249
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mTitle:Lcom/samsung/android/glview/GLText;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLText;->setBypassTouch(Z)V
 
-    .line 250
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mTitle:Lcom/samsung/android/glview/GLText;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLText;->setRotatable(Z)V
 
-    .line 251
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mTitle:Lcom/samsung/android/glview/GLText;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLText;->setFocusable(Z)V
 
-    .line 252
     iget v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCommandId:I
 
     const/16 v1, 0xfa0
 
     if-ne v0, v1, :cond_7
 
-    .line 253
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mTitle:Lcom/samsung/android/glview/GLText;
 
     const/4 v1, 0x0
@@ -601,7 +536,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/samsung/android/glview/GLText;->setLeftTop(IFF)V
 
-    .line 254
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mTitle:Lcom/samsung/android/glview/GLText;
 
     const/4 v1, 0x2
@@ -628,7 +562,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/samsung/android/glview/GLText;->setLeftTop(IFF)V
 
-    .line 255
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mTitle:Lcom/samsung/android/glview/GLText;
 
     const/4 v1, 0x3
@@ -651,7 +584,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/samsung/android/glview/GLText;->setLeftTop(IFF)V
 
-    .line 256
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mTitle:Lcom/samsung/android/glview/GLText;
 
     const/4 v1, 0x1
@@ -674,20 +606,17 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/samsung/android/glview/GLText;->setLeftTop(IFF)V
 
-    .line 263
     :goto_3
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mTitle:Lcom/samsung/android/glview/GLText;
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 265
     iget v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCommandId:I
 
     const/16 v1, 0xfa0
 
     if-ne v0, v1, :cond_8
 
-    .line 266
     new-instance v0, Lcom/samsung/android/glview/GLImage;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -718,7 +647,6 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButtonBG:Lcom/samsung/android/glview/GLImage;
 
-    .line 270
     :goto_4
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButtonBG:Lcom/samsung/android/glview/GLImage;
 
@@ -726,26 +654,22 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLImage;->setBypassTouch(Z)V
 
-    .line 271
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButtonBG:Lcom/samsung/android/glview/GLImage;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLImage;->setRotatable(Z)V
 
-    .line 272
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButtonBG:Lcom/samsung/android/glview/GLImage;
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 274
     iget v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCommandId:I
 
     const/16 v1, 0xfa0
 
     if-ne v0, v1, :cond_9
 
-    .line 275
     new-instance v0, Lcom/samsung/android/glview/GLImage;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -782,7 +706,6 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButtonChecked:Lcom/samsung/android/glview/GLImage;
 
-    .line 280
     :goto_5
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButtonChecked:Lcom/samsung/android/glview/GLImage;
 
@@ -790,26 +713,22 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLImage;->setBypassTouch(Z)V
 
-    .line 281
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButtonChecked:Lcom/samsung/android/glview/GLImage;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLImage;->setRotatable(Z)V
 
-    .line 282
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButtonChecked:Lcom/samsung/android/glview/GLImage;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLImage;->setCenterPivot(Z)V
 
-    .line 283
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButtonChecked:Lcom/samsung/android/glview/GLImage;
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 285
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButton:Lcom/samsung/android/glview/GLSelectButton;
 
     invoke-virtual {v0}, Lcom/samsung/android/glview/GLSelectButton;->getSelected()Z
@@ -818,19 +737,15 @@
 
     if-eqz v0, :cond_a
 
-    .line 286
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButtonChecked:Lcom/samsung/android/glview/GLImage;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLImage;->setVisibility(I)V
 
-    .line 290
     :goto_6
     return-void
 
-    .line 213
-    .end local v10    # "contentDescription":Ljava/lang/String;
     :cond_2
     iget v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCommandId:I
 
@@ -838,7 +753,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 214
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getContext()Landroid/content/Context;
@@ -871,7 +785,6 @@
 
     goto/16 :goto_0
 
-    .line 216
     :cond_3
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
@@ -891,8 +804,6 @@
 
     goto/16 :goto_0
 
-    .line 224
-    .restart local v10    # "contentDescription":Ljava/lang/String;
     :cond_4
     iget v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCommandId:I
 
@@ -900,7 +811,6 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 225
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getContext()Landroid/content/Context;
@@ -933,7 +843,6 @@
 
     goto/16 :goto_1
 
-    .line 227
     :cond_5
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
@@ -953,7 +862,6 @@
 
     goto/16 :goto_1
 
-    .line 234
     :cond_6
     new-instance v0, Lcom/samsung/android/glview/GLSelectButton;
 
@@ -1001,7 +909,6 @@
 
     goto/16 :goto_2
 
-    .line 258
     :cond_7
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mTitle:Lcom/samsung/android/glview/GLText;
 
@@ -1021,7 +928,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/samsung/android/glview/GLText;->setLeftTop(IFF)V
 
-    .line 259
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mTitle:Lcom/samsung/android/glview/GLText;
 
     const/4 v1, 0x2
@@ -1040,7 +946,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/samsung/android/glview/GLText;->setLeftTop(IFF)V
 
-    .line 260
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mTitle:Lcom/samsung/android/glview/GLText;
 
     const/4 v1, 0x3
@@ -1055,7 +960,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/samsung/android/glview/GLText;->setLeftTop(IFF)V
 
-    .line 261
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mTitle:Lcom/samsung/android/glview/GLText;
 
     const/4 v1, 0x1
@@ -1074,7 +978,6 @@
 
     goto/16 :goto_3
 
-    .line 268
     :cond_8
     new-instance v0, Lcom/samsung/android/glview/GLImage;
 
@@ -1106,7 +1009,6 @@
 
     goto/16 :goto_4
 
-    .line 277
     :cond_9
     new-instance v0, Lcom/samsung/android/glview/GLImage;
 
@@ -1140,7 +1042,6 @@
 
     goto/16 :goto_5
 
-    .line 288
     :cond_a
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButtonChecked:Lcom/samsung/android/glview/GLImage;
 
@@ -1153,11 +1054,7 @@
 
 .method public onCameraSettingChanged(II)V
     .locals 1
-    .param p1, "menuId"    # I
-    .param p2, "modeId"    # I
 
-    .prologue
-    .line 100
     iget v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCommandId:I
 
     invoke-static {v0}, Lcom/sec/android/app/camera/command/CommandIdMap;->getMenuIDByCommandID(I)I
@@ -1166,20 +1063,15 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 101
     invoke-virtual {p0}, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->refreshItem()V
 
-    .line 103
     :cond_0
     return-void
 .end method
 
 .method public onClick(Lcom/samsung/android/glview/GLView;)Z
     .locals 2
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
 
-    .prologue
-    .line 107
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mColorTuneItemSelectListener:Lcom/sec/android/app/camera/widget/gl/ColorTuneItem$ColorTuneItemSelectListener;
 
     iget v1, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCommandId:I
@@ -1190,7 +1082,6 @@
 
     invoke-interface {v0, v1}, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem$ColorTuneItemSelectListener;->onColorTuneItemSelected(I)V
 
-    .line 108
     const/4 v0, 0x0
 
     return v0
@@ -1198,24 +1089,17 @@
 
 .method public onFocusChanged(Lcom/samsung/android/glview/GLView;I)Z
     .locals 1
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "focusStatus"    # I
 
-    .prologue
-    .line 113
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mFocusListener:Lcom/samsung/android/glview/GLView$FocusListener;
 
     if-eqz v0, :cond_0
 
-    .line 114
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mFocusListener:Lcom/samsung/android/glview/GLView$FocusListener;
 
     invoke-interface {v0, p0, p2}, Lcom/samsung/android/glview/GLView$FocusListener;->onFocusChanged(Lcom/samsung/android/glview/GLView;I)Z
 
-    .line 115
     const/4 v0, 0x1
 
-    .line 117
     :goto_0
     return v0
 
@@ -1227,11 +1111,7 @@
 
 .method public onKeyDown(Lcom/samsung/android/glview/GLView;Landroid/view/KeyEvent;)Z
     .locals 2
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "event"    # Landroid/view/KeyEvent;
 
-    .prologue
-    .line 122
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v0
@@ -1240,10 +1120,8 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 123
     const/4 v0, 0x1
 
-    .line 125
     :goto_0
     return v0
 
@@ -1255,11 +1133,7 @@
 
 .method public onKeyUp(Lcom/samsung/android/glview/GLView;Landroid/view/KeyEvent;)Z
     .locals 2
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "event"    # Landroid/view/KeyEvent;
 
-    .prologue
-    .line 131
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v0
@@ -1268,7 +1142,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 132
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mColorTuneItemSelectListener:Lcom/sec/android/app/camera/widget/gl/ColorTuneItem$ColorTuneItemSelectListener;
 
     iget v1, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCommandId:I
@@ -1279,10 +1152,8 @@
 
     invoke-interface {v0, v1}, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem$ColorTuneItemSelectListener;->onColorTuneItemSelected(I)V
 
-    .line 133
     const/4 v0, 0x1
 
-    .line 135
     :goto_0
     return v0
 
@@ -1294,27 +1165,19 @@
 
 .method public onTouch(Lcom/samsung/android/glview/GLView;Landroid/view/MotionEvent;)Z
     .locals 2
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "event"    # Landroid/view/MotionEvent;
 
-    .prologue
-    .line 141
     const/4 v0, 0x0
 
-    .line 142
-    .local v0, "result":Z
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mTouchListener:Lcom/samsung/android/glview/GLView$TouchListener;
 
     if-eqz v1, :cond_0
 
-    .line 143
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mTouchListener:Lcom/samsung/android/glview/GLView$TouchListener;
 
     invoke-interface {v1, p0, p2}, Lcom/samsung/android/glview/GLView$TouchListener;->onTouch(Lcom/samsung/android/glview/GLView;Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 145
     :cond_0
     return v0
 .end method
@@ -1322,10 +1185,8 @@
 .method public refreshItem()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 149
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     iget v1, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mCommandId:I
@@ -1346,23 +1207,19 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 150
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButtonChecked:Lcom/samsung/android/glview/GLImage;
 
     invoke-virtual {v0, v2}, Lcom/samsung/android/glview/GLImage;->setVisibility(I)V
 
-    .line 151
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButton:Lcom/samsung/android/glview/GLSelectButton;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLSelectButton;->setSelected(Z)V
 
-    .line 156
     :goto_0
     return-void
 
-    .line 153
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButtonChecked:Lcom/samsung/android/glview/GLImage;
 
@@ -1370,7 +1227,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLImage;->setVisibility(I)V
 
-    .line 154
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButton:Lcom/samsung/android/glview/GLSelectButton;
 
     invoke-virtual {v0, v2}, Lcom/samsung/android/glview/GLSelectButton;->setSelected(Z)V
@@ -1380,66 +1236,45 @@
 
 .method public setBGVisibility(I)V
     .locals 1
-    .param p1, "visibility"    # I
 
-    .prologue
-    .line 162
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButtonChecked:Lcom/samsung/android/glview/GLImage;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/glview/GLImage;->setVisibility(I)V
 
-    .line 163
     return-void
 .end method
 
 .method public setColorTuneItemSelectListener(Lcom/sec/android/app/camera/widget/gl/ColorTuneItem$ColorTuneItemSelectListener;)V
     .locals 0
-    .param p1, "listener"    # Lcom/sec/android/app/camera/widget/gl/ColorTuneItem$ColorTuneItemSelectListener;
 
-    .prologue
-    .line 166
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mColorTuneItemSelectListener:Lcom/sec/android/app/camera/widget/gl/ColorTuneItem$ColorTuneItemSelectListener;
 
-    .line 167
     return-void
 .end method
 
 .method public setDim(Z)V
     .locals 1
-    .param p1, "dimmed"    # Z
 
-    .prologue
-    .line 171
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButton:Lcom/samsung/android/glview/GLSelectButton;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/glview/GLSelectButton;->setDim(Z)V
 
-    .line 172
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButton:Lcom/samsung/android/glview/GLSelectButton;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/glview/GLSelectButton;->setBypassTouch(Z)V
 
-    .line 173
     invoke-super {p0, p1}, Lcom/samsung/android/glview/GLViewGroup;->setDim(Z)V
 
-    .line 174
     return-void
 .end method
 
 .method public setMargin(IIII)V
     .locals 3
-    .param p1, "left"    # I
-    .param p2, "top"    # I
-    .param p3, "right"    # I
-    .param p4, "bottom"    # I
 
-    .prologue
-    .line 177
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButton:Lcom/samsung/android/glview/GLSelectButton;
 
     if-eqz v0, :cond_0
 
-    .line 178
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButton:Lcom/samsung/android/glview/GLSelectButton;
 
     int-to-float v1, p1
@@ -1448,13 +1283,11 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/glview/GLSelectButton;->moveLayoutAbsolute(FF)V
 
-    .line 181
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mTitle:Lcom/samsung/android/glview/GLText;
 
     if-eqz v0, :cond_1
 
-    .line 182
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mTitle:Lcom/samsung/android/glview/GLText;
 
     int-to-float v1, p1
@@ -1463,13 +1296,11 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/glview/GLText;->moveLayoutAbsolute(FF)V
 
-    .line 185
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButtonBG:Lcom/samsung/android/glview/GLImage;
 
     if-eqz v0, :cond_2
 
-    .line 186
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButtonBG:Lcom/samsung/android/glview/GLImage;
 
     int-to-float v1, p1
@@ -1478,13 +1309,11 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/glview/GLImage;->moveLayoutAbsolute(FF)V
 
-    .line 189
     :cond_2
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButtonChecked:Lcom/samsung/android/glview/GLImage;
 
     if-eqz v0, :cond_3
 
-    .line 190
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButtonChecked:Lcom/samsung/android/glview/GLImage;
 
     int-to-float v1, p1
@@ -1493,7 +1322,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/glview/GLImage;->moveLayoutAbsolute(FF)V
 
-    .line 193
     :cond_3
     invoke-virtual {p0}, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->getWidth()F
 
@@ -1521,55 +1349,42 @@
 
     invoke-super {p0, v0, v1}, Lcom/samsung/android/glview/GLViewGroup;->setSize(FF)V
 
-    .line 194
     return-void
 .end method
 
 .method public setMute(Z)V
     .locals 1
-    .param p1, "mute"    # Z
 
-    .prologue
-    .line 197
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButton:Lcom/samsung/android/glview/GLSelectButton;
 
     if-eqz v0, :cond_0
 
-    .line 198
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButton:Lcom/samsung/android/glview/GLSelectButton;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/glview/GLSelectButton;->setMute(Z)V
 
-    .line 200
     :cond_0
     return-void
 .end method
 
 .method public setSelected(Z)V
     .locals 2
-    .param p1, "selected"    # Z
 
-    .prologue
-    .line 90
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButton:Lcom/samsung/android/glview/GLSelectButton;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/glview/GLSelectButton;->setSelected(Z)V
 
-    .line 91
     if-eqz p1, :cond_0
 
-    .line 92
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButtonChecked:Lcom/samsung/android/glview/GLImage;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLImage;->setVisibility(I)V
 
-    .line 96
     :goto_0
     return-void
 
-    .line 94
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mButtonChecked:Lcom/samsung/android/glview/GLImage;
 
@@ -1582,15 +1397,10 @@
 
 .method public setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V
     .locals 0
-    .param p1, "l"    # Lcom/samsung/android/glview/GLView$TouchListener;
 
-    .prologue
-    .line 204
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/ColorTuneItem;->mTouchListener:Lcom/samsung/android/glview/GLView$TouchListener;
 
-    .line 205
     invoke-super {p0, p1}, Lcom/samsung/android/glview/GLViewGroup;->setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V
 
-    .line 206
     return-void
 .end method

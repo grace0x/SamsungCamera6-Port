@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;)V
     .locals 0
 
-    .prologue
-    .line 1998
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$7;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +36,7 @@
 # virtual methods
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 2
-    .param p1, "arg0"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 2001
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$7;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->mBeautyList:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$GLEffectThumbnailList;
@@ -53,30 +48,22 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$GLEffectThumbnailList;->setVisibility(I)V
 
-    .line 2002
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$7;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     # invokes: Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->refreshItemBG()V
     invoke-static {v0}, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->access$3200(Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;)V
 
-    .line 2003
     return-void
 .end method
 
 .method public onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 0
-    .param p1, "arg0"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 2007
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 0
-    .param p1, "arg0"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 2011
     return-void
 .end method

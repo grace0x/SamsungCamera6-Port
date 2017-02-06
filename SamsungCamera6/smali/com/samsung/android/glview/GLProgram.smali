@@ -100,73 +100,54 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .param p1, "strVSource"    # Ljava/lang/String;
-    .param p2, "strFSource"    # Ljava/lang/String;
 
-    .prologue
-    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 68
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/glview/GLProgram;->mNameIndexerObjMap:Ljava/util/Hashtable;
 
-    .line 70
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/glview/GLProgram;->mProgram:I
 
-    .line 73
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/glview/GLProgram;->loadProgram(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/glview/GLProgram;->mProgram:I
 
-    .line 74
     return-void
 .end method
 
 .method private checkGlError(Ljava/lang/String;)V
     .locals 0
-    .param p1, "op"    # Ljava/lang/String;
 
-    .prologue
-    .line 118
     return-void
 .end method
 
 .method private loadProgram(Ljava/lang/String;Ljava/lang/String;)I
     .locals 8
-    .param p1, "strVSource"    # Ljava/lang/String;
-    .param p2, "strFSource"    # Ljava/lang/String;
 
-    .prologue
     const/4 v7, 0x1
 
     const/4 v5, 0x0
 
-    .line 121
     const v6, 0x8b31
 
     invoke-direct {p0, v6, p1}, Lcom/samsung/android/glview/GLProgram;->loadShader(ILjava/lang/String;)I
 
     move-result v2
 
-    .line 122
-    .local v2, "iVShader":I
     if-nez v2, :cond_0
 
     move v1, v5
 
-    .line 150
     :goto_0
     return v1
 
-    .line 125
     :cond_0
     const v6, 0x8b30
 
@@ -174,71 +155,51 @@
 
     move-result v0
 
-    .line 126
-    .local v0, "iFShader":I
     if-nez v0, :cond_1
 
     move v1, v5
 
-    .line 127
     goto :goto_0
 
-    .line 130
     :cond_1
     invoke-static {}, Landroid/opengl/GLES20;->glCreateProgram()I
 
     move-result v1
 
-    .line 131
-    .local v1, "iProgId":I
     if-eqz v1, :cond_2
 
-    .line 132
     invoke-static {v1, v2}, Landroid/opengl/GLES20;->glAttachShader(II)V
 
-    .line 133
     const-string v6, "glAttachShader"
 
     invoke-direct {p0, v6}, Lcom/samsung/android/glview/GLProgram;->checkGlError(Ljava/lang/String;)V
 
-    .line 134
     invoke-static {v1, v0}, Landroid/opengl/GLES20;->glAttachShader(II)V
 
-    .line 135
     const-string v6, "glAttachShader"
 
     invoke-direct {p0, v6}, Lcom/samsung/android/glview/GLProgram;->checkGlError(Ljava/lang/String;)V
 
-    .line 136
     invoke-static {v1}, Landroid/opengl/GLES20;->glLinkProgram(I)V
 
-    .line 137
     new-array v4, v7, [I
 
-    .line 138
-    .local v4, "linkStatus":[I
     const v6, 0x8b82
 
     invoke-static {v1, v6, v4, v5}, Landroid/opengl/GLES20;->glGetProgramiv(II[II)V
 
-    .line 139
     aget v5, v4, v5
 
     if-eq v5, v7, :cond_2
 
-    .line 140
     invoke-static {v1}, Landroid/opengl/GLES20;->glGetProgramInfoLog(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 141
-    .local v3, "info":Ljava/lang/String;
     invoke-static {v1}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
 
-    .line 142
     const/4 v1, 0x0
 
-    .line 143
     new-instance v5, Ljava/lang/RuntimeException;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -263,13 +224,9 @@
 
     throw v5
 
-    .line 147
-    .end local v3    # "info":Ljava/lang/String;
-    .end local v4    # "linkStatus":[I
     :cond_2
     invoke-static {v2}, Landroid/opengl/GLES20;->glDeleteShader(I)V
 
-    .line 148
     invoke-static {v0}, Landroid/opengl/GLES20;->glDeleteShader(I)V
 
     goto :goto_0
@@ -277,56 +234,39 @@
 
 .method private loadShader(ILjava/lang/String;)I
     .locals 6
-    .param p1, "iShaderType"    # I
-    .param p2, "strSource"    # Ljava/lang/String;
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 154
     invoke-static {p1}, Landroid/opengl/GLES20;->glCreateShader(I)I
 
     move-result v1
 
-    .line 155
-    .local v1, "iShader":I
     if-eqz v1, :cond_0
 
-    .line 156
     invoke-static {v1, p2}, Landroid/opengl/GLES20;->glShaderSource(ILjava/lang/String;)V
 
-    .line 157
     invoke-static {v1}, Landroid/opengl/GLES20;->glCompileShader(I)V
 
-    .line 158
     const/4 v3, 0x1
 
     new-array v0, v3, [I
 
-    .line 159
-    .local v0, "compiled":[I
     const v3, 0x8b81
 
     invoke-static {v1, v3, v0, v4}, Landroid/opengl/GLES20;->glGetShaderiv(II[II)V
 
-    .line 160
     aget v3, v0, v4
 
     if-nez v3, :cond_0
 
-    .line 161
     invoke-static {v1}, Landroid/opengl/GLES20;->glGetShaderInfoLog(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 162
-    .local v2, "info":Ljava/lang/String;
     invoke-static {v1}, Landroid/opengl/GLES20;->glDeleteShader(I)V
 
-    .line 163
     const/4 v1, 0x0
 
-    .line 164
     new-instance v3, Ljava/lang/RuntimeException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -361,9 +301,6 @@
 
     throw v3
 
-    .line 167
-    .end local v0    # "compiled":[I
-    .end local v2    # "info":Ljava/lang/String;
     :cond_0
     return v1
 .end method
@@ -372,41 +309,27 @@
 # virtual methods
 .method public addNameIndexer(Ljava/lang/String;II)Z
     .locals 2
-    .param p1, "name"    # Ljava/lang/String;
-    .param p2, "qualifier"    # I
-    .param p3, "type"    # I
 
-    .prologue
-    .line 78
     iget v1, p0, Lcom/samsung/android/glview/GLProgram;->mProgram:I
 
     if-eqz v1, :cond_0
 
-    .line 79
     new-instance v0, Lcom/samsung/android/glview/GLProgram$NameIndexerObj;
 
     invoke-direct {v0}, Lcom/samsung/android/glview/GLProgram$NameIndexerObj;-><init>()V
 
-    .line 83
-    .local v0, "obj":Lcom/samsung/android/glview/GLProgram$NameIndexerObj;
     packed-switch p2, :pswitch_data_0
 
-    .line 91
     :goto_0
     iget-object v1, p0, Lcom/samsung/android/glview/GLProgram;->mNameIndexerObjMap:Ljava/util/Hashtable;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 92
     const/4 v1, 0x1
 
-    .line 94
-    .end local v0    # "obj":Lcom/samsung/android/glview/GLProgram$NameIndexerObj;
     :goto_1
     return v1
 
-    .line 85
-    .restart local v0    # "obj":Lcom/samsung/android/glview/GLProgram$NameIndexerObj;
     :pswitch_0
     iget v1, p0, Lcom/samsung/android/glview/GLProgram;->mProgram:I
 
@@ -418,7 +341,6 @@
 
     goto :goto_0
 
-    .line 88
     :pswitch_1
     iget v1, p0, Lcom/samsung/android/glview/GLProgram;->mProgram:I
 
@@ -430,14 +352,11 @@
 
     goto :goto_0
 
-    .line 94
-    .end local v0    # "obj":Lcom/samsung/android/glview/GLProgram$NameIndexerObj;
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 83
     nop
 
     :pswitch_data_0
@@ -449,10 +368,7 @@
 
 .method public getNameIndexer(Ljava/lang/String;)Lcom/samsung/android/glview/GLProgram$NameIndexerObj;
     .locals 1
-    .param p1, "name"    # Ljava/lang/String;
 
-    .prologue
-    .line 98
     iget-object v0, p0, Lcom/samsung/android/glview/GLProgram;->mNameIndexerObjMap:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -467,8 +383,6 @@
 .method public getProgramID()I
     .locals 1
 
-    .prologue
-    .line 102
     iget v0, p0, Lcom/samsung/android/glview/GLProgram;->mProgram:I
 
     return v0
@@ -477,23 +391,18 @@
 .method public release()V
     .locals 1
 
-    .prologue
-    .line 106
     iget v0, p0, Lcom/samsung/android/glview/GLProgram;->mProgram:I
 
     if-eqz v0, :cond_0
 
-    .line 108
     iget v0, p0, Lcom/samsung/android/glview/GLProgram;->mProgram:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
 
-    .line 110
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/glview/GLProgram;->mNameIndexerObjMap:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->clear()V
 
-    .line 111
     return-void
 .end method

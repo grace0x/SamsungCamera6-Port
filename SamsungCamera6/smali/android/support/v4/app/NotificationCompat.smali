@@ -161,26 +161,21 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 828
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 829
     new-instance v0, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplApi21;
 
     invoke-direct {v0}, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplApi21;-><init>()V
 
     sput-object v0, Landroid/support/v4/app/NotificationCompat;->IMPL:Landroid/support/v4/app/NotificationCompat$NotificationCompatImpl;
 
-    .line 845
     :goto_0
     return-void
 
-    .line 830
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -188,7 +183,6 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 831
     new-instance v0, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplApi20;
 
     invoke-direct {v0}, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplApi20;-><init>()V
@@ -197,7 +191,6 @@
 
     goto :goto_0
 
-    .line 832
     :cond_1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -205,7 +198,6 @@
 
     if-lt v0, v1, :cond_2
 
-    .line 833
     new-instance v0, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplKitKat;
 
     invoke-direct {v0}, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplKitKat;-><init>()V
@@ -214,7 +206,6 @@
 
     goto :goto_0
 
-    .line 834
     :cond_2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -222,7 +213,6 @@
 
     if-lt v0, v1, :cond_3
 
-    .line 835
     new-instance v0, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplJellybean;
 
     invoke-direct {v0}, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplJellybean;-><init>()V
@@ -231,7 +221,6 @@
 
     goto :goto_0
 
-    .line 836
     :cond_3
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -239,7 +228,6 @@
 
     if-lt v0, v1, :cond_4
 
-    .line 837
     new-instance v0, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplIceCreamSandwich;
 
     invoke-direct {v0}, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplIceCreamSandwich;-><init>()V
@@ -248,7 +236,6 @@
 
     goto :goto_0
 
-    .line 838
     :cond_4
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -256,7 +243,6 @@
 
     if-lt v0, v1, :cond_5
 
-    .line 839
     new-instance v0, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplHoneycomb;
 
     invoke-direct {v0}, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplHoneycomb;-><init>()V
@@ -265,7 +251,6 @@
 
     goto :goto_0
 
-    .line 840
     :cond_5
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -273,7 +258,6 @@
 
     if-lt v0, v1, :cond_6
 
-    .line 841
     new-instance v0, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplGingerbread;
 
     invoke-direct {v0}, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplGingerbread;-><init>()V
@@ -282,7 +266,6 @@
 
     goto :goto_0
 
-    .line 843
     :cond_6
     new-instance v0, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplBase;
 
@@ -296,21 +279,14 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2938
     return-void
 .end method
 
 .method static synthetic access$000(Landroid/support/v4/app/NotificationBuilderWithActions;Ljava/util/ArrayList;)V
     .locals 0
-    .param p0, "x0"    # Landroid/support/v4/app/NotificationBuilderWithActions;
-    .param p1, "x1"    # Ljava/util/ArrayList;
 
-    .prologue
-    .line 42
     invoke-static {p0, p1}, Landroid/support/v4/app/NotificationCompat;->addActionsToBuilder(Landroid/support/v4/app/NotificationBuilderWithActions;Ljava/util/ArrayList;)V
 
     return-void
@@ -318,11 +294,7 @@
 
 .method static synthetic access$100(Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;Landroid/support/v4/app/NotificationCompat$Style;)V
     .locals 0
-    .param p0, "x0"    # Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;
-    .param p1, "x1"    # Landroid/support/v4/app/NotificationCompat$Style;
 
-    .prologue
-    .line 42
     invoke-static {p0, p1}, Landroid/support/v4/app/NotificationCompat;->addStyleToBuilderJellybean(Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;Landroid/support/v4/app/NotificationCompat$Style;)V
 
     return-void
@@ -331,8 +303,6 @@
 .method static synthetic access$200()Landroid/support/v4/app/NotificationCompat$NotificationCompatImpl;
     .locals 1
 
-    .prologue
-    .line 42
     sget-object v0, Landroid/support/v4/app/NotificationCompat;->IMPL:Landroid/support/v4/app/NotificationCompat$NotificationCompatImpl;
 
     return-object v0
@@ -340,11 +310,7 @@
 
 .method static synthetic access$500(Landroid/os/Bundle;Ljava/lang/String;)[Landroid/app/Notification;
     .locals 1
-    .param p0, "x0"    # Landroid/os/Bundle;
-    .param p1, "x1"    # Ljava/lang/String;
 
-    .prologue
-    .line 42
     invoke-static {p0, p1}, Landroid/support/v4/app/NotificationCompat;->getNotificationArrayFromBundle(Landroid/os/Bundle;Ljava/lang/String;)[Landroid/app/Notification;
 
     move-result-object v0
@@ -354,7 +320,6 @@
 
 .method private static addActionsToBuilder(Landroid/support/v4/app/NotificationBuilderWithActions;Ljava/util/ArrayList;)V
     .locals 3
-    .param p0, "builder"    # Landroid/support/v4/app/NotificationBuilderWithActions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -366,14 +331,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 792
-    .local p1, "actions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/support/v4/app/NotificationCompat$Action;>;"
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -387,39 +348,27 @@
 
     check-cast v0, Landroid/support/v4/app/NotificationCompat$Action;
 
-    .line 793
-    .local v0, "action":Landroid/support/v4/app/NotificationCompat$Action;
     invoke-interface {p0, v0}, Landroid/support/v4/app/NotificationBuilderWithActions;->addAction(Landroid/support/v4/app/NotificationCompatBase$Action;)V
 
     goto :goto_0
 
-    .line 795
-    .end local v0    # "action":Landroid/support/v4/app/NotificationCompat$Action;
     :cond_0
     return-void
 .end method
 
 .method private static addStyleToBuilderJellybean(Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;Landroid/support/v4/app/NotificationCompat$Style;)V
     .locals 10
-    .param p0, "builder"    # Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;
-    .param p1, "style"    # Landroid/support/v4/app/NotificationCompat$Style;
 
-    .prologue
-    .line 799
     if-eqz p1, :cond_0
 
-    .line 800
     instance-of v0, p1, Landroid/support/v4/app/NotificationCompat$BigTextStyle;
 
     if-eqz v0, :cond_1
 
     move-object v8, p1
 
-    .line 801
     check-cast v8, Landroid/support/v4/app/NotificationCompat$BigTextStyle;
 
-    .line 802
-    .local v8, "bigTextStyle":Landroid/support/v4/app/NotificationCompat$BigTextStyle;
     iget-object v0, v8, Landroid/support/v4/app/NotificationCompat$BigTextStyle;->mBigContentTitle:Ljava/lang/CharSequence;
 
     iget-boolean v1, v8, Landroid/support/v4/app/NotificationCompat$BigTextStyle;->mSummaryTextSet:Z
@@ -430,13 +379,10 @@
 
     invoke-static {p0, v0, v1, v2, v3}, Landroid/support/v4/app/NotificationCompatJellybean;->addBigTextStyle(Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;Ljava/lang/CharSequence;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;)V
 
-    .line 825
-    .end local v8    # "bigTextStyle":Landroid/support/v4/app/NotificationCompat$BigTextStyle;
     :cond_0
     :goto_0
     return-void
 
-    .line 807
     :cond_1
     instance-of v0, p1, Landroid/support/v4/app/NotificationCompat$InboxStyle;
 
@@ -444,11 +390,8 @@
 
     move-object v9, p1
 
-    .line 808
     check-cast v9, Landroid/support/v4/app/NotificationCompat$InboxStyle;
 
-    .line 809
-    .local v9, "inboxStyle":Landroid/support/v4/app/NotificationCompat$InboxStyle;
     iget-object v0, v9, Landroid/support/v4/app/NotificationCompat$InboxStyle;->mBigContentTitle:Ljava/lang/CharSequence;
 
     iget-boolean v1, v9, Landroid/support/v4/app/NotificationCompat$InboxStyle;->mSummaryTextSet:Z
@@ -461,8 +404,6 @@
 
     goto :goto_0
 
-    .line 814
-    .end local v9    # "inboxStyle":Landroid/support/v4/app/NotificationCompat$InboxStyle;
     :cond_2
     instance-of v0, p1, Landroid/support/v4/app/NotificationCompat$BigPictureStyle;
 
@@ -470,11 +411,8 @@
 
     move-object v7, p1
 
-    .line 815
     check-cast v7, Landroid/support/v4/app/NotificationCompat$BigPictureStyle;
 
-    .line 816
-    .local v7, "bigPictureStyle":Landroid/support/v4/app/NotificationCompat$BigPictureStyle;
     iget-object v1, v7, Landroid/support/v4/app/NotificationCompat$BigPictureStyle;->mBigContentTitle:Ljava/lang/CharSequence;
 
     iget-boolean v2, v7, Landroid/support/v4/app/NotificationCompat$BigPictureStyle;->mSummaryTextSet:Z
@@ -496,11 +434,7 @@
 
 .method public static getAction(Landroid/app/Notification;I)Landroid/support/v4/app/NotificationCompat$Action;
     .locals 1
-    .param p0, "notif"    # Landroid/app/Notification;
-    .param p1, "actionIndex"    # I
 
-    .prologue
-    .line 3306
     sget-object v0, Landroid/support/v4/app/NotificationCompat;->IMPL:Landroid/support/v4/app/NotificationCompat$NotificationCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/app/NotificationCompat$NotificationCompatImpl;->getAction(Landroid/app/Notification;I)Landroid/support/v4/app/NotificationCompat$Action;
@@ -512,10 +446,7 @@
 
 .method public static getActionCount(Landroid/app/Notification;)I
     .locals 1
-    .param p0, "notif"    # Landroid/app/Notification;
 
-    .prologue
-    .line 3296
     sget-object v0, Landroid/support/v4/app/NotificationCompat;->IMPL:Landroid/support/v4/app/NotificationCompat$NotificationCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/app/NotificationCompat$NotificationCompatImpl;->getActionCount(Landroid/app/Notification;)I
@@ -527,10 +458,7 @@
 
 .method public static getCategory(Landroid/app/Notification;)Ljava/lang/String;
     .locals 1
-    .param p0, "notif"    # Landroid/app/Notification;
 
-    .prologue
-    .line 3315
     sget-object v0, Landroid/support/v4/app/NotificationCompat;->IMPL:Landroid/support/v4/app/NotificationCompat$NotificationCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/app/NotificationCompat$NotificationCompatImpl;->getCategory(Landroid/app/Notification;)Ljava/lang/String;
@@ -542,10 +470,7 @@
 
 .method public static getExtras(Landroid/app/Notification;)Landroid/os/Bundle;
     .locals 1
-    .param p0, "notif"    # Landroid/app/Notification;
 
-    .prologue
-    .line 3288
     sget-object v0, Landroid/support/v4/app/NotificationCompat;->IMPL:Landroid/support/v4/app/NotificationCompat$NotificationCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/app/NotificationCompat$NotificationCompatImpl;->getExtras(Landroid/app/Notification;)Landroid/os/Bundle;
@@ -557,10 +482,7 @@
 
 .method public static getGroup(Landroid/app/Notification;)Ljava/lang/String;
     .locals 1
-    .param p0, "notif"    # Landroid/app/Notification;
 
-    .prologue
-    .line 3333
     sget-object v0, Landroid/support/v4/app/NotificationCompat;->IMPL:Landroid/support/v4/app/NotificationCompat$NotificationCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/app/NotificationCompat$NotificationCompatImpl;->getGroup(Landroid/app/Notification;)Ljava/lang/String;
@@ -572,10 +494,7 @@
 
 .method public static getLocalOnly(Landroid/app/Notification;)Z
     .locals 1
-    .param p0, "notif"    # Landroid/app/Notification;
 
-    .prologue
-    .line 3325
     sget-object v0, Landroid/support/v4/app/NotificationCompat;->IMPL:Landroid/support/v4/app/NotificationCompat$NotificationCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/app/NotificationCompat$NotificationCompatImpl;->getLocalOnly(Landroid/app/Notification;)Z
@@ -587,66 +506,49 @@
 
 .method private static getNotificationArrayFromBundle(Landroid/os/Bundle;Ljava/lang/String;)[Landroid/app/Notification;
     .locals 4
-    .param p0, "bundle"    # Landroid/os/Bundle;
-    .param p1, "key"    # Ljava/lang/String;
 
-    .prologue
-    .line 3270
     invoke-virtual {p0, p1}, Landroid/os/Bundle;->getParcelableArray(Ljava/lang/String;)[Landroid/os/Parcelable;
 
     move-result-object v0
 
-    .line 3271
-    .local v0, "array":[Landroid/os/Parcelable;
     instance-of v3, v0, [Landroid/app/Notification;
 
     if-nez v3, :cond_0
 
     if-nez v0, :cond_1
 
-    .line 3272
     :cond_0
     check-cast v0, [Landroid/app/Notification;
 
-    .end local v0    # "array":[Landroid/os/Parcelable;
     check-cast v0, [Landroid/app/Notification;
 
     move-object v2, v0
 
-    .line 3279
     :goto_0
     return-object v2
 
-    .line 3274
-    .restart local v0    # "array":[Landroid/os/Parcelable;
     :cond_1
     array-length v3, v0
 
     new-array v2, v3, [Landroid/app/Notification;
 
-    .line 3275
-    .local v2, "typedArray":[Landroid/app/Notification;
     const/4 v1, 0x0
 
-    .local v1, "i":I
     :goto_1
     array-length v3, v0
 
     if-ge v1, v3, :cond_2
 
-    .line 3276
     aget-object v3, v0, v1
 
     check-cast v3, Landroid/app/Notification;
 
     aput-object v3, v2, v1
 
-    .line 3275
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 3278
     :cond_2
     invoke-virtual {p0, p1, v2}, Landroid/os/Bundle;->putParcelableArray(Ljava/lang/String;[Landroid/os/Parcelable;)V
 
@@ -655,10 +557,7 @@
 
 .method public static getSortKey(Landroid/app/Notification;)Ljava/lang/String;
     .locals 1
-    .param p0, "notif"    # Landroid/app/Notification;
 
-    .prologue
-    .line 3359
     sget-object v0, Landroid/support/v4/app/NotificationCompat;->IMPL:Landroid/support/v4/app/NotificationCompat$NotificationCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/app/NotificationCompat$NotificationCompatImpl;->getSortKey(Landroid/app/Notification;)Ljava/lang/String;
@@ -670,10 +569,7 @@
 
 .method public static isGroupSummary(Landroid/app/Notification;)Z
     .locals 1
-    .param p0, "notif"    # Landroid/app/Notification;
 
-    .prologue
-    .line 3343
     sget-object v0, Landroid/support/v4/app/NotificationCompat;->IMPL:Landroid/support/v4/app/NotificationCompat$NotificationCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/app/NotificationCompat$NotificationCompatImpl;->isGroupSummary(Landroid/app/Notification;)Z

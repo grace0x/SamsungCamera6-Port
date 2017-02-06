@@ -27,8 +27,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback;[I)V
     .locals 0
 
-    .prologue
-    .line 10272
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback$1;->this$1:Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback;
 
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback$1;->val$intData:[I
@@ -43,10 +41,8 @@
 .method public run()V
     .locals 7
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 10275
     iget-object v3, p0, Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback$1;->val$intData:[I
 
     iget-object v4, p0, Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback$1;->this$1:Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback;
@@ -73,8 +69,6 @@
 
     move-result-object v0
 
-    .line 10276
-    .local v0, "bmp":Landroid/graphics/Bitmap;
     iget-object v3, p0, Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback$1;->this$1:Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback;
 
     iget-object v3, v3, Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
@@ -92,8 +86,6 @@
 
     move-result v2
 
-    .line 10277
-    .local v2, "orientation":I
     iget-object v3, p0, Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback$1;->this$1:Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback;
 
     iget-object v3, v3, Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
@@ -129,8 +121,6 @@
 
     if-nez v3, :cond_1
 
-    .line 10278
-    .local v1, "needFlip":Z
     :goto_0
     iget-object v3, p0, Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback$1;->this$1:Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback;
 
@@ -143,7 +133,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 10279
     iget-object v3, p0, Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback$1;->this$1:Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback;
 
     iget-object v3, v3, Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
@@ -155,7 +144,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 10280
     iget-object v3, p0, Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback$1;->this$1:Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback;
 
     iget-object v3, v3, Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
@@ -167,20 +155,15 @@
 
     invoke-interface {v3, v0, v2}, Lcom/sec/android/app/camera/interfaces/Engine$BurstCaptureEventListener;->onBurstCaptureThumbnailTaken(Landroid/graphics/Bitmap;I)V
 
-    .line 10285
     :cond_0
     :goto_1
     return-void
 
-    .line 10277
-    .end local v1    # "needFlip":Z
     :cond_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 10283
-    .restart local v1    # "needFlip":Z
     :cond_2
     iget-object v3, p0, Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback$1;->this$1:Lcom/sec/android/app/camera/engine/CommonEngine$ThumbnailPictureCallback;
 

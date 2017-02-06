@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/widget/gl/ThumbnailButton$1;)V
     .locals 0
 
-    .prologue
-    .line 353
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/ThumbnailButton$1$1;->this$1:Lcom/sec/android/app/camera/widget/gl/ThumbnailButton$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +36,7 @@
 # virtual methods
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 2
-    .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
-    .prologue
-    .line 356
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ThumbnailButton$1$1;->this$1:Lcom/sec/android/app/camera/widget/gl/ThumbnailButton$1;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/widget/gl/ThumbnailButton$1;->this$0:Lcom/sec/android/app/camera/widget/gl/ThumbnailButton;
@@ -53,7 +48,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 357
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ThumbnailButton$1$1;->this$1:Lcom/sec/android/app/camera/widget/gl/ThumbnailButton$1;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/widget/gl/ThumbnailButton$1;->this$0:Lcom/sec/android/app/camera/widget/gl/ThumbnailButton;
@@ -75,7 +69,6 @@
 
     invoke-virtual {v1, v0}, Lcom/samsung/android/glview/GLView;->setShaderParameter(F)V
 
-    .line 359
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ThumbnailButton$1$1;->this$1:Lcom/sec/android/app/camera/widget/gl/ThumbnailButton$1;
 
@@ -89,6 +82,5 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLContext;->setDirty(Z)V
 
-    .line 360
     return-void
 .end method

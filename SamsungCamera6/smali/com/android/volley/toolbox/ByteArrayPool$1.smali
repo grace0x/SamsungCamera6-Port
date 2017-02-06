@@ -29,8 +29,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,17 +38,11 @@
 # virtual methods
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
-    .param p1, "x0"    # Ljava/lang/Object;
-    .param p2, "x1"    # Ljava/lang/Object;
 
-    .prologue
-    .line 69
     check-cast p1, [B
 
-    .end local p1    # "x0":Ljava/lang/Object;
     check-cast p2, [B
 
-    .end local p2    # "x1":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Lcom/android/volley/toolbox/ByteArrayPool$1;->compare([B[B)I
 
     move-result v0
@@ -60,11 +52,7 @@
 
 .method public compare([B[B)I
     .locals 2
-    .param p1, "lhs"    # [B
-    .param p2, "rhs"    # [B
 
-    .prologue
-    .line 72
     array-length v0, p1
 
     array-length v1, p2

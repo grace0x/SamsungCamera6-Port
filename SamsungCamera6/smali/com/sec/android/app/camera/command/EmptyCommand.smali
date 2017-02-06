@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 21
     invoke-direct {p0}, Lcom/sec/android/app/camera/command/MenuCommand;-><init>()V
 
     return-void
@@ -19,8 +17,6 @@
 .method public execute()Z
     .locals 1
 
-    .prologue
-    .line 25
     const/4 v0, 0x1
 
     return v0

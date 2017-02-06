@@ -32,18 +32,11 @@
 # direct methods
 .method public constructor <init>(Lcom/sec/android/app/camera/setting/SpinnerPreference;Landroid/content/Context;I[Ljava/lang/String;)V
     .locals 0
-    .param p2, "ctx"    # Landroid/content/Context;
-    .param p3, "txtViewResourceId"    # I
-    .param p4, "objects"    # [Ljava/lang/String;
 
-    .prologue
-    .line 253
     iput-object p1, p0, Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerAdapter;->this$0:Lcom/sec/android/app/camera/setting/SpinnerPreference;
 
-    .line 254
     invoke-direct {p0, p2, p3, p4}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;I[Ljava/lang/Object;)V
 
-    .line 255
     return-void
 .end method
 
@@ -51,12 +44,7 @@
 # virtual methods
 .method public getDropDownView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 5
-    .param p1, "position"    # I
-    .param p2, "convertView"    # Landroid/view/View;
-    .param p3, "parent"    # Landroid/view/ViewGroup;
 
-    .prologue
-    .line 260
     iget-object v2, p0, Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerAdapter;->this$0:Lcom/sec/android/app/camera/setting/SpinnerPreference;
 
     iget-object v3, p0, Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerAdapter;->this$0:Lcom/sec/android/app/camera/setting/SpinnerPreference;
@@ -72,10 +60,8 @@
 
     iput v2, p0, Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerAdapter;->selectedIndex:I
 
-    .line 261
     if-nez p2, :cond_1
 
-    .line 262
     iget-object v2, p0, Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerAdapter;->this$0:Lcom/sec/android/app/camera/setting/SpinnerPreference;
 
     # getter for: Lcom/sec/android/app/camera/setting/SpinnerPreference;->mContext:Landroid/content/Context;
@@ -87,8 +73,6 @@
 
     move-result-object v0
 
-    .line 263
-    .local v0, "inflater":Landroid/view/LayoutInflater;
     const v2, 0x7f040013
 
     const/4 v3, 0x0
@@ -97,13 +81,10 @@
 
     move-result-object p2
 
-    .line 264
     new-instance v1, Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerItemHolder;
 
     invoke-direct {v1}, Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerItemHolder;-><init>()V
 
-    .line 265
-    .local v1, "viewHolder":Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerItemHolder;
     const v2, 0x7f0e003f
 
     invoke-virtual {p2, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -114,7 +95,6 @@
 
     iput-object v2, v1, Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerItemHolder;->mainText:Landroid/widget/TextView;
 
-    .line 266
     const v2, 0x7f0e0040
 
     invoke-virtual {p2, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -125,11 +105,8 @@
 
     iput-object v2, v1, Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerItemHolder;->subText:Landroid/widget/TextView;
 
-    .line 267
     invoke-virtual {p2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 271
-    .end local v0    # "inflater":Landroid/view/LayoutInflater;
     :goto_0
     iget-object v2, v1, Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerItemHolder;->mainText:Landroid/widget/TextView;
 
@@ -144,7 +121,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 272
     iget-object v2, v1, Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerItemHolder;->subText:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerAdapter;->getContext()Landroid/content/Context;
@@ -166,12 +142,10 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 273
     iget v2, p0, Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerAdapter;->selectedIndex:I
 
     if-ne v2, p1, :cond_2
 
-    .line 274
     iget-object v2, v1, Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerItemHolder;->mainText:Landroid/widget/TextView;
 
     iget-object v3, p0, Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerAdapter;->this$0:Lcom/sec/android/app/camera/setting/SpinnerPreference;
@@ -189,7 +163,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 278
     :goto_1
     iget-object v2, p0, Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerAdapter;->this$0:Lcom/sec/android/app/camera/setting/SpinnerPreference;
 
@@ -200,7 +173,6 @@
 
     if-nez v2, :cond_3
 
-    .line 279
     iget-object v2, p0, Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerAdapter;->this$0:Lcom/sec/android/app/camera/setting/SpinnerPreference;
 
     # getter for: Lcom/sec/android/app/camera/setting/SpinnerPreference;->mContext:Landroid/content/Context;
@@ -223,13 +195,10 @@
 
     invoke-virtual {p2, v2}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 285
     :cond_0
     :goto_2
     return-object p2
 
-    .line 269
-    .end local v1    # "viewHolder":Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerItemHolder;
     :cond_1
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -237,10 +206,8 @@
 
     check-cast v1, Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerItemHolder;
 
-    .restart local v1    # "viewHolder":Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerItemHolder;
     goto :goto_0
 
-    .line 276
     :cond_2
     iget-object v2, v1, Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerItemHolder;->mainText:Landroid/widget/TextView;
 
@@ -261,7 +228,6 @@
 
     goto :goto_1
 
-    .line 280
     :cond_3
     iget-object v2, p0, Lcom/sec/android/app/camera/setting/SpinnerPreference$ResolutionSpinnerAdapter;->this$0:Lcom/sec/android/app/camera/setting/SpinnerPreference;
 
@@ -274,7 +240,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 281
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V

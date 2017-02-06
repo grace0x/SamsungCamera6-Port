@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;)V
     .locals 0
 
-    .prologue
-    .line 298
     iput-object p1, p0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1$1;->this$1:Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,8 +37,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 300
     iget-object v0, p0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1$1;->this$1:Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;->this$0:Lcom/sec/android/app/camera/help/HelpHubImageViewer;
@@ -48,7 +44,6 @@
     # operator++ for: Lcom/sec/android/app/camera/help/HelpHubImageViewer;->mCurrentIndex:I
     invoke-static {v0}, Lcom/sec/android/app/camera/help/HelpHubImageViewer;->access$108(Lcom/sec/android/app/camera/help/HelpHubImageViewer;)I
 
-    .line 301
     iget-object v0, p0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1$1;->this$1:Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;->this$0:Lcom/sec/android/app/camera/help/HelpHubImageViewer;
@@ -73,7 +68,6 @@
 
     if-lt v0, v1, :cond_3
 
-    .line 302
     iget-object v0, p0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1$1;->this$1:Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;->this$0:Lcom/sec/android/app/camera/help/HelpHubImageViewer;
@@ -83,7 +77,6 @@
     # setter for: Lcom/sec/android/app/camera/help/HelpHubImageViewer;->mCurrentIndex:I
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/help/HelpHubImageViewer;->access$102(Lcom/sec/android/app/camera/help/HelpHubImageViewer;I)I
 
-    .line 303
     iget-object v0, p0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1$1;->this$1:Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;->this$0:Lcom/sec/android/app/camera/help/HelpHubImageViewer;
@@ -95,14 +88,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 304
     iget-object v0, p0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1$1;->this$1:Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;->mStopAnimation:Z
 
-    .line 306
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1$1;->this$1:Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;
 
@@ -115,7 +106,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 307
     iget-object v0, p0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1$1;->this$1:Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;->this$0:Lcom/sec/android/app/camera/help/HelpHubImageViewer;
@@ -123,7 +113,6 @@
     # invokes: Lcom/sec/android/app/camera/help/HelpHubImageViewer;->startTimer()V
     invoke-static {v0}, Lcom/sec/android/app/camera/help/HelpHubImageViewer;->access$500(Lcom/sec/android/app/camera/help/HelpHubImageViewer;)V
 
-    .line 311
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1$1;->this$1:Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;
@@ -132,14 +121,12 @@
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/help/HelpHubImageViewer;->setSlide()V
 
-    .line 313
     iget-object v0, p0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1$1;->this$1:Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;
 
     iget-boolean v0, v0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;->mStopAnimation:Z
 
     if-eqz v0, :cond_2
 
-    .line 314
     iget-object v0, p0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1$1;->this$1:Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;->this$0:Lcom/sec/android/app/camera/help/HelpHubImageViewer;
@@ -147,11 +134,9 @@
     # invokes: Lcom/sec/android/app/camera/help/HelpHubImageViewer;->stopTimer()V
     invoke-static {v0}, Lcom/sec/android/app/camera/help/HelpHubImageViewer;->access$700(Lcom/sec/android/app/camera/help/HelpHubImageViewer;)V
 
-    .line 316
     :cond_2
     return-void
 
-    .line 308
     :cond_3
     iget-object v0, p0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1$1;->this$1:Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;
 
@@ -164,7 +149,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 309
     iget-object v0, p0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1$1;->this$1:Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/help/HelpHubImageViewer$1;->this$0:Lcom/sec/android/app/camera/help/HelpHubImageViewer;

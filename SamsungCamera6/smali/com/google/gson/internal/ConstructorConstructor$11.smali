@@ -33,8 +33,6 @@
 .method constructor <init>(Lcom/google/gson/internal/ConstructorConstructor;)V
     .locals 0
 
-    .prologue
-    .line 189
     iput-object p1, p0, Lcom/google/gson/internal/ConstructorConstructor$11;->this$0:Lcom/google/gson/internal/ConstructorConstructor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,8 +50,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 191
     new-instance v0, Lcom/google/gson/internal/LinkedTreeMap;
 
     invoke-direct {v0}, Lcom/google/gson/internal/LinkedTreeMap;-><init>()V

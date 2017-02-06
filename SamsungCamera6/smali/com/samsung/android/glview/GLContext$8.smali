@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/samsung/android/glview/GLContext;)V
     .locals 0
 
-    .prologue
-    .line 2104
     iput-object p1, p0, Lcom/samsung/android/glview/GLContext$8;->this$0:Lcom/samsung/android/glview/GLContext;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,8 +37,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 2107
     iget-object v0, p0, Lcom/samsung/android/glview/GLContext$8;->this$0:Lcom/samsung/android/glview/GLContext;
 
     invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
@@ -50,6 +46,5 @@
     # setter for: Lcom/samsung/android/glview/GLContext;->mChoreographer:Landroid/view/Choreographer;
     invoke-static {v0, v1}, Lcom/samsung/android/glview/GLContext;->access$1102(Lcom/samsung/android/glview/GLContext;Landroid/view/Choreographer;)Landroid/view/Choreographer;
 
-    .line 2108
     return-void
 .end method

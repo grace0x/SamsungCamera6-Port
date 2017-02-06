@@ -32,8 +32,6 @@
 .method public constructor <init>(Lcom/quramsoft/qrb/QuramBitmapFactory$Options;)V
     .locals 0
 
-    .prologue
-    .line 1307
     iput-object p1, p0, Lcom/quramsoft/qrb/QuramBitmapFactory$Options$DecodeFromOption;->this$1:Lcom/quramsoft/qrb/QuramBitmapFactory$Options;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

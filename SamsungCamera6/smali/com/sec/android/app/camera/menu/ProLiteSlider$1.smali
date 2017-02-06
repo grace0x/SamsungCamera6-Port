@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/ProLiteSlider;)V
     .locals 0
 
-    .prologue
-    .line 354
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$1;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +36,7 @@
 # virtual methods
 .method public onStepChanged(I)V
     .locals 4
-    .param p1, "step"    # I
 
-    .prologue
-    .line 357
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$1;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$1;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
@@ -66,7 +61,6 @@
     # setter for: Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValue:I
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/menu/ProLiteSlider;->access$102(Lcom/sec/android/app/camera/menu/ProLiteSlider;I)I
 
-    .line 358
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$1;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderValueSelectListener:Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderValueSelectListener;
@@ -80,11 +74,9 @@
 
     invoke-interface {v0, v1}, Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderValueSelectListener;->onExposureValueMenuSelect(I)V
 
-    .line 359
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$1;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/ProLiteSlider;->restartSliderMenuTimer()V
 
-    .line 360
     return-void
 .end method

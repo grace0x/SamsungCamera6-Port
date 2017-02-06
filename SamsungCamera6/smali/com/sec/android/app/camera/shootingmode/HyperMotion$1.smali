@@ -22,8 +22,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/shootingmode/HyperMotion;)V
     .locals 0
 
-    .prologue
-    .line 116
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/HyperMotion$1;->this$0:Lcom/sec/android/app/camera/shootingmode/HyperMotion;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,17 +33,11 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
-    .param p1, "context"    # Landroid/content/Context;
-    .param p2, "intent"    # Landroid/content/Intent;
 
-    .prologue
-    .line 119
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 120
-    .local v0, "action":Ljava/lang/String;
     const-string v1, "HyperMotion"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -68,7 +60,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 121
     const/4 v1, -0x1
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -81,11 +72,9 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 132
     :goto_1
     return-void
 
-    .line 121
     :sswitch_0
     const-string v2, "camera.action.ACTION_ERROR_CAMERA_BUSY"
 
@@ -112,7 +101,6 @@
 
     goto :goto_0
 
-    .line 124
     :pswitch_0
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/HyperMotion$1;->this$0:Lcom/sec/android/app/camera/shootingmode/HyperMotion;
 
@@ -123,7 +111,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 125
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/HyperMotion$1;->this$0:Lcom/sec/android/app/camera/shootingmode/HyperMotion;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/shootingmode/HyperMotion;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -141,7 +128,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/android/app/camera/util/CameraLocalBroadcastManager;->unregister(Landroid/content/Context;Landroid/content/BroadcastReceiver;)V
 
-    .line 127
     :cond_1
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/HyperMotion$1;->this$0:Lcom/sec/android/app/camera/shootingmode/HyperMotion;
 
@@ -150,7 +136,6 @@
 
     goto :goto_1
 
-    .line 121
     nop
 
     :sswitch_data_0

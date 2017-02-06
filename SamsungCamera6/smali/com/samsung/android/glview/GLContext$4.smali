@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/samsung/android/glview/GLContext;)V
     .locals 0
 
-    .prologue
-    .line 268
     iput-object p1, p0, Lcom/samsung/android/glview/GLContext$4;->this$0:Lcom/samsung/android/glview/GLContext;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +36,7 @@
 # virtual methods
 .method public onTouchExplorationStateChanged(Z)V
     .locals 3
-    .param p1, "enabled"    # Z
 
-    .prologue
-    .line 271
     const-string v0, "GLContext"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -64,13 +59,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 273
     iget-object v0, p0, Lcom/samsung/android/glview/GLContext$4;->this$0:Lcom/samsung/android/glview/GLContext;
 
     # invokes: Lcom/samsung/android/glview/GLContext;->updateTouchExplorationEnabled()V
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->access$200(Lcom/samsung/android/glview/GLContext;)V
 
-    .line 275
     iget-object v0, p0, Lcom/samsung/android/glview/GLContext$4;->this$0:Lcom/samsung/android/glview/GLContext;
 
     # getter for: Lcom/samsung/android/glview/GLContext;->mIsTouchExplorationEnabled:Z
@@ -80,7 +73,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 276
     iget-object v0, p0, Lcom/samsung/android/glview/GLContext$4;->this$0:Lcom/samsung/android/glview/GLContext;
 
     sget-object v1, Lcom/samsung/android/glview/GLContext;->mApplicationContext:Landroid/content/Context;
@@ -88,11 +80,9 @@
     # invokes: Lcom/samsung/android/glview/GLContext;->enableAccessibilityService(Landroid/content/Context;)V
     invoke-static {v0, v1}, Lcom/samsung/android/glview/GLContext;->access$400(Lcom/samsung/android/glview/GLContext;Landroid/content/Context;)V
 
-    .line 280
     :goto_0
     return-void
 
-    .line 278
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/glview/GLContext$4;->this$0:Lcom/samsung/android/glview/GLContext;
 

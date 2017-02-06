@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;)V
     .locals 0
 
-    .prologue
-    .line 157
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu$3;->this$0:Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +36,7 @@
 # virtual methods
 .method public onStepChanged(I)V
     .locals 1
-    .param p1, "step"    # I
 
-    .prologue
-    .line 160
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu$3;->this$0:Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -52,6 +47,5 @@
 
     invoke-interface {v0, p1}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->setEffectVignetteLevel(I)V
 
-    .line 161
     return-void
 .end method

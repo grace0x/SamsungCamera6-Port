@@ -37,8 +37,6 @@
 .method constructor <init>(Lcom/google/gson/internal/ConstructorConstructor;Lcom/google/gson/InstanceCreator;Ljava/lang/reflect/Type;)V
     .locals 0
 
-    .prologue
-    .line 72
     iput-object p1, p0, Lcom/google/gson/internal/ConstructorConstructor$2;->this$0:Lcom/google/gson/internal/ConstructorConstructor;
 
     iput-object p2, p0, Lcom/google/gson/internal/ConstructorConstructor$2;->val$rawTypeCreator:Lcom/google/gson/InstanceCreator;
@@ -60,8 +58,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 74
     iget-object v0, p0, Lcom/google/gson/internal/ConstructorConstructor$2;->val$rawTypeCreator:Lcom/google/gson/InstanceCreator;
 
     iget-object v1, p0, Lcom/google/gson/internal/ConstructorConstructor$2;->val$type:Ljava/lang/reflect/Type;

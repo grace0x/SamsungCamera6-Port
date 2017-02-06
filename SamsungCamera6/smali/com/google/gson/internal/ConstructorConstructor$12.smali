@@ -39,8 +39,6 @@
 .method constructor <init>(Lcom/google/gson/internal/ConstructorConstructor;Ljava/lang/Class;Ljava/lang/reflect/Type;)V
     .locals 1
 
-    .prologue
-    .line 202
     iput-object p1, p0, Lcom/google/gson/internal/ConstructorConstructor$12;->this$0:Lcom/google/gson/internal/ConstructorConstructor;
 
     iput-object p2, p0, Lcom/google/gson/internal/ConstructorConstructor$12;->val$rawType:Ljava/lang/Class;
@@ -49,7 +47,6 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 203
     invoke-static {}, Lcom/google/gson/internal/UnsafeAllocator;->create()Lcom/google/gson/internal/UnsafeAllocator;
 
     move-result-object v0
@@ -69,8 +66,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 207
     :try_start_0
     iget-object v2, p0, Lcom/google/gson/internal/ConstructorConstructor$12;->unsafeAllocator:Lcom/google/gson/internal/UnsafeAllocator;
 
@@ -82,17 +77,11 @@
 
     move-result-object v1
 
-    .line 208
-    .local v1, "newInstance":Ljava/lang/Object;
     return-object v1
 
-    .line 209
-    .end local v1    # "newInstance":Ljava/lang/Object;
     :catch_0
     move-exception v0
 
-    .line 210
-    .local v0, "e":Ljava/lang/Exception;
     new-instance v2, Ljava/lang/RuntimeException;
 
     new-instance v3, Ljava/lang/StringBuilder;

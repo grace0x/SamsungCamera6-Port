@@ -22,8 +22,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;)V
     .locals 0
 
-    .prologue
-    .line 208
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -36,13 +34,10 @@
 .method public run()V
     .locals 14
 
-    .prologue
-    .line 211
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
 
     invoke-virtual {v7}, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;->deleteAllRecord()V
 
-    .line 212
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;->qrecorder:Lcom/sec/android/secvision/sef/AudioRecorder;
@@ -54,7 +49,6 @@
 
     invoke-virtual {v7, v8}, Lcom/sec/android/secvision/sef/AudioRecorder;->init(I)Z
 
-    .line 214
     const-wide/16 v8, 0xc8
 
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
@@ -81,8 +75,6 @@
 
     long-to-int v6, v8
 
-    .line 215
-    .local v6, "segData":I
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
 
     new-array v8, v6, [I
@@ -90,7 +82,6 @@
     # setter for: Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;->visualization:[I
     invoke-static {v7, v8}, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;->access$202(Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;[I)[I
 
-    .line 217
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;->qrecorder:Lcom/sec/android/secvision/sef/AudioRecorder;
@@ -100,7 +91,6 @@
 
     invoke-virtual {v7}, Lcom/sec/android/secvision/sef/AudioRecorder;->start()Z
 
-    .line 220
     :goto_0
     :try_start_0
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
@@ -112,7 +102,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 221
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;->time_t:J
@@ -138,7 +127,6 @@
 
     if-lez v7, :cond_0
 
-    .line 223
     const-wide/16 v8, 0xa
 
     :try_start_1
@@ -148,7 +136,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 228
     :goto_1
     :try_start_2
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
@@ -165,12 +152,9 @@
 
     goto :goto_0
 
-    .line 272
     :catch_0
     move-exception v0
 
-    .line 273
-    .local v0, "e":Ljava/lang/Exception;
     :try_start_3
     const-string v7, "QuramAudioRecorder"
 
@@ -200,7 +184,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 276
     :try_start_4
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
 
@@ -209,8 +192,6 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_3
 
-    .line 281
-    .end local v0    # "e":Ljava/lang/Exception;
     :goto_2
     const-string v7, "QURAM"
 
@@ -218,15 +199,11 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 282
     return-void
 
-    .line 224
     :catch_1
     move-exception v0
 
-    .line 225
-    .local v0, "e":Ljava/lang/InterruptedException;
     :try_start_5
     const-string v7, "QuramAudioRecorder"
 
@@ -259,12 +236,9 @@
 
     goto :goto_1
 
-    .line 275
-    .end local v0    # "e":Ljava/lang/InterruptedException;
     :catchall_0
     move-exception v7
 
-    .line 276
     :try_start_6
     iget-object v8, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
 
@@ -273,11 +247,9 @@
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_4
 
-    .line 279
     :goto_3
     throw v7
 
-    .line 233
     :cond_0
     :try_start_7
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
@@ -292,7 +264,6 @@
     # setter for: Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;->time_t:J
     invoke-static {v7, v8, v9}, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;->access$402(Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;J)J
 
-    .line 234
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -302,12 +273,10 @@
     # setter for: Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;->time_s:J
     invoke-static {v7, v8, v9}, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;->access$502(Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;J)J
 
-    .line 236
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
 
     invoke-virtual {v7}, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;->deleteOverTimeFrame()V
 
-    .line 240
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
 
     invoke-virtual {v7}, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;->readRecord()Z
@@ -316,7 +285,6 @@
 
     if-nez v7, :cond_2
 
-    .line 241
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
 
     const/4 v8, 0x0
@@ -327,7 +295,6 @@
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_0
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 276
     :cond_1
     :try_start_8
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
@@ -339,12 +306,9 @@
 
     goto :goto_2
 
-    .line 277
     :catch_2
     move-exception v0
 
-    .line 278
-    .local v0, "e":Ljava/lang/Exception;
     const-string v7, "QURAM"
 
     const-string v8, "releaseRecorder failed"
@@ -353,31 +317,20 @@
 
     goto :goto_2
 
-    .line 246
-    .end local v0    # "e":Ljava/lang/Exception;
     :cond_2
     const/4 v3, 0x0
 
-    .line 247
-    .local v3, "mic_level":F
     const/4 v2, 0x0
 
-    .line 248
-    .local v2, "idx":I
     const/4 v4, 0x0
 
-    .line 249
-    .local v4, "sample":S
     const/4 v5, 0x0
 
-    .local v5, "seg":I
     :goto_4
     if-ge v5, v6, :cond_5
 
-    .line 250
     const/4 v1, 0x0
 
-    .local v1, "i":I
     :goto_5
     :try_start_9
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
@@ -393,7 +346,6 @@
 
     if-ge v1, v7, :cond_3
 
-    .line 251
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;->readAudioStreamBuffer:[B
@@ -422,10 +374,8 @@
 
     int-to-short v4, v7
 
-    .line 252
     add-int/lit8 v2, v2, 0x2
 
-    .line 254
     invoke-static {v4}, Ljava/lang/Math;->abs(I)I
 
     move-result v7
@@ -434,12 +384,10 @@
 
     add-float/2addr v3, v7
 
-    .line 250
     add-int/lit8 v1, v1, 0x2
 
     goto :goto_5
 
-    .line 257
     :cond_3
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
 
@@ -458,22 +406,18 @@
 
     div-float/2addr v3, v7
 
-    .line 258
     const/high16 v7, 0x42480000    # 50.0f
 
     sub-float/2addr v3, v7
 
-    .line 260
     const/4 v7, 0x0
 
     cmpg-float v7, v3, v7
 
     if-gez v7, :cond_4
 
-    .line 261
     const/4 v3, 0x0
 
-    .line 264
     :cond_4
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
 
@@ -486,13 +430,10 @@
 
     aput v8, v7, v5
 
-    .line 249
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_4
 
-    .line 267
-    .end local v1    # "i":I
     :cond_5
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
 
@@ -501,7 +442,6 @@
     # setter for: Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;->segIdx:I
     invoke-static {v7, v8}, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;->access$802(Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;I)I
 
-    .line 269
     iget-object v7, p0, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder$1;->this$0:Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;
 
     invoke-virtual {v7}, Lcom/sec/android/app/camera/shootingmode/util/QuramAudioRecorder;->addRecord()V
@@ -511,16 +451,9 @@
 
     goto/16 :goto_0
 
-    .line 277
-    .end local v2    # "idx":I
-    .end local v3    # "mic_level":F
-    .end local v4    # "sample":S
-    .end local v5    # "seg":I
-    .restart local v0    # "e":Ljava/lang/Exception;
     :catch_3
     move-exception v0
 
-    .line 278
     const-string v7, "QURAM"
 
     const-string v8, "releaseRecorder failed"
@@ -529,13 +462,9 @@
 
     goto/16 :goto_2
 
-    .line 277
-    .end local v0    # "e":Ljava/lang/Exception;
     :catch_4
     move-exception v0
 
-    .line 278
-    .restart local v0    # "e":Ljava/lang/Exception;
     const-string v8, "QURAM"
 
     const-string v9, "releaseRecorder failed"

@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/widget/gl/ItemEmptyThumbnailButton;)V
     .locals 0
 
-    .prologue
-    .line 253
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/ItemEmptyThumbnailButton$3;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemEmptyThumbnailButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,11 +36,7 @@
 # virtual methods
 .method public onFocusChanged(Lcom/samsung/android/glview/GLView;I)Z
     .locals 1
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "focusStatus"    # I
 
-    .prologue
-    .line 256
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ItemEmptyThumbnailButton$3;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemEmptyThumbnailButton;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/ItemEmptyThumbnailButton;->mFocusListener:Lcom/samsung/android/glview/GLView$FocusListener;
@@ -52,7 +46,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 257
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ItemEmptyThumbnailButton$3;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemEmptyThumbnailButton;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/ItemEmptyThumbnailButton;->mFocusListener:Lcom/samsung/android/glview/GLView$FocusListener;
@@ -62,10 +55,8 @@
 
     invoke-interface {v0, p1, p2}, Lcom/samsung/android/glview/GLView$FocusListener;->onFocusChanged(Lcom/samsung/android/glview/GLView;I)Z
 
-    .line 258
     const/4 v0, 0x1
 
-    .line 260
     :goto_0
     return v0
 

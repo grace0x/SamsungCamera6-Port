@@ -32,16 +32,11 @@
 # direct methods
 .method constructor <init>(Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserServiceCallbackImpl;)V
     .locals 0
-    .param p1, "callbackImpl"    # Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserServiceCallbackImpl;
 
-    .prologue
-    .line 1550
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 1551
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;->mCallbackImpl:Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserServiceCallbackImpl;
 
-    .line 1552
     return-void
 .end method
 
@@ -49,26 +44,19 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 6
-    .param p1, "msg"    # Landroid/os/Message;
 
-    .prologue
-    .line 1556
     iget-object v1, p0, Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;->mCallbacksMessengerRef:Ljava/lang/ref/WeakReference;
 
     if-nez v1, :cond_0
 
-    .line 1582
     :goto_0
     return-void
 
-    .line 1559
     :cond_0
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 1560
-    .local v0, "data":Landroid/os/Bundle;
     const-class v1, Landroid/support/v4/media/session/MediaSessionCompat;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -77,12 +65,10 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->setClassLoader(Ljava/lang/ClassLoader;)V
 
-    .line 1561
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1578
     const-string v1, "MediaBrowserCompat"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -131,7 +117,6 @@
 
     goto :goto_0
 
-    .line 1563
     :pswitch_0
     iget-object v3, p0, Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;->mCallbackImpl:Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserServiceCallbackImpl;
 
@@ -167,7 +152,6 @@
 
     goto :goto_0
 
-    .line 1569
     :pswitch_1
     iget-object v2, p0, Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;->mCallbackImpl:Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserServiceCallbackImpl;
 
@@ -183,7 +167,6 @@
 
     goto :goto_0
 
-    .line 1572
     :pswitch_2
     iget-object v2, p0, Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;->mCallbackImpl:Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserServiceCallbackImpl;
 
@@ -217,7 +200,6 @@
 
     goto/16 :goto_0
 
-    .line 1561
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -228,16 +210,12 @@
 
 .method setCallbacksMessenger(Landroid/os/Messenger;)V
     .locals 1
-    .param p1, "callbacksMessenger"    # Landroid/os/Messenger;
 
-    .prologue
-    .line 1585
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;->mCallbacksMessengerRef:Ljava/lang/ref/WeakReference;
 
-    .line 1586
     return-void
 .end method

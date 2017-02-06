@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/Camera;)V
     .locals 0
 
-    .prologue
-    .line 4172
     iput-object p1, p0, Lcom/sec/android/app/camera/Camera$19;->this$0:Lcom/sec/android/app/camera/Camera;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,8 +37,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 4175
     const-string v0, "Camera6"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -79,7 +75,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4176
     iget-object v0, p0, Lcom/sec/android/app/camera/Camera$19;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mCameraSoundPool:Landroid/media/SoundPool;
@@ -105,6 +100,5 @@
 
     invoke-virtual {v0, v1}, Landroid/media/SoundPool;->stop(I)V
 
-    .line 4177
     return-void
 .end method

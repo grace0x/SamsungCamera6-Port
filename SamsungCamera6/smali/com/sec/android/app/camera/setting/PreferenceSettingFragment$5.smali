@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;)V
     .locals 0
 
-    .prologue
-    .line 832
     iput-object p1, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$5;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +36,7 @@
 # virtual methods
 .method public onPreferenceClick(Landroid/preference/Preference;)Z
     .locals 2
-    .param p1, "arg0"    # Landroid/preference/Preference;
 
-    .prologue
-    .line 835
     iget-object v0, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$5;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     # getter for: Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
@@ -67,20 +62,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 836
     iget-object v0, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$5;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     const/16 v1, 0x1d8
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->showCameraDialog(I)V
 
-    .line 840
     :goto_0
     const/4 v0, 0x0
 
     return v0
 
-    .line 838
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$5;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 

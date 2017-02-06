@@ -22,8 +22,6 @@
 .method constructor <init>(Ljava/lang/reflect/Method;)V
     .locals 0
 
-    .prologue
-    .line 63
     iput-object p1, p0, Lcom/google/gson/internal/UnsafeAllocator$2;->val$newInstance:Ljava/lang/reflect/Method;
 
     invoke-direct {p0}, Lcom/google/gson/internal/UnsafeAllocator;-><init>()V
@@ -51,9 +49,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 67
-    .local p1, "c":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     iget-object v0, p0, Lcom/google/gson/internal/UnsafeAllocator$2;->val$newInstance:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0

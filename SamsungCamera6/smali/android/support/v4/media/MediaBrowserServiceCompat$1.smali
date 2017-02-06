@@ -27,8 +27,6 @@
 .method constructor <init>(Landroid/support/v4/media/MediaBrowserServiceCompat;Landroid/support/v4/media/session/MediaSessionCompat$Token;)V
     .locals 0
 
-    .prologue
-    .line 724
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$1;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     iput-object p2, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$1;->val$token:Landroid/support/v4/media/session/MediaSessionCompat$Token;
@@ -43,8 +41,6 @@
 .method public run()V
     .locals 8
 
-    .prologue
-    .line 727
     iget-object v4, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$1;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     # getter for: Landroid/support/v4/media/MediaBrowserServiceCompat;->mConnections:Landroid/support/v4/util/ArrayMap;
@@ -60,7 +56,6 @@
 
     move-result-object v2
 
-    .local v2, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -74,8 +69,6 @@
 
     check-cast v3, Landroid/os/IBinder;
 
-    .line 728
-    .local v3, "key":Landroid/os/IBinder;
     iget-object v4, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$1;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     # getter for: Landroid/support/v4/media/MediaBrowserServiceCompat;->mConnections:Landroid/support/v4/util/ArrayMap;
@@ -89,8 +82,6 @@
 
     check-cast v0, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;
 
-    .line 730
-    .local v0, "connection":Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;
     :try_start_0
     iget-object v4, v0, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;->callbacks:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;
 
@@ -114,12 +105,9 @@
 
     goto :goto_0
 
-    .line 732
     :catch_0
     move-exception v1
 
-    .line 733
-    .local v1, "e":Landroid/os/RemoteException;
     const-string v4, "MediaBrowserServiceCompat"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -150,7 +138,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 734
     iget-object v4, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$1;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     # getter for: Landroid/support/v4/media/MediaBrowserServiceCompat;->mConnections:Landroid/support/v4/util/ArrayMap;
@@ -162,10 +149,6 @@
 
     goto :goto_0
 
-    .line 737
-    .end local v0    # "connection":Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;
-    .end local v1    # "e":Landroid/os/RemoteException;
-    .end local v3    # "key":Landroid/os/IBinder;
     :cond_0
     return-void
 .end method

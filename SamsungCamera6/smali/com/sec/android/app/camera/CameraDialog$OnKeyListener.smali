@@ -25,8 +25,6 @@
 .method private constructor <init>(Lcom/sec/android/app/camera/CameraDialog;)V
     .locals 0
 
-    .prologue
-    .line 889
     iput-object p1, p0, Lcom/sec/android/app/camera/CameraDialog$OnKeyListener;->this$0:Lcom/sec/android/app/camera/CameraDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,11 +34,7 @@
 
 .method synthetic constructor <init>(Lcom/sec/android/app/camera/CameraDialog;Lcom/sec/android/app/camera/CameraDialog$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/sec/android/app/camera/CameraDialog;
-    .param p2, "x1"    # Lcom/sec/android/app/camera/CameraDialog$1;
 
-    .prologue
-    .line 889
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/CameraDialog$OnKeyListener;-><init>(Lcom/sec/android/app/camera/CameraDialog;)V
 
     return-void
@@ -50,11 +44,7 @@
 # virtual methods
 .method public onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
     .locals 8
-    .param p1, "dialog"    # Landroid/content/DialogInterface;
-    .param p2, "keyCode"    # I
-    .param p3, "event"    # Landroid/view/KeyEvent;
 
-    .prologue
     const/16 v7, 0x52
 
     const/16 v6, 0x17
@@ -65,7 +55,6 @@
 
     const/4 v2, 0x1
 
-    .line 892
     iget-object v3, p0, Lcom/sec/android/app/camera/CameraDialog$OnKeyListener;->this$0:Lcom/sec/android/app/camera/CameraDialog;
 
     invoke-virtual {v3}, Lcom/sec/android/app/camera/CameraDialog;->getArguments()Landroid/os/Bundle;
@@ -78,16 +67,12 @@
 
     move-result v0
 
-    .line 893
-    .local v0, "id":I
     sparse-switch v0, :sswitch_data_0
 
-    .line 926
     :cond_0
     :goto_0
     return v1
 
-    .line 901
     :sswitch_0
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
@@ -103,7 +88,6 @@
 
     if-ne p2, v3, :cond_0
 
-    .line 902
     :cond_1
     iget-object v1, p0, Lcom/sec/android/app/camera/CameraDialog$OnKeyListener;->this$0:Lcom/sec/android/app/camera/CameraDialog;
 
@@ -119,14 +103,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 903
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v1
 
     invoke-static {v1}, Landroid/os/Process;->killProcess(I)V
 
-    .line 907
     :goto_1
     iget-object v1, p0, Lcom/sec/android/app/camera/CameraDialog$OnKeyListener;->this$0:Lcom/sec/android/app/camera/CameraDialog;
 
@@ -134,10 +116,8 @@
 
     move v1, v2
 
-    .line 908
     goto :goto_0
 
-    .line 905
     :cond_2
     iget-object v1, p0, Lcom/sec/android/app/camera/CameraDialog$OnKeyListener;->this$0:Lcom/sec/android/app/camera/CameraDialog;
 
@@ -149,7 +129,6 @@
 
     goto :goto_1
 
-    .line 912
     :sswitch_1
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
@@ -161,7 +140,6 @@
 
     if-ne p2, v6, :cond_0
 
-    .line 914
     :cond_3
     iget-object v1, p0, Lcom/sec/android/app/camera/CameraDialog$OnKeyListener;->this$0:Lcom/sec/android/app/camera/CameraDialog;
 
@@ -169,10 +147,8 @@
 
     move v1, v2
 
-    .line 915
     goto :goto_0
 
-    .line 919
     :sswitch_2
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
@@ -186,7 +162,6 @@
 
     if-ne p2, v6, :cond_0
 
-    .line 920
     :cond_4
     iget-object v1, p0, Lcom/sec/android/app/camera/CameraDialog$OnKeyListener;->this$0:Lcom/sec/android/app/camera/CameraDialog;
 
@@ -198,17 +173,14 @@
 
     iput-boolean v2, v1, Lcom/sec/android/app/camera/Camera;->mLowBatteryDisableFlashPopupDisplayed:Z
 
-    .line 921
     iget-object v1, p0, Lcom/sec/android/app/camera/CameraDialog$OnKeyListener;->this$0:Lcom/sec/android/app/camera/CameraDialog;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/CameraDialog;->dismissAllowingStateLoss()V
 
     move v1, v2
 
-    .line 922
     goto :goto_0
 
-    .line 893
     nop
 
     :sswitch_data_0

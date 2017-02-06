@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/samsung/android/glview/GLView;)V
     .locals 0
 
-    .prologue
-    .line 601
     iput-object p1, p0, Lcom/samsung/android/glview/GLView$1;->this$0:Lcom/samsung/android/glview/GLView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,8 +42,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 605
     iget-object v0, p0, Lcom/samsung/android/glview/GLView$1;->this$0:Lcom/samsung/android/glview/GLView;
 
     iget-object v0, v0, Lcom/samsung/android/glview/GLView;->mGLContext:Lcom/samsung/android/glview/GLContext;
@@ -58,12 +54,10 @@
 
     if-nez v0, :cond_1
 
-    .line 612
     :cond_0
     :goto_0
     return-void
 
-    .line 608
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/glview/GLView$1;->this$0:Lcom/samsung/android/glview/GLView;
 
@@ -80,14 +74,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 609
     iget-object v0, p0, Lcom/samsung/android/glview/GLView$1;->this$0:Lcom/samsung/android/glview/GLView;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/samsung/android/glview/GLView;->mDragging:Z
 
-    .line 610
     iget-object v0, p0, Lcom/samsung/android/glview/GLView$1;->this$0:Lcom/samsung/android/glview/GLView;
 
     iget-object v0, v0, Lcom/samsung/android/glview/GLView;->mDragListener:Lcom/samsung/android/glview/GLView$DragListener;

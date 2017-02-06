@@ -12,20 +12,13 @@
 # direct methods
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CommandInterface;I)V
     .locals 0
-    .param p1, "receiver"    # Lcom/sec/android/app/camera/interfaces/CommandInterface;
-    .param p2, "commandId"    # I
 
-    .prologue
-    .line 27
     invoke-direct {p0}, Lcom/sec/android/app/camera/command/MenuCommand;-><init>()V
 
-    .line 28
     iput-object p1, p0, Lcom/sec/android/app/camera/command/LaunchMenuCommand;->mReceiver:Lcom/sec/android/app/camera/interfaces/CommandInterface;
 
-    .line 29
     iput p2, p0, Lcom/sec/android/app/camera/command/LaunchMenuCommand;->mCommandId:I
 
-    .line 30
     return-void
 .end method
 
@@ -34,8 +27,6 @@
 .method public execute()Z
     .locals 2
 
-    .prologue
-    .line 34
     iget-object v0, p0, Lcom/sec/android/app/camera/command/LaunchMenuCommand;->mReceiver:Lcom/sec/android/app/camera/interfaces/CommandInterface;
 
     iget v1, p0, Lcom/sec/android/app/camera/command/LaunchMenuCommand;->mCommandId:I

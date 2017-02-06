@@ -47,77 +47,59 @@
 # direct methods
 .method public constructor <init>(Lcom/sec/android/app/camera/widget/gl/StickerView;Lcom/sec/android/app/camera/interfaces/CameraContext;Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$ExtraMessage;F)V
     .locals 10
-    .param p2, "cameraContext"    # Lcom/sec/android/app/camera/interfaces/CameraContext;
-    .param p3, "extraMsg"    # Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$ExtraMessage;
-    .param p4, "ratio"    # F
 
-    .prologue
-    .line 792
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->this$0:Lcom/sec/android/app/camera/widget/gl/StickerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 777
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mGLText:Lcom/samsung/android/glview/GLText;
 
-    .line 778
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mTextEditBG:Lcom/samsung/android/glview/GLRectangle;
 
-    .line 779
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mEditable:Z
 
-    .line 780
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mHAlign:I
 
-    .line 781
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mVAlign:I
 
-    .line 782
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mLeft:F
 
-    .line 783
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mTop:F
 
-    .line 784
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mHeight:F
 
-    .line 785
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mWidth:F
 
-    .line 786
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mIsVertical:Z
 
-    .line 789
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mFontSize:F
 
-    .line 790
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mDefaultFontSize:F
 
-    .line 793
     invoke-virtual {p3}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$ExtraMessage;->getFontSize()F
 
     move-result v0
@@ -126,7 +108,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mFontSize:F
 
-    .line 794
     invoke-virtual {p3}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$ExtraMessage;->getFontSize()F
 
     move-result v0
@@ -135,7 +116,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mDefaultFontSize:F
 
-    .line 795
     invoke-virtual {p3}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$ExtraMessage;->getLeft()F
 
     move-result v0
@@ -144,7 +124,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mLeft:F
 
-    .line 796
     invoke-virtual {p3}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$ExtraMessage;->getTop()F
 
     move-result v0
@@ -153,7 +132,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mTop:F
 
-    .line 797
     invoke-virtual {p3}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$ExtraMessage;->getHeight()F
 
     move-result v0
@@ -162,7 +140,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mHeight:F
 
-    .line 798
     invoke-virtual {p3}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$ExtraMessage;->getWidth()F
 
     move-result v0
@@ -171,7 +148,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mWidth:F
 
-    .line 800
     new-instance v0, Lcom/samsung/android/glview/GLText;
 
     invoke-interface {p2}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getGLContext()Lcom/samsung/android/glview/GLContext;
@@ -208,7 +184,6 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mGLText:Lcom/samsung/android/glview/GLText;
 
-    .line 801
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mGLText:Lcom/samsung/android/glview/GLText;
 
     iget v1, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mLeft:F
@@ -239,28 +214,24 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/glview/GLText;->moveLayoutAbsolute(FF)V
 
-    .line 802
     invoke-virtual {p3}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$ExtraMessage;->getEditable()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mEditable:Z
 
-    .line 803
     invoke-virtual {p3}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$ExtraMessage;->getExtraType()Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$ExtraType;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mExtraType:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$ExtraType;
 
-    .line 804
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mGLText:Lcom/samsung/android/glview/GLText;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLText;->setShadowVisibility(Z)V
 
-    .line 805
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mGLText:Lcom/samsung/android/glview/GLText;
 
     invoke-virtual {p3}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$ExtraMessage;->getTextFont()Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;
@@ -274,12 +245,10 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLText;->setTextFont(Landroid/graphics/Typeface;)V
 
-    .line 806
     iget-boolean v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mEditable:Z
 
     if-eqz v0, :cond_0
 
-    .line 807
     new-instance v0, Lcom/samsung/android/glview/GLRectangle;
 
     invoke-interface {p2}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getGLContext()Lcom/samsung/android/glview/GLContext;
@@ -333,7 +302,6 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mTextEditBG:Lcom/samsung/android/glview/GLRectangle;
 
-    .line 810
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mGLText:Lcom/samsung/android/glview/GLText;
 
@@ -343,28 +311,24 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLText;->setColor(I)V
 
-    .line 811
     invoke-virtual {p3}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$ExtraMessage;->getHAlign()I
 
     move-result v0
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mHAlign:I
 
-    .line 812
     invoke-virtual {p3}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$ExtraMessage;->getVAlign()I
 
     move-result v0
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mVAlign:I
 
-    .line 813
     invoke-virtual {p3}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$ExtraMessage;->getIsVertical()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mIsVertical:Z
 
-    .line 815
     invoke-virtual {p3}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$ExtraMessage;->getHAlign()I
 
     move-result v0
@@ -373,13 +337,10 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 816
     new-instance v9, Landroid/graphics/Paint;
 
     invoke-direct {v9}, Landroid/graphics/Paint;-><init>()V
 
-    .line 817
-    .local v9, "paint":Landroid/graphics/Paint;
     invoke-virtual {p3}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$ExtraMessage;->getFontSize()F
 
     move-result v0
@@ -388,7 +349,6 @@
 
     invoke-virtual {v9, v0}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 818
     invoke-virtual {p3}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$ExtraMessage;->getDefaultText()Ljava/lang/String;
 
     move-result-object v0
@@ -417,7 +377,6 @@
 
     if-ltz v0, :cond_1
 
-    .line 819
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mGLText:Lcom/samsung/android/glview/GLText;
 
     const/4 v1, 0x1
@@ -428,13 +387,9 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/glview/GLText;->setAlign(II)V
 
-    .line 826
-    .end local v9    # "paint":Landroid/graphics/Paint;
     :goto_0
     return-void
 
-    .line 821
-    .restart local v9    # "paint":Landroid/graphics/Paint;
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mGLText:Lcom/samsung/android/glview/GLText;
 
@@ -450,8 +405,6 @@
 
     goto :goto_0
 
-    .line 824
-    .end local v9    # "paint":Landroid/graphics/Paint;
     :cond_2
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mGLText:Lcom/samsung/android/glview/GLText;
 
@@ -470,10 +423,7 @@
 
 .method static synthetic access$000(Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;)Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$ExtraType;
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;
 
-    .prologue
-    .line 776
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mExtraType:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$ExtraType;
 
     return-object v0
@@ -481,10 +431,7 @@
 
 .method static synthetic access$200(Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;
 
-    .prologue
-    .line 776
     iget-boolean v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mEditable:Z
 
     return v0
@@ -492,10 +439,7 @@
 
 .method static synthetic access$300(Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;)F
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;
 
-    .prologue
-    .line 776
     iget v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mFontSize:F
 
     return v0
@@ -503,10 +447,7 @@
 
 .method static synthetic access$400(Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;)F
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;
 
-    .prologue
-    .line 776
     iget v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mWidth:F
 
     return v0
@@ -514,10 +455,7 @@
 
 .method static synthetic access$500(Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;)F
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;
 
-    .prologue
-    .line 776
     iget v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mHeight:F
 
     return v0
@@ -525,10 +463,7 @@
 
 .method static synthetic access$600(Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;)F
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;
 
-    .prologue
-    .line 776
     iget v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mLeft:F
 
     return v0
@@ -536,10 +471,7 @@
 
 .method static synthetic access$700(Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;)F
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;
 
-    .prologue
-    .line 776
     iget v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mTop:F
 
     return v0
@@ -550,8 +482,6 @@
 .method public getDefaultFontSize()F
     .locals 1
 
-    .prologue
-    .line 837
     iget v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mDefaultFontSize:F
 
     return v0
@@ -560,8 +490,6 @@
 .method public getFontSize()F
     .locals 1
 
-    .prologue
-    .line 829
     iget v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mFontSize:F
 
     return v0
@@ -570,8 +498,6 @@
 .method public getGLText()Lcom/samsung/android/glview/GLText;
     .locals 1
 
-    .prologue
-    .line 845
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mGLText:Lcom/samsung/android/glview/GLText;
 
     return-object v0
@@ -580,8 +506,6 @@
 .method public getGLTextEditBG()Lcom/samsung/android/glview/GLRectangle;
     .locals 1
 
-    .prologue
-    .line 849
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mTextEditBG:Lcom/samsung/android/glview/GLRectangle;
 
     return-object v0
@@ -590,8 +514,6 @@
 .method public getIsVertical()Z
     .locals 1
 
-    .prologue
-    .line 841
     iget-boolean v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mIsVertical:Z
 
     return v0
@@ -600,8 +522,6 @@
 .method public getLeft()F
     .locals 3
 
-    .prologue
-    .line 853
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mGLText:Lcom/samsung/android/glview/GLText;
 
     invoke-virtual {v0}, Lcom/samsung/android/glview/GLText;->getLayoutX()F
@@ -627,8 +547,6 @@
 .method public getTop()F
     .locals 3
 
-    .prologue
-    .line 857
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mGLText:Lcom/samsung/android/glview/GLText;
 
     invoke-virtual {v0}, Lcom/samsung/android/glview/GLText;->getLayoutY()F
@@ -653,12 +571,8 @@
 
 .method public setFontSize(F)V
     .locals 0
-    .param p1, "fontSize"    # F
 
-    .prologue
-    .line 833
     iput p1, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;->mFontSize:F
 
-    .line 834
     return-void
 .end method

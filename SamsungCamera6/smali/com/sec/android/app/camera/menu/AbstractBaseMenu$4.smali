@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/AbstractBaseMenu;)V
     .locals 0
 
-    .prologue
-    .line 517
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu$4;->this$0:Lcom/sec/android/app/camera/menu/AbstractBaseMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,17 +37,14 @@
 .method public onDeleteClicked()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x0
 
-    .line 520
     iget-object v3, p0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu$4;->this$0:Lcom/sec/android/app/camera/menu/AbstractBaseMenu;
 
     iget-boolean v3, v3, Lcom/sec/android/app/camera/menu/AbstractBaseMenu;->mReviewShowing:Z
 
     if-eqz v3, :cond_4
 
-    .line 521
     iget-object v3, p0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu$4;->this$0:Lcom/sec/android/app/camera/menu/AbstractBaseMenu;
 
     iget-object v3, v3, Lcom/sec/android/app/camera/menu/AbstractBaseMenu;->mQuickView:Lcom/sec/android/app/camera/menu/QuickView;
@@ -70,7 +65,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 523
     :try_start_0
     iget-object v3, p0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu$4;->this$0:Lcom/sec/android/app/camera/menu/AbstractBaseMenu;
 
@@ -82,7 +76,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 524
     new-instance v1, Ljava/io/File;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -155,30 +148,24 @@
 
     invoke-direct {v1, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 526
-    .local v1, "rawCaptureFile":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v3
 
     if-eqz v3, :cond_4
 
-    .line 527
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 528
     const-string v3, "AbstractMenu"
 
     const-string v4, "failed to delete raw picture file"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 535
-    .end local v1    # "rawCaptureFile":Ljava/io/File;
     :cond_0
     new-instance v3, Ljava/io/File;
 
@@ -198,14 +185,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 536
     const-string v3, "AbstractMenu"
 
     const-string v4, "failed to delete picture file"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 538
     :cond_1
     iget-object v3, p0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu$4;->this$0:Lcom/sec/android/app/camera/menu/AbstractBaseMenu;
 
@@ -223,8 +208,6 @@
 
     move-result-object v2
 
-    .line 539
-    .local v2, "uri":Landroid/net/Uri;
     if-eqz v2, :cond_2
 
     iget-object v3, p0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu$4;->this$0:Lcom/sec/android/app/camera/menu/AbstractBaseMenu;
@@ -241,7 +224,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 540
     iget-object v3, p0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu$4;->this$0:Lcom/sec/android/app/camera/menu/AbstractBaseMenu;
 
     iget-object v3, v3, Lcom/sec/android/app/camera/menu/AbstractBaseMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -262,8 +244,6 @@
     :try_end_0
     .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 546
-    .end local v2    # "uri":Landroid/net/Uri;
     :cond_2
     :goto_0
     iget-object v3, p0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu$4;->this$0:Lcom/sec/android/app/camera/menu/AbstractBaseMenu;
@@ -272,57 +252,47 @@
 
     invoke-virtual {v3, v4}, Lcom/sec/android/app/camera/menu/AbstractBaseMenu;->hideReview(Z)V
 
-    .line 547
     iget-object v3, p0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu$4;->this$0:Lcom/sec/android/app/camera/menu/AbstractBaseMenu;
 
     iget-object v3, v3, Lcom/sec/android/app/camera/menu/AbstractBaseMenu;->mEngine:Lcom/sec/android/app/camera/interfaces/Engine;
 
     if-eqz v3, :cond_3
 
-    .line 548
     iget-object v3, p0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu$4;->this$0:Lcom/sec/android/app/camera/menu/AbstractBaseMenu;
 
     iget-object v3, v3, Lcom/sec/android/app/camera/menu/AbstractBaseMenu;->mEngine:Lcom/sec/android/app/camera/interfaces/Engine;
 
     invoke-interface {v3}, Lcom/sec/android/app/camera/interfaces/Engine;->clearCaptureData()V
 
-    .line 550
     :cond_3
     iget-object v3, p0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu$4;->this$0:Lcom/sec/android/app/camera/menu/AbstractBaseMenu;
 
     invoke-virtual {v3, v8}, Lcom/sec/android/app/camera/menu/AbstractBaseMenu;->setThumbnailUri(Landroid/net/Uri;)V
 
-    .line 551
     iget-object v3, p0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu$4;->this$0:Lcom/sec/android/app/camera/menu/AbstractBaseMenu;
 
     iget-object v3, v3, Lcom/sec/android/app/camera/menu/AbstractBaseMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v3}, Lcom/sec/android/app/camera/interfaces/CameraContext;->updateRemainCounter()V
 
-    .line 552
     iget-object v3, p0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu$4;->this$0:Lcom/sec/android/app/camera/menu/AbstractBaseMenu;
 
     iget-object v3, v3, Lcom/sec/android/app/camera/menu/AbstractBaseMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v3}, Lcom/sec/android/app/camera/interfaces/CameraContext;->updateLatestMedia()V
 
-    .line 553
     iget-object v3, p0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu$4;->this$0:Lcom/sec/android/app/camera/menu/AbstractBaseMenu;
 
     iget-object v3, v3, Lcom/sec/android/app/camera/menu/AbstractBaseMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v3}, Lcom/sec/android/app/camera/interfaces/CameraContext;->updateThumbnail()V
 
-    .line 555
     :cond_4
     return-void
 
-    .line 542
     :catch_0
     move-exception v0
 
-    .line 543
-    .local v0, "ex":Ljava/lang/UnsupportedOperationException;
     const-string v3, "AbstractMenu"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -355,21 +325,17 @@
 .method public onShareClicked()V
     .locals 1
 
-    .prologue
-    .line 559
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu$4;->this$0:Lcom/sec/android/app/camera/menu/AbstractBaseMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu;->mQuickView:Lcom/sec/android/app/camera/menu/QuickView;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/QuickView;->removeReviewTimeOutCallback()V
 
-    .line 560
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu$4;->this$0:Lcom/sec/android/app/camera/menu/AbstractBaseMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/AbstractBaseMenu;->mQuickView:Lcom/sec/android/app/camera/menu/QuickView;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/QuickView;->startShareViaAnimation()V
 
-    .line 561
     return-void
 .end method

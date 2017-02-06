@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 2197
     invoke-static {}, Lcom/sec/android/app/camera/shootingmode/RecordingController$RecordingCommand;->values()[Lcom/sec/android/app/camera/shootingmode/RecordingController$RecordingCommand;
 
     move-result-object v0

@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$MenuAdapter;)V
     .locals 0
 
-    .prologue
-    .line 634
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$MenuAdapter$1;->this$1:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$MenuAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +36,7 @@
 # virtual methods
 .method public onClick(Lcom/samsung/android/glview/GLView;)Z
     .locals 1
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
 
-    .prologue
-    .line 637
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$MenuAdapter$1;->this$1:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$MenuAdapter;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;
@@ -49,7 +44,6 @@
     # invokes: Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;->refreshItemBG(Lcom/samsung/android/glview/GLView;)V
     invoke-static {v0, p1}, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;->access$1200(Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;Lcom/samsung/android/glview/GLView;)V
 
-    .line 638
     const/4 v0, 0x1
 
     return v0

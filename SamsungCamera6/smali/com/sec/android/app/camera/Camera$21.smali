@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/Camera;)V
     .locals 0
 
-    .prologue
-    .line 4418
     iput-object p1, p0, Lcom/sec/android/app/camera/Camera$21;->this$0:Lcom/sec/android/app/camera/Camera;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,21 +37,16 @@
 .method public run()V
     .locals 6
 
-    .prologue
-    .line 4421
     const-string v2, "Camera6"
 
     const-string v3, "updateThumbnail : updateThumbnailButton***start"
 
     invoke-static {v2, v3}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4422
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 4423
-    .local v0, "startTime":J
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$21;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mChkKeyFromApp:Ljava/lang/String;
@@ -63,11 +56,9 @@
 
     if-eqz v2, :cond_0
 
-    .line 4430
     :goto_0
     return-void
 
-    .line 4426
     :cond_0
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$21;->this$0:Lcom/sec/android/app/camera/Camera;
 
@@ -78,7 +69,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 4427
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$21;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mBaseMenu:Lcom/sec/android/app/camera/menu/AbstractBaseMenu;
@@ -88,7 +78,6 @@
 
     invoke-virtual {v2}, Lcom/sec/android/app/camera/menu/AbstractBaseMenu;->updateThumbnailButton()V
 
-    .line 4429
     :cond_1
     const-string v2, "Camera6"
 

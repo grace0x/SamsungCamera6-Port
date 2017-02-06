@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/ProLiteSlider;)V
     .locals 0
 
-    .prologue
-    .line 362
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$2;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,11 +36,7 @@
 # virtual methods
 .method public onTouch(Lcom/samsung/android/glview/GLView;Landroid/view/MotionEvent;)Z
     .locals 2
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "event"    # Landroid/view/MotionEvent;
 
-    .prologue
-    .line 365
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -59,19 +53,16 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 366
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$2;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/ProLiteSlider;->restartSliderMenuTimer()V
 
-    .line 370
     :goto_0
     const/4 v0, 0x0
 
     return v0
 
-    .line 368
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$2;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 

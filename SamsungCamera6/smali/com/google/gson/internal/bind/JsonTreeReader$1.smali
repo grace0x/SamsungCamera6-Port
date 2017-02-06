@@ -18,8 +18,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 40
     invoke-direct {p0}, Ljava/io/Reader;-><init>()V
 
     return-void
@@ -35,8 +33,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 45
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
@@ -46,17 +42,12 @@
 
 .method public read([CII)I
     .locals 1
-    .param p1, "buffer"    # [C
-    .param p2, "offset"    # I
-    .param p3, "count"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    .prologue
-    .line 42
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V

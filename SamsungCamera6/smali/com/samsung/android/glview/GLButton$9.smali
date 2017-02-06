@@ -22,8 +22,6 @@
 .method constructor <init>(Lcom/samsung/android/glview/GLButton;)V
     .locals 0
 
-    .prologue
-    .line 1174
     iput-object p1, p0, Lcom/samsung/android/glview/GLButton$9;->this$0:Lcom/samsung/android/glview/GLButton;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -36,14 +34,11 @@
 .method public run()V
     .locals 6
 
-    .prologue
-    .line 1178
     const-wide/16 v2, 0x2bc
 
     :try_start_0
     invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
 
-    .line 1179
     iget-object v1, p0, Lcom/samsung/android/glview/GLButton$9;->this$0:Lcom/samsung/android/glview/GLButton;
 
     invoke-virtual {v1}, Lcom/samsung/android/glview/GLButton;->getContext()Lcom/samsung/android/glview/GLContext;
@@ -70,16 +65,12 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1183
     :goto_0
     return-void
 
-    .line 1180
     :catch_0
     move-exception v0
 
-    .line 1181
-    .local v0, "e":Ljava/lang/InterruptedException;
     const-string v1, "GLButton"
 
     new-instance v2, Ljava/lang/StringBuilder;

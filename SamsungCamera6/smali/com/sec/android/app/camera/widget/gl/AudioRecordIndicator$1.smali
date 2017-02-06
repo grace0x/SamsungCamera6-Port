@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/sec/android/app/camera/widget/gl/AudioRecordIndicator;Landroid/os/Looper;)V
     .locals 0
-    .param p2, "x0"    # Landroid/os/Looper;
 
-    .prologue
-    .line 67
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/AudioRecordIndicator$1;->this$0:Lcom/sec/android/app/camera/widget/gl/AudioRecordIndicator;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -36,17 +33,13 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 5
-    .param p1, "msg"    # Landroid/os/Message;
 
-    .prologue
     const/4 v4, 0x1
 
-    .line 70
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-ne v0, v4, :cond_0
 
-    .line 71
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/AudioRecordIndicator$1;->this$0:Lcom/sec/android/app/camera/widget/gl/AudioRecordIndicator;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/AudioRecordIndicator$1;->this$0:Lcom/sec/android/app/camera/widget/gl/AudioRecordIndicator;
@@ -63,7 +56,6 @@
     # setter for: Lcom/sec/android/app/camera/widget/gl/AudioRecordIndicator;->mUpdateCnt:I
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/widget/gl/AudioRecordIndicator;->access$002(Lcom/sec/android/app/camera/widget/gl/AudioRecordIndicator;I)I
 
-    .line 72
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/AudioRecordIndicator$1;->this$0:Lcom/sec/android/app/camera/widget/gl/AudioRecordIndicator;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/AudioRecordIndicator;->mRecordAmpIndicatorMicImage:Lcom/samsung/android/glview/GLImage;
@@ -89,7 +81,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLImage;->setImageResources(I)V
 
-    .line 73
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/AudioRecordIndicator$1;->this$0:Lcom/sec/android/app/camera/widget/gl/AudioRecordIndicator;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/AudioRecordIndicator;->mRecIndicatorHandler:Landroid/os/Handler;
@@ -101,7 +92,6 @@
 
     invoke-virtual {v0, v4, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 75
     :cond_0
     return-void
 .end method

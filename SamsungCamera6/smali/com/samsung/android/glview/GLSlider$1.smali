@@ -31,8 +31,6 @@
 .method constructor <init>(Lcom/samsung/android/glview/GLSlider;IFF)V
     .locals 0
 
-    .prologue
-    .line 476
     iput-object p1, p0, Lcom/samsung/android/glview/GLSlider$1;->this$0:Lcom/samsung/android/glview/GLSlider;
 
     iput p2, p0, Lcom/samsung/android/glview/GLSlider$1;->val$nearestId:I
@@ -51,12 +49,10 @@
 .method public run()V
     .locals 9
 
-    .prologue
     const v8, 0x3dcccccd    # 0.1f
 
     const/4 v7, 0x0
 
-    .line 479
     iget-object v1, p0, Lcom/samsung/android/glview/GLSlider$1;->this$0:Lcom/samsung/android/glview/GLSlider;
 
     iget-object v1, v1, Lcom/samsung/android/glview/GLSlider;->mGaugeMarkerPos:Landroid/graphics/PointF;
@@ -81,7 +77,6 @@
 
     if-ltz v1, :cond_0
 
-    .line 480
     :goto_0
     iget-object v1, p0, Lcom/samsung/android/glview/GLSlider$1;->this$0:Lcom/samsung/android/glview/GLSlider;
 
@@ -107,7 +102,6 @@
 
     if-lez v1, :cond_1
 
-    .line 481
     iget-object v1, p0, Lcom/samsung/android/glview/GLSlider$1;->this$0:Lcom/samsung/android/glview/GLSlider;
 
     iget-object v1, v1, Lcom/samsung/android/glview/GLSlider;->mGaugeMarkerPos:Landroid/graphics/PointF;
@@ -118,7 +112,6 @@
 
     iput v2, v1, Landroid/graphics/PointF;->x:F
 
-    .line 482
     iget-object v1, p0, Lcom/samsung/android/glview/GLSlider$1;->this$0:Lcom/samsung/android/glview/GLSlider;
 
     iget-object v1, v1, Lcom/samsung/android/glview/GLSlider;->mGaugeMarker:Lcom/samsung/android/glview/GLButton;
@@ -129,7 +122,6 @@
 
     goto :goto_0
 
-    .line 485
     :cond_0
     :goto_1
     iget-object v1, p0, Lcom/samsung/android/glview/GLSlider$1;->this$0:Lcom/samsung/android/glview/GLSlider;
@@ -180,7 +172,6 @@
 
     if-gez v1, :cond_1
 
-    .line 486
     iget-object v1, p0, Lcom/samsung/android/glview/GLSlider$1;->this$0:Lcom/samsung/android/glview/GLSlider;
 
     iget-object v1, v1, Lcom/samsung/android/glview/GLSlider;->mGaugeMarkerPos:Landroid/graphics/PointF;
@@ -191,7 +182,6 @@
 
     iput v2, v1, Landroid/graphics/PointF;->x:F
 
-    .line 487
     iget-object v1, p0, Lcom/samsung/android/glview/GLSlider$1;->this$0:Lcom/samsung/android/glview/GLSlider;
 
     iget-object v1, v1, Lcom/samsung/android/glview/GLSlider;->mGaugeMarker:Lcom/samsung/android/glview/GLButton;
@@ -200,7 +190,6 @@
 
     goto :goto_1
 
-    .line 490
     :cond_1
     iget-object v1, p0, Lcom/samsung/android/glview/GLSlider$1;->this$0:Lcom/samsung/android/glview/GLSlider;
 
@@ -228,20 +217,16 @@
 
     sub-float v0, v1, v2
 
-    .line 491
-    .local v0, "x":F
     iget-object v1, p0, Lcom/samsung/android/glview/GLSlider$1;->this$0:Lcom/samsung/android/glview/GLSlider;
 
     iget-object v1, v1, Lcom/samsung/android/glview/GLSlider;->mGaugeMarker:Lcom/samsung/android/glview/GLButton;
 
     invoke-virtual {v1, v0, v7}, Lcom/samsung/android/glview/GLButton;->translate(FF)V
 
-    .line 492
     cmpl-float v1, v0, v7
 
     if-nez v1, :cond_2
 
-    .line 493
     iget-object v1, p0, Lcom/samsung/android/glview/GLSlider$1;->this$0:Lcom/samsung/android/glview/GLSlider;
 
     invoke-virtual {v1}, Lcom/samsung/android/glview/GLSlider;->getContext()Lcom/samsung/android/glview/GLContext;
@@ -252,12 +237,10 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLContext;->setDirty(Z)V
 
-    .line 495
     :cond_2
     iget-object v1, p0, Lcom/samsung/android/glview/GLSlider$1;->this$0:Lcom/samsung/android/glview/GLSlider;
 
     invoke-virtual {v1}, Lcom/samsung/android/glview/GLSlider;->setGaugeBarSize()V
 
-    .line 496
     return-void
 .end method

@@ -27,8 +27,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/OverlayHelpMenu;I)V
     .locals 0
 
-    .prologue
-    .line 367
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/OverlayHelpMenu$6;->this$0:Lcom/sec/android/app/camera/menu/OverlayHelpMenu;
 
     iput p2, p0, Lcom/sec/android/app/camera/menu/OverlayHelpMenu$6;->val$index:I
@@ -42,10 +40,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 3
-    .param p1, "v"    # Landroid/view/View;
 
-    .prologue
-    .line 370
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/OverlayHelpMenu$6;->this$0:Lcom/sec/android/app/camera/menu/OverlayHelpMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/OverlayHelpMenu;->mViewPager:Landroid/support/v4/view/ViewPager;
@@ -59,6 +54,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/support/v4/view/ViewPager;->setCurrentItem(IZ)V
 
-    .line 371
     return-void
 .end method

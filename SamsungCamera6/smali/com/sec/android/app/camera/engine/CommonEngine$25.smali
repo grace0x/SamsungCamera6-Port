@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/engine/CommonEngine;)V
     .locals 0
 
-    .prologue
-    .line 8899
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/CommonEngine$25;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +37,7 @@
 .method public run()V
     .locals 0
 
-    .prologue
-    .line 8902
     invoke-static {}, Lcom/sec/android/app/camera/engine/CameraHolder;->instance()Lcom/sec/android/app/camera/engine/CameraHolder;
 
-    .line 8903
     return-void
 .end method

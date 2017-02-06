@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/engine/CommonEngine;)V
     .locals 0
 
-    .prologue
-    .line 4280
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/CommonEngine$3;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,13 +37,10 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 4283
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine$3;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     # invokes: Lcom/sec/android/app/camera/engine/CommonEngine;->openCameraDevice()V
     invoke-static {v0}, Lcom/sec/android/app/camera/engine/CommonEngine;->access$1100(Lcom/sec/android/app/camera/engine/CommonEngine;)V
 
-    .line 4284
     return-void
 .end method

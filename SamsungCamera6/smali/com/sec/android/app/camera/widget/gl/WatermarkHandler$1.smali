@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/widget/gl/WatermarkHandler;)V
     .locals 0
 
-    .prologue
-    .line 82
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/WatermarkHandler$1;->this$0:Lcom/sec/android/app/camera/widget/gl/WatermarkHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +36,7 @@
 # virtual methods
 .method public onClick(Lcom/samsung/android/glview/GLView;)Z
     .locals 3
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
 
-    .prologue
-    .line 85
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/WatermarkHandler$1;->this$0:Lcom/sec/android/app/camera/widget/gl/WatermarkHandler;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/WatermarkHandler;->mId:I
@@ -53,8 +48,6 @@
 
     move-result v0
 
-    .line 86
-    .local v0, "watermark":I
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/WatermarkHandler$1;->this$0:Lcom/sec/android/app/camera/widget/gl/WatermarkHandler;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/WatermarkHandler;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -68,7 +61,6 @@
 
     invoke-interface {v1, v0}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->setWatermarkId(I)V
 
-    .line 87
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/WatermarkHandler$1;->this$0:Lcom/sec/android/app/camera/widget/gl/WatermarkHandler;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/WatermarkHandler;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -90,7 +82,6 @@
 
     invoke-interface {v1, v2}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->setWatermarkCategory(I)V
 
-    .line 88
     const/4 v1, 0x0
 
     return v1

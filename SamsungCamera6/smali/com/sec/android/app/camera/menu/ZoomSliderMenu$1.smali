@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/ZoomSliderMenu;)V
     .locals 0
 
-    .prologue
-    .line 112
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ZoomSliderMenu$1;->this$0:Lcom/sec/android/app/camera/menu/ZoomSliderMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,19 +36,15 @@
 # virtual methods
 .method public onStepChanged(I)V
     .locals 4
-    .param p1, "step"    # I
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 115
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ZoomSliderMenu$1;->this$0:Lcom/sec/android/app/camera/menu/ZoomSliderMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/ZoomSliderMenu;->mZoomValueChangeListener:Lcom/sec/android/app/camera/menu/ZoomSliderMenu$ZoomValueMenuSelectListener;
 
     if-eqz v0, :cond_1
 
-    .line 116
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ZoomSliderMenu$1;->this$0:Lcom/sec/android/app/camera/menu/ZoomSliderMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/ZoomSliderMenu;->mZoomValueChangeListener:Lcom/sec/android/app/camera/menu/ZoomSliderMenu$ZoomValueMenuSelectListener;
@@ -73,11 +67,9 @@
 
     mul-int/2addr p1, v1
 
-    .end local p1    # "step":I
     :cond_0
     invoke-interface {v0, p1}, Lcom/sec/android/app/camera/menu/ZoomSliderMenu$ZoomValueMenuSelectListener;->onZoomValueMenuSelect(I)V
 
-    .line 117
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ZoomSliderMenu$1;->this$0:Lcom/sec/android/app/camera/menu/ZoomSliderMenu;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ZoomSliderMenu$1;->this$0:Lcom/sec/android/app/camera/menu/ZoomSliderMenu;
@@ -95,7 +87,6 @@
     # invokes: Lcom/sec/android/app/camera/menu/ZoomSliderMenu;->setZoomText(I)V
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/menu/ZoomSliderMenu;->access$200(Lcom/sec/android/app/camera/menu/ZoomSliderMenu;I)V
 
-    .line 119
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ZoomSliderMenu$1;->this$0:Lcom/sec/android/app/camera/menu/ZoomSliderMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/ZoomSliderMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -142,7 +133,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 120
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ZoomSliderMenu$1;->this$0:Lcom/sec/android/app/camera/menu/ZoomSliderMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/ZoomSliderMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -165,7 +155,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/speech/tts/TextToSpeech;->speak(Ljava/lang/String;ILjava/util/HashMap;)I
 
-    .line 121
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ZoomSliderMenu$1;->this$0:Lcom/sec/android/app/camera/menu/ZoomSliderMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/ZoomSliderMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -193,7 +182,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/speech/tts/TextToSpeech;->speak(Ljava/lang/String;ILjava/util/HashMap;)I
 
-    .line 124
     :cond_1
     return-void
 .end method

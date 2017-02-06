@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/google/gson/Gson;)V
     .locals 0
 
-    .prologue
-    .line 123
     iput-object p1, p0, Lcom/google/gson/Gson$1;->this$0:Lcom/google/gson/Gson;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,8 +36,6 @@
 # virtual methods
 .method public deserialize(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;)Ljava/lang/Object;
     .locals 1
-    .param p1, "json"    # Lcom/google/gson/JsonElement;
-    .param p2, "typeOfT"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -57,8 +53,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 126
     iget-object v0, p0, Lcom/google/gson/Gson$1;->this$0:Lcom/google/gson/Gson;
 
     invoke-virtual {v0, p1, p2}, Lcom/google/gson/Gson;->fromJson(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;)Ljava/lang/Object;

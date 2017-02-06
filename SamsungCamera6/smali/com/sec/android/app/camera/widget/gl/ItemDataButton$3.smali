@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/widget/gl/ItemDataButton;)V
     .locals 0
 
-    .prologue
-    .line 329
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/ItemDataButton$3;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemDataButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +36,7 @@
 # virtual methods
 .method public onClick(Lcom/samsung/android/glview/GLView;)Z
     .locals 2
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
 
-    .prologue
-    .line 332
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ItemDataButton$3;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemDataButton;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/ItemDataButton;->mClickListener:Lcom/samsung/android/glview/GLView$ClickListener;
@@ -51,7 +46,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 333
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ItemDataButton$3;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemDataButton;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/ItemDataButton;->mClickListener:Lcom/samsung/android/glview/GLView$ClickListener;
@@ -65,7 +59,6 @@
 
     move-result v0
 
-    .line 335
     :goto_0
     return v0
 

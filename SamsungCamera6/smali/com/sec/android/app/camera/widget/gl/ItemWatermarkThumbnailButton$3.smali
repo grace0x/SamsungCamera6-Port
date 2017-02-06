@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/widget/gl/ItemWatermarkThumbnailButton;)V
     .locals 0
 
-    .prologue
-    .line 207
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/ItemWatermarkThumbnailButton$3;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemWatermarkThumbnailButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,11 +36,7 @@
 # virtual methods
 .method public onFocusChanged(Lcom/samsung/android/glview/GLView;I)Z
     .locals 1
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "focusStatus"    # I
 
-    .prologue
-    .line 210
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ItemWatermarkThumbnailButton$3;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemWatermarkThumbnailButton;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/ItemWatermarkThumbnailButton;->mFocusListener:Lcom/samsung/android/glview/GLView$FocusListener;
@@ -52,7 +46,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 211
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ItemWatermarkThumbnailButton$3;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemWatermarkThumbnailButton;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/ItemWatermarkThumbnailButton;->mFocusListener:Lcom/samsung/android/glview/GLView$FocusListener;
@@ -62,10 +55,8 @@
 
     invoke-interface {v0, p1, p2}, Lcom/samsung/android/glview/GLView$FocusListener;->onFocusChanged(Lcom/samsung/android/glview/GLView;I)Z
 
-    .line 212
     const/4 v0, 0x1
 
-    .line 214
     :goto_0
     return v0
 

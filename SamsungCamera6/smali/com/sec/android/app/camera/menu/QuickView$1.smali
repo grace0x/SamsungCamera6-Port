@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/QuickView;)V
     .locals 0
 
-    .prologue
-    .line 93
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/QuickView$1;->this$0:Lcom/sec/android/app/camera/menu/QuickView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,8 +37,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 96
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/QuickView$1;->this$0:Lcom/sec/android/app/camera/menu/QuickView;
 
     # getter for: Lcom/sec/android/app/camera/menu/QuickView;->mBaseMenuController:Lcom/sec/android/app/camera/interfaces/BaseMenuController;
@@ -52,6 +48,5 @@
 
     invoke-interface {v0, v1}, Lcom/sec/android/app/camera/interfaces/BaseMenuController;->hideReview(Z)V
 
-    .line 97
     return-void
 .end method

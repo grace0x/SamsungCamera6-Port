@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/sec/android/app/camera/widget/gl/QRCodeReader;Landroid/os/Looper;)V
     .locals 0
-    .param p2, "x0"    # Landroid/os/Looper;
 
-    .prologue
-    .line 76
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/QRCodeReader$1;->this$0:Lcom/sec/android/app/camera/widget/gl/QRCodeReader;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -36,10 +33,7 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
-    .param p1, "msg"    # Landroid/os/Message;
 
-    .prologue
-    .line 79
     const-string v0, "QRCodeReader"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -64,29 +58,24 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 86
     :goto_0
     return-void
 
-    .line 82
     :pswitch_0
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/widget/gl/QRCodeReader$1;->removeMessages(I)V
 
-    .line 83
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/QRCodeReader$1;->this$0:Lcom/sec/android/app/camera/widget/gl/QRCodeReader;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/widget/gl/QRCodeReader;->hideQRButton()V
 
     goto :goto_0
 
-    .line 80
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

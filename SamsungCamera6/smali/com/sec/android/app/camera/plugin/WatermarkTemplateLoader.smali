@@ -40,8 +40,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 30
     const v0, 0x7f0c004d
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getColor(I)I
@@ -50,7 +48,6 @@
 
     sput v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->WATERMARK_TEXT_FONT_COLOR:I
 
-    .line 31
     const v0, 0x7f0c004a
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getColor(I)I
@@ -59,12 +56,10 @@
 
     sput v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->WATERMARK_MAI_TEXT_FONT_COLOR:I
 
-    .line 34
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mIsTemplateEntriesLoaded:Z
 
-    .line 35
     const/4 v0, 0x0
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
@@ -75,19 +70,14 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     return-void
 .end method
 
 .method static synthetic access$200()I
     .locals 1
 
-    .prologue
-    .line 29
     sget v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->WATERMARK_TEXT_FONT_COLOR:I
 
     return v0
@@ -95,17 +85,13 @@
 
 .method public static findCatetoryById(I)I
     .locals 3
-    .param p0, "id"    # I
 
-    .prologue
-    .line 41
     sget-object v2, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .local v1, "i$":Ljava/util/Iterator;
     :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -119,8 +105,6 @@
 
     check-cast v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
 
-    .line 42
-    .local v0, "entry":Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
     # getter for: Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;->mId:I
     invoke-static {v0}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;->access$000(Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;)I
 
@@ -128,13 +112,10 @@
 
     if-ne v2, p0, :cond_0
 
-    .line 43
     invoke-virtual {v0}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;->getCategory()I
 
     move-result v2
 
-    .line 46
-    .end local v0    # "entry":Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
     :goto_0
     return v2
 
@@ -146,7 +127,6 @@
 
 .method public static findEntryByCategory(I)Ljava/util/ArrayList;
     .locals 4
-    .param p0, "category"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
@@ -157,35 +137,27 @@
         }
     .end annotation
 
-    .prologue
-    .line 50
     sget-boolean v3, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mIsTemplateEntriesLoaded:Z
 
     if-nez v3, :cond_0
 
-    .line 51
     invoke-static {}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->loadTemplateEntries()V
 
-    .line 52
     const/4 v3, 0x1
 
     sput-boolean v3, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mIsTemplateEntriesLoaded:Z
 
-    .line 55
     :cond_0
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 56
-    .local v2, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;>;"
     sget-object v3, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .local v1, "i$":Ljava/util/Iterator;
     :cond_1
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -200,8 +172,6 @@
 
     check-cast v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
 
-    .line 57
-    .local v0, "entry":Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
     # getter for: Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;->mCategory:I
     invoke-static {v0}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;->access$100(Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;)I
 
@@ -209,36 +179,27 @@
 
     if-ne v3, p0, :cond_1
 
-    .line 58
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 61
-    .end local v0    # "entry":Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
     :cond_2
     return-object v2
 .end method
 
 .method public static findEntryById(I)Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
     .locals 3
-    .param p0, "id"    # I
 
-    .prologue
-    .line 65
     sget-boolean v2, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mIsTemplateEntriesLoaded:Z
 
     if-nez v2, :cond_0
 
-    .line 66
     invoke-static {}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->loadTemplateEntries()V
 
-    .line 67
     const/4 v2, 0x1
 
     sput-boolean v2, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mIsTemplateEntriesLoaded:Z
 
-    .line 70
     :cond_0
     sget-object v2, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
@@ -246,7 +207,6 @@
 
     move-result-object v1
 
-    .local v1, "i$":Ljava/util/Iterator;
     :cond_1
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -260,8 +220,6 @@
 
     check-cast v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
 
-    .line 71
-    .local v0, "entry":Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
     # getter for: Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;->mId:I
     invoke-static {v0}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;->access$000(Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;)I
 
@@ -269,8 +227,6 @@
 
     if-ne v2, p0, :cond_1
 
-    .line 75
-    .end local v0    # "entry":Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
     :goto_0
     return-object v0
 
@@ -282,25 +238,17 @@
 
 .method public static getNextId(I)I
     .locals 6
-    .param p0, "template"    # I
 
-    .prologue
-    .line 79
     const/4 v3, 0x0
 
-    .line 80
-    .local v3, "index":I
     const/4 v1, 0x0
 
-    .line 81
-    .local v1, "i":I
     sget-object v4, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .local v2, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -314,8 +262,6 @@
 
     check-cast v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
 
-    .line 82
-    .local v0, "entry":Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
     # getter for: Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;->mId:I
     invoke-static {v0}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;->access$000(Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;)I
 
@@ -323,8 +269,6 @@
 
     if-ne v4, p0, :cond_1
 
-    .line 87
-    .end local v0    # "entry":Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
     :cond_0
     add-int/lit8 v4, v3, 0x1
 
@@ -336,7 +280,6 @@
 
     if-ge v4, v5, :cond_2
 
-    .line 88
     sget-object v4, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     add-int/lit8 v5, v3, 0x1
@@ -352,20 +295,14 @@
 
     move-result v4
 
-    .line 90
     :goto_1
     return v4
 
-    .line 85
-    .restart local v0    # "entry":Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
     :cond_1
     add-int/lit8 v3, v3, 0x1
 
-    .line 86
     goto :goto_0
 
-    .line 90
-    .end local v0    # "entry":Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
     :cond_2
     sget-object v4, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
@@ -387,25 +324,17 @@
 
 .method public static getPreviousId(I)I
     .locals 6
-    .param p0, "template"    # I
 
-    .prologue
-    .line 94
     const/4 v3, 0x0
 
-    .line 95
-    .local v3, "index":I
     const/4 v1, 0x0
 
-    .line 96
-    .local v1, "i":I
     sget-object v4, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .local v2, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -419,8 +348,6 @@
 
     check-cast v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
 
-    .line 97
-    .local v0, "entry":Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
     # getter for: Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;->mId:I
     invoke-static {v0}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;->access$000(Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;)I
 
@@ -428,14 +355,11 @@
 
     if-ne v4, p0, :cond_1
 
-    .line 102
-    .end local v0    # "entry":Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
     :cond_0
     add-int/lit8 v4, v3, -0x1
 
     if-ltz v4, :cond_2
 
-    .line 103
     sget-object v4, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     add-int/lit8 v5, v3, -0x1
@@ -451,20 +375,14 @@
 
     move-result v4
 
-    .line 105
     :goto_1
     return v4
 
-    .line 100
-    .restart local v0    # "entry":Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
     :cond_1
     add-int/lit8 v3, v3, 0x1
 
-    .line 101
     goto :goto_0
 
-    .line 105
-    .end local v0    # "entry":Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
     :cond_2
     sget-object v4, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
@@ -493,15 +411,12 @@
 .method private static loadTemplateEntries()V
     .locals 24
 
-    .prologue
-    .line 109
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
-    .line 112
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -522,7 +437,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 113
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -543,7 +457,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 114
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -564,7 +477,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 115
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -585,7 +497,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 116
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -606,7 +517,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 117
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -627,7 +537,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 118
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -648,7 +557,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 119
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -669,7 +577,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 120
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -690,7 +597,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 123
     sget-object v15, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v16, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -759,7 +665,6 @@
 
     invoke-virtual/range {v15 .. v16}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 124
     sget-object v15, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v16, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -862,7 +767,6 @@
 
     invoke-virtual/range {v15 .. v16}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 125
     sget-object v15, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v16, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -965,7 +869,6 @@
 
     invoke-virtual/range {v15 .. v16}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 126
     sget-object v15, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v16, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -1068,7 +971,6 @@
 
     invoke-virtual/range {v15 .. v16}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 127
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -1089,7 +991,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 128
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -1110,7 +1011,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 129
     sget-object v15, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v16, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -1179,7 +1079,6 @@
 
     invoke-virtual/range {v15 .. v16}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 130
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -1200,7 +1099,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 131
     sget-object v15, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v16, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -1269,7 +1167,6 @@
 
     invoke-virtual/range {v15 .. v16}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 134
     sget-object v15, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v16, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -1338,7 +1235,6 @@
 
     invoke-virtual/range {v15 .. v16}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 135
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -1359,7 +1255,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 136
     sget-object v15, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v16, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -1428,7 +1323,6 @@
 
     invoke-virtual/range {v15 .. v16}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 137
     sget-object v15, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v16, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -1497,7 +1391,6 @@
 
     invoke-virtual/range {v15 .. v16}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 138
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -1518,7 +1411,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 139
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -1539,7 +1431,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 140
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -1560,7 +1451,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 141
     sget-object v15, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v16, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -1629,7 +1519,6 @@
 
     invoke-virtual/range {v15 .. v16}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 142
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -1650,7 +1539,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 145
     sget-object v16, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v17, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -1757,7 +1645,6 @@
 
     invoke-virtual/range {v16 .. v17}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 146
     sget-object v15, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v16, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -1860,7 +1747,6 @@
 
     invoke-virtual/range {v15 .. v16}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 147
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -1881,7 +1767,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 148
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -1902,7 +1787,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 149
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -1923,7 +1807,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 150
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -1944,7 +1827,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 151
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -1965,7 +1847,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 152
     sget-object v15, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v16, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -2034,7 +1915,6 @@
 
     invoke-virtual/range {v15 .. v16}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 153
     sget-object v15, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v16, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -2103,7 +1983,6 @@
 
     invoke-virtual/range {v15 .. v16}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 156
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -2124,7 +2003,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 157
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -2145,7 +2023,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 158
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -2166,7 +2043,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 159
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -2187,7 +2063,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 160
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -2208,7 +2083,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 161
     sget-object v15, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v16, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -2277,7 +2151,6 @@
 
     invoke-virtual/range {v15 .. v16}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 162
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -2298,7 +2171,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 163
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -2319,7 +2191,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 164
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -2340,7 +2211,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 167
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -2361,7 +2231,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 168
     sget-object v15, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v16, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -2430,7 +2299,6 @@
 
     invoke-virtual/range {v15 .. v16}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 169
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -2451,7 +2319,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 170
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -2472,7 +2339,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 171
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -2493,7 +2359,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 172
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -2514,7 +2379,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 173
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -2535,7 +2399,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 174
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -2556,7 +2419,6 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 175
     sget-object v7, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader;->mAllEntries:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$StandardTemplateEntry;
@@ -2577,6 +2439,5 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 176
     return-void
 .end method

@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$MenuAdapter;)V
     .locals 0
 
-    .prologue
-    .line 1773
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$MenuAdapter$2;->this$1:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$MenuAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,11 +36,7 @@
 # virtual methods
 .method public onDeleteClick(Ljava/lang/String;I)V
     .locals 3
-    .param p1, "packageName"    # Ljava/lang/String;
-    .param p2, "commandId"    # I
 
-    .prologue
-    .line 1777
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$MenuAdapter$2;->this$1:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$MenuAdapter;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
@@ -56,7 +50,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 1778
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$MenuAdapter$2;->this$1:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$MenuAdapter;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
@@ -66,14 +59,11 @@
 
     move-result v0
 
-    .line 1782
-    .local v0, "index":I
     :goto_0
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 1783
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$MenuAdapter$2;->this$1:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$MenuAdapter;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
@@ -83,7 +73,6 @@
     # setter for: Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->mIsNeedShowBaseMenu:Z
     invoke-static {v1, v2}, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->access$2202(Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;Z)Z
 
-    .line 1784
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$MenuAdapter$2;->this$1:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$MenuAdapter;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
@@ -92,7 +81,6 @@
 
     invoke-virtual {v1, v2}, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->setHideAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1785
     # getter for: Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->mIsSupportBeautyCategory:Z
     invoke-static {}, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->access$800()Z
 
@@ -100,7 +88,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1786
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$MenuAdapter$2;->this$1:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$MenuAdapter;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
@@ -111,13 +98,10 @@
 
     invoke-interface {v1, p1, v2}, Lcom/sec/android/app/camera/interfaces/CameraContext;->uninstallExternalEffectPackage(Ljava/lang/String;I)V
 
-    .line 1791
     :cond_0
     :goto_1
     return-void
 
-    .line 1780
-    .end local v0    # "index":I
     :cond_1
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$MenuAdapter$2;->this$1:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$MenuAdapter;
 
@@ -128,10 +112,8 @@
 
     move-result v0
 
-    .restart local v0    # "index":I
     goto :goto_0
 
-    .line 1788
     :cond_2
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$MenuAdapter$2;->this$1:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$MenuAdapter;
 

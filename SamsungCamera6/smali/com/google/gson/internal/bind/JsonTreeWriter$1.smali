@@ -18,8 +18,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 34
     invoke-direct {p0}, Ljava/io/Writer;-><init>()V
 
     return-void
@@ -35,8 +33,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 42
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
@@ -52,8 +48,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 39
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
@@ -63,12 +57,7 @@
 
 .method public write([CII)V
     .locals 1
-    .param p1, "buffer"    # [C
-    .param p2, "offset"    # I
-    .param p3, "counter"    # I
 
-    .prologue
-    .line 36
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V

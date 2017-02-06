@@ -29,8 +29,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/ProLiteSlider;[II)V
     .locals 0
 
-    .prologue
-    .line 619
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$12;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
     iput-object p2, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$12;->val$indicatorWBValue:[I
@@ -46,11 +44,7 @@
 # virtual methods
 .method public onKeyDown(Lcom/samsung/android/glview/GLView;Landroid/view/KeyEvent;)Z
     .locals 3
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "event"    # Landroid/view/KeyEvent;
 
-    .prologue
-    .line 622
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v0
@@ -59,12 +53,10 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 623
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$12;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/ProLiteSlider;->restartSliderMenuTimer()V
 
-    .line 624
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$12;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
     # getter for: Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -80,14 +72,12 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 625
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$12;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderValueSelectListener:Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderValueSelectListener;
 
     if-eqz v0, :cond_0
 
-    .line 626
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$12;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderValueSelectListener:Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderValueSelectListener;
@@ -100,11 +90,9 @@
 
     invoke-interface {v0, v1}, Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderValueSelectListener;->onWBValueMenuSelect(I)V
 
-    .line 628
     :cond_0
     const/4 v0, 0x1
 
-    .line 630
     :goto_0
     return v0
 
@@ -116,11 +104,7 @@
 
 .method public onKeyUp(Lcom/samsung/android/glview/GLView;Landroid/view/KeyEvent;)Z
     .locals 2
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "event"    # Landroid/view/KeyEvent;
 
-    .prologue
-    .line 636
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v0
@@ -129,10 +113,8 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 637
     const/4 v0, 0x1
 
-    .line 639
     :goto_0
     return v0
 

@@ -33,8 +33,6 @@
 .method constructor <init>(Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;Ljava/lang/String;Landroid/os/Bundle;I)V
     .locals 0
 
-    .prologue
-    .line 303
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$1;->this$1:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
 
     iput-object p2, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$1;->val$callbacks:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;
@@ -55,16 +53,12 @@
 .method public run()V
     .locals 7
 
-    .prologue
-    .line 306
     iget-object v3, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$1;->val$callbacks:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;
 
     invoke-interface {v3}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 309
-    .local v0, "b":Landroid/os/IBinder;
     iget-object v3, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$1;->this$1:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
 
     iget-object v3, v3, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
@@ -76,7 +70,6 @@
 
     invoke-virtual {v3, v0}, Landroid/support/v4/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 311
     new-instance v1, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;
 
     iget-object v3, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$1;->this$1:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
@@ -87,23 +80,18 @@
 
     invoke-direct {v1, v3, v4}, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat;Landroid/support/v4/media/MediaBrowserServiceCompat$1;)V
 
-    .line 312
-    .local v1, "connection":Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;
     iget-object v3, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$1;->val$pkg:Ljava/lang/String;
 
     iput-object v3, v1, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;->pkg:Ljava/lang/String;
 
-    .line 313
     iget-object v3, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$1;->val$rootHints:Landroid/os/Bundle;
 
     iput-object v3, v1, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;->rootHints:Landroid/os/Bundle;
 
-    .line 314
     iget-object v3, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$1;->val$callbacks:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;
 
     iput-object v3, v1, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;->callbacks:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;
 
-    .line 316
     iget-object v3, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$1;->this$1:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
 
     iget-object v3, v3, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
@@ -120,12 +108,10 @@
 
     iput-object v3, v1, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;->root:Landroid/support/v4/media/MediaBrowserServiceCompat$BrowserRoot;
 
-    .line 320
     iget-object v3, v1, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;->root:Landroid/support/v4/media/MediaBrowserServiceCompat$BrowserRoot;
 
     if-nez v3, :cond_1
 
-    .line 321
     const-string v3, "MediaBrowserServiceCompat"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -168,7 +154,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 324
     :try_start_0
     iget-object v3, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$1;->val$callbacks:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;
 
@@ -176,17 +161,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 342
     :cond_0
     :goto_0
     return-void
 
-    .line 325
     :catch_0
     move-exception v2
 
-    .line 326
-    .local v2, "ex":Landroid/os/RemoteException;
     const-string v3, "MediaBrowserServiceCompat"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -213,8 +194,6 @@
 
     goto :goto_0
 
-    .line 331
-    .end local v2    # "ex":Landroid/os/RemoteException;
     :cond_1
     :try_start_1
     iget-object v3, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$1;->this$1:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
@@ -228,7 +207,6 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/support/v4/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 332
     iget-object v3, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$1;->this$1:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
 
     iget-object v3, v3, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
@@ -237,7 +215,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 333
     iget-object v3, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$1;->val$callbacks:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;
 
     iget-object v4, v1, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;->root:Landroid/support/v4/media/MediaBrowserServiceCompat$BrowserRoot;
@@ -264,12 +241,9 @@
 
     goto :goto_0
 
-    .line 336
     :catch_1
     move-exception v2
 
-    .line 337
-    .restart local v2    # "ex":Landroid/os/RemoteException;
     const-string v3, "MediaBrowserServiceCompat"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -294,7 +268,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 339
     iget-object v3, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$1;->this$1:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
 
     iget-object v3, v3, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;

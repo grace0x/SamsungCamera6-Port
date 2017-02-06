@@ -26,18 +26,13 @@
 # direct methods
 .method constructor <init>(Lcom/sec/android/app/camera/engine/CeRequestQueue;Lcom/sec/android/app/camera/engine/CeRequest;)V
     .locals 0
-    .param p2, "firstRequest"    # Lcom/sec/android/app/camera/engine/CeRequest;
 
-    .prologue
-    .line 352
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/CeRequestQueue$RunFirstRequest;->this$0:Lcom/sec/android/app/camera/engine/CeRequestQueue;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 353
     iput-object p2, p0, Lcom/sec/android/app/camera/engine/CeRequestQueue$RunFirstRequest;->mFirstRequest:Lcom/sec/android/app/camera/engine/CeRequest;
 
-    .line 354
     return-void
 .end method
 
@@ -46,8 +41,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 358
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -80,7 +73,6 @@
 
     invoke-static {v0}, Lcom/sec/android/app/TraceWrapper;->traceBegin(Ljava/lang/String;)V
 
-    .line 359
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/CeRequestQueue$RunFirstRequest;->this$0:Lcom/sec/android/app/camera/engine/CeRequestQueue;
 
     # getter for: Lcom/sec/android/app/camera/engine/CeRequestQueue;->mCommonEngine:Lcom/sec/android/app/camera/engine/CommonEngine;
@@ -96,9 +88,7 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/engine/AbstractCeState;->handleRequest(Lcom/sec/android/app/camera/engine/CeRequest;)Z
 
-    .line 360
     invoke-static {}, Lcom/sec/android/app/TraceWrapper;->traceEnd()V
 
-    .line 361
     return-void
 .end method

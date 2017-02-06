@@ -25,8 +25,6 @@
 .method private constructor <init>(Lcom/sec/android/app/camera/menu/VideoCollageTypeMenu$VideoCollageTypeMenuWrapper;)V
     .locals 0
 
-    .prologue
-    .line 660
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/VideoCollageTypeMenu$VideoCollageTypeMenuWrapper$MenuAdapter;->this$1:Lcom/sec/android/app/camera/menu/VideoCollageTypeMenu$VideoCollageTypeMenuWrapper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,11 +34,7 @@
 
 .method synthetic constructor <init>(Lcom/sec/android/app/camera/menu/VideoCollageTypeMenu$VideoCollageTypeMenuWrapper;Lcom/sec/android/app/camera/menu/VideoCollageTypeMenu$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/sec/android/app/camera/menu/VideoCollageTypeMenu$VideoCollageTypeMenuWrapper;
-    .param p2, "x1"    # Lcom/sec/android/app/camera/menu/VideoCollageTypeMenu$1;
 
-    .prologue
-    .line 660
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/menu/VideoCollageTypeMenu$VideoCollageTypeMenuWrapper$MenuAdapter;-><init>(Lcom/sec/android/app/camera/menu/VideoCollageTypeMenu$VideoCollageTypeMenuWrapper;)V
 
     return-void
@@ -51,8 +45,6 @@
 .method public getCount()I
     .locals 1
 
-    .prologue
-    .line 663
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/VideoCollageTypeMenu$VideoCollageTypeMenuWrapper$MenuAdapter;->this$1:Lcom/sec/android/app/camera/menu/VideoCollageTypeMenu$VideoCollageTypeMenuWrapper;
 
     # getter for: Lcom/sec/android/app/camera/menu/VideoCollageTypeMenu$VideoCollageTypeMenuWrapper;->mTypeGroups:Ljava/util/ArrayList;
@@ -69,14 +61,9 @@
 
 .method public getView(ILcom/samsung/android/glview/GLView;)Lcom/samsung/android/glview/GLView;
     .locals 2
-    .param p1, "position"    # I
-    .param p2, "convertView"    # Lcom/samsung/android/glview/GLView;
 
-    .prologue
-    .line 668
     if-nez p2, :cond_0
 
-    .line 669
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/VideoCollageTypeMenu$VideoCollageTypeMenuWrapper$MenuAdapter;->this$1:Lcom/sec/android/app/camera/menu/VideoCollageTypeMenu$VideoCollageTypeMenuWrapper;
 
     # getter for: Lcom/sec/android/app/camera/menu/VideoCollageTypeMenu$VideoCollageTypeMenuWrapper;->mTypeGroups:Ljava/util/ArrayList;
@@ -90,8 +77,6 @@
 
     check-cast v0, Lcom/samsung/android/glview/GLViewGroup;
 
-    .line 670
-    .local v0, "group":Lcom/samsung/android/glview/GLViewGroup;
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/VideoCollageTypeMenu$VideoCollageTypeMenuWrapper$MenuAdapter;->this$1:Lcom/sec/android/app/camera/menu/VideoCollageTypeMenu$VideoCollageTypeMenuWrapper;
 
     # getter for: Lcom/sec/android/app/camera/menu/VideoCollageTypeMenu$VideoCollageTypeMenuWrapper;->mList:Lcom/samsung/android/glview/GLList;
@@ -101,7 +86,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLViewGroup;->setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V
 
-    .line 671
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/VideoCollageTypeMenu$VideoCollageTypeMenuWrapper$MenuAdapter;->this$1:Lcom/sec/android/app/camera/menu/VideoCollageTypeMenu$VideoCollageTypeMenuWrapper;
 
     # getter for: Lcom/sec/android/app/camera/menu/VideoCollageTypeMenu$VideoCollageTypeMenuWrapper;->mList:Lcom/samsung/android/glview/GLList;
@@ -111,8 +95,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLViewGroup;->setKeyListener(Lcom/samsung/android/glview/GLView$KeyListener;)V
 
-    .line 674
-    .end local v0    # "group":Lcom/samsung/android/glview/GLViewGroup;
     :goto_0
     return-object v0
 
@@ -125,7 +107,5 @@
 .method public reset()V
     .locals 0
 
-    .prologue
-    .line 679
     return-void
 .end method

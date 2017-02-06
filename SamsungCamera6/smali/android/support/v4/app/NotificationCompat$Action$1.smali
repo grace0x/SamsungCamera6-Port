@@ -21,8 +21,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 2169
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,19 +30,11 @@
 # virtual methods
 .method public build(ILjava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;)Landroid/support/v4/app/NotificationCompat$Action;
     .locals 7
-    .param p1, "icon"    # I
-    .param p2, "title"    # Ljava/lang/CharSequence;
-    .param p3, "actionIntent"    # Landroid/app/PendingIntent;
-    .param p4, "extras"    # Landroid/os/Bundle;
-    .param p5, "remoteInputs"    # [Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;
 
-    .prologue
-    .line 2174
     new-instance v0, Landroid/support/v4/app/NotificationCompat$Action;
 
     check-cast p5, [Landroid/support/v4/app/RemoteInput;
 
-    .end local p5    # "remoteInputs":[Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;
     move-object v5, p5
 
     check-cast v5, [Landroid/support/v4/app/RemoteInput;
@@ -67,8 +57,6 @@
 .method public bridge synthetic build(ILjava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;)Landroid/support/v4/app/NotificationCompatBase$Action;
     .locals 1
 
-    .prologue
-    .line 2169
     invoke-virtual/range {p0 .. p5}, Landroid/support/v4/app/NotificationCompat$Action$1;->build(ILjava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;)Landroid/support/v4/app/NotificationCompat$Action;
 
     move-result-object v0
@@ -78,10 +66,7 @@
 
 .method public newArray(I)[Landroid/support/v4/app/NotificationCompat$Action;
     .locals 1
-    .param p1, "length"    # I
 
-    .prologue
-    .line 2180
     new-array v0, p1, [Landroid/support/v4/app/NotificationCompat$Action;
 
     return-object v0
@@ -90,8 +75,6 @@
 .method public bridge synthetic newArray(I)[Landroid/support/v4/app/NotificationCompatBase$Action;
     .locals 1
 
-    .prologue
-    .line 2169
     invoke-virtual {p0, p1}, Landroid/support/v4/app/NotificationCompat$Action$1;->newArray(I)[Landroid/support/v4/app/NotificationCompat$Action;
 
     move-result-object v0

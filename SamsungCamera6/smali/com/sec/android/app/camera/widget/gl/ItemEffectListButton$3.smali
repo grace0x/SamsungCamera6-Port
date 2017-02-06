@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/widget/gl/ItemEffectListButton;)V
     .locals 0
 
-    .prologue
-    .line 305
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/ItemEffectListButton$3;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemEffectListButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,20 +36,15 @@
 # virtual methods
 .method public onTouch(Lcom/samsung/android/glview/GLView;Landroid/view/MotionEvent;)Z
     .locals 3
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "event"    # Landroid/view/MotionEvent;
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 308
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v1
 
     packed-switch v1, :pswitch_data_0
 
-    .line 318
     :goto_0
     :pswitch_0
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/ItemEffectListButton$3;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemEffectListButton;
@@ -63,7 +56,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 319
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ItemEffectListButton$3;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemEffectListButton;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/ItemEffectListButton;->mTouchListener:Lcom/samsung/android/glview/GLView$TouchListener;
@@ -77,11 +69,9 @@
 
     move-result v0
 
-    .line 321
     :cond_0
     return v0
 
-    .line 310
     :pswitch_1
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/ItemEffectListButton$3;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemEffectListButton;
 
@@ -94,7 +84,6 @@
 
     goto :goto_0
 
-    .line 314
     :pswitch_2
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/ItemEffectListButton$3;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemEffectListButton;
 
@@ -109,7 +98,6 @@
 
     goto :goto_0
 
-    .line 308
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

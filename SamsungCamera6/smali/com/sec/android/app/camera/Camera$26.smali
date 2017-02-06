@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/Camera;)V
     .locals 0
 
-    .prologue
-    .line 7210
     iput-object p1, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,7 +37,6 @@
 .method public run()V
     .locals 11
 
-    .prologue
     const/4 v10, 0x0
 
     const/4 v7, 0x5
@@ -48,12 +45,10 @@
 
     const/4 v8, 0x0
 
-    .line 7214
     const-string v2, "Load Camera Sound"
 
     invoke-static {v2}, Lcom/sec/android/app/TraceWrapper;->traceBegin(Ljava/lang/String;)V
 
-    .line 7216
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mIsDestroying:Z
@@ -63,24 +58,20 @@
 
     if-eqz v2, :cond_0
 
-    .line 7217
     const-string v2, "Camera6"
 
     const-string v3, "Don\'t load Camera Sound - camera is destroying"
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7218
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # setter for: Lcom/sec/android/app/camera/Camera;->mCameraSoundLoadingThread:Ljava/lang/Thread;
     invoke-static {v2, v10}, Lcom/sec/android/app/camera/Camera;->access$602(Lcom/sec/android/app/camera/Camera;Ljava/lang/Thread;)Ljava/lang/Thread;
 
-    .line 7255
     :goto_0
     return-void
 
-    .line 7221
     :cond_0
     const-string v2, "Camera6"
 
@@ -88,7 +79,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7222
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mCameraSoundPoolId:[I
@@ -117,7 +107,6 @@
 
     aput v3, v2, v9
 
-    .line 7223
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mCameraSoundPoolId:[I
@@ -148,7 +137,6 @@
 
     aput v4, v2, v3
 
-    .line 7224
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mCameraSoundPoolId:[I
@@ -179,7 +167,6 @@
 
     aput v4, v2, v3
 
-    .line 7225
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mCameraSoundPoolId:[I
@@ -210,12 +197,10 @@
 
     aput v4, v2, v3
 
-    .line 7226
     sget-boolean v2, Lcom/sec/android/app/camera/feature/Feature;->SHOT_MORE_PROCESSING_SOUND_LOW_QUALITY:Z
 
     if-eqz v2, :cond_2
 
-    .line 7227
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mCameraSoundPoolId:[I
@@ -244,7 +229,6 @@
 
     aput v3, v2, v7
 
-    .line 7231
     :goto_1
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
@@ -276,7 +260,6 @@
 
     aput v4, v2, v3
 
-    .line 7232
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mCameraSoundPoolId:[I
@@ -307,7 +290,6 @@
 
     aput v4, v2, v3
 
-    .line 7233
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mCameraSoundPoolId:[I
@@ -338,7 +320,6 @@
 
     aput v4, v2, v3
 
-    .line 7234
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
@@ -352,7 +333,6 @@
 
     if-nez v2, :cond_1
 
-    .line 7235
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mCameraSoundPoolId:[I
@@ -383,7 +363,6 @@
 
     aput v4, v2, v3
 
-    .line 7236
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mCameraSoundPoolId:[I
@@ -414,7 +393,6 @@
 
     aput v4, v2, v3
 
-    .line 7238
     :cond_1
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
@@ -446,7 +424,6 @@
 
     aput v4, v2, v3
 
-    .line 7239
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mCameraSoundPoolId:[I
@@ -477,7 +454,6 @@
 
     aput v4, v2, v3
 
-    .line 7240
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mCameraSoundPoolId:[I
@@ -508,7 +484,6 @@
 
     aput v4, v2, v3
 
-    .line 7242
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mEngine:Lcom/sec/android/app/camera/interfaces/Engine;
@@ -520,8 +495,6 @@
 
     move-result-object v0
 
-    .line 7243
-    .local v0, "burstCaptureFPSRange":[I
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mCameraSoundPoolId:[I
@@ -561,7 +534,6 @@
 
     aput v4, v2, v3
 
-    .line 7244
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mCameraSoundPoolId:[I
@@ -601,10 +573,8 @@
 
     aput v4, v2, v3
 
-    .line 7246
     const/4 v1, 0x0
 
-    .local v1, "i":I
     :goto_2
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
@@ -617,7 +587,6 @@
 
     if-ge v1, v2, :cond_3
 
-    .line 7247
     const-string v2, "Camera6"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -659,14 +628,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7246
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 7229
-    .end local v0    # "burstCaptureFPSRange":[I
-    .end local v1    # "i":I
     :cond_2
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
@@ -698,9 +663,6 @@
 
     goto/16 :goto_1
 
-    .line 7250
-    .restart local v0    # "burstCaptureFPSRange":[I
-    .restart local v1    # "i":I
     :cond_3
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
@@ -730,13 +692,11 @@
 
     aput v3, v2, v8
 
-    .line 7252
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$26;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # setter for: Lcom/sec/android/app/camera/Camera;->mCameraSoundLoadingThread:Ljava/lang/Thread;
     invoke-static {v2, v10}, Lcom/sec/android/app/camera/Camera;->access$602(Lcom/sec/android/app/camera/Camera;Ljava/lang/Thread;)Ljava/lang/Thread;
 
-    .line 7254
     invoke-static {}, Lcom/sec/android/app/TraceWrapper;->traceEnd()V
 
     goto/16 :goto_0

@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/BaseMenu;)V
     .locals 0
 
-    .prologue
-    .line 176
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/BaseMenu$1;->this$0:Lcom/sec/android/app/camera/menu/BaseMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,15 +36,11 @@
 # virtual methods
 .method public onClick(Lcom/samsung/android/glview/GLView;)Z
     .locals 4
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
 
-    .prologue
     const/4 v3, 0x1
 
-    .line 179
     invoke-virtual {p1, v3}, Lcom/samsung/android/glview/GLView;->setDraggable(Z)V
 
-    .line 180
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/BaseMenu$1;->this$0:Lcom/sec/android/app/camera/menu/BaseMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/BaseMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -57,6 +51,5 @@
 
     invoke-interface {v0, v1, v2}, Lcom/sec/android/app/camera/interfaces/CameraContext;->onKeyUp(ILandroid/view/KeyEvent;)Z
 
-    .line 181
     return v3
 .end method

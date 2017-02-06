@@ -25,8 +25,6 @@
 .method private constructor <init>(Lcom/sec/android/app/camera/menu/EffectListMenu;)V
     .locals 0
 
-    .prologue
-    .line 346
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/EffectListMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectListMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,11 +34,7 @@
 
 .method synthetic constructor <init>(Lcom/sec/android/app/camera/menu/EffectListMenu;Lcom/sec/android/app/camera/menu/EffectListMenu$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/sec/android/app/camera/menu/EffectListMenu;
-    .param p2, "x1"    # Lcom/sec/android/app/camera/menu/EffectListMenu$1;
 
-    .prologue
-    .line 346
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/menu/EffectListMenu$MenuAdapter;-><init>(Lcom/sec/android/app/camera/menu/EffectListMenu;)V
 
     return-void
@@ -51,8 +45,6 @@
 .method public getCount()I
     .locals 1
 
-    .prologue
-    .line 349
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectListMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/EffectListMenu;->mResource:Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;
@@ -69,16 +61,11 @@
 
 .method public getView(ILcom/samsung/android/glview/GLView;)Lcom/samsung/android/glview/GLView;
     .locals 8
-    .param p1, "position"    # I
-    .param p2, "convertView"    # Lcom/samsung/android/glview/GLView;
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 354
     if-nez p2, :cond_2
 
-    .line 355
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/EffectListMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/EffectListMenu;->mResource:Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;
@@ -90,8 +77,6 @@
 
     move-result-object v6
 
-    .line 356
-    .local v6, "itemData":Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/EffectListMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/EffectListMenu;->mItemList:Landroid/util/SparseArray;
@@ -109,11 +94,8 @@
 
     check-cast v0, Lcom/sec/android/app/camera/widget/gl/EffectListItem;
 
-    .line 358
-    .local v0, "item":Lcom/sec/android/app/camera/widget/gl/EffectListItem;
     if-nez v0, :cond_0
 
-    .line 359
     invoke-virtual {v6}, Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;->getCommandId()I
 
     move-result v1
@@ -130,14 +112,10 @@
 
     move-result-object v7
 
-    .line 360
-    .local v7, "command":Lcom/sec/android/app/camera/command/MenuCommand;
     if-eqz v7, :cond_0
 
-    .line 361
     new-instance v0, Lcom/sec/android/app/camera/widget/gl/EffectListItem;
 
-    .end local v0    # "item":Lcom/sec/android/app/camera/widget/gl/EffectListItem;
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/EffectListMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectListMenu;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/menu/EffectListMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -173,8 +151,6 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/sec/android/app/camera/widget/gl/EffectListItem;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;FFFFLcom/sec/android/app/camera/resourcedata/MenuResourceBundle;Lcom/sec/android/app/camera/command/MenuCommand;)V
 
-    .line 362
-    .restart local v0    # "item":Lcom/sec/android/app/camera/widget/gl/EffectListItem;
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/EffectListMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/EffectListMenu;->mMute:Z
@@ -184,7 +160,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/widget/gl/EffectListItem;->setMute(Z)V
 
-    .line 363
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/EffectListMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/EffectListMenu;->mList:Lcom/samsung/android/glview/GLList;
@@ -194,17 +169,14 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/widget/gl/EffectListItem;->setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V
 
-    .line 364
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/EffectListMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectListMenu;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/widget/gl/EffectListItem;->setClickListener(Lcom/samsung/android/glview/GLView$ClickListener;)V
 
-    .line 365
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/widget/gl/EffectListItem;->setTag(I)V
 
-    .line 366
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/EffectListMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/EffectListMenu;->mItemList:Landroid/util/SparseArray;
@@ -218,17 +190,10 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 371
-    .end local v0    # "item":Lcom/sec/android/app/camera/widget/gl/EffectListItem;
-    .end local v6    # "itemData":Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
-    .end local v7    # "command":Lcom/sec/android/app/camera/command/MenuCommand;
     :cond_0
     :goto_1
     return-object v0
 
-    .line 361
-    .restart local v6    # "itemData":Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
-    .restart local v7    # "command":Lcom/sec/android/app/camera/command/MenuCommand;
     :cond_1
     iget-object v3, p0, Lcom/sec/android/app/camera/menu/EffectListMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectListMenu;
 
@@ -250,19 +215,14 @@
 
     goto :goto_0
 
-    .end local v6    # "itemData":Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
-    .end local v7    # "command":Lcom/sec/android/app/camera/command/MenuCommand;
     :cond_2
     move-object v0, p2
 
-    .line 371
     goto :goto_1
 .end method
 
 .method public reset()V
     .locals 0
 
-    .prologue
-    .line 377
     return-void
 .end method

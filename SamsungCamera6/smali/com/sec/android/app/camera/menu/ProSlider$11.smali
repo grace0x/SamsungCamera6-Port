@@ -29,8 +29,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/ProSlider;I[I)V
     .locals 0
 
-    .prologue
-    .line 793
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ProSlider$11;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     iput p2, p0, Lcom/sec/android/app/camera/menu/ProSlider$11;->val$index:I
@@ -46,25 +44,19 @@
 # virtual methods
 .method public onTouch(Lcom/samsung/android/glview/GLView;Landroid/view/MotionEvent;)Z
     .locals 4
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "event"    # Landroid/view/MotionEvent;
 
-    .prologue
     const/4 v3, 0x1
 
-    .line 796
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     if-ne v0, v3, :cond_2
 
-    .line 797
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$11;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/ProSlider;->restartSliderMenuTimer()V
 
-    .line 798
     iget v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$11;->val$index:I
 
     const/4 v1, 0x4
@@ -80,12 +72,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 809
     :cond_0
     :goto_0
     return v3
 
-    .line 801
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$11;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
@@ -102,14 +92,12 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 802
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$11;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/ProSlider;->mProSliderValueSelectListener:Lcom/sec/android/app/camera/menu/ProSlider$ProSliderValueSelectListener;
 
     if-eqz v0, :cond_0
 
-    .line 803
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$11;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/ProSlider;->mProSliderValueSelectListener:Lcom/sec/android/app/camera/menu/ProSlider$ProSliderValueSelectListener;
@@ -124,7 +112,6 @@
 
     goto :goto_0
 
-    .line 807
     :cond_2
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$11;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 

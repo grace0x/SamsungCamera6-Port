@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/sec/android/app/camera/widget/gl/StickerView;Landroid/os/Looper;)V
     .locals 0
-    .param p2, "x0"    # Landroid/os/Looper;
 
-    .prologue
-    .line 79
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$1;->this$0:Lcom/sec/android/app/camera/widget/gl/StickerView;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -36,20 +33,15 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 6
-    .param p1, "msg"    # Landroid/os/Message;
 
-    .prologue
-    .line 82
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 106
     :cond_0
     :goto_0
     return-void
 
-    .line 86
     :pswitch_0
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$1;->this$0:Lcom/sec/android/app/camera/widget/gl/StickerView;
 
@@ -59,7 +51,6 @@
 
     goto :goto_0
 
-    .line 91
     :pswitch_1
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$1;->this$0:Lcom/sec/android/app/camera/widget/gl/StickerView;
 
@@ -69,11 +60,9 @@
 
     goto :goto_0
 
-    .line 94
     :pswitch_2
     const/4 v0, 0x0
 
-    .local v0, "i":I
     :goto_1
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$1;->this$0:Lcom/sec/android/app/camera/widget/gl/StickerView;
 
@@ -83,7 +72,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 95
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$1;->this$0:Lcom/sec/android/app/camera/widget/gl/StickerView;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/widget/gl/StickerView;->mDynamicInfoText:[Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;
@@ -107,7 +95,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 96
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$1;->this$0:Lcom/sec/android/app/camera/widget/gl/StickerView;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/widget/gl/StickerView;->mDynamicInfoText:[Lcom/sec/android/app/camera/widget/gl/StickerView$DynamicInfoText;
@@ -126,7 +113,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/glview/GLText;->setText(Ljava/lang/String;)V
 
-    .line 97
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$1;->this$0:Lcom/sec/android/app/camera/widget/gl/StickerView;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/StickerView;->mHandler:Landroid/os/Handler;
@@ -136,7 +122,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 98
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/StickerView$1;->this$0:Lcom/sec/android/app/camera/widget/gl/StickerView;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/StickerView;->mHandler:Landroid/os/Handler;
@@ -150,13 +135,11 @@
 
     invoke-virtual {v1, v2, v4, v5}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 94
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 82
     nop
 
     :pswitch_data_0

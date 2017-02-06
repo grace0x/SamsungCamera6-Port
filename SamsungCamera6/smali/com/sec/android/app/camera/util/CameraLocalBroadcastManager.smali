@@ -49,8 +49,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -58,43 +56,30 @@
 
 .method public static register(Landroid/content/Context;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
     .locals 1
-    .param p0, "context"    # Landroid/content/Context;
-    .param p1, "receiver"    # Landroid/content/BroadcastReceiver;
-    .param p2, "intentFilter"    # Landroid/content/IntentFilter;
 
-    .prologue
-    .line 59
     invoke-static {p0}, Landroid/support/v4/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
 
     move-result-object v0
 
     invoke-virtual {v0, p1, p2}, Landroid/support/v4/content/LocalBroadcastManager;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
 
-    .line 60
     return-void
 .end method
 
 .method public static send(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
-    .param p0, "context"    # Landroid/content/Context;
-    .param p1, "intent"    # Landroid/content/Intent;
 
-    .prologue
-    .line 63
     if-nez p1, :cond_0
 
-    .line 64
     const-string v0, "CameraLocalBCManager"
 
     const-string v1, "intent is null"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     :goto_0
     return-void
 
-    .line 68
     :cond_0
     const-string v0, "CameraLocalBCManager"
 
@@ -122,7 +107,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 69
     invoke-static {p0}, Landroid/support/v4/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
 
     move-result-object v0
@@ -134,18 +118,13 @@
 
 .method public static unregister(Landroid/content/Context;Landroid/content/BroadcastReceiver;)V
     .locals 1
-    .param p0, "context"    # Landroid/content/Context;
-    .param p1, "receiver"    # Landroid/content/BroadcastReceiver;
 
-    .prologue
-    .line 73
     invoke-static {p0}, Landroid/support/v4/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Landroid/support/v4/content/LocalBroadcastManager;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 74
     return-void
 .end method
 
@@ -154,14 +133,11 @@
 .method protected finalize()V
     .locals 2
 
-    .prologue
-    .line 78
     const-string v0, "CameraLocalBCManager"
 
     const-string v1, "finalize"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
     return-void
 .end method

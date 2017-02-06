@@ -22,8 +22,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/shootingmode/RecordingController;)V
     .locals 0
 
-    .prologue
-    .line 119
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,21 +33,15 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 6
-    .param p1, "context"    # Landroid/content/Context;
-    .param p2, "intent"    # Landroid/content/Intent;
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 122
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 123
-    .local v0, "action":Ljava/lang/String;
     const-string v1, "RecordingController"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -72,7 +64,6 @@
 
     invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     const/4 v1, -0x1
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -85,12 +76,10 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 195
     :cond_1
     :goto_1
     return-void
 
-    .line 125
     :sswitch_0
     const-string v4, "camera.action.AUDIOFOCUS_LOSS"
 
@@ -260,7 +249,6 @@
 
     goto/16 :goto_0
 
-    .line 127
     :pswitch_0
     invoke-static {p1}, Lcom/sec/android/app/camera/util/CallState;->isVTCallOngoing(Landroid/content/Context;)Z
 
@@ -268,14 +256,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 128
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
     invoke-virtual {v1, v3}, Lcom/sec/android/app/camera/shootingmode/RecordingController;->onStopRecordingRequested(Z)V
 
     goto/16 :goto_1
 
-    .line 132
     :pswitch_1
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
@@ -283,7 +269,6 @@
 
     goto/16 :goto_1
 
-    .line 135
     :pswitch_2
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
@@ -295,13 +280,11 @@
 
     if-eqz v1, :cond_2
 
-    .line 136
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
     # setter for: Lcom/sec/android/app/camera/shootingmode/RecordingController;->mIsRecordingRestrictedByOverHeat:Z
     invoke-static {v1, v3}, Lcom/sec/android/app/camera/shootingmode/RecordingController;->access$002(Lcom/sec/android/app/camera/shootingmode/RecordingController;Z)Z
 
-    .line 137
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
     # invokes: Lcom/sec/android/app/camera/shootingmode/RecordingController;->restrictRecording(Z)V
@@ -309,7 +292,6 @@
 
     goto/16 :goto_1
 
-    .line 138
     :cond_2
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
@@ -320,13 +302,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 139
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
     # setter for: Lcom/sec/android/app/camera/shootingmode/RecordingController;->mIsRecordingRestrictedByOverHeat:Z
     invoke-static {v1, v2}, Lcom/sec/android/app/camera/shootingmode/RecordingController;->access$002(Lcom/sec/android/app/camera/shootingmode/RecordingController;Z)Z
 
-    .line 140
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
     # invokes: Lcom/sec/android/app/camera/shootingmode/RecordingController;->restrictRecording(Z)V
@@ -334,7 +314,6 @@
 
     goto/16 :goto_1
 
-    .line 144
     :pswitch_3
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
@@ -345,13 +324,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 145
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
     # setter for: Lcom/sec/android/app/camera/shootingmode/RecordingController;->mIsRecordingRestrictedByOverHeat:Z
     invoke-static {v1, v2}, Lcom/sec/android/app/camera/shootingmode/RecordingController;->access$002(Lcom/sec/android/app/camera/shootingmode/RecordingController;Z)Z
 
-    .line 146
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
     # invokes: Lcom/sec/android/app/camera/shootingmode/RecordingController;->restrictRecording(Z)V
@@ -359,7 +336,6 @@
 
     goto/16 :goto_1
 
-    .line 150
     :pswitch_4
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
@@ -367,7 +343,6 @@
 
     goto/16 :goto_1
 
-    .line 153
     :pswitch_5
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
@@ -379,14 +354,12 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 154
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/shootingmode/RecordingController;->cancelRecording()V
 
     goto/16 :goto_1
 
-    .line 158
     :pswitch_6
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
@@ -398,7 +371,6 @@
 
     if-eq v1, v3, :cond_1
 
-    .line 159
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/shootingmode/RecordingController;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
@@ -409,7 +381,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 160
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/shootingmode/RecordingController;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -424,14 +395,12 @@
 
     goto/16 :goto_1
 
-    .line 165
     :pswitch_7
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
     # setter for: Lcom/sec/android/app/camera/shootingmode/RecordingController;->mIsRecordingRestrictedByCallState:Z
     invoke-static {v1, v2}, Lcom/sec/android/app/camera/shootingmode/RecordingController;->access$202(Lcom/sec/android/app/camera/shootingmode/RecordingController;Z)Z
 
-    .line 166
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
     # invokes: Lcom/sec/android/app/camera/shootingmode/RecordingController;->restrictRecording(Z)V
@@ -439,21 +408,18 @@
 
     goto/16 :goto_1
 
-    .line 169
     :pswitch_8
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
     # setter for: Lcom/sec/android/app/camera/shootingmode/RecordingController;->mIsRecordingRestrictedByCallState:Z
     invoke-static {v1, v3}, Lcom/sec/android/app/camera/shootingmode/RecordingController;->access$202(Lcom/sec/android/app/camera/shootingmode/RecordingController;Z)Z
 
-    .line 170
     invoke-static {p1}, Lcom/sec/android/app/camera/util/CallState;->isVTCallOngoing(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 171
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
     # invokes: Lcom/sec/android/app/camera/shootingmode/RecordingController;->restrictRecording(ZZ)V
@@ -461,7 +427,6 @@
 
     goto/16 :goto_1
 
-    .line 173
     :cond_3
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
@@ -470,7 +435,6 @@
 
     goto/16 :goto_1
 
-    .line 177
     :pswitch_9
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
@@ -482,28 +446,24 @@
 
     if-eq v1, v4, :cond_1
 
-    .line 178
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/shootingmode/RecordingController;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
 
     invoke-interface {v1, v2}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->setCoverCamera(Z)V
 
-    .line 179
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/shootingmode/RecordingController;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v1, v3}, Lcom/sec/android/app/camera/interfaces/CameraContext;->setCoverRecordingState(Z)V
 
-    .line 180
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
     invoke-virtual {v1, v2}, Lcom/sec/android/app/camera/shootingmode/RecordingController;->onStopRecordingRequested(Z)V
 
     goto/16 :goto_1
 
-    .line 184
     :pswitch_a
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
@@ -512,7 +472,6 @@
 
     goto/16 :goto_1
 
-    .line 187
     :pswitch_b
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
@@ -523,7 +482,6 @@
 
     goto/16 :goto_1
 
-    .line 190
     :pswitch_c
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/RecordingController$1;->this$0:Lcom/sec/android/app/camera/shootingmode/RecordingController;
 
@@ -534,7 +492,6 @@
 
     goto/16 :goto_1
 
-    .line 125
     nop
 
     :sswitch_data_0

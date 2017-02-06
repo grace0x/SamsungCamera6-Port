@@ -7,20 +7,14 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     return-void
 .end method
 
 .method public static isAudioRecordRestricted(Landroid/content/Context;)Z
     .locals 2
-    .param p0, "context"    # Landroid/content/Context;
 
-    .prologue
-    .line 41
     const-string v0, "content://com.sec.knox.provider/RestrictionPolicy1"
 
     const-string v1, "isAudioRecordAllowed"
@@ -34,10 +28,7 @@
 
 .method public static isCameraRestricted(Landroid/content/Context;)Z
     .locals 2
-    .param p0, "context"    # Landroid/content/Context;
 
-    .prologue
-    .line 51
     const-string v0, "content://com.sec.knox.provider/RestrictionPolicy1"
 
     const-string v1, "isCameraEnabled"
@@ -51,10 +42,7 @@
 
 .method public static isMicroPhoneRestricted(Landroid/content/Context;)Z
     .locals 2
-    .param p0, "context"    # Landroid/content/Context;
 
-    .prologue
-    .line 61
     const-string v0, "content://com.sec.knox.provider/RestrictionPolicy2"
 
     const-string v1, "isMicrophoneEnabled"
@@ -68,27 +56,19 @@
 
 .method private static isRestrictedByPolicy(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 9
-    .param p0, "context"    # Landroid/content/Context;
-    .param p1, "uriString"    # Ljava/lang/String;
-    .param p2, "policyString"    # Ljava/lang/String;
 
-    .prologue
     const/4 v2, 0x0
 
     const/4 v7, 0x1
 
     const/4 v8, 0x0
 
-    .line 93
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 95
-    .local v1, "uri":Landroid/net/Uri;
     if-eqz p0, :cond_1
 
-    .line 96
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -107,15 +87,11 @@
 
     move-result-object v6
 
-    .line 97
-    .local v6, "cr":Landroid/database/Cursor;
     if-eqz v6, :cond_1
 
-    .line 99
     :try_start_0
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 100
     invoke-interface {v6, p2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v0
@@ -134,30 +110,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 104
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     move v0, v7
 
-    .line 108
-    .end local v6    # "cr":Landroid/database/Cursor;
     :goto_0
     return v0
 
-    .line 104
-    .restart local v6    # "cr":Landroid/database/Cursor;
     :cond_0
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .end local v6    # "cr":Landroid/database/Cursor;
     :cond_1
     move v0, v8
 
-    .line 108
     goto :goto_0
 
-    .line 104
-    .restart local v6    # "cr":Landroid/database/Cursor;
     :catchall_0
     move-exception v0
 
@@ -168,10 +135,7 @@
 
 .method public static isSdCardWriteRestricted(Landroid/content/Context;)Z
     .locals 2
-    .param p0, "context"    # Landroid/content/Context;
 
-    .prologue
-    .line 71
     const-string v0, "content://com.sec.knox.provider/RestrictionPolicy4"
 
     const-string v1, "isSDCardWriteAllowed"
@@ -185,10 +149,7 @@
 
 .method public static isVideoRecordRestricted(Landroid/content/Context;)Z
     .locals 2
-    .param p0, "context"    # Landroid/content/Context;
 
-    .prologue
-    .line 81
     const-string v0, "content://com.sec.knox.provider/RestrictionPolicy4"
 
     const-string v1, "isVideoRecordAllowed"

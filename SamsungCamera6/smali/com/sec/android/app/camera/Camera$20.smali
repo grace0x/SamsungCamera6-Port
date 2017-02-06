@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/Camera;)V
     .locals 0
 
-    .prologue
-    .line 4339
     iput-object p1, p0, Lcom/sec/android/app/camera/Camera$20;->this$0:Lcom/sec/android/app/camera/Camera;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,21 +37,16 @@
 .method public run()V
     .locals 6
 
-    .prologue
-    .line 4342
     const-string v2, "Camera6"
 
     const-string v3, "updateLatestMedia : updateLatestMedia***start"
 
     invoke-static {v2, v3}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4343
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 4344
-    .local v0, "startTime":J
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$20;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mLatestMediaStateLock:Ljava/lang/Object;
@@ -63,7 +56,6 @@
 
     monitor-enter v3
 
-    .line 4345
     :try_start_0
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$20;->this$0:Lcom/sec/android/app/camera/Camera;
 
@@ -74,7 +66,6 @@
 
     if-nez v2, :cond_0
 
-    .line 4346
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$20;->this$0:Lcom/sec/android/app/camera/Camera;
 
     new-instance v4, Lcom/sec/android/app/camera/util/LatestMedia;
@@ -94,7 +85,6 @@
     # setter for: Lcom/sec/android/app/camera/Camera;->mLatestMedia:Lcom/sec/android/app/camera/util/LatestMedia;
     invoke-static {v2, v4}, Lcom/sec/android/app/camera/Camera;->access$1502(Lcom/sec/android/app/camera/Camera;Lcom/sec/android/app/camera/util/LatestMedia;)Lcom/sec/android/app/camera/util/LatestMedia;
 
-    .line 4348
     :cond_0
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$20;->this$0:Lcom/sec/android/app/camera/Camera;
 
@@ -105,7 +95,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 4349
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$20;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mEngine:Lcom/sec/android/app/camera/interfaces/Engine;
@@ -119,14 +108,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 4350
     const-string v2, "Camera6"
 
     const-string v4, "updateLatestMedia: Last shot is Recording"
 
     invoke-static {v2, v4}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4351
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$20;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mLatestMedia:Lcom/sec/android/app/camera/util/LatestMedia;
@@ -158,7 +145,6 @@
 
     invoke-virtual {v2, v4, v5}, Lcom/sec/android/app/camera/util/LatestMedia;->updateLatestVideo(ZZ)V
 
-    .line 4357
     :goto_0
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$20;->this$0:Lcom/sec/android/app/camera/Camera;
 
@@ -173,7 +159,6 @@
 
     if-nez v2, :cond_3
 
-    .line 4358
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$20;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mEngine:Lcom/sec/android/app/camera/interfaces/Engine;
@@ -194,7 +179,6 @@
 
     invoke-interface {v2, v4}, Lcom/sec/android/app/camera/interfaces/Engine;->setLastContentOrientation(I)V
 
-    .line 4362
     :goto_1
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$20;->this$0:Lcom/sec/android/app/camera/Camera;
 
@@ -216,13 +200,11 @@
 
     invoke-interface {v2, v4}, Lcom/sec/android/app/camera/interfaces/Engine;->setLastContentUri(Landroid/net/Uri;)V
 
-    .line 4364
     :cond_1
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4365
     const-string v2, "Camera6"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -257,10 +239,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4366
     return-void
 
-    .line 4353
     :cond_2
     :try_start_1
     const-string v2, "Camera6"
@@ -269,7 +249,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4354
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$20;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mLatestMedia:Lcom/sec/android/app/camera/util/LatestMedia;
@@ -303,7 +282,6 @@
 
     goto :goto_0
 
-    .line 4364
     :catchall_0
     move-exception v2
 
@@ -313,7 +291,6 @@
 
     throw v2
 
-    .line 4360
     :cond_3
     :try_start_2
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$20;->this$0:Lcom/sec/android/app/camera/Camera;

@@ -35,8 +35,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/VisualInteraction;Landroid/graphics/Bitmap;IIIZ)V
     .locals 0
 
-    .prologue
-    .line 850
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$5;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     iput-object p2, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$5;->val$bitmap:Landroid/graphics/Bitmap;
@@ -58,18 +56,13 @@
 # virtual methods
 .method public onAnimationEnd(Lcom/samsung/android/glview/GLView;Landroid/view/animation/Animation;)V
     .locals 2
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 853
     const-string v0, "Camera6VI"
 
     const-string v1, "mPreviewImage Image onAnimationEnd"
 
     invoke-static {v0, v1}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 855
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$5;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     # getter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mPreviewImage:Lcom/samsung/android/glview/GLImage;
@@ -79,7 +72,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 856
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$5;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     # getter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mMenuManager:Lcom/sec/android/app/camera/menu/MenuManagerImpl;
@@ -100,7 +92,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLViewGroup;->removeView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 857
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$5;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     # getter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mPreviewImage:Lcom/samsung/android/glview/GLImage;
@@ -110,7 +101,6 @@
 
     invoke-virtual {v0}, Lcom/samsung/android/glview/GLImage;->clear()V
 
-    .line 858
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$5;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     const/4 v1, 0x0
@@ -118,20 +108,15 @@
     # setter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mPreviewImage:Lcom/samsung/android/glview/GLImage;
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/menu/VisualInteraction;->access$702(Lcom/sec/android/app/camera/menu/VisualInteraction;Lcom/samsung/android/glview/GLImage;)Lcom/samsung/android/glview/GLImage;
 
-    .line 860
     :cond_0
     return-void
 .end method
 
 .method public onAnimationStart(Lcom/samsung/android/glview/GLView;Landroid/view/animation/Animation;)V
     .locals 8
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
     const/4 v7, 0x0
 
-    .line 865
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$5;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     # getter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -145,14 +130,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 866
     const-string v2, "Camera6VI"
 
     const-string v3, "Camera is pausing. Skip mPreviewImage onAnimationStart"
 
     invoke-static {v2, v3}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 867
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$5;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     # getter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mEngine:Lcom/sec/android/app/camera/interfaces/Engine;
@@ -162,12 +145,10 @@
 
     invoke-interface {v2}, Lcom/sec/android/app/camera/interfaces/Engine;->completeWaitAsync()V
 
-    .line 892
     :cond_0
     :goto_0
     return-void
 
-    .line 870
     :cond_1
     const-string v2, "Camera6VI"
 
@@ -175,7 +156,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 871
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$5;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     # getter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mBlurImage:Lcom/samsung/android/glview/GLImage;
@@ -189,7 +169,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 872
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$5;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     # getter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mBlurImage:Lcom/samsung/android/glview/GLImage;
@@ -199,7 +178,6 @@
 
     invoke-virtual {v2}, Lcom/samsung/android/glview/GLImage;->startAnimation()V
 
-    .line 873
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$5;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     # getter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mBlurImage:Lcom/samsung/android/glview/GLImage;
@@ -209,7 +187,6 @@
 
     invoke-virtual {v2, v7}, Lcom/samsung/android/glview/GLImage;->setVisibility(I)V
 
-    .line 874
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$5;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -218,7 +195,6 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/sec/android/app/camera/menu/VisualInteraction;->showBlackOverlay(FLcom/samsung/android/glview/GLViewGroup;)V
 
-    .line 876
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$5;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     # getter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mEngine:Lcom/sec/android/app/camera/interfaces/Engine;
@@ -228,7 +204,6 @@
 
     invoke-interface {v2}, Lcom/sec/android/app/camera/interfaces/Engine;->completeWaitAsync()V
 
-    .line 879
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$5;->val$bitmap:Landroid/graphics/Bitmap;
 
     iget v3, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$5;->val$blurImageWidth:I
@@ -255,8 +230,6 @@
 
     move-result-object v1
 
-    .line 880
-    .local v1, "scaledBitmap":Landroid/graphics/Bitmap;
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$5;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     # getter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -272,8 +245,6 @@
 
     move-result-object v0
 
-    .line 883
-    .local v0, "blurBitmap":Landroid/graphics/Bitmap;
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$5;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     # getter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mBlurImage:Lcom/samsung/android/glview/GLImage;
@@ -283,7 +254,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 884
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$5;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     # getter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mBlurImage:Lcom/samsung/android/glview/GLImage;
@@ -293,12 +263,10 @@
 
     invoke-virtual {v2, v0}, Lcom/samsung/android/glview/GLImage;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 885
     iget-boolean v2, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$5;->val$isFront:Z
 
     if-eqz v2, :cond_2
 
-    .line 886
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$5;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     # getter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mBlurImage:Lcom/samsung/android/glview/GLImage;
@@ -312,7 +280,6 @@
 
     goto :goto_0
 
-    .line 888
     :cond_2
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$5;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 

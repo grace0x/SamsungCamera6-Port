@@ -22,21 +22,13 @@
 # direct methods
 .method public constructor <init>(Lcom/samsung/android/glview/GLContext;FFFF)V
     .locals 4
-    .param p1, "glContext"    # Lcom/samsung/android/glview/GLContext;
-    .param p2, "left"    # F
-    .param p3, "top"    # F
-    .param p4, "width"    # F
-    .param p5, "height"    # F
 
-    .prologue
     const/high16 v2, 0x40000000    # 2.0f
 
     const/4 v3, 0x0
 
-    .line 43
     invoke-direct {p0, p1, v3, v3}, Lcom/samsung/android/glview/GLView;-><init>(Lcom/samsung/android/glview/GLContext;FF)V
 
-    .line 34
     const v0, 0x7f0c0044
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getColor(I)I
@@ -45,7 +37,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->TRAPEZOID_LINE_COLOR:I
 
-    .line 35
     const v0, 0x7f0c0045
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getColor(I)I
@@ -54,19 +45,16 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->TRAPEZOID_LINE_WARNING_COLOR:I
 
-    .line 36
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mPath:Landroid/graphics/Path;
 
-    .line 37
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoid:Lcom/samsung/android/glview/GLBitmapTexture;
 
-    .line 45
     invoke-static {}, Lcom/samsung/android/glview/GLContext;->getScreenWidthPixels()I
 
     move-result v0
@@ -85,35 +73,30 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->setSize(FF)V
 
-    .line 47
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mPaint:Landroid/graphics/Paint;
 
-    .line 48
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mPaint:Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 49
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 50
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->TRAPEZOID_LINE_COLOR:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 51
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mPaint:Landroid/graphics/Paint;
 
     const v1, 0x7f09026a
@@ -128,7 +111,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 53
     invoke-static {}, Lcom/samsung/android/glview/GLContext;->getScreenWidthPixels()I
 
     move-result v0
@@ -149,7 +131,6 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoidBitmap:Landroid/graphics/Bitmap;
 
-    .line 54
     new-instance v0, Landroid/graphics/Canvas;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoidBitmap:Landroid/graphics/Bitmap;
@@ -158,7 +139,6 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mCanvas:Landroid/graphics/Canvas;
 
-    .line 56
     new-instance v0, Lcom/samsung/android/glview/GLBitmapTexture;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoidBitmap:Landroid/graphics/Bitmap;
@@ -167,17 +147,14 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoid:Lcom/samsung/android/glview/GLBitmapTexture;
 
-    .line 57
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoid:Lcom/samsung/android/glview/GLBitmapTexture;
 
     if-eqz v0, :cond_0
 
-    .line 58
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoid:Lcom/samsung/android/glview/GLBitmapTexture;
 
     iput-object p0, v0, Lcom/samsung/android/glview/GLBitmapTexture;->mParent:Lcom/samsung/android/glview/GLView;
 
-    .line 59
     :cond_0
     return-void
 .end method
@@ -186,24 +163,18 @@
 # virtual methods
 .method public changeColor(Z)V
     .locals 2
-    .param p1, "isWarning"    # Z
 
-    .prologue
-    .line 62
     if-eqz p1, :cond_0
 
-    .line 63
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->TRAPEZOID_LINE_WARNING_COLOR:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 67
     :goto_0
     return-void
 
-    .line 65
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mPaint:Landroid/graphics/Paint;
 
@@ -217,71 +188,55 @@
 .method public clear()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 71
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoid:Lcom/samsung/android/glview/GLBitmapTexture;
 
     if-eqz v0, :cond_0
 
-    .line 72
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoid:Lcom/samsung/android/glview/GLBitmapTexture;
 
     invoke-virtual {v0}, Lcom/samsung/android/glview/GLBitmapTexture;->clear()V
 
-    .line 73
     iput-object v1, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoid:Lcom/samsung/android/glview/GLBitmapTexture;
 
-    .line 76
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoidBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_1
 
-    .line 77
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoidBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 78
     iput-object v1, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoidBitmap:Landroid/graphics/Bitmap;
 
-    .line 81
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mCanvas:Landroid/graphics/Canvas;
 
     if-eqz v0, :cond_2
 
-    .line 82
     iput-object v1, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mCanvas:Landroid/graphics/Canvas;
 
-    .line 84
     :cond_2
     invoke-super {p0}, Lcom/samsung/android/glview/GLView;->clear()V
 
-    .line 85
     return-void
 .end method
 
 .method public initSize()V
     .locals 0
 
-    .prologue
-    .line 89
     return-void
 .end method
 
 .method protected onDraw()V
     .locals 3
 
-    .prologue
-    .line 120
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoid:Lcom/samsung/android/glview/GLBitmapTexture;
 
     if-eqz v0, :cond_0
 
-    .line 121
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoid:Lcom/samsung/android/glview/GLBitmapTexture;
 
     invoke-virtual {p0}, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->getMatrix()[F
@@ -294,7 +249,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/glview/GLBitmapTexture;->draw([FLandroid/graphics/Rect;)V
 
-    .line 123
     :cond_0
     return-void
 .end method
@@ -302,21 +256,16 @@
 .method protected onLayoutUpdated()V
     .locals 1
 
-    .prologue
-    .line 127
     invoke-super {p0}, Lcom/samsung/android/glview/GLView;->onLayoutUpdated()V
 
-    .line 128
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoid:Lcom/samsung/android/glview/GLBitmapTexture;
 
     if-eqz v0, :cond_0
 
-    .line 129
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoid:Lcom/samsung/android/glview/GLBitmapTexture;
 
     invoke-virtual {v0}, Lcom/samsung/android/glview/GLBitmapTexture;->onLayoutUpdated()V
 
-    .line 131
     :cond_0
     return-void
 .end method
@@ -324,17 +273,12 @@
 .method protected onLoad()Z
     .locals 2
 
-    .prologue
-    .line 135
     const/4 v0, 0x1
 
-    .line 137
-    .local v0, "loaded":Z
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoid:Lcom/samsung/android/glview/GLBitmapTexture;
 
     if-eqz v1, :cond_0
 
-    .line 138
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoid:Lcom/samsung/android/glview/GLBitmapTexture;
 
     invoke-virtual {v1}, Lcom/samsung/android/glview/GLBitmapTexture;->load()Z
@@ -343,7 +287,6 @@
 
     and-int/2addr v0, v1
 
-    .line 140
     :cond_0
     return v0
 .end method
@@ -351,30 +294,21 @@
 .method protected onReset()V
     .locals 1
 
-    .prologue
-    .line 145
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoid:Lcom/samsung/android/glview/GLBitmapTexture;
 
     if-eqz v0, :cond_0
 
-    .line 146
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoid:Lcom/samsung/android/glview/GLBitmapTexture;
 
     invoke-virtual {v0}, Lcom/samsung/android/glview/GLBitmapTexture;->reset()V
 
-    .line 147
     :cond_0
     return-void
 .end method
 
 .method public declared-synchronized setRect(FF[F)V
     .locals 4
-    .param p1, "width"    # F
-    .param p2, "height"    # F
-    .param p3, "points"    # [F
 
-    .prologue
-    .line 93
     monitor-enter p0
 
     :try_start_0
@@ -384,12 +318,10 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Bitmap;->eraseColor(I)V
 
-    .line 94
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mPath:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
 
-    .line 95
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mPath:Landroid/graphics/Path;
 
     const/4 v1, 0x0
@@ -402,7 +334,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 96
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mPath:Landroid/graphics/Path;
 
     const/4 v1, 0x2
@@ -415,7 +346,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 97
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mPath:Landroid/graphics/Path;
 
     const/4 v1, 0x4
@@ -428,7 +358,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 98
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mPath:Landroid/graphics/Path;
 
     const/4 v1, 0x6
@@ -441,7 +370,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 99
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mPath:Landroid/graphics/Path;
 
     const/4 v1, 0x0
@@ -466,7 +394,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 100
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mCanvas:Landroid/graphics/Canvas;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mPath:Landroid/graphics/Path;
@@ -475,7 +402,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 102
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoid:Lcom/samsung/android/glview/GLBitmapTexture;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoidBitmap:Landroid/graphics/Bitmap;
@@ -486,12 +412,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 103
     monitor-exit p0
 
     return-void
 
-    .line 93
     :catchall_0
     move-exception v0
 
@@ -502,33 +426,23 @@
 
 .method public setSize(FF)V
     .locals 1
-    .param p1, "width"    # F
-    .param p2, "height"    # F
 
-    .prologue
-    .line 107
     invoke-super {p0, p1, p2}, Lcom/samsung/android/glview/GLView;->setSize(FF)V
 
-    .line 108
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoid:Lcom/samsung/android/glview/GLBitmapTexture;
 
     if-eqz v0, :cond_0
 
-    .line 109
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/Trapezoid;->mTrapezoid:Lcom/samsung/android/glview/GLBitmapTexture;
 
     invoke-virtual {v0, p1, p2}, Lcom/samsung/android/glview/GLBitmapTexture;->setSize(FF)V
 
-    .line 111
     :cond_0
     return-void
 .end method
 
 .method public setTint(I)V
     .locals 0
-    .param p1, "color"    # I
 
-    .prologue
-    .line 116
     return-void
 .end method

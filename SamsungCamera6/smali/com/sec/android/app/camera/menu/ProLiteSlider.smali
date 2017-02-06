@@ -154,8 +154,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 54
     sget-object v0, Lcom/sec/android/app/camera/feature/Feature;->CAMERA_MAX_ISO:Ljava/lang/String;
 
     const-string v1, "400"
@@ -181,21 +179,13 @@
 
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CameraContext;FFFFI)V
     .locals 9
-    .param p1, "cameraContext"    # Lcom/sec/android/app/camera/interfaces/CameraContext;
-    .param p2, "left"    # F
-    .param p3, "top"    # F
-    .param p4, "width"    # F
-    .param p5, "height"    # F
-    .param p6, "viewId"    # I
 
-    .prologue
     const v8, 0x7f0a0034
 
     const/16 v7, 0x96
 
     const v6, 0x3dcccccd    # 0.1f
 
-    .line 120
     invoke-interface {p1}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getGLContext()Lcom/samsung/android/glview/GLContext;
 
     move-result-object v1
@@ -212,21 +202,18 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/samsung/android/glview/GLViewGroup;-><init>(Lcom/samsung/android/glview/GLContext;FFFF)V
 
-    .line 59
     invoke-static {}, Lcom/samsung/android/glview/GLContext;->getScreenWidthPixels()I
 
     move-result v0
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->SCREEN_WIDTH:I
 
-    .line 60
     invoke-static {}, Lcom/samsung/android/glview/GLContext;->getScreenHeightPixels()I
 
     move-result v0
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->SCREEN_HEIGHT:I
 
-    .line 61
     const v0, 0x7f09017e
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -237,7 +224,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_ITEM_WIDTH:I
 
-    .line 62
     const v0, 0x7f09017a
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -248,7 +234,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_RIGHT_MARGIN:I
 
-    .line 63
     const v0, 0x7f090196
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -259,7 +244,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_SIDE_MARGIN:I
 
-    .line 64
     iget v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->SCREEN_WIDTH:I
 
     iget v1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_RIGHT_MARGIN:I
@@ -272,7 +256,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_GROUP_WIDTH:I
 
-    .line 65
     const v0, 0x7f09018a
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -283,7 +266,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_WIDTH:I
 
-    .line 66
     const v0, 0x7f09018e
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -294,7 +276,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_INDICATOR_SIZE:I
 
-    .line 67
     const v0, 0x7f090184
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -305,7 +286,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_INDICATOR_RIGHT_MARGIN:I
 
-    .line 68
     iget v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_GROUP_WIDTH:I
 
     iget v1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_INDICATOR_RIGHT_MARGIN:I
@@ -318,7 +298,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_INDICATOR_POS_X:I
 
-    .line 69
     const v0, 0x7f090185
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -329,7 +308,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_INDICATOR_SIDE_MARGIN:I
 
-    .line 70
     const v0, 0x7f09018b
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -340,7 +318,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDEBAR_WIDTH:I
 
-    .line 71
     iget v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->SCREEN_HEIGHT:I
 
     iget v1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_SIDE_MARGIN:I
@@ -351,7 +328,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDEBAR_HEIGHT:I
 
-    .line 72
     const v0, 0x7f090199
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -362,7 +338,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDEBAR_TOUCH_AREA_WIDTH:I
 
-    .line 73
     const v0, 0x7f090198
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -373,7 +348,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDEBAR_TOUCH_AREA_HEIGHT:I
 
-    .line 74
     const v0, 0x7f090193
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -384,7 +358,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_SLIDER_RIGHT_MARGIN:I
 
-    .line 75
     iget v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_GROUP_WIDTH:I
 
     iget v1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_SLIDER_RIGHT_MARGIN:I
@@ -397,7 +370,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_SLIDER_POS_X:I
 
-    .line 76
     const v0, 0x7f090181
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -408,7 +380,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_RECORDING_RIGHT_MARGIN:I
 
-    .line 77
     iget v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_RECORDING_RIGHT_MARGIN:I
 
     iget v1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_RIGHT_MARGIN:I
@@ -417,7 +388,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_RECORDING_SLIDER_OFFSET_X:I
 
-    .line 78
     const v0, 0x7f09019c
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -428,7 +398,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_STEP_BUTTON_RIGHT_MARGIN:I
 
-    .line 79
     const v0, 0x7f090197
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -439,7 +408,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_STEP_BUTTON_WIDTH:I
 
-    .line 80
     iget v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_INDICATOR_POS_X:I
 
     iget v1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_STEP_BUTTON_RIGHT_MARGIN:I
@@ -452,7 +420,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_STEP_BUTTON_POS_X:I
 
-    .line 81
     const v0, 0x7f090389
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -463,7 +430,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_STEP_BUTTON_EXPAND_AREA:I
 
-    .line 82
     const v0, 0x7f09019b
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -474,7 +440,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_VALUE_TEXT_WIDTH:I
 
-    .line 83
     const v0, 0x7f09019a
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -485,7 +450,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_VALUE_TEXT_MARGIN:I
 
-    .line 84
     const v0, 0x7f090188
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -496,7 +460,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_RECORDING_VALUE_TEXT_OFFSET_X:I
 
-    .line 85
     sget v0, Lcom/sec/android/app/camera/feature/Feature;->EXPOSURE_COMPENSATION_STEP:F
 
     invoke-static {v0, v6}, Lcom/sec/android/app/camera/util/Util;->floatEquals(FF)Z
@@ -514,7 +477,6 @@
     :goto_0
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PROEXPOSURE_VALUE_OFFSET:I
 
-    .line 86
     sget v0, Lcom/sec/android/app/camera/feature/Feature;->EXPOSURE_COMPENSATION_STEP:F
 
     invoke-static {v0, v6}, Lcom/sec/android/app/camera/util/Util;->floatEquals(FF)Z
@@ -532,7 +494,6 @@
     :goto_1
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PROEXPOSURE_NUM_OF_STEP:I
 
-    .line 87
     sget-object v0, Lcom/sec/android/app/camera/feature/Feature;->CAMERA_MAX_ISO:Ljava/lang/String;
 
     const-string v1, "400"
@@ -552,7 +513,6 @@
     :goto_2
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->ISO_NUM_OF_STEP:I
 
-    .line 88
     const v0, 0x7f0a0037
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getInteger(I)I
@@ -561,7 +521,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->WB_NUM_OF_STEP:I
 
-    .line 89
     const v0, 0x7f0902e7
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -572,7 +531,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->INDICATOR_TEXT_SIZE:I
 
-    .line 90
     const v0, 0x7f0c000e
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getInteger(I)I
@@ -581,7 +539,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->INDICATOR_TEXT_COLOR:I
 
-    .line 91
     const v0, 0x7f0a0017
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getInteger(I)I
@@ -590,7 +547,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->INDICATOR_TEXT_STROKE_WIDTH:I
 
-    .line 92
     const v0, 0x7f0c0028
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getColor(I)I
@@ -599,7 +555,6 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->INDICATOR_TEXT_STROKE_COLOR:I
 
-    .line 93
     const v0, 0x7f0902e8
 
     invoke-static {v0}, Lcom/samsung/android/glview/GLContext;->getDimension(I)F
@@ -610,14 +565,12 @@
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_VALUE_TEXT_SIZE:I
 
-    .line 109
     new-instance v0, Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderHandler;
 
     invoke-direct {v0, p0}, Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderHandler;-><init>(Lcom/sec/android/app/camera/menu/ProLiteSlider;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderHandler:Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderHandler;
 
-    .line 110
     new-instance v0, Lcom/sec/android/app/camera/menu/ProLiteSlider$StepButtonListener;
 
     const/4 v1, 0x0
@@ -626,26 +579,20 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepButtonListener:Lcom/sec/android/app/camera/menu/ProLiteSlider$StepButtonListener;
 
-    .line 112
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mSliderId:I
 
-    .line 114
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mIsISOAutoDimmed:Z
 
-    .line 121
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
-    .line 122
     iput p6, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mSliderId:I
 
-    .line 124
     invoke-direct {p0}, Lcom/sec/android/app/camera/menu/ProLiteSlider;->initProSlider()V
 
-    .line 126
     new-instance v0, Landroid/view/animation/interpolator/SineEaseInOut;
 
     invoke-direct {v0}, Landroid/view/animation/interpolator/SineEaseInOut;-><init>()V
@@ -656,7 +603,6 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mShowAnimation:Landroid/view/animation/Animation;
 
-    .line 127
     new-instance v0, Landroid/view/animation/interpolator/SineEaseInOut;
 
     invoke-direct {v0}, Landroid/view/animation/interpolator/SineEaseInOut;-><init>()V
@@ -667,10 +613,8 @@
 
     iput-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mHideAnimation:Landroid/view/animation/Animation;
 
-    .line 128
     return-void
 
-    .line 85
     :cond_0
     const v0, 0x7f0a0036
 
@@ -680,7 +624,6 @@
 
     goto/16 :goto_0
 
-    .line 86
     :cond_1
     const v0, 0x7f0a0035
 
@@ -690,7 +633,6 @@
 
     goto/16 :goto_1
 
-    .line 87
     :cond_2
     invoke-static {v8}, Lcom/samsung/android/glview/GLContext;->getInteger(I)I
 
@@ -701,10 +643,7 @@
 
 .method static synthetic access$100(Lcom/sec/android/app/camera/menu/ProLiteSlider;)I
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
-    .prologue
-    .line 47
     iget v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValue:I
 
     return v0
@@ -712,11 +651,7 @@
 
 .method static synthetic access$102(Lcom/sec/android/app/camera/menu/ProLiteSlider;I)I
     .locals 0
-    .param p0, "x0"    # Lcom/sec/android/app/camera/menu/ProLiteSlider;
-    .param p1, "x1"    # I
 
-    .prologue
-    .line 47
     iput p1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValue:I
 
     return p1
@@ -724,10 +659,7 @@
 
 .method static synthetic access$200(Lcom/sec/android/app/camera/menu/ProLiteSlider;)I
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
-    .prologue
-    .line 47
     iget v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PROEXPOSURE_VALUE_OFFSET:I
 
     return v0
@@ -735,10 +667,7 @@
 
 .method static synthetic access$300(Lcom/sec/android/app/camera/menu/ProLiteSlider;)Lcom/samsung/android/glview/GLSlider;
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
-    .prologue
-    .line 47
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
 
     return-object v0
@@ -746,10 +675,7 @@
 
 .method static synthetic access$400(Lcom/sec/android/app/camera/menu/ProLiteSlider;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
-    .prologue
-    .line 47
     iget-boolean v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mIsISOAutoDimmed:Z
 
     return v0
@@ -757,10 +683,7 @@
 
 .method static synthetic access$500(Lcom/sec/android/app/camera/menu/ProLiteSlider;)Lcom/samsung/android/glview/GLButton;
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
-    .prologue
-    .line 47
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepUpButton:Lcom/samsung/android/glview/GLButton;
 
     return-object v0
@@ -768,10 +691,7 @@
 
 .method static synthetic access$600(Lcom/sec/android/app/camera/menu/ProLiteSlider;)Lcom/samsung/android/glview/GLButton;
     .locals 1
-    .param p0, "x0"    # Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
-    .prologue
-    .line 47
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepDownButton:Lcom/samsung/android/glview/GLButton;
 
     return-object v0
@@ -780,8 +700,6 @@
 .method private initProSlider()V
     .locals 25
 
-    .prologue
-    .line 303
     new-instance v3, Lcom/samsung/android/glview/GLViewGroup;
 
     move-object/from16 v0, p0
@@ -814,7 +732,6 @@
 
     iput-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderGroup:Lcom/samsung/android/glview/GLViewGroup;
 
-    .line 306
     new-instance v3, Lcom/samsung/android/glview/GLButton;
 
     move-object/from16 v0, p0
@@ -891,7 +808,6 @@
 
     iput-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepUpButton:Lcom/samsung/android/glview/GLButton;
 
-    .line 308
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepUpButton:Lcom/samsung/android/glview/GLButton;
@@ -912,7 +828,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLButton;->setTitle(Ljava/lang/String;)V
 
-    .line 309
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepUpButton:Lcom/samsung/android/glview/GLButton;
@@ -931,7 +846,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setResourceOffset(FF)Z
 
-    .line 310
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepUpButton:Lcom/samsung/android/glview/GLButton;
@@ -950,7 +864,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLButton;->setRippleDiameter(F)V
 
-    .line 311
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepUpButton:Lcom/samsung/android/glview/GLButton;
@@ -959,7 +872,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLButton;->setClickable(Z)V
 
-    .line 312
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepUpButton:Lcom/samsung/android/glview/GLButton;
@@ -968,7 +880,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLButton;->enableRippleEffect(Z)V
 
-    .line 313
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepUpButton:Lcom/samsung/android/glview/GLButton;
@@ -977,7 +888,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLButton;->setRepeatClickWhenLongClicked(Z)V
 
-    .line 314
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepUpButton:Lcom/samsung/android/glview/GLButton;
@@ -988,7 +898,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLButton;->setClickListener(Lcom/samsung/android/glview/GLView$ClickListener;)V
 
-    .line 315
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepUpButton:Lcom/samsung/android/glview/GLButton;
@@ -999,7 +908,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLButton;->setKeyListener(Lcom/samsung/android/glview/GLView$KeyListener;)V
 
-    .line 317
     new-instance v3, Lcom/samsung/android/glview/GLButton;
 
     move-object/from16 v0, p0
@@ -1088,7 +996,6 @@
 
     iput-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepDownButton:Lcom/samsung/android/glview/GLButton;
 
-    .line 319
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepDownButton:Lcom/samsung/android/glview/GLButton;
@@ -1109,7 +1016,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLButton;->setTitle(Ljava/lang/String;)V
 
-    .line 320
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepDownButton:Lcom/samsung/android/glview/GLButton;
@@ -1128,7 +1034,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/glview/GLButton;->setResourceOffset(FF)Z
 
-    .line 321
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepDownButton:Lcom/samsung/android/glview/GLButton;
@@ -1147,7 +1052,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLButton;->setRippleDiameter(F)V
 
-    .line 322
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepDownButton:Lcom/samsung/android/glview/GLButton;
@@ -1156,7 +1060,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLButton;->setClickable(Z)V
 
-    .line 323
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepDownButton:Lcom/samsung/android/glview/GLButton;
@@ -1165,7 +1068,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLButton;->enableRippleEffect(Z)V
 
-    .line 324
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepDownButton:Lcom/samsung/android/glview/GLButton;
@@ -1174,7 +1076,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLButton;->setRepeatClickWhenLongClicked(Z)V
 
-    .line 325
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepDownButton:Lcom/samsung/android/glview/GLButton;
@@ -1185,7 +1086,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLButton;->setClickListener(Lcom/samsung/android/glview/GLView$ClickListener;)V
 
-    .line 326
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepDownButton:Lcom/samsung/android/glview/GLButton;
@@ -1196,7 +1096,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLButton;->setKeyListener(Lcom/samsung/android/glview/GLView$KeyListener;)V
 
-    .line 329
     new-instance v3, Lcom/samsung/android/glview/GLText;
 
     move-object/from16 v0, p0
@@ -1273,7 +1172,6 @@
 
     iput-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
 
-    .line 331
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
@@ -1282,7 +1180,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLText;->setRotatable(Z)V
 
-    .line 332
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
@@ -1293,7 +1190,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLText;->setTextFont(Landroid/graphics/Typeface;)V
 
-    .line 333
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
@@ -1312,7 +1208,6 @@
 
     invoke-virtual {v3, v4, v5, v6}, Lcom/samsung/android/glview/GLText;->setStroke(ZFI)V
 
-    .line 334
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
@@ -1321,7 +1216,6 @@
 
     invoke-virtual {v3, v0}, Lcom/samsung/android/glview/GLText;->setOrientationChangeListener(Lcom/samsung/android/glview/GLView$OrientationChangeListener;)V
 
-    .line 335
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
@@ -1332,7 +1226,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/glview/GLText;->setAlign(II)V
 
-    .line 336
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
@@ -1375,7 +1268,6 @@
 
     invoke-virtual {v3, v4, v5, v6}, Lcom/samsung/android/glview/GLText;->setLeftTop(IFF)V
 
-    .line 338
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
@@ -1412,7 +1304,6 @@
 
     invoke-virtual {v3, v4, v5, v6}, Lcom/samsung/android/glview/GLText;->setLeftTop(IFF)V
 
-    .line 339
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
@@ -1443,7 +1334,6 @@
 
     invoke-virtual {v3, v4, v5, v6}, Lcom/samsung/android/glview/GLText;->setLeftTop(IFF)V
 
-    .line 340
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
@@ -1480,18 +1370,14 @@
 
     invoke-virtual {v3, v4, v5, v6}, Lcom/samsung/android/glview/GLText;->setLeftTop(IFF)V
 
-    .line 343
     const/16 v19, 0x0
 
-    .line 344
-    .local v19, "indicatorInterval":I
     move-object/from16 v0, p0
 
     iget v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mSliderId:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 654
     :goto_0
     move-object/from16 v0, p0
 
@@ -1503,7 +1389,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLViewGroup;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 655
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderGroup:Lcom/samsung/android/glview/GLViewGroup;
@@ -1514,7 +1399,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLViewGroup;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 656
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderGroup:Lcom/samsung/android/glview/GLViewGroup;
@@ -1525,7 +1409,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLViewGroup;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 657
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderGroup:Lcom/samsung/android/glview/GLViewGroup;
@@ -1534,10 +1417,8 @@
 
     invoke-virtual {v0, v3}, Lcom/sec/android/app/camera/menu/ProLiteSlider;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 658
     return-void
 
-    .line 346
     :pswitch_0
     new-instance v3, Lcom/samsung/android/glview/GLSlider;
 
@@ -1595,7 +1476,6 @@
 
     iput-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
 
-    .line 348
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -1646,7 +1526,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLSlider;->setTitle(Ljava/lang/String;)V
 
-    .line 349
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -1657,7 +1536,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/glview/GLSlider;->setGaugeMarker(II)V
 
-    .line 350
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -1668,7 +1546,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLSlider;->setGaugeZeroStep(I)V
 
-    .line 351
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -1679,7 +1556,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 352
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -1698,7 +1574,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/glview/GLSlider;->expandTouchAreaFromCenter(FF)V
 
-    .line 353
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -1707,7 +1582,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLSlider;->setClickable(Z)V
 
-    .line 354
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -1720,7 +1594,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLSlider;->setSliderChangeListener(Lcom/samsung/android/glview/GLSlider$SliderChangeListener;)V
 
-    .line 362
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -1733,7 +1606,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLSlider;->setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V
 
-    .line 373
     move-object/from16 v0, p0
 
     iget v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->SCREEN_HEIGHT:I
@@ -1756,7 +1628,6 @@
 
     div-int/lit8 v19, v3, 0x4
 
-    .line 374
     const/4 v3, 0x5
 
     new-array v3, v3, [Lcom/samsung/android/glview/GLText;
@@ -1765,7 +1636,6 @@
 
     iput-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mExposureIndicator:[Lcom/samsung/android/glview/GLText;
 
-    .line 375
     const/4 v3, 0x5
 
     new-array v0, v3, [Ljava/lang/String;
@@ -1802,8 +1672,6 @@
 
     aput-object v4, v22, v3
 
-    .line 376
-    .local v22, "mExposureIndicatorText":[Ljava/lang/String;
     const/4 v3, 0x5
 
     new-array v0, v3, [Ljava/lang/String;
@@ -1840,17 +1708,13 @@
 
     aput-object v4, v21, v3
 
-    .line 378
-    .local v21, "mBrightnessIndicatorText":[Ljava/lang/String;
     const/4 v13, 0x0
 
-    .local v13, "i":I
     :goto_1
     const/4 v3, 0x5
 
     if-ge v13, v3, :cond_1
 
-    .line 379
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mExposureIndicator:[Lcom/samsung/android/glview/GLText;
@@ -1924,7 +1788,6 @@
 
     aput-object v3, v24, v13
 
-    .line 383
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mExposureIndicator:[Lcom/samsung/android/glview/GLText;
@@ -1935,7 +1798,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLText;->setRotatable(Z)V
 
-    .line 384
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mExposureIndicator:[Lcom/samsung/android/glview/GLText;
@@ -1946,7 +1808,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLText;->setCenterPivot(Z)V
 
-    .line 385
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mExposureIndicator:[Lcom/samsung/android/glview/GLText;
@@ -1957,7 +1818,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLText;->setRotateAnimation(Z)V
 
-    .line 386
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mExposureIndicator:[Lcom/samsung/android/glview/GLText;
@@ -1970,7 +1830,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLText;->setTextFont(Landroid/graphics/Typeface;)V
 
-    .line 387
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mExposureIndicator:[Lcom/samsung/android/glview/GLText;
@@ -1991,7 +1850,6 @@
 
     invoke-virtual {v3, v4, v5, v6}, Lcom/samsung/android/glview/GLText;->setStroke(ZFI)V
 
-    .line 388
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mExposureIndicator:[Lcom/samsung/android/glview/GLText;
@@ -2004,7 +1862,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/glview/GLText;->setAlign(II)V
 
-    .line 389
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mExposureIndicator:[Lcom/samsung/android/glview/GLText;
@@ -2015,7 +1872,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLText;->setClickable(Z)V
 
-    .line 390
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mExposureIndicator:[Lcom/samsung/android/glview/GLText;
@@ -2026,7 +1882,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLText;->setFocusable(Z)V
 
-    .line 391
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mExposureIndicator:[Lcom/samsung/android/glview/GLText;
@@ -2039,7 +1894,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLText;->setNextFocusRightView(Lcom/samsung/android/glview/GLView;)Z
 
-    .line 392
     const/4 v3, 0x5
 
     new-array v0, v3, [I
@@ -2092,8 +1946,6 @@
 
     aput v4, v16, v3
 
-    .line 393
-    .local v16, "indicatorExposureValue":[I
     const/4 v3, 0x5
 
     new-array v15, v3, [I
@@ -2144,12 +1996,8 @@
 
     aput v4, v15, v3
 
-    .line 394
-    .local v15, "indicatorExposureLiteValue":[I
     move v14, v13
 
-    .line 395
-    .local v14, "index":I
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mExposureIndicator:[Lcom/samsung/android/glview/GLText;
@@ -2166,7 +2014,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLText;->setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V
 
-    .line 412
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mExposureIndicator:[Lcom/samsung/android/glview/GLText;
@@ -2183,21 +2030,15 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLText;->setKeyListener(Lcom/samsung/android/glview/GLView$KeyListener;)V
 
-    .line 378
     add-int/lit8 v13, v13, 0x1
 
     goto/16 :goto_1
 
-    .line 379
-    .end local v14    # "index":I
-    .end local v15    # "indicatorExposureLiteValue":[I
-    .end local v16    # "indicatorExposureValue":[I
     :cond_0
     aget-object v9, v22, v13
 
     goto/16 :goto_2
 
-    .line 439
     :cond_1
     const/4 v13, 0x0
 
@@ -2206,7 +2047,6 @@
 
     if-ge v13, v3, :cond_2
 
-    .line 440
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderGroup:Lcom/samsung/android/glview/GLViewGroup;
@@ -2219,12 +2059,10 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLViewGroup;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 439
     add-int/lit8 v13, v13, 0x1
 
     goto :goto_3
 
-    .line 442
     :cond_2
     move-object/from16 v0, p0
 
@@ -2238,10 +2076,6 @@
 
     goto/16 :goto_0
 
-    .line 445
-    .end local v13    # "i":I
-    .end local v21    # "mBrightnessIndicatorText":[Ljava/lang/String;
-    .end local v22    # "mExposureIndicatorText":[Ljava/lang/String;
     :pswitch_1
     new-instance v3, Lcom/samsung/android/glview/GLSlider;
 
@@ -2299,7 +2133,6 @@
 
     iput-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
 
-    .line 447
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -2350,7 +2183,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLSlider;->setTitle(Ljava/lang/String;)V
 
-    .line 448
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -2361,7 +2193,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/glview/GLSlider;->setGaugeMarker(II)V
 
-    .line 449
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -2370,7 +2201,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLSlider;->setGaugeZeroStep(I)V
 
-    .line 450
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -2379,7 +2209,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 451
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -2398,7 +2227,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/glview/GLSlider;->expandTouchAreaFromCenter(FF)V
 
-    .line 452
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -2407,7 +2235,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLSlider;->setClickable(Z)V
 
-    .line 453
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -2420,7 +2247,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLSlider;->setSliderChangeListener(Lcom/samsung/android/glview/GLSlider$SliderChangeListener;)V
 
-    .line 467
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -2433,7 +2259,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLSlider;->setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V
 
-    .line 486
     move-object/from16 v0, p0
 
     iget v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->SCREEN_HEIGHT:I
@@ -2462,7 +2287,6 @@
 
     div-int v19, v3, v4
 
-    .line 487
     sget v3, Lcom/sec/android/app/camera/menu/ProLiteSlider;->ISO_INDICATOR_COUNT:I
 
     new-array v3, v3, [Lcom/samsung/android/glview/GLText;
@@ -2471,7 +2295,6 @@
 
     iput-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mISOIndicator:[Lcom/samsung/android/glview/GLText;
 
-    .line 488
     const/4 v3, 0x5
 
     new-array v0, v3, [Ljava/lang/String;
@@ -2568,17 +2391,13 @@
 
     aput-object v4, v23, v3
 
-    .line 490
-    .local v23, "mISOIndicatorText":[Ljava/lang/String;
     const/4 v13, 0x0
 
-    .restart local v13    # "i":I
     :goto_4
     sget v3, Lcom/sec/android/app/camera/menu/ProLiteSlider;->ISO_INDICATOR_COUNT:I
 
     if-ge v13, v3, :cond_4
 
-    .line 491
     sget-object v3, Lcom/sec/android/app/camera/feature/Feature;->CAMERA_MAX_ISO:Ljava/lang/String;
 
     const-string v4, "400"
@@ -2589,7 +2408,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 492
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mISOIndicator:[Lcom/samsung/android/glview/GLText;
@@ -2660,7 +2478,6 @@
 
     aput-object v3, v24, v13
 
-    .line 500
     :goto_5
     move-object/from16 v0, p0
 
@@ -2672,7 +2489,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLText;->setRotatable(Z)V
 
-    .line 501
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mISOIndicator:[Lcom/samsung/android/glview/GLText;
@@ -2683,7 +2499,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLText;->setCenterPivot(Z)V
 
-    .line 502
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mISOIndicator:[Lcom/samsung/android/glview/GLText;
@@ -2694,7 +2509,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLText;->setRotateAnimation(Z)V
 
-    .line 503
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mISOIndicator:[Lcom/samsung/android/glview/GLText;
@@ -2707,7 +2521,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLText;->setTextFont(Landroid/graphics/Typeface;)V
 
-    .line 504
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mISOIndicator:[Lcom/samsung/android/glview/GLText;
@@ -2718,7 +2531,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLText;->setStrokeVisibility(Z)V
 
-    .line 505
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mISOIndicator:[Lcom/samsung/android/glview/GLText;
@@ -2731,7 +2543,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/glview/GLText;->setAlign(II)V
 
-    .line 506
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mISOIndicator:[Lcom/samsung/android/glview/GLText;
@@ -2742,7 +2553,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLText;->setClickable(Z)V
 
-    .line 507
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mISOIndicator:[Lcom/samsung/android/glview/GLText;
@@ -2753,7 +2563,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLText;->setFocusable(Z)V
 
-    .line 508
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mISOIndicator:[Lcom/samsung/android/glview/GLText;
@@ -2766,7 +2575,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLText;->setNextFocusRightView(Lcom/samsung/android/glview/GLView;)Z
 
-    .line 509
     const/4 v3, 0x5
 
     new-array v0, v3, [I
@@ -2819,8 +2627,6 @@
 
     aput v4, v18, v3
 
-    .line 510
-    .local v18, "indicatorISOValue":[I
     const/4 v3, 0x4
 
     new-array v0, v3, [I
@@ -2863,12 +2669,8 @@
 
     aput v4, v17, v3
 
-    .line 511
-    .local v17, "indicatorISOLiteValue":[I
     move v14, v13
 
-    .line 512
-    .restart local v14    # "index":I
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mISOIndicator:[Lcom/samsung/android/glview/GLText;
@@ -2887,7 +2689,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLText;->setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V
 
-    .line 527
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mISOIndicator:[Lcom/samsung/android/glview/GLText;
@@ -2906,15 +2707,10 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLText;->setKeyListener(Lcom/samsung/android/glview/GLView$KeyListener;)V
 
-    .line 490
     add-int/lit8 v13, v13, 0x1
 
     goto/16 :goto_4
 
-    .line 496
-    .end local v14    # "index":I
-    .end local v17    # "indicatorISOLiteValue":[I
-    .end local v18    # "indicatorISOValue":[I
     :cond_3
     move-object/from16 v0, p0
 
@@ -2986,7 +2782,6 @@
 
     goto/16 :goto_5
 
-    .line 552
     :cond_4
     const/4 v13, 0x0
 
@@ -2995,7 +2790,6 @@
 
     if-ge v13, v3, :cond_5
 
-    .line 553
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderGroup:Lcom/samsung/android/glview/GLViewGroup;
@@ -3008,12 +2802,10 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLViewGroup;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 552
     add-int/lit8 v13, v13, 0x1
 
     goto :goto_6
 
-    .line 555
     :cond_5
     move-object/from16 v0, p0
 
@@ -3027,9 +2819,6 @@
 
     goto/16 :goto_0
 
-    .line 559
-    .end local v13    # "i":I
-    .end local v23    # "mISOIndicatorText":[Ljava/lang/String;
     :pswitch_2
     new-instance v3, Lcom/samsung/android/glview/GLSlider;
 
@@ -3087,7 +2876,6 @@
 
     iput-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
 
-    .line 561
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -3138,7 +2926,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLSlider;->setTitle(Ljava/lang/String;)V
 
-    .line 562
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -3149,7 +2936,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/glview/GLSlider;->setGaugeMarker(II)V
 
-    .line 563
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -3158,7 +2944,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLSlider;->setGaugeZeroStep(I)V
 
-    .line 564
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -3167,7 +2952,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 565
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -3186,7 +2970,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/glview/GLSlider;->expandTouchAreaFromCenter(FF)V
 
-    .line 566
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -3195,7 +2978,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLSlider;->setClickable(Z)V
 
-    .line 567
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -3208,7 +2990,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLSlider;->setSliderChangeListener(Lcom/samsung/android/glview/GLSlider$SliderChangeListener;)V
 
-    .line 575
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -3221,7 +3002,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLSlider;->setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V
 
-    .line 587
     move-object/from16 v0, p0
 
     iget v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->SCREEN_HEIGHT:I
@@ -3244,7 +3024,6 @@
 
     div-int/lit8 v19, v3, 0x4
 
-    .line 588
     const/4 v3, 0x5
 
     new-array v3, v3, [Lcom/samsung/android/glview/GLImage;
@@ -3253,16 +3032,13 @@
 
     iput-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mWBIndicator:[Lcom/samsung/android/glview/GLImage;
 
-    .line 589
     const/4 v13, 0x0
 
-    .restart local v13    # "i":I
     :goto_7
     const/4 v3, 0x5
 
     if-ge v13, v3, :cond_6
 
-    .line 590
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mWBIndicator:[Lcom/samsung/android/glview/GLImage;
@@ -3319,7 +3095,6 @@
 
     aput-object v4, v3, v13
 
-    .line 593
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mWBIndicator:[Lcom/samsung/android/glview/GLImage;
@@ -3356,7 +3131,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLImage;->setTitle(Ljava/lang/String;)V
 
-    .line 595
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mWBIndicator:[Lcom/samsung/android/glview/GLImage;
@@ -3367,7 +3141,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLImage;->setClickable(Z)V
 
-    .line 596
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mWBIndicator:[Lcom/samsung/android/glview/GLImage;
@@ -3378,7 +3151,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLImage;->setRotatable(Z)V
 
-    .line 597
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mWBIndicator:[Lcom/samsung/android/glview/GLImage;
@@ -3389,7 +3161,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLImage;->setCenterPivot(Z)V
 
-    .line 598
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mWBIndicator:[Lcom/samsung/android/glview/GLImage;
@@ -3400,7 +3171,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLImage;->setRotateAnimation(Z)V
 
-    .line 599
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mWBIndicator:[Lcom/samsung/android/glview/GLImage;
@@ -3411,7 +3181,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLImage;->setClickable(Z)V
 
-    .line 600
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mWBIndicator:[Lcom/samsung/android/glview/GLImage;
@@ -3422,7 +3191,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLImage;->setFocusable(Z)V
 
-    .line 601
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mWBIndicator:[Lcom/samsung/android/glview/GLImage;
@@ -3435,7 +3203,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLImage;->setNextFocusRightView(Lcom/samsung/android/glview/GLView;)Z
 
-    .line 602
     const/4 v3, 0x6
 
     new-array v0, v3, [I
@@ -3444,12 +3211,8 @@
 
     fill-array-data v20, :array_0
 
-    .line 603
-    .local v20, "indicatorWBValue":[I
     move v14, v13
 
-    .line 604
-    .restart local v14    # "index":I
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mWBIndicator:[Lcom/samsung/android/glview/GLImage;
@@ -3466,7 +3229,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLImage;->setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V
 
-    .line 619
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mWBIndicator:[Lcom/samsung/android/glview/GLImage;
@@ -3483,14 +3245,10 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLImage;->setKeyListener(Lcom/samsung/android/glview/GLView$KeyListener;)V
 
-    .line 589
     add-int/lit8 v13, v13, 0x1
 
     goto/16 :goto_7
 
-    .line 644
-    .end local v14    # "index":I
-    .end local v20    # "indicatorWBValue":[I
     :cond_6
     const/4 v13, 0x0
 
@@ -3499,7 +3257,6 @@
 
     if-ge v13, v3, :cond_7
 
-    .line 645
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderGroup:Lcom/samsung/android/glview/GLViewGroup;
@@ -3512,12 +3269,10 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLViewGroup;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 644
     add-int/lit8 v13, v13, 0x1
 
     goto :goto_8
 
-    .line 647
     :cond_7
     move-object/from16 v0, p0
 
@@ -3529,7 +3284,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLViewGroup;->addView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 648
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepUpButton:Lcom/samsung/android/glview/GLButton;
@@ -3538,7 +3292,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/android/glview/GLButton;->setVisibility(I)V
 
-    .line 649
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepDownButton:Lcom/samsung/android/glview/GLButton;
@@ -3549,7 +3302,6 @@
 
     goto/16 :goto_0
 
-    .line 344
     nop
 
     :pswitch_data_0
@@ -3559,7 +3311,6 @@
         :pswitch_2
     .end packed-switch
 
-    .line 602
     :array_0
     .array-data 4
         0x4
@@ -3576,26 +3327,21 @@
 .method public declared-synchronized clear()V
     .locals 1
 
-    .prologue
-    .line 132
     monitor-enter p0
 
     :try_start_0
     invoke-super {p0}, Lcom/samsung/android/glview/GLViewGroup;->clear()V
 
-    .line 133
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderHandler:Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderHandler;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderHandler;->clear()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 134
     monitor-exit p0
 
     return-void
 
-    .line 132
     :catchall_0
     move-exception v0
 
@@ -3607,8 +3353,6 @@
 .method public getSliderValueText()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 137
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
 
     invoke-virtual {v0}, Lcom/samsung/android/glview/GLText;->getText()Ljava/lang/String;
@@ -3620,13 +3364,9 @@
 
 .method public getWBString(I)Ljava/lang/String;
     .locals 2
-    .param p1, "wbValue"    # I
 
-    .prologue
-    .line 141
     if-nez p1, :cond_0
 
-    .line 142
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getContext()Landroid/content/Context;
@@ -3639,17 +3379,14 @@
 
     move-result-object v0
 
-    .line 152
     :goto_0
     return-object v0
 
-    .line 143
     :cond_0
     const/4 v0, 0x3
 
     if-ne p1, v0, :cond_1
 
-    .line 144
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getContext()Landroid/content/Context;
@@ -3664,13 +3401,11 @@
 
     goto :goto_0
 
-    .line 145
     :cond_1
     const/4 v0, 0x4
 
     if-ne p1, v0, :cond_2
 
-    .line 146
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getContext()Landroid/content/Context;
@@ -3685,13 +3420,11 @@
 
     goto :goto_0
 
-    .line 147
     :cond_2
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_3
 
-    .line 148
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getContext()Landroid/content/Context;
@@ -3706,13 +3439,11 @@
 
     goto :goto_0
 
-    .line 149
     :cond_3
     const/4 v0, 0x2
 
     if-ne p1, v0, :cond_4
 
-    .line 150
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getContext()Landroid/content/Context;
@@ -3727,7 +3458,6 @@
 
     goto :goto_0
 
-    .line 152
     :cond_4
     const-string v0, ""
 
@@ -3737,64 +3467,49 @@
 .method public hideSlider()V
     .locals 2
 
-    .prologue
-    .line 156
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mHideAnimation:Landroid/view/animation/Animation;
 
     if-eqz v0, :cond_0
 
-    .line 157
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mHideAnimation:Landroid/view/animation/Animation;
 
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, v1}, Lcom/sec/android/app/camera/menu/ProLiteSlider;->setAnimation(Landroid/view/animation/Animation;Z)V
 
-    .line 158
     invoke-virtual {p0}, Lcom/sec/android/app/camera/menu/ProLiteSlider;->startAnimation()V
 
-    .line 160
     :cond_0
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/menu/ProLiteSlider;->setVisibility(I)V
 
-    .line 161
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderHideListener:Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderHideListener;
 
     invoke-interface {v0, p0}, Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderHideListener;->onHideProSlider(Lcom/sec/android/app/camera/menu/ProLiteSlider;)V
 
-    .line 162
     invoke-virtual {p0}, Lcom/sec/android/app/camera/menu/ProLiteSlider;->stopSliderMenuTimer()V
 
-    .line 163
     return-void
 .end method
 
 .method public onOrientationChanged(I)V
     .locals 3
-    .param p1, "orientation"    # I
 
-    .prologue
     const/4 v2, 0x2
 
-    .line 167
     packed-switch p1, :pswitch_data_0
 
-    .line 175
     :pswitch_0
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
 
     invoke-virtual {v0, v2, v2}, Lcom/samsung/android/glview/GLText;->setAlign(II)V
 
-    .line 178
     :goto_0
     invoke-super {p0, p1}, Lcom/samsung/android/glview/GLViewGroup;->onOrientationChanged(I)V
 
-    .line 179
     return-void
 
-    .line 169
     :pswitch_1
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
 
@@ -3804,7 +3519,6 @@
 
     goto :goto_0
 
-    .line 172
     :pswitch_2
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
 
@@ -3814,7 +3528,6 @@
 
     goto :goto_0
 
-    .line 167
     nop
 
     :pswitch_data_0
@@ -3828,17 +3541,13 @@
 .method public refreshSliderStep()V
     .locals 4
 
-    .prologue
-    .line 182
     iget v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mSliderId:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 195
     :goto_0
     return-void
 
-    .line 184
     :pswitch_0
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
 
@@ -3862,7 +3571,6 @@
 
     goto :goto_0
 
-    .line 187
     :pswitch_1
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
 
@@ -3872,7 +3580,6 @@
 
     goto :goto_0
 
-    .line 190
     :pswitch_2
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
 
@@ -3882,7 +3589,6 @@
 
     goto :goto_0
 
-    .line 182
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -3894,36 +3600,28 @@
 .method public restartSliderMenuTimer()V
     .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 198
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderHandler:Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderHandler;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderHandler;->removeMessages(I)V
 
-    .line 199
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderHandler:Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderHandler;
 
     const-wide/16 v2, 0xbb8
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderHandler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 200
     return-void
 .end method
 
 .method public setISOAutoDim(Z)V
     .locals 2
-    .param p1, "isDimmed"    # Z
 
-    .prologue
-    .line 203
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mISOIndicator:[Lcom/samsung/android/glview/GLText;
 
     if-eqz v0, :cond_0
 
-    .line 204
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mISOIndicator:[Lcom/samsung/android/glview/GLText;
 
     sget v1, Lcom/sec/android/app/camera/menu/ProLiteSlider;->ISO_INDICATOR_COUNT:I
@@ -3934,109 +3632,81 @@
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/glview/GLText;->setDim(Z)V
 
-    .line 206
     :cond_0
     iput-boolean p1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mIsISOAutoDimmed:Z
 
-    .line 207
     return-void
 .end method
 
 .method public setOnHideSliderListener(Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderHideListener;)V
     .locals 0
-    .param p1, "l"    # Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderHideListener;
 
-    .prologue
-    .line 210
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderHideListener:Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderHideListener;
 
-    .line 211
     return-void
 .end method
 
 .method public setOnShowSliderListener(Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderShowListener;)V
     .locals 0
-    .param p1, "l"    # Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderShowListener;
 
-    .prologue
-    .line 214
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderShowListener:Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderShowListener;
 
-    .line 215
     return-void
 .end method
 
 .method public setProSliderValueSelectListener(Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderValueSelectListener;)V
     .locals 0
-    .param p1, "l"    # Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderValueSelectListener;
 
-    .prologue
-    .line 218
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderValueSelectListener:Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderValueSelectListener;
 
-    .line 219
     return-void
 .end method
 
 .method public setRotateAnimation(Z)V
     .locals 3
-    .param p1, "rotateAnimation"    # Z
 
-    .prologue
     const/4 v2, 0x5
 
-    .line 222
     iget v1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mSliderId:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 236
     :cond_0
     :pswitch_0
     return-void
 
-    .line 224
     :pswitch_1
     const/4 v0, 0x0
 
-    .local v0, "i":I
     :goto_0
     if-ge v0, v2, :cond_0
 
-    .line 225
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mExposureIndicator:[Lcom/samsung/android/glview/GLText;
 
     aget-object v1, v1, v0
 
     invoke-virtual {v1, p1}, Lcom/samsung/android/glview/GLText;->setRotateAnimation(Z)V
 
-    .line 224
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 229
-    .end local v0    # "i":I
     :pswitch_2
     const/4 v0, 0x0
 
-    .restart local v0    # "i":I
     :goto_1
     if-ge v0, v2, :cond_0
 
-    .line 230
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mWBIndicator:[Lcom/samsung/android/glview/GLImage;
 
     aget-object v1, v1, v0
 
     invoke-virtual {v1, p1}, Lcom/samsung/android/glview/GLImage;->setRotateAnimation(Z)V
 
-    .line 229
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 222
     nop
 
     :pswitch_data_0
@@ -4050,60 +3720,47 @@
 .method public showSlider()V
     .locals 1
 
-    .prologue
-    .line 239
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mShowAnimation:Landroid/view/animation/Animation;
 
     if-eqz v0, :cond_0
 
-    .line 240
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mShowAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/menu/ProLiteSlider;->setAnimation(Landroid/view/animation/Animation;)V
 
-    .line 241
     invoke-virtual {p0}, Lcom/sec/android/app/camera/menu/ProLiteSlider;->startAnimation()V
 
-    .line 243
     :cond_0
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/menu/ProLiteSlider;->setVisibility(I)V
 
-    .line 244
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderShowListener:Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderShowListener;
 
     invoke-interface {v0, p0}, Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderShowListener;->onShowProSlider(Lcom/sec/android/app/camera/menu/ProLiteSlider;)V
 
-    .line 245
     invoke-virtual {p0}, Lcom/sec/android/app/camera/menu/ProLiteSlider;->restartSliderMenuTimer()V
 
-    .line 246
     return-void
 .end method
 
 .method public stopSliderMenuTimer()V
     .locals 2
 
-    .prologue
-    .line 249
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderHandler:Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderHandler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderHandler;->removeMessages(I)V
 
-    .line 250
     return-void
 .end method
 
 .method public updateProRecordingSliderPosition()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 253
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderGroup:Lcom/samsung/android/glview/GLViewGroup;
 
     iget v1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_RECORDING_SLIDER_OFFSET_X:I
@@ -4114,7 +3771,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/glview/GLViewGroup;->moveBaseLayoutAbsolute(FF)V
 
-    .line 254
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
 
     iget v1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->PRO_SLIDE_RECORDING_VALUE_TEXT_OFFSET_X:I
@@ -4125,59 +3781,47 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/glview/GLText;->moveBaseLayoutAbsolute(FF)V
 
-    .line 255
     return-void
 .end method
 
 .method public updateProSliderPosition()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 258
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderGroup:Lcom/samsung/android/glview/GLViewGroup;
 
     invoke-virtual {v0, v1, v1}, Lcom/samsung/android/glview/GLViewGroup;->moveBaseLayoutAbsolute(FF)V
 
-    .line 259
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
 
     invoke-virtual {v0, v1, v1}, Lcom/samsung/android/glview/GLText;->moveBaseLayoutAbsolute(FF)V
 
-    .line 260
     return-void
 .end method
 
 .method public updateValue(I)V
     .locals 6
-    .param p1, "modeId"    # I
 
-    .prologue
     const/4 v4, 0x4
 
     const/4 v5, 0x0
 
-    .line 263
     iput p1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValue:I
 
-    .line 266
     iget v2, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mSliderId:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 300
     :cond_0
     :goto_0
     return-void
 
-    .line 268
     :pswitch_0
     sget-boolean v2, Lcom/sec/android/app/camera/feature/Feature;->SUPPORT_CAMERA_BRIGHTNESS:Z
 
     if-eqz v2, :cond_1
 
-    .line 269
     const-string v2, "%d"
 
     const/4 v3, 0x1
@@ -4200,22 +3844,17 @@
 
     move-result-object v0
 
-    .line 270
-    .local v0, "brightnessValue":Ljava/lang/String;
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
 
     invoke-virtual {v2, v0}, Lcom/samsung/android/glview/GLText;->setText(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 272
-    .end local v0    # "brightnessValue":Ljava/lang/String;
     :cond_1
     iget v2, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValue:I
 
     if-nez v2, :cond_2
 
-    .line 273
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
 
     const-string v3, "0"
@@ -4224,13 +3863,11 @@
 
     goto :goto_0
 
-    .line 274
     :cond_2
     iget v2, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValue:I
 
     if-lez v2, :cond_3
 
-    .line 275
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4273,13 +3910,11 @@
 
     goto :goto_0
 
-    .line 276
     :cond_3
     iget v2, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValue:I
 
     if-gez v2, :cond_0
 
-    .line 277
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4326,13 +3961,11 @@
 
     goto/16 :goto_0
 
-    .line 282
     :pswitch_1
     iget v2, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValue:I
 
     if-lez v2, :cond_4
 
-    .line 283
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     invoke-interface {v2}, Lcom/sec/android/app/camera/interfaces/CameraContext;->getContext()Landroid/content/Context;
@@ -4349,8 +3982,6 @@
 
     move-result-object v1
 
-    .line 284
-    .local v1, "isoString":[Ljava/lang/String;
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
 
     iget v3, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValue:I
@@ -4363,8 +3994,6 @@
 
     goto/16 :goto_0
 
-    .line 286
-    .end local v1    # "isoString":[Ljava/lang/String;
     :cond_4
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
 
@@ -4384,13 +4013,11 @@
 
     goto/16 :goto_0
 
-    .line 290
     :pswitch_2
     iget v2, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValue:I
 
     if-ltz v2, :cond_0
 
-    .line 291
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
 
     iget v3, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValue:I
@@ -4401,24 +4028,20 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/glview/GLText;->setText(Ljava/lang/String;)V
 
-    .line 292
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mValueText:Lcom/samsung/android/glview/GLText;
 
     invoke-virtual {v2, v5}, Lcom/samsung/android/glview/GLText;->setVisibility(I)V
 
-    .line 293
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepUpButton:Lcom/samsung/android/glview/GLButton;
 
     invoke-virtual {v2, v4}, Lcom/samsung/android/glview/GLButton;->setVisibility(I)V
 
-    .line 294
     iget-object v2, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mStepDownButton:Lcom/samsung/android/glview/GLButton;
 
     invoke-virtual {v2, v4}, Lcom/samsung/android/glview/GLButton;->setVisibility(I)V
 
     goto/16 :goto_0
 
-    .line 266
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

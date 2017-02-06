@@ -10,16 +10,11 @@
 # direct methods
 .method public constructor <init>(Lcom/sec/android/app/camera/interfaces/CommandInterface;)V
     .locals 0
-    .param p1, "receiver"    # Lcom/sec/android/app/camera/interfaces/CommandInterface;
 
-    .prologue
-    .line 26
     invoke-direct {p0}, Lcom/sec/android/app/camera/command/MenuCommand;-><init>()V
 
-    .line 27
     iput-object p1, p0, Lcom/sec/android/app/camera/command/HelpHubCommand;->mReceiver:Lcom/sec/android/app/camera/interfaces/CommandInterface;
 
-    .line 28
     return-void
 .end method
 
@@ -28,8 +23,6 @@
 .method public execute()Z
     .locals 1
 
-    .prologue
-    .line 32
     iget-object v0, p0, Lcom/sec/android/app/camera/command/HelpHubCommand;->mReceiver:Lcom/sec/android/app/camera/interfaces/CommandInterface;
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/CommandInterface;->onHelpHubSelect()Z

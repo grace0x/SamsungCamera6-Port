@@ -18,8 +18,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 144
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -29,17 +27,11 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
-    .param p1, "context"    # Landroid/content/Context;
-    .param p2, "intent"    # Landroid/content/Intent;
 
-    .prologue
-    .line 147
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 148
-    .local v0, "action":Ljava/lang/String;
     const-string v1, "WatermarkUtil"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -62,7 +54,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->secE(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
     const-string v1, "com.sec.android.widgetapp.ap.accuweatherdaemon.action.CHANE_SETTING"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -95,12 +86,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 151
     :cond_0
     # invokes: Lcom/sec/android/app/camera/util/WatermarkUtil;->handleUpdateWeather(Landroid/content/Context;Landroid/content/Intent;)V
     invoke-static {p1, p2}, Lcom/sec/android/app/camera/util/WatermarkUtil;->access$000(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 153
     :cond_1
     return-void
 .end method

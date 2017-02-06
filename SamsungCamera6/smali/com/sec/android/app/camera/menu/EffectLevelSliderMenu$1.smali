@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;)V
     .locals 0
 
-    .prologue
-    .line 76
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu$1;->this$0:Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,15 +37,12 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 79
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu$1;->this$0:Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     if-eqz v0, :cond_0
 
-    .line 80
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu$1;->this$0:Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;->isActive()Z
@@ -56,12 +51,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 81
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu$1;->this$0:Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;->hideMenu()V
 
-    .line 84
     :cond_0
     return-void
 .end method

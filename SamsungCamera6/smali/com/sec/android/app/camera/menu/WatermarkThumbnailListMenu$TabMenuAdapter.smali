@@ -25,8 +25,6 @@
 .method private constructor <init>(Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;)V
     .locals 0
 
-    .prologue
-    .line 694
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,11 +34,7 @@
 
 .method synthetic constructor <init>(Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;
-    .param p2, "x1"    # Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$1;
 
-    .prologue
-    .line 694
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;-><init>(Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;)V
 
     return-void
@@ -51,8 +45,6 @@
 .method public getCount()I
     .locals 1
 
-    .prologue
-    .line 697
     const/4 v0, 0x6
 
     return v0
@@ -60,16 +52,11 @@
 
 .method public getView(ILcom/samsung/android/glview/GLView;)Lcom/samsung/android/glview/GLView;
     .locals 10
-    .param p1, "position"    # I
-    .param p2, "convertView"    # Lcom/samsung/android/glview/GLView;
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 702
     if-nez p2, :cond_1
 
-    .line 703
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;->mWatermarkCategoryResource:Lcom/sec/android/app/camera/resourcedata/WatermarkCategoryResourceData;
@@ -81,8 +68,6 @@
 
     move-result-object v8
 
-    .line 704
-    .local v8, "itemData":Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;->mTabItemList:Landroid/util/SparseArray;
@@ -100,11 +85,8 @@
 
     check-cast v0, Lcom/sec/android/app/camera/widget/gl/WatermarkTabItem;
 
-    .line 705
-    .local v0, "item":Lcom/sec/android/app/camera/widget/gl/WatermarkTabItem;
     if-nez v0, :cond_0
 
-    .line 706
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -136,11 +118,8 @@
 
     move-result v9
 
-    .line 707
-    .local v9, "tabTextWidth":F
     new-instance v0, Lcom/sec/android/app/camera/widget/gl/WatermarkTabItem;
 
-    .end local v0    # "item":Lcom/sec/android/app/camera/widget/gl/WatermarkTabItem;
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -191,8 +170,6 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/sec/android/app/camera/widget/gl/WatermarkTabItem;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;FFFFILjava/lang/String;)V
 
-    .line 709
-    .restart local v0    # "item":Lcom/sec/android/app/camera/widget/gl/WatermarkTabItem;
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;->mTabList:Lcom/samsung/android/glview/GLList;
@@ -202,22 +179,18 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/widget/gl/WatermarkTabItem;->setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V
 
-    .line 710
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/widget/gl/WatermarkTabItem;->setClickListener(Lcom/samsung/android/glview/GLView$ClickListener;)V
 
-    .line 711
     invoke-virtual {v0, p1}, Lcom/sec/android/app/camera/widget/gl/WatermarkTabItem;->setTag(I)V
 
-    .line 712
     new-instance v1, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter$1;
 
     invoke-direct {v1, p0}, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter$1;-><init>(Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;)V
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/widget/gl/WatermarkTabItem;->setTabItemSelectListener(Lcom/sec/android/app/camera/widget/gl/WatermarkTabItem$TabItemSelectListener;)V
 
-    .line 735
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;->mTabItemList:Landroid/util/SparseArray;
@@ -231,10 +204,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 739
-    .end local v0    # "item":Lcom/sec/android/app/camera/widget/gl/WatermarkTabItem;
-    .end local v8    # "itemData":Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
-    .end local v9    # "tabTextWidth":F
     :cond_0
     :goto_0
     return-object v0
@@ -248,8 +217,6 @@
 .method public reset()V
     .locals 1
 
-    .prologue
-    .line 744
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu$TabMenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/WatermarkThumbnailListMenu;->mTabItemList:Landroid/util/SparseArray;
@@ -259,6 +226,5 @@
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 745
     return-void
 .end method

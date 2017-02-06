@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/VisualInteraction;)V
     .locals 0
 
-    .prologue
-    .line 898
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$6;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,8 +37,6 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 901
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$6;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     # getter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mBlurImage:Lcom/samsung/android/glview/GLImage;
@@ -50,6 +46,5 @@
 
     invoke-virtual {v0}, Lcom/samsung/android/glview/GLImage;->bringToFront()V
 
-    .line 902
     return-void
 .end method

@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/ProColorTuneList$ColorTuneListAdapter;)V
     .locals 0
 
-    .prologue
-    .line 182
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ProColorTuneList$ColorTuneListAdapter$1;->this$1:Lcom/sec/android/app/camera/menu/ProColorTuneList$ColorTuneListAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +36,7 @@
 # virtual methods
 .method public onColorTuneItemSelected(I)V
     .locals 1
-    .param p1, "modeId"    # I
 
-    .prologue
-    .line 185
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneList$ColorTuneListAdapter$1;->this$1:Lcom/sec/android/app/camera/menu/ProColorTuneList$ColorTuneListAdapter;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/ProColorTuneList$ColorTuneListAdapter;->this$0:Lcom/sec/android/app/camera/menu/ProColorTuneList;
@@ -50,7 +45,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 186
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProColorTuneList$ColorTuneListAdapter$1;->this$1:Lcom/sec/android/app/camera/menu/ProColorTuneList$ColorTuneListAdapter;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/ProColorTuneList$ColorTuneListAdapter;->this$0:Lcom/sec/android/app/camera/menu/ProColorTuneList;
@@ -59,7 +53,6 @@
 
     invoke-interface {v0, p1}, Lcom/sec/android/app/camera/menu/ProColorTuneList$ProColorTuneListSelectListener;->onProColorTuneListSelect(I)V
 
-    .line 188
     :cond_0
     return-void
 .end method

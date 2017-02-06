@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,18 +16,12 @@
 # virtual methods
 .method public onPlayingChanged(Landroid/support/v4/media/TransportController;)V
     .locals 0
-    .param p1, "controller"    # Landroid/support/v4/media/TransportController;
 
-    .prologue
-    .line 30
     return-void
 .end method
 
 .method public onTransportControlsChanged(Landroid/support/v4/media/TransportController;)V
     .locals 0
-    .param p1, "controller"    # Landroid/support/v4/media/TransportController;
 
-    .prologue
-    .line 38
     return-void
 .end method

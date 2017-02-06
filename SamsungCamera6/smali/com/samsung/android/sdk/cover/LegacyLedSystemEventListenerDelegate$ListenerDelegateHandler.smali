@@ -21,17 +21,11 @@
 # direct methods
 .method public constructor <init>(Landroid/os/Looper;Ljava/lang/Object;)V
     .locals 0
-    .param p1, "looper"    # Landroid/os/Looper;
-    .param p2, "listener"    # Ljava/lang/Object;
 
-    .prologue
-    .line 70
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 71
     iput-object p2, p0, Lcom/samsung/android/sdk/cover/LegacyLedSystemEventListenerDelegate$ListenerDelegateHandler;->mListener:Ljava/lang/Object;
 
-    .line 72
     return-void
 .end method
 
@@ -39,27 +33,21 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 10
-    .param p1, "msg"    # Landroid/os/Message;
 
-    .prologue
     const/4 v9, 0x1
 
-    .line 76
     iget-object v4, p0, Lcom/samsung/android/sdk/cover/LegacyLedSystemEventListenerDelegate$ListenerDelegateHandler;->mListener:Ljava/lang/Object;
 
     if-eqz v4, :cond_0
 
-    .line 77
     iget v4, p1, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 109
     :cond_0
     :goto_0
     return-void
 
-    .line 79
     :pswitch_0
     iget-object v4, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -69,12 +57,8 @@
 
     check-cast v0, [I
 
-    .line 80
-    .local v0, "args":[I
     const/4 v3, 0x0
 
-    .line 82
-    .local v3, "onSystemCoverEventMethod":Ljava/lang/reflect/Method;
     :try_start_0
     iget-object v4, p0, Lcom/samsung/android/sdk/cover/LegacyLedSystemEventListenerDelegate$ListenerDelegateHandler;->mListener:Ljava/lang/Object;
 
@@ -107,11 +91,9 @@
 
     move-result-object v3
 
-    .line 88
     :goto_1
     if-eqz v3, :cond_0
 
-    .line 90
     if-eqz v0, :cond_1
 
     :try_start_1
@@ -119,7 +101,6 @@
 
     if-ge v4, v9, :cond_2
 
-    .line 91
     :cond_1
     # getter for: Lcom/samsung/android/sdk/cover/LegacyLedSystemEventListenerDelegate;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/sdk/cover/LegacyLedSystemEventListenerDelegate;->access$000()Ljava/lang/String;
@@ -152,12 +133,9 @@
 
     goto :goto_0
 
-    .line 97
     :catch_0
     move-exception v2
 
-    .line 98
-    .local v2, "e":Ljava/lang/IllegalAccessException;
     # getter for: Lcom/samsung/android/sdk/cover/LegacyLedSystemEventListenerDelegate;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/sdk/cover/LegacyLedSystemEventListenerDelegate;->access$000()Ljava/lang/String;
 
@@ -189,13 +167,9 @@
 
     goto :goto_0
 
-    .line 83
-    .end local v2    # "e":Ljava/lang/IllegalAccessException;
     :catch_1
     move-exception v2
 
-    .line 84
-    .local v2, "e":Ljava/lang/SecurityException;
     # getter for: Lcom/samsung/android/sdk/cover/LegacyLedSystemEventListenerDelegate;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/sdk/cover/LegacyLedSystemEventListenerDelegate;->access$000()Ljava/lang/String;
 
@@ -207,13 +181,9 @@
 
     goto :goto_1
 
-    .line 85
-    .end local v2    # "e":Ljava/lang/SecurityException;
     :catch_2
     move-exception v2
 
-    .line 86
-    .local v2, "e":Ljava/lang/NoSuchMethodException;
     # getter for: Lcom/samsung/android/sdk/cover/LegacyLedSystemEventListenerDelegate;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/sdk/cover/LegacyLedSystemEventListenerDelegate;->access$000()Ljava/lang/String;
 
@@ -225,16 +195,12 @@
 
     goto :goto_1
 
-    .line 94
-    .end local v2    # "e":Ljava/lang/NoSuchMethodException;
     :cond_2
     :try_start_2
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 95
-    .local v1, "argsBundle":Landroid/os/Bundle;
     const-string v4, "led_off_command"
 
     const/4 v5, 0x0
@@ -243,7 +209,6 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 96
     iget-object v4, p0, Lcom/samsung/android/sdk/cover/LegacyLedSystemEventListenerDelegate$ListenerDelegateHandler;->mListener:Ljava/lang/Object;
 
     const/4 v5, 0x2
@@ -272,13 +237,9 @@
 
     goto/16 :goto_0
 
-    .line 99
-    .end local v1    # "argsBundle":Landroid/os/Bundle;
     :catch_3
     move-exception v2
 
-    .line 100
-    .local v2, "e":Ljava/lang/IllegalArgumentException;
     # getter for: Lcom/samsung/android/sdk/cover/LegacyLedSystemEventListenerDelegate;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/sdk/cover/LegacyLedSystemEventListenerDelegate;->access$000()Ljava/lang/String;
 
@@ -310,13 +271,9 @@
 
     goto/16 :goto_0
 
-    .line 101
-    .end local v2    # "e":Ljava/lang/IllegalArgumentException;
     :catch_4
     move-exception v2
 
-    .line 102
-    .local v2, "e":Ljava/lang/reflect/InvocationTargetException;
     # getter for: Lcom/samsung/android/sdk/cover/LegacyLedSystemEventListenerDelegate;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/sdk/cover/LegacyLedSystemEventListenerDelegate;->access$000()Ljava/lang/String;
 
@@ -348,7 +305,6 @@
 
     goto/16 :goto_0
 
-    .line 77
     nop
 
     :pswitch_data_0

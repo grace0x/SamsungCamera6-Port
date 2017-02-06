@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/Camera;)V
     .locals 0
 
-    .prologue
-    .line 5757
     iput-object p1, p0, Lcom/sec/android/app/camera/Camera$23;->this$0:Lcom/sec/android/app/camera/Camera;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,8 +37,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 5760
     iget-object v0, p0, Lcom/sec/android/app/camera/Camera$23;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mIsFirstStartingAfterCreate:Z
@@ -50,14 +46,12 @@
 
     if-nez v0, :cond_0
 
-    .line 5761
     iget-object v0, p0, Lcom/sec/android/app/camera/Camera$23;->this$0:Lcom/sec/android/app/camera/Camera;
 
     const/16 v1, 0x7d0
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/Camera;->acquireDVFSMaxCPUFreqAndCoreNum(I)V
 
-    .line 5764
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/Camera$23;->this$0:Lcom/sec/android/app/camera/Camera;
 
@@ -68,7 +62,6 @@
 
     if-nez v0, :cond_1
 
-    .line 5765
     iget-object v0, p0, Lcom/sec/android/app/camera/Camera$23;->this$0:Lcom/sec/android/app/camera/Camera;
 
     new-instance v1, Landroid/os/DVFSHelper;
@@ -86,7 +79,6 @@
     # setter for: Lcom/sec/android/app/camera/Camera;->mDVFSHelperForeMMC:Landroid/os/DVFSHelper;
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/Camera;->access$3302(Lcom/sec/android/app/camera/Camera;Landroid/os/DVFSHelper;)Landroid/os/DVFSHelper;
 
-    .line 5767
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/Camera$23;->this$0:Lcom/sec/android/app/camera/Camera;
 
@@ -97,6 +89,5 @@
 
     invoke-virtual {v0}, Landroid/os/DVFSHelper;->acquire()V
 
-    .line 5768
     return-void
 .end method

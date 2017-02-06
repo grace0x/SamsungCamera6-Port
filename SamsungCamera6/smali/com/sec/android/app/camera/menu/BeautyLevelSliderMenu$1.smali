@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu;)V
     .locals 0
 
-    .prologue
-    .line 90
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu$1;->this$0:Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,12 +36,9 @@
 # virtual methods
 .method public onStepChanged(I)V
     .locals 5
-    .param p1, "step"    # I
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 93
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu$1;->this$0:Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu;->mCommandId:I
@@ -55,7 +50,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 94
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu$1;->this$0:Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -66,13 +60,11 @@
 
     invoke-interface {v0, p1}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->setBackBeautyLevel(I)V
 
-    .line 98
     :goto_0
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu$1;->this$0:Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu;->restartSliderMenuTimer()V
 
-    .line 99
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu$1;->this$0:Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu;->mLevelText:Lcom/samsung/android/glview/GLText;
@@ -98,7 +90,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLText;->setText(Ljava/lang/String;)V
 
-    .line 100
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu$1;->this$0:Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -145,7 +136,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 101
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu$1;->this$0:Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -198,11 +188,9 @@
 
     invoke-virtual {v0, v1, v4, v2}, Landroid/speech/tts/TextToSpeech;->speak(Ljava/lang/String;ILjava/util/HashMap;)I
 
-    .line 103
     :cond_0
     return-void
 
-    .line 96
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu$1;->this$0:Lcom/sec/android/app/camera/menu/BeautyLevelSliderMenu;
 

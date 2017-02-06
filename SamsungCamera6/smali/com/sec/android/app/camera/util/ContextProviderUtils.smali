@@ -135,65 +135,51 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 114
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 115
     return-void
 .end method
 
 .method public static getCaptureMethodString(I)Ljava/lang/String;
     .locals 1
-    .param p0, "captureMethod"    # I
 
-    .prologue
-    .line 118
     packed-switch p0, :pswitch_data_0
 
-    .line 134
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 120
     :pswitch_0
     const-string v0, "CAPTURE_METHOD_BUTTON"
 
     goto :goto_0
 
-    .line 122
     :pswitch_1
     const-string v0, "CAPTURE_METHOD_VOICE_COMMAND"
 
     goto :goto_0
 
-    .line 124
     :pswitch_2
     const-string v0, "CAPTURE_METHOD_Volume key"
 
     goto :goto_0
 
-    .line 126
     :pswitch_3
     const-string v0, "CAPTURE_METHOD_SCREEN_TOUCH"
 
     goto :goto_0
 
-    .line 128
     :pswitch_4
     const-string v0, "CAPTURE_METHOD_PALM_DETECTION"
 
     goto :goto_0
 
-    .line 130
     :pswitch_5
     const-string v0, "CAPTURE_METHOD_HRM_SHUTTER"
 
     goto :goto_0
 
-    .line 118
     nop
 
     :pswitch_data_0
@@ -210,8 +196,6 @@
 .method public static getCurrentDateTime()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 139
     new-instance v1, Ljava/text/SimpleDateFormat;
 
     const-string v2, "yyyy-MM-dd HH:mm:ss.SSS"
@@ -220,14 +204,10 @@
 
     invoke-direct {v1, v2, v3}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 140
-    .local v1, "mTimeFormatUtc":Ljava/text/SimpleDateFormat;
     new-instance v0, Ljava/util/Date;
 
     invoke-direct {v0}, Ljava/util/Date;-><init>()V
 
-    .line 141
-    .local v0, "currentTime":Ljava/util/Date;
     const-string v2, "UTC"
 
     invoke-static {v2}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
@@ -236,7 +216,6 @@
 
     invoke-virtual {v1, v2}, Ljava/text/SimpleDateFormat;->setTimeZone(Ljava/util/TimeZone;)V
 
-    .line 142
     invoke-virtual {v1, v0}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v2
@@ -246,33 +225,24 @@
 
 .method public static getMultipleStatusSet([Ljava/lang/String;[Ljava/lang/String;)[Landroid/content/ContentValues;
     .locals 5
-    .param p0, "features"    # [Ljava/lang/String;
-    .param p1, "extras"    # [Ljava/lang/String;
 
-    .prologue
-    .line 146
     array-length v2, p0
 
     new-array v0, v2, [Landroid/content/ContentValues;
 
-    .line 148
-    .local v0, "cvs":[Landroid/content/ContentValues;
     const/4 v1, 0x0
 
-    .local v1, "i":I
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_0
 
-    .line 149
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
     aput-object v2, v0, v1
 
-    .line 150
     aget-object v2, v0, v1
 
     const-string v3, "app_id"
@@ -281,7 +251,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 151
     aget-object v2, v0, v1
 
     const-string v3, "feature"
@@ -290,7 +259,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 152
     aget-object v2, v0, v1
 
     const-string v3, "extra"
@@ -299,7 +267,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 153
     const-string v2, "ContextProviderUtils"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -324,7 +291,6 @@
 
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 154
     const-string v2, "ContextProviderUtils"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -349,49 +315,37 @@
 
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 148
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 156
     :cond_0
     return-object v0
 .end method
 
 .method public static getSettingsSet(Ljava/lang/String;Ljava/lang/String;)Landroid/content/ContentValues;
     .locals 4
-    .param p0, "featureId"    # Ljava/lang/String;
-    .param p1, "option"    # Ljava/lang/String;
 
-    .prologue
-    .line 176
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 177
-    .local v0, "cv":Landroid/content/ContentValues;
     const-string v1, "app_id"
 
     const-string v2, "com.sec.android.app.camera"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 178
     const-string v1, "feature"
 
     invoke-virtual {v0, v1, p0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 179
     if-eqz p1, :cond_0
 
-    .line 180
     const-string v1, "extra"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 182
     :cond_0
     const-string v1, "ContextProviderUtils"
 
@@ -415,7 +369,6 @@
 
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 183
     const-string v1, "ContextProviderUtils"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -438,44 +391,32 @@
 
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 184
     return-object v0
 .end method
 
 .method public static getSettingsSet(Ljava/lang/String;Ljava/lang/String;J)Landroid/content/ContentValues;
     .locals 4
-    .param p0, "featureId"    # Ljava/lang/String;
-    .param p1, "option"    # Ljava/lang/String;
-    .param p2, "value"    # J
 
-    .prologue
-    .line 160
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 161
-    .local v0, "cv":Landroid/content/ContentValues;
     const-string v1, "app_id"
 
     const-string v2, "com.sec.android.app.camera"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 162
     const-string v1, "feature"
 
     invoke-virtual {v0, v1, p0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 163
     if-eqz p1, :cond_0
 
-    .line 164
     const-string v1, "extra"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 166
     :cond_0
     const-wide/16 v2, -0x1
 
@@ -483,7 +424,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 167
     const-string v1, "value"
 
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -492,7 +432,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 169
     :cond_1
     const-string v1, "ContextProviderUtils"
 
@@ -516,7 +455,6 @@
 
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 170
     const-string v1, "ContextProviderUtils"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -539,7 +477,6 @@
 
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 171
     const-string v1, "ContextProviderUtils"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -562,6 +499,5 @@
 
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
     return-object v0
 .end method

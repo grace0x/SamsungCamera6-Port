@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;)V
     .locals 0
 
-    .prologue
-    .line 134
     iput-object p1, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,38 +36,25 @@
 # virtual methods
 .method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
     .locals 13
-    .param p1, "preference"    # Landroid/preference/Preference;
-    .param p2, "newValue"    # Ljava/lang/Object;
 
-    .prologue
-    .line 141
     invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 142
-    .local v7, "mNewValueString":Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 143
-    .local v6, "mListPref":Landroid/preference/ListPreference;
     invoke-virtual {p1}, Landroid/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 145
-    .local v5, "mKey":Ljava/lang/String;
     instance-of v10, p1, Landroid/preference/SwitchPreference;
 
     if-eqz v10, :cond_b
 
     move-object v4, p2
 
-    .line 146
     check-cast v4, Ljava/lang/Boolean;
 
-    .line 147
-    .local v4, "isChecked":Ljava/lang/Boolean;
     const-string v10, "pref_global_setup_gps_key"
 
     invoke-virtual {v5, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -78,14 +63,12 @@
 
     if-eqz v10, :cond_3
 
-    .line 148
     invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v10
 
     if-eqz v10, :cond_4
 
-    .line 149
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     invoke-virtual {v10}, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->getActivity()Landroid/app/Activity;
@@ -100,14 +83,12 @@
 
     if-eqz v10, :cond_2
 
-    .line 150
     invoke-static {}, Lcom/sec/android/app/camera/util/Util;->isChinaFeature()Z
 
     move-result v10
 
     if-eqz v10, :cond_1
 
-    .line 151
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     invoke-virtual {v10}, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->getActivity()Landroid/app/Activity;
@@ -124,27 +105,19 @@
 
     if-nez v10, :cond_0
 
-    .line 152
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     const/16 v11, 0x1a3
 
     invoke-virtual {v10, v11}, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->showCameraDialog(I)V
 
-    .line 163
     :cond_0
     :goto_0
     const/4 v10, 0x1
 
-    .line 232
-    .end local v4    # "isChecked":Ljava/lang/Boolean;
-    .end local p1    # "preference":Landroid/preference/Preference;
     :goto_1
     return v10
 
-    .line 155
-    .restart local v4    # "isChecked":Ljava/lang/Boolean;
-    .restart local p1    # "preference":Landroid/preference/Preference;
     :cond_1
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
@@ -162,7 +135,6 @@
 
     if-nez v10, :cond_0
 
-    .line 156
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     const/16 v11, 0x1a2
@@ -171,7 +143,6 @@
 
     goto :goto_0
 
-    .line 160
     :cond_2
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
@@ -179,12 +150,10 @@
 
     invoke-virtual {v10, v11}, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->showCameraDialog(I)V
 
-    .line 161
     const/4 v10, 0x0
 
     goto :goto_1
 
-    .line 165
     :cond_3
     const-string v10, "pref_global_setup_object_trackingaf_key"
 
@@ -194,7 +163,6 @@
 
     if-eqz v10, :cond_7
 
-    .line 166
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     invoke-virtual {v10, p1}, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->checkCurrentPreferenceDependency(Landroid/preference/Preference;)Z
@@ -203,7 +171,6 @@
 
     if-eqz v10, :cond_4
 
-    .line 167
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     # getter for: Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->mMenuDimController:Lcom/sec/android/app/camera/DimController;
@@ -224,13 +191,10 @@
     :goto_2
     invoke-virtual {v11, v12, v10}, Lcom/sec/android/app/camera/DimController;->setButtonDim(II)V
 
-    .line 168
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     invoke-virtual {v10}, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->refreshMenu()V
 
-    .line 227
-    .end local v4    # "isChecked":Ljava/lang/Boolean;
     :cond_4
     :goto_3
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
@@ -249,17 +213,12 @@
 
     move-result-object v2
 
-    .line 228
-    .local v2, "featureValue":Ljava/lang/String;
     if-eqz v2, :cond_5
 
-    .line 229
     invoke-static {v2, v7}, Lcom/sec/android/app/camera/util/ContextProviderUtils;->getSettingsSet(Ljava/lang/String;Ljava/lang/String;)Landroid/content/ContentValues;
 
     move-result-object v0
 
-    .line 230
-    .local v0, "cv":Landroid/content/ContentValues;
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     invoke-virtual {v10}, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->getActivity()Landroid/app/Activity;
@@ -268,22 +227,16 @@
 
     invoke-static {v10, v0}, Lcom/sec/android/app/camera/util/Util;->broadcastGeneralEventForLogging(Landroid/content/Context;Landroid/content/ContentValues;)V
 
-    .line 232
-    .end local v0    # "cv":Landroid/content/ContentValues;
     :cond_5
     const/4 v10, 0x1
 
     goto :goto_1
 
-    .line 167
-    .end local v2    # "featureValue":Ljava/lang/String;
-    .restart local v4    # "isChecked":Ljava/lang/Boolean;
     :cond_6
     const/4 v10, 0x0
 
     goto :goto_2
 
-    .line 170
     :cond_7
     const-string v10, "pref_global_camera_quick_shot"
 
@@ -293,7 +246,6 @@
 
     if-eqz v10, :cond_9
 
-    .line 171
     invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v10
@@ -302,8 +254,6 @@
 
     const/4 v9, 0x1
 
-    .line 172
-    .local v9, "quickLaunch":I
     :goto_4
     const-string v10, "PrefSettingFragment"
 
@@ -327,7 +277,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 173
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     invoke-virtual {v10}, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->getActivity()Landroid/app/Activity;
@@ -344,14 +293,11 @@
 
     goto :goto_3
 
-    .line 171
-    .end local v9    # "quickLaunch":I
     :cond_8
     const/4 v9, 0x0
 
     goto :goto_4
 
-    .line 174
     :cond_9
     const-string v10, "pref_global_motion_photo_key"
 
@@ -361,14 +307,12 @@
 
     if-eqz v10, :cond_a
 
-    .line 175
     invoke-virtual {p1}, Landroid/preference/Preference;->isEnabled()Z
 
     move-result v10
 
     if-eqz v10, :cond_4
 
-    .line 176
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     invoke-virtual {v10}, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->getContext()Landroid/content/Context;
@@ -383,7 +327,6 @@
 
     goto :goto_3
 
-    .line 178
     :cond_a
     const-string v10, "pref_global_setup_floating_camera_button_key"
 
@@ -393,7 +336,6 @@
 
     if-eqz v10, :cond_4
 
-    .line 179
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     # getter for: Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
@@ -407,8 +349,6 @@
 
     goto/16 :goto_3
 
-    .line 181
-    .end local v4    # "isChecked":Ljava/lang/Boolean;
     :cond_b
     instance-of v10, p1, Landroid/preference/ListPreference;
 
@@ -416,16 +356,12 @@
 
     move-object v6, p1
 
-    .line 182
     check-cast v6, Landroid/preference/ListPreference;
 
-    .line 183
     invoke-virtual {v6, v7}, Landroid/preference/ListPreference;->findIndexOfValue(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 184
-    .local v3, "index":I
     if-ltz v3, :cond_c
 
     invoke-virtual {v6}, Landroid/preference/ListPreference;->getEntries()[Ljava/lang/CharSequence;
@@ -444,14 +380,11 @@
 
     goto :goto_5
 
-    .line 185
-    .end local v3    # "index":I
     :cond_d
     instance-of v10, p1, Lcom/sec/android/app/camera/setting/SpinnerPreference;
 
     if-eqz v10, :cond_4
 
-    .line 186
     const-string v10, "camcorder_rear_resolution_spinner"
 
     invoke-virtual {v5, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -468,14 +401,11 @@
 
     if-eqz v10, :cond_10
 
-    .line 187
     :cond_e
     invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v8
 
-    .line 188
-    .local v8, "newResolution":I
     const-string v10, "camcorder_rear_resolution_spinner"
 
     invoke-virtual {v5, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -484,7 +414,6 @@
 
     if-eqz v10, :cond_f
 
-    .line 189
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     invoke-virtual {v10}, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->getContext()Landroid/content/Context;
@@ -495,7 +424,6 @@
 
     invoke-static {v10, v11, v8}, Lcom/sec/android/app/camera/util/SharedPreferencesHelper;->savePreferences(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 190
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     # getter for: Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->mMenuDimController:Lcom/sec/android/app/camera/DimController;
@@ -507,12 +435,10 @@
 
     invoke-virtual {v10, v11, v8}, Lcom/sec/android/app/camera/DimController;->setButtonDim(II)V
 
-    .line 191
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     invoke-virtual {v10}, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->refreshMenu()V
 
-    .line 195
     :goto_6
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
@@ -528,7 +454,6 @@
 
     move-object v10, p1
 
-    .line 196
     check-cast v10, Lcom/sec/android/app/camera/setting/SpinnerPreference;
 
     iget-object v11, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
@@ -545,7 +470,6 @@
 
     goto/16 :goto_3
 
-    .line 193
     :cond_f
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
@@ -559,8 +483,6 @@
 
     goto :goto_6
 
-    .line 197
-    .end local v8    # "newResolution":I
     :cond_10
     const-string v10, "camera_resolution_rear_spinner"
 
@@ -578,14 +500,11 @@
 
     if-eqz v10, :cond_15
 
-    .line 198
     :cond_11
     invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v8
 
-    .line 199
-    .restart local v8    # "newResolution":I
     const-string v10, "camera_resolution_rear_spinner"
 
     invoke-virtual {v5, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -594,7 +513,6 @@
 
     if-eqz v10, :cond_13
 
-    .line 200
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     invoke-virtual {v10}, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->getContext()Landroid/content/Context;
@@ -605,7 +523,6 @@
 
     invoke-static {v10, v11, v8}, Lcom/sec/android/app/camera/util/SharedPreferencesHelper;->savePreferences(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 201
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     invoke-virtual {v10}, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->getContext()Landroid/content/Context;
@@ -616,7 +533,6 @@
 
     invoke-static {v10, v11, v8}, Lcom/sec/android/app/camera/util/SharedPreferencesHelper;->savePreferences(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 210
     :goto_7
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
@@ -630,10 +546,8 @@
 
     invoke-virtual {p1, v10}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 211
     check-cast p1, Lcom/sec/android/app/camera/setting/SpinnerPreference;
 
-    .end local p1    # "preference":Landroid/preference/Preference;
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     invoke-virtual {v10}, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->getContext()Landroid/content/Context;
@@ -646,7 +560,6 @@
 
     invoke-virtual {p1, v10}, Lcom/sec/android/app/camera/setting/SpinnerPreference;->setSummaryDescription(Ljava/lang/String;)V
 
-    .line 213
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     invoke-virtual {v10}, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->getActivity()Landroid/app/Activity;
@@ -659,8 +572,6 @@
 
     move-result-object v2
 
-    .line 214
-    .restart local v2    # "featureValue":Ljava/lang/String;
     const/4 v10, 0x4
 
     invoke-static {v10, v8}, Lcom/sec/android/app/camera/command/CommandIdMap;->getCommandId(II)I
@@ -671,17 +582,12 @@
 
     move-result-object v1
 
-    .line 215
-    .local v1, "extraValue":Ljava/lang/String;
     if-eqz v2, :cond_12
 
-    .line 217
     invoke-static {v2, v1}, Lcom/sec/android/app/camera/util/ContextProviderUtils;->getSettingsSet(Ljava/lang/String;Ljava/lang/String;)Landroid/content/ContentValues;
 
     move-result-object v0
 
-    .line 218
-    .restart local v0    # "cv":Landroid/content/ContentValues;
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     invoke-virtual {v10}, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->getActivity()Landroid/app/Activity;
@@ -690,17 +596,11 @@
 
     invoke-static {v10, v0}, Lcom/sec/android/app/camera/util/Util;->broadcastGeneralEventForLogging(Landroid/content/Context;Landroid/content/ContentValues;)V
 
-    .line 220
-    .end local v0    # "cv":Landroid/content/ContentValues;
     :cond_12
     const/4 v10, 0x1
 
     goto/16 :goto_1
 
-    .line 203
-    .end local v1    # "extraValue":Ljava/lang/String;
-    .end local v2    # "featureValue":Ljava/lang/String;
-    .restart local p1    # "preference":Landroid/preference/Preference;
     :cond_13
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
@@ -715,7 +615,6 @@
 
     if-eqz v10, :cond_14
 
-    .line 204
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     invoke-virtual {v10}, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->getContext()Landroid/content/Context;
@@ -728,7 +627,6 @@
 
     goto :goto_7
 
-    .line 206
     :cond_14
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
@@ -740,7 +638,6 @@
 
     invoke-static {v10, v11, v8}, Lcom/sec/android/app/camera/util/SharedPreferencesHelper;->savePreferences(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 207
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     invoke-virtual {v10}, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->getContext()Landroid/content/Context;
@@ -753,8 +650,6 @@
 
     goto :goto_7
 
-    .line 221
-    .end local v8    # "newResolution":I
     :cond_15
     const-string v10, "camera_volume_key_spinner"
 
@@ -764,7 +659,6 @@
 
     if-eqz v10, :cond_4
 
-    .line 222
     iget-object v10, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$2;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     invoke-virtual {v10}, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;->getContext()Landroid/content/Context;

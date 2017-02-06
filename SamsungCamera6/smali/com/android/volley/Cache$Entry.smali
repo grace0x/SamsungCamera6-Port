@@ -42,11 +42,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 84
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object v0
@@ -61,8 +58,6 @@
 .method public isExpired()Z
     .locals 4
 
-    .prologue
-    .line 88
     iget-wide v0, p0, Lcom/android/volley/Cache$Entry;->ttl:J
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -87,8 +82,6 @@
 .method public refreshNeeded()Z
     .locals 4
 
-    .prologue
-    .line 93
     iget-wide v0, p0, Lcom/android/volley/Cache$Entry;->softTtl:J
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J

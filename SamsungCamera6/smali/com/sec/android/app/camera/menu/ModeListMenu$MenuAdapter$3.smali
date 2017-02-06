@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/ModeListMenu$MenuAdapter;)V
     .locals 0
 
-    .prologue
-    .line 1545
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ModeListMenu$MenuAdapter$3;->this$1:Lcom/sec/android/app/camera/menu/ModeListMenu$MenuAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,15 +36,9 @@
 # virtual methods
 .method public onCheckBoxSelect(Lcom/samsung/android/glview/GLView;ZI)V
     .locals 2
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "checked"    # Z
-    .param p3, "commandId"    # I
 
-    .prologue
-    .line 1548
     if-eqz p2, :cond_0
 
-    .line 1549
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ModeListMenu$MenuAdapter$3;->this$1:Lcom/sec/android/app/camera/menu/ModeListMenu$MenuAdapter;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/ModeListMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/ModeListMenu;
@@ -54,7 +46,6 @@
     # operator++ for: Lcom/sec/android/app/camera/menu/ModeListMenu;->mCheckedCount:I
     invoke-static {v0}, Lcom/sec/android/app/camera/menu/ModeListMenu;->access$808(Lcom/sec/android/app/camera/menu/ModeListMenu;)I
 
-    .line 1553
     :goto_0
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ModeListMenu$MenuAdapter$3;->this$1:Lcom/sec/android/app/camera/menu/ModeListMenu$MenuAdapter;
 
@@ -71,10 +62,8 @@
 
     invoke-virtual {v0, p3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 1554
     return-void
 
-    .line 1551
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ModeListMenu$MenuAdapter$3;->this$1:Lcom/sec/android/app/camera/menu/ModeListMenu$MenuAdapter;
 

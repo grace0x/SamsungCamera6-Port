@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/setting/TimerSettingFragment;)V
     .locals 0
 
-    .prologue
-    .line 164
     iput-object p1, p0, Lcom/sec/android/app/camera/setting/TimerSettingFragment$1;->this$0:Lcom/sec/android/app/camera/setting/TimerSettingFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,11 +36,7 @@
 # virtual methods
 .method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 3
-    .param p1, "buttonView"    # Landroid/widget/CompoundButton;
-    .param p2, "isChecked"    # Z
 
-    .prologue
-    .line 167
     iget-object v0, p0, Lcom/sec/android/app/camera/setting/TimerSettingFragment$1;->this$0:Lcom/sec/android/app/camera/setting/TimerSettingFragment;
 
     # getter for: Lcom/sec/android/app/camera/setting/TimerSettingFragment;->mCameraSettings:Lcom/sec/android/app/camera/setting/CameraSettingsImpl;
@@ -56,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 168
     const-string v0, "TimerSettingFragment"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -79,7 +72,6 @@
 
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 169
     iget-object v0, p0, Lcom/sec/android/app/camera/setting/TimerSettingFragment$1;->this$0:Lcom/sec/android/app/camera/setting/TimerSettingFragment;
 
     # getter for: Lcom/sec/android/app/camera/setting/TimerSettingFragment;->mCameraSettings:Lcom/sec/android/app/camera/setting/CameraSettingsImpl;
@@ -97,7 +89,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/setting/CameraSettingsImpl;->setInterval(I)V
 
-    .line 171
     :cond_0
     return-void
 .end method

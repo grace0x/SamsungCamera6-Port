@@ -24,8 +24,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 460
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,10 +31,7 @@
 
 .method synthetic constructor <init>(Lcom/sec/android/app/camera/RequestPermissionActivity$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/sec/android/app/camera/RequestPermissionActivity$1;
 
-    .prologue
-    .line 460
     invoke-direct {p0}, Lcom/sec/android/app/camera/RequestPermissionActivity$PermissionListAdapter$ViewHolder;-><init>()V
 
     return-void

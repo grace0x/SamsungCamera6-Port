@@ -25,8 +25,6 @@
 .method private constructor <init>(Lcom/sec/android/app/camera/menu/ListTypeMenu;)V
     .locals 0
 
-    .prologue
-    .line 317
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ListTypeMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/ListTypeMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,11 +34,7 @@
 
 .method synthetic constructor <init>(Lcom/sec/android/app/camera/menu/ListTypeMenu;Lcom/sec/android/app/camera/menu/ListTypeMenu$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/sec/android/app/camera/menu/ListTypeMenu;
-    .param p2, "x1"    # Lcom/sec/android/app/camera/menu/ListTypeMenu$1;
 
-    .prologue
-    .line 317
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/menu/ListTypeMenu$MenuAdapter;-><init>(Lcom/sec/android/app/camera/menu/ListTypeMenu;)V
 
     return-void
@@ -51,8 +45,6 @@
 .method public getCount()I
     .locals 1
 
-    .prologue
-    .line 320
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ListTypeMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/ListTypeMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/ListTypeMenu;->mResource:Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;
@@ -69,16 +61,11 @@
 
 .method public getView(ILcom/samsung/android/glview/GLView;)Lcom/samsung/android/glview/GLView;
     .locals 8
-    .param p1, "position"    # I
-    .param p2, "convertView"    # Lcom/samsung/android/glview/GLView;
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 325
     if-nez p2, :cond_0
 
-    .line 326
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ListTypeMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/ListTypeMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/ListTypeMenu;->mResource:Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;
@@ -90,8 +77,6 @@
 
     move-result-object v6
 
-    .line 327
-    .local v6, "itemData":Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
     invoke-virtual {v6}, Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;->getCommandId()I
 
     move-result v1
@@ -108,11 +93,8 @@
 
     move-result-object v7
 
-    .line 328
-    .local v7, "command":Lcom/sec/android/app/camera/command/MenuCommand;
     if-eqz v7, :cond_0
 
-    .line 329
     new-instance v0, Lcom/sec/android/app/camera/widget/gl/ListItem;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ListTypeMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/ListTypeMenu;
@@ -137,8 +119,6 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/sec/android/app/camera/widget/gl/ListItem;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;FFFFLcom/sec/android/app/camera/resourcedata/MenuResourceBundle;Lcom/sec/android/app/camera/command/MenuCommand;)V
 
-    .line 330
-    .local v0, "item":Lcom/sec/android/app/camera/widget/gl/ListItem;
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ListTypeMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/ListTypeMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/ListTypeMenu;->mList:Lcom/samsung/android/glview/GLList;
@@ -148,7 +128,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/widget/gl/ListItem;->setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V
 
-    .line 331
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ListTypeMenu$MenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/ListTypeMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/ListTypeMenu;->mList:Lcom/samsung/android/glview/GLList;
@@ -158,10 +137,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/widget/gl/ListItem;->setKeyListener(Lcom/samsung/android/glview/GLView$KeyListener;)V
 
-    .line 335
-    .end local v0    # "item":Lcom/sec/android/app/camera/widget/gl/ListItem;
-    .end local v6    # "itemData":Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
-    .end local v7    # "command":Lcom/sec/android/app/camera/command/MenuCommand;
     :goto_0
     return-object v0
 
@@ -174,7 +149,5 @@
 .method public reset()V
     .locals 0
 
-    .prologue
-    .line 341
     return-void
 .end method

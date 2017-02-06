@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/shootingmode/Pro;)V
     .locals 0
 
-    .prologue
-    .line 925
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/Pro$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Pro;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +36,9 @@
 # virtual methods
 .method public onButtonPressed(Lcom/samsung/android/glview/GLView;Z)V
     .locals 2
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "isPressed"    # Z
 
-    .prologue
-    .line 928
     if-eqz p2, :cond_0
 
-    .line 929
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/Pro$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Pro;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/Pro;->mColorTuneEditButton:Lcom/samsung/android/glview/GLButton;
@@ -57,11 +50,9 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLButton;->setAlpha(F)V
 
-    .line 933
     :goto_0
     return-void
 
-    .line 931
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/Pro$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Pro;
 

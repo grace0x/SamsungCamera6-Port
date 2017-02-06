@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/shootingmode/TagShot;)V
     .locals 0
 
-    .prologue
-    .line 574
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$6;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +36,7 @@
 # virtual methods
 .method public onErrorResponse(Lcom/android/volley/VolleyError;)V
     .locals 3
-    .param p1, "error"    # Lcom/android/volley/VolleyError;
 
-    .prologue
-    .line 577
     const-string v0, "TagShot"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -68,6 +63,5 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secE(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 578
     return-void
 .end method

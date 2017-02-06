@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/OverlayHelpMenu;)V
     .locals 0
 
-    .prologue
-    .line 378
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/OverlayHelpMenu$7;->this$0:Lcom/sec/android/app/camera/menu/OverlayHelpMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,42 +36,29 @@
 # virtual methods
 .method public onPageScrollStateChanged(I)V
     .locals 0
-    .param p1, "position"    # I
 
-    .prologue
-    .line 381
     return-void
 .end method
 
 .method public onPageScrolled(IFI)V
     .locals 0
-    .param p1, "arg0"    # I
-    .param p2, "arg1"    # F
-    .param p3, "arg2"    # I
 
-    .prologue
-    .line 385
     return-void
 .end method
 
 .method public onPageSelected(I)V
     .locals 2
-    .param p1, "position"    # I
 
-    .prologue
-    .line 389
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/OverlayHelpMenu$7;->this$0:Lcom/sec/android/app/camera/menu/OverlayHelpMenu;
 
     # invokes: Lcom/sec/android/app/camera/menu/OverlayHelpMenu;->updatePageIndicator(I)V
     invoke-static {v0, p1}, Lcom/sec/android/app/camera/menu/OverlayHelpMenu;->access$1400(Lcom/sec/android/app/camera/menu/OverlayHelpMenu;I)V
 
-    .line 390
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/OverlayHelpMenu$7;->this$0:Lcom/sec/android/app/camera/menu/OverlayHelpMenu;
 
     # setter for: Lcom/sec/android/app/camera/menu/OverlayHelpMenu;->mCurrentIndex:I
     invoke-static {v0, p1}, Lcom/sec/android/app/camera/menu/OverlayHelpMenu;->access$1202(Lcom/sec/android/app/camera/menu/OverlayHelpMenu;I)I
 
-    .line 391
     invoke-static {}, Lcom/sec/android/app/camera/util/Util;->isLocaleRTL()Z
 
     move-result v0
@@ -89,7 +74,6 @@
 
     if-gtz v0, :cond_0
 
-    .line 392
     :goto_0
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/OverlayHelpMenu$7;->this$0:Lcom/sec/android/app/camera/menu/OverlayHelpMenu;
 
@@ -98,7 +82,6 @@
     # setter for: Lcom/sec/android/app/camera/menu/OverlayHelpMenu;->mIslastPageReached:Z
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/menu/OverlayHelpMenu;->access$502(Lcom/sec/android/app/camera/menu/OverlayHelpMenu;Z)Z
 
-    .line 393
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/OverlayHelpMenu$7;->this$0:Lcom/sec/android/app/camera/menu/OverlayHelpMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/OverlayHelpMenu;->mInteractionGuideView:Landroid/view/View;
@@ -118,7 +101,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
 
-    .line 395
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/OverlayHelpMenu$7;->this$0:Lcom/sec/android/app/camera/menu/OverlayHelpMenu;
 
@@ -136,10 +118,8 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/menu/OverlayHelpMenu$ViewPagerAdapter;->refreshAnimation(I)V
 
-    .line 396
     return-void
 
-    .line 391
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/OverlayHelpMenu$7;->this$0:Lcom/sec/android/app/camera/menu/OverlayHelpMenu;
 

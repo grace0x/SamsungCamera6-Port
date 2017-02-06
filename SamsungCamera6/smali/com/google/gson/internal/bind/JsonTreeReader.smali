@@ -26,15 +26,12 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 40
     new-instance v0, Lcom/google/gson/internal/bind/JsonTreeReader$1;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/JsonTreeReader$1;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/JsonTreeReader;->UNREADABLE_READER:Ljava/io/Reader;
 
-    .line 48
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -46,48 +43,38 @@
 
 .method public constructor <init>(Lcom/google/gson/JsonElement;)V
     .locals 1
-    .param p1, "element"    # Lcom/google/gson/JsonElement;
 
-    .prologue
-    .line 53
     sget-object v0, Lcom/google/gson/internal/bind/JsonTreeReader;->UNREADABLE_READER:Ljava/io/Reader;
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/JsonReader;-><init>(Ljava/io/Reader;)V
 
-    .line 50
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/google/gson/internal/bind/JsonTreeReader;->stack:Ljava/util/List;
 
-    .line 54
     iget-object v0, p0, Lcom/google/gson/internal/bind/JsonTreeReader;->stack:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 55
     return-void
 .end method
 
 .method private expect(Lcom/google/gson/stream/JsonToken;)V
     .locals 3
-    .param p1, "expected"    # Lcom/google/gson/stream/JsonToken;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    .prologue
-    .line 138
     invoke-virtual {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->peek()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v0
 
     if-eq v0, p1, :cond_0
 
-    .line 139
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -126,7 +113,6 @@
 
     throw v0
 
-    .line 141
     :cond_0
     return-void
 .end method
@@ -134,8 +120,6 @@
 .method private peekStack()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 130
     iget-object v0, p0, Lcom/google/gson/internal/bind/JsonTreeReader;->stack:Ljava/util/List;
 
     iget-object v1, p0, Lcom/google/gson/internal/bind/JsonTreeReader;->stack:Ljava/util/List;
@@ -156,8 +140,6 @@
 .method private popStack()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 134
     iget-object v0, p0, Lcom/google/gson/internal/bind/JsonTreeReader;->stack:Ljava/util/List;
 
     iget-object v1, p0, Lcom/google/gson/internal/bind/JsonTreeReader;->stack:Ljava/util/List;
@@ -185,21 +167,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 58
     sget-object v1, Lcom/google/gson/stream/JsonToken;->BEGIN_ARRAY:Lcom/google/gson/stream/JsonToken;
 
     invoke-direct {p0, v1}, Lcom/google/gson/internal/bind/JsonTreeReader;->expect(Lcom/google/gson/stream/JsonToken;)V
 
-    .line 59
     invoke-direct {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->peekStack()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/gson/JsonArray;
 
-    .line 60
-    .local v0, "array":Lcom/google/gson/JsonArray;
     iget-object v1, p0, Lcom/google/gson/internal/bind/JsonTreeReader;->stack:Ljava/util/List;
 
     invoke-virtual {v0}, Lcom/google/gson/JsonArray;->iterator()Ljava/util/Iterator;
@@ -208,7 +185,6 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 61
     return-void
 .end method
 
@@ -220,21 +196,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 70
     sget-object v1, Lcom/google/gson/stream/JsonToken;->BEGIN_OBJECT:Lcom/google/gson/stream/JsonToken;
 
     invoke-direct {p0, v1}, Lcom/google/gson/internal/bind/JsonTreeReader;->expect(Lcom/google/gson/stream/JsonToken;)V
 
-    .line 71
     invoke-direct {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->peekStack()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/gson/JsonObject;
 
-    .line 72
-    .local v0, "object":Lcom/google/gson/JsonObject;
     iget-object v1, p0, Lcom/google/gson/internal/bind/JsonTreeReader;->stack:Ljava/util/List;
 
     invoke-virtual {v0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
@@ -247,7 +218,6 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 73
     return-void
 .end method
 
@@ -259,20 +229,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 203
     iget-object v0, p0, Lcom/google/gson/internal/bind/JsonTreeReader;->stack:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 204
     iget-object v0, p0, Lcom/google/gson/internal/bind/JsonTreeReader;->stack:Ljava/util/List;
 
     sget-object v1, Lcom/google/gson/internal/bind/JsonTreeReader;->SENTINEL_CLOSED:Ljava/lang/Object;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 205
     return-void
 .end method
 
@@ -284,19 +250,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 64
     sget-object v0, Lcom/google/gson/stream/JsonToken;->END_ARRAY:Lcom/google/gson/stream/JsonToken;
 
     invoke-direct {p0, v0}, Lcom/google/gson/internal/bind/JsonTreeReader;->expect(Lcom/google/gson/stream/JsonToken;)V
 
-    .line 65
     invoke-direct {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->popStack()Ljava/lang/Object;
 
-    .line 66
     invoke-direct {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->popStack()Ljava/lang/Object;
 
-    .line 67
     return-void
 .end method
 
@@ -308,19 +269,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 76
     sget-object v0, Lcom/google/gson/stream/JsonToken;->END_OBJECT:Lcom/google/gson/stream/JsonToken;
 
     invoke-direct {p0, v0}, Lcom/google/gson/internal/bind/JsonTreeReader;->expect(Lcom/google/gson/stream/JsonToken;)V
 
-    .line 77
     invoke-direct {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->popStack()Ljava/lang/Object;
 
-    .line 78
     invoke-direct {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->popStack()Ljava/lang/Object;
 
-    .line 79
     return-void
 .end method
 
@@ -332,14 +288,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 82
     invoke-virtual {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->peek()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v0
 
-    .line 83
-    .local v0, "token":Lcom/google/gson/stream/JsonToken;
     sget-object v1, Lcom/google/gson/stream/JsonToken;->END_OBJECT:Lcom/google/gson/stream/JsonToken;
 
     if-eq v0, v1, :cond_0
@@ -367,13 +319,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 160
     sget-object v0, Lcom/google/gson/stream/JsonToken;->BOOLEAN:Lcom/google/gson/stream/JsonToken;
 
     invoke-direct {p0, v0}, Lcom/google/gson/internal/bind/JsonTreeReader;->expect(Lcom/google/gson/stream/JsonToken;)V
 
-    .line 161
     invoke-direct {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->popStack()Ljava/lang/Object;
 
     move-result-object v0
@@ -395,14 +344,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 170
     invoke-virtual {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->peek()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v2
 
-    .line 171
-    .local v2, "token":Lcom/google/gson/stream/JsonToken;
     sget-object v3, Lcom/google/gson/stream/JsonToken;->NUMBER:Lcom/google/gson/stream/JsonToken;
 
     if-eq v2, v3, :cond_0
@@ -411,7 +356,6 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 172
     new-instance v3, Ljava/lang/IllegalStateException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -448,7 +392,6 @@
 
     throw v3
 
-    .line 174
     :cond_0
     invoke-direct {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->peekStack()Ljava/lang/Object;
 
@@ -460,8 +403,6 @@
 
     move-result-wide v0
 
-    .line 175
-    .local v0, "result":D
     invoke-virtual {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->isLenient()Z
 
     move-result v3
@@ -480,7 +421,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 176
     :cond_1
     new-instance v3, Ljava/lang/NumberFormatException;
 
@@ -506,11 +446,9 @@
 
     throw v3
 
-    .line 178
     :cond_2
     invoke-direct {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->popStack()Ljava/lang/Object;
 
-    .line 179
     return-wide v0
 .end method
 
@@ -522,14 +460,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 193
     invoke-virtual {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->peek()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v1
 
-    .line 194
-    .local v1, "token":Lcom/google/gson/stream/JsonToken;
     sget-object v2, Lcom/google/gson/stream/JsonToken;->NUMBER:Lcom/google/gson/stream/JsonToken;
 
     if-eq v1, v2, :cond_0
@@ -538,7 +472,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 195
     new-instance v2, Ljava/lang/IllegalStateException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -575,7 +508,6 @@
 
     throw v2
 
-    .line 197
     :cond_0
     invoke-direct {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->peekStack()Ljava/lang/Object;
 
@@ -587,11 +519,8 @@
 
     move-result v0
 
-    .line 198
-    .local v0, "result":I
     invoke-direct {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->popStack()Ljava/lang/Object;
 
-    .line 199
     return v0
 .end method
 
@@ -603,14 +532,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 183
     invoke-virtual {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->peek()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v2
 
-    .line 184
-    .local v2, "token":Lcom/google/gson/stream/JsonToken;
     sget-object v3, Lcom/google/gson/stream/JsonToken;->NUMBER:Lcom/google/gson/stream/JsonToken;
 
     if-eq v2, v3, :cond_0
@@ -619,7 +544,6 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 185
     new-instance v3, Ljava/lang/IllegalStateException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -656,7 +580,6 @@
 
     throw v3
 
-    .line 187
     :cond_0
     invoke-direct {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->peekStack()Ljava/lang/Object;
 
@@ -668,11 +591,8 @@
 
     move-result-wide v0
 
-    .line 188
-    .local v0, "result":J
     invoke-direct {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->popStack()Ljava/lang/Object;
 
-    .line 189
     return-wide v0
 .end method
 
@@ -684,29 +604,22 @@
         }
     .end annotation
 
-    .prologue
-    .line 144
     sget-object v2, Lcom/google/gson/stream/JsonToken;->NAME:Lcom/google/gson/stream/JsonToken;
 
     invoke-direct {p0, v2}, Lcom/google/gson/internal/bind/JsonTreeReader;->expect(Lcom/google/gson/stream/JsonToken;)V
 
-    .line 145
     invoke-direct {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->peekStack()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Iterator;
 
-    .line 146
-    .local v1, "i":Ljava/util/Iterator;, "Ljava/util/Iterator<*>;"
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 147
-    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<**>;"
     iget-object v2, p0, Lcom/google/gson/internal/bind/JsonTreeReader;->stack:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -715,7 +628,6 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 148
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -733,16 +645,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 165
     sget-object v0, Lcom/google/gson/stream/JsonToken;->NULL:Lcom/google/gson/stream/JsonToken;
 
     invoke-direct {p0, v0}, Lcom/google/gson/internal/bind/JsonTreeReader;->expect(Lcom/google/gson/stream/JsonToken;)V
 
-    .line 166
     invoke-direct {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->popStack()Ljava/lang/Object;
 
-    .line 167
     return-void
 .end method
 
@@ -754,14 +662,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 152
     invoke-virtual {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->peek()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v0
 
-    .line 153
-    .local v0, "token":Lcom/google/gson/stream/JsonToken;
     sget-object v1, Lcom/google/gson/stream/JsonToken;->STRING:Lcom/google/gson/stream/JsonToken;
 
     if-eq v0, v1, :cond_0
@@ -770,7 +674,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 154
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -807,7 +710,6 @@
 
     throw v1
 
-    .line 156
     :cond_0
     invoke-direct {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->popStack()Ljava/lang/Object;
 
@@ -830,8 +732,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 87
     iget-object v4, p0, Lcom/google/gson/internal/bind/JsonTreeReader;->stack:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
@@ -840,26 +740,20 @@
 
     if-eqz v4, :cond_0
 
-    .line 88
     sget-object v4, Lcom/google/gson/stream/JsonToken;->END_DOCUMENT:Lcom/google/gson/stream/JsonToken;
 
-    .line 121
     :goto_0
     return-object v4
 
-    .line 91
     :cond_0
     invoke-direct {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->peekStack()Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 92
-    .local v2, "o":Ljava/lang/Object;
     instance-of v4, v2, Ljava/util/Iterator;
 
     if-eqz v4, :cond_4
 
-    .line 93
     iget-object v4, p0, Lcom/google/gson/internal/bind/JsonTreeReader;->stack:Ljava/util/List;
 
     iget-object v5, p0, Lcom/google/gson/internal/bind/JsonTreeReader;->stack:Ljava/util/List;
@@ -876,29 +770,22 @@
 
     instance-of v0, v4, Lcom/google/gson/JsonObject;
 
-    .local v0, "isObject":Z
     move-object v1, v2
 
-    .line 94
     check-cast v1, Ljava/util/Iterator;
 
-    .line 95
-    .local v1, "iterator":Ljava/util/Iterator;, "Ljava/util/Iterator<*>;"
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v4
 
     if-eqz v4, :cond_2
 
-    .line 96
     if-eqz v0, :cond_1
 
-    .line 97
     sget-object v4, Lcom/google/gson/stream/JsonToken;->NAME:Lcom/google/gson/stream/JsonToken;
 
     goto :goto_0
 
-    .line 99
     :cond_1
     iget-object v4, p0, Lcom/google/gson/internal/bind/JsonTreeReader;->stack:Ljava/util/List;
 
@@ -908,14 +795,12 @@
 
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 100
     invoke-virtual {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->peek()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v4
 
     goto :goto_0
 
-    .line 103
     :cond_2
     if-eqz v0, :cond_3
 
@@ -928,31 +813,24 @@
 
     goto :goto_0
 
-    .line 105
-    .end local v0    # "isObject":Z
-    .end local v1    # "iterator":Ljava/util/Iterator;, "Ljava/util/Iterator<*>;"
     :cond_4
     instance-of v4, v2, Lcom/google/gson/JsonObject;
 
     if-eqz v4, :cond_5
 
-    .line 106
     sget-object v4, Lcom/google/gson/stream/JsonToken;->BEGIN_OBJECT:Lcom/google/gson/stream/JsonToken;
 
     goto :goto_0
 
-    .line 107
     :cond_5
     instance-of v4, v2, Lcom/google/gson/JsonArray;
 
     if-eqz v4, :cond_6
 
-    .line 108
     sget-object v4, Lcom/google/gson/stream/JsonToken;->BEGIN_ARRAY:Lcom/google/gson/stream/JsonToken;
 
     goto :goto_0
 
-    .line 109
     :cond_6
     instance-of v4, v2, Lcom/google/gson/JsonPrimitive;
 
@@ -960,23 +838,18 @@
 
     move-object v3, v2
 
-    .line 110
     check-cast v3, Lcom/google/gson/JsonPrimitive;
 
-    .line 111
-    .local v3, "primitive":Lcom/google/gson/JsonPrimitive;
     invoke-virtual {v3}, Lcom/google/gson/JsonPrimitive;->isString()Z
 
     move-result v4
 
     if-eqz v4, :cond_7
 
-    .line 112
     sget-object v4, Lcom/google/gson/stream/JsonToken;->STRING:Lcom/google/gson/stream/JsonToken;
 
     goto :goto_0
 
-    .line 113
     :cond_7
     invoke-virtual {v3}, Lcom/google/gson/JsonPrimitive;->isBoolean()Z
 
@@ -984,12 +857,10 @@
 
     if-eqz v4, :cond_8
 
-    .line 114
     sget-object v4, Lcom/google/gson/stream/JsonToken;->BOOLEAN:Lcom/google/gson/stream/JsonToken;
 
     goto :goto_0
 
-    .line 115
     :cond_8
     invoke-virtual {v3}, Lcom/google/gson/JsonPrimitive;->isNumber()Z
 
@@ -997,12 +868,10 @@
 
     if-eqz v4, :cond_9
 
-    .line 116
     sget-object v4, Lcom/google/gson/stream/JsonToken;->NUMBER:Lcom/google/gson/stream/JsonToken;
 
     goto :goto_0
 
-    .line 118
     :cond_9
     new-instance v4, Ljava/lang/AssertionError;
 
@@ -1010,25 +879,20 @@
 
     throw v4
 
-    .line 120
-    .end local v3    # "primitive":Lcom/google/gson/JsonPrimitive;
     :cond_a
     instance-of v4, v2, Lcom/google/gson/JsonNull;
 
     if-eqz v4, :cond_b
 
-    .line 121
     sget-object v4, Lcom/google/gson/stream/JsonToken;->NULL:Lcom/google/gson/stream/JsonToken;
 
     goto :goto_0
 
-    .line 122
     :cond_b
     sget-object v4, Lcom/google/gson/internal/bind/JsonTreeReader;->SENTINEL_CLOSED:Ljava/lang/Object;
 
     if-ne v2, v4, :cond_c
 
-    .line 123
     new-instance v4, Ljava/lang/IllegalStateException;
 
     const-string v5, "JsonReader is closed"
@@ -1037,7 +901,6 @@
 
     throw v4
 
-    .line 125
     :cond_c
     new-instance v4, Ljava/lang/AssertionError;
 
@@ -1054,29 +917,22 @@
         }
     .end annotation
 
-    .prologue
-    .line 220
     sget-object v2, Lcom/google/gson/stream/JsonToken;->NAME:Lcom/google/gson/stream/JsonToken;
 
     invoke-direct {p0, v2}, Lcom/google/gson/internal/bind/JsonTreeReader;->expect(Lcom/google/gson/stream/JsonToken;)V
 
-    .line 221
     invoke-direct {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->peekStack()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Iterator;
 
-    .line 222
-    .local v1, "i":Ljava/util/Iterator;, "Ljava/util/Iterator<*>;"
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 223
-    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<**>;"
     iget-object v2, p0, Lcom/google/gson/internal/bind/JsonTreeReader;->stack:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -1085,7 +941,6 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 224
     iget-object v3, p0, Lcom/google/gson/internal/bind/JsonTreeReader;->stack:Ljava/util/List;
 
     new-instance v4, Lcom/google/gson/JsonPrimitive;
@@ -1100,7 +955,6 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 225
     return-void
 .end method
 
@@ -1112,8 +966,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 208
     invoke-virtual {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->peek()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v0
@@ -1122,14 +974,11 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 209
     invoke-virtual {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->nextName()Ljava/lang/String;
 
-    .line 213
     :goto_0
     return-void
 
-    .line 211
     :cond_0
     invoke-direct {p0}, Lcom/google/gson/internal/bind/JsonTreeReader;->popStack()Ljava/lang/Object;
 
@@ -1139,8 +988,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 216
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0

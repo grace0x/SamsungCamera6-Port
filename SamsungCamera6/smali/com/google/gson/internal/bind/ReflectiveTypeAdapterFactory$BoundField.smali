@@ -25,24 +25,15 @@
 # direct methods
 .method protected constructor <init>(Ljava/lang/String;ZZ)V
     .locals 0
-    .param p1, "name"    # Ljava/lang/String;
-    .param p2, "serialized"    # Z
-    .param p3, "deserialized"    # Z
 
-    .prologue
-    .line 137
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 138
     iput-object p1, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;->name:Ljava/lang/String;
 
-    .line 139
     iput-boolean p2, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;->serialized:Z
 
-    .line 140
     iput-boolean p3, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;->deserialized:Z
 
-    .line 141
     return-void
 .end method
 

@@ -27,8 +27,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/RequestPermissionActivity;I)V
     .locals 0
 
-    .prologue
-    .line 391
     iput-object p1, p0, Lcom/sec/android/app/camera/RequestPermissionActivity$3;->this$0:Lcom/sec/android/app/camera/RequestPermissionActivity;
 
     iput p2, p0, Lcom/sec/android/app/camera/RequestPermissionActivity$3;->val$requestCode:I
@@ -42,39 +40,30 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 4
-    .param p1, "dialog"    # Landroid/content/DialogInterface;
-    .param p2, "which"    # I
 
-    .prologue
-    .line 394
     iget-object v1, p0, Lcom/sec/android/app/camera/RequestPermissionActivity$3;->this$0:Lcom/sec/android/app/camera/RequestPermissionActivity;
 
     # invokes: Lcom/sec/android/app/camera/RequestPermissionActivity;->dismissPermissionRationaleDialog()V
     invoke-static {v1}, Lcom/sec/android/app/camera/RequestPermissionActivity;->access$000(Lcom/sec/android/app/camera/RequestPermissionActivity;)V
 
-    .line 395
     iget v1, p0, Lcom/sec/android/app/camera/RequestPermissionActivity$3;->val$requestCode:I
 
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_0
 
-    .line 396
     iget-object v1, p0, Lcom/sec/android/app/camera/RequestPermissionActivity$3;->this$0:Lcom/sec/android/app/camera/RequestPermissionActivity;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/RequestPermissionActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 397
-    .local v0, "intent":Landroid/content/Intent;
     const-string v1, "location_dialog_id"
 
     iget v2, p0, Lcom/sec/android/app/camera/RequestPermissionActivity$3;->val$requestCode:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 398
     iget-object v1, p0, Lcom/sec/android/app/camera/RequestPermissionActivity$3;->this$0:Lcom/sec/android/app/camera/RequestPermissionActivity;
 
     const/4 v2, 0x0
@@ -87,13 +76,10 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/sec/android/app/camera/RequestPermissionActivity;->setResult(ILandroid/content/Intent;)V
 
-    .line 400
-    .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
     iget-object v1, p0, Lcom/sec/android/app/camera/RequestPermissionActivity$3;->this$0:Lcom/sec/android/app/camera/RequestPermissionActivity;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/RequestPermissionActivity;->finish()V
 
-    .line 401
     return-void
 .end method

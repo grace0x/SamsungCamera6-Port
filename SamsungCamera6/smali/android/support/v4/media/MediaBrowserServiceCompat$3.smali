@@ -38,10 +38,7 @@
 # direct methods
 .method constructor <init>(Landroid/support/v4/media/MediaBrowserServiceCompat;Ljava/lang/Object;Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 0
-    .param p2, "x0"    # Ljava/lang/Object;
 
-    .prologue
-    .line 870
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$3;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     iput-object p3, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$3;->val$connection:Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;
@@ -60,8 +57,6 @@
 .method bridge synthetic onResultSent(Ljava/lang/Object;I)V
     .locals 0
 
-    .prologue
-    .line 870
     check-cast p1, Ljava/util/List;
 
     invoke-virtual {p0, p1, p2}, Landroid/support/v4/media/MediaBrowserServiceCompat$3;->onResultSent(Ljava/util/List;I)V
@@ -71,7 +66,6 @@
 
 .method onResultSent(Ljava/util/List;I)V
     .locals 5
-    .param p2, "flag"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -82,9 +76,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 873
-    .local p1, "list":Ljava/util/List;, "Ljava/util/List<Landroid/support/v4/media/MediaBrowserCompat$MediaItem;>;"
     iget-object v2, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$3;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     # getter for: Landroid/support/v4/media/MediaBrowserServiceCompat;->mConnections:Landroid/support/v4/util/ArrayMap;
@@ -108,11 +99,9 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 891
     :goto_0
     return-void
 
-    .line 881
     :cond_0
     and-int/lit8 v2, p2, 0x1
 
@@ -124,8 +113,6 @@
 
     move-result-object v1
 
-    .line 885
-    .local v1, "filteredList":Ljava/util/List;, "Ljava/util/List<Landroid/support/v4/media/MediaBrowserCompat$MediaItem;>;"
     :goto_1
     :try_start_0
     iget-object v2, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$3;->val$connection:Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;
@@ -142,12 +129,9 @@
 
     goto :goto_0
 
-    .line 886
     :catch_0
     move-exception v0
 
-    .line 888
-    .local v0, "ex":Landroid/os/RemoteException;
     const-string v2, "MediaBrowserServiceCompat"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -188,11 +172,8 @@
 
     goto :goto_0
 
-    .end local v0    # "ex":Landroid/os/RemoteException;
-    .end local v1    # "filteredList":Ljava/util/List;, "Ljava/util/List<Landroid/support/v4/media/MediaBrowserCompat$MediaItem;>;"
     :cond_1
     move-object v1, p1
 
-    .line 881
     goto :goto_1
 .end method

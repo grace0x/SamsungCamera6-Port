@@ -27,8 +27,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/MenuManagerImpl;I)V
     .locals 0
 
-    .prologue
-    .line 199
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/MenuManagerImpl$3;->this$0:Lcom/sec/android/app/camera/menu/MenuManagerImpl;
 
     iput p2, p0, Lcom/sec/android/app/camera/menu/MenuManagerImpl$3;->val$initialShootingMode:I
@@ -43,8 +41,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 202
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/MenuManagerImpl$3;->this$0:Lcom/sec/android/app/camera/menu/MenuManagerImpl;
 
     # getter for: Lcom/sec/android/app/camera/menu/MenuManagerImpl;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -58,11 +54,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 207
     :goto_0
     return-void
 
-    .line 206
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/MenuManagerImpl$3;->this$0:Lcom/sec/android/app/camera/menu/MenuManagerImpl;
 

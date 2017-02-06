@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;)V
     .locals 0
 
-    .prologue
-    .line 200
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,12 +37,10 @@
 .method public run()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x4
 
     const/4 v2, 0x0
 
-    .line 203
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->mIsDownloadEffectSupported:Z
@@ -54,7 +50,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 204
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->mOrientation:I
@@ -75,7 +70,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 205
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
@@ -86,7 +80,6 @@
 
     invoke-virtual {v0, v3}, Lcom/samsung/android/glview/GLViewGroup;->setVisibility(I)V
 
-    .line 206
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->mCurrentMode:I
@@ -96,7 +89,6 @@
 
     if-nez v0, :cond_1
 
-    .line 207
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->mMoreButton:Lcom/samsung/android/glview/GLButton;
@@ -106,12 +98,10 @@
 
     invoke-virtual {v0, v2, v2}, Lcom/samsung/android/glview/GLButton;->setVisibility(IZ)V
 
-    .line 220
     :cond_1
     :goto_0
     return-void
 
-    .line 210
     :cond_2
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
@@ -122,7 +112,6 @@
 
     if-nez v0, :cond_3
 
-    .line 211
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->mMenuBarGroup:Lcom/samsung/android/glview/GLViewGroup;
@@ -132,7 +121,6 @@
 
     invoke-virtual {v0, v2}, Lcom/samsung/android/glview/GLViewGroup;->setVisibility(I)V
 
-    .line 213
     :cond_3
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
@@ -145,7 +133,6 @@
 
     goto :goto_0
 
-    .line 216
     :cond_4
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
@@ -156,7 +143,6 @@
 
     if-nez v0, :cond_1
 
-    .line 217
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->mMenuBarGroup:Lcom/samsung/android/glview/GLViewGroup;

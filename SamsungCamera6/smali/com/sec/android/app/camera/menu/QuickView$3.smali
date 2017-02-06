@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/QuickView;)V
     .locals 0
 
-    .prologue
-    .line 119
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/QuickView$3;->this$0:Lcom/sec/android/app/camera/menu/QuickView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,15 +37,12 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 122
     const-string v0, "QuickView"
 
     const-string v1, "mLaunchChooserRunnable"
 
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/QuickView$3;->this$0:Lcom/sec/android/app/camera/menu/QuickView;
 
     # getter for: Lcom/sec/android/app/camera/menu/QuickView;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -64,6 +59,5 @@
 
     invoke-interface {v0, v1}, Lcom/sec/android/app/camera/interfaces/CameraContext;->startShareActivity(Landroid/net/Uri;)V
 
-    .line 124
     return-void
 .end method

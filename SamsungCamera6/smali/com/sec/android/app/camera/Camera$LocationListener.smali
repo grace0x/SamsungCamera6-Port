@@ -32,34 +32,25 @@
 # direct methods
 .method public constructor <init>(Lcom/sec/android/app/camera/Camera;Ljava/lang/String;Lcom/sec/android/app/camera/Camera;)V
     .locals 1
-    .param p2, "provider"    # Ljava/lang/String;
-    .param p3, "context"    # Lcom/sec/android/app/camera/Camera;
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 9074
     iput-object p1, p0, Lcom/sec/android/app/camera/Camera$LocationListener;->this$0:Lcom/sec/android/app/camera/Camera;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 9071
     iput v0, p0, Lcom/sec/android/app/camera/Camera$LocationListener;->mValidOfGPS:I
 
-    .line 9072
     iput v0, p0, Lcom/sec/android/app/camera/Camera$LocationListener;->mValidOfNetwork:I
 
-    .line 9075
     new-instance v0, Landroid/location/Location;
 
     invoke-direct {v0, p2}, Landroid/location/Location;-><init>(Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/Camera$LocationListener;->mLastLocation:Landroid/location/Location;
 
-    .line 9076
     iput-object p3, p0, Lcom/sec/android/app/camera/Camera$LocationListener;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
-    .line 9077
     return-void
 .end method
 
@@ -68,14 +59,12 @@
 .method public current()Landroid/location/Location;
     .locals 5
 
-    .prologue
     const/4 v4, 0x2
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 9080
     iget v0, p0, Lcom/sec/android/app/camera/Camera$LocationListener;->mValidOfGPS:I
 
     if-ne v0, v4, :cond_0
@@ -115,21 +104,17 @@
 
 .method public onLocationChanged(Landroid/location/Location;)V
     .locals 5
-    .param p1, "newLocation"    # Landroid/location/Location;
 
-    .prologue
     const/4 v4, 0x2
 
     const-wide/16 v2, 0x0
 
-    .line 9085
     const-string v0, "Camera6"
 
     const-string v1, "onLocationChanged"
 
     invoke-static {v0, v1}, Landroid/util/Log;->secE(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9088
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v0
@@ -164,12 +149,10 @@
 
     if-nez v0, :cond_2
 
-    .line 9099
     :cond_1
     :goto_0
     return-void
 
-    .line 9093
     :cond_2
     const-string v0, "gps"
 
@@ -183,10 +166,8 @@
 
     if-eqz v0, :cond_4
 
-    .line 9094
     iput v4, p0, Lcom/sec/android/app/camera/Camera$LocationListener;->mValidOfGPS:I
 
-    .line 9098
     :cond_3
     :goto_1
     iget-object v0, p0, Lcom/sec/android/app/camera/Camera$LocationListener;->mLastLocation:Landroid/location/Location;
@@ -195,7 +176,6 @@
 
     goto :goto_0
 
-    .line 9095
     :cond_4
     const-string v0, "network"
 
@@ -209,7 +189,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 9096
     iput v4, p0, Lcom/sec/android/app/camera/Camera$LocationListener;->mValidOfNetwork:I
 
     goto :goto_1
@@ -217,12 +196,9 @@
 
 .method public onProviderDisabled(Ljava/lang/String;)V
     .locals 4
-    .param p1, "provider"    # Ljava/lang/String;
 
-    .prologue
     const/4 v3, 0x1
 
-    .line 9103
     const-string v0, "Camera6"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -245,7 +221,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secE(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9104
     const-string v0, "gps"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -254,10 +229,8 @@
 
     if-eqz v0, :cond_2
 
-    .line 9105
     iput v3, p0, Lcom/sec/android/app/camera/Camera$LocationListener;->mValidOfGPS:I
 
-    .line 9109
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/sec/android/app/camera/Camera$LocationListener;->this$0:Lcom/sec/android/app/camera/Camera;
@@ -268,14 +241,11 @@
 
     if-nez v0, :cond_1
 
-    .line 9110
     invoke-virtual {p0}, Lcom/sec/android/app/camera/Camera$LocationListener;->reset()V
 
-    .line 9112
     :cond_1
     return-void
 
-    .line 9106
     :cond_2
     const-string v0, "network"
 
@@ -285,7 +255,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 9107
     iput v3, p0, Lcom/sec/android/app/camera/Camera$LocationListener;->mValidOfNetwork:I
 
     goto :goto_0
@@ -293,10 +262,7 @@
 
 .method public onProviderEnabled(Ljava/lang/String;)V
     .locals 3
-    .param p1, "provider"    # Ljava/lang/String;
 
-    .prologue
-    .line 9116
     const-string v0, "Camera6"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -319,18 +285,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secE(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9117
     return-void
 .end method
 
 .method public onStatusChanged(Ljava/lang/String;ILandroid/os/Bundle;)V
     .locals 3
-    .param p1, "provider"    # Ljava/lang/String;
-    .param p2, "status"    # I
-    .param p3, "extras"    # Landroid/os/Bundle;
 
-    .prologue
-    .line 9121
     const-string v0, "Camera6"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -369,17 +329,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secE(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9122
     iget-object v0, p0, Lcom/sec/android/app/camera/Camera$LocationListener;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
 
     if-nez v0, :cond_1
 
-    .line 9131
     :cond_0
     :goto_0
     return-void
 
-    .line 9125
     :cond_1
     const-string v0, "gps"
 
@@ -389,10 +346,8 @@
 
     if-eqz v0, :cond_2
 
-    .line 9126
     iput p2, p0, Lcom/sec/android/app/camera/Camera$LocationListener;->mValidOfGPS:I
 
-    .line 9128
     :cond_2
     const-string v0, "network"
 
@@ -402,7 +357,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 9129
     iput p2, p0, Lcom/sec/android/app/camera/Camera$LocationListener;->mValidOfNetwork:I
 
     goto :goto_0
@@ -411,15 +365,11 @@
 .method public reset()V
     .locals 1
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 9134
     iput v0, p0, Lcom/sec/android/app/camera/Camera$LocationListener;->mValidOfGPS:I
 
-    .line 9135
     iput v0, p0, Lcom/sec/android/app/camera/Camera$LocationListener;->mValidOfNetwork:I
 
-    .line 9136
     return-void
 .end method

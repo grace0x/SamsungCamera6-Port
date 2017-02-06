@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/engine/CommonEngine$1;)V
     .locals 0
 
-    .prologue
-    .line 391
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/CommonEngine$1$1;->this$1:Lcom/sec/android/app/camera/engine/CommonEngine$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,8 +37,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 394
     const-string v0, "CommonEngine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -72,7 +68,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 395
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine$1$1;->this$1:Lcom/sec/android/app/camera/engine/CommonEngine$1;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/engine/CommonEngine$1;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
@@ -84,7 +79,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 396
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine$1$1;->this$1:Lcom/sec/android/app/camera/engine/CommonEngine$1;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/engine/CommonEngine$1;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
@@ -105,7 +99,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/seccamera/SecCamera;->sendOrientaionInfotoHAL(I)V
 
-    .line 398
     :cond_0
     return-void
 .end method

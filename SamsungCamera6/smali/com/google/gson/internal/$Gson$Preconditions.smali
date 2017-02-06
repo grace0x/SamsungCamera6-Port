@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,20 +14,15 @@
 
 .method public static checkArgument(Z)V
     .locals 1
-    .param p0, "condition"    # Z
 
-    .prologue
-    .line 41
     if-nez p0, :cond_0
 
-    .line 42
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
     throw v0
 
-    .line 44
     :cond_0
     return-void
 .end method
@@ -44,19 +37,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 34
-    .local p0, "obj":Ljava/lang/Object;, "TT;"
     if-nez p0, :cond_0
 
-    .line 35
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 37
     :cond_0
     return-object p0
 .end method

@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/widget/gl/DragDropBox;)V
     .locals 0
 
-    .prologue
-    .line 207
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/DragDropBox$1;->this$0:Lcom/sec/android/app/camera/widget/gl/DragDropBox;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,8 +37,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 210
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/DragDropBox$1;->this$0:Lcom/sec/android/app/camera/widget/gl/DragDropBox;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/DragDropBox;->mIsAreaLineEnabled:Z
@@ -58,7 +54,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 211
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/DragDropBox$1;->this$0:Lcom/sec/android/app/camera/widget/gl/DragDropBox;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/DragDropBox;->mAreaLineRect:Lcom/samsung/android/glview/GLRectangle;
@@ -70,7 +65,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLRectangle;->setVisibility(I)V
 
-    .line 213
     :cond_0
     return-void
 .end method

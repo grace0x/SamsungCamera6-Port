@@ -18,8 +18,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 587
     invoke-direct {p0}, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplBase;-><init>()V
 
     return-void
@@ -29,11 +27,7 @@
 # virtual methods
 .method public build(Landroid/support/v4/app/NotificationCompat$Builder;Landroid/support/v4/app/NotificationCompat$BuilderExtender;)Landroid/app/Notification;
     .locals 24
-    .param p1, "b"    # Landroid/support/v4/app/NotificationCompat$Builder;
-    .param p2, "extender"    # Landroid/support/v4/app/NotificationCompat$BuilderExtender;
 
-    .prologue
-    .line 590
     new-instance v2, Landroid/support/v4/app/NotificationCompatJellybean$Builder;
 
     move-object/from16 v0, p1
@@ -138,8 +132,6 @@
 
     invoke-direct/range {v2 .. v23}, Landroid/support/v4/app/NotificationCompatJellybean$Builder;-><init>(Landroid/content/Context;Landroid/app/Notification;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/widget/RemoteViews;ILandroid/app/PendingIntent;Landroid/app/PendingIntent;Landroid/graphics/Bitmap;IIZZILjava/lang/CharSequence;ZLandroid/os/Bundle;Ljava/lang/String;ZLjava/lang/String;)V
 
-    .line 596
-    .local v2, "builder":Landroid/support/v4/app/NotificationCompatJellybean$Builder;
     move-object/from16 v0, p1
 
     iget-object v3, v0, Landroid/support/v4/app/NotificationCompat$Builder;->mActions:Ljava/util/ArrayList;
@@ -147,7 +139,6 @@
     # invokes: Landroid/support/v4/app/NotificationCompat;->addActionsToBuilder(Landroid/support/v4/app/NotificationBuilderWithActions;Ljava/util/ArrayList;)V
     invoke-static {v2, v3}, Landroid/support/v4/app/NotificationCompat;->access$000(Landroid/support/v4/app/NotificationBuilderWithActions;Ljava/util/ArrayList;)V
 
-    .line 597
     move-object/from16 v0, p1
 
     iget-object v3, v0, Landroid/support/v4/app/NotificationCompat$Builder;->mStyle:Landroid/support/v4/app/NotificationCompat$Style;
@@ -155,7 +146,6 @@
     # invokes: Landroid/support/v4/app/NotificationCompat;->addStyleToBuilderJellybean(Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;Landroid/support/v4/app/NotificationCompat$Style;)V
     invoke-static {v2, v3}, Landroid/support/v4/app/NotificationCompat;->access$100(Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;Landroid/support/v4/app/NotificationCompat$Style;)V
 
-    .line 598
     move-object/from16 v0, p2
 
     move-object/from16 v1, p1
@@ -169,11 +159,7 @@
 
 .method public getAction(Landroid/app/Notification;I)Landroid/support/v4/app/NotificationCompat$Action;
     .locals 2
-    .param p1, "n"    # Landroid/app/Notification;
-    .param p2, "actionIndex"    # I
 
-    .prologue
-    .line 613
     sget-object v0, Landroid/support/v4/app/NotificationCompat$Action;->FACTORY:Landroid/support/v4/app/NotificationCompatBase$Action$Factory;
 
     sget-object v1, Landroid/support/v4/app/RemoteInput;->FACTORY:Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput$Factory;
@@ -189,10 +175,7 @@
 
 .method public getActionCount(Landroid/app/Notification;)I
     .locals 1
-    .param p1, "n"    # Landroid/app/Notification;
 
-    .prologue
-    .line 608
     invoke-static {p1}, Landroid/support/v4/app/NotificationCompatJellybean;->getActionCount(Landroid/app/Notification;)I
 
     move-result v0
@@ -213,9 +196,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 620
-    .local p1, "parcelables":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/os/Parcelable;>;"
     sget-object v0, Landroid/support/v4/app/NotificationCompat$Action;->FACTORY:Landroid/support/v4/app/NotificationCompatBase$Action$Factory;
 
     sget-object v1, Landroid/support/v4/app/RemoteInput;->FACTORY:Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput$Factory;
@@ -233,10 +213,7 @@
 
 .method public getExtras(Landroid/app/Notification;)Landroid/os/Bundle;
     .locals 1
-    .param p1, "n"    # Landroid/app/Notification;
 
-    .prologue
-    .line 603
     invoke-static {p1}, Landroid/support/v4/app/NotificationCompatJellybean;->getExtras(Landroid/app/Notification;)Landroid/os/Bundle;
 
     move-result-object v0
@@ -246,10 +223,7 @@
 
 .method public getGroup(Landroid/app/Notification;)Ljava/lang/String;
     .locals 1
-    .param p1, "n"    # Landroid/app/Notification;
 
-    .prologue
-    .line 637
     invoke-static {p1}, Landroid/support/v4/app/NotificationCompatJellybean;->getGroup(Landroid/app/Notification;)Ljava/lang/String;
 
     move-result-object v0
@@ -259,10 +233,7 @@
 
 .method public getLocalOnly(Landroid/app/Notification;)Z
     .locals 1
-    .param p1, "n"    # Landroid/app/Notification;
 
-    .prologue
-    .line 632
     invoke-static {p1}, Landroid/support/v4/app/NotificationCompatJellybean;->getLocalOnly(Landroid/app/Notification;)Z
 
     move-result v0
@@ -272,7 +243,6 @@
 
 .method public getParcelableArrayListForActions([Landroid/support/v4/app/NotificationCompat$Action;)Ljava/util/ArrayList;
     .locals 1
-    .param p1, "actions"    # [Landroid/support/v4/app/NotificationCompat$Action;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([",
@@ -285,8 +255,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 627
     invoke-static {p1}, Landroid/support/v4/app/NotificationCompatJellybean;->getParcelableArrayListForActions([Landroid/support/v4/app/NotificationCompatBase$Action;)Ljava/util/ArrayList;
 
     move-result-object v0
@@ -296,10 +264,7 @@
 
 .method public getSortKey(Landroid/app/Notification;)Ljava/lang/String;
     .locals 1
-    .param p1, "n"    # Landroid/app/Notification;
 
-    .prologue
-    .line 647
     invoke-static {p1}, Landroid/support/v4/app/NotificationCompatJellybean;->getSortKey(Landroid/app/Notification;)Ljava/lang/String;
 
     move-result-object v0
@@ -309,10 +274,7 @@
 
 .method public isGroupSummary(Landroid/app/Notification;)Z
     .locals 1
-    .param p1, "n"    # Landroid/app/Notification;
 
-    .prologue
-    .line 642
     invoke-static {p1}, Landroid/support/v4/app/NotificationCompatJellybean;->isGroupSummary(Landroid/app/Notification;)Z
 
     move-result v0

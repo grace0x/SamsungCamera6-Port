@@ -165,14 +165,12 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/16 v5, 0x15
 
     const/4 v2, 0x1
 
     const/4 v3, 0x0
 
-    .line 174
     new-array v1, v2, [I
 
     const v4, 0x10100b3
@@ -181,7 +179,6 @@
 
     sput-object v1, Landroid/support/v4/widget/DrawerLayout;->LAYOUT_ATTRS:[I
 
-    .line 179
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v4, 0x13
@@ -193,7 +190,6 @@
     :goto_0
     sput-boolean v1, Landroid/support/v4/widget/DrawerLayout;->CAN_HIDE_DESCENDANTS:Z
 
-    .line 182
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-lt v1, v5, :cond_1
@@ -201,39 +197,29 @@
     :goto_1
     sput-boolean v2, Landroid/support/v4/widget/DrawerLayout;->SET_DRAWER_SHADOW_FROM_ELEVATION:Z
 
-    .line 347
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 348
-    .local v0, "version":I
     if-lt v0, v5, :cond_2
 
-    .line 349
     new-instance v1, Landroid/support/v4/widget/DrawerLayout$DrawerLayoutCompatImplApi21;
 
     invoke-direct {v1}, Landroid/support/v4/widget/DrawerLayout$DrawerLayoutCompatImplApi21;-><init>()V
 
     sput-object v1, Landroid/support/v4/widget/DrawerLayout;->IMPL:Landroid/support/v4/widget/DrawerLayout$DrawerLayoutCompatImpl;
 
-    .line 353
     :goto_2
     return-void
 
-    .end local v0    # "version":I
     :cond_0
     move v1, v3
 
-    .line 179
     goto :goto_0
 
     :cond_1
     move v2, v3
 
-    .line 182
     goto :goto_1
 
-    .line 351
-    .restart local v0    # "version":I
     :cond_2
     new-instance v1, Landroid/support/v4/widget/DrawerLayout$DrawerLayoutCompatImplBase;
 
@@ -246,40 +232,27 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .param p1, "context"    # Landroid/content/Context;
 
-    .prologue
-    .line 358
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/support/v4/widget/DrawerLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 359
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
-    .param p1, "context"    # Landroid/content/Context;
-    .param p2, "attrs"    # Landroid/util/AttributeSet;
 
-    .prologue
-    .line 362
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Landroid/support/v4/widget/DrawerLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 363
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 7
-    .param p1, "context"    # Landroid/content/Context;
-    .param p2, "attrs"    # Landroid/util/AttributeSet;
-    .param p3, "defStyle"    # I
 
-    .prologue
     const/high16 v6, 0x3f800000    # 1.0f
 
     const/4 v3, 0x0
@@ -288,61 +261,46 @@
 
     const/4 v4, 0x3
 
-    .line 366
     invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 185
     new-instance v2, Landroid/support/v4/widget/DrawerLayout$ChildAccessibilityDelegate;
 
     invoke-direct {v2, p0}, Landroid/support/v4/widget/DrawerLayout$ChildAccessibilityDelegate;-><init>(Landroid/support/v4/widget/DrawerLayout;)V
 
     iput-object v2, p0, Landroid/support/v4/widget/DrawerLayout;->mChildAccessibilityDelegate:Landroid/support/v4/widget/DrawerLayout$ChildAccessibilityDelegate;
 
-    .line 191
     const/high16 v2, -0x67000000
 
     iput v2, p0, Landroid/support/v4/widget/DrawerLayout;->mScrimColor:I
 
-    .line 193
     new-instance v2, Landroid/graphics/Paint;
 
     invoke-direct {v2}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v2, p0, Landroid/support/v4/widget/DrawerLayout;->mScrimPaint:Landroid/graphics/Paint;
 
-    .line 201
     iput-boolean v5, p0, Landroid/support/v4/widget/DrawerLayout;->mFirstLayout:Z
 
-    .line 203
     iput v4, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeLeft:I
 
-    .line 204
     iput v4, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeRight:I
 
-    .line 205
     iput v4, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeStart:I
 
-    .line 206
     iput v4, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeEnd:I
 
-    .line 228
     iput-object v3, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowStart:Landroid/graphics/drawable/Drawable;
 
-    .line 229
     iput-object v3, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowEnd:Landroid/graphics/drawable/Drawable;
 
-    .line 230
     iput-object v3, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowLeft:Landroid/graphics/drawable/Drawable;
 
-    .line 231
     iput-object v3, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowRight:Landroid/graphics/drawable/Drawable;
 
-    .line 367
     const/high16 v2, 0x40000
 
     invoke-virtual {p0, v2}, Landroid/support/v4/widget/DrawerLayout;->setDescendantFocusability(I)V
 
-    .line 368
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -353,8 +311,6 @@
 
     iget v0, v2, Landroid/util/DisplayMetrics;->density:F
 
-    .line 369
-    .local v0, "density":F
     const/high16 v2, 0x42800000    # 64.0f
 
     mul-float/2addr v2, v0
@@ -367,20 +323,16 @@
 
     iput v2, p0, Landroid/support/v4/widget/DrawerLayout;->mMinDrawerMargin:I
 
-    .line 370
     const/high16 v2, 0x43c80000    # 400.0f
 
     mul-float v1, v2, v0
 
-    .line 372
-    .local v1, "minVel":F
     new-instance v2, Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;
 
     invoke-direct {v2, p0, v4}, Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;-><init>(Landroid/support/v4/widget/DrawerLayout;I)V
 
     iput-object v2, p0, Landroid/support/v4/widget/DrawerLayout;->mLeftCallback:Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;
 
-    .line 373
     new-instance v2, Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;
 
     const/4 v3, 0x5
@@ -389,7 +341,6 @@
 
     iput-object v2, p0, Landroid/support/v4/widget/DrawerLayout;->mRightCallback:Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;
 
-    .line 375
     iget-object v2, p0, Landroid/support/v4/widget/DrawerLayout;->mLeftCallback:Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;
 
     invoke-static {p0, v6, v2}, Landroid/support/v4/widget/ViewDragHelper;->create(Landroid/view/ViewGroup;FLandroid/support/v4/widget/ViewDragHelper$Callback;)Landroid/support/v4/widget/ViewDragHelper;
@@ -398,24 +349,20 @@
 
     iput-object v2, p0, Landroid/support/v4/widget/DrawerLayout;->mLeftDragger:Landroid/support/v4/widget/ViewDragHelper;
 
-    .line 376
     iget-object v2, p0, Landroid/support/v4/widget/DrawerLayout;->mLeftDragger:Landroid/support/v4/widget/ViewDragHelper;
 
     invoke-virtual {v2, v5}, Landroid/support/v4/widget/ViewDragHelper;->setEdgeTrackingEnabled(I)V
 
-    .line 377
     iget-object v2, p0, Landroid/support/v4/widget/DrawerLayout;->mLeftDragger:Landroid/support/v4/widget/ViewDragHelper;
 
     invoke-virtual {v2, v1}, Landroid/support/v4/widget/ViewDragHelper;->setMinVelocity(F)V
 
-    .line 378
     iget-object v2, p0, Landroid/support/v4/widget/DrawerLayout;->mLeftCallback:Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;
 
     iget-object v3, p0, Landroid/support/v4/widget/DrawerLayout;->mLeftDragger:Landroid/support/v4/widget/ViewDragHelper;
 
     invoke-virtual {v2, v3}, Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;->setDragger(Landroid/support/v4/widget/ViewDragHelper;)V
 
-    .line 380
     iget-object v2, p0, Landroid/support/v4/widget/DrawerLayout;->mRightCallback:Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;
 
     invoke-static {p0, v6, v2}, Landroid/support/v4/widget/ViewDragHelper;->create(Landroid/view/ViewGroup;FLandroid/support/v4/widget/ViewDragHelper$Callback;)Landroid/support/v4/widget/ViewDragHelper;
@@ -424,56 +371,46 @@
 
     iput-object v2, p0, Landroid/support/v4/widget/DrawerLayout;->mRightDragger:Landroid/support/v4/widget/ViewDragHelper;
 
-    .line 381
     iget-object v2, p0, Landroid/support/v4/widget/DrawerLayout;->mRightDragger:Landroid/support/v4/widget/ViewDragHelper;
 
     const/4 v3, 0x2
 
     invoke-virtual {v2, v3}, Landroid/support/v4/widget/ViewDragHelper;->setEdgeTrackingEnabled(I)V
 
-    .line 382
     iget-object v2, p0, Landroid/support/v4/widget/DrawerLayout;->mRightDragger:Landroid/support/v4/widget/ViewDragHelper;
 
     invoke-virtual {v2, v1}, Landroid/support/v4/widget/ViewDragHelper;->setMinVelocity(F)V
 
-    .line 383
     iget-object v2, p0, Landroid/support/v4/widget/DrawerLayout;->mRightCallback:Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;
 
     iget-object v3, p0, Landroid/support/v4/widget/DrawerLayout;->mRightDragger:Landroid/support/v4/widget/ViewDragHelper;
 
     invoke-virtual {v2, v3}, Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;->setDragger(Landroid/support/v4/widget/ViewDragHelper;)V
 
-    .line 386
     invoke-virtual {p0, v5}, Landroid/support/v4/widget/DrawerLayout;->setFocusableInTouchMode(Z)V
 
-    .line 388
     invoke-static {p0, v5}, Landroid/support/v4/view/ViewCompat;->setImportantForAccessibility(Landroid/view/View;I)V
 
-    .line 391
     new-instance v2, Landroid/support/v4/widget/DrawerLayout$AccessibilityDelegate;
 
     invoke-direct {v2, p0}, Landroid/support/v4/widget/DrawerLayout$AccessibilityDelegate;-><init>(Landroid/support/v4/widget/DrawerLayout;)V
 
     invoke-static {p0, v2}, Landroid/support/v4/view/ViewCompat;->setAccessibilityDelegate(Landroid/view/View;Landroid/support/v4/view/AccessibilityDelegateCompat;)V
 
-    .line 392
     const/4 v2, 0x0
 
     invoke-static {p0, v2}, Landroid/support/v4/view/ViewGroupCompat;->setMotionEventSplittingEnabled(Landroid/view/ViewGroup;Z)V
 
-    .line 393
     invoke-static {p0}, Landroid/support/v4/view/ViewCompat;->getFitsSystemWindows(Landroid/view/View;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 394
     sget-object v2, Landroid/support/v4/widget/DrawerLayout;->IMPL:Landroid/support/v4/widget/DrawerLayout$DrawerLayoutCompatImpl;
 
     invoke-interface {v2, p0}, Landroid/support/v4/widget/DrawerLayout$DrawerLayoutCompatImpl;->configureApplyInsets(Landroid/view/View;)V
 
-    .line 395
     sget-object v2, Landroid/support/v4/widget/DrawerLayout;->IMPL:Landroid/support/v4/widget/DrawerLayout$DrawerLayoutCompatImpl;
 
     invoke-interface {v2, p1}, Landroid/support/v4/widget/DrawerLayout$DrawerLayoutCompatImpl;->getDefaultStatusBarBackground(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
@@ -482,7 +419,6 @@
 
     iput-object v2, p0, Landroid/support/v4/widget/DrawerLayout;->mStatusBarBackground:Landroid/graphics/drawable/Drawable;
 
-    .line 398
     :cond_0
     const/high16 v2, 0x41200000    # 10.0f
 
@@ -490,22 +426,18 @@
 
     iput v2, p0, Landroid/support/v4/widget/DrawerLayout;->mDrawerElevation:F
 
-    .line 400
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Landroid/support/v4/widget/DrawerLayout;->mNonDrawerViews:Ljava/util/ArrayList;
 
-    .line 401
     return-void
 .end method
 
 .method static synthetic access$400()[I
     .locals 1
 
-    .prologue
-    .line 94
     sget-object v0, Landroid/support/v4/widget/DrawerLayout;->LAYOUT_ATTRS:[I
 
     return-object v0
@@ -514,8 +446,6 @@
 .method static synthetic access$500()Z
     .locals 1
 
-    .prologue
-    .line 94
     sget-boolean v0, Landroid/support/v4/widget/DrawerLayout;->CAN_HIDE_DESCENDANTS:Z
 
     return v0
@@ -523,10 +453,7 @@
 
 .method static synthetic access$600(Landroid/support/v4/widget/DrawerLayout;)Landroid/view/View;
     .locals 1
-    .param p0, "x0"    # Landroid/support/v4/widget/DrawerLayout;
 
-    .prologue
-    .line 94
     invoke-direct {p0}, Landroid/support/v4/widget/DrawerLayout;->findVisibleDrawer()Landroid/view/View;
 
     move-result-object v0
@@ -536,10 +463,7 @@
 
 .method static synthetic access$700(Landroid/view/View;)Z
     .locals 1
-    .param p0, "x0"    # Landroid/view/View;
 
-    .prologue
-    .line 94
     invoke-static {p0}, Landroid/support/v4/widget/DrawerLayout;->includeChildForAccessibility(Landroid/view/View;)Z
 
     move-result v0
@@ -550,27 +474,19 @@
 .method private findVisibleDrawer()Landroid/view/View;
     .locals 4
 
-    .prologue
-    .line 1807
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->getChildCount()I
 
     move-result v1
 
-    .line 1808
-    .local v1, "childCount":I
     const/4 v2, 0x0
 
-    .local v2, "i":I
     :goto_0
     if-ge v2, v1, :cond_1
 
-    .line 1809
     invoke-virtual {p0, v2}, Landroid/support/v4/widget/DrawerLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 1810
-    .local v0, "child":Landroid/view/View;
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/DrawerLayout;->isDrawerView(Landroid/view/View;)Z
 
     move-result v3
@@ -583,20 +499,14 @@
 
     if-eqz v3, :cond_0
 
-    .line 1814
-    .end local v0    # "child":Landroid/view/View;
     :goto_1
     return-object v0
 
-    .line 1808
-    .restart local v0    # "child":Landroid/view/View;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 1814
-    .end local v0    # "child":Landroid/view/View;
     :cond_1
     const/4 v0, 0x0
 
@@ -605,24 +515,18 @@
 
 .method static gravityToString(I)Ljava/lang/String;
     .locals 2
-    .param p0, "gravity"    # I
 
-    .prologue
-    .line 988
     and-int/lit8 v0, p0, 0x3
 
     const/4 v1, 0x3
 
     if-ne v0, v1, :cond_0
 
-    .line 989
     const-string v0, "LEFT"
 
-    .line 994
     :goto_0
     return-object v0
 
-    .line 991
     :cond_0
     and-int/lit8 v0, p0, 0x5
 
@@ -630,12 +534,10 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 992
     const-string v0, "RIGHT"
 
     goto :goto_0
 
-    .line 994
     :cond_1
     invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
@@ -646,21 +548,15 @@
 
 .method private static hasOpaqueBackground(Landroid/view/View;)Z
     .locals 4
-    .param p0, "v"    # Landroid/view/View;
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1280
     invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 1281
-    .local v0, "bg":Landroid/graphics/drawable/Drawable;
     if-eqz v0, :cond_0
 
-    .line 1282
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getOpacity()I
 
     move-result v2
@@ -671,7 +567,6 @@
 
     const/4 v1, 0x1
 
-    .line 1284
     :cond_0
     return v1
 .end method
@@ -679,21 +574,15 @@
 .method private hasPeekingDrawer()Z
     .locals 4
 
-    .prologue
-    .line 1733
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->getChildCount()I
 
     move-result v0
 
-    .line 1734
-    .local v0, "childCount":I
     const/4 v1, 0x0
 
-    .local v1, "i":I
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 1735
     invoke-virtual {p0, v1}, Landroid/support/v4/widget/DrawerLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
@@ -704,8 +593,6 @@
 
     check-cast v2, Landroid/support/v4/widget/DrawerLayout$LayoutParams;
 
-    .line 1736
-    .local v2, "lp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     # getter for: Landroid/support/v4/widget/DrawerLayout$LayoutParams;->isPeeking:Z
     invoke-static {v2}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$200(Landroid/support/v4/widget/DrawerLayout$LayoutParams;)Z
 
@@ -713,23 +600,16 @@
 
     if-eqz v3, :cond_0
 
-    .line 1737
     const/4 v3, 0x1
 
-    .line 1740
-    .end local v2    # "lp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     :goto_1
     return v3
 
-    .line 1734
-    .restart local v2    # "lp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1740
-    .end local v2    # "lp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     :cond_1
     const/4 v3, 0x0
 
@@ -739,8 +619,6 @@
 .method private hasVisibleDrawer()Z
     .locals 1
 
-    .prologue
-    .line 1803
     invoke-direct {p0}, Landroid/support/v4/widget/DrawerLayout;->findVisibleDrawer()Landroid/view/View;
 
     move-result-object v0
@@ -760,10 +638,7 @@
 
 .method private static includeChildForAccessibility(Landroid/view/View;)Z
     .locals 2
-    .param p0, "child"    # Landroid/view/View;
 
-    .prologue
-    .line 1943
     invoke-static {p0}, Landroid/support/v4/view/ViewCompat;->getImportantForAccessibility(Landroid/view/View;)I
 
     move-result v0
@@ -793,11 +668,7 @@
 
 .method private mirror(Landroid/graphics/drawable/Drawable;I)Z
     .locals 1
-    .param p1, "drawable"    # Landroid/graphics/drawable/Drawable;
-    .param p2, "layoutDirection"    # I
 
-    .prologue
-    .line 1164
     if-eqz p1, :cond_0
 
     invoke-static {p1}, Landroid/support/v4/graphics/drawable/DrawableCompat;->isAutoMirrored(Landroid/graphics/drawable/Drawable;)Z
@@ -806,19 +677,15 @@
 
     if-nez v0, :cond_1
 
-    .line 1165
     :cond_0
     const/4 v0, 0x0
 
-    .line 1169
     :goto_0
     return v0
 
-    .line 1168
     :cond_1
     invoke-static {p1, p2}, Landroid/support/v4/graphics/drawable/DrawableCompat;->setLayoutDirection(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 1169
     const/4 v0, 0x1
 
     goto :goto_0
@@ -827,50 +694,38 @@
 .method private resolveLeftShadow()Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .prologue
-    .line 1122
     invoke-static {p0}, Landroid/support/v4/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result v0
 
-    .line 1124
-    .local v0, "layoutDirection":I
     if-nez v0, :cond_0
 
-    .line 1125
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowStart:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_1
 
-    .line 1127
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowStart:Landroid/graphics/drawable/Drawable;
 
     invoke-direct {p0, v1, v0}, Landroid/support/v4/widget/DrawerLayout;->mirror(Landroid/graphics/drawable/Drawable;I)Z
 
-    .line 1128
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowStart:Landroid/graphics/drawable/Drawable;
 
-    .line 1137
     :goto_0
     return-object v1
 
-    .line 1131
     :cond_0
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowEnd:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_1
 
-    .line 1133
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowEnd:Landroid/graphics/drawable/Drawable;
 
     invoke-direct {p0, v1, v0}, Landroid/support/v4/widget/DrawerLayout;->mirror(Landroid/graphics/drawable/Drawable;I)Z
 
-    .line 1134
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowEnd:Landroid/graphics/drawable/Drawable;
 
     goto :goto_0
 
-    .line 1137
     :cond_1
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowLeft:Landroid/graphics/drawable/Drawable;
 
@@ -880,50 +735,38 @@
 .method private resolveRightShadow()Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .prologue
-    .line 1141
     invoke-static {p0}, Landroid/support/v4/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result v0
 
-    .line 1142
-    .local v0, "layoutDirection":I
     if-nez v0, :cond_0
 
-    .line 1143
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowEnd:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_1
 
-    .line 1145
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowEnd:Landroid/graphics/drawable/Drawable;
 
     invoke-direct {p0, v1, v0}, Landroid/support/v4/widget/DrawerLayout;->mirror(Landroid/graphics/drawable/Drawable;I)Z
 
-    .line 1146
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowEnd:Landroid/graphics/drawable/Drawable;
 
-    .line 1155
     :goto_0
     return-object v1
 
-    .line 1149
     :cond_0
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowStart:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_1
 
-    .line 1151
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowStart:Landroid/graphics/drawable/Drawable;
 
     invoke-direct {p0, v1, v0}, Landroid/support/v4/widget/DrawerLayout;->mirror(Landroid/graphics/drawable/Drawable;I)Z
 
-    .line 1152
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowStart:Landroid/graphics/drawable/Drawable;
 
     goto :goto_0
 
-    .line 1155
     :cond_1
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowRight:Landroid/graphics/drawable/Drawable;
 
@@ -933,17 +776,13 @@
 .method private resolveShadowDrawables()V
     .locals 1
 
-    .prologue
-    .line 1114
     sget-boolean v0, Landroid/support/v4/widget/DrawerLayout;->SET_DRAWER_SHADOW_FROM_ELEVATION:Z
 
     if-eqz v0, :cond_0
 
-    .line 1119
     :goto_0
     return-void
 
-    .line 1117
     :cond_0
     invoke-direct {p0}, Landroid/support/v4/widget/DrawerLayout;->resolveLeftShadow()Landroid/graphics/drawable/Drawable;
 
@@ -951,7 +790,6 @@
 
     iput-object v0, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowLeftResolved:Landroid/graphics/drawable/Drawable;
 
-    .line 1118
     invoke-direct {p0}, Landroid/support/v4/widget/DrawerLayout;->resolveRightShadow()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -963,30 +801,20 @@
 
 .method private updateChildrenImportantForAccessibility(Landroid/view/View;Z)V
     .locals 4
-    .param p1, "drawerView"    # Landroid/view/View;
-    .param p2, "isDrawerOpen"    # Z
 
-    .prologue
-    .line 882
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->getChildCount()I
 
     move-result v1
 
-    .line 883
-    .local v1, "childCount":I
     const/4 v2, 0x0
 
-    .local v2, "i":I
     :goto_0
     if-ge v2, v1, :cond_3
 
-    .line 884
     invoke-virtual {p0, v2}, Landroid/support/v4/widget/DrawerLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 885
-    .local v0, "child":Landroid/view/View;
     if-nez p2, :cond_0
 
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/DrawerLayout;->isDrawerView(Landroid/view/View;)Z
@@ -1000,19 +828,16 @@
 
     if-ne v0, p1, :cond_2
 
-    .line 889
     :cond_1
     const/4 v3, 0x1
 
     invoke-static {v0, v3}, Landroid/support/v4/view/ViewCompat;->setImportantForAccessibility(Landroid/view/View;I)V
 
-    .line 883
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 892
     :cond_2
     const/4 v3, 0x4
 
@@ -1020,8 +845,6 @@
 
     goto :goto_1
 
-    .line 896
-    .end local v0    # "child":Landroid/view/View;
     :cond_3
     return-void
 .end method
@@ -1030,33 +853,27 @@
 # virtual methods
 .method public addDrawerListener(Landroid/support/v4/widget/DrawerLayout$DrawerListener;)V
     .locals 1
-    .param p1, "listener"    # Landroid/support/v4/widget/DrawerLayout$DrawerListener;
+    .param p1    # Landroid/support/v4/widget/DrawerLayout$DrawerListener;
         .annotation build Landroid/support/annotation/NonNull;
         .end annotation
     .end param
 
-    .prologue
-    .line 544
     if-nez p1, :cond_0
 
-    .line 551
     :goto_0
     return-void
 
-    .line 547
     :cond_0
     iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout;->mListeners:Ljava/util/List;
 
     if-nez v0, :cond_1
 
-    .line 548
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/support/v4/widget/DrawerLayout;->mListeners:Ljava/util/List;
 
-    .line 550
     :cond_1
     iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout;->mListeners:Ljava/util/List;
 
@@ -1067,8 +884,6 @@
 
 .method public addFocusables(Ljava/util/ArrayList;II)V
     .locals 7
-    .param p2, "direction"    # I
-    .param p3, "focusableMode"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1079,9 +894,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 1769
-    .local p1, "views":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/view/View;>;"
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->getDescendantFocusability()I
 
     move-result v5
@@ -1090,62 +902,47 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 1800
     :goto_0
     return-void
 
-    .line 1775
     :cond_0
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->getChildCount()I
 
     move-result v1
 
-    .line 1776
-    .local v1, "childCount":I
     const/4 v3, 0x0
 
-    .line 1777
-    .local v3, "isDrawerOpen":Z
     const/4 v2, 0x0
 
-    .local v2, "i":I
     :goto_1
     if-ge v2, v1, :cond_3
 
-    .line 1778
     invoke-virtual {p0, v2}, Landroid/support/v4/widget/DrawerLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 1779
-    .local v0, "child":Landroid/view/View;
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/DrawerLayout;->isDrawerView(Landroid/view/View;)Z
 
     move-result v5
 
     if-eqz v5, :cond_2
 
-    .line 1780
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/DrawerLayout;->isDrawerOpen(Landroid/view/View;)Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
-    .line 1781
     const/4 v3, 0x1
 
-    .line 1782
     invoke-virtual {v0, p1, p2, p3}, Landroid/view/View;->addFocusables(Ljava/util/ArrayList;II)V
 
-    .line 1777
     :cond_1
     :goto_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 1785
     :cond_2
     iget-object v5, p0, Landroid/support/v4/widget/DrawerLayout;->mNonDrawerViews:Ljava/util/ArrayList;
 
@@ -1153,26 +950,20 @@
 
     goto :goto_2
 
-    .line 1789
-    .end local v0    # "child":Landroid/view/View;
     :cond_3
     if-nez v3, :cond_5
 
-    .line 1790
     iget-object v5, p0, Landroid/support/v4/widget/DrawerLayout;->mNonDrawerViews:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
     move-result v4
 
-    .line 1791
-    .local v4, "nonDrawerViewsCount":I
     const/4 v2, 0x0
 
     :goto_3
     if-ge v2, v4, :cond_5
 
-    .line 1792
     iget-object v5, p0, Landroid/support/v4/widget/DrawerLayout;->mNonDrawerViews:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1181,26 +972,19 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 1793
-    .restart local v0    # "child":Landroid/view/View;
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
     move-result v5
 
     if-nez v5, :cond_4
 
-    .line 1794
     invoke-virtual {v0, p1, p2, p3}, Landroid/view/View;->addFocusables(Ljava/util/ArrayList;II)V
 
-    .line 1791
     :cond_4
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_3
 
-    .line 1799
-    .end local v0    # "child":Landroid/view/View;
-    .end local v4    # "nonDrawerViewsCount":I
     :cond_5
     iget-object v5, p0, Landroid/support/v4/widget/DrawerLayout;->mNonDrawerViews:Ljava/util/ArrayList;
 
@@ -1211,21 +995,13 @@
 
 .method public addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
     .locals 2
-    .param p1, "child"    # Landroid/view/View;
-    .param p2, "index"    # I
-    .param p3, "params"    # Landroid/view/ViewGroup$LayoutParams;
 
-    .prologue
-    .line 1915
     invoke-super {p0, p1, p2, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1917
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->findOpenDrawer()Landroid/view/View;
 
     move-result-object v0
 
-    .line 1918
-    .local v0, "openDrawer":Landroid/view/View;
     if-nez v0, :cond_0
 
     invoke-virtual {p0, p1}, Landroid/support/v4/widget/DrawerLayout;->isDrawerView(Landroid/view/View;)Z
@@ -1234,28 +1010,23 @@
 
     if-eqz v1, :cond_2
 
-    .line 1921
     :cond_0
     const/4 v1, 0x4
 
     invoke-static {p1, v1}, Landroid/support/v4/view/ViewCompat;->setImportantForAccessibility(Landroid/view/View;I)V
 
-    .line 1932
     :goto_0
     sget-boolean v1, Landroid/support/v4/widget/DrawerLayout;->CAN_HIDE_DESCENDANTS:Z
 
     if-nez v1, :cond_1
 
-    .line 1933
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mChildAccessibilityDelegate:Landroid/support/v4/widget/DrawerLayout$ChildAccessibilityDelegate;
 
     invoke-static {p1, v1}, Landroid/support/v4/view/ViewCompat;->setAccessibilityDelegate(Landroid/view/View;Landroid/support/v4/view/AccessibilityDelegateCompat;)V
 
-    .line 1935
     :cond_1
     return-void
 
-    .line 1926
     :cond_2
     const/4 v1, 0x1
 
@@ -1267,21 +1038,16 @@
 .method cancelChildViewTouch()V
     .locals 11
 
-    .prologue
     const/4 v5, 0x0
 
-    .line 1819
     iget-boolean v2, p0, Landroid/support/v4/widget/DrawerLayout;->mChildrenCanceledTouch:Z
 
     if-nez v2, :cond_1
 
-    .line 1820
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 1821
-    .local v0, "now":J
     const/4 v4, 0x3
 
     const/4 v7, 0x0
@@ -1294,63 +1060,43 @@
 
     move-result-object v8
 
-    .line 1823
-    .local v8, "cancelEvent":Landroid/view/MotionEvent;
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->getChildCount()I
 
     move-result v9
 
-    .line 1824
-    .local v9, "childCount":I
     const/4 v10, 0x0
 
-    .local v10, "i":I
     :goto_0
     if-ge v10, v9, :cond_0
 
-    .line 1825
     invoke-virtual {p0, v10}, Landroid/support/v4/widget/DrawerLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
     invoke-virtual {v2, v8}, Landroid/view/View;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 1824
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_0
 
-    .line 1827
     :cond_0
     invoke-virtual {v8}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 1828
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Landroid/support/v4/widget/DrawerLayout;->mChildrenCanceledTouch:Z
 
-    .line 1830
-    .end local v0    # "now":J
-    .end local v8    # "cancelEvent":Landroid/view/MotionEvent;
-    .end local v9    # "childCount":I
-    .end local v10    # "i":I
     :cond_1
     return-void
 .end method
 
 .method checkDrawerViewAbsoluteGravity(Landroid/view/View;I)Z
     .locals 2
-    .param p1, "drawerView"    # Landroid/view/View;
-    .param p2, "checkFor"    # I
 
-    .prologue
-    .line 933
     invoke-virtual {p0, p1}, Landroid/support/v4/widget/DrawerLayout;->getDrawerViewAbsoluteGravity(Landroid/view/View;)I
 
     move-result v0
 
-    .line 934
-    .local v0, "absGravity":I
     and-int v1, v0, p2
 
     if-ne v1, p2, :cond_0
@@ -1368,10 +1114,7 @@
 
 .method protected checkLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Z
     .locals 1
-    .param p1, "p"    # Landroid/view/ViewGroup$LayoutParams;
 
-    .prologue
-    .line 1759
     instance-of v0, p1, Landroid/support/v4/widget/DrawerLayout$LayoutParams;
 
     if-eqz v0, :cond_0
@@ -1395,19 +1138,13 @@
 
 .method public closeDrawer(I)V
     .locals 4
-    .param p1, "gravity"    # I
 
-    .prologue
-    .line 1658
     invoke-virtual {p0, p1}, Landroid/support/v4/widget/DrawerLayout;->findDrawerWithGravity(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 1659
-    .local v0, "drawerView":Landroid/view/View;
     if-nez v0, :cond_0
 
-    .line 1660
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1436,27 +1173,21 @@
 
     throw v1
 
-    .line 1663
     :cond_0
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/DrawerLayout;->closeDrawer(Landroid/view/View;)V
 
-    .line 1664
     return-void
 .end method
 
 .method public closeDrawer(Landroid/view/View;)V
     .locals 4
-    .param p1, "drawerView"    # Landroid/view/View;
 
-    .prologue
-    .line 1630
     invoke-virtual {p0, p1}, Landroid/support/v4/widget/DrawerLayout;->isDrawerView(Landroid/view/View;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 1631
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1487,7 +1218,6 @@
 
     throw v1
 
-    .line 1634
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -1495,39 +1225,31 @@
 
     check-cast v0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;
 
-    .line 1635
-    .local v0, "lp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     iget-boolean v1, p0, Landroid/support/v4/widget/DrawerLayout;->mFirstLayout:Z
 
     if-eqz v1, :cond_1
 
-    .line 1636
     const/4 v1, 0x0
 
     # setter for: Landroid/support/v4/widget/DrawerLayout$LayoutParams;->onScreen:F
     invoke-static {v0, v1}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$002(Landroid/support/v4/widget/DrawerLayout$LayoutParams;F)F
 
-    .line 1637
     const/4 v1, 0x0
 
     # setter for: Landroid/support/v4/widget/DrawerLayout$LayoutParams;->openState:I
     invoke-static {v0, v1}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$102(Landroid/support/v4/widget/DrawerLayout$LayoutParams;I)I
 
-    .line 1648
     :goto_0
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->invalidate()V
 
-    .line 1649
     return-void
 
-    .line 1639
     :cond_1
     const/4 v1, 0x4
 
     # |= operator for: Landroid/support/v4/widget/DrawerLayout$LayoutParams;->openState:I
     invoke-static {v0, v1}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$176(Landroid/support/v4/widget/DrawerLayout$LayoutParams;I)I
 
-    .line 1641
     const/4 v1, 0x3
 
     invoke-virtual {p0, p1, v1}, Landroid/support/v4/widget/DrawerLayout;->checkDrawerViewAbsoluteGravity(Landroid/view/View;I)Z
@@ -1536,7 +1258,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1642
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mLeftDragger:Landroid/support/v4/widget/ViewDragHelper;
 
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
@@ -1553,7 +1274,6 @@
 
     goto :goto_0
 
-    .line 1645
     :cond_2
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mRightDragger:Landroid/support/v4/widget/ViewDragHelper;
 
@@ -1573,53 +1293,37 @@
 .method public closeDrawers()V
     .locals 1
 
-    .prologue
-    .line 1545
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/DrawerLayout;->closeDrawers(Z)V
 
-    .line 1546
     return-void
 .end method
 
 .method closeDrawers(Z)V
     .locals 9
-    .param p1, "peekingOnly"    # Z
 
-    .prologue
-    .line 1549
     const/4 v5, 0x0
 
-    .line 1550
-    .local v5, "needsInvalidate":Z
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->getChildCount()I
 
     move-result v1
 
-    .line 1551
-    .local v1, "childCount":I
     const/4 v3, 0x0
 
-    .local v3, "i":I
     :goto_0
     if-ge v3, v1, :cond_3
 
-    .line 1552
     invoke-virtual {p0, v3}, Landroid/support/v4/widget/DrawerLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 1553
-    .local v0, "child":Landroid/view/View;
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v4
 
     check-cast v4, Landroid/support/v4/widget/DrawerLayout$LayoutParams;
 
-    .line 1555
-    .local v4, "lp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/DrawerLayout;->isDrawerView(Landroid/view/View;)Z
 
     move-result v6
@@ -1635,21 +1339,17 @@
 
     if-nez v6, :cond_1
 
-    .line 1551
     :cond_0
     :goto_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 1559
     :cond_1
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
     move-result v2
 
-    .line 1561
-    .local v2, "childWidth":I
     const/4 v6, 0x3
 
     invoke-virtual {p0, v0, v6}, Landroid/support/v4/widget/DrawerLayout;->checkDrawerViewAbsoluteGravity(Landroid/view/View;I)Z
@@ -1658,7 +1358,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 1562
     iget-object v6, p0, Landroid/support/v4/widget/DrawerLayout;->mLeftDragger:Landroid/support/v4/widget/ViewDragHelper;
 
     neg-int v7, v2
@@ -1673,7 +1372,6 @@
 
     or-int/2addr v5, v6
 
-    .line 1569
     :goto_2
     const/4 v6, 0x0
 
@@ -1682,7 +1380,6 @@
 
     goto :goto_1
 
-    .line 1565
     :cond_2
     iget-object v6, p0, Landroid/support/v4/widget/DrawerLayout;->mRightDragger:Landroid/support/v4/widget/ViewDragHelper;
 
@@ -1702,27 +1399,19 @@
 
     goto :goto_2
 
-    .line 1572
-    .end local v0    # "child":Landroid/view/View;
-    .end local v2    # "childWidth":I
-    .end local v4    # "lp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     :cond_3
     iget-object v6, p0, Landroid/support/v4/widget/DrawerLayout;->mLeftCallback:Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;
 
     invoke-virtual {v6}, Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;->removeCallbacks()V
 
-    .line 1573
     iget-object v6, p0, Landroid/support/v4/widget/DrawerLayout;->mRightCallback:Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;
 
     invoke-virtual {v6}, Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;->removeCallbacks()V
 
-    .line 1575
     if-eqz v5, :cond_4
 
-    .line 1576
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->invalidate()V
 
-    .line 1578
     :cond_4
     return-void
 .end method
@@ -1730,27 +1419,19 @@
 .method public computeScroll()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
-    .line 1265
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->getChildCount()I
 
     move-result v0
 
-    .line 1266
-    .local v0, "childCount":I
     const/4 v3, 0x0
 
-    .line 1267
-    .local v3, "scrimOpacity":F
     const/4 v1, 0x0
 
-    .local v1, "i":I
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 1268
     invoke-virtual {p0, v1}, Landroid/support/v4/widget/DrawerLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
@@ -1766,23 +1447,17 @@
 
     move-result v2
 
-    .line 1269
-    .local v2, "onscreen":F
     invoke-static {v3, v2}, Ljava/lang/Math;->max(FF)F
 
     move-result v3
 
-    .line 1267
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1271
-    .end local v2    # "onscreen":F
     :cond_0
     iput v3, p0, Landroid/support/v4/widget/DrawerLayout;->mScrimOpacity:F
 
-    .line 1274
     iget-object v4, p0, Landroid/support/v4/widget/DrawerLayout;->mLeftDragger:Landroid/support/v4/widget/ViewDragHelper;
 
     invoke-virtual {v4, v6}, Landroid/support/v4/widget/ViewDragHelper;->continueSettling(Z)Z
@@ -1799,30 +1474,23 @@
 
     if-eqz v4, :cond_1
 
-    .line 1275
     invoke-static {p0}, Landroid/support/v4/view/ViewCompat;->postInvalidateOnAnimation(Landroid/view/View;)V
 
-    .line 1277
     :cond_1
     return-void
 .end method
 
 .method dispatchOnDrawerClosed(Landroid/view/View;)V
     .locals 7
-    .param p1, "drawerView"    # Landroid/view/View;
 
-    .prologue
     const/4 v6, 0x0
 
-    .line 830
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
 
     check-cast v2, Landroid/support/v4/widget/DrawerLayout$LayoutParams;
 
-    .line 831
-    .local v2, "lp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     # getter for: Landroid/support/v4/widget/DrawerLayout$LayoutParams;->openState:I
     invoke-static {v2}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$100(Landroid/support/v4/widget/DrawerLayout$LayoutParams;)I
 
@@ -1834,31 +1502,24 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 832
     # setter for: Landroid/support/v4/widget/DrawerLayout$LayoutParams;->openState:I
     invoke-static {v2, v6}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$102(Landroid/support/v4/widget/DrawerLayout$LayoutParams;I)I
 
-    .line 834
     iget-object v4, p0, Landroid/support/v4/widget/DrawerLayout;->mListeners:Ljava/util/List;
 
     if-eqz v4, :cond_0
 
-    .line 837
     iget-object v4, p0, Landroid/support/v4/widget/DrawerLayout;->mListeners:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 838
-    .local v1, "listenerCount":I
     add-int/lit8 v0, v1, -0x1
 
-    .local v0, "i":I
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 839
     iget-object v4, p0, Landroid/support/v4/widget/DrawerLayout;->mListeners:Ljava/util/List;
 
     invoke-interface {v4, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1869,60 +1530,44 @@
 
     invoke-interface {v4, p1}, Landroid/support/v4/widget/DrawerLayout$DrawerListener;->onDrawerClosed(Landroid/view/View;)V
 
-    .line 838
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 843
-    .end local v0    # "i":I
-    .end local v1    # "listenerCount":I
     :cond_0
     invoke-direct {p0, p1, v6}, Landroid/support/v4/widget/DrawerLayout;->updateChildrenImportantForAccessibility(Landroid/view/View;Z)V
 
-    .line 848
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->hasWindowFocus()Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 849
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->getRootView()Landroid/view/View;
 
     move-result-object v3
 
-    .line 850
-    .local v3, "rootView":Landroid/view/View;
     if-eqz v3, :cond_1
 
-    .line 851
     const/16 v4, 0x20
 
     invoke-virtual {v3, v4}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
-    .line 855
-    .end local v3    # "rootView":Landroid/view/View;
     :cond_1
     return-void
 .end method
 
 .method dispatchOnDrawerOpened(Landroid/view/View;)V
     .locals 5
-    .param p1, "drawerView"    # Landroid/view/View;
 
-    .prologue
     const/4 v4, 0x1
 
-    .line 858
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
 
     check-cast v2, Landroid/support/v4/widget/DrawerLayout$LayoutParams;
 
-    .line 859
-    .local v2, "lp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     # getter for: Landroid/support/v4/widget/DrawerLayout$LayoutParams;->openState:I
     invoke-static {v2}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$100(Landroid/support/v4/widget/DrawerLayout$LayoutParams;)I
 
@@ -1932,31 +1577,24 @@
 
     if-nez v3, :cond_2
 
-    .line 860
     # setter for: Landroid/support/v4/widget/DrawerLayout$LayoutParams;->openState:I
     invoke-static {v2, v4}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$102(Landroid/support/v4/widget/DrawerLayout$LayoutParams;I)I
 
-    .line 861
     iget-object v3, p0, Landroid/support/v4/widget/DrawerLayout;->mListeners:Ljava/util/List;
 
     if-eqz v3, :cond_0
 
-    .line 864
     iget-object v3, p0, Landroid/support/v4/widget/DrawerLayout;->mListeners:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 865
-    .local v1, "listenerCount":I
     add-int/lit8 v0, v1, -0x1
 
-    .local v0, "i":I
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 866
     iget-object v3, p0, Landroid/support/v4/widget/DrawerLayout;->mListeners:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1967,65 +1605,48 @@
 
     invoke-interface {v3, p1}, Landroid/support/v4/widget/DrawerLayout$DrawerListener;->onDrawerOpened(Landroid/view/View;)V
 
-    .line 865
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 870
-    .end local v0    # "i":I
-    .end local v1    # "listenerCount":I
     :cond_0
     invoke-direct {p0, p1, v4}, Landroid/support/v4/widget/DrawerLayout;->updateChildrenImportantForAccessibility(Landroid/view/View;Z)V
 
-    .line 873
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->hasWindowFocus()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 874
     const/16 v3, 0x20
 
     invoke-virtual {p0, v3}, Landroid/support/v4/widget/DrawerLayout;->sendAccessibilityEvent(I)V
 
-    .line 877
     :cond_1
     invoke-virtual {p1}, Landroid/view/View;->requestFocus()Z
 
-    .line 879
     :cond_2
     return-void
 .end method
 
 .method dispatchOnDrawerSlide(Landroid/view/View;F)V
     .locals 3
-    .param p1, "drawerView"    # Landroid/view/View;
-    .param p2, "slideOffset"    # F
 
-    .prologue
-    .line 899
     iget-object v2, p0, Landroid/support/v4/widget/DrawerLayout;->mListeners:Ljava/util/List;
 
     if-eqz v2, :cond_0
 
-    .line 902
     iget-object v2, p0, Landroid/support/v4/widget/DrawerLayout;->mListeners:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 903
-    .local v1, "listenerCount":I
     add-int/lit8 v0, v1, -0x1
 
-    .local v0, "i":I
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 904
     iget-object v2, p0, Landroid/support/v4/widget/DrawerLayout;->mListeners:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2036,32 +1657,21 @@
 
     invoke-interface {v2, p1, p2}, Landroid/support/v4/widget/DrawerLayout$DrawerListener;->onDrawerSlide(Landroid/view/View;F)V
 
-    .line 903
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 907
-    .end local v0    # "i":I
-    .end local v1    # "listenerCount":I
     :cond_0
     return-void
 .end method
 
 .method protected drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
     .locals 29
-    .param p1, "canvas"    # Landroid/graphics/Canvas;
-    .param p2, "child"    # Landroid/view/View;
-    .param p3, "drawingTime"    # J
 
-    .prologue
-    .line 1348
     invoke-virtual/range {p0 .. p0}, Landroid/support/v4/widget/DrawerLayout;->getHeight()I
 
     move-result v18
 
-    .line 1349
-    .local v18, "height":I
     move-object/from16 v0, p0
 
     move-object/from16 v1, p2
@@ -2070,41 +1680,29 @@
 
     move-result v17
 
-    .line 1350
-    .local v17, "drawingContent":Z
     const/4 v13, 0x0
 
-    .local v13, "clipLeft":I
     invoke-virtual/range {p0 .. p0}, Landroid/support/v4/widget/DrawerLayout;->getWidth()I
 
     move-result v14
 
-    .line 1352
-    .local v14, "clipRight":I
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v21
 
-    .line 1353
-    .local v21, "restoreCount":I
     if-eqz v17, :cond_4
 
-    .line 1354
     invoke-virtual/range {p0 .. p0}, Landroid/support/v4/widget/DrawerLayout;->getChildCount()I
 
     move-result v10
 
-    .line 1355
-    .local v10, "childCount":I
     const/16 v19, 0x0
 
-    .local v19, "i":I
     :goto_0
     move/from16 v0, v19
 
     if-ge v0, v10, :cond_3
 
-    .line 1356
     move-object/from16 v0, p0
 
     move/from16 v1, v19
@@ -2113,8 +1711,6 @@
 
     move-result-object v25
 
-    .line 1357
-    .local v25, "v":Landroid/view/View;
     move-object/from16 v0, v25
 
     move-object/from16 v1, p2
@@ -2151,14 +1747,12 @@
 
     if-ge v2, v0, :cond_1
 
-    .line 1355
     :cond_0
     :goto_1
     add-int/lit8 v19, v19, 0x1
 
     goto :goto_0
 
-    .line 1363
     :cond_1
     const/4 v2, 0x3
 
@@ -2172,13 +1766,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 1364
     invoke-virtual/range {v25 .. v25}, Landroid/view/View;->getRight()I
 
     move-result v27
 
-    .line 1365
-    .local v27, "vright":I
     move/from16 v0, v27
 
     if-le v0, v13, :cond_0
@@ -2187,15 +1778,11 @@
 
     goto :goto_1
 
-    .line 1367
-    .end local v27    # "vright":I
     :cond_2
     invoke-virtual/range {v25 .. v25}, Landroid/view/View;->getLeft()I
 
     move-result v26
 
-    .line 1368
-    .local v26, "vleft":I
     move/from16 v0, v26
 
     if-ge v0, v14, :cond_0
@@ -2204,9 +1791,6 @@
 
     goto :goto_1
 
-    .line 1371
-    .end local v25    # "v":Landroid/view/View;
-    .end local v26    # "vleft":I
     :cond_3
     const/4 v2, 0x0
 
@@ -2218,23 +1802,17 @@
 
     invoke-virtual {v0, v13, v2, v14, v3}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 1373
-    .end local v10    # "childCount":I
-    .end local v19    # "i":I
     :cond_4
     invoke-super/range {p0 .. p4}, Landroid/view/ViewGroup;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
     move-result v22
 
-    .line 1374
-    .local v22, "result":Z
     move-object/from16 v0, p1
 
     move/from16 v1, v21
 
     invoke-virtual {v0, v1}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 1376
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/support/v4/widget/DrawerLayout;->mScrimOpacity:F
@@ -2247,7 +1825,6 @@
 
     if-eqz v17, :cond_6
 
-    .line 1377
     move-object/from16 v0, p0
 
     iget v2, v0, Landroid/support/v4/widget/DrawerLayout;->mScrimColor:I
@@ -2258,8 +1835,6 @@
 
     ushr-int/lit8 v9, v2, 0x18
 
-    .line 1378
-    .local v9, "baseAlpha":I
     int-to-float v2, v9
 
     move-object/from16 v0, p0
@@ -2272,8 +1847,6 @@
 
     move/from16 v20, v0
 
-    .line 1379
-    .local v20, "imag":I
     shl-int/lit8 v2, v20, 0x18
 
     move-object/from16 v0, p0
@@ -2286,15 +1859,12 @@
 
     or-int v15, v2, v3
 
-    .line 1380
-    .local v15, "color":I
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/support/v4/widget/DrawerLayout;->mScrimPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v2, v15}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 1382
     int-to-float v3, v13
 
     const/4 v4, 0x0
@@ -2315,15 +1885,10 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 1407
-    .end local v9    # "baseAlpha":I
-    .end local v15    # "color":I
-    .end local v20    # "imag":I
     :cond_5
     :goto_2
     return v22
 
-    .line 1383
     :cond_6
     move-object/from16 v0, p0
 
@@ -2343,7 +1908,6 @@
 
     if-eqz v2, :cond_7
 
-    .line 1385
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/support/v4/widget/DrawerLayout;->mShadowLeftResolved:Landroid/graphics/drawable/Drawable;
@@ -2352,14 +1916,10 @@
 
     move-result v23
 
-    .line 1386
-    .local v23, "shadowWidth":I
     invoke-virtual/range {p2 .. p2}, Landroid/view/View;->getRight()I
 
     move-result v12
 
-    .line 1387
-    .local v12, "childRight":I
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/support/v4/widget/DrawerLayout;->mLeftDragger:Landroid/support/v4/widget/ViewDragHelper;
@@ -2368,8 +1928,6 @@
 
     move-result v16
 
-    .line 1388
-    .local v16, "drawerPeekDistance":I
     const/4 v2, 0x0
 
     int-to-float v3, v12
@@ -2390,8 +1948,6 @@
 
     move-result v8
 
-    .line 1390
-    .local v8, "alpha":F
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/support/v4/widget/DrawerLayout;->mShadowLeftResolved:Landroid/graphics/drawable/Drawable;
@@ -2408,7 +1964,6 @@
 
     invoke-virtual {v2, v12, v3, v4, v5}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 1392
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/support/v4/widget/DrawerLayout;->mShadowLeftResolved:Landroid/graphics/drawable/Drawable;
@@ -2421,7 +1976,6 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 1393
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/support/v4/widget/DrawerLayout;->mShadowLeftResolved:Landroid/graphics/drawable/Drawable;
@@ -2432,11 +1986,6 @@
 
     goto :goto_2
 
-    .line 1394
-    .end local v8    # "alpha":F
-    .end local v12    # "childRight":I
-    .end local v16    # "drawerPeekDistance":I
-    .end local v23    # "shadowWidth":I
     :cond_7
     move-object/from16 v0, p0
 
@@ -2456,7 +2005,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 1396
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/support/v4/widget/DrawerLayout;->mShadowRightResolved:Landroid/graphics/drawable/Drawable;
@@ -2465,22 +2013,16 @@
 
     move-result v23
 
-    .line 1397
-    .restart local v23    # "shadowWidth":I
     invoke-virtual/range {p2 .. p2}, Landroid/view/View;->getLeft()I
 
     move-result v11
 
-    .line 1398
-    .local v11, "childLeft":I
     invoke-virtual/range {p0 .. p0}, Landroid/support/v4/widget/DrawerLayout;->getWidth()I
 
     move-result v2
 
     sub-int v24, v2, v11
 
-    .line 1399
-    .local v24, "showing":I
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/support/v4/widget/DrawerLayout;->mRightDragger:Landroid/support/v4/widget/ViewDragHelper;
@@ -2489,8 +2031,6 @@
 
     move-result v16
 
-    .line 1400
-    .restart local v16    # "drawerPeekDistance":I
     const/4 v2, 0x0
 
     move/from16 v0, v24
@@ -2513,8 +2053,6 @@
 
     move-result v8
 
-    .line 1402
-    .restart local v8    # "alpha":F
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/support/v4/widget/DrawerLayout;->mShadowRightResolved:Landroid/graphics/drawable/Drawable;
@@ -2531,7 +2069,6 @@
 
     invoke-virtual {v2, v3, v4, v11, v5}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 1404
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/support/v4/widget/DrawerLayout;->mShadowRightResolved:Landroid/graphics/drawable/Drawable;
@@ -2544,7 +2081,6 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 1405
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/support/v4/widget/DrawerLayout;->mShadowRightResolved:Landroid/graphics/drawable/Drawable;
@@ -2558,10 +2094,7 @@
 
 .method findDrawerWithGravity(I)Landroid/view/View;
     .locals 6
-    .param p1, "gravity"    # I
 
-    .prologue
-    .line 968
     invoke-static {p0}, Landroid/support/v4/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result v5
@@ -2572,54 +2105,35 @@
 
     and-int/lit8 v0, v5, 0x7
 
-    .line 970
-    .local v0, "absHorizGravity":I
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->getChildCount()I
 
     move-result v3
 
-    .line 971
-    .local v3, "childCount":I
     const/4 v4, 0x0
 
-    .local v4, "i":I
     :goto_0
     if-ge v4, v3, :cond_1
 
-    .line 972
     invoke-virtual {p0, v4}, Landroid/support/v4/widget/DrawerLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 973
-    .local v1, "child":Landroid/view/View;
     invoke-virtual {p0, v1}, Landroid/support/v4/widget/DrawerLayout;->getDrawerViewAbsoluteGravity(Landroid/view/View;)I
 
     move-result v2
 
-    .line 974
-    .local v2, "childAbsGravity":I
     and-int/lit8 v5, v2, 0x7
 
     if-ne v5, v0, :cond_0
 
-    .line 978
-    .end local v1    # "child":Landroid/view/View;
-    .end local v2    # "childAbsGravity":I
     :goto_1
     return-object v1
 
-    .line 971
-    .restart local v1    # "child":Landroid/view/View;
-    .restart local v2    # "childAbsGravity":I
     :cond_0
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 978
-    .end local v1    # "child":Landroid/view/View;
-    .end local v2    # "childAbsGravity":I
     :cond_1
     const/4 v1, 0x0
 
@@ -2629,35 +2143,25 @@
 .method findOpenDrawer()Landroid/view/View;
     .locals 6
 
-    .prologue
-    .line 938
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->getChildCount()I
 
     move-result v1
 
-    .line 939
-    .local v1, "childCount":I
     const/4 v3, 0x0
 
-    .local v3, "i":I
     :goto_0
     if-ge v3, v1, :cond_1
 
-    .line 940
     invoke-virtual {p0, v3}, Landroid/support/v4/widget/DrawerLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 941
-    .local v0, "child":Landroid/view/View;
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
 
     check-cast v2, Landroid/support/v4/widget/DrawerLayout$LayoutParams;
 
-    .line 942
-    .local v2, "childLp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     # getter for: Landroid/support/v4/widget/DrawerLayout$LayoutParams;->openState:I
     invoke-static {v2}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$100(Landroid/support/v4/widget/DrawerLayout$LayoutParams;)I
 
@@ -2669,23 +2173,14 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 946
-    .end local v0    # "child":Landroid/view/View;
-    .end local v2    # "childLp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     :goto_1
     return-object v0
 
-    .line 939
-    .restart local v0    # "child":Landroid/view/View;
-    .restart local v2    # "childLp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 946
-    .end local v0    # "child":Landroid/view/View;
-    .end local v2    # "childLp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     :cond_1
     const/4 v0, 0x0
 
@@ -2695,10 +2190,8 @@
 .method protected generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;
     .locals 2
 
-    .prologue
     const/4 v1, -0x1
 
-    .line 1745
     new-instance v0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;
 
     invoke-direct {v0, v1, v1}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;-><init>(II)V
@@ -2708,10 +2201,7 @@
 
 .method public generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;
     .locals 2
-    .param p1, "attrs"    # Landroid/util/AttributeSet;
 
-    .prologue
-    .line 1764
     new-instance v0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;
 
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->getContext()Landroid/content/Context;
@@ -2725,10 +2215,7 @@
 
 .method protected generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;
     .locals 1
-    .param p1, "p"    # Landroid/view/ViewGroup$LayoutParams;
 
-    .prologue
-    .line 1750
     instance-of v0, p1, Landroid/support/v4/widget/DrawerLayout$LayoutParams;
 
     if-eqz v0, :cond_0
@@ -2737,13 +2224,11 @@
 
     check-cast p1, Landroid/support/v4/widget/DrawerLayout$LayoutParams;
 
-    .end local p1    # "p":Landroid/view/ViewGroup$LayoutParams;
     invoke-direct {v0, p1}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;-><init>(Landroid/support/v4/widget/DrawerLayout$LayoutParams;)V
 
     :goto_0
     return-object v0
 
-    .restart local p1    # "p":Landroid/view/ViewGroup$LayoutParams;
     :cond_0
     instance-of v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;
 
@@ -2753,12 +2238,10 @@
 
     check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .end local p1    # "p":Landroid/view/ViewGroup$LayoutParams;
     invoke-direct {v0, p1}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
     goto :goto_0
 
-    .restart local p1    # "p":Landroid/view/ViewGroup$LayoutParams;
     :cond_1
     new-instance v0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;
 
@@ -2770,16 +2253,12 @@
 .method public getDrawerElevation()F
     .locals 1
 
-    .prologue
-    .line 427
     sget-boolean v0, Landroid/support/v4/widget/DrawerLayout;->SET_DRAWER_SHADOW_FROM_ELEVATION:Z
 
     if-eqz v0, :cond_0
 
-    .line 428
     iget v0, p0, Landroid/support/v4/widget/DrawerLayout;->mDrawerElevation:F
 
-    .line 430
     :goto_0
     return v0
 
@@ -2791,161 +2270,123 @@
 
 .method public getDrawerLockMode(I)I
     .locals 7
-    .param p1, "edgeGravity"    # I
 
-    .prologue
     const/4 v6, 0x3
 
-    .line 685
     invoke-static {p0}, Landroid/support/v4/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result v1
 
-    .line 687
-    .local v1, "layoutDirection":I
     sparse-switch p1, :sswitch_data_0
 
-    .line 730
     :cond_0
     const/4 v2, 0x0
 
     :goto_0
     return v2
 
-    .line 689
     :sswitch_0
     iget v5, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeLeft:I
 
     if-eq v5, v6, :cond_1
 
-    .line 690
     iget v2, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeLeft:I
 
     goto :goto_0
 
-    .line 692
     :cond_1
     if-nez v1, :cond_2
 
     iget v2, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeStart:I
 
-    .line 694
-    .local v2, "leftLockMode":I
     :goto_1
     if-eq v2, v6, :cond_0
 
     goto :goto_0
 
-    .line 692
-    .end local v2    # "leftLockMode":I
     :cond_2
     iget v2, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeEnd:I
 
     goto :goto_1
 
-    .line 699
     :sswitch_1
     iget v5, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeRight:I
 
     if-eq v5, v6, :cond_3
 
-    .line 700
     iget v2, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeRight:I
 
     goto :goto_0
 
-    .line 702
     :cond_3
     if-nez v1, :cond_4
 
     iget v3, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeEnd:I
 
-    .line 704
-    .local v3, "rightLockMode":I
     :goto_2
     if-eq v3, v6, :cond_0
 
     move v2, v3
 
-    .line 705
     goto :goto_0
 
-    .line 702
-    .end local v3    # "rightLockMode":I
     :cond_4
     iget v3, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeStart:I
 
     goto :goto_2
 
-    .line 709
     :sswitch_2
     iget v5, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeStart:I
 
     if-eq v5, v6, :cond_5
 
-    .line 710
     iget v2, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeStart:I
 
     goto :goto_0
 
-    .line 712
     :cond_5
     if-nez v1, :cond_6
 
     iget v4, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeLeft:I
 
-    .line 714
-    .local v4, "startLockMode":I
     :goto_3
     if-eq v4, v6, :cond_0
 
     move v2, v4
 
-    .line 715
     goto :goto_0
 
-    .line 712
-    .end local v4    # "startLockMode":I
     :cond_6
     iget v4, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeRight:I
 
     goto :goto_3
 
-    .line 719
     :sswitch_3
     iget v5, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeEnd:I
 
     if-eq v5, v6, :cond_7
 
-    .line 720
     iget v2, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeEnd:I
 
     goto :goto_0
 
-    .line 722
     :cond_7
     if-nez v1, :cond_8
 
     iget v0, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeRight:I
 
-    .line 724
-    .local v0, "endLockMode":I
     :goto_4
     if-eq v0, v6, :cond_0
 
     move v2, v0
 
-    .line 725
     goto :goto_0
 
-    .line 722
-    .end local v0    # "endLockMode":I
     :cond_8
     iget v0, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeLeft:I
 
     goto :goto_4
 
-    .line 687
     nop
 
     :sswitch_data_0
@@ -2959,17 +2400,13 @@
 
 .method public getDrawerLockMode(Landroid/view/View;)I
     .locals 4
-    .param p1, "drawerView"    # Landroid/view/View;
 
-    .prologue
-    .line 742
     invoke-virtual {p0, p1}, Landroid/support/v4/widget/DrawerLayout;->isDrawerView(Landroid/view/View;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 743
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3000,7 +2437,6 @@
 
     throw v1
 
-    .line 745
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -3010,8 +2446,6 @@
 
     iget v0, v1, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->gravity:I
 
-    .line 746
-    .local v0, "drawerGravity":I
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/DrawerLayout;->getDrawerLockMode(I)I
 
     move-result v1
@@ -3021,12 +2455,9 @@
 
 .method public getDrawerTitle(I)Ljava/lang/CharSequence;
     .locals 2
-    .param p1, "edgeGravity"    # I
     .annotation build Landroid/support/annotation/Nullable;
     .end annotation
 
-    .prologue
-    .line 779
     invoke-static {p0}, Landroid/support/v4/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result v1
@@ -3035,31 +2466,24 @@
 
     move-result v0
 
-    .line 781
-    .local v0, "absGravity":I
     const/4 v1, 0x3
 
     if-ne v0, v1, :cond_0
 
-    .line 782
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mTitleLeft:Ljava/lang/CharSequence;
 
-    .line 786
     :goto_0
     return-object v1
 
-    .line 783
     :cond_0
     const/4 v1, 0x5
 
     if-ne v0, v1, :cond_1
 
-    .line 784
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mTitleRight:Ljava/lang/CharSequence;
 
     goto :goto_0
 
-    .line 786
     :cond_1
     const/4 v1, 0x0
 
@@ -3068,10 +2492,7 @@
 
 .method getDrawerViewAbsoluteGravity(Landroid/view/View;)I
     .locals 2
-    .param p1, "drawerView"    # Landroid/view/View;
 
-    .prologue
-    .line 928
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
@@ -3080,8 +2501,6 @@
 
     iget v0, v1, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->gravity:I
 
-    .line 929
-    .local v0, "gravity":I
     invoke-static {p0}, Landroid/support/v4/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result v1
@@ -3095,10 +2514,7 @@
 
 .method getDrawerViewOffset(Landroid/view/View;)F
     .locals 1
-    .param p1, "drawerView"    # Landroid/view/View;
 
-    .prologue
-    .line 920
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
@@ -3116,8 +2532,6 @@
 .method public getStatusBarBackgroundDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .prologue
-    .line 1304
     iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout;->mStatusBarBackground:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -3125,10 +2539,7 @@
 
 .method isContentView(Landroid/view/View;)Z
     .locals 1
-    .param p1, "child"    # Landroid/view/View;
 
-    .prologue
-    .line 1411
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
@@ -3152,24 +2563,17 @@
 
 .method public isDrawerOpen(I)Z
     .locals 2
-    .param p1, "drawerGravity"    # I
 
-    .prologue
-    .line 1694
     invoke-virtual {p0, p1}, Landroid/support/v4/widget/DrawerLayout;->findDrawerWithGravity(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 1695
-    .local v0, "drawerView":Landroid/view/View;
     if-eqz v0, :cond_0
 
-    .line 1696
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/DrawerLayout;->isDrawerOpen(Landroid/view/View;)Z
 
     move-result v1
 
-    .line 1698
     :goto_0
     return v1
 
@@ -3181,19 +2585,15 @@
 
 .method public isDrawerOpen(Landroid/view/View;)Z
     .locals 4
-    .param p1, "drawer"    # Landroid/view/View;
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 1677
     invoke-virtual {p0, p1}, Landroid/support/v4/widget/DrawerLayout;->isDrawerView(Landroid/view/View;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 1678
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3224,7 +2624,6 @@
 
     throw v1
 
-    .line 1680
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -3232,8 +2631,6 @@
 
     check-cast v0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;
 
-    .line 1681
-    .local v0, "drawerLp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     # getter for: Landroid/support/v4/widget/DrawerLayout$LayoutParams;->openState:I
     invoke-static {v0}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$100(Landroid/support/v4/widget/DrawerLayout$LayoutParams;)I
 
@@ -3254,12 +2651,9 @@
 
 .method isDrawerView(Landroid/view/View;)Z
     .locals 4
-    .param p1, "child"    # Landroid/view/View;
 
-    .prologue
     const/4 v3, 0x1
 
-    .line 1415
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
@@ -3268,8 +2662,6 @@
 
     iget v1, v2, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->gravity:I
 
-    .line 1416
-    .local v1, "gravity":I
     invoke-static {p1}, Landroid/support/v4/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result v2
@@ -3278,19 +2670,15 @@
 
     move-result v0
 
-    .line 1418
-    .local v0, "absGravity":I
     and-int/lit8 v2, v0, 0x3
 
     if-eqz v2, :cond_0
 
     move v2, v3
 
-    .line 1426
     :goto_0
     return v2
 
-    .line 1422
     :cond_0
     and-int/lit8 v2, v0, 0x5
 
@@ -3298,10 +2686,8 @@
 
     move v2, v3
 
-    .line 1424
     goto :goto_0
 
-    .line 1426
     :cond_1
     const/4 v2, 0x0
 
@@ -3310,24 +2696,17 @@
 
 .method public isDrawerVisible(I)Z
     .locals 2
-    .param p1, "drawerGravity"    # I
 
-    .prologue
-    .line 1725
     invoke-virtual {p0, p1}, Landroid/support/v4/widget/DrawerLayout;->findDrawerWithGravity(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 1726
-    .local v0, "drawerView":Landroid/view/View;
     if-eqz v0, :cond_0
 
-    .line 1727
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/DrawerLayout;->isDrawerVisible(Landroid/view/View;)Z
 
     move-result v1
 
-    .line 1729
     :goto_0
     return v1
 
@@ -3339,17 +2718,13 @@
 
 .method public isDrawerVisible(Landroid/view/View;)Z
     .locals 3
-    .param p1, "drawer"    # Landroid/view/View;
 
-    .prologue
-    .line 1710
     invoke-virtual {p0, p1}, Landroid/support/v4/widget/DrawerLayout;->isDrawerView(Landroid/view/View;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1711
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3380,7 +2755,6 @@
 
     throw v0
 
-    .line 1713
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -3412,43 +2786,29 @@
 
 .method moveDrawerToOffset(Landroid/view/View;F)V
     .locals 6
-    .param p1, "drawerView"    # Landroid/view/View;
-    .param p2, "slideOffset"    # F
 
-    .prologue
-    .line 950
     invoke-virtual {p0, p1}, Landroid/support/v4/widget/DrawerLayout;->getDrawerViewOffset(Landroid/view/View;)F
 
     move-result v2
 
-    .line 951
-    .local v2, "oldOffset":F
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v4
 
-    .line 952
-    .local v4, "width":I
     int-to-float v5, v4
 
     mul-float/2addr v5, v2
 
     float-to-int v3, v5
 
-    .line 953
-    .local v3, "oldPos":I
     int-to-float v5, v4
 
     mul-float/2addr v5, p2
 
     float-to-int v1, v5
 
-    .line 954
-    .local v1, "newPos":I
     sub-int v0, v1, v3
 
-    .line 956
-    .local v0, "dx":I
     const/4 v5, 0x3
 
     invoke-virtual {p0, p1, v5}, Landroid/support/v4/widget/DrawerLayout;->checkDrawerViewAbsoluteGravity(Landroid/view/View;I)Z
@@ -3457,18 +2817,13 @@
 
     if-eqz v5, :cond_0
 
-    .end local v0    # "dx":I
     :goto_0
     invoke-virtual {p1, v0}, Landroid/view/View;->offsetLeftAndRight(I)V
 
-    .line 958
     invoke-virtual {p0, p1, p2}, Landroid/support/v4/widget/DrawerLayout;->setDrawerViewOffset(Landroid/view/View;F)V
 
-    .line 959
     return-void
 
-    .line 956
-    .restart local v0    # "dx":I
     :cond_0
     neg-int v0, v0
 
@@ -3478,46 +2833,34 @@
 .method protected onAttachedToWindow()V
     .locals 1
 
-    .prologue
-    .line 1005
     invoke-super {p0}, Landroid/view/ViewGroup;->onAttachedToWindow()V
 
-    .line 1006
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v4/widget/DrawerLayout;->mFirstLayout:Z
 
-    .line 1007
     return-void
 .end method
 
 .method protected onDetachedFromWindow()V
     .locals 1
 
-    .prologue
-    .line 999
     invoke-super {p0}, Landroid/view/ViewGroup;->onDetachedFromWindow()V
 
-    .line 1000
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v4/widget/DrawerLayout;->mFirstLayout:Z
 
-    .line 1001
     return-void
 .end method
 
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 4
-    .param p1, "c"    # Landroid/graphics/Canvas;
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 1336
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 1337
     iget-boolean v1, p0, Landroid/support/v4/widget/DrawerLayout;->mDrawStatusBarBackground:Z
 
     if-eqz v1, :cond_0
@@ -3526,7 +2869,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1338
     sget-object v1, Landroid/support/v4/widget/DrawerLayout;->IMPL:Landroid/support/v4/widget/DrawerLayout$DrawerLayoutCompatImpl;
 
     iget-object v2, p0, Landroid/support/v4/widget/DrawerLayout;->mLastInsets:Ljava/lang/Object;
@@ -3535,11 +2877,8 @@
 
     move-result v0
 
-    .line 1339
-    .local v0, "inset":I
     if-lez v0, :cond_0
 
-    .line 1340
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mStatusBarBackground:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->getWidth()I
@@ -3548,33 +2887,25 @@
 
     invoke-virtual {v1, v3, v3, v2, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 1341
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mStatusBarBackground:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1344
-    .end local v0    # "inset":I
     :cond_0
     return-void
 .end method
 
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 11
-    .param p1, "ev"    # Landroid/view/MotionEvent;
 
-    .prologue
     const/4 v7, 0x1
 
     const/4 v6, 0x0
 
-    .line 1431
     invoke-static {p1}, Landroid/support/v4/view/MotionEventCompat;->getActionMasked(Landroid/view/MotionEvent;)I
 
     move-result v0
 
-    .line 1434
-    .local v0, "action":I
     iget-object v8, p0, Landroid/support/v4/widget/DrawerLayout;->mLeftDragger:Landroid/support/v4/widget/ViewDragHelper;
 
     invoke-virtual {v8, p1}, Landroid/support/v4/widget/ViewDragHelper;->shouldInterceptTouchEvent(Landroid/view/MotionEvent;)Z
@@ -3589,15 +2920,10 @@
 
     or-int v2, v8, v9
 
-    .line 1437
-    .local v2, "interceptForDrag":Z
     const/4 v3, 0x0
 
-    .line 1439
-    .local v3, "interceptForTap":Z
     packed-switch v0, :pswitch_data_0
 
-    .line 1473
     :cond_0
     :goto_0
     if-nez v2, :cond_1
@@ -3620,26 +2946,19 @@
     :cond_2
     return v6
 
-    .line 1441
     :pswitch_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v4
 
-    .line 1442
-    .local v4, "x":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v5
 
-    .line 1443
-    .local v5, "y":F
     iput v4, p0, Landroid/support/v4/widget/DrawerLayout;->mInitialMotionX:F
 
-    .line 1444
     iput v5, p0, Landroid/support/v4/widget/DrawerLayout;->mInitialMotionY:F
 
-    .line 1445
     iget v8, p0, Landroid/support/v4/widget/DrawerLayout;->mScrimOpacity:F
 
     const/4 v9, 0x0
@@ -3648,7 +2967,6 @@
 
     if-lez v8, :cond_3
 
-    .line 1446
     iget-object v8, p0, Landroid/support/v4/widget/DrawerLayout;->mLeftDragger:Landroid/support/v4/widget/ViewDragHelper;
 
     float-to-int v9, v4
@@ -3659,8 +2977,6 @@
 
     move-result-object v1
 
-    .line 1447
-    .local v1, "child":Landroid/view/View;
     if-eqz v1, :cond_3
 
     invoke-virtual {p0, v1}, Landroid/support/v4/widget/DrawerLayout;->isContentView(Landroid/view/View;)Z
@@ -3669,22 +2985,15 @@
 
     if-eqz v8, :cond_3
 
-    .line 1448
     const/4 v3, 0x1
 
-    .line 1451
-    .end local v1    # "child":Landroid/view/View;
     :cond_3
     iput-boolean v6, p0, Landroid/support/v4/widget/DrawerLayout;->mDisallowInterceptRequested:Z
 
-    .line 1452
     iput-boolean v6, p0, Landroid/support/v4/widget/DrawerLayout;->mChildrenCanceledTouch:Z
 
     goto :goto_0
 
-    .line 1458
-    .end local v4    # "x":F
-    .end local v5    # "y":F
     :pswitch_1
     iget-object v8, p0, Landroid/support/v4/widget/DrawerLayout;->mLeftDragger:Landroid/support/v4/widget/ViewDragHelper;
 
@@ -3696,31 +3005,25 @@
 
     if-eqz v8, :cond_0
 
-    .line 1459
     iget-object v8, p0, Landroid/support/v4/widget/DrawerLayout;->mLeftCallback:Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;
 
     invoke-virtual {v8}, Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;->removeCallbacks()V
 
-    .line 1460
     iget-object v8, p0, Landroid/support/v4/widget/DrawerLayout;->mRightCallback:Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;
 
     invoke-virtual {v8}, Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;->removeCallbacks()V
 
     goto :goto_0
 
-    .line 1467
     :pswitch_2
     invoke-virtual {p0, v7}, Landroid/support/v4/widget/DrawerLayout;->closeDrawers(Z)V
 
-    .line 1468
     iput-boolean v6, p0, Landroid/support/v4/widget/DrawerLayout;->mDisallowInterceptRequested:Z
 
-    .line 1469
     iput-boolean v6, p0, Landroid/support/v4/widget/DrawerLayout;->mChildrenCanceledTouch:Z
 
     goto :goto_0
 
-    .line 1439
     nop
 
     :pswitch_data_0
@@ -3734,11 +3037,7 @@
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 1
-    .param p1, "keyCode"    # I
-    .param p2, "event"    # Landroid/view/KeyEvent;
 
-    .prologue
-    .line 1834
     const/4 v0, 0x4
 
     if-ne p1, v0, :cond_0
@@ -3749,13 +3048,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 1835
     invoke-static {p2}, Landroid/support/v4/view/KeyEventCompat;->startTracking(Landroid/view/KeyEvent;)V
 
-    .line 1836
     const/4 v0, 0x1
 
-    .line 1838
     :goto_0
     return v0
 
@@ -3769,22 +3065,15 @@
 
 .method public onKeyUp(ILandroid/view/KeyEvent;)Z
     .locals 2
-    .param p1, "keyCode"    # I
-    .param p2, "event"    # Landroid/view/KeyEvent;
 
-    .prologue
-    .line 1843
     const/4 v1, 0x4
 
     if-ne p1, v1, :cond_2
 
-    .line 1844
     invoke-direct {p0}, Landroid/support/v4/widget/DrawerLayout;->findVisibleDrawer()Landroid/view/View;
 
     move-result-object v0
 
-    .line 1845
-    .local v0, "visibleDrawer":Landroid/view/View;
     if-eqz v0, :cond_0
 
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/DrawerLayout;->getDrawerLockMode(Landroid/view/View;)I
@@ -3793,29 +3082,21 @@
 
     if-nez v1, :cond_0
 
-    .line 1846
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->closeDrawers()V
 
-    .line 1848
     :cond_0
     if-eqz v0, :cond_1
 
     const/4 v1, 0x1
 
-    .line 1850
-    .end local v0    # "visibleDrawer":Landroid/view/View;
     :goto_0
     return v1
 
-    .line 1848
-    .restart local v0    # "visibleDrawer":Landroid/view/View;
     :cond_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 1850
-    .end local v0    # "visibleDrawer":Landroid/view/View;
     :cond_2
     invoke-super {p0, p1, p2}, Landroid/view/ViewGroup;->onKeyUp(ILandroid/view/KeyEvent;)Z
 
@@ -3826,14 +3107,7 @@
 
 .method protected onLayout(ZIIII)V
     .locals 23
-    .param p1, "changed"    # Z
-    .param p2, "l"    # I
-    .param p3, "t"    # I
-    .param p4, "r"    # I
-    .param p5, "b"    # I
 
-    .prologue
-    .line 1174
     const/16 v18, 0x1
 
     move/from16 v0, v18
@@ -3842,32 +3116,23 @@
 
     iput-boolean v0, v1, Landroid/support/v4/widget/DrawerLayout;->mInLayout:Z
 
-    .line 1175
     sub-int v17, p4, p2
 
-    .line 1176
-    .local v17, "width":I
     invoke-virtual/range {p0 .. p0}, Landroid/support/v4/widget/DrawerLayout;->getChildCount()I
 
     move-result v6
 
-    .line 1177
-    .local v6, "childCount":I
     const/4 v12, 0x0
 
-    .local v12, "i":I
     :goto_0
     if-ge v12, v6, :cond_9
 
-    .line 1178
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v12}, Landroid/support/v4/widget/DrawerLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v5
 
-    .line 1180
-    .local v5, "child":Landroid/view/View;
     invoke-virtual {v5}, Landroid/view/View;->getVisibility()I
 
     move-result v18
@@ -3880,14 +3145,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1177
     :cond_0
     :goto_1
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_0
 
-    .line 1184
     :cond_1
     invoke-virtual {v5}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -3895,8 +3158,6 @@
 
     check-cast v13, Landroid/support/v4/widget/DrawerLayout$LayoutParams;
 
-    .line 1186
-    .local v13, "lp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5}, Landroid/support/v4/widget/DrawerLayout;->isContentView(Landroid/view/View;)Z
@@ -3905,7 +3166,6 @@
 
     if-eqz v18, :cond_2
 
-    .line 1187
     iget v0, v13, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->leftMargin:I
 
     move/from16 v18, v0
@@ -3946,20 +3206,15 @@
 
     goto :goto_1
 
-    .line 1191
     :cond_2
     invoke-virtual {v5}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v10
 
-    .line 1192
-    .local v10, "childWidth":I
     invoke-virtual {v5}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v7
 
-    .line 1196
-    .local v7, "childHeight":I
     const/16 v18, 0x3
 
     move-object/from16 v0, p0
@@ -3972,7 +3227,6 @@
 
     if-eqz v18, :cond_4
 
-    .line 1197
     neg-int v0, v10
 
     move/from16 v18, v0
@@ -3996,8 +3250,6 @@
 
     add-int v8, v18, v19
 
-    .line 1198
-    .local v8, "childLeft":I
     add-int v18, v10, v8
 
     move/from16 v0, v18
@@ -4012,8 +3264,6 @@
 
     div-float v14, v18, v19
 
-    .line 1204
-    .local v14, "newOffset":F
     :goto_2
     # getter for: Landroid/support/v4/widget/DrawerLayout$LayoutParams;->onScreen:F
     invoke-static {v13}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$000(Landroid/support/v4/widget/DrawerLayout$LayoutParams;)F
@@ -4026,8 +3276,6 @@
 
     const/4 v4, 0x1
 
-    .line 1206
-    .local v4, "changeOffset":Z
     :goto_3
     iget v0, v13, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->gravity:I
 
@@ -4035,11 +3283,8 @@
 
     and-int/lit8 v16, v18, 0x70
 
-    .line 1208
-    .local v16, "vgrav":I
     sparse-switch v16, :sswitch_data_0
 
-    .line 1211
     iget v0, v13, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->topMargin:I
 
     move/from16 v18, v0
@@ -4060,16 +3305,13 @@
 
     invoke-virtual {v5, v8, v0, v1, v2}, Landroid/view/View;->layout(IIII)V
 
-    .line 1242
     :goto_4
     if-eqz v4, :cond_3
 
-    .line 1243
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5, v14}, Landroid/support/v4/widget/DrawerLayout;->setDrawerViewOffset(Landroid/view/View;F)V
 
-    .line 1246
     :cond_3
     # getter for: Landroid/support/v4/widget/DrawerLayout$LayoutParams;->onScreen:F
     invoke-static {v13}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$000(Landroid/support/v4/widget/DrawerLayout$LayoutParams;)F
@@ -4084,8 +3326,6 @@
 
     const/4 v15, 0x0
 
-    .line 1247
-    .local v15, "newVisibility":I
     :goto_5
     invoke-virtual {v5}, Landroid/view/View;->getVisibility()I
 
@@ -4095,17 +3335,10 @@
 
     if-eq v0, v15, :cond_0
 
-    .line 1248
     invoke-virtual {v5, v15}, Landroid/view/View;->setVisibility(I)V
 
     goto/16 :goto_1
 
-    .line 1200
-    .end local v4    # "changeOffset":Z
-    .end local v8    # "childLeft":I
-    .end local v14    # "newOffset":F
-    .end local v15    # "newVisibility":I
-    .end local v16    # "vgrav":I
     :cond_4
     int-to-float v0, v10
 
@@ -4126,8 +3359,6 @@
 
     sub-int v8, v17, v18
 
-    .line 1201
-    .restart local v8    # "childLeft":I
     sub-int v18, v17, v8
 
     move/from16 v0, v18
@@ -4142,23 +3373,16 @@
 
     div-float v14, v18, v19
 
-    .restart local v14    # "newOffset":F
     goto :goto_2
 
-    .line 1204
     :cond_5
     const/4 v4, 0x0
 
     goto :goto_3
 
-    .line 1217
-    .restart local v4    # "changeOffset":Z
-    .restart local v16    # "vgrav":I
     :sswitch_0
     sub-int v11, p5, p3
 
-    .line 1218
-    .local v11, "height":I
     iget v0, v13, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->bottomMargin:I
 
     move/from16 v18, v0
@@ -4189,19 +3413,13 @@
 
     goto :goto_4
 
-    .line 1226
-    .end local v11    # "height":I
     :sswitch_1
     sub-int v11, p5, p3
 
-    .line 1227
-    .restart local v11    # "height":I
     sub-int v18, v11, v7
 
     div-int/lit8 v9, v18, 0x2
 
-    .line 1231
-    .local v9, "childTop":I
     iget v0, v13, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->topMargin:I
 
     move/from16 v18, v0
@@ -4210,10 +3428,8 @@
 
     if-ge v9, v0, :cond_7
 
-    .line 1232
     iget v9, v13, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->topMargin:I
 
-    .line 1236
     :cond_6
     :goto_6
     add-int v18, v8, v10
@@ -4228,7 +3444,6 @@
 
     goto :goto_4
 
-    .line 1233
     :cond_7
     add-int v18, v9, v7
 
@@ -4244,7 +3459,6 @@
 
     if-le v0, v1, :cond_6
 
-    .line 1234
     iget v0, v13, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->bottomMargin:I
 
     move/from16 v18, v0
@@ -4255,23 +3469,11 @@
 
     goto :goto_6
 
-    .line 1246
-    .end local v9    # "childTop":I
-    .end local v11    # "height":I
     :cond_8
     const/4 v15, 0x4
 
     goto :goto_5
 
-    .line 1252
-    .end local v4    # "changeOffset":Z
-    .end local v5    # "child":Landroid/view/View;
-    .end local v7    # "childHeight":I
-    .end local v8    # "childLeft":I
-    .end local v10    # "childWidth":I
-    .end local v13    # "lp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
-    .end local v14    # "newOffset":F
-    .end local v16    # "vgrav":I
     :cond_9
     const/16 v18, 0x0
 
@@ -4281,7 +3483,6 @@
 
     iput-boolean v0, v1, Landroid/support/v4/widget/DrawerLayout;->mInLayout:Z
 
-    .line 1253
     const/16 v18, 0x0
 
     move/from16 v0, v18
@@ -4290,10 +3491,8 @@
 
     iput-boolean v0, v1, Landroid/support/v4/widget/DrawerLayout;->mFirstLayout:Z
 
-    .line 1254
     return-void
 
-    .line 1208
     :sswitch_data_0
     .sparse-switch
         0x10 -> :sswitch_1
@@ -4303,35 +3502,23 @@
 
 .method protected onMeasure(II)V
     .locals 25
-    .param p1, "widthMeasureSpec"    # I
-    .param p2, "heightMeasureSpec"    # I
 
-    .prologue
-    .line 1011
     invoke-static/range {p1 .. p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v20
 
-    .line 1012
-    .local v20, "widthMode":I
     invoke-static/range {p2 .. p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v14
 
-    .line 1013
-    .local v14, "heightMode":I
     invoke-static/range {p1 .. p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v21
 
-    .line 1014
-    .local v21, "widthSize":I
     invoke-static/range {p2 .. p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v15
 
-    .line 1016
-    .local v15, "heightSize":I
     const/high16 v22, 0x40000000    # 2.0f
 
     move/from16 v0, v20
@@ -4346,7 +3533,6 @@
 
     if-eq v14, v0, :cond_2
 
-    .line 1017
     :cond_0
     invoke-virtual/range {p0 .. p0}, Landroid/support/v4/widget/DrawerLayout;->isInEditMode()Z
 
@@ -4354,7 +3540,6 @@
 
     if-eqz v22, :cond_5
 
-    .line 1022
     const/high16 v22, -0x80000000
 
     move/from16 v0, v20
@@ -4363,10 +3548,8 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 1023
     const/high16 v20, 0x40000000    # 2.0f
 
-    .line 1028
     :cond_1
     :goto_0
     const/high16 v22, -0x80000000
@@ -4375,10 +3558,8 @@
 
     if-ne v14, v0, :cond_4
 
-    .line 1029
     const/high16 v14, 0x40000000    # 2.0f
 
-    .line 1041
     :cond_2
     :goto_1
     move-object/from16 v0, p0
@@ -4387,7 +3568,6 @@
 
     invoke-virtual {v0, v1, v15}, Landroid/support/v4/widget/DrawerLayout;->setMeasuredDimension(II)V
 
-    .line 1043
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/support/v4/widget/DrawerLayout;->mLastInsets:Ljava/lang/Object;
@@ -4404,38 +3584,26 @@
 
     const/4 v3, 0x1
 
-    .line 1044
-    .local v3, "applyInsets":Z
     :goto_2
     invoke-static/range {p0 .. p0}, Landroid/support/v4/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result v18
 
-    .line 1048
-    .local v18, "layoutDirection":I
     const/4 v12, 0x0
 
-    .line 1049
-    .local v12, "hasDrawerOnLeftEdge":Z
     const/4 v13, 0x0
 
-    .line 1050
-    .local v13, "hasDrawerOnRightEdge":Z
     invoke-virtual/range {p0 .. p0}, Landroid/support/v4/widget/DrawerLayout;->getChildCount()I
 
     move-result v6
 
-    .line 1051
-    .local v6, "childCount":I
     const/16 v16, 0x0
 
-    .local v16, "i":I
     :goto_3
     move/from16 v0, v16
 
     if-ge v0, v6, :cond_12
 
-    .line 1052
     move-object/from16 v0, p0
 
     move/from16 v1, v16
@@ -4444,8 +3612,6 @@
 
     move-result-object v5
 
-    .line 1054
-    .local v5, "child":Landroid/view/View;
     invoke-virtual {v5}, Landroid/view/View;->getVisibility()I
 
     move-result v22
@@ -4458,44 +3624,29 @@
 
     if-ne v0, v1, :cond_7
 
-    .line 1051
     :goto_4
     add-int/lit8 v16, v16, 0x1
 
     goto :goto_3
 
-    .line 1024
-    .end local v3    # "applyInsets":Z
-    .end local v5    # "child":Landroid/view/View;
-    .end local v6    # "childCount":I
-    .end local v12    # "hasDrawerOnLeftEdge":Z
-    .end local v13    # "hasDrawerOnRightEdge":Z
-    .end local v16    # "i":I
-    .end local v18    # "layoutDirection":I
     :cond_3
     if-nez v20, :cond_1
 
-    .line 1025
     const/high16 v20, 0x40000000    # 2.0f
 
-    .line 1026
     const/16 v21, 0x12c
 
     goto :goto_0
 
-    .line 1031
     :cond_4
     if-nez v14, :cond_2
 
-    .line 1032
     const/high16 v14, 0x40000000    # 2.0f
 
-    .line 1033
     const/16 v15, 0x12c
 
     goto :goto_1
 
-    .line 1036
     :cond_5
     new-instance v22, Ljava/lang/IllegalArgumentException;
 
@@ -4505,20 +3656,11 @@
 
     throw v22
 
-    .line 1043
     :cond_6
     const/4 v3, 0x0
 
     goto :goto_2
 
-    .line 1058
-    .restart local v3    # "applyInsets":Z
-    .restart local v5    # "child":Landroid/view/View;
-    .restart local v6    # "childCount":I
-    .restart local v12    # "hasDrawerOnLeftEdge":Z
-    .restart local v13    # "hasDrawerOnRightEdge":Z
-    .restart local v16    # "i":I
-    .restart local v18    # "layoutDirection":I
     :cond_7
     invoke-virtual {v5}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -4526,11 +3668,8 @@
 
     check-cast v19, Landroid/support/v4/widget/DrawerLayout$LayoutParams;
 
-    .line 1060
-    .local v19, "lp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     if-eqz v3, :cond_8
 
-    .line 1061
     move-object/from16 v0, v19
 
     iget v0, v0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->gravity:I
@@ -4545,15 +3684,12 @@
 
     move-result v4
 
-    .line 1062
-    .local v4, "cgrav":I
     invoke-static {v5}, Landroid/support/v4/view/ViewCompat;->getFitsSystemWindows(Landroid/view/View;)Z
 
     move-result v22
 
     if-eqz v22, :cond_9
 
-    .line 1063
     sget-object v22, Landroid/support/v4/widget/DrawerLayout;->IMPL:Landroid/support/v4/widget/DrawerLayout$DrawerLayoutCompatImpl;
 
     move-object/from16 v0, p0
@@ -4568,8 +3704,6 @@
 
     invoke-interface {v0, v5, v1, v4}, Landroid/support/v4/widget/DrawerLayout$DrawerLayoutCompatImpl;->dispatchChildInsets(Landroid/view/View;Ljava/lang/Object;I)V
 
-    .line 1069
-    .end local v4    # "cgrav":I
     :cond_8
     :goto_5
     move-object/from16 v0, p0
@@ -4580,7 +3714,6 @@
 
     if-eqz v22, :cond_a
 
-    .line 1071
     move-object/from16 v0, v19
 
     iget v0, v0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->leftMargin:I
@@ -4603,8 +3736,6 @@
 
     move-result v9
 
-    .line 1073
-    .local v9, "contentWidthSpec":I
     move-object/from16 v0, v19
 
     iget v0, v0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->topMargin:I
@@ -4627,16 +3758,10 @@
 
     move-result v8
 
-    .line 1075
-    .local v8, "contentHeightSpec":I
     invoke-virtual {v5, v9, v8}, Landroid/view/View;->measure(II)V
 
     goto :goto_4
 
-    .line 1065
-    .end local v8    # "contentHeightSpec":I
-    .end local v9    # "contentWidthSpec":I
-    .restart local v4    # "cgrav":I
     :cond_9
     sget-object v22, Landroid/support/v4/widget/DrawerLayout;->IMPL:Landroid/support/v4/widget/DrawerLayout$DrawerLayoutCompatImpl;
 
@@ -4656,8 +3781,6 @@
 
     goto :goto_5
 
-    .line 1076
-    .end local v4    # "cgrav":I
     :cond_a
     move-object/from16 v0, p0
 
@@ -4667,12 +3790,10 @@
 
     if-eqz v22, :cond_11
 
-    .line 1077
     sget-boolean v22, Landroid/support/v4/widget/DrawerLayout;->SET_DRAWER_SHADOW_FROM_ELEVATION:Z
 
     if-eqz v22, :cond_b
 
-    .line 1078
     invoke-static {v5}, Landroid/support/v4/view/ViewCompat;->getElevation(Landroid/view/View;)F
 
     move-result v22
@@ -4687,7 +3808,6 @@
 
     if-eqz v22, :cond_b
 
-    .line 1079
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/support/v4/widget/DrawerLayout;->mDrawerElevation:F
@@ -4698,7 +3818,6 @@
 
     invoke-static {v5, v0}, Landroid/support/v4/view/ViewCompat;->setElevation(Landroid/view/View;F)V
 
-    .line 1082
     :cond_b
     move-object/from16 v0, p0
 
@@ -4708,8 +3827,6 @@
 
     and-int/lit8 v7, v22, 0x7
 
-    .line 1086
-    .local v7, "childGravity":I
     const/16 v22, 0x3
 
     move/from16 v0, v22
@@ -4718,8 +3835,6 @@
 
     const/16 v17, 0x1
 
-    .line 1087
-    .local v17, "isLeftEdgeDrawer":Z
     :goto_6
     if-eqz v17, :cond_c
 
@@ -4730,7 +3845,6 @@
 
     if-eqz v13, :cond_f
 
-    .line 1089
     :cond_d
     new-instance v22, Ljava/lang/IllegalStateException;
 
@@ -4784,22 +3898,16 @@
 
     throw v22
 
-    .line 1086
-    .end local v17    # "isLeftEdgeDrawer":Z
     :cond_e
     const/16 v17, 0x0
 
     goto :goto_6
 
-    .line 1093
-    .restart local v17    # "isLeftEdgeDrawer":Z
     :cond_f
     if-eqz v17, :cond_10
 
-    .line 1094
     const/4 v12, 0x1
 
-    .line 1098
     :goto_7
     move-object/from16 v0, p0
 
@@ -4839,8 +3947,6 @@
 
     move-result v11
 
-    .line 1101
-    .local v11, "drawerWidthSpec":I
     move-object/from16 v0, v19
 
     iget v0, v0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->topMargin:I
@@ -4871,23 +3977,15 @@
 
     move-result v10
 
-    .line 1104
-    .local v10, "drawerHeightSpec":I
     invoke-virtual {v5, v11, v10}, Landroid/view/View;->measure(II)V
 
     goto/16 :goto_4
 
-    .line 1096
-    .end local v10    # "drawerHeightSpec":I
-    .end local v11    # "drawerWidthSpec":I
     :cond_10
     const/4 v13, 0x1
 
     goto :goto_7
 
-    .line 1106
-    .end local v7    # "childGravity":I
-    .end local v17    # "isLeftEdgeDrawer":Z
     :cond_11
     new-instance v22, Ljava/lang/IllegalStateException;
 
@@ -4941,29 +4039,21 @@
 
     throw v22
 
-    .line 1111
-    .end local v5    # "child":Landroid/view/View;
-    .end local v19    # "lp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     :cond_12
     return-void
 .end method
 
 .method protected onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 5
-    .param p1, "state"    # Landroid/os/Parcelable;
 
-    .prologue
     const/4 v4, 0x3
 
-    .line 1855
     instance-of v2, p1, Landroid/support/v4/widget/DrawerLayout$SavedState;
 
     if-nez v2, :cond_1
 
-    .line 1856
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    .line 1882
     :cond_0
     :goto_0
     return-void
@@ -4971,81 +4061,64 @@
     :cond_1
     move-object v0, p1
 
-    .line 1860
     check-cast v0, Landroid/support/v4/widget/DrawerLayout$SavedState;
 
-    .line 1861
-    .local v0, "ss":Landroid/support/v4/widget/DrawerLayout$SavedState;
     invoke-virtual {v0}, Landroid/support/v4/widget/DrawerLayout$SavedState;->getSuperState()Landroid/os/Parcelable;
 
     move-result-object v2
 
     invoke-super {p0, v2}, Landroid/view/ViewGroup;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    .line 1863
     iget v2, v0, Landroid/support/v4/widget/DrawerLayout$SavedState;->openDrawerGravity:I
 
     if-eqz v2, :cond_2
 
-    .line 1864
     iget v2, v0, Landroid/support/v4/widget/DrawerLayout$SavedState;->openDrawerGravity:I
 
     invoke-virtual {p0, v2}, Landroid/support/v4/widget/DrawerLayout;->findDrawerWithGravity(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 1865
-    .local v1, "toOpen":Landroid/view/View;
     if-eqz v1, :cond_2
 
-    .line 1866
     invoke-virtual {p0, v1}, Landroid/support/v4/widget/DrawerLayout;->openDrawer(Landroid/view/View;)V
 
-    .line 1870
-    .end local v1    # "toOpen":Landroid/view/View;
     :cond_2
     iget v2, v0, Landroid/support/v4/widget/DrawerLayout$SavedState;->lockModeLeft:I
 
     if-eq v2, v4, :cond_3
 
-    .line 1871
     iget v2, v0, Landroid/support/v4/widget/DrawerLayout$SavedState;->lockModeLeft:I
 
     invoke-virtual {p0, v2, v4}, Landroid/support/v4/widget/DrawerLayout;->setDrawerLockMode(II)V
 
-    .line 1873
     :cond_3
     iget v2, v0, Landroid/support/v4/widget/DrawerLayout$SavedState;->lockModeRight:I
 
     if-eq v2, v4, :cond_4
 
-    .line 1874
     iget v2, v0, Landroid/support/v4/widget/DrawerLayout$SavedState;->lockModeRight:I
 
     const/4 v3, 0x5
 
     invoke-virtual {p0, v2, v3}, Landroid/support/v4/widget/DrawerLayout;->setDrawerLockMode(II)V
 
-    .line 1876
     :cond_4
     iget v2, v0, Landroid/support/v4/widget/DrawerLayout$SavedState;->lockModeStart:I
 
     if-eq v2, v4, :cond_5
 
-    .line 1877
     iget v2, v0, Landroid/support/v4/widget/DrawerLayout$SavedState;->lockModeStart:I
 
     const v3, 0x800003
 
     invoke-virtual {p0, v2, v3}, Landroid/support/v4/widget/DrawerLayout;->setDrawerLockMode(II)V
 
-    .line 1879
     :cond_5
     iget v2, v0, Landroid/support/v4/widget/DrawerLayout$SavedState;->lockModeEnd:I
 
     if-eq v2, v4, :cond_0
 
-    .line 1880
     iget v2, v0, Landroid/support/v4/widget/DrawerLayout$SavedState;->lockModeEnd:I
 
     const v3, 0x800005
@@ -5057,64 +4130,46 @@
 
 .method public onRtlPropertiesChanged(I)V
     .locals 0
-    .param p1, "layoutDirection"    # I
 
-    .prologue
-    .line 1331
     invoke-direct {p0}, Landroid/support/v4/widget/DrawerLayout;->resolveShadowDrawables()V
 
-    .line 1332
     return-void
 .end method
 
 .method protected onSaveInstanceState()Landroid/os/Parcelable;
     .locals 12
 
-    .prologue
     const/4 v9, 0x0
 
     const/4 v8, 0x1
 
-    .line 1886
     invoke-super {p0}, Landroid/view/ViewGroup;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v7
 
-    .line 1887
-    .local v7, "superState":Landroid/os/Parcelable;
     new-instance v6, Landroid/support/v4/widget/DrawerLayout$SavedState;
 
     invoke-direct {v6, v7}, Landroid/support/v4/widget/DrawerLayout$SavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 1889
-    .local v6, "ss":Landroid/support/v4/widget/DrawerLayout$SavedState;
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->getChildCount()I
 
     move-result v1
 
-    .line 1890
-    .local v1, "childCount":I
     const/4 v2, 0x0
 
-    .local v2, "i":I
     :goto_0
     if-ge v2, v1, :cond_1
 
-    .line 1891
     invoke-virtual {p0, v2}, Landroid/support/v4/widget/DrawerLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 1892
-    .local v0, "child":Landroid/view/View;
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v5
 
     check-cast v5, Landroid/support/v4/widget/DrawerLayout$LayoutParams;
 
-    .line 1894
-    .local v5, "lp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     # getter for: Landroid/support/v4/widget/DrawerLayout$LayoutParams;->openState:I
     invoke-static {v5}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$100(Landroid/support/v4/widget/DrawerLayout$LayoutParams;)I
 
@@ -5124,8 +4179,6 @@
 
     move v4, v8
 
-    .line 1896
-    .local v4, "isOpenedAndNotClosing":Z
     :goto_1
     # getter for: Landroid/support/v4/widget/DrawerLayout$LayoutParams;->openState:I
     invoke-static {v5}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$100(Landroid/support/v4/widget/DrawerLayout$LayoutParams;)I
@@ -5138,64 +4191,45 @@
 
     move v3, v8
 
-    .line 1897
-    .local v3, "isClosedAndOpening":Z
     :goto_2
     if-nez v4, :cond_0
 
     if-eqz v3, :cond_4
 
-    .line 1900
     :cond_0
     iget v8, v5, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->gravity:I
 
     iput v8, v6, Landroid/support/v4/widget/DrawerLayout$SavedState;->openDrawerGravity:I
 
-    .line 1905
-    .end local v0    # "child":Landroid/view/View;
-    .end local v3    # "isClosedAndOpening":Z
-    .end local v4    # "isOpenedAndNotClosing":Z
-    .end local v5    # "lp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     :cond_1
     iget v8, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeLeft:I
 
     iput v8, v6, Landroid/support/v4/widget/DrawerLayout$SavedState;->lockModeLeft:I
 
-    .line 1906
     iget v8, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeRight:I
 
     iput v8, v6, Landroid/support/v4/widget/DrawerLayout$SavedState;->lockModeRight:I
 
-    .line 1907
     iget v8, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeStart:I
 
     iput v8, v6, Landroid/support/v4/widget/DrawerLayout$SavedState;->lockModeStart:I
 
-    .line 1908
     iget v8, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeEnd:I
 
     iput v8, v6, Landroid/support/v4/widget/DrawerLayout$SavedState;->lockModeEnd:I
 
-    .line 1910
     return-object v6
 
-    .restart local v0    # "child":Landroid/view/View;
-    .restart local v5    # "lp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     :cond_2
     move v4, v9
 
-    .line 1894
     goto :goto_1
 
-    .restart local v4    # "isOpenedAndNotClosing":Z
     :cond_3
     move v3, v9
 
-    .line 1896
     goto :goto_2
 
-    .line 1890
-    .restart local v3    # "isClosedAndOpening":Z
     :cond_4
     add-int/lit8 v2, v2, 0x1
 
@@ -5204,90 +4238,63 @@
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 13
-    .param p1, "ev"    # Landroid/view/MotionEvent;
 
-    .prologue
-    .line 1478
     iget-object v10, p0, Landroid/support/v4/widget/DrawerLayout;->mLeftDragger:Landroid/support/v4/widget/ViewDragHelper;
 
     invoke-virtual {v10, p1}, Landroid/support/v4/widget/ViewDragHelper;->processTouchEvent(Landroid/view/MotionEvent;)V
 
-    .line 1479
     iget-object v10, p0, Landroid/support/v4/widget/DrawerLayout;->mRightDragger:Landroid/support/v4/widget/ViewDragHelper;
 
     invoke-virtual {v10, p1}, Landroid/support/v4/widget/ViewDragHelper;->processTouchEvent(Landroid/view/MotionEvent;)V
 
-    .line 1481
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 1482
-    .local v0, "action":I
     const/4 v7, 0x1
 
-    .line 1484
-    .local v7, "wantTouchEvents":Z
     and-int/lit16 v10, v0, 0xff
 
     packed-switch v10, :pswitch_data_0
 
-    .line 1525
     :goto_0
     :pswitch_0
     return v7
 
-    .line 1486
     :pswitch_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v8
 
-    .line 1487
-    .local v8, "x":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v9
 
-    .line 1488
-    .local v9, "y":F
     iput v8, p0, Landroid/support/v4/widget/DrawerLayout;->mInitialMotionX:F
 
-    .line 1489
     iput v9, p0, Landroid/support/v4/widget/DrawerLayout;->mInitialMotionY:F
 
-    .line 1490
     const/4 v10, 0x0
 
     iput-boolean v10, p0, Landroid/support/v4/widget/DrawerLayout;->mDisallowInterceptRequested:Z
 
-    .line 1491
     const/4 v10, 0x0
 
     iput-boolean v10, p0, Landroid/support/v4/widget/DrawerLayout;->mChildrenCanceledTouch:Z
 
     goto :goto_0
 
-    .line 1496
-    .end local v8    # "x":F
-    .end local v9    # "y":F
     :pswitch_2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v8
 
-    .line 1497
-    .restart local v8    # "x":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v9
 
-    .line 1498
-    .restart local v9    # "y":F
     const/4 v4, 0x1
 
-    .line 1499
-    .local v4, "peekingOnly":Z
     iget-object v10, p0, Landroid/support/v4/widget/DrawerLayout;->mLeftDragger:Landroid/support/v4/widget/ViewDragHelper;
 
     float-to-int v11, v8
@@ -5298,8 +4305,6 @@
 
     move-result-object v6
 
-    .line 1500
-    .local v6, "touchedView":Landroid/view/View;
     if-eqz v6, :cond_0
 
     invoke-virtual {p0, v6}, Landroid/support/v4/widget/DrawerLayout;->isContentView(Landroid/view/View;)Z
@@ -5308,27 +4313,20 @@
 
     if-eqz v10, :cond_0
 
-    .line 1501
     iget v10, p0, Landroid/support/v4/widget/DrawerLayout;->mInitialMotionX:F
 
     sub-float v1, v8, v10
 
-    .line 1502
-    .local v1, "dx":F
     iget v10, p0, Landroid/support/v4/widget/DrawerLayout;->mInitialMotionY:F
 
     sub-float v2, v9, v10
 
-    .line 1503
-    .local v2, "dy":F
     iget-object v10, p0, Landroid/support/v4/widget/DrawerLayout;->mLeftDragger:Landroid/support/v4/widget/ViewDragHelper;
 
     invoke-virtual {v10}, Landroid/support/v4/widget/ViewDragHelper;->getTouchSlop()I
 
     move-result v5
 
-    .line 1504
-    .local v5, "slop":I
     mul-float v10, v1, v1
 
     mul-float v11, v2, v2
@@ -5343,16 +4341,12 @@
 
     if-gez v10, :cond_0
 
-    .line 1506
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->findOpenDrawer()Landroid/view/View;
 
     move-result-object v3
 
-    .line 1507
-    .local v3, "openDrawer":Landroid/view/View;
     if-eqz v3, :cond_0
 
-    .line 1508
     invoke-virtual {p0, v3}, Landroid/support/v4/widget/DrawerLayout;->getDrawerLockMode(Landroid/view/View;)I
 
     move-result v10
@@ -5363,59 +4357,36 @@
 
     const/4 v4, 0x1
 
-    .line 1512
-    .end local v1    # "dx":F
-    .end local v2    # "dy":F
-    .end local v3    # "openDrawer":Landroid/view/View;
-    .end local v5    # "slop":I
     :cond_0
     :goto_1
     invoke-virtual {p0, v4}, Landroid/support/v4/widget/DrawerLayout;->closeDrawers(Z)V
 
-    .line 1513
     const/4 v10, 0x0
 
     iput-boolean v10, p0, Landroid/support/v4/widget/DrawerLayout;->mDisallowInterceptRequested:Z
 
     goto :goto_0
 
-    .line 1508
-    .restart local v1    # "dx":F
-    .restart local v2    # "dy":F
-    .restart local v3    # "openDrawer":Landroid/view/View;
-    .restart local v5    # "slop":I
     :cond_1
     const/4 v4, 0x0
 
     goto :goto_1
 
-    .line 1518
-    .end local v1    # "dx":F
-    .end local v2    # "dy":F
-    .end local v3    # "openDrawer":Landroid/view/View;
-    .end local v4    # "peekingOnly":Z
-    .end local v5    # "slop":I
-    .end local v6    # "touchedView":Landroid/view/View;
-    .end local v8    # "x":F
-    .end local v9    # "y":F
     :pswitch_3
     const/4 v10, 0x1
 
     invoke-virtual {p0, v10}, Landroid/support/v4/widget/DrawerLayout;->closeDrawers(Z)V
 
-    .line 1519
     const/4 v10, 0x0
 
     iput-boolean v10, p0, Landroid/support/v4/widget/DrawerLayout;->mDisallowInterceptRequested:Z
 
-    .line 1520
     const/4 v10, 0x0
 
     iput-boolean v10, p0, Landroid/support/v4/widget/DrawerLayout;->mChildrenCanceledTouch:Z
 
     goto :goto_0
 
-    .line 1484
     nop
 
     :pswitch_data_0
@@ -5429,19 +4400,13 @@
 
 .method public openDrawer(I)V
     .locals 4
-    .param p1, "gravity"    # I
 
-    .prologue
-    .line 1616
     invoke-virtual {p0, p1}, Landroid/support/v4/widget/DrawerLayout;->findDrawerWithGravity(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 1617
-    .local v0, "drawerView":Landroid/view/View;
     if-nez v0, :cond_0
 
-    .line 1618
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -5470,29 +4435,23 @@
 
     throw v1
 
-    .line 1621
     :cond_0
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/DrawerLayout;->openDrawer(Landroid/view/View;)V
 
-    .line 1622
     return-void
 .end method
 
 .method public openDrawer(Landroid/view/View;)V
     .locals 4
-    .param p1, "drawerView"    # Landroid/view/View;
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 1586
     invoke-virtual {p0, p1}, Landroid/support/v4/widget/DrawerLayout;->isDrawerView(Landroid/view/View;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 1587
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -5523,7 +4482,6 @@
 
     throw v1
 
-    .line 1590
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -5531,40 +4489,31 @@
 
     check-cast v0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;
 
-    .line 1591
-    .local v0, "lp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     iget-boolean v1, p0, Landroid/support/v4/widget/DrawerLayout;->mFirstLayout:Z
 
     if-eqz v1, :cond_1
 
-    .line 1592
     const/high16 v1, 0x3f800000    # 1.0f
 
     # setter for: Landroid/support/v4/widget/DrawerLayout$LayoutParams;->onScreen:F
     invoke-static {v0, v1}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$002(Landroid/support/v4/widget/DrawerLayout$LayoutParams;F)F
 
-    .line 1593
     # setter for: Landroid/support/v4/widget/DrawerLayout$LayoutParams;->openState:I
     invoke-static {v0, v2}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$102(Landroid/support/v4/widget/DrawerLayout$LayoutParams;I)I
 
-    .line 1595
     invoke-direct {p0, p1, v2}, Landroid/support/v4/widget/DrawerLayout;->updateChildrenImportantForAccessibility(Landroid/view/View;Z)V
 
-    .line 1606
     :goto_0
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->invalidate()V
 
-    .line 1607
     return-void
 
-    .line 1597
     :cond_1
     const/4 v1, 0x2
 
     # |= operator for: Landroid/support/v4/widget/DrawerLayout$LayoutParams;->openState:I
     invoke-static {v0, v1}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$176(Landroid/support/v4/widget/DrawerLayout$LayoutParams;I)I
 
-    .line 1599
     const/4 v1, 0x3
 
     invoke-virtual {p0, p1, v1}, Landroid/support/v4/widget/DrawerLayout;->checkDrawerViewAbsoluteGravity(Landroid/view/View;I)Z
@@ -5573,7 +4522,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1600
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mLeftDragger:Landroid/support/v4/widget/ViewDragHelper;
 
     const/4 v2, 0x0
@@ -5586,7 +4534,6 @@
 
     goto :goto_0
 
-    .line 1602
     :cond_2
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mRightDragger:Landroid/support/v4/widget/ViewDragHelper;
 
@@ -5611,27 +4558,22 @@
 
 .method public removeDrawerListener(Landroid/support/v4/widget/DrawerLayout$DrawerListener;)V
     .locals 1
-    .param p1, "listener"    # Landroid/support/v4/widget/DrawerLayout$DrawerListener;
+    .param p1    # Landroid/support/v4/widget/DrawerLayout$DrawerListener;
         .annotation build Landroid/support/annotation/NonNull;
         .end annotation
     .end param
 
-    .prologue
-    .line 561
     if-nez p1, :cond_1
 
-    .line 569
     :cond_0
     :goto_0
     return-void
 
-    .line 564
     :cond_1
     iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout;->mListeners:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 568
     iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout;->mListeners:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
@@ -5641,24 +4583,17 @@
 
 .method public requestDisallowInterceptTouchEvent(Z)V
     .locals 1
-    .param p1, "disallowIntercept"    # Z
 
-    .prologue
-    .line 1533
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 1535
     iput-boolean p1, p0, Landroid/support/v4/widget/DrawerLayout;->mDisallowInterceptRequested:Z
 
-    .line 1536
     if-eqz p1, :cond_0
 
-    .line 1537
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/DrawerLayout;->closeDrawers(Z)V
 
-    .line 1539
     :cond_0
     return-void
 .end method
@@ -5666,33 +4601,23 @@
 .method public requestLayout()V
     .locals 1
 
-    .prologue
-    .line 1258
     iget-boolean v0, p0, Landroid/support/v4/widget/DrawerLayout;->mInLayout:Z
 
     if-nez v0, :cond_0
 
-    .line 1259
     invoke-super {p0}, Landroid/view/ViewGroup;->requestLayout()V
 
-    .line 1261
     :cond_0
     return-void
 .end method
 
 .method public setChildInsets(Ljava/lang/Object;Z)V
     .locals 1
-    .param p1, "insets"    # Ljava/lang/Object;
-    .param p2, "draw"    # Z
 
-    .prologue
-    .line 439
     iput-object p1, p0, Landroid/support/v4/widget/DrawerLayout;->mLastInsets:Ljava/lang/Object;
 
-    .line 440
     iput-boolean p2, p0, Landroid/support/v4/widget/DrawerLayout;->mDrawStatusBarBackground:Z
 
-    .line 441
     if-nez p2, :cond_0
 
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->getBackground()Landroid/graphics/drawable/Drawable;
@@ -5706,13 +4631,10 @@
     :goto_0
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/DrawerLayout;->setWillNotDraw(Z)V
 
-    .line 442
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->requestLayout()V
 
-    .line 443
     return-void
 
-    .line 441
     :cond_0
     const/4 v0, 0x0
 
@@ -5721,16 +4643,11 @@
 
 .method public setDrawerElevation(F)V
     .locals 3
-    .param p1, "elevation"    # F
 
-    .prologue
-    .line 410
     iput p1, p0, Landroid/support/v4/widget/DrawerLayout;->mDrawerElevation:F
 
-    .line 411
     const/4 v1, 0x0
 
-    .local v1, "i":I
     :goto_0
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->getChildCount()I
 
@@ -5738,94 +4655,70 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 412
     invoke-virtual {p0, v1}, Landroid/support/v4/widget/DrawerLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 413
-    .local v0, "child":Landroid/view/View;
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/DrawerLayout;->isDrawerView(Landroid/view/View;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 414
     iget v2, p0, Landroid/support/v4/widget/DrawerLayout;->mDrawerElevation:F
 
     invoke-static {v0, v2}, Landroid/support/v4/view/ViewCompat;->setElevation(Landroid/view/View;F)V
 
-    .line 411
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 417
-    .end local v0    # "child":Landroid/view/View;
     :cond_1
     return-void
 .end method
 
 .method public setDrawerListener(Landroid/support/v4/widget/DrawerLayout$DrawerListener;)V
     .locals 1
-    .param p1, "listener"    # Landroid/support/v4/widget/DrawerLayout$DrawerListener;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 526
     iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout;->mListener:Landroid/support/v4/widget/DrawerLayout$DrawerListener;
 
     if-eqz v0, :cond_0
 
-    .line 527
     iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout;->mListener:Landroid/support/v4/widget/DrawerLayout$DrawerListener;
 
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/DrawerLayout;->removeDrawerListener(Landroid/support/v4/widget/DrawerLayout$DrawerListener;)V
 
-    .line 529
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 530
     invoke-virtual {p0, p1}, Landroid/support/v4/widget/DrawerLayout;->addDrawerListener(Landroid/support/v4/widget/DrawerLayout$DrawerListener;)V
 
-    .line 534
     :cond_1
     iput-object p1, p0, Landroid/support/v4/widget/DrawerLayout;->mListener:Landroid/support/v4/widget/DrawerLayout$DrawerListener;
 
-    .line 535
     return-void
 .end method
 
 .method public setDrawerLockMode(I)V
     .locals 1
-    .param p1, "lockMode"    # I
 
-    .prologue
-    .line 585
     const/4 v0, 0x3
 
     invoke-virtual {p0, p1, v0}, Landroid/support/v4/widget/DrawerLayout;->setDrawerLockMode(II)V
 
-    .line 586
     const/4 v0, 0x5
 
     invoke-virtual {p0, p1, v0}, Landroid/support/v4/widget/DrawerLayout;->setDrawerLockMode(II)V
 
-    .line 587
     return-void
 .end method
 
 .method public setDrawerLockMode(II)V
     .locals 5
-    .param p1, "lockMode"    # I
-    .param p2, "edgeGravity"    # I
 
-    .prologue
-    .line 609
     invoke-static {p0}, Landroid/support/v4/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result v4
@@ -5834,98 +4727,74 @@
 
     move-result v0
 
-    .line 612
-    .local v0, "absGravity":I
     sparse-switch p2, :sswitch_data_0
 
-    .line 627
     :goto_0
     if-eqz p1, :cond_0
 
-    .line 629
     const/4 v4, 0x3
 
     if-ne v0, v4, :cond_2
 
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mLeftDragger:Landroid/support/v4/widget/ViewDragHelper;
 
-    .line 630
-    .local v1, "helper":Landroid/support/v4/widget/ViewDragHelper;
     :goto_1
     invoke-virtual {v1}, Landroid/support/v4/widget/ViewDragHelper;->cancel()V
 
-    .line 632
-    .end local v1    # "helper":Landroid/support/v4/widget/ViewDragHelper;
     :cond_0
     packed-switch p1, :pswitch_data_0
 
-    .line 647
     :cond_1
     :goto_2
     return-void
 
-    .line 614
     :sswitch_0
     iput p1, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeLeft:I
 
     goto :goto_0
 
-    .line 617
     :sswitch_1
     iput p1, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeRight:I
 
     goto :goto_0
 
-    .line 620
     :sswitch_2
     iput p1, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeStart:I
 
     goto :goto_0
 
-    .line 623
     :sswitch_3
     iput p1, p0, Landroid/support/v4/widget/DrawerLayout;->mLockModeEnd:I
 
     goto :goto_0
 
-    .line 629
     :cond_2
     iget-object v1, p0, Landroid/support/v4/widget/DrawerLayout;->mRightDragger:Landroid/support/v4/widget/ViewDragHelper;
 
     goto :goto_1
 
-    .line 634
     :pswitch_0
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/DrawerLayout;->findDrawerWithGravity(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 635
-    .local v3, "toOpen":Landroid/view/View;
     if-eqz v3, :cond_1
 
-    .line 636
     invoke-virtual {p0, v3}, Landroid/support/v4/widget/DrawerLayout;->openDrawer(Landroid/view/View;)V
 
     goto :goto_2
 
-    .line 640
-    .end local v3    # "toOpen":Landroid/view/View;
     :pswitch_1
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/DrawerLayout;->findDrawerWithGravity(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 641
-    .local v2, "toClose":Landroid/view/View;
     if-eqz v2, :cond_1
 
-    .line 642
     invoke-virtual {p0, v2}, Landroid/support/v4/widget/DrawerLayout;->closeDrawer(Landroid/view/View;)V
 
     goto :goto_2
 
-    .line 612
     :sswitch_data_0
     .sparse-switch
         0x3 -> :sswitch_0
@@ -5934,7 +4803,6 @@
         0x800005 -> :sswitch_3
     .end sparse-switch
 
-    .line 632
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -5944,18 +4812,13 @@
 
 .method public setDrawerLockMode(ILandroid/view/View;)V
     .locals 4
-    .param p1, "lockMode"    # I
-    .param p2, "drawerView"    # Landroid/view/View;
 
-    .prologue
-    .line 668
     invoke-virtual {p0, p2}, Landroid/support/v4/widget/DrawerLayout;->isDrawerView(Landroid/view/View;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 669
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -5992,7 +4855,6 @@
 
     throw v1
 
-    .line 672
     :cond_0
     invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -6002,24 +4864,18 @@
 
     iget v0, v1, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->gravity:I
 
-    .line 673
-    .local v0, "gravity":I
     invoke-virtual {p0, p1, v0}, Landroid/support/v4/widget/DrawerLayout;->setDrawerLockMode(II)V
 
-    .line 674
     return-void
 .end method
 
 .method public setDrawerShadow(II)V
     .locals 1
-    .param p1, "resId"    # I
+    .param p1    # I
         .annotation build Landroid/support/annotation/DrawableRes;
         .end annotation
     .end param
-    .param p2, "gravity"    # I
 
-    .prologue
-    .line 499
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -6030,60 +4886,47 @@
 
     invoke-virtual {p0, v0, p2}, Landroid/support/v4/widget/DrawerLayout;->setDrawerShadow(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 500
     return-void
 .end method
 
 .method public setDrawerShadow(Landroid/graphics/drawable/Drawable;I)V
     .locals 3
-    .param p1, "shadowDrawable"    # Landroid/graphics/drawable/Drawable;
-    .param p2, "gravity"    # I
 
-    .prologue
     const v2, 0x800005
 
     const v1, 0x800003
 
-    .line 465
     sget-boolean v0, Landroid/support/v4/widget/DrawerLayout;->SET_DRAWER_SHADOW_FROM_ELEVATION:Z
 
     if-eqz v0, :cond_1
 
-    .line 482
     :cond_0
     :goto_0
     return-void
 
-    .line 469
     :cond_1
     and-int v0, p2, v1
 
     if-ne v0, v1, :cond_2
 
-    .line 470
     iput-object p1, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowStart:Landroid/graphics/drawable/Drawable;
 
-    .line 480
     :goto_1
     invoke-direct {p0}, Landroid/support/v4/widget/DrawerLayout;->resolveShadowDrawables()V
 
-    .line 481
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->invalidate()V
 
     goto :goto_0
 
-    .line 471
     :cond_2
     and-int v0, p2, v2
 
     if-ne v0, v2, :cond_3
 
-    .line 472
     iput-object p1, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowEnd:Landroid/graphics/drawable/Drawable;
 
     goto :goto_1
 
-    .line 473
     :cond_3
     and-int/lit8 v0, p2, 0x3
 
@@ -6091,12 +4934,10 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 474
     iput-object p1, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowLeft:Landroid/graphics/drawable/Drawable;
 
     goto :goto_1
 
-    .line 475
     :cond_4
     and-int/lit8 v0, p2, 0x5
 
@@ -6104,7 +4945,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 476
     iput-object p1, p0, Landroid/support/v4/widget/DrawerLayout;->mShadowRight:Landroid/graphics/drawable/Drawable;
 
     goto :goto_1
@@ -6112,11 +4952,7 @@
 
 .method public setDrawerTitle(ILjava/lang/CharSequence;)V
     .locals 2
-    .param p1, "edgeGravity"    # I
-    .param p2, "title"    # Ljava/lang/CharSequence;
 
-    .prologue
-    .line 760
     invoke-static {p0}, Landroid/support/v4/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result v1
@@ -6125,27 +4961,21 @@
 
     move-result v0
 
-    .line 762
-    .local v0, "absGravity":I
     const/4 v1, 0x3
 
     if-ne v0, v1, :cond_1
 
-    .line 763
     iput-object p2, p0, Landroid/support/v4/widget/DrawerLayout;->mTitleLeft:Ljava/lang/CharSequence;
 
-    .line 767
     :cond_0
     :goto_0
     return-void
 
-    .line 764
     :cond_1
     const/4 v1, 0x5
 
     if-ne v0, v1, :cond_0
 
-    .line 765
     iput-object p2, p0, Landroid/support/v4/widget/DrawerLayout;->mTitleRight:Ljava/lang/CharSequence;
 
     goto :goto_0
@@ -6153,19 +4983,13 @@
 
 .method setDrawerViewOffset(Landroid/view/View;F)V
     .locals 2
-    .param p1, "drawerView"    # Landroid/view/View;
-    .param p2, "slideOffset"    # F
 
-    .prologue
-    .line 910
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;
 
-    .line 911
-    .local v0, "lp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     # getter for: Landroid/support/v4/widget/DrawerLayout$LayoutParams;->onScreen:F
     invoke-static {v0}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$000(Landroid/support/v4/widget/DrawerLayout$LayoutParams;)F
 
@@ -6175,16 +4999,13 @@
 
     if-nez v1, :cond_0
 
-    .line 917
     :goto_0
     return-void
 
-    .line 915
     :cond_0
     # setter for: Landroid/support/v4/widget/DrawerLayout$LayoutParams;->onScreen:F
     invoke-static {v0, p2}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$002(Landroid/support/v4/widget/DrawerLayout$LayoutParams;F)F
 
-    .line 916
     invoke-virtual {p0, p1, p2}, Landroid/support/v4/widget/DrawerLayout;->dispatchOnDrawerSlide(Landroid/view/View;F)V
 
     goto :goto_0
@@ -6192,28 +5013,21 @@
 
 .method public setScrimColor(I)V
     .locals 0
-    .param p1, "color"    # I
+    .param p1    # I
         .annotation build Landroid/support/annotation/ColorInt;
         .end annotation
     .end param
 
-    .prologue
-    .line 508
     iput p1, p0, Landroid/support/v4/widget/DrawerLayout;->mScrimColor:I
 
-    .line 509
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->invalidate()V
 
-    .line 510
     return-void
 .end method
 
 .method public setStatusBarBackground(I)V
     .locals 1
-    .param p1, "resId"    # I
 
-    .prologue
-    .line 1314
     if-eqz p1, :cond_0
 
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->getContext()Landroid/content/Context;
@@ -6227,13 +5041,10 @@
     :goto_0
     iput-object v0, p0, Landroid/support/v4/widget/DrawerLayout;->mStatusBarBackground:Landroid/graphics/drawable/Drawable;
 
-    .line 1315
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->invalidate()V
 
-    .line 1316
     return-void
 
-    .line 1314
     :cond_0
     const/4 v0, 0x0
 
@@ -6242,93 +5053,69 @@
 
 .method public setStatusBarBackground(Landroid/graphics/drawable/Drawable;)V
     .locals 0
-    .param p1, "bg"    # Landroid/graphics/drawable/Drawable;
 
-    .prologue
-    .line 1294
     iput-object p1, p0, Landroid/support/v4/widget/DrawerLayout;->mStatusBarBackground:Landroid/graphics/drawable/Drawable;
 
-    .line 1295
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->invalidate()V
 
-    .line 1296
     return-void
 .end method
 
 .method public setStatusBarBackgroundColor(I)V
     .locals 1
-    .param p1, "color"    # I
+    .param p1    # I
         .annotation build Landroid/support/annotation/ColorInt;
         .end annotation
     .end param
 
-    .prologue
-    .line 1326
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
     invoke-direct {v0, p1}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
     iput-object v0, p0, Landroid/support/v4/widget/DrawerLayout;->mStatusBarBackground:Landroid/graphics/drawable/Drawable;
 
-    .line 1327
     invoke-virtual {p0}, Landroid/support/v4/widget/DrawerLayout;->invalidate()V
 
-    .line 1328
     return-void
 .end method
 
 .method updateDrawerState(IILandroid/view/View;)V
     .locals 9
-    .param p1, "forGravity"    # I
-    .param p2, "activeState"    # I
-    .param p3, "activeDrawer"    # Landroid/view/View;
 
-    .prologue
     const/4 v8, 0x2
 
     const/4 v7, 0x1
 
-    .line 794
     iget-object v6, p0, Landroid/support/v4/widget/DrawerLayout;->mLeftDragger:Landroid/support/v4/widget/ViewDragHelper;
 
     invoke-virtual {v6}, Landroid/support/v4/widget/ViewDragHelper;->getViewDragState()I
 
     move-result v1
 
-    .line 795
-    .local v1, "leftState":I
     iget-object v6, p0, Landroid/support/v4/widget/DrawerLayout;->mRightDragger:Landroid/support/v4/widget/ViewDragHelper;
 
     invoke-virtual {v6}, Landroid/support/v4/widget/ViewDragHelper;->getViewDragState()I
 
     move-result v4
 
-    .line 798
-    .local v4, "rightState":I
     if-eq v1, v7, :cond_0
 
     if-ne v4, v7, :cond_2
 
-    .line 799
     :cond_0
     const/4 v5, 0x1
 
-    .line 806
-    .local v5, "state":I
     :goto_0
     if-eqz p3, :cond_1
 
     if-nez p2, :cond_1
 
-    .line 807
     invoke-virtual {p3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v3
 
     check-cast v3, Landroid/support/v4/widget/DrawerLayout$LayoutParams;
 
-    .line 808
-    .local v3, "lp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     # getter for: Landroid/support/v4/widget/DrawerLayout$LayoutParams;->onScreen:F
     invoke-static {v3}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$000(Landroid/support/v4/widget/DrawerLayout$LayoutParams;)F
 
@@ -6340,41 +5127,31 @@
 
     if-nez v6, :cond_5
 
-    .line 809
     invoke-virtual {p0, p3}, Landroid/support/v4/widget/DrawerLayout;->dispatchOnDrawerClosed(Landroid/view/View;)V
 
-    .line 815
-    .end local v3    # "lp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     :cond_1
     :goto_1
     iget v6, p0, Landroid/support/v4/widget/DrawerLayout;->mDrawerState:I
 
     if-eq v5, v6, :cond_6
 
-    .line 816
     iput v5, p0, Landroid/support/v4/widget/DrawerLayout;->mDrawerState:I
 
-    .line 818
     iget-object v6, p0, Landroid/support/v4/widget/DrawerLayout;->mListeners:Ljava/util/List;
 
     if-eqz v6, :cond_6
 
-    .line 821
     iget-object v6, p0, Landroid/support/v4/widget/DrawerLayout;->mListeners:Ljava/util/List;
 
     invoke-interface {v6}, Ljava/util/List;->size()I
 
     move-result v2
 
-    .line 822
-    .local v2, "listenerCount":I
     add-int/lit8 v0, v2, -0x1
 
-    .local v0, "i":I
     :goto_2
     if-ltz v0, :cond_6
 
-    .line 823
     iget-object v6, p0, Landroid/support/v4/widget/DrawerLayout;->mListeners:Ljava/util/List;
 
     invoke-interface {v6, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -6385,37 +5162,25 @@
 
     invoke-interface {v6, v5}, Landroid/support/v4/widget/DrawerLayout$DrawerListener;->onDrawerStateChanged(I)V
 
-    .line 822
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_2
 
-    .line 800
-    .end local v0    # "i":I
-    .end local v2    # "listenerCount":I
-    .end local v5    # "state":I
     :cond_2
     if-eq v1, v8, :cond_3
 
     if-ne v4, v8, :cond_4
 
-    .line 801
     :cond_3
     const/4 v5, 0x2
 
-    .restart local v5    # "state":I
     goto :goto_0
 
-    .line 803
-    .end local v5    # "state":I
     :cond_4
     const/4 v5, 0x0
 
-    .restart local v5    # "state":I
     goto :goto_0
 
-    .line 810
-    .restart local v3    # "lp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     :cond_5
     # getter for: Landroid/support/v4/widget/DrawerLayout$LayoutParams;->onScreen:F
     invoke-static {v3}, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->access$000(Landroid/support/v4/widget/DrawerLayout$LayoutParams;)F
@@ -6428,13 +5193,10 @@
 
     if-nez v6, :cond_1
 
-    .line 811
     invoke-virtual {p0, p3}, Landroid/support/v4/widget/DrawerLayout;->dispatchOnDrawerOpened(Landroid/view/View;)V
 
     goto :goto_1
 
-    .line 827
-    .end local v3    # "lp":Landroid/support/v4/widget/DrawerLayout$LayoutParams;
     :cond_6
     return-void
 .end method

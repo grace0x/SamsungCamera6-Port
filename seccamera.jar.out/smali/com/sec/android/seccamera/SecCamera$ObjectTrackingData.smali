@@ -23,18 +23,13 @@
 # direct methods
 .method public constructor <init>([B)V
     .locals 6
-    .param p1, "data"    # [B
 
-    .prologue
-    .line 2346
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2363
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/android/seccamera/SecCamera$ObjectTrackingData;->focusROI:Landroid/graphics/Rect;
 
-    .line 2347
     const/4 v0, 0x0
 
     aget-byte v0, p1, v0
@@ -55,7 +50,6 @@
 
     iput-short v0, p0, Lcom/sec/android/seccamera/SecCamera$ObjectTrackingData;->focusState:S
 
-    .line 2348
     new-instance v0, Landroid/graphics/Rect;
 
     const/4 v1, 0x2
@@ -134,6 +128,5 @@
 
     iput-object v0, p0, Lcom/sec/android/seccamera/SecCamera$ObjectTrackingData;->focusROI:Landroid/graphics/Rect;
 
-    .line 2353
     return-void
 .end method

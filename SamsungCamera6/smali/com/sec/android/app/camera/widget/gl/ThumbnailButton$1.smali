@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/widget/gl/ThumbnailButton;)V
     .locals 0
 
-    .prologue
-    .line 348
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/ThumbnailButton$1;->this$0:Lcom/sec/android/app/camera/widget/gl/ThumbnailButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,8 +37,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 351
     const/4 v1, 0x2
 
     new-array v1, v1, [F
@@ -64,28 +60,22 @@
 
     move-result-object v0
 
-    .line 352
-    .local v0, "animator":Landroid/animation/ValueAnimator;
     new-instance v1, Landroid/view/animation/interpolator/SineInOut33;
 
     invoke-direct {v1}, Landroid/view/animation/interpolator/SineInOut33;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 353
     new-instance v1, Lcom/sec/android/app/camera/widget/gl/ThumbnailButton$1$1;
 
     invoke-direct {v1, p0}, Lcom/sec/android/app/camera/widget/gl/ThumbnailButton$1$1;-><init>(Lcom/sec/android/app/camera/widget/gl/ThumbnailButton$1;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 362
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 363
     return-void
 
-    .line 351
     nop
 
     :array_0

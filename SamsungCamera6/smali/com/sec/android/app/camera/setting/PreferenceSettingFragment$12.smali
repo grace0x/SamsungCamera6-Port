@@ -29,8 +29,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;ILandroid/widget/ListView;)V
     .locals 0
 
-    .prologue
-    .line 1091
     iput-object p1, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$12;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     iput p2, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$12;->val$position:I
@@ -46,13 +44,7 @@
 # virtual methods
 .method public onScroll(Landroid/widget/AbsListView;III)V
     .locals 3
-    .param p1, "view"    # Landroid/widget/AbsListView;
-    .param p2, "firstVisibleItem"    # I
-    .param p3, "visibleItemCount"    # I
-    .param p4, "totalItemCount"    # I
 
-    .prologue
-    .line 1094
     const-string v0, "PrefSettingFragment"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -95,17 +87,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1095
     return-void
 .end method
 
 .method public onScrollStateChanged(Landroid/widget/AbsListView;I)V
     .locals 3
-    .param p1, "view"    # Landroid/widget/AbsListView;
-    .param p2, "scrollState"    # I
 
-    .prologue
-    .line 1099
     const-string v0, "PrefSettingFragment"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -140,24 +127,20 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1100
     if-nez p2, :cond_0
 
-    .line 1101
     iget-object v0, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$12;->val$listView:Landroid/widget/ListView;
 
     iget v1, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$12;->val$position:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setSelection(I)V
 
-    .line 1102
     iget-object v0, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$12;->val$listView:Landroid/widget/ListView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnScrollListener(Landroid/widget/AbsListView$OnScrollListener;)V
 
-    .line 1104
     :cond_0
     return-void
 .end method

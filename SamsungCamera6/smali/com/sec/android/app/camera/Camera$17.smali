@@ -29,8 +29,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/Camera;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 3879
     iput-object p1, p0, Lcom/sec/android/app/camera/Camera$17;->this$0:Lcom/sec/android/app/camera/Camera;
 
     iput-object p2, p0, Lcom/sec/android/app/camera/Camera$17;->val$featureId:Ljava/lang/String;
@@ -47,8 +45,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 3882
     iget-object v1, p0, Lcom/sec/android/app/camera/Camera$17;->val$featureId:Ljava/lang/String;
 
     iget-object v2, p0, Lcom/sec/android/app/camera/Camera$17;->val$value:Ljava/lang/String;
@@ -57,8 +53,6 @@
 
     move-result-object v0
 
-    .line 3883
-    .local v0, "cv":Landroid/content/ContentValues;
     iget-object v1, p0, Lcom/sec/android/app/camera/Camera$17;->this$0:Lcom/sec/android/app/camera/Camera;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/Camera;->getApplicationContext()Landroid/content/Context;
@@ -67,6 +61,5 @@
 
     invoke-static {v1, v0}, Lcom/sec/android/app/camera/util/Util;->broadcastGeneralEventForLogging(Landroid/content/Context;Landroid/content/ContentValues;)V
 
-    .line 3884
     return-void
 .end method

@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/engine/CommonEngine;)V
     .locals 0
 
-    .prologue
-    .line 7170
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/CommonEngine$21;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,8 +37,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 7173
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine$21;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/engine/CommonEngine;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -55,6 +51,5 @@
 
     invoke-interface {v0, v1}, Lcom/sec/android/app/camera/interfaces/CameraContext;->resizePreviewAspectRatio(I)Z
 
-    .line 7174
     return-void
 .end method

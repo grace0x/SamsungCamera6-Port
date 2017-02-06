@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/engine/CommonEngine;)V
     .locals 0
 
-    .prologue
-    .line 6461
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/CommonEngine$15;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,15 +37,12 @@
 .method public run()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
-    .line 6464
     const-string v1, "StartPreviewThread"
 
     invoke-static {v1}, Lcom/sec/android/app/TraceWrapper;->traceBegin(Ljava/lang/String;)V
 
-    .line 6467
     const-string v1, "AXLOG"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -80,14 +75,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6468
     const-string v1, "CommonEngine"
 
     const-string v2, "starting preview..."
 
     invoke-static {v1, v2}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6471
     :try_start_0
     const-string v1, "CommonEngine"
 
@@ -95,7 +88,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6473
     iget-object v1, p0, Lcom/sec/android/app/camera/engine/CommonEngine$15;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/engine/CommonEngine;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -106,14 +98,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 6474
     const-string v1, "CommonEngine"
 
     const-string v2, "Camera is pausing, so do not start preview"
 
     invoke-static {v1, v2}, Landroid/util/Log;->secE(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6475
     iget-object v1, p0, Lcom/sec/android/app/camera/engine/CommonEngine$15;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/engine/CommonEngine;->isStartingPreview()Z
@@ -122,7 +112,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 6477
     iget-object v1, p0, Lcom/sec/android/app/camera/engine/CommonEngine$15;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/engine/CommonEngine;->mRequestQueue:Lcom/sec/android/app/camera/engine/CeRequestQueue;
@@ -131,18 +120,15 @@
 
     invoke-virtual {v1, v2}, Lcom/sec/android/app/camera/engine/CeRequestQueue;->removeRequest(I)V
 
-    .line 6518
     :cond_0
     :goto_0
     return-void
 
-    .line 6482
     :cond_1
     const-string v1, "StartPreview"
 
     invoke-static {v1}, Lcom/sec/android/app/TraceWrapper;->traceBegin(Ljava/lang/String;)V
 
-    .line 6483
     iget-object v1, p0, Lcom/sec/android/app/camera/engine/CommonEngine$15;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     # getter for: Lcom/sec/android/app/camera/engine/CommonEngine;->mCameraDevice:Lcom/sec/android/seccamera/SecCamera;
@@ -152,10 +138,8 @@
 
     invoke-virtual {v1}, Lcom/sec/android/seccamera/SecCamera;->startPreview()V
 
-    .line 6484
     invoke-static {}, Lcom/sec/android/app/TraceWrapper;->traceEnd()V
 
-    .line 6486
     iget-object v1, p0, Lcom/sec/android/app/camera/engine/CommonEngine$15;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     # getter for: Lcom/sec/android/app/camera/engine/CommonEngine;->mShootingModeFeature:Lcom/sec/android/app/camera/interfaces/ShootingModeFeature;
@@ -187,19 +171,16 @@
 
     if-nez v1, :cond_3
 
-    .line 6487
     :cond_2
     iget-object v1, p0, Lcom/sec/android/app/camera/engine/CommonEngine$15;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/engine/CommonEngine;->startFaceDetection()V
 
-    .line 6490
     :cond_3
     sget-boolean v1, Lcom/sec/android/app/camera/feature/Feature;->SUPPORT_AUTO_FOCUS:Z
 
     if-nez v1, :cond_4
 
-    .line 6491
     iget-object v1, p0, Lcom/sec/android/app/camera/engine/CommonEngine$15;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     const/4 v2, 0x1
@@ -209,7 +190,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6501
     :cond_4
     iget-object v1, p0, Lcom/sec/android/app/camera/engine/CommonEngine$15;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
@@ -217,7 +197,6 @@
 
     invoke-virtual {v1, v6}, Lcom/sec/android/app/camera/engine/CommonEngine$StateMessageHandler;->sendEmptyMessage(I)Z
 
-    .line 6507
     const-string v1, "AXLOG"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -250,7 +229,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6509
     const-string v1, "AXLOG"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -283,7 +261,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6511
     const-string v1, "AXLOG"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -316,17 +293,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6512
     const-string v1, "VerificationLog"
 
     const-string v2, "Executed"
 
     invoke-static {v1, v2}, Landroid/util/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6513
     invoke-static {}, Lcom/sec/android/app/TraceWrapper;->traceEnd()V
 
-    .line 6515
     sget-boolean v1, Lcom/sec/android/app/camera/feature/Feature;->SUPPORT_MULTI_INSTANCE_CAMERA:Z
 
     if-eqz v1, :cond_0
@@ -344,7 +318,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 6516
     iget-object v1, p0, Lcom/sec/android/app/camera/engine/CommonEngine$15;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     # invokes: Lcom/sec/android/app/camera/engine/CommonEngine;->prepareStandbyDevice()V
@@ -352,12 +325,9 @@
 
     goto/16 :goto_0
 
-    .line 6493
     :catch_0
     move-exception v0
 
-    .line 6497
-    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "CommonEngine"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -384,7 +354,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6498
     iget-object v1, p0, Lcom/sec/android/app/camera/engine/CommonEngine$15;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/engine/CommonEngine;->mErrorMessageHandler:Lcom/sec/android/app/camera/engine/CommonEngine$ErrorMessageHandler;

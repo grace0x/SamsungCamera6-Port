@@ -77,8 +77,6 @@
 # direct methods
 .method protected constructor <init>(Ljava/lang/String;Ljava/lang/Class;Lcom/android/volley/Response$Listener;Lcom/android/volley/Response$ErrorListener;)V
     .locals 2
-    .param p1, "url"    # Ljava/lang/String;
-    .param p4, "errorListener"    # Lcom/android/volley/Response$ErrorListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -92,47 +90,34 @@
         }
     .end annotation
 
-    .prologue
-    .local p0, "this":Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;, "Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest<TREQ;TRES;>;"
-    .local p2, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<TRES;>;"
-    .local p3, "listener":Lcom/android/volley/Response$Listener;, "Lcom/android/volley/Response$Listener<TRES;>;"
     const/4 v1, 0x0
 
-    .line 953
     const/4 v0, 0x0
 
     invoke-direct {p0, v0, p1, p4}, Lcom/android/volley/Request;-><init>(ILjava/lang/String;Lcom/android/volley/Response$ErrorListener;)V
 
-    .line 945
     new-instance v0, Lcom/google/gson/Gson;
 
     invoke-direct {v0}, Lcom/google/gson/Gson;-><init>()V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;->gson:Lcom/google/gson/Gson;
 
-    .line 950
     iput-object v1, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;->responseCharset:Ljava/lang/String;
 
-    .line 954
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;->clazz:Ljava/lang/Class;
 
-    .line 955
     iput-object p3, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;->listener:Lcom/android/volley/Response$Listener;
 
-    .line 956
     iput-object v1, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;->headers:Ljava/util/Map;
 
-    .line 957
     iput-object v1, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;->requestBody:Ljava/lang/Object;
 
-    .line 958
     new-instance v0, Lcom/sec/android/app/camera/shootingmode/TagShot$SCRetryPolicy;
 
     invoke-direct {v0}, Lcom/sec/android/app/camera/shootingmode/TagShot$SCRetryPolicy;-><init>()V
 
     invoke-virtual {p0, v0}, Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;->setRetryPolicy(Lcom/android/volley/RetryPolicy;)Lcom/android/volley/Request;
 
-    .line 959
     return-void
 .end method
 
@@ -146,15 +131,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 998
-    .local p0, "this":Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;, "Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest<TREQ;TRES;>;"
-    .local p1, "response":Ljava/lang/Object;, "TRES;"
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;->listener:Lcom/android/volley/Response$Listener;
 
     invoke-interface {v0, p1}, Lcom/android/volley/Response$Listener;->onResponse(Ljava/lang/Object;)V
 
-    .line 999
     return-void
 .end method
 
@@ -166,9 +146,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 963
-    .local p0, "this":Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;, "Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest<TREQ;TRES;>;"
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;->gson:Lcom/google/gson/Gson;
 
     iget-object v2, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;->requestBody:Ljava/lang/Object;
@@ -177,13 +154,10 @@
 
     move-result-object v0
 
-    .line 964
-    .local v0, "body":Ljava/lang/String;
     const-string v1, "TagShot"
 
     invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 965
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;->requestBody:Ljava/lang/Object;
 
     if-nez v1, :cond_0
@@ -208,9 +182,6 @@
 .method public getBodyContentType()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 970
-    .local p0, "this":Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;, "Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest<TREQ;TRES;>;"
     const-string v0, "application/json; charset=UTF-8"
 
     return-object v0
@@ -219,20 +190,14 @@
 .method public getCacheKey()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 975
-    .local p0, "this":Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;, "Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest<TREQ;TRES;>;"
     invoke-super {p0}, Lcom/android/volley/Request;->getCacheKey()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 976
-    .local v0, "cacheKey":Ljava/lang/String;
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;->requestBody:Ljava/lang/Object;
 
     if-eqz v1, :cond_0
 
-    .line 977
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -255,7 +220,6 @@
 
     move-result-object v0
 
-    .line 979
     :cond_0
     return-object v0
 .end method
@@ -279,9 +243,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 984
-    .local p0, "this":Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;, "Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest<TREQ;TRES;>;"
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;->headers:Ljava/util/Map;
 
     if-eqz v0, :cond_0
@@ -301,7 +262,6 @@
 
 .method protected parseNetworkResponse(Lcom/android/volley/NetworkResponse;)Lcom/android/volley/Response;
     .locals 8
-    .param p1, "response"    # Lcom/android/volley/NetworkResponse;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -312,19 +272,13 @@
         }
     .end annotation
 
-    .prologue
-    .line 1005
-    .local p0, "this":Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;, "Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest<TREQ;TRES;>;"
     const/4 v2, 0x0
 
-    .line 1006
-    .local v2, "json":Ljava/lang/String;
     :try_start_0
     iget-object v5, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;->responseCharset:Ljava/lang/String;
 
     if-eqz v5, :cond_0
 
-    .line 1007
     new-instance v3, Ljava/lang/String;
 
     iget-object v5, p1, Lcom/android/volley/NetworkResponse;->data:[B
@@ -333,13 +287,8 @@
 
     invoke-direct {v3, v5, v6}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
 
-    .end local v2    # "json":Ljava/lang/String;
-    .local v3, "json":Ljava/lang/String;
     move-object v2, v3
 
-    .line 1011
-    .end local v3    # "json":Ljava/lang/String;
-    .restart local v2    # "json":Ljava/lang/String;
     :goto_0
     const-string v5, "TagShot"
 
@@ -363,7 +312,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1013
     iget-object v5, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;->gson:Lcom/google/gson/Gson;
 
     iget-object v6, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;->clazz:Ljava/lang/Class;
@@ -380,11 +328,9 @@
 
     move-result-object v4
 
-    .line 1026
     :goto_1
     return-object v4
 
-    .line 1009
     :cond_0
     new-instance v3, Ljava/lang/String;
 
@@ -402,20 +348,13 @@
     .catch Lcom/google/gson/JsonSyntaxException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    .end local v2    # "json":Ljava/lang/String;
-    .restart local v3    # "json":Ljava/lang/String;
     move-object v2, v3
 
-    .end local v3    # "json":Ljava/lang/String;
-    .restart local v2    # "json":Ljava/lang/String;
     goto :goto_0
 
-    .line 1017
     :catch_0
     move-exception v0
 
-    .line 1018
-    .local v0, "e":Ljava/io/UnsupportedEncodingException;
     new-instance v5, Lcom/android/volley/ParseError;
 
     invoke-direct {v5, v0}, Lcom/android/volley/ParseError;-><init>(Ljava/lang/Throwable;)V
@@ -426,19 +365,13 @@
 
     goto :goto_1
 
-    .line 1019
-    .end local v0    # "e":Ljava/io/UnsupportedEncodingException;
     :catch_1
     move-exception v0
 
-    .line 1020
-    .local v0, "e":Lcom/google/gson/JsonSyntaxException;
     new-instance v1, Lcom/android/volley/ParseError;
 
     invoke-direct {v1, v0}, Lcom/android/volley/ParseError;-><init>(Ljava/lang/Throwable;)V
 
-    .line 1021
-    .local v1, "error":Lcom/android/volley/ParseError;
     const-string v5, "TagShot"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -473,7 +406,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1022
     new-instance v5, Lcom/android/volley/ParseError;
 
     invoke-direct {v5, v0}, Lcom/android/volley/ParseError;-><init>(Ljava/lang/Throwable;)V
@@ -484,20 +416,13 @@
 
     goto :goto_1
 
-    .line 1023
-    .end local v0    # "e":Lcom/google/gson/JsonSyntaxException;
-    .end local v1    # "error":Lcom/android/volley/ParseError;
     :catch_2
     move-exception v0
 
-    .line 1024
-    .local v0, "e":Ljava/lang/Exception;
     new-instance v1, Lcom/android/volley/ParseError;
 
     invoke-direct {v1, v0}, Lcom/android/volley/ParseError;-><init>(Ljava/lang/Throwable;)V
 
-    .line 1025
-    .restart local v1    # "error":Lcom/android/volley/ParseError;
     const-string v5, "TagShot"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -532,7 +457,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1026
     new-instance v5, Lcom/android/volley/ParseError;
 
     invoke-direct {v5, v0}, Lcom/android/volley/ParseError;-><init>(Ljava/lang/Throwable;)V
@@ -546,13 +470,8 @@
 
 .method public setCharset(Ljava/lang/String;)V
     .locals 0
-    .param p1, "charset"    # Ljava/lang/String;
 
-    .prologue
-    .line 993
-    .local p0, "this":Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;, "Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest<TREQ;TRES;>;"
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$SCJsonRequest;->responseCharset:Ljava/lang/String;
 
-    .line 994
     return-void
 .end method

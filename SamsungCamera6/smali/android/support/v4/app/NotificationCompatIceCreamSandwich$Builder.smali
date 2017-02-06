@@ -24,25 +24,9 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/app/Notification;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/widget/RemoteViews;ILandroid/app/PendingIntent;Landroid/app/PendingIntent;Landroid/graphics/Bitmap;IIZ)V
     .locals 8
-    .param p1, "context"    # Landroid/content/Context;
-    .param p2, "n"    # Landroid/app/Notification;
-    .param p3, "contentTitle"    # Ljava/lang/CharSequence;
-    .param p4, "contentText"    # Ljava/lang/CharSequence;
-    .param p5, "contentInfo"    # Ljava/lang/CharSequence;
-    .param p6, "tickerView"    # Landroid/widget/RemoteViews;
-    .param p7, "number"    # I
-    .param p8, "contentIntent"    # Landroid/app/PendingIntent;
-    .param p9, "fullScreenIntent"    # Landroid/app/PendingIntent;
-    .param p10, "largeIcon"    # Landroid/graphics/Bitmap;
-    .param p11, "progressMax"    # I
-    .param p12, "progress"    # I
-    .param p13, "progressIndeterminate"    # Z
 
-    .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     new-instance v4, Landroid/app/Notification$Builder;
 
     invoke-direct {v4, p1}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
@@ -203,10 +187,8 @@
 
     iput-object v4, p0, Landroid/support/v4/app/NotificationCompatIceCreamSandwich$Builder;->b:Landroid/app/Notification$Builder;
 
-    .line 57
     return-void
 
-    .line 35
     :cond_0
     const/4 v4, 0x0
 
@@ -233,8 +215,6 @@
 .method public build()Landroid/app/Notification;
     .locals 1
 
-    .prologue
-    .line 66
     iget-object v0, p0, Landroid/support/v4/app/NotificationCompatIceCreamSandwich$Builder;->b:Landroid/app/Notification$Builder;
 
     invoke-virtual {v0}, Landroid/app/Notification$Builder;->getNotification()Landroid/app/Notification;
@@ -247,8 +227,6 @@
 .method public getBuilder()Landroid/app/Notification$Builder;
     .locals 1
 
-    .prologue
-    .line 61
     iget-object v0, p0, Landroid/support/v4/app/NotificationCompatIceCreamSandwich$Builder;->b:Landroid/app/Notification$Builder;
 
     return-object v0

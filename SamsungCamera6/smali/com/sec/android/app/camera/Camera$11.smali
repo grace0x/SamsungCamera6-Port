@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/Camera;)V
     .locals 0
 
-    .prologue
-    .line 2049
     iput-object p1, p0, Lcom/sec/android/app/camera/Camera$11;->this$0:Lcom/sec/android/app/camera/Camera;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,8 +37,6 @@
 .method public run()V
     .locals 12
 
-    .prologue
-    .line 2052
     iget-object v6, p0, Lcom/sec/android/app/camera/Camera$11;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mEngine:Lcom/sec/android/app/camera/interfaces/Engine;
@@ -54,7 +50,6 @@
 
     if-nez v6, :cond_0
 
-    .line 2053
     iget-object v6, p0, Lcom/sec/android/app/camera/Camera$11;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mEngine:Lcom/sec/android/app/camera/interfaces/Engine;
@@ -64,7 +59,6 @@
 
     invoke-interface {v6}, Lcom/sec/android/app/camera/interfaces/Engine;->waitForPictureSavingThread()V
 
-    .line 2054
     iget-object v6, p0, Lcom/sec/android/app/camera/Camera$11;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mLatestMediaStateLock:Ljava/lang/Object;
@@ -74,7 +68,6 @@
 
     monitor-enter v7
 
-    .line 2055
     :try_start_0
     const-string v6, "Camera6"
 
@@ -82,13 +75,10 @@
 
     invoke-static {v6, v8}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2056
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 2057
-    .local v4, "startTime":J
     iget-object v6, p0, Lcom/sec/android/app/camera/Camera$11;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mEngine:Lcom/sec/android/app/camera/interfaces/Engine;
@@ -100,8 +90,6 @@
 
     move-result-object v1
 
-    .line 2058
-    .local v1, "lastCaptureData":Lcom/sec/android/app/camera/util/ContentData;
     iget-object v6, p0, Lcom/sec/android/app/camera/Camera$11;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mEngine:Lcom/sec/android/app/camera/interfaces/Engine;
@@ -113,8 +101,6 @@
 
     move-result-object v2
 
-    .line 2059
-    .local v2, "lastCaptureFileName":Ljava/lang/String;
     iget-object v6, p0, Lcom/sec/android/app/camera/Camera$11;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mEngine:Lcom/sec/android/app/camera/interfaces/Engine;
@@ -126,8 +112,6 @@
 
     move-result-object v3
 
-    .line 2061
-    .local v3, "lastContentUri":Landroid/net/Uri;
     iget-object v6, p0, Lcom/sec/android/app/camera/Camera$11;->this$0:Lcom/sec/android/app/camera/Camera;
 
     # getter for: Lcom/sec/android/app/camera/Camera;->mLatestMedia:Lcom/sec/android/app/camera/util/LatestMedia;
@@ -154,8 +138,6 @@
 
     move-result-object v0
 
-    .line 2062
-    .local v0, "bitmap":Landroid/graphics/Bitmap;
     const-string v6, "Camera6"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -190,7 +172,6 @@
 
     invoke-static {v6, v8}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2064
     iget-object v6, p0, Lcom/sec/android/app/camera/Camera$11;->this$0:Lcom/sec/android/app/camera/Camera;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/util/ContentData;->getOrientation()I
@@ -200,7 +181,6 @@
     # invokes: Lcom/sec/android/app/camera/Camera;->showReview(Landroid/graphics/Bitmap;ILjava/lang/String;Landroid/net/Uri;)V
     invoke-static {v6, v0, v8, v2, v3}, Lcom/sec/android/app/camera/Camera;->access$1600(Lcom/sec/android/app/camera/Camera;Landroid/graphics/Bitmap;ILjava/lang/String;Landroid/net/Uri;)V
 
-    .line 2065
     const-string v6, "Camera6"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -235,19 +215,11 @@
 
     invoke-static {v6, v8}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2066
     monitor-exit v7
 
-    .line 2070
-    .end local v0    # "bitmap":Landroid/graphics/Bitmap;
-    .end local v1    # "lastCaptureData":Lcom/sec/android/app/camera/util/ContentData;
-    .end local v2    # "lastCaptureFileName":Ljava/lang/String;
-    .end local v3    # "lastContentUri":Landroid/net/Uri;
-    .end local v4    # "startTime":J
     :goto_0
     return-void
 
-    .line 2066
     :catchall_0
     move-exception v6
 
@@ -257,7 +229,6 @@
 
     throw v6
 
-    .line 2068
     :cond_0
     const-string v6, "Camera6"
 

@@ -39,8 +39,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/shootingmode/TagShot;Lcom/sec/android/app/camera/shootingmode/TagShot$LocationInfoListener;Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 567
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$5;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$5;->val$locationInfoListener:Lcom/sec/android/app/camera/shootingmode/TagShot$LocationInfoListener;
@@ -56,10 +54,7 @@
 # virtual methods
 .method public onResponse(Lcom/sec/android/app/camera/shootingmode/util/AccuLocationInfo;)V
     .locals 3
-    .param p1, "locationInfo"    # Lcom/sec/android/app/camera/shootingmode/util/AccuLocationInfo;
 
-    .prologue
-    .line 570
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$5;->val$locationInfoListener:Lcom/sec/android/app/camera/shootingmode/TagShot$LocationInfoListener;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$5;->val$context:Landroid/content/Context;
@@ -68,19 +63,14 @@
 
     invoke-interface {v0, v1, v2}, Lcom/sec/android/app/camera/shootingmode/TagShot$LocationInfoListener;->onResult(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 571
     return-void
 .end method
 
 .method public bridge synthetic onResponse(Ljava/lang/Object;)V
     .locals 0
-    .param p1, "x0"    # Ljava/lang/Object;
 
-    .prologue
-    .line 567
     check-cast p1, Lcom/sec/android/app/camera/shootingmode/util/AccuLocationInfo;
 
-    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/shootingmode/TagShot$5;->onResponse(Lcom/sec/android/app/camera/shootingmode/util/AccuLocationInfo;)V
 
     return-void

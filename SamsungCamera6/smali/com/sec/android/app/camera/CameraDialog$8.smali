@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/CameraDialog;)V
     .locals 0
 
-    .prologue
-    .line 663
     iput-object p1, p0, Lcom/sec/android/app/camera/CameraDialog$8;->this$0:Lcom/sec/android/app/camera/CameraDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,11 +36,7 @@
 # virtual methods
 .method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 3
-    .param p1, "arg0"    # Landroid/widget/CompoundButton;
-    .param p2, "checked"    # Z
 
-    .prologue
-    .line 666
     iget-object v0, p0, Lcom/sec/android/app/camera/CameraDialog$8;->this$0:Lcom/sec/android/app/camera/CameraDialog;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/CameraDialog;->getActivity()Landroid/app/Activity;
@@ -62,10 +56,8 @@
     :goto_0
     invoke-static {v1, v2, v0}, Lcom/sec/android/app/camera/util/SharedPreferencesHelper;->savePreferences(Landroid/content/Context;Ljava/lang/String;Z)V
 
-    .line 667
     return-void
 
-    .line 666
     :cond_0
     const/4 v0, 0x0
 

@@ -64,9 +64,6 @@
 # direct methods
 .method public constructor <init>(Lcom/google/gson/internal/bind/MapTypeAdapterFactory;Lcom/google/gson/Gson;Ljava/lang/reflect/Type;Lcom/google/gson/TypeAdapter;Ljava/lang/reflect/Type;Lcom/google/gson/TypeAdapter;Lcom/google/gson/internal/ObjectConstructor;)V
     .locals 1
-    .param p2, "context"    # Lcom/google/gson/Gson;
-    .param p3, "keyType"    # Ljava/lang/reflect/Type;
-    .param p5, "valueType"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -84,64 +81,46 @@
         }
     .end annotation
 
-    .prologue
-    .line 152
-    .local p0, "this":Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;, "Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter<TK;TV;>;"
-    .local p4, "keyTypeAdapter":Lcom/google/gson/TypeAdapter;, "Lcom/google/gson/TypeAdapter<TK;>;"
-    .local p6, "valueTypeAdapter":Lcom/google/gson/TypeAdapter;, "Lcom/google/gson/TypeAdapter<TV;>;"
-    .local p7, "constructor":Lcom/google/gson/internal/ObjectConstructor;, "Lcom/google/gson/internal/ObjectConstructor<+Ljava/util/Map<TK;TV;>;>;"
     iput-object p1, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;->this$0:Lcom/google/gson/internal/bind/MapTypeAdapterFactory;
 
     invoke-direct {p0}, Lcom/google/gson/TypeAdapter;-><init>()V
 
-    .line 153
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;
 
     invoke-direct {v0, p2, p4, p3}, Lcom/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;-><init>(Lcom/google/gson/Gson;Lcom/google/gson/TypeAdapter;Ljava/lang/reflect/Type;)V
 
     iput-object v0, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;->keyTypeAdapter:Lcom/google/gson/TypeAdapter;
 
-    .line 155
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;
 
     invoke-direct {v0, p2, p6, p5}, Lcom/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;-><init>(Lcom/google/gson/Gson;Lcom/google/gson/TypeAdapter;Ljava/lang/reflect/Type;)V
 
     iput-object v0, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;->valueTypeAdapter:Lcom/google/gson/TypeAdapter;
 
-    .line 157
     iput-object p7, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;->constructor:Lcom/google/gson/internal/ObjectConstructor;
 
-    .line 158
     return-void
 .end method
 
 .method private keyToString(Lcom/google/gson/JsonElement;)Ljava/lang/String;
     .locals 2
-    .param p1, "keyElement"    # Lcom/google/gson/JsonElement;
 
-    .prologue
-    .line 246
-    .local p0, "this":Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;, "Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter<TK;TV;>;"
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->isJsonPrimitive()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 247
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonPrimitive()Lcom/google/gson/JsonPrimitive;
 
     move-result-object v0
 
-    .line 248
-    .local v0, "primitive":Lcom/google/gson/JsonPrimitive;
     invoke-virtual {v0}, Lcom/google/gson/JsonPrimitive;->isNumber()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 249
     invoke-virtual {v0}, Lcom/google/gson/JsonPrimitive;->getAsNumber()Ljava/lang/Number;
 
     move-result-object v1
@@ -150,13 +129,9 @@
 
     move-result-object v1
 
-    .line 258
-    .end local v0    # "primitive":Lcom/google/gson/JsonPrimitive;
     :goto_0
     return-object v1
 
-    .line 250
-    .restart local v0    # "primitive":Lcom/google/gson/JsonPrimitive;
     :cond_0
     invoke-virtual {v0}, Lcom/google/gson/JsonPrimitive;->isBoolean()Z
 
@@ -164,7 +139,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 251
     invoke-virtual {v0}, Lcom/google/gson/JsonPrimitive;->getAsBoolean()Z
 
     move-result v1
@@ -175,7 +149,6 @@
 
     goto :goto_0
 
-    .line 252
     :cond_1
     invoke-virtual {v0}, Lcom/google/gson/JsonPrimitive;->isString()Z
 
@@ -183,14 +156,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 253
     invoke-virtual {v0}, Lcom/google/gson/JsonPrimitive;->getAsString()Ljava/lang/String;
 
     move-result-object v1
 
     goto :goto_0
 
-    .line 255
     :cond_2
     new-instance v1, Ljava/lang/AssertionError;
 
@@ -198,8 +169,6 @@
 
     throw v1
 
-    .line 257
-    .end local v0    # "primitive":Lcom/google/gson/JsonPrimitive;
     :cond_3
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->isJsonNull()Z
 
@@ -207,12 +176,10 @@
 
     if-eqz v1, :cond_4
 
-    .line 258
     const-string v1, "null"
 
     goto :goto_0
 
-    .line 260
     :cond_4
     new-instance v1, Ljava/lang/AssertionError;
 
@@ -225,16 +192,12 @@
 # virtual methods
 .method public bridge synthetic read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;
     .locals 1
-    .param p1, "x0"    # Lcom/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    .prologue
-    .line 145
-    .local p0, "this":Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;, "Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter<TK;TV;>;"
     invoke-virtual {p0, p1}, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;->read(Lcom/google/gson/stream/JsonReader;)Ljava/util/Map;
 
     move-result-object v0
@@ -244,7 +207,6 @@
 
 .method public read(Lcom/google/gson/stream/JsonReader;)Ljava/util/Map;
     .locals 8
-    .param p1, "in"    # Lcom/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -261,30 +223,21 @@
         }
     .end annotation
 
-    .prologue
-    .line 161
-    .local p0, "this":Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;, "Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter<TK;TV;>;"
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->peek()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v2
 
-    .line 162
-    .local v2, "peek":Lcom/google/gson/stream/JsonToken;
     sget-object v5, Lcom/google/gson/stream/JsonToken;->NULL:Lcom/google/gson/stream/JsonToken;
 
     if-ne v2, v5, :cond_0
 
-    .line 163
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextNull()V
 
-    .line 164
     const/4 v1, 0x0
 
-    .line 195
     :goto_0
     return-object v1
 
-    .line 167
     :cond_0
     iget-object v5, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;->constructor:Lcom/google/gson/internal/ObjectConstructor;
 
@@ -294,16 +247,12 @@
 
     check-cast v1, Ljava/util/Map;
 
-    .line 169
-    .local v1, "map":Ljava/util/Map;, "Ljava/util/Map<TK;TV;>;"
     sget-object v5, Lcom/google/gson/stream/JsonToken;->BEGIN_ARRAY:Lcom/google/gson/stream/JsonToken;
 
     if-ne v2, v5, :cond_3
 
-    .line 170
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->beginArray()V
 
-    .line 171
     :goto_1
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->hasNext()Z
 
@@ -311,35 +260,26 @@
 
     if-eqz v5, :cond_2
 
-    .line 172
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->beginArray()V
 
-    .line 173
     iget-object v5, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;->keyTypeAdapter:Lcom/google/gson/TypeAdapter;
 
     invoke-virtual {v5, p1}, Lcom/google/gson/TypeAdapter;->read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 174
-    .local v0, "key":Ljava/lang/Object;, "TK;"
     iget-object v5, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;->valueTypeAdapter:Lcom/google/gson/TypeAdapter;
 
     invoke-virtual {v5, p1}, Lcom/google/gson/TypeAdapter;->read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;
 
     move-result-object v4
 
-    .line 175
-    .local v4, "value":Ljava/lang/Object;, "TV;"
     invoke-interface {v1, v0, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
-    .line 176
-    .local v3, "replaced":Ljava/lang/Object;, "TV;"
     if-eqz v3, :cond_1
 
-    .line 177
     new-instance v5, Lcom/google/gson/JsonSyntaxException;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -364,26 +304,19 @@
 
     throw v5
 
-    .line 179
     :cond_1
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->endArray()V
 
     goto :goto_1
 
-    .line 181
-    .end local v0    # "key":Ljava/lang/Object;, "TK;"
-    .end local v3    # "replaced":Ljava/lang/Object;, "TV;"
-    .end local v4    # "value":Ljava/lang/Object;, "TV;"
     :cond_2
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->endArray()V
 
     goto :goto_0
 
-    .line 183
     :cond_3
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->beginObject()V
 
-    .line 184
     :cond_4
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->hasNext()Z
 
@@ -391,37 +324,28 @@
 
     if-eqz v5, :cond_5
 
-    .line 185
     sget-object v5, Lcom/google/gson/internal/JsonReaderInternalAccess;->INSTANCE:Lcom/google/gson/internal/JsonReaderInternalAccess;
 
     invoke-virtual {v5, p1}, Lcom/google/gson/internal/JsonReaderInternalAccess;->promoteNameToValue(Lcom/google/gson/stream/JsonReader;)V
 
-    .line 186
     iget-object v5, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;->keyTypeAdapter:Lcom/google/gson/TypeAdapter;
 
     invoke-virtual {v5, p1}, Lcom/google/gson/TypeAdapter;->read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 187
-    .restart local v0    # "key":Ljava/lang/Object;, "TK;"
     iget-object v5, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;->valueTypeAdapter:Lcom/google/gson/TypeAdapter;
 
     invoke-virtual {v5, p1}, Lcom/google/gson/TypeAdapter;->read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;
 
     move-result-object v4
 
-    .line 188
-    .restart local v4    # "value":Ljava/lang/Object;, "TV;"
     invoke-interface {v1, v0, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
-    .line 189
-    .restart local v3    # "replaced":Ljava/lang/Object;, "TV;"
     if-eqz v3, :cond_4
 
-    .line 190
     new-instance v5, Lcom/google/gson/JsonSyntaxException;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -446,10 +370,6 @@
 
     throw v5
 
-    .line 193
-    .end local v0    # "key":Ljava/lang/Object;, "TK;"
-    .end local v3    # "replaced":Ljava/lang/Object;, "TV;"
-    .end local v4    # "value":Ljava/lang/Object;, "TV;"
     :cond_5
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->endObject()V
 
@@ -458,20 +378,14 @@
 
 .method public bridge synthetic write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
     .locals 0
-    .param p1, "x0"    # Lcom/google/gson/stream/JsonWriter;
-    .param p2, "x1"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    .prologue
-    .line 145
-    .local p0, "this":Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;, "Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter<TK;TV;>;"
     check-cast p2, Ljava/util/Map;
 
-    .end local p2    # "x1":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;->write(Lcom/google/gson/stream/JsonWriter;Ljava/util/Map;)V
 
     return-void
@@ -479,7 +393,6 @@
 
 .method public write(Lcom/google/gson/stream/JsonWriter;Ljava/util/Map;)V
     .locals 9
-    .param p1, "out"    # Lcom/google/gson/stream/JsonWriter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -495,20 +408,13 @@
         }
     .end annotation
 
-    .prologue
-    .line 199
-    .local p0, "this":Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;, "Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter<TK;TV;>;"
-    .local p2, "map":Ljava/util/Map;, "Ljava/util/Map<TK;TV;>;"
     if-nez p2, :cond_0
 
-    .line 200
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->nullValue()Lcom/google/gson/stream/JsonWriter;
 
-    .line 243
     :goto_0
     return-void
 
-    .line 204
     :cond_0
     iget-object v7, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;->this$0:Lcom/google/gson/internal/bind/MapTypeAdapterFactory;
 
@@ -519,10 +425,8 @@
 
     if-nez v7, :cond_2
 
-    .line 205
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->beginObject()Lcom/google/gson/stream/JsonWriter;
 
-    .line 206
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v7
@@ -531,7 +435,6 @@
 
     move-result-object v3
 
-    .local v3, "i$":Ljava/util/Iterator;
     :goto_1
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
@@ -545,8 +448,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 207
-    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<TK;TV;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v7
@@ -557,7 +458,6 @@
 
     invoke-virtual {p1, v7}, Lcom/google/gson/stream/JsonWriter;->name(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;
 
-    .line 208
     iget-object v7, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;->valueTypeAdapter:Lcom/google/gson/TypeAdapter;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -568,20 +468,14 @@
 
     goto :goto_1
 
-    .line 210
-    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<TK;TV;>;"
     :cond_1
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->endObject()Lcom/google/gson/stream/JsonWriter;
 
     goto :goto_0
 
-    .line 214
-    .end local v3    # "i$":Ljava/util/Iterator;
     :cond_2
     const/4 v1, 0x0
 
-    .line 215
-    .local v1, "hasComplexKeys":Z
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-interface {p2}, Ljava/util/Map;->size()I
@@ -590,8 +484,6 @@
 
     invoke-direct {v5, v7}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 217
-    .local v5, "keys":Ljava/util/List;, "Ljava/util/List<Lcom/google/gson/JsonElement;>;"
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-interface {p2}, Ljava/util/Map;->size()I
@@ -600,8 +492,6 @@
 
     invoke-direct {v6, v7}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 218
-    .local v6, "values":Ljava/util/List;, "Ljava/util/List<TV;>;"
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v7
@@ -610,7 +500,6 @@
 
     move-result-object v3
 
-    .restart local v3    # "i$":Ljava/util/Iterator;
     :goto_2
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
@@ -624,8 +513,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 219
-    .restart local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<TK;TV;>;"
     iget-object v7, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;->keyTypeAdapter:Lcom/google/gson/TypeAdapter;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -636,18 +523,14 @@
 
     move-result-object v4
 
-    .line 220
-    .local v4, "keyElement":Lcom/google/gson/JsonElement;
     invoke-interface {v5, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 221
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v7
 
     invoke-interface {v6, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 222
     invoke-virtual {v4}, Lcom/google/gson/JsonElement;->isJsonArray()Z
 
     move-result v7
@@ -666,28 +549,20 @@
     :goto_3
     or-int/2addr v1, v7
 
-    .line 223
     goto :goto_2
 
-    .line 222
     :cond_4
     const/4 v7, 0x0
 
     goto :goto_3
 
-    .line 225
-    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<TK;TV;>;"
-    .end local v4    # "keyElement":Lcom/google/gson/JsonElement;
     :cond_5
     if-eqz v1, :cond_7
 
-    .line 226
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->beginArray()Lcom/google/gson/stream/JsonWriter;
 
-    .line 227
     const/4 v2, 0x0
 
-    .local v2, "i":I
     :goto_4
     invoke-interface {v5}, Ljava/util/List;->size()I
 
@@ -695,10 +570,8 @@
 
     if-ge v2, v7, :cond_6
 
-    .line 228
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->beginArray()Lcom/google/gson/stream/JsonWriter;
 
-    .line 229
     invoke-interface {v5, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v7
@@ -707,7 +580,6 @@
 
     invoke-static {v7, p1}, Lcom/google/gson/internal/Streams;->write(Lcom/google/gson/JsonElement;Lcom/google/gson/stream/JsonWriter;)V
 
-    .line 230
     iget-object v7, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;->valueTypeAdapter:Lcom/google/gson/TypeAdapter;
 
     invoke-interface {v6, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -716,29 +588,22 @@
 
     invoke-virtual {v7, p1, v8}, Lcom/google/gson/TypeAdapter;->write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
 
-    .line 231
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->endArray()Lcom/google/gson/stream/JsonWriter;
 
-    .line 227
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_4
 
-    .line 233
     :cond_6
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->endArray()Lcom/google/gson/stream/JsonWriter;
 
     goto/16 :goto_0
 
-    .line 235
-    .end local v2    # "i":I
     :cond_7
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->beginObject()Lcom/google/gson/stream/JsonWriter;
 
-    .line 236
     const/4 v2, 0x0
 
-    .restart local v2    # "i":I
     :goto_5
     invoke-interface {v5}, Ljava/util/List;->size()I
 
@@ -746,22 +611,18 @@
 
     if-ge v2, v7, :cond_8
 
-    .line 237
     invoke-interface {v5, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lcom/google/gson/JsonElement;
 
-    .line 238
-    .restart local v4    # "keyElement":Lcom/google/gson/JsonElement;
     invoke-direct {p0, v4}, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;->keyToString(Lcom/google/gson/JsonElement;)Ljava/lang/String;
 
     move-result-object v7
 
     invoke-virtual {p1, v7}, Lcom/google/gson/stream/JsonWriter;->name(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;
 
-    .line 239
     iget-object v7, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;->valueTypeAdapter:Lcom/google/gson/TypeAdapter;
 
     invoke-interface {v6, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -770,13 +631,10 @@
 
     invoke-virtual {v7, p1, v8}, Lcom/google/gson/TypeAdapter;->write(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
 
-    .line 236
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_5
 
-    .line 241
-    .end local v4    # "keyElement":Lcom/google/gson/JsonElement;
     :cond_8
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->endObject()Lcom/google/gson/stream/JsonWriter;
 

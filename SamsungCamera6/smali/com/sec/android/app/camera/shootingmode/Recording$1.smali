@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/shootingmode/Recording;)V
     .locals 0
 
-    .prologue
-    .line 181
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/Recording$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Recording;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,20 +37,16 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 184
     sget-boolean v0, Lcom/sec/android/app/camera/feature/Feature;->CAMERA_PREVIEW_FIT_TO_FULL_SCREEN:Z
 
     if-eqz v0, :cond_0
 
-    .line 185
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/Recording$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Recording;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/shootingmode/Recording;->setViewModeIndicator(I)V
 
-    .line 187
     :cond_0
     return-void
 .end method

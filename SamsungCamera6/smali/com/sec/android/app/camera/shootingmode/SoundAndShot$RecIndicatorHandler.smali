@@ -30,29 +30,21 @@
 # direct methods
 .method public constructor <init>(Lcom/sec/android/app/camera/shootingmode/SoundAndShot;)V
     .locals 1
-    .param p1, "soundAndShot"    # Lcom/sec/android/app/camera/shootingmode/SoundAndShot;
 
-    .prologue
-    .line 1328
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 1329
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/SoundAndShot$RecIndicatorHandler;->mSoundAndShot:Ljava/lang/ref/WeakReference;
 
-    .line 1330
     return-void
 .end method
 
 .method static synthetic access$600(Lcom/sec/android/app/camera/shootingmode/SoundAndShot$RecIndicatorHandler;)V
     .locals 0
-    .param p0, "x0"    # Lcom/sec/android/app/camera/shootingmode/SoundAndShot$RecIndicatorHandler;
 
-    .prologue
-    .line 1325
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/SoundAndShot$RecIndicatorHandler;->clear()V
 
     return-void
@@ -61,13 +53,10 @@
 .method private clear()V
     .locals 1
 
-    .prologue
-    .line 1345
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/SoundAndShot$RecIndicatorHandler;->mSoundAndShot:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->clear()V
 
-    .line 1346
     return-void
 .end method
 
@@ -75,10 +64,7 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
-    .param p1, "msg"    # Landroid/os/Message;
 
-    .prologue
-    .line 1334
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/SoundAndShot$RecIndicatorHandler;->mSoundAndShot:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -87,16 +73,12 @@
 
     check-cast v0, Lcom/sec/android/app/camera/shootingmode/SoundAndShot;
 
-    .line 1336
-    .local v0, "soundAndShot":Lcom/sec/android/app/camera/shootingmode/SoundAndShot;
     if-nez v0, :cond_1
 
-    .line 1342
     :cond_0
     :goto_0
     return-void
 
-    .line 1339
     :cond_1
     iget v1, p1, Landroid/os/Message;->what:I
 
@@ -104,7 +86,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 1340
     # invokes: Lcom/sec/android/app/camera/shootingmode/SoundAndShot;->updateRecMicImage()V
     invoke-static {v0}, Lcom/sec/android/app/camera/shootingmode/SoundAndShot;->access$700(Lcom/sec/android/app/camera/shootingmode/SoundAndShot;)V
 

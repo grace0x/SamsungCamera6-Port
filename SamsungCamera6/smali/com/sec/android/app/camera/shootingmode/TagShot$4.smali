@@ -35,8 +35,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/shootingmode/TagShot;)V
     .locals 0
 
-    .prologue
-    .line 508
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,17 +46,13 @@
 # virtual methods
 .method public onResponse(Lcom/sec/android/app/camera/shootingmode/util/AccuForecastInfo;)V
     .locals 6
-    .param p1, "forcastInfo"    # Lcom/sec/android/app/camera/shootingmode/util/AccuForecastInfo;
 
-    .prologue
-    .line 512
     const-string v0, "TagShot"
 
     const-string v1, "fetchForecastInfo - onResponse"
 
     invoke-static {v0, v1}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 514
     if-eqz p1, :cond_0
 
     iget-object v0, p1, Lcom/sec/android/app/camera/shootingmode/util/AccuForecastInfo;->CurrentConditions:Lcom/sec/android/app/camera/shootingmode/util/AccuForecastInfo$CurrentConditionInfo;
@@ -81,7 +75,6 @@
 
     if-nez v0, :cond_1
 
-    .line 515
     :cond_0
     const-string v0, "TagShot"
 
@@ -89,11 +82,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secE(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 547
     :goto_0
     return-void
 
-    .line 519
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
 
@@ -108,7 +99,6 @@
     # setter for: Lcom/sec/android/app/camera/shootingmode/TagShot;->mRefPressure:F
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/shootingmode/TagShot;->access$802(Lcom/sec/android/app/camera/shootingmode/TagShot;F)F
 
-    .line 520
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
@@ -125,7 +115,6 @@
     # setter for: Lcom/sec/android/app/camera/shootingmode/TagShot;->mRefPressure:F
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/shootingmode/TagShot;->access$802(Lcom/sec/android/app/camera/shootingmode/TagShot;F)F
 
-    .line 522
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/TagShot;->mCurrentPressure:F
@@ -139,7 +128,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 523
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
@@ -163,7 +151,6 @@
     # setter for: Lcom/sec/android/app/camera/shootingmode/TagShot;->mModifiedPressure:F
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/shootingmode/TagShot;->access$1002(Lcom/sec/android/app/camera/shootingmode/TagShot;F)F
 
-    .line 524
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
@@ -184,7 +171,6 @@
     # setter for: Lcom/sec/android/app/camera/shootingmode/TagShot;->mModifiedAltitude:I
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/shootingmode/TagShot;->access$1102(Lcom/sec/android/app/camera/shootingmode/TagShot;I)I
 
-    .line 525
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
@@ -204,7 +190,6 @@
     # setter for: Lcom/sec/android/app/camera/shootingmode/TagShot;->mModifiedAltitude:I
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/shootingmode/TagShot;->access$1102(Lcom/sec/android/app/camera/shootingmode/TagShot;I)I
 
-    .line 526
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
 
     const-string v1, "%d"
@@ -235,7 +220,6 @@
     # setter for: Lcom/sec/android/app/camera/shootingmode/TagShot;->mAltitude:Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/shootingmode/TagShot;->access$1302(Lcom/sec/android/app/camera/shootingmode/TagShot;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 533
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
 
     iget-object v1, p1, Lcom/sec/android/app/camera/shootingmode/util/AccuForecastInfo;->Location:Lcom/sec/android/app/camera/shootingmode/util/AccuForecastInfo$LocationInfo;
@@ -245,7 +229,6 @@
     # setter for: Lcom/sec/android/app/camera/shootingmode/TagShot;->mLocation:Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/shootingmode/TagShot;->access$1402(Lcom/sec/android/app/camera/shootingmode/TagShot;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 534
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/TagShot;->mLocationText:Lcom/samsung/android/glview/GLText;
@@ -297,7 +280,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLText;->setText(Ljava/lang/String;)V
 
-    .line 536
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
 
     iget-object v1, p1, Lcom/sec/android/app/camera/shootingmode/util/AccuForecastInfo;->CurrentConditions:Lcom/sec/android/app/camera/shootingmode/util/AccuForecastInfo$CurrentConditionInfo;
@@ -307,7 +289,6 @@
     # setter for: Lcom/sec/android/app/camera/shootingmode/TagShot;->mWeatherIcon:I
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/shootingmode/TagShot;->access$1602(Lcom/sec/android/app/camera/shootingmode/TagShot;I)I
 
-    .line 537
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
@@ -327,7 +308,6 @@
     # setter for: Lcom/sec/android/app/camera/shootingmode/TagShot;->mWeatherImageID:I
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/shootingmode/TagShot;->access$1702(Lcom/sec/android/app/camera/shootingmode/TagShot;I)I
 
-    .line 538
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/TagShot;->mWeatherImage:Lcom/samsung/android/glview/GLImage;
@@ -344,7 +324,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLImage;->setImageResources(I)V
 
-    .line 540
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
 
     iget-object v1, p1, Lcom/sec/android/app/camera/shootingmode/util/AccuForecastInfo;->CurrentConditions:Lcom/sec/android/app/camera/shootingmode/util/AccuForecastInfo$CurrentConditionInfo;
@@ -360,7 +339,6 @@
     # setter for: Lcom/sec/android/app/camera/shootingmode/TagShot;->mTemperature:Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/shootingmode/TagShot;->access$2002(Lcom/sec/android/app/camera/shootingmode/TagShot;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 541
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
 
     iget-object v1, p1, Lcom/sec/android/app/camera/shootingmode/util/AccuForecastInfo;->CurrentConditions:Lcom/sec/android/app/camera/shootingmode/util/AccuForecastInfo$CurrentConditionInfo;
@@ -372,7 +350,6 @@
     # setter for: Lcom/sec/android/app/camera/shootingmode/TagShot;->mTempScale:Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/shootingmode/TagShot;->access$2102(Lcom/sec/android/app/camera/shootingmode/TagShot;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 543
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
 
     iget-object v1, p1, Lcom/sec/android/app/camera/shootingmode/util/AccuForecastInfo;->CurrentConditions:Lcom/sec/android/app/camera/shootingmode/util/AccuForecastInfo$CurrentConditionInfo;
@@ -386,7 +363,6 @@
     # setter for: Lcom/sec/android/app/camera/shootingmode/TagShot;->mHumidity:Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/shootingmode/TagShot;->access$2202(Lcom/sec/android/app/camera/shootingmode/TagShot;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 544
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/TagShot;->mTemperatureText:Lcom/samsung/android/glview/GLText;
@@ -455,7 +431,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLText;->setText(Ljava/lang/String;)V
 
-    .line 546
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
 
     # invokes: Lcom/sec/android/app/camera/shootingmode/TagShot;->showTagInfo()V
@@ -463,7 +438,6 @@
 
     goto/16 :goto_0
 
-    .line 528
     :cond_2
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->this$0:Lcom/sec/android/app/camera/shootingmode/TagShot;
 
@@ -472,7 +446,6 @@
     # setter for: Lcom/sec/android/app/camera/shootingmode/TagShot;->mAltitude:Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/shootingmode/TagShot;->access$1302(Lcom/sec/android/app/camera/shootingmode/TagShot;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 529
     const-string v0, "TagShot"
 
     const-string v1, "mCurrentPressure is invalid"
@@ -484,13 +457,9 @@
 
 .method public bridge synthetic onResponse(Ljava/lang/Object;)V
     .locals 0
-    .param p1, "x0"    # Ljava/lang/Object;
 
-    .prologue
-    .line 508
     check-cast p1, Lcom/sec/android/app/camera/shootingmode/util/AccuForecastInfo;
 
-    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/sec/android/app/camera/shootingmode/TagShot$4;->onResponse(Lcom/sec/android/app/camera/shootingmode/util/AccuForecastInfo;)V
 
     return-void

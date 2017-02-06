@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/widget/gl/ItemDataButton;)V
     .locals 0
 
-    .prologue
-    .line 338
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/ItemDataButton$4;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemDataButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,11 +36,7 @@
 # virtual methods
 .method public onTouch(Lcom/samsung/android/glview/GLView;Landroid/view/MotionEvent;)Z
     .locals 2
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "event"    # Landroid/view/MotionEvent;
 
-    .prologue
-    .line 341
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ItemDataButton$4;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemDataButton;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/ItemDataButton;->mTouchListener:Lcom/samsung/android/glview/GLView$TouchListener;
@@ -52,7 +46,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 342
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ItemDataButton$4;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemDataButton;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/ItemDataButton;->mTouchListener:Lcom/samsung/android/glview/GLView$TouchListener;
@@ -66,7 +59,6 @@
 
     move-result v0
 
-    .line 344
     :goto_0
     return v0
 

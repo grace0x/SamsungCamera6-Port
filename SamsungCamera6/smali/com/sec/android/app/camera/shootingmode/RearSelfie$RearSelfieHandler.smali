@@ -30,29 +30,21 @@
 # direct methods
 .method public constructor <init>(Lcom/sec/android/app/camera/shootingmode/RearSelfie;)V
     .locals 1
-    .param p1, "rearSelfie"    # Lcom/sec/android/app/camera/shootingmode/RearSelfie;
 
-    .prologue
-    .line 929
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 930
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/shootingmode/RearSelfie$RearSelfieHandler;->mRearSelfie:Ljava/lang/ref/WeakReference;
 
-    .line 931
     return-void
 .end method
 
 .method static synthetic access$300(Lcom/sec/android/app/camera/shootingmode/RearSelfie$RearSelfieHandler;)V
     .locals 0
-    .param p0, "x0"    # Lcom/sec/android/app/camera/shootingmode/RearSelfie$RearSelfieHandler;
 
-    .prologue
-    .line 926
     invoke-direct {p0}, Lcom/sec/android/app/camera/shootingmode/RearSelfie$RearSelfieHandler;->clear()V
 
     return-void
@@ -61,13 +53,10 @@
 .method private clear()V
     .locals 1
 
-    .prologue
-    .line 968
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/RearSelfie$RearSelfieHandler;->mRearSelfie:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->clear()V
 
-    .line 969
     return-void
 .end method
 
@@ -75,14 +64,11 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 7
-    .param p1, "msg"    # Landroid/os/Message;
 
-    .prologue
     const/4 v6, 0x6
 
     const/4 v5, 0x0
 
-    .line 935
     iget-object v2, p0, Lcom/sec/android/app/camera/shootingmode/RearSelfie$RearSelfieHandler;->mRearSelfie:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -91,16 +77,12 @@
 
     check-cast v1, Lcom/sec/android/app/camera/shootingmode/RearSelfie;
 
-    .line 937
-    .local v1, "rearSelfie":Lcom/sec/android/app/camera/shootingmode/RearSelfie;
     if-nez v1, :cond_0
 
-    .line 965
     :goto_0
     :pswitch_0
     return-void
 
-    .line 940
     :cond_0
     const-string v2, "RearSelfie"
 
@@ -126,21 +108,18 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 941
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
     goto :goto_0
 
-    .line 943
     :pswitch_1
     # invokes: Lcom/sec/android/app/camera/shootingmode/RearSelfie;->startSelfShotCapture()V
     invoke-static {v1}, Lcom/sec/android/app/camera/shootingmode/RearSelfie;->access$400(Lcom/sec/android/app/camera/shootingmode/RearSelfie;)V
 
     goto :goto_0
 
-    .line 946
     :pswitch_2
     # getter for: Lcom/sec/android/app/camera/shootingmode/RearSelfie;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
     invoke-static {v1}, Lcom/sec/android/app/camera/shootingmode/RearSelfie;->access$500(Lcom/sec/android/app/camera/shootingmode/RearSelfie;)Lcom/sec/android/app/camera/interfaces/CameraSettings;
@@ -155,7 +134,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 947
     # getter for: Lcom/sec/android/app/camera/shootingmode/RearSelfie;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
     invoke-static {v1}, Lcom/sec/android/app/camera/shootingmode/RearSelfie;->access$100(Lcom/sec/android/app/camera/shootingmode/RearSelfie;)Lcom/sec/android/app/camera/interfaces/CameraContext;
 
@@ -165,7 +143,6 @@
 
     goto :goto_0
 
-    .line 949
     :cond_1
     # getter for: Lcom/sec/android/app/camera/shootingmode/RearSelfie;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
     invoke-static {v1}, Lcom/sec/android/app/camera/shootingmode/RearSelfie;->access$100(Lcom/sec/android/app/camera/shootingmode/RearSelfie;)Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -184,8 +161,6 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 950
-    .local v0, "audioManager":Landroid/media/AudioManager;
     invoke-virtual {v0}, Landroid/media/AudioManager;->getRingerMode()I
 
     move-result v2
@@ -194,7 +169,6 @@
 
     goto :goto_0
 
-    .line 955
     :pswitch_3
     # getter for: Lcom/sec/android/app/camera/shootingmode/RearSelfie;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
     invoke-static {v1}, Lcom/sec/android/app/camera/shootingmode/RearSelfie;->access$100(Lcom/sec/android/app/camera/shootingmode/RearSelfie;)Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -205,14 +179,12 @@
 
     goto :goto_0
 
-    .line 941
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
         :pswitch_2
     .end packed-switch
 
-    .line 950
     :pswitch_data_1
     .packed-switch 0x0
         :pswitch_0

@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 777
     const/high16 v0, 0x3f800000    # 1.0f
 
     sput v0, Lcom/sec/android/app/camera/shootingmode/RecordingController$RecordingUtil;->DEFAULT_PADDING:F
@@ -34,34 +32,22 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 779
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 780
     return-void
 .end method
 
 .method protected static convertToHMSFormat(I)Ljava/lang/String;
     .locals 7
-    .param p0, "seconds"    # I
 
-    .prologue
-    .line 789
     div-int/lit16 v0, p0, 0xe10
 
-    .line 790
-    .local v0, "hour":I
     div-int/lit8 v3, p0, 0x3c
 
     rem-int/lit8 v1, v3, 0x3c
 
-    .line 791
-    .local v1, "min":I
     rem-int/lit8 v2, p0, 0x3c
 
-    .line 792
-    .local v2, "sec":I
     const-string v3, "%02d:%02d:%02d"
 
     const/4 v4, 0x3
@@ -101,20 +87,13 @@
 
 .method protected static convertToMSFormat(I)Ljava/lang/String;
     .locals 6
-    .param p0, "seconds"    # I
 
-    .prologue
-    .line 802
     div-int/lit8 v2, p0, 0x3c
 
     rem-int/lit8 v0, v2, 0x3c
 
-    .line 803
-    .local v0, "min":I
     rem-int/lit8 v1, p0, 0x3c
 
-    .line 804
-    .local v1, "sec":I
     const-string v2, "%02d:%02d"
 
     const/4 v3, 0x2
@@ -146,10 +125,7 @@
 
 .method protected static getHMSFormatStringWidth(F)F
     .locals 2
-    .param p0, "textSize"    # F
 
-    .prologue
-    .line 814
     invoke-static {p0}, Lcom/sec/android/app/camera/shootingmode/RecordingController$RecordingUtil;->getMaxNumericStringWidth(F)F
 
     move-result v0
@@ -171,10 +147,7 @@
 
 .method protected static getMSFormatStringWidth(F)F
     .locals 2
-    .param p0, "textSize"    # F
 
-    .prologue
-    .line 824
     invoke-static {p0}, Lcom/sec/android/app/camera/shootingmode/RecordingController$RecordingUtil;->getMaxNumericStringWidth(F)F
 
     move-result v0
@@ -196,33 +169,23 @@
 
 .method private static getMaxNumericStringWidth(F)F
     .locals 6
-    .param p0, "fontSize"    # F
 
-    .prologue
-    .line 835
     const-string v0, "0123456789"
 
-    .line 836
-    .local v0, "numbers":Ljava/lang/String;
     new-instance v1, Landroid/text/TextPaint;
 
     const/4 v3, 0x1
 
     invoke-direct {v1, v3}, Landroid/text/TextPaint;-><init>(I)V
 
-    .line 837
-    .local v1, "textPaint":Landroid/text/TextPaint;
     invoke-virtual {v1, p0}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 838
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v3
 
     new-array v2, v3, [F
 
-    .line 840
-    .local v2, "widths":[F
     const/4 v3, 0x0
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -231,10 +194,8 @@
 
     invoke-virtual {v1, v0, v3, v4, v2}, Landroid/text/TextPaint;->getTextWidths(Ljava/lang/String;II[F)I
 
-    .line 841
     invoke-static {v2}, Ljava/util/Arrays;->sort([F)V
 
-    .line 842
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v3

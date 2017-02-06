@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/OverlayLayout;)V
     .locals 0
 
-    .prologue
-    .line 177
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/OverlayLayout$2;->this$0:Lcom/sec/android/app/camera/menu/OverlayLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,12 +37,9 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 180
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/OverlayLayout$2;->this$0:Lcom/sec/android/app/camera/menu/OverlayLayout;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/OverlayLayout;->hideSideQuickSettingToast()V
 
-    .line 181
     return-void
 .end method

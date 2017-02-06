@@ -20,30 +20,24 @@
 .method public constructor <init>()V
     .locals 7
 
-    .prologue
-    .line 32
     const v4, 0x7f0800cd
 
     invoke-direct {p0, v4}, Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;-><init>(I)V
 
-    .line 29
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v4, p0, Lcom/sec/android/app/camera/resourcedata/ColorTuneResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
-    .line 34
     invoke-direct {p0}, Lcom/sec/android/app/camera/resourcedata/ColorTuneResourceData;->initCommandIdList()V
 
-    .line 36
     iget-object v4, p0, Lcom/sec/android/app/camera/resourcedata/ColorTuneResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .local v2, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -61,14 +55,10 @@
 
     move-result v1
 
-    .line 37
-    .local v1, "commandId":I
     invoke-static {v1}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->get(I)Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
     move-result-object v3
 
-    .line 38
-    .local v3, "resIDs":Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
     new-instance v0, Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
 
     const/4 v4, 0x7
@@ -117,18 +107,12 @@
 
     invoke-direct {v0, v4}, Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;-><init>([I)V
 
-    .line 39
-    .local v0, "bundle":Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
     iget-object v4, p0, Lcom/sec/android/app/camera/resourcedata/ColorTuneResourceData;->mMenuResource:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 41
-    .end local v0    # "bundle":Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
-    .end local v1    # "commandId":I
-    .end local v3    # "resIDs":Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
     :cond_0
     return-void
 .end method
@@ -136,8 +120,6 @@
 .method private initCommandIdList()V
     .locals 2
 
-    .prologue
-    .line 50
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/ColorTuneResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     const/16 v1, 0xfa0
@@ -148,7 +130,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 51
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/ColorTuneResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     const/16 v1, 0xfa1
@@ -159,7 +140,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 52
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/ColorTuneResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     const/16 v1, 0xfa2
@@ -170,7 +150,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 53
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/ColorTuneResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     const/16 v1, 0xfa3
@@ -181,7 +160,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 54
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/ColorTuneResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     const/16 v1, 0xfa4
@@ -192,7 +170,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 55
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/ColorTuneResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     const/16 v1, 0xfa5
@@ -203,7 +180,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 56
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/ColorTuneResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     const/16 v1, 0xfa6
@@ -214,7 +190,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 57
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/ColorTuneResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     const/16 v1, 0xfa7
@@ -225,7 +200,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 58
     return-void
 .end method
 
@@ -234,17 +208,13 @@
 .method public cleanUpResources()V
     .locals 1
 
-    .prologue
-    .line 45
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/ColorTuneResourceData;->mMenuResource:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 46
     iget-object v0, p0, Lcom/sec/android/app/camera/resourcedata/ColorTuneResourceData;->mCommandIdList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 47
     return-void
 .end method

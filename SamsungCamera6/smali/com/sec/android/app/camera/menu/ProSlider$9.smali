@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/ProSlider;)V
     .locals 0
 
-    .prologue
-    .line 733
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ProSlider$9;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,15 +36,11 @@
 # virtual methods
 .method public onStepChanged(I)V
     .locals 3
-    .param p1, "step"    # I
 
-    .prologue
-    .line 736
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$9;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/ProSlider;->restartSliderMenuTimer()V
 
-    .line 737
     if-nez p1, :cond_1
 
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$9;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
@@ -58,7 +52,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 738
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$9;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     # getter for: Lcom/sec/android/app/camera/menu/ProSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -70,7 +63,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 739
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$9;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     # getter for: Lcom/sec/android/app/camera/menu/ProSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -82,26 +74,22 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLSlider;->setMarkerPressed(Z)V
 
-    .line 748
     :cond_0
     :goto_0
     return-void
 
-    .line 742
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$9;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     # setter for: Lcom/sec/android/app/camera/menu/ProSlider;->mValue:I
     invoke-static {v0, p1}, Lcom/sec/android/app/camera/menu/ProSlider;->access$102(Lcom/sec/android/app/camera/menu/ProSlider;I)I
 
-    .line 743
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$9;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/ProSlider;->mProSliderValueSelectListener:Lcom/sec/android/app/camera/menu/ProSlider$ProSliderValueSelectListener;
 
     invoke-interface {v0, p1}, Lcom/sec/android/app/camera/menu/ProSlider$ProSliderValueSelectListener;->onISOValueMenuSelect(I)V
 
-    .line 745
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$9;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     # invokes: Lcom/sec/android/app/camera/menu/ProSlider;->isTtsEnabled()Z
@@ -111,7 +99,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 746
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProSlider$9;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     new-instance v1, Ljava/lang/StringBuilder;

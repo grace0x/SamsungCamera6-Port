@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/BeautyLiteListMenu;)V
     .locals 0
 
-    .prologue
-    .line 291
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/BeautyLiteListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/BeautyLiteListMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,22 +36,17 @@
 # virtual methods
 .method public onStepChanged(I)V
     .locals 1
-    .param p1, "step"    # I
 
-    .prologue
-    .line 294
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/BeautyLiteListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/BeautyLiteListMenu;
 
     # invokes: Lcom/sec/android/app/camera/menu/BeautyLiteListMenu;->updateLevel(I)V
     invoke-static {v0, p1}, Lcom/sec/android/app/camera/menu/BeautyLiteListMenu;->access$100(Lcom/sec/android/app/camera/menu/BeautyLiteListMenu;I)V
 
-    .line 295
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/BeautyLiteListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/BeautyLiteListMenu;
 
     # invokes: Lcom/sec/android/app/camera/menu/BeautyLiteListMenu;->restartSliderMenuTimer()V
     invoke-static {v0}, Lcom/sec/android/app/camera/menu/BeautyLiteListMenu;->access$200(Lcom/sec/android/app/camera/menu/BeautyLiteListMenu;)V
 
-    .line 296
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/BeautyLiteListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/BeautyLiteListMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/BeautyLiteListMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -106,13 +99,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 298
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/BeautyLiteListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/BeautyLiteListMenu;
 
     # invokes: Lcom/sec/android/app/camera/menu/BeautyLiteListMenu;->speakBeautyLevel(I)V
     invoke-static {v0, p1}, Lcom/sec/android/app/camera/menu/BeautyLiteListMenu;->access$300(Lcom/sec/android/app/camera/menu/BeautyLiteListMenu;I)V
 
-    .line 300
     :cond_0
     return-void
 .end method

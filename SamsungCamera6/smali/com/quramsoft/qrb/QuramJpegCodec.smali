@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,10 +14,7 @@
 
 .method public static decodeJPEG_Full(Ljava/io/FileDescriptor;)Landroid/graphics/Bitmap;
     .locals 1
-    .param p0, "fd"    # Ljava/io/FileDescriptor;
 
-    .prologue
-    .line 36
     invoke-static {p0}, Lcom/quramsoft/qrb/QuramBitmapFactory;->decodeFileDescriptor(Ljava/io/FileDescriptor;)Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -29,11 +24,7 @@
 
 .method public static decodeJPEG_Full(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 1
-    .param p0, "path"    # Ljava/lang/String;
-    .param p1, "options"    # Landroid/graphics/BitmapFactory$Options;
 
-    .prologue
-    .line 51
     invoke-static {p1}, Lcom/quramsoft/qrb/QuramBitmapFactory;->translateBitmapFactoryOptions(Landroid/graphics/BitmapFactory$Options;)Lcom/quramsoft/qrb/QuramBitmapFactory$Options;
 
     move-result-object v0
@@ -47,11 +38,7 @@
 
 .method public static decodeJPEG_Full(Ljava/lang/String;Lcom/quramsoft/qrb/QuramBitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 1
-    .param p0, "path"    # Ljava/lang/String;
-    .param p1, "options"    # Lcom/quramsoft/qrb/QuramBitmapFactory$Options;
 
-    .prologue
-    .line 46
     invoke-static {p0, p1}, Lcom/quramsoft/qrb/QuramBitmapFactory;->decodeFile(Ljava/lang/String;Lcom/quramsoft/qrb/QuramBitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -61,13 +48,7 @@
 
 .method public static decodeJPEG_Full([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 1
-    .param p0, "buf"    # [B
-    .param p1, "offset"    # I
-    .param p2, "length"    # I
-    .param p3, "options"    # Landroid/graphics/BitmapFactory$Options;
 
-    .prologue
-    .line 41
     invoke-static {p3}, Lcom/quramsoft/qrb/QuramBitmapFactory;->translateBitmapFactoryOptions(Landroid/graphics/BitmapFactory$Options;)Lcom/quramsoft/qrb/QuramBitmapFactory$Options;
 
     move-result-object v0
@@ -81,66 +62,40 @@
 
 .method public static decodeJPEG_Region(Lcom/quramsoft/qrb/QuramBitmapRegionDecoder;Landroid/graphics/BitmapFactory$Options;IIII)Landroid/graphics/Bitmap;
     .locals 4
-    .param p0, "gbrd"    # Lcom/quramsoft/qrb/QuramBitmapRegionDecoder;
-    .param p1, "options"    # Landroid/graphics/BitmapFactory$Options;
-    .param p2, "left"    # I
-    .param p3, "right"    # I
-    .param p4, "top"    # I
-    .param p5, "bottom"    # I
 
-    .prologue
-    .line 57
     const/4 v0, 0x0
 
-    .line 58
-    .local v0, "bitmap":Landroid/graphics/Bitmap;
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
-    .line 59
-    .local v1, "rect":Landroid/graphics/Rect;
     iput p2, v1, Landroid/graphics/Rect;->left:I
 
-    .line 60
     iput p4, v1, Landroid/graphics/Rect;->top:I
 
-    .line 61
     iput p3, v1, Landroid/graphics/Rect;->right:I
 
-    .line 62
     iput p5, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 64
     invoke-virtual {p0, v1, p1}, Lcom/quramsoft/qrb/QuramBitmapRegionDecoder;->decodeRegion(Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 65
     if-nez v0, :cond_0
 
-    .line 67
     const-string v2, "QuramJpegCodec"
 
     const-string v3, "Error : region decoding fail"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 69
     :cond_0
     return-object v0
 .end method
 
 .method public static decodeJPEG_Thumbnail(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;III)Landroid/graphics/Bitmap;
     .locals 1
-    .param p0, "path"    # Ljava/lang/String;
-    .param p1, "options"    # Landroid/graphics/BitmapFactory$Options;
-    .param p2, "thumbWidth"    # I
-    .param p3, "thumbHeight"    # I
-    .param p4, "origId"    # I
 
-    .prologue
-    .line 79
     invoke-static {p1}, Lcom/quramsoft/qrb/QuramBitmapFactory;->translateBitmapFactoryOptions(Landroid/graphics/BitmapFactory$Options;)Lcom/quramsoft/qrb/QuramBitmapFactory$Options;
 
     move-result-object v0
@@ -154,14 +109,7 @@
 
 .method public static decodeJPEG_Thumbnail(Ljava/lang/String;Lcom/quramsoft/qrb/QuramBitmapFactory$Options;III)Landroid/graphics/Bitmap;
     .locals 1
-    .param p0, "path"    # Ljava/lang/String;
-    .param p1, "options"    # Lcom/quramsoft/qrb/QuramBitmapFactory$Options;
-    .param p2, "thumbWidth"    # I
-    .param p3, "thumbHeight"    # I
-    .param p4, "origId"    # I
 
-    .prologue
-    .line 74
     invoke-static {p0, p1, p2, p3, p4}, Lcom/quramsoft/qrb/QuramBitmapFactory;->decodeFileFromThumbnail(Ljava/lang/String;Lcom/quramsoft/qrb/QuramBitmapFactory$Options;III)Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -171,15 +119,7 @@
 
 .method public static partialDecodeJPEG(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;IIII)Landroid/graphics/Bitmap;
     .locals 6
-    .param p0, "path"    # Ljava/lang/String;
-    .param p1, "option"    # Landroid/graphics/BitmapFactory$Options;
-    .param p2, "left"    # I
-    .param p3, "right"    # I
-    .param p4, "top"    # I
-    .param p5, "bottom"    # I
 
-    .prologue
-    .line 30
     invoke-static {p1}, Lcom/quramsoft/qrb/QuramBitmapFactory;->translateBitmapFactoryOptions(Landroid/graphics/BitmapFactory$Options;)Lcom/quramsoft/qrb/QuramBitmapFactory$Options;
 
     move-result-object v1
@@ -204,8 +144,6 @@
 .method public static setLibName()V
     .locals 4
 
-    .prologue
-    .line 19
     :try_start_0
     const-string v1, "Qjpeg"
 
@@ -213,18 +151,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 25
-    .local v0, "e":Ljava/lang/Exception;
     :goto_0
     return-void
 
-    .line 21
-    .end local v0    # "e":Ljava/lang/Exception;
     :catch_0
     move-exception v0
 
-    .line 23
-    .restart local v0    # "e":Ljava/lang/Exception;
     const-string v1, "ERROR"
 
     new-instance v2, Ljava/lang/StringBuilder;

@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/BaseMenu;)V
     .locals 0
 
-    .prologue
-    .line 184
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/BaseMenu$2;->this$0:Lcom/sec/android/app/camera/menu/BaseMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,16 +36,9 @@
 # virtual methods
 .method public onDrag(Lcom/samsung/android/glview/GLView;FFFF)V
     .locals 3
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "x"    # F
-    .param p3, "y"    # F
-    .param p4, "dx"    # F
-    .param p5, "dy"    # F
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 187
     invoke-virtual {p1}, Lcom/samsung/android/glview/GLView;->getCurrentLeft()F
 
     move-result v0
@@ -73,7 +64,6 @@
 
     if-lez v0, :cond_2
 
-    .line 188
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/BaseMenu$2;->this$0:Lcom/sec/android/app/camera/menu/BaseMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/BaseMenu;->SCREEN_WIDTH:I
@@ -95,7 +85,6 @@
 
     sub-float p4, v0, v1
 
-    .line 192
     :cond_0
     :goto_0
     invoke-virtual {p1}, Lcom/samsung/android/glview/GLView;->getCurrentTop()F
@@ -123,7 +112,6 @@
 
     if-lez v0, :cond_3
 
-    .line 193
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/BaseMenu$2;->this$0:Lcom/sec/android/app/camera/menu/BaseMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/BaseMenu;->SCREEN_HEIGHT:I
@@ -145,15 +133,12 @@
 
     sub-float p5, v0, v1
 
-    .line 197
     :cond_1
     :goto_1
     invoke-virtual {p1, p4, p5}, Lcom/samsung/android/glview/GLView;->moveBaseLayout(FF)V
 
-    .line 198
     return-void
 
-    .line 189
     :cond_2
     invoke-virtual {p1}, Lcom/samsung/android/glview/GLView;->getCurrentLeft()F
 
@@ -165,7 +150,6 @@
 
     if-gez v0, :cond_0
 
-    .line 190
     invoke-virtual {p1}, Lcom/samsung/android/glview/GLView;->getCurrentLeft()F
 
     move-result v0
@@ -174,7 +158,6 @@
 
     goto :goto_0
 
-    .line 194
     :cond_3
     invoke-virtual {p1}, Lcom/samsung/android/glview/GLView;->getCurrentTop()F
 
@@ -186,7 +169,6 @@
 
     if-gez v0, :cond_1
 
-    .line 195
     invoke-virtual {p1}, Lcom/samsung/android/glview/GLView;->getCurrentTop()F
 
     move-result v0
@@ -198,12 +180,7 @@
 
 .method public onDragEnd(Lcom/samsung/android/glview/GLView;FF)V
     .locals 3
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "x"    # F
-    .param p3, "y"    # F
 
-    .prologue
-    .line 202
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/BaseMenu$2;->this$0:Lcom/sec/android/app/camera/menu/BaseMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/BaseMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -226,7 +203,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/sec/android/app/camera/util/SharedPreferencesHelper;->savePreferences(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 203
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/BaseMenu$2;->this$0:Lcom/sec/android/app/camera/menu/BaseMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/BaseMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -249,18 +225,12 @@
 
     invoke-static {v0, v1, v2}, Lcom/sec/android/app/camera/util/SharedPreferencesHelper;->savePreferences(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 204
     return-void
 .end method
 
 .method public onDragStart(Lcom/samsung/android/glview/GLView;FF)V
     .locals 2
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "x"    # F
-    .param p3, "y"    # F
 
-    .prologue
-    .line 208
     invoke-static {}, Lcom/sec/android/app/camera/util/Util;->isLDUModel()Z
 
     move-result v0
@@ -281,20 +251,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 209
     :cond_0
     sget-boolean v0, Lcom/sec/android/app/camera/feature/Feature;->SUPPORT_GUIDE_TEXT_FOR_FLOATING_SHUTTER:Z
 
     if-eqz v0, :cond_1
 
-    .line 210
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/BaseMenu$2;->this$0:Lcom/sec/android/app/camera/menu/BaseMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/BaseMenu;->mExperienceGuideFloatingShutter:Lcom/sec/android/app/camera/widget/gl/ExperienceGuide;
 
     if-eqz v0, :cond_1
 
-    .line 211
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/BaseMenu$2;->this$0:Lcom/sec/android/app/camera/menu/BaseMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/BaseMenu;->mExperienceGuideFloatingShutter:Lcom/sec/android/app/camera/widget/gl/ExperienceGuide;
@@ -303,7 +270,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/widget/gl/ExperienceGuide;->setVisibility(I)V
 
-    .line 215
     :cond_1
     return-void
 .end method

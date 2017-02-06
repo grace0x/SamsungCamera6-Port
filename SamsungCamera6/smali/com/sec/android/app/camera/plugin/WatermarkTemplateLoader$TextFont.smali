@@ -45,7 +45,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -56,7 +55,6 @@
 
     const/4 v3, 0x0
 
-    .line 204
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;
 
     const-string v1, "ROBOTO_REGULAR"
@@ -65,7 +63,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;->ROBOTO_REGULAR:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;
 
-    .line 205
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;
 
     const-string v1, "ROBOTO_BLACK"
@@ -74,7 +71,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;->ROBOTO_BLACK:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;
 
-    .line 206
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;
 
     const-string v1, "ROBOTO_MEDIUM"
@@ -83,7 +79,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;->ROBOTO_MEDIUM:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;
 
-    .line 207
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;
 
     const-string v1, "HANS_REGULAR"
@@ -92,7 +87,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;->HANS_REGULAR:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;
 
-    .line 208
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;
 
     const-string v1, "SHAONV"
@@ -101,7 +95,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;->SHAONV:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;
 
-    .line 209
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;
 
     const-string v1, "KAITI"
@@ -112,7 +105,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;->KAITI:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;
 
-    .line 210
     new-instance v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;
 
     const-string v1, "MIAO"
@@ -123,7 +115,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;->MIAO:Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;
 
-    .line 203
     const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;
@@ -173,8 +164,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 203
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -182,10 +171,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;
     .locals 1
-    .param p0, "name"    # Ljava/lang/String;
 
-    .prologue
-    .line 203
     const-class v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -200,8 +186,6 @@
 .method public static values()[Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;
     .locals 1
 
-    .prologue
-    .line 203
     sget-object v0, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;->$VALUES:[Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;
 
     invoke-virtual {v0}, [Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextFont;->clone()Ljava/lang/Object;

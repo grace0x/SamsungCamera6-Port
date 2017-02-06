@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/samsung/android/glview/GLButton;)V
     .locals 0
 
-    .prologue
-    .line 155
     iput-object p1, p0, Lcom/samsung/android/glview/GLButton$2;->this$0:Lcom/samsung/android/glview/GLButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,15 +37,12 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 158
     iget-object v0, p0, Lcom/samsung/android/glview/GLButton$2;->this$0:Lcom/samsung/android/glview/GLButton;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLButton;->setDrawRippleEffect(Z)V
 
-    .line 159
     iget-object v0, p0, Lcom/samsung/android/glview/GLButton$2;->this$0:Lcom/samsung/android/glview/GLButton;
 
     invoke-virtual {v0}, Lcom/samsung/android/glview/GLButton;->getContext()Lcom/samsung/android/glview/GLContext;
@@ -58,6 +53,5 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLContext;->setDirty(Z)V
 
-    .line 160
     return-void
 .end method

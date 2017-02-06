@@ -27,8 +27,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/shootingmode/VideoCollage;Lcom/sec/android/app/camera/shootingmode/VideoCollage;)V
     .locals 0
 
-    .prologue
-    .line 1744
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/VideoCollage$2;->this$0:Lcom/sec/android/app/camera/shootingmode/VideoCollage;
 
     iput-object p2, p0, Lcom/sec/android/app/camera/shootingmode/VideoCollage$2;->val$pInstance:Lcom/sec/android/app/camera/shootingmode/VideoCollage;
@@ -43,10 +41,8 @@
 .method public run()V
     .locals 3
 
-    .prologue
     const/16 v2, 0x12
 
-    .line 1747
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/VideoCollage$2;->this$0:Lcom/sec/android/app/camera/shootingmode/VideoCollage;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/shootingmode/VideoCollage;->mCameraSettings:Lcom/sec/android/app/camera/interfaces/CameraSettings;
@@ -57,7 +53,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1748
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/VideoCollage$2;->this$0:Lcom/sec/android/app/camera/shootingmode/VideoCollage;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/VideoCollage;->mMenuManager:Lcom/sec/android/app/camera/interfaces/MenuManager;
@@ -67,7 +62,6 @@
 
     invoke-interface {v0, v2}, Lcom/sec/android/app/camera/interfaces/MenuManager;->removeMenu(I)V
 
-    .line 1749
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/VideoCollage$2;->this$0:Lcom/sec/android/app/camera/shootingmode/VideoCollage;
 
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/VideoCollage$2;->this$0:Lcom/sec/android/app/camera/shootingmode/VideoCollage;
@@ -86,7 +80,6 @@
     # setter for: Lcom/sec/android/app/camera/shootingmode/VideoCollage;->mZoomSliderMenu:Lcom/sec/android/app/camera/menu/ZoomSliderMenu;
     invoke-static {v1, v0}, Lcom/sec/android/app/camera/shootingmode/VideoCollage;->access$1402(Lcom/sec/android/app/camera/shootingmode/VideoCollage;Lcom/sec/android/app/camera/menu/ZoomSliderMenu;)Lcom/sec/android/app/camera/menu/ZoomSliderMenu;
 
-    .line 1750
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/VideoCollage$2;->this$0:Lcom/sec/android/app/camera/shootingmode/VideoCollage;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/VideoCollage;->mZoomSliderMenu:Lcom/sec/android/app/camera/menu/ZoomSliderMenu;
@@ -98,7 +91,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/menu/ZoomSliderMenu;->setOnShowListener(Lcom/sec/android/app/camera/interfaces/MenuBase$OnShowListener;)V
 
-    .line 1751
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/VideoCollage$2;->this$0:Lcom/sec/android/app/camera/shootingmode/VideoCollage;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/VideoCollage;->mZoomSliderMenu:Lcom/sec/android/app/camera/menu/ZoomSliderMenu;
@@ -110,13 +102,11 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/menu/ZoomSliderMenu;->setOnHideListener(Lcom/sec/android/app/camera/interfaces/MenuBase$OnHideListener;)V
 
-    .line 1754
     :cond_0
     sget-boolean v0, Lcom/sec/android/app/camera/feature/Feature;->CAMERA_GPU_EFFECT:Z
 
     if-eqz v0, :cond_1
 
-    .line 1755
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/VideoCollage$2;->this$0:Lcom/sec/android/app/camera/shootingmode/VideoCollage;
 
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/VideoCollage$2;->this$0:Lcom/sec/android/app/camera/shootingmode/VideoCollage;
@@ -137,7 +127,6 @@
     # setter for: Lcom/sec/android/app/camera/shootingmode/VideoCollage;->mEffectThumbnailListMenu:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
     invoke-static {v1, v0}, Lcom/sec/android/app/camera/shootingmode/VideoCollage;->access$1502(Lcom/sec/android/app/camera/shootingmode/VideoCollage;Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;)Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
-    .line 1756
     iget-object v0, p0, Lcom/sec/android/app/camera/shootingmode/VideoCollage$2;->this$0:Lcom/sec/android/app/camera/shootingmode/VideoCollage;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/VideoCollage;->mEffectThumbnailListMenu:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
@@ -149,7 +138,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->setOnHideListener(Lcom/sec/android/app/camera/interfaces/MenuBase$OnHideListener;)V
 
-    .line 1758
     :cond_1
     return-void
 .end method

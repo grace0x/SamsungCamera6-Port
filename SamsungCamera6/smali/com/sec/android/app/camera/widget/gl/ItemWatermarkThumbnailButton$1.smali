@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/widget/gl/ItemWatermarkThumbnailButton;)V
     .locals 0
 
-    .prologue
-    .line 179
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/ItemWatermarkThumbnailButton$1;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemWatermarkThumbnailButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +36,7 @@
 # virtual methods
 .method public onClick(Lcom/samsung/android/glview/GLView;)Z
     .locals 2
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
 
-    .prologue
-    .line 182
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ItemWatermarkThumbnailButton$1;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemWatermarkThumbnailButton;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/ItemWatermarkThumbnailButton;->mClickListener:Lcom/samsung/android/glview/GLView$ClickListener;
@@ -51,7 +46,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 183
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/ItemWatermarkThumbnailButton$1;->this$0:Lcom/sec/android/app/camera/widget/gl/ItemWatermarkThumbnailButton;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/ItemWatermarkThumbnailButton;->mClickListener:Lcom/samsung/android/glview/GLView$ClickListener;
@@ -65,7 +59,6 @@
 
     move-result v0
 
-    .line 185
     :goto_0
     return v0
 

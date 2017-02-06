@@ -31,8 +31,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/ProLiteSlider;[II[I)V
     .locals 0
 
-    .prologue
-    .line 512
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$7;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
     iput-object p2, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$7;->val$indicatorISOLiteValue:[I
@@ -50,25 +48,19 @@
 # virtual methods
 .method public onTouch(Lcom/samsung/android/glview/GLView;Landroid/view/MotionEvent;)Z
     .locals 4
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "event"    # Landroid/view/MotionEvent;
 
-    .prologue
     const/4 v3, 0x1
 
-    .line 515
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     if-ne v0, v3, :cond_3
 
-    .line 516
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$7;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/ProLiteSlider;->restartSliderMenuTimer()V
 
-    .line 517
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$7;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
     # getter for: Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSlider:Lcom/samsung/android/glview/GLSlider;
@@ -95,14 +87,12 @@
     :goto_0
     invoke-virtual {v1, v0}, Lcom/samsung/android/glview/GLSlider;->setCurrentStep(I)Z
 
-    .line 518
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$7;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderValueSelectListener:Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderValueSelectListener;
 
     if-eqz v0, :cond_0
 
-    .line 519
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$7;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 
     iget-object v1, v0, Lcom/sec/android/app/camera/menu/ProLiteSlider;->mProSliderValueSelectListener:Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderValueSelectListener;
@@ -126,12 +116,10 @@
     :goto_1
     invoke-interface {v1, v0}, Lcom/sec/android/app/camera/menu/ProLiteSlider$ProSliderValueSelectListener;->onISOValueMenuSelect(I)V
 
-    .line 524
     :cond_0
     :goto_2
     return v3
 
-    .line 517
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$7;->val$indicatorISOValue:[I
 
@@ -141,7 +129,6 @@
 
     goto :goto_0
 
-    .line 519
     :cond_2
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$7;->val$indicatorISOValue:[I
 
@@ -151,7 +138,6 @@
 
     goto :goto_1
 
-    .line 522
     :cond_3
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/ProLiteSlider$7;->this$0:Lcom/sec/android/app/camera/menu/ProLiteSlider;
 

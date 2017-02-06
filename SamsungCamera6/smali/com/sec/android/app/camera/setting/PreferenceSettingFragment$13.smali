@@ -29,8 +29,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;Landroid/widget/ListView;I)V
     .locals 0
 
-    .prologue
-    .line 1108
     iput-object p1, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$13;->this$0:Lcom/sec/android/app/camera/setting/PreferenceSettingFragment;
 
     iput-object p2, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$13;->val$listView:Landroid/widget/ListView;
@@ -47,8 +45,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 1111
     iget-object v0, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$13;->val$listView:Landroid/widget/ListView;
 
     iget v1, p0, Lcom/sec/android/app/camera/setting/PreferenceSettingFragment$13;->val$position:I
@@ -59,6 +55,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/widget/ListView;->smoothScrollToPositionFromTop(III)V
 
-    .line 1112
     return-void
 .end method

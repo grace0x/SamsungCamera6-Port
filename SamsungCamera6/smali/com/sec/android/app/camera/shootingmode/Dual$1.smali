@@ -22,8 +22,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/shootingmode/Dual;)V
     .locals 0
 
-    .prologue
-    .line 229
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/Dual$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Dual;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,17 +33,11 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
-    .param p1, "context"    # Landroid/content/Context;
-    .param p2, "intent"    # Landroid/content/Intent;
 
-    .prologue
-    .line 232
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 233
-    .local v0, "action":Ljava/lang/String;
     const-string v1, "Dual"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -68,7 +60,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 234
     const/4 v1, -0x1
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -81,11 +72,9 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 246
     :goto_1
     return-void
 
-    .line 234
     :sswitch_0
     const-string v2, "camera.action.ACTION_ERROR_CAMERA_BUSY"
 
@@ -112,7 +101,6 @@
 
     goto :goto_0
 
-    .line 237
     :pswitch_0
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/Dual$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Dual;
 
@@ -123,7 +111,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 238
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/Dual$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Dual;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/shootingmode/Dual;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -141,14 +128,12 @@
 
     invoke-static {v1, v2}, Lcom/sec/android/app/camera/util/CameraLocalBroadcastManager;->unregister(Landroid/content/Context;Landroid/content/BroadcastReceiver;)V
 
-    .line 240
     :cond_1
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/Dual$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Dual;
 
     # invokes: Lcom/sec/android/app/camera/shootingmode/Dual;->unregisterCameraOrientationListener()V
     invoke-static {v1}, Lcom/sec/android/app/camera/shootingmode/Dual;->access$100(Lcom/sec/android/app/camera/shootingmode/Dual;)V
 
-    .line 241
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/Dual$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Dual;
 
     # invokes: Lcom/sec/android/app/camera/shootingmode/Dual;->clearDual()V
@@ -156,7 +141,6 @@
 
     goto :goto_1
 
-    .line 234
     :sswitch_data_0
     .sparse-switch
         -0x7390e4de -> :sswitch_0

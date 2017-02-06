@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$TabMenuAdapter$1;)V
     .locals 0
 
-    .prologue
-    .line 2076
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$TabMenuAdapter$1$2;->this$2:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$TabMenuAdapter$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,8 +37,6 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 2079
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$TabMenuAdapter$1$2;->this$2:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$TabMenuAdapter$1;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$TabMenuAdapter$1;->this$1:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$TabMenuAdapter;
@@ -50,6 +46,5 @@
     # invokes: Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->initBeautyCategoryEffect()V
     invoke-static {v0}, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->access$4100(Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;)V
 
-    .line 2080
     return-void
 .end method

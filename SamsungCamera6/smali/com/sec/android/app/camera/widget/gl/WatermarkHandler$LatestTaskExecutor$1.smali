@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/widget/gl/WatermarkHandler$LatestTaskExecutor;)V
     .locals 0
 
-    .prologue
-    .line 378
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/WatermarkHandler$LatestTaskExecutor$1;->this$0:Lcom/sec/android/app/camera/widget/gl/WatermarkHandler$LatestTaskExecutor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,8 +37,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 381
     iget-object v1, p0, Lcom/sec/android/app/camera/widget/gl/WatermarkHandler$LatestTaskExecutor$1;->this$0:Lcom/sec/android/app/camera/widget/gl/WatermarkHandler$LatestTaskExecutor;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/WatermarkHandler$LatestTaskExecutor;->lastTask:Ljava/util/concurrent/atomic/AtomicReference;
@@ -56,14 +52,10 @@
 
     check-cast v0, Ljava/lang/Runnable;
 
-    .line 382
-    .local v0, "task":Ljava/lang/Runnable;
     if-eqz v0, :cond_0
 
-    .line 383
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 385
     :cond_0
     return-void
 .end method

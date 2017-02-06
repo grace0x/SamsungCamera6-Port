@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/ModeInfoListMenu;)V
     .locals 0
 
-    .prologue
-    .line 120
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ModeInfoListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/ModeInfoListMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,13 +36,9 @@
 # virtual methods
 .method public onKeyDown(Lcom/samsung/android/glview/GLView;Landroid/view/KeyEvent;)Z
     .locals 3
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "event"    # Landroid/view/KeyEvent;
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 123
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ModeInfoListMenu$1;->this$0:Lcom/sec/android/app/camera/menu/ModeInfoListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/ModeInfoListMenu;->mOrientation:I
@@ -54,14 +48,12 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 137
     :cond_0
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 125
     :pswitch_0
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getKeyCode()I
 
@@ -73,7 +65,6 @@
 
     goto :goto_0
 
-    .line 130
     :pswitch_1
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getKeyCode()I
 
@@ -85,7 +76,6 @@
 
     goto :goto_0
 
-    .line 123
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_0
@@ -95,11 +85,7 @@
 
 .method public onKeyUp(Lcom/samsung/android/glview/GLView;Landroid/view/KeyEvent;)Z
     .locals 1
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "event"    # Landroid/view/KeyEvent;
 
-    .prologue
-    .line 142
     const/4 v0, 0x0
 
     return v0

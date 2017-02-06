@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;)V
     .locals 0
 
-    .prologue
-    .line 255
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu$4;->this$0:Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +36,7 @@
 # virtual methods
 .method public onStepChanged(I)V
     .locals 3
-    .param p1, "step"    # I
 
-    .prologue
-    .line 258
     const-string v0, "EffectLevelSliderMenu"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -64,18 +59,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 259
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu$4;->this$0:Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;->restartSliderMenuTimer()V
 
-    .line 260
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu$4;->this$0:Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;
 
     # setter for: Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;->mStrengthStep:I
     invoke-static {v0, p1}, Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;->access$002(Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;I)I
 
-    .line 261
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu$4;->this$0:Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;->isActive()Z
@@ -84,7 +76,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 262
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu$4;->this$0:Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/EffectLevelSliderMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -102,7 +93,6 @@
 
     invoke-interface {v0, v1}, Lcom/sec/android/app/camera/interfaces/CameraSettings;->setEffectStrengthLevel(I)V
 
-    .line 264
     :cond_0
     return-void
 .end method

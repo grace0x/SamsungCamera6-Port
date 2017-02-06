@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/ProSlider;)V
     .locals 0
 
-    .prologue
-    .line 1136
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/ProSlider$23;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,13 +36,9 @@
 # virtual methods
 .method public onStepChanged(I)V
     .locals 4
-    .param p1, "step"    # I
 
-    .prologue
-    .line 1139
     if-nez p1, :cond_1
 
-    .line 1140
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProSlider$23;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     # getter for: Lcom/sec/android/app/camera/menu/ProSlider;->mProDividedSlider:Lcom/sec/android/app/camera/widget/gl/DividedSlider;
@@ -56,7 +50,6 @@
 
     invoke-virtual {v1, v2}, Lcom/sec/android/app/camera/widget/gl/DividedSlider;->setCurrentStep(I)Z
 
-    .line 1141
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProSlider$23;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     # getter for: Lcom/sec/android/app/camera/menu/ProSlider;->mProDividedSlider:Lcom/sec/android/app/camera/widget/gl/DividedSlider;
@@ -68,35 +61,28 @@
 
     invoke-virtual {v1, v2}, Lcom/sec/android/app/camera/widget/gl/DividedSlider;->setMarkerPressed(Z)V
 
-    .line 1152
     :cond_0
     :goto_0
     return-void
 
-    .line 1144
     :cond_1
     add-int/lit8 v0, p1, -0x1
 
-    .line 1145
-    .local v0, "newShutterSpeed":I
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProSlider$23;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     # setter for: Lcom/sec/android/app/camera/menu/ProSlider;->mValue:I
     invoke-static {v1, v0}, Lcom/sec/android/app/camera/menu/ProSlider;->access$102(Lcom/sec/android/app/camera/menu/ProSlider;I)I
 
-    .line 1146
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProSlider$23;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/menu/ProSlider;->mProSliderValueSelectListener:Lcom/sec/android/app/camera/menu/ProSlider$ProSliderValueSelectListener;
 
     invoke-interface {v1, v0}, Lcom/sec/android/app/camera/menu/ProSlider$ProSliderValueSelectListener;->onShutterSpeedValueMenuSelect(I)V
 
-    .line 1147
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProSlider$23;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     invoke-virtual {v1}, Lcom/sec/android/app/camera/menu/ProSlider;->restartSliderMenuTimer()V
 
-    .line 1148
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProSlider$23;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     # invokes: Lcom/sec/android/app/camera/menu/ProSlider;->isTtsEnabled()Z
@@ -106,7 +92,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1149
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/ProSlider$23;->this$0:Lcom/sec/android/app/camera/menu/ProSlider;
 
     new-instance v2, Ljava/lang/StringBuilder;

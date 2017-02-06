@@ -25,8 +25,6 @@
 .method private constructor <init>(Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;)V
     .locals 0
 
-    .prologue
-    .line 2037
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$TabMenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,11 +34,7 @@
 
 .method synthetic constructor <init>(Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
-    .param p2, "x1"    # Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$1;
 
-    .prologue
-    .line 2037
     invoke-direct {p0, p1}, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$TabMenuAdapter;-><init>(Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;)V
 
     return-void
@@ -51,8 +45,6 @@
 .method public getCount()I
     .locals 1
 
-    .prologue
-    .line 2040
     const/4 v0, 0x2
 
     return v0
@@ -60,16 +52,11 @@
 
 .method public getView(ILcom/samsung/android/glview/GLView;)Lcom/samsung/android/glview/GLView;
     .locals 13
-    .param p1, "position"    # I
-    .param p2, "convertView"    # Lcom/samsung/android/glview/GLView;
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 2045
     if-nez p2, :cond_1
 
-    .line 2046
     const-string v1, "EffectThumbnailListMenu"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -92,7 +79,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2047
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$TabMenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->mEffectCategoryResource:Lcom/sec/android/app/camera/resourcedata/MenuResourceBase;
@@ -104,8 +90,6 @@
 
     move-result-object v12
 
-    .line 2048
-    .local v12, "itemData":Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$TabMenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->mTabItemList:Landroid/util/SparseArray;
@@ -123,14 +107,10 @@
 
     check-cast v0, Lcom/sec/android/app/camera/widget/gl/EffectTabItem;
 
-    .line 2049
-    .local v0, "item":Lcom/sec/android/app/camera/widget/gl/EffectTabItem;
     if-nez v0, :cond_0
 
-    .line 2050
     new-instance v0, Lcom/sec/android/app/camera/widget/gl/EffectTabItem;
 
-    .end local v0    # "item":Lcom/sec/android/app/camera/widget/gl/EffectTabItem;
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$TabMenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     iget-object v1, v1, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -217,8 +197,6 @@
 
     invoke-direct/range {v0 .. v11}, Lcom/sec/android/app/camera/widget/gl/EffectTabItem;-><init>(Lcom/sec/android/app/camera/interfaces/CameraContext;FFFFFFFFILjava/lang/String;)V
 
-    .line 2053
-    .restart local v0    # "item":Lcom/sec/android/app/camera/widget/gl/EffectTabItem;
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$TabMenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->mTabList:Lcom/samsung/android/glview/GLGridList;
@@ -228,22 +206,18 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/widget/gl/EffectTabItem;->setTouchListener(Lcom/samsung/android/glview/GLView$TouchListener;)V
 
-    .line 2054
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$TabMenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/widget/gl/EffectTabItem;->setClickListener(Lcom/samsung/android/glview/GLView$ClickListener;)V
 
-    .line 2055
     invoke-virtual {v0, p1}, Lcom/sec/android/app/camera/widget/gl/EffectTabItem;->setTag(I)V
 
-    .line 2056
     new-instance v1, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$TabMenuAdapter$1;
 
     invoke-direct {v1, p0}, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$TabMenuAdapter$1;-><init>(Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$TabMenuAdapter;)V
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/widget/gl/EffectTabItem;->setTabItemSelectListener(Lcom/sec/android/app/camera/widget/gl/EffectTabItem$TabItemSelectListener;)V
 
-    .line 2091
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$TabMenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->mTabItemList:Landroid/util/SparseArray;
@@ -257,9 +231,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 2095
-    .end local v0    # "item":Lcom/sec/android/app/camera/widget/gl/EffectTabItem;
-    .end local v12    # "itemData":Lcom/sec/android/app/camera/resourcedata/MenuResourceBundle;
     :cond_0
     :goto_0
     return-object v0
@@ -273,8 +244,6 @@
 .method public reset()V
     .locals 1
 
-    .prologue
-    .line 2100
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$TabMenuAdapter;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->mTabItemList:Landroid/util/SparseArray;
@@ -284,6 +253,5 @@
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 2101
     return-void
 .end method

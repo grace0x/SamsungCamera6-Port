@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 291
     invoke-static {}, Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;->values()[Lcom/sec/android/app/camera/plugin/WatermarkTemplateLoader$TextType;
 
     move-result-object v0

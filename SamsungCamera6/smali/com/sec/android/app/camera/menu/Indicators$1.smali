@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/Indicators;)V
     .locals 0
 
-    .prologue
-    .line 69
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/Indicators$1;->this$0:Lcom/sec/android/app/camera/menu/Indicators;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,14 +37,11 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 72
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/Indicators$1;->this$0:Lcom/sec/android/app/camera/menu/Indicators;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/menu/Indicators;->setVoiceStatus(I)V
 
-    .line 73
     return-void
 .end method

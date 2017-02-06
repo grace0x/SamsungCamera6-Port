@@ -23,20 +23,13 @@
 # direct methods
 .method public constructor <init>(Lcom/samsung/android/secimaging/SecEffectProcessor;Lcom/samsung/android/secimaging/SecEffectProcessor;Landroid/os/Looper;)V
     .locals 0
-    .param p2, "processor"    # Lcom/samsung/android/secimaging/SecEffectProcessor;
-    .param p3, "looper"    # Landroid/os/Looper;
 
-    .prologue
-    .line 229
     iput-object p1, p0, Lcom/samsung/android/secimaging/SecEffectProcessor$EventHandler;->this$0:Lcom/samsung/android/secimaging/SecEffectProcessor;
 
-    .line 230
     invoke-direct {p0, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 231
     iput-object p2, p0, Lcom/samsung/android/secimaging/SecEffectProcessor$EventHandler;->mEffectProcessor:Lcom/samsung/android/secimaging/SecEffectProcessor;
 
-    .line 232
     return-void
 .end method
 
@@ -44,10 +37,7 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 4
-    .param p1, "msg"    # Landroid/os/Message;
 
-    .prologue
-    .line 236
     const-string v0, "SecEffectProcessor"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -96,7 +86,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 237
     iget-object v0, p0, Lcom/samsung/android/secimaging/SecEffectProcessor$EventHandler;->mEffectProcessor:Lcom/samsung/android/secimaging/SecEffectProcessor;
 
     # getter for: Lcom/samsung/android/secimaging/SecEffectProcessor;->mNativeContext:J
@@ -110,25 +99,21 @@
 
     if-nez v0, :cond_1
 
-    .line 238
     const-string v0, "SecEffectProcessor"
 
     const-string v1, "SecEffectProcessor went away with unhandled events"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 260
     :cond_0
     :goto_0
     return-void
 
-    .line 242
     :cond_1
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 257
     const-string v0, "SecEffectProcessor"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -155,7 +140,6 @@
 
     goto :goto_0
 
-    .line 244
     :pswitch_0
     iget-object v0, p0, Lcom/samsung/android/secimaging/SecEffectProcessor$EventHandler;->this$0:Lcom/samsung/android/secimaging/SecEffectProcessor;
 
@@ -166,7 +150,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 245
     iget-object v0, p0, Lcom/samsung/android/secimaging/SecEffectProcessor$EventHandler;->this$0:Lcom/samsung/android/secimaging/SecEffectProcessor;
 
     # getter for: Lcom/samsung/android/secimaging/SecEffectProcessor;->mEffectProcessorListener:Lcom/samsung/android/secimaging/SecEffectProcessor$EffectProcessorListener;
@@ -180,13 +163,11 @@
 
     goto :goto_0
 
-    .line 250
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    .line 251
     iget-object v0, p0, Lcom/samsung/android/secimaging/SecEffectProcessor$EventHandler;->this$0:Lcom/samsung/android/secimaging/SecEffectProcessor;
 
     # getter for: Lcom/samsung/android/secimaging/SecEffectProcessor;->mEffectProcessorListener:Lcom/samsung/android/secimaging/SecEffectProcessor$EffectProcessorListener;
@@ -196,7 +177,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 252
     iget-object v0, p0, Lcom/samsung/android/secimaging/SecEffectProcessor$EventHandler;->this$0:Lcom/samsung/android/secimaging/SecEffectProcessor;
 
     # getter for: Lcom/samsung/android/secimaging/SecEffectProcessor;->mEffectProcessorListener:Lcom/samsung/android/secimaging/SecEffectProcessor$EffectProcessorListener;
@@ -216,7 +196,6 @@
 
     goto :goto_0
 
-    .line 242
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

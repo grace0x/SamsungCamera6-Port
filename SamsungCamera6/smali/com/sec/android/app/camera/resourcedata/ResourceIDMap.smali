@@ -28,8 +28,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 30
     new-instance v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$1;
 
     invoke-direct {v0}, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$1;-><init>()V
@@ -42,20 +40,14 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 605
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 606
     return-void
 .end method
 
 .method public static get(I)Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
     .locals 4
-    .param p0, "commandId"    # I
 
-    .prologue
-    .line 609
     sget-object v1, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap;->mResourceIDs:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -64,11 +56,8 @@
 
     check-cast v0, Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
 
-    .line 610
-    .local v0, "resourceIDSet":Lcom/sec/android/app/camera/resourcedata/ResourceIDMap$ResourceIDSet;
     if-nez v0, :cond_0
 
-    .line 611
     new-instance v1, Landroid/content/res/Resources$NotFoundException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -93,7 +82,6 @@
 
     throw v1
 
-    .line 613
     :cond_0
     return-object v0
 .end method

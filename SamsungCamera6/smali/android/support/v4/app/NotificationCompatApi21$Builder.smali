@@ -25,32 +25,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/app/Notification;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/widget/RemoteViews;ILandroid/app/PendingIntent;Landroid/app/PendingIntent;Landroid/graphics/Bitmap;IIZZZILjava/lang/CharSequence;ZLjava/lang/String;Ljava/util/ArrayList;Landroid/os/Bundle;IILandroid/app/Notification;Ljava/lang/String;ZLjava/lang/String;)V
     .locals 10
-    .param p1, "context"    # Landroid/content/Context;
-    .param p2, "n"    # Landroid/app/Notification;
-    .param p3, "contentTitle"    # Ljava/lang/CharSequence;
-    .param p4, "contentText"    # Ljava/lang/CharSequence;
-    .param p5, "contentInfo"    # Ljava/lang/CharSequence;
-    .param p6, "tickerView"    # Landroid/widget/RemoteViews;
-    .param p7, "number"    # I
-    .param p8, "contentIntent"    # Landroid/app/PendingIntent;
-    .param p9, "fullScreenIntent"    # Landroid/app/PendingIntent;
-    .param p10, "largeIcon"    # Landroid/graphics/Bitmap;
-    .param p11, "progressMax"    # I
-    .param p12, "progress"    # I
-    .param p13, "progressIndeterminate"    # Z
-    .param p14, "showWhen"    # Z
-    .param p15, "useChronometer"    # Z
-    .param p16, "priority"    # I
-    .param p17, "subText"    # Ljava/lang/CharSequence;
-    .param p18, "localOnly"    # Z
-    .param p19, "category"    # Ljava/lang/String;
-    .param p21, "extras"    # Landroid/os/Bundle;
-    .param p22, "color"    # I
-    .param p23, "visibility"    # I
-    .param p24, "publicVersion"    # Landroid/app/Notification;
-    .param p25, "groupKey"    # Ljava/lang/String;
-    .param p26, "groupSummary"    # Z
-    .param p27, "sortKey"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -82,12 +56,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 67
-    .local p20, "people":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 68
     new-instance v6, Landroid/app/Notification$Builder;
 
     invoke-direct {v6, p1}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
@@ -330,12 +300,10 @@
 
     iput-object v6, p0, Landroid/support/v4/app/NotificationCompatApi21$Builder;->b:Landroid/app/Notification$Builder;
 
-    .line 103
     invoke-virtual/range {p20 .. p20}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
 
-    .local v4, "i$":Ljava/util/Iterator;
     :goto_4
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
@@ -349,17 +317,12 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 104
-    .local v5, "person":Ljava/lang/String;
     iget-object v6, p0, Landroid/support/v4/app/NotificationCompatApi21$Builder;->b:Landroid/app/Notification$Builder;
 
     invoke-virtual {v6, v5}, Landroid/app/Notification$Builder;->addPerson(Ljava/lang/String;)Landroid/app/Notification$Builder;
 
     goto :goto_4
 
-    .line 68
-    .end local v4    # "i$":Ljava/util/Iterator;
-    .end local v5    # "person":Ljava/lang/String;
     :cond_0
     const/4 v6, 0x0
 
@@ -380,8 +343,6 @@
 
     goto :goto_3
 
-    .line 106
-    .restart local v4    # "i$":Ljava/util/Iterator;
     :cond_4
     return-void
 .end method
@@ -390,23 +351,17 @@
 # virtual methods
 .method public addAction(Landroid/support/v4/app/NotificationCompatBase$Action;)V
     .locals 1
-    .param p1, "action"    # Landroid/support/v4/app/NotificationCompatBase$Action;
 
-    .prologue
-    .line 110
     iget-object v0, p0, Landroid/support/v4/app/NotificationCompatApi21$Builder;->b:Landroid/app/Notification$Builder;
 
     invoke-static {v0, p1}, Landroid/support/v4/app/NotificationCompatApi20;->addAction(Landroid/app/Notification$Builder;Landroid/support/v4/app/NotificationCompatBase$Action;)V
 
-    .line 111
     return-void
 .end method
 
 .method public build()Landroid/app/Notification;
     .locals 1
 
-    .prologue
-    .line 120
     iget-object v0, p0, Landroid/support/v4/app/NotificationCompatApi21$Builder;->b:Landroid/app/Notification$Builder;
 
     invoke-virtual {v0}, Landroid/app/Notification$Builder;->build()Landroid/app/Notification;
@@ -419,8 +374,6 @@
 .method public getBuilder()Landroid/app/Notification$Builder;
     .locals 1
 
-    .prologue
-    .line 115
     iget-object v0, p0, Landroid/support/v4/app/NotificationCompatApi21$Builder;->b:Landroid/app/Notification$Builder;
 
     return-object v0

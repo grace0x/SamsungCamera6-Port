@@ -29,8 +29,6 @@
 .method constructor <init>(Ljava/lang/Class;Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)V
     .locals 0
 
-    .prologue
-    .line 792
     iput-object p1, p0, Lcom/google/gson/internal/bind/TypeAdapters$29;->val$unboxed:Ljava/lang/Class;
 
     iput-object p2, p0, Lcom/google/gson/internal/bind/TypeAdapters$29;->val$boxed:Ljava/lang/Class;
@@ -46,7 +44,6 @@
 # virtual methods
 .method public create(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;
     .locals 2
-    .param p1, "gson"    # Lcom/google/gson/Gson;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -60,15 +57,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 795
-    .local p2, "typeToken":Lcom/google/gson/reflect/TypeToken;, "Lcom/google/gson/reflect/TypeToken<TT;>;"
     invoke-virtual {p2}, Lcom/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 796
-    .local v0, "rawType":Ljava/lang/Class;, "Ljava/lang/Class<-TT;>;"
     iget-object v1, p0, Lcom/google/gson/internal/bind/TypeAdapters$29;->val$unboxed:Ljava/lang/Class;
 
     if-eq v0, v1, :cond_0
@@ -92,8 +84,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 799
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

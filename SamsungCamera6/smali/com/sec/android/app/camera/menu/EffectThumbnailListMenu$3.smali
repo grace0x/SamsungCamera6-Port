@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;)V
     .locals 0
 
-    .prologue
-    .line 1094
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$3;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,8 +37,6 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 1097
     # getter for: Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->mIsSupportBeautyCategory:Z
     invoke-static {}, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->access$800()Z
 
@@ -48,17 +44,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 1098
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$3;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 
     # invokes: Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->initExternalCategoryEffect()V
     invoke-static {v0}, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;->access$900(Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;)V
 
-    .line 1102
     :goto_0
     return-void
 
-    .line 1100
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu$3;->this$0:Lcom/sec/android/app/camera/menu/EffectThumbnailListMenu;
 

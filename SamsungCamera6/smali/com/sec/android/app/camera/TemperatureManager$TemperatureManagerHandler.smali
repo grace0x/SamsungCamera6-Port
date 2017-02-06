@@ -30,20 +30,15 @@
 # direct methods
 .method public constructor <init>(Lcom/sec/android/app/camera/TemperatureManager;)V
     .locals 1
-    .param p1, "temperatureManager"    # Lcom/sec/android/app/camera/TemperatureManager;
 
-    .prologue
-    .line 355
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 356
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/sec/android/app/camera/TemperatureManager$TemperatureManagerHandler;->mTemperatureManager:Ljava/lang/ref/WeakReference;
 
-    .line 357
     return-void
 .end method
 
@@ -51,10 +46,7 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 4
-    .param p1, "msg"    # Landroid/os/Message;
 
-    .prologue
-    .line 361
     iget-object v1, p0, Lcom/sec/android/app/camera/TemperatureManager$TemperatureManagerHandler;->mTemperatureManager:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -63,12 +55,9 @@
 
     check-cast v0, Lcom/sec/android/app/camera/TemperatureManager;
 
-    .line 362
-    .local v0, "temperatureManager":Lcom/sec/android/app/camera/TemperatureManager;
     # invokes: Lcom/sec/android/app/camera/TemperatureManager;->handleMessage(Landroid/os/Message;)V
     invoke-static {v0, p1}, Lcom/sec/android/app/camera/TemperatureManager;->access$200(Lcom/sec/android/app/camera/TemperatureManager;Landroid/os/Message;)V
 
-    .line 363
     const-string v1, "TemperatureManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -93,6 +82,5 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 364
     return-void
 .end method

@@ -21,8 +21,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 263
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,14 +30,7 @@
 # virtual methods
 .method public build(Ljava/lang/String;Ljava/lang/CharSequence;[Ljava/lang/CharSequence;ZLandroid/os/Bundle;)Landroid/support/v4/app/RemoteInput;
     .locals 7
-    .param p1, "resultKey"    # Ljava/lang/String;
-    .param p2, "label"    # Ljava/lang/CharSequence;
-    .param p3, "choices"    # [Ljava/lang/CharSequence;
-    .param p4, "allowFreeFormInput"    # Z
-    .param p5, "extras"    # Landroid/os/Bundle;
 
-    .prologue
-    .line 268
     new-instance v0, Landroid/support/v4/app/RemoteInput;
 
     const/4 v6, 0x0
@@ -62,8 +53,6 @@
 .method public bridge synthetic build(Ljava/lang/String;Ljava/lang/CharSequence;[Ljava/lang/CharSequence;ZLandroid/os/Bundle;)Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;
     .locals 1
 
-    .prologue
-    .line 263
     invoke-virtual/range {p0 .. p5}, Landroid/support/v4/app/RemoteInput$1;->build(Ljava/lang/String;Ljava/lang/CharSequence;[Ljava/lang/CharSequence;ZLandroid/os/Bundle;)Landroid/support/v4/app/RemoteInput;
 
     move-result-object v0
@@ -73,10 +62,7 @@
 
 .method public newArray(I)[Landroid/support/v4/app/RemoteInput;
     .locals 1
-    .param p1, "size"    # I
 
-    .prologue
-    .line 273
     new-array v0, p1, [Landroid/support/v4/app/RemoteInput;
 
     return-object v0
@@ -85,8 +71,6 @@
 .method public bridge synthetic newArray(I)[Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;
     .locals 1
 
-    .prologue
-    .line 263
     invoke-virtual {p0, p1}, Landroid/support/v4/app/RemoteInput$1;->newArray(I)[Landroid/support/v4/app/RemoteInput;
 
     move-result-object v0

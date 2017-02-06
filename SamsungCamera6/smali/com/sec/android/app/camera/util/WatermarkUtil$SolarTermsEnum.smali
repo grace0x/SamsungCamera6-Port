@@ -79,7 +79,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -90,7 +89,6 @@
 
     const/4 v3, 0x0
 
-    .line 887
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "LICHUN"
@@ -99,7 +97,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->LICHUN:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 888
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "YUSHUI"
@@ -108,7 +105,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->YUSHUI:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 889
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "JINGZHE"
@@ -117,7 +113,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->JINGZHE:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 890
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "CHUNFEN"
@@ -126,7 +121,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->CHUNFEN:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 891
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "QINGMING"
@@ -135,7 +129,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->QINGMING:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 892
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "GUYU"
@@ -146,7 +139,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->GUYU:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 893
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "LIXIA"
@@ -157,7 +149,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->LIXIA:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 894
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "XIAOMAN"
@@ -168,7 +159,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->XIAOMAN:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 895
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "MANGZHONG"
@@ -179,7 +169,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->MANGZHONG:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 896
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "XIAZHI"
@@ -190,7 +179,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->XIAZHI:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 897
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "XIAOSHU"
@@ -201,7 +189,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->XIAOSHU:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 898
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "DASHU"
@@ -212,7 +199,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->DASHU:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 899
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "LIQIU"
@@ -223,7 +209,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->LIQIU:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 900
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "CHUSHU"
@@ -234,7 +219,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->CHUSHU:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 901
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "BAILU"
@@ -245,7 +229,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->BAILU:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 902
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "QIUFEN"
@@ -256,7 +239,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->QIUFEN:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 903
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "HANLU"
@@ -267,7 +249,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->HANLU:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 904
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "SHUANGJIANG"
@@ -278,7 +259,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->SHUANGJIANG:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 905
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "LIDONG"
@@ -289,7 +269,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->LIDONG:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 906
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "XIAOXUE"
@@ -300,7 +279,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->XIAOXUE:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 907
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "DAXUE"
@@ -311,7 +289,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->DAXUE:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 908
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "DONGZHI"
@@ -322,7 +299,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->DONGZHI:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 909
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "XIAOHAN"
@@ -333,7 +309,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->XIAOHAN:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 910
     new-instance v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     const-string v1, "DAHAN"
@@ -344,7 +319,6 @@
 
     sput-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->DAHAN:Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
-    .line 886
     const/16 v0, 0x18
 
     new-array v0, v0, [Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
@@ -496,8 +470,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 886
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -505,10 +477,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
     .locals 1
-    .param p0, "name"    # Ljava/lang/String;
 
-    .prologue
-    .line 886
     const-class v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -523,8 +492,6 @@
 .method public static values()[Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
     .locals 1
 
-    .prologue
-    .line 886
     sget-object v0, Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->$VALUES:[Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;
 
     invoke-virtual {v0}, [Lcom/sec/android/app/camera/util/WatermarkUtil$SolarTermsEnum;->clone()Ljava/lang/Object;

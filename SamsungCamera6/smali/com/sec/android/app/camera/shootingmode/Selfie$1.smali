@@ -22,8 +22,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/shootingmode/Selfie;)V
     .locals 0
 
-    .prologue
-    .line 123
     iput-object p1, p0, Lcom/sec/android/app/camera/shootingmode/Selfie$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Selfie;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,21 +33,15 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 7
-    .param p1, "context"    # Landroid/content/Context;
-    .param p2, "intent"    # Landroid/content/Intent;
 
-    .prologue
     const/4 v2, 0x0
 
     const/4 v3, 0x1
 
-    .line 126
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 127
-    .local v0, "action":Ljava/lang/String;
     const-string v1, "Selfie"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -72,7 +64,6 @@
 
     invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
     const/4 v1, -0x1
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -85,12 +76,10 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 150
     :cond_1
     :goto_1
     return-void
 
-    .line 129
     :sswitch_0
     const-string v4, "camera.action.COVER_DETACHED"
 
@@ -143,7 +132,6 @@
 
     goto :goto_0
 
-    .line 131
     :pswitch_0
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/Selfie$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Selfie;
 
@@ -152,7 +140,6 @@
 
     goto :goto_1
 
-    .line 134
     :pswitch_1
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/Selfie$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Selfie;
 
@@ -173,7 +160,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 135
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/Selfie$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Selfie;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/Selfie;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -219,7 +205,6 @@
 
     invoke-interface {v1, v3, v4, v5}, Lcom/sec/android/app/camera/interfaces/CameraContext;->showCameraDialog(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 139
     :cond_2
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/Selfie$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Selfie;
 
@@ -228,7 +213,6 @@
 
     goto :goto_1
 
-    .line 143
     :pswitch_2
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/Selfie$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Selfie;
 
@@ -239,7 +223,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 144
     iget-object v1, p0, Lcom/sec/android/app/camera/shootingmode/Selfie$1;->this$0:Lcom/sec/android/app/camera/shootingmode/Selfie;
 
     # getter for: Lcom/sec/android/app/camera/shootingmode/Selfie;->mCameraContext:Lcom/sec/android/app/camera/interfaces/CameraContext;
@@ -262,7 +245,6 @@
 
     goto/16 :goto_1
 
-    .line 129
     :sswitch_data_0
     .sparse-switch
         -0x7c86ca05 -> :sswitch_1

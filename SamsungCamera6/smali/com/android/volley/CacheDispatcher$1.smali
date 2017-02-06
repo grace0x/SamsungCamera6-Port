@@ -27,8 +27,6 @@
 .method constructor <init>(Lcom/android/volley/CacheDispatcher;Lcom/android/volley/Request;)V
     .locals 0
 
-    .prologue
-    .line 137
     iput-object p1, p0, Lcom/android/volley/CacheDispatcher$1;->this$0:Lcom/android/volley/CacheDispatcher;
 
     iput-object p2, p0, Lcom/android/volley/CacheDispatcher$1;->val$request:Lcom/android/volley/Request;
@@ -43,8 +41,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 141
     :try_start_0
     iget-object v0, p0, Lcom/android/volley/CacheDispatcher$1;->this$0:Lcom/android/volley/CacheDispatcher;
 
@@ -59,11 +55,9 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 145
     :goto_0
     return-void
 
-    .line 142
     :catch_0
     move-exception v0
 

@@ -15,8 +15,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,8 +22,6 @@
 
 .method public static varargs createKey(I[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
-    .param p0, "version_code"    # I
-    .param p1, "args"    # [Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -37,8 +33,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 18
     if-eqz p1, :cond_0
 
     array-length v3, p1
@@ -56,7 +50,6 @@
 
     throw v3
 
-    .line 20
     :cond_1
     const/4 v3, 0x0
 
@@ -64,16 +57,12 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 21
-    .local v0, "name":Ljava/lang/String;
     const/4 v3, 0x1
 
     aget-object v2, p1, v3
 
     check-cast v2, Ljava/lang/reflect/Type;
 
-    .line 22
-    .local v2, "typeParameter":Ljava/lang/reflect/Type;
     const/4 v3, 0x2
 
     aget-object v3, p1, v3
@@ -84,17 +73,13 @@
 
     move-result v1
 
-    .line 24
-    .local v1, "type":I
     packed-switch v1, :pswitch_data_0
 
-    .line 36
     const/4 v3, 0x0
 
     :goto_0
     return-object v3
 
-    .line 26
     :pswitch_0
     new-instance v3, Landroid/hardware/camera2/CameraCharacteristics$Key;
 
@@ -106,7 +91,6 @@
 
     goto :goto_0
 
-    .line 29
     :pswitch_1
     new-instance v3, Landroid/hardware/camera2/CaptureRequest$Key;
 
@@ -118,7 +102,6 @@
 
     goto :goto_0
 
-    .line 32
     :pswitch_2
     new-instance v3, Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -130,7 +113,6 @@
 
     goto :goto_0
 
-    .line 24
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -141,15 +123,11 @@
 
 .method public static varargs isKeyExist(I[Ljava/lang/Object;)Z
     .locals 4
-    .param p0, "version_code"    # I
-    .param p1, "args"    # [Ljava/lang/Object;
 
-    .prologue
     const/4 v2, 0x0
 
     const/4 v1, 0x1
 
-    .line 45
     if-eqz p1, :cond_0
 
     array-length v3, p1
@@ -165,42 +143,32 @@
 
     throw v1
 
-    .line 46
     :cond_1
     aget-object v0, p1, v2
 
-    .line 49
-    .local v0, "key":Ljava/lang/Object;
     :try_start_0
     instance-of v3, v0, Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     if-eqz v3, :cond_2
 
-    .line 50
     check-cast v0, Landroid/hardware/camera2/CameraCharacteristics$Key;
 
-    .end local v0    # "key":Ljava/lang/Object;
     invoke-virtual {v0}, Landroid/hardware/camera2/CameraCharacteristics$Key;->getNativeKey()Landroid/hardware/camera2/impl/CameraMetadataNative$Key;
 
     move-result-object v3
 
     invoke-virtual {v3}, Landroid/hardware/camera2/impl/CameraMetadataNative$Key;->getTag()I
 
-    .line 61
     :goto_0
     return v1
 
-    .line 52
-    .restart local v0    # "key":Ljava/lang/Object;
     :cond_2
     instance-of v3, v0, Landroid/hardware/camera2/CaptureResult$Key;
 
     if-eqz v3, :cond_4
 
-    .line 53
     check-cast v0, Landroid/hardware/camera2/CaptureResult$Key;
 
-    .end local v0    # "key":Ljava/lang/Object;
     invoke-virtual {v0}, Landroid/hardware/camera2/CaptureResult$Key;->getNativeKey()Landroid/hardware/camera2/impl/CameraMetadataNative$Key;
 
     move-result-object v3
@@ -209,27 +177,21 @@
 
     goto :goto_0
 
-    .line 59
     :catch_0
     move-exception v1
 
     :cond_3
     move v1, v2
 
-    .line 61
     goto :goto_0
 
-    .line 55
-    .restart local v0    # "key":Ljava/lang/Object;
     :cond_4
     instance-of v3, v0, Landroid/hardware/camera2/CaptureRequest$Key;
 
     if-eqz v3, :cond_3
 
-    .line 56
     check-cast v0, Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .end local v0    # "key":Ljava/lang/Object;
     invoke-virtual {v0}, Landroid/hardware/camera2/CaptureRequest$Key;->getNativeKey()Landroid/hardware/camera2/impl/CameraMetadataNative$Key;
 
     move-result-object v3

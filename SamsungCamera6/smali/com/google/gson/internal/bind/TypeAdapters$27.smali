@@ -27,8 +27,6 @@
 .method constructor <init>(Lcom/google/gson/reflect/TypeToken;Lcom/google/gson/TypeAdapter;)V
     .locals 0
 
-    .prologue
-    .line 769
     iput-object p1, p0, Lcom/google/gson/internal/bind/TypeAdapters$27;->val$type:Lcom/google/gson/reflect/TypeToken;
 
     iput-object p2, p0, Lcom/google/gson/internal/bind/TypeAdapters$27;->val$typeAdapter:Lcom/google/gson/TypeAdapter;
@@ -42,7 +40,6 @@
 # virtual methods
 .method public create(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;
     .locals 1
-    .param p1, "gson"    # Lcom/google/gson/Gson;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -56,9 +53,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 772
-    .local p2, "typeToken":Lcom/google/gson/reflect/TypeToken;, "Lcom/google/gson/reflect/TypeToken<TT;>;"
     iget-object v0, p0, Lcom/google/gson/internal/bind/TypeAdapters$27;->val$type:Lcom/google/gson/reflect/TypeToken;
 
     invoke-virtual {p2, v0}, Lcom/google/gson/reflect/TypeToken;->equals(Ljava/lang/Object;)Z

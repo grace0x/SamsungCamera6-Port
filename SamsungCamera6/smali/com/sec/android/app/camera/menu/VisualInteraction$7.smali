@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/VisualInteraction;)V
     .locals 0
 
-    .prologue
-    .line 905
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$7;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,26 +36,20 @@
 # virtual methods
 .method public onAnimationEnd(Lcom/samsung/android/glview/GLView;Landroid/view/animation/Animation;)V
     .locals 3
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 908
     const-string v0, "Camera6VI"
 
     const-string v1, "mBlurImage Image onAnimationEnd"
 
     invoke-static {v0, v1}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 909
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$7;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     # setter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mIsBlurImageAnimating:Z
     invoke-static {v0, v2}, Lcom/sec/android/app/camera/menu/VisualInteraction;->access$302(Lcom/sec/android/app/camera/menu/VisualInteraction;Z)Z
 
-    .line 911
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$7;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     # getter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mHideSwitchingAnimationLock:Ljava/lang/Object;
@@ -67,7 +59,6 @@
 
     monitor-enter v1
 
-    .line 912
     :try_start_0
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$7;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
@@ -78,13 +69,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 913
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$7;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     # invokes: Lcom/sec/android/app/camera/menu/VisualInteraction;->hideCameraSwitchingAnimation()V
     invoke-static {v0}, Lcom/sec/android/app/camera/menu/VisualInteraction;->access$1300(Lcom/sec/android/app/camera/menu/VisualInteraction;)V
 
-    .line 914
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$7;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     const/4 v2, 0x0
@@ -92,14 +81,11 @@
     # setter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mIsHideSwitchingAnimationWaiting:Z
     invoke-static {v0, v2}, Lcom/sec/android/app/camera/menu/VisualInteraction;->access$1202(Lcom/sec/android/app/camera/menu/VisualInteraction;Z)Z
 
-    .line 916
     :cond_0
     monitor-exit v1
 
-    .line 917
     return-void
 
-    .line 916
     :catchall_0
     move-exception v0
 
@@ -112,18 +98,13 @@
 
 .method public onAnimationStart(Lcom/samsung/android/glview/GLView;Landroid/view/animation/Animation;)V
     .locals 2
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 922
     const-string v0, "Camera6VI"
 
     const-string v1, "mBlurImage Image onAnimationStart"
 
     invoke-static {v0, v1}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 923
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/VisualInteraction$7;->this$0:Lcom/sec/android/app/camera/menu/VisualInteraction;
 
     const/4 v1, 0x1
@@ -131,6 +112,5 @@
     # setter for: Lcom/sec/android/app/camera/menu/VisualInteraction;->mIsBlurImageAnimating:Z
     invoke-static {v0, v1}, Lcom/sec/android/app/camera/menu/VisualInteraction;->access$302(Lcom/sec/android/app/camera/menu/VisualInteraction;Z)Z
 
-    .line 924
     return-void
 .end method

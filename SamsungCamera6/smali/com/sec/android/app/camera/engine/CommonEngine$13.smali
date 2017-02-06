@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/engine/CommonEngine;)V
     .locals 0
 
-    .prologue
-    .line 6337
     iput-object p1, p0, Lcom/sec/android/app/camera/engine/CommonEngine$13;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,8 +37,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 6340
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine$13;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     # getter for: Lcom/sec/android/app/camera/engine/CommonEngine;->mCameraDevice:Lcom/sec/android/seccamera/SecCamera;
@@ -52,7 +48,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/seccamera/SecCamera;->setRecordingMode(I)V
 
-    .line 6342
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine$13;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     # getter for: Lcom/sec/android/app/camera/engine/CommonEngine;->mRecordingEventListener:Lcom/sec/android/app/camera/interfaces/Engine$RecordingEventListener;
@@ -62,7 +57,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 6343
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine$13;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
     # getter for: Lcom/sec/android/app/camera/engine/CommonEngine;->mRecordingEventListener:Lcom/sec/android/app/camera/interfaces/Engine$RecordingEventListener;
@@ -72,7 +66,6 @@
 
     invoke-interface {v0}, Lcom/sec/android/app/camera/interfaces/Engine$RecordingEventListener;->onRecordingStarted()V
 
-    .line 6346
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/engine/CommonEngine$13;->this$0:Lcom/sec/android/app/camera/engine/CommonEngine;
 
@@ -80,6 +73,5 @@
 
     invoke-virtual {v0}, Lcom/sec/android/app/camera/engine/CeRequestQueue;->completeRequest()V
 
-    .line 6347
     return-void
 .end method

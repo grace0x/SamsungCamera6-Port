@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/AbstractMenu;)V
     .locals 0
 
-    .prologue
-    .line 63
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/AbstractMenu$1;->this$0:Lcom/sec/android/app/camera/menu/AbstractMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +36,7 @@
 # virtual methods
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 1
-    .param p1, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 66
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/AbstractMenu$1;->this$0:Lcom/sec/android/app/camera/menu/AbstractMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/AbstractMenu;->mShowAnimation:Landroid/view/animation/Animation;
@@ -68,18 +63,15 @@
 
     if-eqz v0, :cond_2
 
-    .line 67
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/AbstractMenu$1;->this$0:Lcom/sec/android/app/camera/menu/AbstractMenu;
 
     invoke-virtual {v0, p1}, Lcom/sec/android/app/camera/menu/AbstractMenu;->onShowAnimationEnd(Landroid/view/animation/Animation;)V
 
-    .line 71
     :cond_1
     :goto_0
     return-void
 
-    .line 68
     :cond_2
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/AbstractMenu$1;->this$0:Lcom/sec/android/app/camera/menu/AbstractMenu;
 
@@ -104,7 +96,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 69
     :cond_3
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/AbstractMenu$1;->this$0:Lcom/sec/android/app/camera/menu/AbstractMenu;
 
@@ -115,19 +106,13 @@
 
 .method public onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 0
-    .param p1, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 76
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 1
-    .param p1, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 80
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/AbstractMenu$1;->this$0:Lcom/sec/android/app/camera/menu/AbstractMenu;
 
     # getter for: Lcom/sec/android/app/camera/menu/AbstractMenu;->mShowAnimation:Landroid/view/animation/Animation;
@@ -154,18 +139,15 @@
 
     if-eqz v0, :cond_2
 
-    .line 81
     :cond_0
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/AbstractMenu$1;->this$0:Lcom/sec/android/app/camera/menu/AbstractMenu;
 
     invoke-virtual {v0, p1}, Lcom/sec/android/app/camera/menu/AbstractMenu;->onShowAnimationStart(Landroid/view/animation/Animation;)V
 
-    .line 85
     :cond_1
     :goto_0
     return-void
 
-    .line 82
     :cond_2
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/AbstractMenu$1;->this$0:Lcom/sec/android/app/camera/menu/AbstractMenu;
 
@@ -190,7 +172,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 83
     :cond_3
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/AbstractMenu$1;->this$0:Lcom/sec/android/app/camera/menu/AbstractMenu;
 

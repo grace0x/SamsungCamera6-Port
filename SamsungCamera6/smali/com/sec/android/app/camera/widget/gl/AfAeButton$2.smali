@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/widget/gl/AfAeButton;)V
     .locals 0
 
-    .prologue
-    .line 148
     iput-object p1, p0, Lcom/sec/android/app/camera/widget/gl/AfAeButton$2;->this$0:Lcom/sec/android/app/camera/widget/gl/AfAeButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +36,7 @@
 # virtual methods
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 2
-    .param p1, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 151
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/AfAeButton$2;->this$0:Lcom/sec/android/app/camera/widget/gl/AfAeButton;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/AfAeButton;->mAeText:Lcom/samsung/android/glview/GLText;
@@ -53,7 +48,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLText;->setVisibility(I)V
 
-    .line 152
     iget-object v0, p0, Lcom/sec/android/app/camera/widget/gl/AfAeButton$2;->this$0:Lcom/sec/android/app/camera/widget/gl/AfAeButton;
 
     # getter for: Lcom/sec/android/app/camera/widget/gl/AfAeButton;->mAFAEText:Lcom/samsung/android/glview/GLText;
@@ -65,31 +59,23 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLText;->setVisibility(I)V
 
-    .line 153
     return-void
 .end method
 
 .method public onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 0
-    .param p1, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 157
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 2
-    .param p1, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 161
     const-string v0, "AfAeButton"
 
     const-string v1, "AE PORTRAIT ANIMATION"
 
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 162
     return-void
 .end method

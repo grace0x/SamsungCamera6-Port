@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/sec/android/app/camera/util/CameraOrientationEventManager;Landroid/content/Context;)V
     .locals 0
-    .param p2, "x0"    # Landroid/content/Context;
 
-    .prologue
-    .line 80
     iput-object p1, p0, Lcom/sec/android/app/camera/util/CameraOrientationEventManager$1;->this$0:Lcom/sec/android/app/camera/util/CameraOrientationEventManager;
 
     invoke-direct {p0, p2}, Landroid/view/OrientationEventListener;-><init>(Landroid/content/Context;)V
@@ -36,27 +33,21 @@
 # virtual methods
 .method public onOrientationChanged(I)V
     .locals 2
-    .param p1, "orientation"    # I
 
-    .prologue
-    .line 83
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_1
 
-    .line 84
     const-string v0, "CameraOrientationEvtMgr"
 
     const-string v1, "android onOrientationChanged - ORIENTATION_UNKNOWN"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 91
     :cond_0
     :goto_0
     return-void
 
-    .line 87
     :cond_1
     iget-object v0, p0, Lcom/sec/android/app/camera/util/CameraOrientationEventManager$1;->this$0:Lcom/sec/android/app/camera/util/CameraOrientationEventManager;
 
@@ -67,13 +58,11 @@
 
     if-eq v0, p1, :cond_0
 
-    .line 88
     iget-object v0, p0, Lcom/sec/android/app/camera/util/CameraOrientationEventManager$1;->this$0:Lcom/sec/android/app/camera/util/CameraOrientationEventManager;
 
     # setter for: Lcom/sec/android/app/camera/util/CameraOrientationEventManager;->mLastOrientation:I
     invoke-static {v0, p1}, Lcom/sec/android/app/camera/util/CameraOrientationEventManager;->access$002(Lcom/sec/android/app/camera/util/CameraOrientationEventManager;I)I
 
-    .line 89
     iget-object v0, p0, Lcom/sec/android/app/camera/util/CameraOrientationEventManager$1;->this$0:Lcom/sec/android/app/camera/util/CameraOrientationEventManager;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/util/CameraOrientationEventManager$1;->this$0:Lcom/sec/android/app/camera/util/CameraOrientationEventManager;

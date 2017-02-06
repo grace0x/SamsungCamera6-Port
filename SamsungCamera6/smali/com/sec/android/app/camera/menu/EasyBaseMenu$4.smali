@@ -25,8 +25,6 @@
 .method constructor <init>(Lcom/sec/android/app/camera/menu/EasyBaseMenu;)V
     .locals 0
 
-    .prologue
-    .line 879
     iput-object p1, p0, Lcom/sec/android/app/camera/menu/EasyBaseMenu$4;->this$0:Lcom/sec/android/app/camera/menu/EasyBaseMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,18 +36,13 @@
 # virtual methods
 .method public onAnimationEnd(Lcom/samsung/android/glview/GLView;Landroid/view/animation/Animation;)V
     .locals 2
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 883
     const-string v0, "EasyBaseMenu"
 
     const-string v1, "onAnimationEnd - mTopVIButton"
 
     invoke-static {v0, v1}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 884
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EasyBaseMenu$4;->this$0:Lcom/sec/android/app/camera/menu/EasyBaseMenu;
 
     iget-object v1, p0, Lcom/sec/android/app/camera/menu/EasyBaseMenu$4;->this$0:Lcom/sec/android/app/camera/menu/EasyBaseMenu;
@@ -58,7 +51,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/android/app/camera/menu/EasyBaseMenu;->removeView(Lcom/samsung/android/glview/GLView;)V
 
-    .line 885
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EasyBaseMenu$4;->this$0:Lcom/sec/android/app/camera/menu/EasyBaseMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/EasyBaseMenu;->mTopVIButton:Lcom/samsung/android/glview/GLButton;
@@ -69,7 +61,6 @@
 
     iput-object v1, v0, Lcom/samsung/android/glview/GLButton;->mParent:Lcom/samsung/android/glview/GLView;
 
-    .line 886
     iget-object v0, p0, Lcom/sec/android/app/camera/menu/EasyBaseMenu$4;->this$0:Lcom/sec/android/app/camera/menu/EasyBaseMenu;
 
     iget-object v0, v0, Lcom/sec/android/app/camera/menu/EasyBaseMenu;->mTopVIButton:Lcom/samsung/android/glview/GLButton;
@@ -78,23 +69,17 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/glview/GLButton;->setAnimationEventListener(Lcom/samsung/android/glview/GLView$AnimationEventListener;)V
 
-    .line 887
     return-void
 .end method
 
 .method public onAnimationStart(Lcom/samsung/android/glview/GLView;Landroid/view/animation/Animation;)V
     .locals 2
-    .param p1, "view"    # Lcom/samsung/android/glview/GLView;
-    .param p2, "animation"    # Landroid/view/animation/Animation;
 
-    .prologue
-    .line 891
     const-string v0, "EasyBaseMenu"
 
     const-string v1, "onAnimationStart - mTopVIButton"
 
     invoke-static {v0, v1}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 892
     return-void
 .end method
