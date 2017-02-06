@@ -1,0 +1,25 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: ShootingModeProvider2.apk
+compressionType: false
+doNotCompress:
+- arsc
+- qmg
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '23'
+  targetSdkVersion: '23'
+sharedLibrary: false
+unknownFiles:
+  SEC-INF/buildConfirm.crt: '8'
+  SEC-INF/buildinfo.xml: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.2
+versionInfo:
+  versionCode: '200900000'
+  versionName: 2.0.09

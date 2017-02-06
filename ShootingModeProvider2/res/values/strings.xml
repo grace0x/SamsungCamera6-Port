@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ShootingModeProvider</string>
+    <string name="permission_receive_update_shootingmode">act as receiver for Shooting modes updates</string>
+    <string name="permission_receive_update_shootingmode_desc">Receive Shooting modes updates</string>
+</resources>

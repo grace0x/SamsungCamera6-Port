@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="effect_button_height">38.0dip</dimen>
+    <dimen name="mode_menu_bar_button_height">38.0dip</dimen>
+    <dimen name="preview_normal_height">1080.0px</dimen>
+    <dimen name="preview_normal_width">1440.0px</dimen>
+    <dimen name="preview_wide_height">1080.0px</dimen>
+    <dimen name="preview_wide_width">1920.0px</dimen>
+    <dimen name="pro_item_text_font_size">9.0dip</dimen>
+    <dimen name="pro_lite_item_background_offset">6.5dip</dimen>
+    <dimen name="pro_lite_item_right_margin">140.0dip</dimen>
+    <dimen name="pro_lite_item_text_pos_y">44.5dip</dimen>
+    <dimen name="pro_lite_item_top_margin">27.5dip</dimen>
+    <dimen name="pro_lite_item_width">68.0dip</dimen>
+    <dimen name="screen_full_height">1080.0px</dimen>
+    <dimen name="screen_full_width">1920.0px</dimen>
+    <dimen name="sidemenu_shutter_button_progress_pos_x">629.0dip</dimen>
+    <dimen name="sidemenu_shutter_button_progress_pos_y">170.0dip</dimen>
+    <dimen name="sidemenu_shutter_progress_width">72.0dip</dimen>
+    <dimen name="wideselfie_guide_text_pos_x_normal">230.0dip</dimen>
+    <dimen name="wideselfie_preview_animation_margin_left">7.0dip</dimen>
+    <dimen name="wideselfie_preview_animation_margin_top">31.0dip</dimen>
+</resources>

@@ -1,0 +1,31 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android SignApk)
+SHA1-Digest-Manifest: Nybdl086AV3ubCq6TVfUGUei3gM=
+
+Name: res/mipmap-xxhdpi-v4/ic_launcher.qmg
+SHA1-Digest: coaaSiPbOsGqTthfj/npLs0zr1Q=
+
+Name: AndroidManifest.xml
+SHA1-Digest: e+U274CkLGlhjTB5w/0M2leaHB8=
+
+Name: SEC-INF/buildinfo.xml
+SHA1-Digest: pUthX1pmaUW/cV6aw73NHrKKwUk=
+
+Name: SEC-INF/buildConfirm.crt
+SHA1-Digest: ir36zvd3F1FnMg/xKS909hQVlS8=
+
+Name: res/mipmap-mdpi-v4/ic_launcher.qmg
+SHA1-Digest: nHSmRwFUdWhhg16aCIH6MNYq0F0=
+
+Name: res/mipmap-hdpi-v4/ic_launcher.qmg
+SHA1-Digest: MWNH3u1WdlK7IwgXZpEMfOV+8kc=
+
+Name: res/mipmap-xhdpi-v4/ic_launcher.qmg
+SHA1-Digest: 51mvOPCJi4dWtc6HJs/0hueRLqE=
+
+Name: resources.arsc
+SHA1-Digest: elz/vM5kpfScwOwgXe6IGrkyAD8=
+
+Name: res/mipmap-xxxhdpi-v4/ic_launcher.qmg
+SHA1-Digest: S0NlGLvisi8/CRMrHPFquZdew+0=
+
