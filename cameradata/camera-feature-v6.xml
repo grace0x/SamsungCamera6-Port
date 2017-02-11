@@ -1,14 +1,39 @@
 <?xml version= "1.0" encoding= "UTF-8"?>
 <resources>
     <!-- Hardware related features -->
+    <local name="SUPPORT_HEART_RATE_SENSOR_SHUTTER" value="true" />
+    <local name="SUPPORT_SVIEW_COVER_CAMERA" value="true" />
     <local name="CAMERA_SCREEN_FLASH_VI" value="false"/>
+    <!-- Camera sensor features -->
+    <local name="CAMERA_MAX_ISO" value="800" />
+    <local name="SUPPORT_AUTO_NIGHT_DETECTION" value="true" />
+    <local name="CAMCORDER_ANTISHAKE" value="true" />
+    <local name="CAMCORDER_FRONT_ANTISHAKE" value="true" />
+    <local name="BACK_NIGHT_SHOOTINGMODE_PREVIEW_FPS_MIN" value="10000" />
+    <local name="FRONT_NIGHT_SHOOTINGMODE_PREVIEW_FPS_MIN" value="8000" />
 
+    <!-- Shooting mode variation features -->
+    <local name="CAMERA_DUALCAMERA" value="true" />
+    <local name="CAMERA_LIVE_BEAUTY_SKINCOLOR" value="true" />
+    <local name="CAMERA_LIVE_BEAUTY_SPOTLIGHT" value="true" />
+    <local name="CAMERA_LIVE_BEAUTY_SHAPECORRECTION" value="true" />
+    <local name="CAMERA_SUPPORT_PICTURE_FORMAT" value="true" />
+    <local name="CAMERA_SUPPORT_FOOD_ADDED_LENS" value="true" />
+    <local name="CAMERA_SUPPORT_AUTO_LLS_LITE" value="true" />
     <!-- Etc. features -->
     <local name="COVER_CAMERA_RECORDING" value="true" />
     <local name="CAMERA_SUPPORT_WATERMARK" value="false" />
     <local name="CAMERA_SUPPORT_WECHATSIGHT_MODE" value="false" />
     <local name="SUPPORT_FLOATING_CAMERA_BUTTON" value="true" />
 
+    <!-- Performance features -->
+    <local name="BURST_PANORAMA_LOW_PERFORMANCE" value="true" />
+    <local name="CAMERA_LOW_PERFORMANCE_CONTINUOUS" value="true" />
+    <local name="LOW_PERFORMANCE_RECORDING_VI" value="true" />
+    <local name="DISABLE_RECORDING_VI" value="true" />
+    <local name="SUPPORT_BARCODE_DETECTION" value="false" />
+    <local name="CAMERA_USE_LOW_PERFORMANCE_PREVIEW" value="true" />
+    <local name="SUPPORT_BEAUTY_EFFECT_CATEGORY" value="true" />
     <!-- Shootingmode - BACK -->
     <local name="BACK_CAMERA_SHOOTINGMODE_PANORAMA_SHOT" value="true"/>
     <local name="BACK_CAMERA_SHOOTINGMODE_PRO" value="true"/>
