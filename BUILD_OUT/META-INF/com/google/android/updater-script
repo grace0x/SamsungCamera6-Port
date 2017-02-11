@@ -1,6 +1,15 @@
-ui_print("Installing ..");
+ui_print(" By G-Joker");
+ui_print("Noble Team");
 run_program("/sbin/busybox", "mount", "/system");
 show_progress(1, 15);
+ui_print("Cleaning ..");
+delete_recursive("/system/priv-app/ShootingModeProvider"); 
+delete_recursive("/system/priv-app/SamsungCamera4"); 
+delete_recursive("/system/priv-app/ShootingModeProvider2"); 
+delete_recursive("/system/priv-app/SamsungCamera6"); 
+delete_recursive("/data/data/com.samsung.android.provider.shootingmodeprovider"); 
+delete_recursive("/system/cameradata");
+ui_print("Installing ..");
 package_extract_dir("system", "/system");
 run_program("/sbin/busybox", "umount", "/system");
 ui_print("Installation complete!");
