@@ -3,10 +3,10 @@
 .source "VirtualShot.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
-.implements Lcom/sec/android/app/camera/interfaces/Engine$DBUpdateListener;
-.implements Lcom/sec/android/seccamera/SecCamera$InteractiveShotEventListener;
 .implements Lcom/sec/android/app/camera/interfaces/CameraContext$HRMShutterListener;
+.implements Lcom/sec/android/app/camera/interfaces/Engine$DBUpdateListener;
+.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
+.implements Lcom/sec/android/seccamera/SecCamera$InteractiveShotEventListener;
 
 
 # annotations

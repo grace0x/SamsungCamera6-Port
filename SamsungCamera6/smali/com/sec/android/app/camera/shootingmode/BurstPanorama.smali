@@ -3,10 +3,10 @@
 .source "BurstPanorama.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
 .implements Lcom/samsung/android/glview/GLView$OrientationChangeListener;
-.implements Lcom/sec/android/seccamera/SecCamera$PanoramaEventListener;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$DBUpdateListener;
+.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
+.implements Lcom/sec/android/seccamera/SecCamera$PanoramaEventListener;
 
 
 # annotations

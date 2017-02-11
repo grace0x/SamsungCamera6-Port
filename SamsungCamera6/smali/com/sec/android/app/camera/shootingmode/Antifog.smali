@@ -3,10 +3,10 @@
 .source "Antifog.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
-.implements Lcom/sec/android/seccamera/SecCamera$HazeRemovalEventListener;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$EngineStateListener;
 .implements Lcom/sec/android/app/camera/interfaces/MenuBase$OnHideListener;
+.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
+.implements Lcom/sec/android/seccamera/SecCamera$HazeRemovalEventListener;
 
 
 # static fields

@@ -3,11 +3,11 @@
 .source "ProductSearch.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
-.implements Lcom/sec/android/app/camera/interfaces/Engine$SuperResolutionZoomEventListener;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$DBUpdateListener;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$ImageContentsLoggingListener;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$ScreenFlashEventListener;
+.implements Lcom/sec/android/app/camera/interfaces/Engine$SuperResolutionZoomEventListener;
+.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
 
 
 # static fields

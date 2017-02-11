@@ -3,8 +3,8 @@
 .source "CameraSettingsImpl.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/CameraSettings;
 .implements Landroid/os/Parcelable;
+.implements Lcom/sec/android/app/camera/interfaces/CameraSettings;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$OnRequestQueueEmptyListener;
 
 
@@ -1253,7 +1253,7 @@
 .method private getKeyboardCoverCamcorderResolution()I
     .locals 1
 
-    const-string v0, "1440x1440"
+    const-string v0, "1088x1088"
 
     invoke-static {v0}, Lcom/sec/android/app/camera/util/CameraResolution;->getResolutionID(Ljava/lang/String;)I
 

@@ -3,12 +3,12 @@
 .source "SlowMotion.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
-.implements Lcom/samsung/android/glview/GLView$TouchListener;
-.implements Lcom/samsung/android/glview/GLView$ClickListener;
 .implements Lcom/samsung/android/glview/GLView$AnimationEventListener;
-.implements Lcom/sec/android/seccamera/SecCamera$SlowMotionEventListener;
+.implements Lcom/samsung/android/glview/GLView$ClickListener;
+.implements Lcom/samsung/android/glview/GLView$TouchListener;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$VideoContentsLoggingListener;
+.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
+.implements Lcom/sec/android/seccamera/SecCamera$SlowMotionEventListener;
 
 
 # annotations
@@ -1625,7 +1625,7 @@
 
     move-result-object v0
 
-    const/4 v1, 0x3
+    const/4 v1, 0x2
 
     invoke-static {v1}, Lcom/sec/android/app/camera/util/CameraParameters;->getRecordingMotionFPS(I)Ljava/lang/String;
 

@@ -4,9 +4,9 @@
 
 # interfaces
 .implements Lcom/samsung/android/glview/GLView$ClickListener;
-.implements Lcom/samsung/android/glview/GLView$TouchListener;
-.implements Lcom/samsung/android/glview/GLView$KeyListener;
 .implements Lcom/samsung/android/glview/GLView$FocusListener;
+.implements Lcom/samsung/android/glview/GLView$KeyListener;
+.implements Lcom/samsung/android/glview/GLView$TouchListener;
 
 
 # static fields

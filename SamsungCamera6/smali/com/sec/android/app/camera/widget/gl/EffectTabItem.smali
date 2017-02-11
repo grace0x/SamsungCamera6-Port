@@ -4,11 +4,11 @@
 
 # interfaces
 .implements Lcom/samsung/android/glview/GLView$ClickListener;
-.implements Lcom/sec/android/app/camera/interfaces/CameraSettings$CameraSettingChangedListener;
-.implements Lcom/samsung/android/glview/GLView$TouchListener;
 .implements Lcom/samsung/android/glview/GLView$FocusListener;
 .implements Lcom/samsung/android/glview/GLView$KeyListener;
 .implements Lcom/samsung/android/glview/GLView$OrientationChangeListener;
+.implements Lcom/samsung/android/glview/GLView$TouchListener;
+.implements Lcom/sec/android/app/camera/interfaces/CameraSettings$CameraSettingChangedListener;
 
 
 # annotations

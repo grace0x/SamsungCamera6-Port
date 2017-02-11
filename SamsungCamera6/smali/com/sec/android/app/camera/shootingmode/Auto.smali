@@ -3,17 +3,17 @@
 .source "Auto.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
-.implements Lcom/sec/android/app/camera/interfaces/Engine$BurstCaptureEventListener;
-.implements Lcom/sec/android/app/camera/interfaces/Engine$SuperResolutionZoomEventListener;
-.implements Lcom/sec/android/seccamera/SecCamera$QRCodeDetectEventListener;
-.implements Lcom/sec/android/app/camera/interfaces/MenuBase$OnShowListener;
-.implements Lcom/sec/android/app/camera/interfaces/MenuBase$OnHideListener;
-.implements Lcom/sec/android/app/camera/interfaces/Engine$DBUpdateListener;
 .implements Lcom/sec/android/app/camera/interfaces/CameraSettings$CameraSettingChangedListener;
+.implements Lcom/sec/android/app/camera/interfaces/Engine$BurstCaptureEventListener;
+.implements Lcom/sec/android/app/camera/interfaces/Engine$DBUpdateListener;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$ImageContentsLoggingListener;
-.implements Lcom/sec/android/seccamera/SecCamera$BeautyEventListener;
+.implements Lcom/sec/android/app/camera/interfaces/Engine$SuperResolutionZoomEventListener;
+.implements Lcom/sec/android/app/camera/interfaces/MenuBase$OnHideListener;
+.implements Lcom/sec/android/app/camera/interfaces/MenuBase$OnShowListener;
+.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
 .implements Lcom/sec/android/app/camera/widget/gl/WatermarkHandler$WatermarkHandlerListener;
+.implements Lcom/sec/android/seccamera/SecCamera$BeautyEventListener;
+.implements Lcom/sec/android/seccamera/SecCamera$QRCodeDetectEventListener;
 
 
 # static fields

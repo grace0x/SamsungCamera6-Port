@@ -3,10 +3,10 @@
 .source "GLAbsList.java"
 
 # interfaces
-.implements Lcom/samsung/android/glview/GLView$TouchListener;
-.implements Lcom/samsung/android/glview/GLView$KeyListener;
 .implements Lcom/samsung/android/glview/GLView$DragListener;
 .implements Lcom/samsung/android/glview/GLView$FocusListener;
+.implements Lcom/samsung/android/glview/GLView$KeyListener;
+.implements Lcom/samsung/android/glview/GLView$TouchListener;
 
 
 # annotations

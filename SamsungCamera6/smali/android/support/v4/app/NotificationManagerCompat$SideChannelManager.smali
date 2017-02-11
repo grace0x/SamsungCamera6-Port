@@ -3,8 +3,8 @@
 .source "NotificationManagerCompat.java"
 
 # interfaces
-.implements Landroid/os/Handler$Callback;
 .implements Landroid/content/ServiceConnection;
+.implements Landroid/os/Handler$Callback;
 
 
 # annotations

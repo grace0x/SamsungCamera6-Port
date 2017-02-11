@@ -3,24 +3,24 @@
 .source "Camera.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/CameraContext;
 .implements Landroid/view/ScaleGestureDetector$OnScaleGestureListener;
 .implements Lcom/samsung/android/glview/GLContext$GLInitializeListener;
-.implements Lcom/sec/android/app/camera/interfaces/Engine$ActivateShootingModeListener;
 .implements Lcom/samsung/android/glview/GLContext$HoverEventChangedObserver;
-.implements Lcom/sec/android/app/camera/menu/ZoomSliderMenu$ZoomValueMenuSelectListener;
-.implements Lcom/sec/android/seccamera/SecCamera$SecImagingEventListener;
-.implements Lcom/sec/android/seccamera/SecCamera$PhaseAFCallback;
-.implements Lcom/sec/android/seccamera/SecCamera$ObjectTrackingAFCallback;
-.implements Lcom/sec/android/seccamera/SecCamera$ExtraInfoListener;
-.implements Lcom/sec/android/app/camera/TemperatureManager$TemperatureManagerListener;
 .implements Lcom/sec/android/app/camera/HRMSensorFusion$HRMContactListener;
+.implements Lcom/sec/android/app/camera/TemperatureManager$TemperatureManagerListener;
+.implements Lcom/sec/android/app/camera/interfaces/CameraContext;
+.implements Lcom/sec/android/app/camera/interfaces/Engine$ActivateShootingModeListener;
+.implements Lcom/sec/android/app/camera/interfaces/Engine$PictureTakenListener;
+.implements Lcom/sec/android/app/camera/menu/ZoomSliderMenu$ZoomValueMenuSelectListener;
+.implements Lcom/sec/android/app/camera/widget/gl/TouchEVSliderGroup$TouchEVSliderChangeListener;
+.implements Lcom/sec/android/seccamera/SecCamera$BrightnessValueCallback;
+.implements Lcom/sec/android/seccamera/SecCamera$ExtraInfoListener;
 .implements Lcom/sec/android/seccamera/SecCamera$FaceDetectionListener;
 .implements Lcom/sec/android/seccamera/SecCamera$HWFaceDetectionListener;
-.implements Lcom/sec/android/app/camera/widget/gl/TouchEVSliderGroup$TouchEVSliderChangeListener;
 .implements Lcom/sec/android/seccamera/SecCamera$MultiAFCallback;
-.implements Lcom/sec/android/app/camera/interfaces/Engine$PictureTakenListener;
-.implements Lcom/sec/android/seccamera/SecCamera$BrightnessValueCallback;
+.implements Lcom/sec/android/seccamera/SecCamera$ObjectTrackingAFCallback;
+.implements Lcom/sec/android/seccamera/SecCamera$PhaseAFCallback;
+.implements Lcom/sec/android/seccamera/SecCamera$SecImagingEventListener;
 
 
 # annotations
@@ -29863,6 +29863,8 @@
     const/16 v1, 0xa
 
     if-eq v0, v1, :cond_1
+
+    if-ne v0, v1, :cond_1
 
     const-string v0, "Camera6"
 

@@ -3,12 +3,12 @@
 .source "OverlayLayout.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/OverlayLayoutController;
-.implements Lcom/sec/android/app/camera/interfaces/CameraSettings$CameraSettingChangedListener;
 .implements Lcom/samsung/android/glview/GLView$OrientationChangeListener;
-.implements Lcom/sec/android/app/camera/interfaces/CameraContext$PhaseAFListener;
-.implements Lcom/sec/android/app/camera/interfaces/CameraContext$MultiAFListener;
 .implements Lcom/sec/android/app/camera/interfaces/CameraContext$FocusStateListener;
+.implements Lcom/sec/android/app/camera/interfaces/CameraContext$MultiAFListener;
+.implements Lcom/sec/android/app/camera/interfaces/CameraContext$PhaseAFListener;
+.implements Lcom/sec/android/app/camera/interfaces/CameraSettings$CameraSettingChangedListener;
+.implements Lcom/sec/android/app/camera/interfaces/OverlayLayoutController;
 
 
 # static fields

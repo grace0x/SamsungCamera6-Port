@@ -3,11 +3,11 @@
 .source "ShootingModeProviderImpl.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/ShootingModeProvider;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$PrepareSetShootingModeListener;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$PrepareStartingPreviewListener;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$SingleCaptureEventListener;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$TimerEventListener;
+.implements Lcom/sec/android/app/camera/interfaces/ShootingModeProvider;
 
 
 # static fields

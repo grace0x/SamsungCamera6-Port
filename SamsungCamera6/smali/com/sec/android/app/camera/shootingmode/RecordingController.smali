@@ -3,10 +3,10 @@
 .source "RecordingController.java"
 
 # interfaces
-.implements Lcom/sec/android/secmediarecorder/SecMediaRecorder$OnErrorListener;
-.implements Lcom/sec/android/secmediarecorder/SecMediaRecorder$OnInfoListener;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$RecordingEventListener;
 .implements Lcom/sec/android/seccamera/SecCamera$SecImagingEventListener;
+.implements Lcom/sec/android/secmediarecorder/SecMediaRecorder$OnErrorListener;
+.implements Lcom/sec/android/secmediarecorder/SecMediaRecorder$OnInfoListener;
 
 
 # annotations

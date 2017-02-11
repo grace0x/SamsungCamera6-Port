@@ -3,8 +3,8 @@
 .source "SwipeRefreshLayout.java"
 
 # interfaces
-.implements Landroid/support/v4/view/NestedScrollingParent;
 .implements Landroid/support/v4/view/NestedScrollingChild;
+.implements Landroid/support/v4/view/NestedScrollingParent;
 
 
 # annotations

@@ -3,8 +3,8 @@
 .source "ModeInfoListMenu.java"
 
 # interfaces
-.implements Lcom/samsung/android/glview/GLView$OrientationChangeListener;
 .implements Lcom/samsung/android/glview/GLView$ClickListener;
+.implements Lcom/samsung/android/glview/GLView$OrientationChangeListener;
 
 
 # annotations

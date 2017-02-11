@@ -3,17 +3,17 @@
 .source "Dual.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
-.implements Lcom/sec/android/app/camera/interfaces/CameraSettings$CameraSettingChangedListener;
-.implements Lcom/sec/android/app/camera/widget/gl/RectHandler$OnHandlerMoveListener;
-.implements Lcom/samsung/android/glview/GLView$ClickListener;
 .implements Lcom/samsung/android/glview/GLView$AnimationEventListener;
-.implements Lcom/sec/android/app/camera/util/CameraOrientationEventManager$CameraOrientationEventListener;
-.implements Lcom/sec/android/app/camera/interfaces/Engine$EngineStateListener;
+.implements Lcom/samsung/android/glview/GLView$ClickListener;
+.implements Lcom/sec/android/app/camera/interfaces/CameraSettings$CameraSettingChangedListener;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$DBUpdateListener;
-.implements Lcom/sec/android/app/camera/widget/gl/RectHandler$RectHandlerClickListener;
+.implements Lcom/sec/android/app/camera/interfaces/Engine$EngineStateListener;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$ImageContentsLoggingListener;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$VideoContentsLoggingListener;
+.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
+.implements Lcom/sec/android/app/camera/util/CameraOrientationEventManager$CameraOrientationEventListener;
+.implements Lcom/sec/android/app/camera/widget/gl/RectHandler$OnHandlerMoveListener;
+.implements Lcom/sec/android/app/camera/widget/gl/RectHandler$RectHandlerClickListener;
 
 
 # annotations

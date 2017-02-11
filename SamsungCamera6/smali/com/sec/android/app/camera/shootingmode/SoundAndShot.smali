@@ -3,11 +3,11 @@
 .source "SoundAndShot.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
-.implements Lcom/sec/android/app/camera/interfaces/Engine$DBUpdateListener;
 .implements Lcom/samsung/android/glview/GLView$ClickListener;
 .implements Lcom/sec/android/app/camera/interfaces/CameraContext$HRMShutterListener;
 .implements Lcom/sec/android/app/camera/interfaces/CameraSettings$CameraSettingChangedListener;
+.implements Lcom/sec/android/app/camera/interfaces/Engine$DBUpdateListener;
+.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
 
 
 # annotations

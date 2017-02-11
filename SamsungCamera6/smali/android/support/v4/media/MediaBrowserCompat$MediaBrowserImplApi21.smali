@@ -3,9 +3,9 @@
 .source "MediaBrowserCompat.java"
 
 # interfaces
+.implements Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback$ConnectionCallbackInternal;
 .implements Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImpl;
 .implements Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserServiceCallbackImpl;
-.implements Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback$ConnectionCallbackInternal;
 
 
 # annotations

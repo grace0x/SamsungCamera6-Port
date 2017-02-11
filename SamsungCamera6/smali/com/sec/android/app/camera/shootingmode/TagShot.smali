@@ -3,9 +3,9 @@
 .source "TagShot.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
-.implements Lcom/sec/android/app/camera/interfaces/Engine$DBUpdateListener;
 .implements Lcom/sec/android/app/camera/interfaces/CameraContext$CameraDialogListener;
+.implements Lcom/sec/android/app/camera/interfaces/Engine$DBUpdateListener;
+.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
 
 
 # annotations

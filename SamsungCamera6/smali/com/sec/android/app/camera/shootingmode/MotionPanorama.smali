@@ -3,12 +3,12 @@
 .source "MotionPanorama.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
 .implements Lcom/samsung/android/glview/GLView$OrientationChangeListener;
-.implements Lcom/sec/android/seccamera/SecCamera$MotionPanoramaEventListener;
-.implements Lcom/sec/android/app/camera/interfaces/Engine$DBUpdateListener;
 .implements Lcom/sec/android/app/camera/interfaces/CameraSettings$CameraSettingChangedListener;
+.implements Lcom/sec/android/app/camera/interfaces/Engine$DBUpdateListener;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$ImageContentsLoggingListener;
+.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
+.implements Lcom/sec/android/seccamera/SecCamera$MotionPanoramaEventListener;
 
 
 # annotations

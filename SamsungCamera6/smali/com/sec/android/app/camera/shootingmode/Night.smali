@@ -3,8 +3,8 @@
 .source "Night.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$MultiFrameEventListener;
+.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
 
 
 # static fields

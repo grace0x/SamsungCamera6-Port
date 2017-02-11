@@ -3,8 +3,8 @@
 .source "QuickView.java"
 
 # interfaces
-.implements Lcom/samsung/android/glview/GLView$TouchListener;
 .implements Lcom/samsung/android/glview/GLView$ClickListener;
+.implements Lcom/samsung/android/glview/GLView$TouchListener;
 
 
 # annotations

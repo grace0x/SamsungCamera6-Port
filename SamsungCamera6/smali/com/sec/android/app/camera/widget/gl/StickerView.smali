@@ -3,8 +3,8 @@
 .source "StickerView.java"
 
 # interfaces
-.implements Lcom/samsung/android/glview/GLView$TouchListener;
 .implements Lcom/samsung/android/glview/GLView$OrientationChangeListener;
+.implements Lcom/samsung/android/glview/GLView$TouchListener;
 
 
 # annotations

@@ -3,9 +3,9 @@
 .source "RequestFuture.java"
 
 # interfaces
-.implements Ljava/util/concurrent/Future;
-.implements Lcom/android/volley/Response$Listener;
 .implements Lcom/android/volley/Response$ErrorListener;
+.implements Lcom/android/volley/Response$Listener;
+.implements Ljava/util/concurrent/Future;
 
 
 # annotations

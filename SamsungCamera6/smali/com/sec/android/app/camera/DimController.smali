@@ -3,8 +3,8 @@
 .source "DimController.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/Engine$OnRequestQueueEmptyListener;
 .implements Landroid/os/Parcelable;
+.implements Lcom/sec/android/app/camera/interfaces/Engine$OnRequestQueueEmptyListener;
 
 
 # annotations

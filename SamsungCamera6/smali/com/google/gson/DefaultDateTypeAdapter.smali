@@ -3,8 +3,8 @@
 .source "DefaultDateTypeAdapter.java"
 
 # interfaces
-.implements Lcom/google/gson/JsonSerializer;
 .implements Lcom/google/gson/JsonDeserializer;
+.implements Lcom/google/gson/JsonSerializer;
 
 
 # annotations

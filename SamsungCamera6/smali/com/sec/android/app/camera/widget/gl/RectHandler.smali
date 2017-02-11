@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Lcom/samsung/android/glview/GLView$DragListener;
-.implements Lcom/samsung/android/glview/GLView$TouchListener;
 .implements Lcom/samsung/android/glview/GLView$KeyListener;
+.implements Lcom/samsung/android/glview/GLView$TouchListener;
 .implements Lcom/sec/android/app/camera/util/CameraGestureListener$FlingEventListener;
 
 

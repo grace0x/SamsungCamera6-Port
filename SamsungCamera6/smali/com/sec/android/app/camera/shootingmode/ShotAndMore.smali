@@ -3,8 +3,8 @@
 .source "ShotAndMore.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$DBUpdateListener;
+.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
 .implements Lcom/sec/android/seccamera/SecCamera$ShotAndMoreEventListener;
 
 

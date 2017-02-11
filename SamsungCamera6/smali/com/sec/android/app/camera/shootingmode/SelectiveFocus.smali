@@ -3,9 +3,9 @@
 .source "SelectiveFocus.java"
 
 # interfaces
+.implements Lcom/sec/android/app/camera/interfaces/CameraSettings$CameraSettingChangedListener;
 .implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
 .implements Lcom/sec/android/seccamera/SecCamera$SelectiveFocusEventListener;
-.implements Lcom/sec/android/app/camera/interfaces/CameraSettings$CameraSettingChangedListener;
 
 
 # static fields

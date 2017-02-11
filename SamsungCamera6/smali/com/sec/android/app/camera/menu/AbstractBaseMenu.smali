@@ -3,10 +3,10 @@
 .source "AbstractBaseMenu.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/BaseMenuController;
-.implements Lcom/samsung/android/glview/GLView$TouchListener;
-.implements Lcom/samsung/android/glview/GLView$KeyListener;
 .implements Lcom/samsung/android/glview/GLView$ClickListener;
+.implements Lcom/samsung/android/glview/GLView$KeyListener;
+.implements Lcom/samsung/android/glview/GLView$TouchListener;
+.implements Lcom/sec/android/app/camera/interfaces/BaseMenuController;
 .implements Lcom/sec/android/app/camera/util/CameraGestureListener$FlingEventListener;
 
 

@@ -3,8 +3,8 @@
 .source "GLSlider.java"
 
 # interfaces
-.implements Lcom/samsung/android/glview/GLView$TouchListener;
 .implements Lcom/samsung/android/glview/GLView$KeyListener;
+.implements Lcom/samsung/android/glview/GLView$TouchListener;
 
 
 # annotations

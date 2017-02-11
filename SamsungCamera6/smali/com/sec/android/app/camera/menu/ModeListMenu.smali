@@ -4,12 +4,12 @@
 
 # interfaces
 .implements Lcom/samsung/android/glview/GLAbsList$ScrollListener;
-.implements Lcom/samsung/android/glview/GLView$DragListener;
-.implements Lcom/sec/android/app/camera/widget/gl/DragDropBox$DropListener;
-.implements Lcom/samsung/android/glview/GLView$OrientationChangeListener;
 .implements Lcom/samsung/android/glview/GLView$ClickListener;
+.implements Lcom/samsung/android/glview/GLView$DragListener;
+.implements Lcom/samsung/android/glview/GLView$OrientationChangeListener;
 .implements Lcom/samsung/android/glview/GLView$TouchListener;
 .implements Lcom/sec/android/app/camera/util/CameraGestureListener$FlingEventListener;
+.implements Lcom/sec/android/app/camera/widget/gl/DragDropBox$DropListener;
 
 
 # annotations

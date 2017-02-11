@@ -3,8 +3,8 @@
 .source "PagerTitleStrip.java"
 
 # interfaces
-.implements Landroid/support/v4/view/ViewPager$OnPageChangeListener;
 .implements Landroid/support/v4/view/ViewPager$OnAdapterChangeListener;
+.implements Landroid/support/v4/view/ViewPager$OnPageChangeListener;
 
 
 # annotations

@@ -3,9 +3,9 @@
 .source "GLContext.java"
 
 # interfaces
+.implements Landroid/hardware/scontext/SContextListener;
 .implements Landroid/opengl/GLSurfaceView$Renderer;
 .implements Landroid/speech/tts/TextToSpeech$OnInitListener;
-.implements Landroid/hardware/scontext/SContextListener;
 .implements Landroid/view/Choreographer$FrameCallback;
 .implements Landroid/view/View$OnHoverListener;
 

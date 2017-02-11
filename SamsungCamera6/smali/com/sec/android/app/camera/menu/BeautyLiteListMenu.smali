@@ -3,8 +3,8 @@
 .source "BeautyLiteListMenu.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/CameraSettings$CameraSettingChangedListener;
 .implements Lcom/samsung/android/glview/GLView$TouchListener;
+.implements Lcom/sec/android/app/camera/interfaces/CameraSettings$CameraSettingChangedListener;
 
 
 # annotations

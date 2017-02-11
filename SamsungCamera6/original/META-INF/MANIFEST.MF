@@ -1867,7 +1867,7 @@ Name: res/drawable-xxxhdpi-v4/tw_btn_check_to_on_mtrl_015.qmg
 SHA1-Digest: VJdZyhyGZxT3Z4OMU+X+uLK479I=
 
 Name: SEC-INF/buildinfo.xml
-SHA1-Digest: fbKLIKaKtyMbxz+46zrjRe4NYWY=
+SHA1-Digest: UJGzfbQnvpsOGyW33+S/MYFMfO8=
 
 Name: res/drawable-xxxhdpi-v4/sound_shot_quickview_screen_eq_bar_14.qm
  g

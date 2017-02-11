@@ -3,10 +3,10 @@
 .source "Recording.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
-.implements Lcom/samsung/android/glview/GLView$ClickListener;
 .implements Lcom/samsung/android/glview/GLView$AnimationEventListener;
+.implements Lcom/samsung/android/glview/GLView$ClickListener;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$VideoContentsLoggingListener;
+.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
 
 
 # annotations

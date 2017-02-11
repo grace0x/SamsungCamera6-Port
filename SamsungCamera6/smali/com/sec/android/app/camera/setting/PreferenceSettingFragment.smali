@@ -3103,7 +3103,7 @@
 
     if-eqz v25, :cond_47
 
-    const-string v25, "1440x1440"
+    const-string v25, "1088x1088"
 
     invoke-static/range {v25 .. v25}, Lcom/sec/android/app/camera/util/CameraResolution;->getResolutionID(Ljava/lang/String;)I
 
@@ -3688,7 +3688,7 @@
 
     if-eqz v4, :cond_d
 
-    const-string v4, "1440x1440"
+    const-string v4, "1088x1088"
 
     invoke-static {v4}, Lcom/sec/android/app/camera/util/CameraResolution;->getResolutionID(Ljava/lang/String;)I
 

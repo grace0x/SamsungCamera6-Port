@@ -3,18 +3,18 @@
 .source "VideoCollage.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
-.implements Lcom/samsung/android/glview/GLView$TouchListener;
-.implements Lcom/samsung/android/glview/GLView$OrientationChangeListener;
-.implements Lcom/samsung/android/glview/GLView$ClickListener;
 .implements Lcom/samsung/android/glview/GLView$AnimationEventListener;
-.implements Lcom/sec/android/app/camera/interfaces/CameraSettings$CameraSettingChangedListener;
+.implements Lcom/samsung/android/glview/GLView$ClickListener;
+.implements Lcom/samsung/android/glview/GLView$OrientationChangeListener;
+.implements Lcom/samsung/android/glview/GLView$TouchListener;
 .implements Lcom/sec/android/app/camera/interfaces/CameraContext$CameraDialogListener;
-.implements Lcom/sec/android/app/camera/interfaces/MenuBase$OnHideListener;
-.implements Lcom/sec/android/app/camera/interfaces/MenuBase$OnShowListener;
+.implements Lcom/sec/android/app/camera/interfaces/CameraSettings$CameraSettingChangedListener;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$EffectProcessorListener;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$EngineStateListener;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$VideoContentsLoggingListener;
+.implements Lcom/sec/android/app/camera/interfaces/MenuBase$OnHideListener;
+.implements Lcom/sec/android/app/camera/interfaces/MenuBase$OnShowListener;
+.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
 
 
 # annotations

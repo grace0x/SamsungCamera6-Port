@@ -3,13 +3,13 @@
 .source "RearSelfie.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
-.implements Lcom/sec/android/app/camera/interfaces/Engine$ShutterEventListener;
 .implements Lcom/samsung/android/glview/GLView$TouchListener;
-.implements Lcom/sec/android/seccamera/SecCamera$BeautyEventListener;
 .implements Lcom/sec/android/app/camera/interfaces/CameraContext$FaceDetectionListener;
-.implements Lcom/sec/android/app/camera/interfaces/MenuBase$OnShowListener;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$DBUpdateListener;
+.implements Lcom/sec/android/app/camera/interfaces/Engine$ShutterEventListener;
+.implements Lcom/sec/android/app/camera/interfaces/MenuBase$OnShowListener;
+.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
+.implements Lcom/sec/android/seccamera/SecCamera$BeautyEventListener;
 
 
 # annotations

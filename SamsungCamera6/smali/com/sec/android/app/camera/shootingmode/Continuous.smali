@@ -3,8 +3,8 @@
 .source "Continuous.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
 .implements Lcom/sec/android/app/camera/interfaces/Engine$BurstCaptureEventListener;
+.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
 
 
 # static fields

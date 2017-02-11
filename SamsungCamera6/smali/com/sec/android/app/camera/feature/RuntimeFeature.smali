@@ -497,9 +497,9 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    const/16 v6, 0xfc0
+    const/16 v6, 0x14c0
 
-    const/16 v5, 0xbd0
+    const/16 v5, 0xba0
 
     const/16 v4, 0xa20
 
@@ -1724,7 +1724,7 @@
 
     const-string v0, "BACK_CAMERA_PICTURE_DEFAULT_RESOLUTION"
 
-    const-string v3, "4032x3024"
+    const-string v3, "5312x2988"
 
     invoke-static {v0, v3}, Lcom/sec/android/app/camera/feature/FeatureLoader;->getCameraFeature(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -1834,7 +1834,7 @@
 
     const-string v0, "BURST_PANORAMA_RESOLUTION"
 
-    const-string v3, "4032x2268"
+    const-string v3, "3264x1836"
 
     invoke-static {v0, v3}, Lcom/sec/android/app/camera/feature/FeatureLoader;->getCameraFeature(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -1874,7 +1874,7 @@
 
     const-string v0, "COVER_CAMCORDER_RESOLUTION"
 
-    const-string v3, "1440x1440"
+    const-string v3, "1088x1088"
 
     invoke-static {v0, v3}, Lcom/sec/android/app/camera/feature/FeatureLoader;->getCameraFeature(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -2180,7 +2180,7 @@
 
     const-string v0, "BACK_CAMCORDER_RESOLUTION_1920X1080_PICTURE_HEIGHT"
 
-    const/16 v3, 0x8dc
+    const/16 v3, 0xbac
 
     invoke-static {v0, v3}, Lcom/sec/android/app/camera/feature/FeatureLoader;->getCameraFeature(Ljava/lang/String;I)I
 
@@ -2198,7 +2198,7 @@
 
     const-string v0, "BACK_CAMCORDER_RESOLUTION_1280X720_PICTURE_HEIGHT"
 
-    const/16 v3, 0x8dc
+    const/16 v3, 0xbac
 
     invoke-static {v0, v3}, Lcom/sec/android/app/camera/feature/FeatureLoader;->getCameraFeature(Ljava/lang/String;I)I
 
@@ -2224,7 +2224,9 @@
 
     const-string v0, "BACK_CAMCORDER_RESOLUTION_640X480_PICTURE_WIDTH"
 
-    invoke-static {v0, v6}, Lcom/sec/android/app/camera/feature/FeatureLoader;->getCameraFeature(Ljava/lang/String;I)I
+    const/16 v3, 0xf90
+
+    invoke-static {v0, v3}, Lcom/sec/android/app/camera/feature/FeatureLoader;->getCameraFeature(Ljava/lang/String;I)I
 
     move-result v0
 
@@ -2232,7 +2234,9 @@
 
     const-string v0, "BACK_CAMCORDER_RESOLUTION_640X480_PICTURE_HEIGHT"
 
-    invoke-static {v0, v5}, Lcom/sec/android/app/camera/feature/FeatureLoader;->getCameraFeature(Ljava/lang/String;I)I
+    const/16 v3, 0xbac
+
+    invoke-static {v0, v3}, Lcom/sec/android/app/camera/feature/FeatureLoader;->getCameraFeature(Ljava/lang/String;I)I
 
     move-result v0
 
@@ -2240,7 +2244,9 @@
 
     const-string v0, "BACK_CAMCORDER_RESOLUTION_320X240_PICTURE_WIDTH"
 
-    invoke-static {v0, v6}, Lcom/sec/android/app/camera/feature/FeatureLoader;->getCameraFeature(Ljava/lang/String;I)I
+    const/16 v3, 0xf90
+
+    invoke-static {v0, v3}, Lcom/sec/android/app/camera/feature/FeatureLoader;->getCameraFeature(Ljava/lang/String;I)I
 
     move-result v0
 
@@ -2248,7 +2254,9 @@
 
     const-string v0, "BACK_CAMCORDER_RESOLUTION_320X240_PICTURE_HEIGHT"
 
-    invoke-static {v0, v5}, Lcom/sec/android/app/camera/feature/FeatureLoader;->getCameraFeature(Ljava/lang/String;I)I
+    const/16 v3, 0xbac
+
+    invoke-static {v0, v3}, Lcom/sec/android/app/camera/feature/FeatureLoader;->getCameraFeature(Ljava/lang/String;I)I
 
     move-result v0
 

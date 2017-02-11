@@ -3,8 +3,8 @@
 .source "$Gson$Types.java"
 
 # interfaces
-.implements Ljava/lang/reflect/ParameterizedType;
 .implements Ljava/io/Serializable;
+.implements Ljava/lang/reflect/ParameterizedType;
 
 
 # annotations

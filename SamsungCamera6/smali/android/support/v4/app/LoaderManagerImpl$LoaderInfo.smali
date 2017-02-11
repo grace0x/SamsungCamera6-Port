@@ -3,8 +3,8 @@
 .source "LoaderManager.java"
 
 # interfaces
-.implements Landroid/support/v4/content/Loader$OnLoadCompleteListener;
 .implements Landroid/support/v4/content/Loader$OnLoadCanceledListener;
+.implements Landroid/support/v4/content/Loader$OnLoadCompleteListener;
 
 
 # annotations

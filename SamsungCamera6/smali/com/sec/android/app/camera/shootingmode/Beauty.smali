@@ -3,11 +3,11 @@
 .source "Beauty.java"
 
 # interfaces
-.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
-.implements Lcom/sec/android/seccamera/SecCamera$BeautyEventListener;
+.implements Lcom/sec/android/app/camera/interfaces/Engine$ImageContentsLoggingListener;
 .implements Lcom/sec/android/app/camera/interfaces/MenuBase$OnHideListener;
 .implements Lcom/sec/android/app/camera/interfaces/MenuBase$OnShowListener;
-.implements Lcom/sec/android/app/camera/interfaces/Engine$ImageContentsLoggingListener;
+.implements Lcom/sec/android/app/camera/interfaces/ShootingMode;
+.implements Lcom/sec/android/seccamera/SecCamera$BeautyEventListener;
 
 
 # static fields
