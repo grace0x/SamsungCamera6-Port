@@ -1,9 +1,9 @@
 #!/bin/bash
-# g-joker camera build script v0.2
+# g-joker camera build script v0.3
 
 BUILD_BY=Noble
-BUILD_VERSION=v1-stable
-BUILD_MODEL=”S6X&N5”
+BUILD_VERSION=v1.1-stable
+BUILD_MODEL="S6X&N5"
 BUILD_ZIP_NAME=$BUILD_BY-$BUILD_MODEL-SamsungCamera6-$BUILD_VERSION
 
 BUILD_COMMAND=$1
@@ -25,16 +25,20 @@ COMPILE()
  echo "================================="
  echo ""
 
+ if [! -d $BUILD_OUT/system];then
+  mkdir $BUILD_OUT/system
+ fi
+
  java -jar $BUILD_TOOL b -f -c seccamera.jar.out -o $BUILD_OUT2/framework/seccamera.jar
  java -jar $BUILD_TOOL b -f -c scamera_sdk_util.jar.out -o $BUILD_OUT2/framework/scamera_sdk_util.jar 
  java -jar $BUILD_TOOL b -f -c SamsungCamera6 -o $BUILD_OUT2/priv-app/SamsungCamera6/SamsungCamera6.apk
  java -jar $BUILD_TOOL b -f -c ShootingModeProvider2 -o $BUILD_OUT2/priv-app/ShootingModeProvider2/ShootingModeProvider2.apk
 
-   echo ""
-	echo "================================="
-	echo "END   : COMPILE APK & JAR"
-	echo "================================="
-	echo ""
+ echo ""
+ echo "================================="
+ echo "END   : COMPILE APK & JAR"
+ echo "================================="
+ echo ""
 }
 
 BUILD_PATCH()
