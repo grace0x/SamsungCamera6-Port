@@ -2,8 +2,8 @@
 # g-joker camera build script v0.2
 
 BUILD_BY=Noble
-BUILD_VERSION=beta2
-BUILD_MODEL=zero
+BUILD_VERSION=v1-stable
+BUILD_MODEL=”S6X&N5”
 BUILD_ZIP_NAME=$BUILD_BY-$BUILD_MODEL-SamsungCamera6-$BUILD_VERSION
 
 BUILD_COMMAND=$1
