@@ -2301,77 +2301,63 @@
     :pswitch_1
     return v0
 
+    move v0, v1
+
+    goto :goto_0
+
+    move v0, v1
+
+    goto :goto_0
+
     :pswitch_2
     move v0, v1
 
     goto :goto_0
 
-    :pswitch_3
     move v0, v1
 
     goto :goto_0
 
-    :pswitch_4
     move v0, v1
 
     goto :goto_0
 
-    :pswitch_5
     move v0, v1
 
     goto :goto_0
 
-    :pswitch_6
     move v0, v1
 
     goto :goto_0
 
-    :pswitch_7
     move v0, v1
 
     goto :goto_0
 
-    :pswitch_8
     move v0, v1
 
     goto :goto_0
 
-    :pswitch_9
     move v0, v1
 
     goto :goto_0
 
-    :pswitch_a
     move v0, v1
 
     goto :goto_0
 
-    :pswitch_b
     move v0, v1
 
     goto :goto_0
 
-    :pswitch_c
     move v0, v1
 
     goto :goto_0
 
-    :pswitch_d
     move v0, v1
 
     goto :goto_0
 
-    :pswitch_e
-    move v0, v1
-
-    goto :goto_0
-
-    :pswitch_f
-    move v0, v1
-
-    goto :goto_0
-
-    :pswitch_10
     move v0, v1
 
     goto :goto_0
@@ -2383,53 +2369,53 @@
         :pswitch_1
         :pswitch_1
         :pswitch_1
-        :pswitch_3
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_4
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
         :pswitch_1
         :pswitch_0
         :pswitch_0
         :pswitch_0
         :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
         :pswitch_0
         :pswitch_0
-        :pswitch_6
-        :pswitch_0
-        :pswitch_1
-        :pswitch_7
-        :pswitch_1
-        :pswitch_1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
         :pswitch_0
         :pswitch_0
-        :pswitch_8
-        :pswitch_9
+        :pswitch_0
         :pswitch_2
         :pswitch_1
-        :pswitch_a
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
         :pswitch_0
         :pswitch_0
         :pswitch_1
@@ -2437,28 +2423,28 @@
         :pswitch_0
         :pswitch_1
         :pswitch_1
-        :pswitch_5
         :pswitch_1
         :pswitch_1
         :pswitch_1
-        :pswitch_c
-        :pswitch_d
-        :pswitch_1
-        :pswitch_1
-        :pswitch_e
-        :pswitch_10
         :pswitch_1
         :pswitch_1
         :pswitch_1
-        :pswitch_0
         :pswitch_1
-        :pswitch_f
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
         :pswitch_1
         :pswitch_1
         :pswitch_1
         :pswitch_0
         :pswitch_1
-        :pswitch_b
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_1
         :pswitch_1
     .end packed-switch
 .end method
