@@ -1020,12 +1020,6 @@
 
     sput-boolean v0, Lcom/sec/android/app/camera/feature/RuntimeFeature;->SUPPORT_MOTION_PHOTO:Z
 
-    invoke-static {}, Lcom/sec/android/app/camera/util/Util;->isChinaFeature()Z
-
-    move-result v0
-
-    sput-boolean v0, Lcom/sec/android/app/camera/feature/RuntimeFeature;->CAMERA_SUPPORT_WATERMARK:Z
-
     const-string v0, "CAMERA_SUPPORT_WECHATSIGHT_MODE"
 
     invoke-static {v0, v2}, Lcom/sec/android/app/camera/feature/FeatureLoader;->getCameraFeature(Ljava/lang/String;Z)Z
