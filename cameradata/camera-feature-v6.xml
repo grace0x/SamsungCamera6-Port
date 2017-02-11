@@ -1,7 +1,13 @@
 <?xml version= "1.0" encoding= "UTF-8"?>
 <resources>
-    <!-- Shootingmode - BACK -->
+    <!-- Hardware related features -->
     <local name="CAMERA_SCREEN_FLASH_VI" value="false"/>
+
+    <!-- Etc. features -->
+    <local name="COVER_CAMERA_RECORDING" value="true" />
+    <local name="CAMERA_SUPPORT_WATERMARK" value="false" />
+    <local name="CAMERA_SUPPORT_WECHATSIGHT_MODE" value="false" />
+    <local name="SUPPORT_FLOATING_CAMERA_BUTTON" value="true" />
 
     <!-- Shootingmode - BACK -->
     <local name="BACK_CAMERA_SHOOTINGMODE_PANORAMA_SHOT" value="true"/>
